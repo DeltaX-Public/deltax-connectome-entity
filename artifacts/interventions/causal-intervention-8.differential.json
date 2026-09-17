@@ -1,0 +1,1715 @@
+{
+  "schema": "causal_intervention.differential.v1",
+  "checkpoint_id": "causal-intervention-8",
+  "executive_source": "stub",
+  "seed": 8,
+  "bundle": "artifacts/interventions/causal-intervention-8.bundle.json",
+  "claims": {
+    "biological_memory_trace": false,
+    "implemented_model_causal_intervention": true
+  },
+  "authority": {
+    "experimenter": "perturbation declaration and run bookkeeping only",
+    "deltaX": "executive packets; intervention does not bypass DeltaX",
+    "substrate": "proposal before DeltaX each step"
+  },
+  "perturbation": {
+    "type": "silence_population",
+    "population": "causal_demo_population",
+    "id": "perturb-3",
+    "actor": "EXPERIMENTER",
+    "declarative": true,
+    "authority": "EXPERIMENTER"
+  },
+  "control_run": {
+    "mode": "CONTROL",
+    "actor": "EXPERIMENTER",
+    "authority": "EXPERIMENTER_RUN",
+    "steps": [
+      {
+        "step": 0,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 0,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 0,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 0,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 2,
+          "ledger_position_after": 2
+        }
+      },
+      {
+        "step": 1,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 1,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 1,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 1,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 3,
+          "ledger_position_after": 3
+        }
+      },
+      {
+        "step": 2,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 2,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 2,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 2,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 4,
+          "ledger_position_after": 4
+        }
+      },
+      {
+        "step": 3,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 3,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 3,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 3,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 5,
+          "ledger_position_after": 5
+        }
+      },
+      {
+        "step": 4,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 4,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 4,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 4,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 6,
+          "ledger_position_after": 6
+        }
+      },
+      {
+        "step": 5,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 5,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 5,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 5,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 7,
+          "ledger_position_after": 7
+        }
+      }
+    ]
+  },
+  "intervention_run": {
+    "mode": "INTERVENTION",
+    "actor": "EXPERIMENTER",
+    "authority": "EXPERIMENTER_RUN",
+    "steps": [
+      {
+        "step": 0,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 0,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward_after_population_silence",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 0,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "INTERVENTION",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 0,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 3,
+          "ledger_position_after": 3
+        }
+      },
+      {
+        "step": 1,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 1,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward_after_population_silence",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 1,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "INTERVENTION",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 1,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 4,
+          "ledger_position_after": 4
+        }
+      },
+      {
+        "step": 2,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 2,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward_after_population_silence",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 2,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "INTERVENTION",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 2,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 5,
+          "ledger_position_after": 5
+        }
+      },
+      {
+        "step": 3,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 3,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward_after_population_silence",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 3,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "INTERVENTION",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 3,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 6,
+          "ledger_position_after": 6
+        }
+      },
+      {
+        "step": 4,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 4,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward_after_population_silence",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 4,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "INTERVENTION",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 4,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 7,
+          "ledger_position_after": 7
+        }
+      },
+      {
+        "step": 5,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 5,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward_after_population_silence",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 5,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "INTERVENTION",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "INTERVENTION",
+              "input": {
+                "step": 5,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [
+                "causal_demo_population"
+              ],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 8,
+          "ledger_position_after": 8
+        }
+      }
+    ]
+  },
+  "differential": {
+    "altered": true,
+    "differences": [
+      {
+        "step": 0,
+        "control": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "CONTROL",
+            "input": {
+              "step": 0,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        },
+        "other": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "INTERVENTION",
+            "input": {
+              "step": 0,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        }
+      },
+      {
+        "step": 1,
+        "control": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "CONTROL",
+            "input": {
+              "step": 1,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        },
+        "other": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "INTERVENTION",
+            "input": {
+              "step": 1,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        }
+      },
+      {
+        "step": 2,
+        "control": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "CONTROL",
+            "input": {
+              "step": 2,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        },
+        "other": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "INTERVENTION",
+            "input": {
+              "step": 2,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        }
+      },
+      {
+        "step": 3,
+        "control": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "CONTROL",
+            "input": {
+              "step": 3,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        },
+        "other": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "INTERVENTION",
+            "input": {
+              "step": 3,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        }
+      },
+      {
+        "step": 4,
+        "control": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "CONTROL",
+            "input": {
+              "step": 4,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        },
+        "other": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "INTERVENTION",
+            "input": {
+              "step": 4,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        }
+      },
+      {
+        "step": 5,
+        "control": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "CONTROL",
+            "input": {
+              "step": 5,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        },
+        "other": {
+          "packet": {
+            "kind": "executive_packet",
+            "mode": "INTERVENTION",
+            "input": {
+              "step": 5,
+              "seed": 8,
+              "source": "causal_intervention_demo"
+            },
+            "authority": "DeltaX"
+          },
+          "output": {
+            "selectedPopulations": [],
+            "silencedPopulations": [
+              "causal_demo_population"
+            ],
+            "regionalGain": 1,
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "deterministic_stub": true
+        }
+      }
+    ]
+  },
+  "restored_run": {
+    "mode": "CONTROL",
+    "actor": "EXPERIMENTER",
+    "authority": "EXPERIMENTER_RUN",
+    "steps": [
+      {
+        "step": 0,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 0,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 0,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 0,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 2,
+          "ledger_position_after": 2
+        }
+      },
+      {
+        "step": 1,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 1,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 1,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 1,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 3,
+          "ledger_position_after": 3
+        }
+      },
+      {
+        "step": 2,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 2,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 2,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 2,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 4,
+          "ledger_position_after": 4
+        }
+      },
+      {
+        "step": 3,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 3,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 3,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 3,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 5,
+          "ledger_position_after": 5
+        }
+      },
+      {
+        "step": 4,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 4,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 4,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 4,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 6,
+          "ledger_position_after": 6
+        }
+      },
+      {
+        "step": 5,
+        "substrate_proposals_before_deltax": [
+          {
+            "step": 5,
+            "actor": "SUBSTRATE",
+            "authority": "SUBSTRATE_PROPOSAL",
+            "proposal": "forward",
+            "isolation_metric": {
+              "substrate_proposals_before_deltax": 1,
+              "deltaX_bypassed": false,
+              "ordering": "substrate proposal recorded before DeltaX packet"
+            }
+          }
+        ],
+        "deltax": {
+          "actor": "DeltaX",
+          "authority": "DeltaX",
+          "bypass": false,
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 5,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          }
+        },
+        "replay_record": {
+          "mode": "CONTROL",
+          "actor": "EXPERIMENTER",
+          "authority": "OBSERVATION_AND_REPLAY",
+          "packets": {
+            "packet": {
+              "kind": "executive_packet",
+              "mode": "CONTROL",
+              "input": {
+                "step": 5,
+                "seed": 8,
+                "source": "causal_intervention_demo"
+              },
+              "authority": "DeltaX"
+            },
+            "output": {
+              "selectedPopulations": [],
+              "silencedPopulations": [],
+              "regionalGain": 1,
+              "maskedConnections": [],
+              "sensoryChannels": {}
+            },
+            "deterministic_stub": true
+          },
+          "perturbations": {
+            "silencedPopulations": [],
+            "excitedPopulations": [],
+            "regionalGain": {},
+            "maskedConnections": [],
+            "sensoryChannels": {}
+          },
+          "ledger_position_before": 7,
+          "ledger_position_after": 7
+        }
+      }
+    ]
+  },
+  "recovery": {
+    "status": "RECOVERED",
+    "differences": []
+  },
+  "isolation_metric": {
+    "every_intervention_step_has_pre_deltax_proposal": true,
+    "deltaX_bypass_count": 0
+  },
+  "note": "Stub replay is intentionally measurable; canonical_api replay requires recorded packets when the API is unavailable."
+}

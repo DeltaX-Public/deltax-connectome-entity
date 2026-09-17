@@ -1,0 +1,69 @@
+{
+  "schema": "neurocontrol.checkpoint.v1",
+  "checkpoint_id": "causal-intervention-8",
+  "run_id": "run-stub",
+  "created_by": "EXPERIMENTER",
+  "seeds": {
+    "seed": 8
+  },
+  "objective": {
+    "task": "causal intervention demo"
+  },
+  "substrate": {
+    "membrane": {},
+    "firing": {},
+    "selectedPopulations": {},
+    "sensoryInjection": {},
+    "descendingActivity": {},
+    "modulation": {},
+    "mode": "stub",
+    "perturbations": {
+      "silencedPopulations": [],
+      "excitedPopulations": [],
+      "regionalGain": {},
+      "maskedConnections": [],
+      "sensoryChannels": {}
+    },
+    "actor": "EXPERIMENTER",
+    "authority": "OBSERVATION_ONLY"
+  },
+  "neural_summary_refs": {
+    "membrane": {},
+    "firing": {},
+    "selectedPopulations": {},
+    "sensoryInjection": {},
+    "descendingActivity": {},
+    "modulation": {},
+    "mode": "stub"
+  },
+  "deltax_adapter": {
+    "present": false
+  },
+  "environment": {},
+  "perturbations": {
+    "silencedPopulations": [],
+    "excitedPopulations": [],
+    "regionalGain": {},
+    "maskedConnections": [],
+    "sensoryChannels": {}
+  },
+  "event_ledger": {
+    "position": 1,
+    "events": [
+      {
+        "id": "event-1",
+        "sequence": 0,
+        "type": "neurocontrol_checkpoint",
+        "layer": "experimenter",
+        "actor": "EXPERIMENTER",
+        "payload": {
+          "checkpointId": "causal-intervention-8"
+        }
+      }
+    ]
+  },
+  "reproducibility": {
+    "perturbation_digest": "d0c11a62512ba810",
+    "substrate_digest": "ecdf7447f7e8dfaa"
+  }
+}

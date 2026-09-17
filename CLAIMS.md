@@ -24,3 +24,7 @@ This Milestone 1 adapter makes no consciousness, AGI, or proprietary DeltaX capa
 This branch adds a declarative sensory/action map, a minimal rover body, and a logged-state Broken World arena. The arena has corridors, obstacles, a goal region, a controllable door, energy, hazard, and an externally timestamped mutation hook. It emits expectation, observation, contradiction, executive-response, substrate-response, and new-action records without first-person claims.
 
 **Honest status:** SUBSTRATE_ONLY and explicit DELTAX stub paths are runnable headlessly. UPSTREAM remains the fly validation mode. DELTAX without `DELTAX_API_URL` fails loudly; a configured DELTAX run currently reports transport configuration rather than pretending a remote executive call occurred. MuJoCo, learning, and statistical adaptation are not implemented.
+
+## Phase 8 claim boundary
+
+The causal-intervention harness demonstrates causal intervention on this implemented computational model only. It does **not** demonstrate, identify, or claim biological memory traces, biological adaptation, or organism-level causality. The stub path reports measurable packet divergence under population silence and recovery after restore; these are computational replay results. DeltaX remains the executive authority and the substrate is limited to proposals recorded before DeltaX.
