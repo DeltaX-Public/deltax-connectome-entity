@@ -1,3 +1,4 @@
+import { CanonicalDeltaXAdapter } from "./canonical.mjs";
 /** Isolated DeltaX adapter boundary. DeltaXStub is not a DeltaX runtime. */
 export const MODES = Object.freeze({UPSTREAM:'UPSTREAM',SUBSTRATE_ONLY:'SUBSTRATE_ONLY',DELTAX:'DELTAX',DELTAX_DEBUG:'DELTAX_DEBUG'});
 const LAYERS = Object.freeze(['environment/sensors','connectome','behavioral proposals','DeltaX intervention','motor']);
@@ -54,4 +55,4 @@ export class DeltaXAdapter {
  #validateSubstrate(connectome,proposal){ if(connectome===undefined) throw new Error('connectome output is required; DeltaX cannot bypass the connectome'); if(!proposal||typeof proposal.action==='undefined') throw new Error('behavioral proposal with action is required'); }
  #isolationMetric(connectome,proposal){ const n=Object.keys(connectome??{}).length+Object.keys(proposal??{}).length; return {substrateFieldsBeforeIntervention:n,deltaXInputFields:2,retainedSubstrateStructure:n>0?1:0}; }
 }
-export const createAdapter=(options={})=>new DeltaXAdapter(options);
+export const createAdapter=(options={})=>((options.mode === 'DELTAX' || options.mode === 'DELTAX_DEBUG' || process.env.DELTAX_API_URL) ? new CanonicalDeltaXAdapter(options) : new DeltaXAdapter(options));
