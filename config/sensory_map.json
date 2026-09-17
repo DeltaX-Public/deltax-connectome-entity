@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "description": "Declarative synthetic-sense to biological-population map for the Broken World scaffold.",
+  "senses": [
+    {"name":"visual_field","synthetic_signal":"raycast occupancy and coarse luminance","biological_population":"visual cortex V1/V2 proxy","channels":["left","center","right"]},
+    {"name":"proximity","synthetic_signal":"distance to nearest obstacle or passage","biological_population":"somatosensory parietal proxy","channels":["near","mid","far"]},
+    {"name":"collision","synthetic_signal":"contact and blocked-motion bit","biological_population":"spinal reflex and cerebellar proxy","channels":["contact","clear"]},
+    {"name":"gradients","synthetic_signal":"local energy and hazard gradients","biological_population":"entorhinal navigation proxy","channels":["energy","hazard"]},
+    {"name":"energy","synthetic_signal":"remaining body energy","biological_population":"hypothalamic homeostasis proxy","channels":["high","low"]},
+    {"name":"event","synthetic_signal":"timestamped external and substrate events","biological_population":"hippocampal event-memory proxy","channels":["external","internal"]}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "description": "Declarative population proposals to abstract body actions.",
+  "proposals": [
+    {"population":"motor_forward","proposal":"forward","body_action":"forward"},
+    {"population":"motor_left","proposal":"left_turn","body_action":"left"},
+    {"population":"motor_right","proposal":"right_turn","body_action":"right"},
+    {"population":"motor_stop","proposal":"rest","body_action":"stop"},
+    {"population":"attention_inspect","proposal":"inspect_context","body_action":"inspect"}
+  ]
+}
