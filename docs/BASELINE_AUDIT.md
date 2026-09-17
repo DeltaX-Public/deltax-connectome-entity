@@ -113,3 +113,7 @@ npm install --no-audit --no-fund
 node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"
 node scripts/run_fly.mjs 2 default descending
 ```
+
+### Attempt note
+
+An initial `npm install` wrapper using `/usr/bin/time ... sh -c ...` terminated with exit 127 before producing output. It is not counted as a pass and its empty log was discarded. The direct command shown above was then rerun; it completed with exit 0 and its output is the committed `artifacts/baseline/npm-install.log`.
