@@ -71,7 +71,7 @@ The Phase 1 evidence and raw command logs are in [docs/BASELINE_AUDIT.md](docs/B
 The repository is a public demo harness; the real executive runs in a local API. Copy `.env.example`, then launch the API and run the demo with:
 
 ```sh
-DELTAX_API_URL=http://127.0.0.1:<port> DELTAX_EXECUTIVE=DELTAX node scripts/demo.mjs
+DELTAX_API_URL=http://127.0.0.1:<port> DELTAX_EXECUTIVE=DELTAX node your-demo-entrypoint.mjs
 ```
 
 The status is `executive_source: canonical_api`. For CI/development only, select the clearly labeled stub with `DELTAX_EXECUTIVE=stub`. DeltaX mode without `DELTAX_API_URL` fails loudly; it never silently substitutes the stub. See `DELTAX_INTERFACE.md` and `NEURAL_CONTROL.md`.
