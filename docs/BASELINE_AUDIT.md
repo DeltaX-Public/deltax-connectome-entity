@@ -84,3 +84,32 @@ MuJoCo flybody; ~5 × 0.2 ms substeps per ms (per loop doc).
 - [ ] Performance notes (sim × realtime, WASM vs GPU)
 - [ ] Seeds recorded
 - [ ] Tag/branch `baseline/upstream-reproduced`
+
+## Phase 1 reproduction evidence (measured)
+
+**Branch:** `baseline/upstream-reproduced`  
+**Source:** `Lulzx/fly-brain` at `054e402853d370b004facc1946e36a409de601e8`  
+**Incorporation:** Codespaces terminal; `git archive` of the pinned checkout into `upstream/fly-brain/`.  
+**Environment:** GitHub Codespaces, Node `v24.20.0`, npm `11.19.0`; run date `2026-09-17` UTC.
+
+### Checklist and results
+
+- [x] Pinned vendor tree landed at `upstream/fly-brain/`.
+- [x] Upstream `LICENSE` preserved at `upstream/fly-brain/LICENSE`.
+- [x] `npm install --no-audit --no-fund` — **PASS (exit 0)**. Log: `artifacts/baseline/npm-install.log`.
+- [x] `node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"`  **PASS (exit 0)**. The script reported `8.684s`. Log: `artifacts/baseline/calib_eval.log`.
+- [x] `node scripts/run_fly.mjs --help` — **PASS (exit 0)**; confirmed usage `node scripts/run_fly.mjs [seconds] [scenario] [mode]`. Log: `artifacts/baseline/run_fly_help.log`.
+- [x] `node scripts/run_fly.mjs 2 default descending` — **PASS (exit 0)**. The upstream run reported `wall 35.733s for 2s sim (17.87x real-time)`. Log: `artifacts/baseline/run_fly_default.log`.
+
+### Timing and seed notes
+
+Calibration timing is the upstream script's reported `8.684s`. The fly scenario timing is upstream's reported wall time above; it is not a claim of hardware-independent performance. The `run_fly.mjs` invocation used the upstream default scenario state and does not expose an explicit seed argument; therefore the seed is recorded as **not specified / upstream default**, not invented. No DeltaX executive, consciousness, or AGI behavior was implemented in this phase.
+
+### Reproduction commands
+
+```sh
+cd upstream/fly-brain
+npm install --no-audit --no-fund
+node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"
+node scripts/run_fly.mjs 2 default descending
+```

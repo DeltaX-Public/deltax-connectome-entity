@@ -1,0 +1,59 @@
+{
+ "delta7_kernel": {
+  "aligned_gI_profile": [
+   0.002,
+   0,
+   0.001,
+   0.032,
+   0.119,
+   0.032,
+   0.003,
+   0
+  ],
+  "n_d7": 36,
+  "cos_fit": {
+   "mean": 0.02,
+   "amplitude": 0.04,
+   "r2": 0.56
+  },
+  "min_at_bump": true,
+  "max_wedge": 4
+ },
+ "pen_shifter": {
+  "L": [
+   1.21,
+   1.72,
+   1.42,
+   1.61,
+   1.4,
+   1.48,
+   1.52,
+   1.64
+  ],
+  "R": [
+   -1.53,
+   -1.46,
+   -1.32,
+   -1.54,
+   -1.52,
+   -1.48,
+   -1.63,
+   -1.41
+  ],
+  "median_L": 1.52,
+  "median_R": -1.48,
+  "opposite_signs": true
+ },
+ "apl": {
+  "kc_active_with_apl": 0.15,
+  "kc_active_without_apl": 0.72,
+  "kc_hz_with_apl": 0.87,
+  "kc_hz_without_apl": 5.08,
+  "sparser_with_apl": true
+ },
+ "verdict": {
+  "bump_kernel": true,
+  "pen_shifter": true,
+  "apl_sparsening": true
+ }
+}

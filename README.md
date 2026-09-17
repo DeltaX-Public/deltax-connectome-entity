@@ -52,3 +52,16 @@ DeltaX must not replace the connectome with direct actuator control in normal de
 
 Project documentation in this repository: TBD with first code commit.  
 Upstream software and datasets: see `UPSTREAM.md` (MIT + CC-BY 4.0 + Apache-2.0 + …).
+
+## Phase 1 quick start: the vendored upstream baseline
+
+The untouched upstream reproduction is kept separate under `upstream/fly-brain/` and is pinned in [UPSTREAM.md](UPSTREAM.md). Run it from that directory:
+
+```sh
+cd upstream/fly-brain
+npm install
+node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"
+node scripts/run_fly.mjs 2 default descending
+```
+
+The Phase 1 evidence and raw command logs are in [docs/BASELINE_AUDIT.md](docs/BASELINE_AUDIT.md) and `artifacts/baseline/`. DeltaX additions are intentionally not mixed into this upstream runnable tree.

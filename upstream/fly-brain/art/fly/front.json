@@ -1,0 +1,14 @@
+{
+  "blender": "5.2.1 LTS",
+  "engine": "CYCLES",
+  "device": "GPU",
+  "samples": 256,
+  "resolution": [
+    1600,
+    1152
+  ],
+  "view": "front",
+  "seconds_including_scene_setup": 36.3,
+  "render": "/Users/lulzx/work/fly-brain/art/fly/front.png",
+  "blend": "/Users/lulzx/work/fly-brain/art/fly/fly-macro.blend"
+}

@@ -1,0 +1,56 @@
+% Both PDF builders can locate the artwork from their working directory.
+\usepackage{graphicx}
+\graphicspath{{art/textbook/}{../../art/textbook/}}
+\usepackage{eso-pic}
+\AtBeginDocument{%
+  \hypersetup{pageanchor=false}%
+  \thispagestyle{empty}%
+  \AddToShipoutPictureBG*{%
+    \AtPageCenter{\makebox(0,0){\includegraphics[height=\paperheight]{cover-print.jpg}}}%
+  }%
+  \null\clearpage
+  \hypersetup{pageanchor=true}%
+}
+\pagestyle{plain}
+\let\cleardoublepage\clearpage
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{0}
+% Glyphs the text fonts lack are set in math mode instead.
+\usepackage{newunicodechar}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{←}{\ensuremath{\leftarrow}}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{∝}{\ensuremath{\propto}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{≫}{\ensuremath{\gg}}
+\newunicodechar{⟨}{\ensuremath{\langle}}
+\newunicodechar{⟩}{\ensuremath{\rangle}}
+\newunicodechar{∂}{\ensuremath{\partial}}
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{±}{\ensuremath{\pm}}
+\newunicodechar{−}{\ensuremath{-}}
+\newunicodechar{·}{\ensuremath{\cdot}}
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{φ}{\ensuremath{\varphi}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{µ}{\ensuremath{\mu}}
+\newunicodechar{²}{\ensuremath{^2}}
+\newunicodechar{³}{\ensuremath{^3}}
+\newunicodechar{¹}{\ensuremath{^1}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}

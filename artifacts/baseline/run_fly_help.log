@@ -1,0 +1,2 @@
+scenario default, mode descending, start pos 0,0, {}
+wall 0.003s for --helps sim (NaNx real-time)

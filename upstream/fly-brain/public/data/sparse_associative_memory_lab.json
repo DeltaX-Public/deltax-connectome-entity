@@ -1,0 +1,780 @@
+{
+ "seed": 42,
+ "spec": "sparse_associative_memory",
+ "summary": {
+  "ensemble_size": 18,
+  "hypotheses": {
+   "silent": 9,
+   "collapsed": 9
+  },
+  "mechanisms": {},
+  "best_experiment": "baseline_gain_control",
+  "best_experiment_separation": 0.529
+ },
+ "spec_def": {
+  "geometry": "memory",
+  "operator": "sparse_associative_memory",
+  "populations": {
+   "kc": "KC*",
+   "apl": "APL*",
+   "mbon": "MBON*",
+   "dan": [
+    "PPL*",
+    "PAM*"
+   ]
+  },
+  "roles": {
+   "input": "kc",
+   "output": "mbon",
+   "control": "apl"
+  },
+  "odor_size": 200,
+  "odor_overlap": 0.5,
+  "edge_params": [
+   {
+    "pre": "KC*",
+    "post": "MBON*",
+    "param": "kc2mb",
+    "why": "KC->MBON readout gain (44k edges; plastic in vivo)"
+   },
+   {
+    "pre": "APL*",
+    "post": "KC*",
+    "param": "aplGain",
+    "why": "APL feedback inhibition sets KC sparsity"
+   },
+   {
+    "pre": "MBON*",
+    "post": "MBON*",
+    "param": "mbRecur",
+    "why": "MBON->MBON recurrence (936 edges)"
+   }
+  ],
+  "tonics": [
+   {
+    "pop": "mbon",
+    "param": "mbonTonic"
+   }
+  ],
+  "grid": {
+   "kc2mb": [
+    0.5,
+    1,
+    2
+   ],
+   "aplGain": [
+    0.5,
+    1,
+    2
+   ],
+   "mbonTonic": [
+    0,
+    4
+   ],
+   "mbRecur": [
+    1
+   ]
+  },
+  "perturbations": [
+   {
+    "name": "apl_silence",
+    "silence": "apl",
+    "why": "does separation survive without feedback inhibition?"
+   },
+   {
+    "name": "mb_recur_off",
+    "param": "mbRecur",
+    "set": 0
+   }
+  ],
+  "hypotheses": [
+   "gain_controlled",
+   "linear_passthrough",
+   "collapsed",
+   "silent"
+  ],
+  "provenance": {
+   "signature": "large sparse expansion + near-random input mixing + global feedback inhibition + compartmental modulatory gating",
+   "evidence": [
+    {
+     "item": "expansion ratio",
+     "value": "5.9×",
+     "weight": 0.25
+    },
+    {
+     "item": "PN-pair KC-correlation ≈ shuffle",
+     "value": "0.0234 vs 0.0125",
+     "weight": 0.2
+    },
+    {
+     "item": "APL covers all KCs (global normalisation)",
+     "value": "1.0",
+     "weight": 0.15
+    },
+    {
+     "item": "DAN→KC ≫ DAN→MBON (gate at the synapse)",
+     "value": "89,036 vs 37,972",
+     "weight": 0.15
+    },
+    {
+     "item": "dynamics: ABL silencing broadens KC code",
+     "value": "0.16→0.31 active",
+     "weight": 0.1
+    }
+   ],
+   "topology_folded": false
+  }
+ },
+ "members": [
+  {
+   "params": {
+    "kc2mb": 0.5,
+    "aplGain": 0.5,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 2,
+    "compression": 1.772,
+    "in_sim": 0.5,
+    "out_sim": 0,
+    "kc_active": 0.049,
+    "rate": 0
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 2,
+     "compression": 1.747,
+     "kc_active": 0.049,
+     "rate": 0
+    },
+    "mb_recur_off": {
+     "expansion": 2,
+     "compression": 1.753,
+     "kc_active": 0.049,
+     "rate": 0
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 0.5,
+    "aplGain": 0.5,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 0.367,
+    "compression": 1.739,
+    "in_sim": 0.5,
+    "out_sim": 0.816,
+    "kc_active": 0.049,
+    "rate": 5
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0,
+     "compression": 1.799,
+     "kc_active": 0.049,
+     "rate": 4
+    },
+    "mb_recur_off": {
+     "expansion": 0.586,
+     "compression": 1.778,
+     "kc_active": 0.049,
+     "rate": 6
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 0.5,
+    "aplGain": 1,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 2,
+    "compression": 1.755,
+    "in_sim": 0.5,
+    "out_sim": 0,
+    "kc_active": 0.049,
+    "rate": 0
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 2,
+     "compression": 1.763,
+     "kc_active": 0.049,
+     "rate": 0
+    },
+    "mb_recur_off": {
+     "expansion": 2,
+     "compression": 1.741,
+     "kc_active": 0.049,
+     "rate": 0
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 0.5,
+    "aplGain": 1,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 0.586,
+    "compression": 1.774,
+    "in_sim": 0.5,
+    "out_sim": 0.707,
+    "kc_active": 0.049,
+    "rate": 6
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.268,
+     "compression": 1.769,
+     "kc_active": 0.049,
+     "rate": 6
+    },
+    "mb_recur_off": {
+     "expansion": 0.586,
+     "compression": 1.726,
+     "kc_active": 0.049,
+     "rate": 6
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 0.5,
+    "aplGain": 2,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 2,
+    "compression": 1.814,
+    "in_sim": 0.5,
+    "out_sim": 0,
+    "kc_active": 0.049,
+    "rate": 0
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 2,
+     "compression": 1.811,
+     "kc_active": 0.049,
+     "rate": 0
+    },
+    "mb_recur_off": {
+     "expansion": 2,
+     "compression": 1.686,
+     "kc_active": 0.049,
+     "rate": 0
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 0.5,
+    "aplGain": 2,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 0.148,
+    "compression": 1.75,
+    "in_sim": 0.5,
+    "out_sim": 0.926,
+    "kc_active": 0.049,
+    "rate": 9
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0,
+     "compression": 1.731,
+     "kc_active": 0.049,
+     "rate": 4
+    },
+    "mb_recur_off": {
+     "expansion": 0.367,
+     "compression": 1.808,
+     "kc_active": 0.049,
+     "rate": 5
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 1,
+    "aplGain": 0.5,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 0.211,
+    "compression": 1.751,
+    "in_sim": 0.5,
+    "out_sim": 0.894,
+    "kc_active": 0.049,
+    "rate": 8
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.268,
+     "compression": 1.786,
+     "kc_active": 0.049,
+     "rate": 6
+    },
+    "mb_recur_off": {
+     "expansion": 0.103,
+     "compression": 1.752,
+     "kc_active": 0.049,
+     "rate": 7
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 1,
+    "aplGain": 0.5,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.105,
+    "compression": 1.791,
+    "in_sim": 0.5,
+    "out_sim": 0.947,
+    "kc_active": 0.049,
+    "rate": 59
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.081,
+     "compression": 1.793,
+     "kc_active": 0.049,
+     "rate": 58
+    },
+    "mb_recur_off": {
+     "expansion": 0.093,
+     "compression": 1.737,
+     "kc_active": 0.049,
+     "rate": 65
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 1,
+    "aplGain": 1,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 0,
+    "compression": 1.808,
+    "in_sim": 0.5,
+    "out_sim": 1,
+    "kc_active": 0.049,
+    "rate": 6
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.174,
+     "compression": 1.773,
+     "kc_active": 0.049,
+     "rate": 7
+    },
+    "mb_recur_off": {
+     "expansion": 0.174,
+     "compression": 1.805,
+     "kc_active": 0.049,
+     "rate": 7
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 1,
+    "aplGain": 1,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.156,
+    "compression": 1.784,
+    "in_sim": 0.5,
+    "out_sim": 0.922,
+    "kc_active": 0.049,
+    "rate": 58
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.147,
+     "compression": 1.7,
+     "kc_active": 0.049,
+     "rate": 58
+    },
+    "mb_recur_off": {
+     "expansion": 0.147,
+     "compression": 1.731,
+     "kc_active": 0.049,
+     "rate": 67
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 1,
+    "aplGain": 2,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "silent",
+   "baseline": {
+    "expansion": 0.174,
+    "compression": 1.765,
+    "in_sim": 0.5,
+    "out_sim": 0.913,
+    "kc_active": 0.049,
+    "rate": 7
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0,
+     "compression": 1.802,
+     "kc_active": 0.049,
+     "rate": 6
+    },
+    "mb_recur_off": {
+     "expansion": 0.103,
+     "compression": 1.796,
+     "kc_active": 0.049,
+     "rate": 7
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 1,
+    "aplGain": 2,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.127,
+    "compression": 1.757,
+    "in_sim": 0.5,
+    "out_sim": 0.936,
+    "kc_active": 0.049,
+    "rate": 59
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.116,
+     "compression": 1.815,
+     "kc_active": 0.049,
+     "rate": 56
+    },
+    "mb_recur_off": {
+     "expansion": 0.119,
+     "compression": 1.787,
+     "kc_active": 0.049,
+     "rate": 65
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 2,
+    "aplGain": 0.5,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.069,
+    "compression": 1.742,
+    "in_sim": 0.5,
+    "out_sim": 0.966,
+    "kc_active": 0.049,
+    "rate": 70
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.062,
+     "compression": 1.747,
+     "kc_active": 0.049,
+     "rate": 72
+    },
+    "mb_recur_off": {
+     "expansion": 0.067,
+     "compression": 1.79,
+     "kc_active": 0.049,
+     "rate": 76
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 2,
+    "aplGain": 0.5,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.068,
+    "compression": 1.829,
+    "in_sim": 0.5,
+    "out_sim": 0.966,
+    "kc_active": 0.049,
+    "rate": 245
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.079,
+     "compression": 1.758,
+     "kc_active": 0.049,
+     "rate": 251
+    },
+    "mb_recur_off": {
+     "expansion": 0.043,
+     "compression": 1.808,
+     "kc_active": 0.049,
+     "rate": 283
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 2,
+    "aplGain": 1,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.065,
+    "compression": 1.822,
+    "in_sim": 0.5,
+    "out_sim": 0.967,
+    "kc_active": 0.049,
+    "rate": 63
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.086,
+     "compression": 1.737,
+     "kc_active": 0.049,
+     "rate": 75
+    },
+    "mb_recur_off": {
+     "expansion": 0.05,
+     "compression": 1.815,
+     "kc_active": 0.049,
+     "rate": 79
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 2,
+    "aplGain": 1,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.06,
+    "compression": 1.781,
+    "in_sim": 0.5,
+    "out_sim": 0.97,
+    "kc_active": 0.049,
+    "rate": 255
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.066,
+     "compression": 1.79,
+     "kc_active": 0.049,
+     "rate": 249
+    },
+    "mb_recur_off": {
+     "expansion": 0.068,
+     "compression": 1.781,
+     "kc_active": 0.049,
+     "rate": 283
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 2,
+    "aplGain": 2,
+    "mbonTonic": 0,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.077,
+    "compression": 1.762,
+    "in_sim": 0.5,
+    "out_sim": 0.961,
+    "kc_active": 0.049,
+    "rate": 71
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.085,
+     "compression": 1.801,
+     "kc_active": 0.049,
+     "rate": 73
+    },
+    "mb_recur_off": {
+     "expansion": 0.094,
+     "compression": 1.767,
+     "kc_active": 0.049,
+     "rate": 81
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "kc2mb": 2,
+    "aplGain": 2,
+    "mbonTonic": 4,
+    "mbRecur": 1
+   },
+   "hypothesis": "collapsed",
+   "baseline": {
+    "expansion": 0.067,
+    "compression": 1.777,
+    "in_sim": 0.5,
+    "out_sim": 0.967,
+    "kc_active": 0.049,
+    "rate": 250
+   },
+   "perturbations": {
+    "apl_silence": {
+     "expansion": 0.064,
+     "compression": 1.747,
+     "kc_active": 0.049,
+     "rate": 251
+    },
+    "mb_recur_off": {
+     "expansion": 0.059,
+     "compression": 1.754,
+     "kc_active": 0.049,
+     "rate": 285
+    }
+   },
+   "mechanism": null
+  }
+ ],
+ "ranked_experiments": [
+  {
+   "experiment": "baseline_gain_control",
+   "separation": 0.529,
+   "outcomes": [
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "uncontrolled",
+    "silent",
+    "uncontrolled",
+    "silent",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled"
+   ]
+  },
+  {
+   "experiment": "apl_silence",
+   "separation": 0.529,
+   "outcomes": [
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "uncontrolled",
+    "silent",
+    "uncontrolled",
+    "silent",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled"
+   ]
+  },
+  {
+   "experiment": "mb_recur_off",
+   "separation": 0.529,
+   "outcomes": [
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "uncontrolled",
+    "silent",
+    "uncontrolled",
+    "silent",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled",
+    "uncontrolled"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "generator": "Blender 5.2.1 LTS / Cycles",
+  "samples": 128,
+  "parts": 85,
+  "triangles": 1169030,
+  "vertices": 587293,
+  "seconds": 171.89,
+  "bytes": 28334050,
+  "gzipBytes": 17859163,
+  "packedBytes": 8224812,
+  "maxPositionError": 0.0000020377648515569613,
+  "maxLightError": 0.004396501697325306
+}

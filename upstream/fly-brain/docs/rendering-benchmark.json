@@ -1,0 +1,5691 @@
+{
+  "date": "2026-09-13",
+  "baselineCommit": "9d89509",
+  "notes": [
+    "Warm 180-frame samples, 1400x900 CSS pixels at device scale 1; headless Chrome, ANGLE Metal, Apple M4 Pro.",
+    "CPU submit times cover the main Three.js render, not asynchronous GPU completion or the brain inset.",
+    "Active simulation samples are live and nondeterministic; compare the actual limits, not a guaranteed FPS.",
+    "Earlier tuning runs were excluded after hot reload and transient frame-time interference; these samples used the separate HMR-disabled server on port 5174.",
+    "Final adaptive resolution run. Device scale is 1, but the render DPR drops to 0.9 in active macro and begins recovering in the subsequent wide sample; per-scenario DPR is recorded.",
+    "Retina final check: device scale 2, 5-second adaptation warmup, then 120 frames per page, paused macro views. Effective render DPR settled near 0.997 with full geometry retained. Front/rear/top/eye-close screenshots also inspected.",
+    "The before/after table and initial Retina check precede the material revision. materialRevision records the reduced sheen, filtered surface texture, amber light wrap and restrained wing/eye reflections; same hardware, browser, viewport and 180-frame harness. Live worker timings vary between runs.",
+    "Blender detail revision: a shared 512-square packed data tile replaces procedural cuticle noise; facial hairs are shorter and denser. Reported active-simulation FPS remains workload dependent; the short social sample is supplemented by a separate 600-frame check after ten seconds of simulation warmup.",
+    "Current fly.html is always interactive 3D. blenderInteractive records the Blender-subdivided geometry, Cycles body/hair irradiance and AgX display transform. The earlier renderedPage gallery was removed; its measurements are historical only."
+  ],
+  "before": {
+    "baseline": true,
+    "browser": "152.0.7977.83",
+    "frames": 180,
+    "results": [
+      {
+        "name": "fly-rest",
+        "frameMs": {
+          "median": 16.71,
+          "p95": 17.98,
+          "mean": 16.645
+        },
+        "cpuSubmitMs": {
+          "median": 1.955,
+          "p95": 3.015,
+          "mean": 2.056
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 534,
+          "p95": 640,
+          "mean": 569.333
+        },
+        "triangles": {
+          "median": 4667744,
+          "p95": 4999134,
+          "mean": 4778207.333
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true
+      },
+      {
+        "name": "fly-flight-dark",
+        "frameMs": {
+          "median": 19.99,
+          "p95": 23.345,
+          "mean": 19.849
+        },
+        "cpuSubmitMs": {
+          "median": 3.395,
+          "p95": 4.305,
+          "mean": 3.416
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 644,
+          "p95": 746,
+          "mean": 678
+        },
+        "triangles": {
+          "median": 4986032,
+          "p95": 5303966,
+          "mean": 5092010
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true
+      },
+      {
+        "name": "arena-default-paused",
+        "frameMs": {
+          "median": 16.685,
+          "p95": 18.18,
+          "mean": 16.628
+        },
+        "cpuSubmitMs": {
+          "median": 0.69,
+          "p95": 1.115,
+          "mean": 0.714
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 182,
+          "p95": 182,
+          "mean": 182
+        },
+        "triangles": {
+          "median": 139892,
+          "p95": 139892,
+          "mean": 139892
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "detail": [
+          null
+        ]
+      },
+      {
+        "name": "arena-macro-paused",
+        "frameMs": {
+          "median": 16.675,
+          "p95": 18.14,
+          "mean": 16.664
+        },
+        "cpuSubmitMs": {
+          "median": 0.635,
+          "p95": 0.85,
+          "mean": 0.642
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 180,
+          "p95": 180,
+          "mean": 180
+        },
+        "triangles": {
+          "median": 139796,
+          "p95": 139796,
+          "mean": 139796
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "detail": [
+          null
+        ]
+      },
+      {
+        "name": "arena-macro-running",
+        "frameMs": {
+          "median": 16.71,
+          "p95": 19.22,
+          "mean": 16.599
+        },
+        "cpuSubmitMs": {
+          "median": 0.42,
+          "p95": 0.5,
+          "mean": 0.434
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 180,
+          "p95": 181,
+          "mean": 180.111
+        },
+        "triangles": {
+          "median": 139796,
+          "p95": 139844,
+          "mean": 139801.333
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "detail": [
+          null
+        ]
+      },
+      {
+        "name": "arena-wide-paused",
+        "frameMs": {
+          "median": 16.385,
+          "p95": 19.93,
+          "mean": 16.623
+        },
+        "cpuSubmitMs": {
+          "median": 0.605,
+          "p95": 1.03,
+          "mean": 0.633
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 182,
+          "p95": 182,
+          "mean": 182
+        },
+        "triangles": {
+          "median": 139892,
+          "p95": 139892,
+          "mean": 139892
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "detail": [
+          null
+        ]
+      },
+      {
+        "name": "arena-social-paused",
+        "frameMs": {
+          "median": 16.54,
+          "p95": 20.205,
+          "mean": 16.598
+        },
+        "cpuSubmitMs": {
+          "median": 1.645,
+          "p95": 1.945,
+          "mean": 1.629
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 826,
+          "p95": 826,
+          "mean": 826
+        },
+        "triangles": {
+          "median": 685943,
+          "p95": 685943,
+          "mean": 685943
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "detail": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "name": "arena-social-running",
+        "frameMs": {
+          "median": 21.75,
+          "p95": 55.09,
+          "mean": 26.816
+        },
+        "cpuSubmitMs": {
+          "median": 1.36,
+          "p95": 1.775,
+          "mean": 1.394
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 828,
+          "p95": 829,
+          "mean": 791.489
+        },
+        "triangles": {
+          "median": 686290,
+          "p95": 686473,
+          "mean": 658045.106
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "detail": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "after": {
+    "baseline": false,
+    "browser": "152.0.7977.83",
+    "frames": 180,
+    "results": [
+      {
+        "name": "fly-rest",
+        "frameMs": {
+          "median": 16.615,
+          "p95": 20.39,
+          "mean": 16.66
+        },
+        "cpuSubmitMs": {
+          "median": 1.55,
+          "p95": 2.98,
+          "mean": 1.675
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 357,
+          "p95": 461,
+          "mean": 398.6
+        },
+        "triangles": {
+          "median": 2099009,
+          "p95": 2429399,
+          "mean": 2231165
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "counters": {
+          "shadowUpdates": 72
+        }
+      },
+      {
+        "name": "fly-flight-dark",
+        "frameMs": {
+          "median": 16.715,
+          "p95": 19.38,
+          "mean": 16.633
+        },
+        "cpuSubmitMs": {
+          "median": 1.59,
+          "p95": 3.495,
+          "mean": 1.903
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 349,
+          "p95": 451,
+          "mean": 387.533
+        },
+        "triangles": {
+          "median": 2056481,
+          "p95": 2374415,
+          "mean": 2176589.4
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "counters": {
+          "shadowUpdates": 68
+        }
+      },
+      {
+        "name": "arena-default-paused",
+        "frameMs": {
+          "median": 16.68,
+          "p95": 18.52,
+          "mean": 16.596
+        },
+        "cpuSubmitMs": {
+          "median": 0.635,
+          "p95": 1.455,
+          "mean": 0.725
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 116,
+          "p95": 116,
+          "mean": 116
+        },
+        "triangles": {
+          "median": 132540,
+          "p95": 132540,
+          "mean": 132540
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 71
+        }
+      },
+      {
+        "name": "arena-macro-paused",
+        "frameMs": {
+          "median": 16.825,
+          "p95": 20.87,
+          "mean": 16.901
+        },
+        "cpuSubmitMs": {
+          "median": 1.025,
+          "p95": 2.21,
+          "mean": 1.129
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 270,
+          "p95": 270,
+          "mean": 270
+        },
+        "triangles": {
+          "median": 1811041,
+          "p95": 1811041,
+          "mean": 1811041
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 73
+        }
+      },
+      {
+        "name": "arena-macro-running",
+        "frameMs": {
+          "median": 17.175,
+          "p95": 23.085,
+          "mean": 17.935
+        },
+        "cpuSubmitMs": {
+          "median": 0.75,
+          "p95": 0.955,
+          "mean": 0.76
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 270,
+          "p95": 357,
+          "mean": 302.456
+        },
+        "triangles": {
+          "median": 1811041,
+          "p95": 2083567,
+          "mean": 1913975.533
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 0.9,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 68,
+          "brainUploads": 27,
+          "brainDraws": 78
+        }
+      },
+      {
+        "name": "arena-flight-fixture",
+        "frameMs": {
+          "median": 16.645,
+          "p95": 18.55,
+          "mean": 16.61
+        },
+        "cpuSubmitMs": {
+          "median": 1.155,
+          "p95": 2.24,
+          "mean": 1.214
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 268,
+          "p95": 268,
+          "mean": 268
+        },
+        "triangles": {
+          "median": 1785489,
+          "p95": 1785489,
+          "mean": 1785489
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 0.9,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 70
+        }
+      },
+      {
+        "name": "arena-wide-paused",
+        "frameMs": {
+          "median": 16.66,
+          "p95": 18.295,
+          "mean": 16.627
+        },
+        "cpuSubmitMs": {
+          "median": 0.39,
+          "p95": 1.14,
+          "mean": 0.459
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 95,
+          "p95": 95,
+          "mean": 95.467
+        },
+        "triangles": {
+          "median": 69793,
+          "p95": 69793,
+          "mean": 70171.556
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 0.9450000000000001,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          0
+        ],
+        "counters": {
+          "shadowUpdates": 1,
+          "brainUploads": 0,
+          "brainDraws": 70
+        }
+      },
+      {
+        "name": "arena-social-paused",
+        "frameMs": {
+          "median": 16.67,
+          "p95": 18.135,
+          "mean": 16.632
+        },
+        "cpuSubmitMs": {
+          "median": 1.69,
+          "p95": 2.18,
+          "mean": 1.714
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 489,
+          "p95": 489,
+          "mean": 489
+        },
+        "triangles": {
+          "median": 638877,
+          "p95": 638877,
+          "mean": 638877
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 70
+        }
+      },
+      {
+        "name": "arena-social-running",
+        "frameMs": {
+          "median": 21.475,
+          "p95": 58.54,
+          "mean": 27.907
+        },
+        "cpuSubmitMs": {
+          "median": 1.315,
+          "p95": 1.69,
+          "mean": 1.303
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 775,
+          "p95": 918,
+          "mean": 666.667
+        },
+        "triangles": {
+          "median": 1052522,
+          "p95": 1210088,
+          "mean": 901336.5
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 94,
+          "brainUploads": 42,
+          "brainDraws": 94
+        }
+      }
+    ],
+    "errors": []
+  },
+  "retina": {
+    "errors": [],
+    "evidence": [
+      {
+        "name": "fly",
+        "fps": 60.41261818230215,
+        "dpr": 0.9971447332497019,
+        "width": 1396,
+        "height": 897
+      },
+      {
+        "name": "arena",
+        "fps": 60.07434199826762,
+        "dpr": 0.9971447332497019,
+        "width": 1396,
+        "height": 897
+      }
+    ]
+  },
+  "materialRevision": {
+    "baseline": false,
+    "browser": "152.0.7977.83",
+    "frames": 180,
+    "results": [
+      {
+        "name": "fly-rest",
+        "frameMs": {
+          "median": 16.615,
+          "p95": 18.24,
+          "mean": 16.619
+        },
+        "cpuSubmitMs": {
+          "median": 1.28,
+          "p95": 2.205,
+          "mean": 1.409
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 357,
+          "p95": 461,
+          "mean": 397.444
+        },
+        "triangles": {
+          "median": 2099009,
+          "p95": 2429399,
+          "mean": 2227494
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "counters": {
+          "shadowUpdates": 70
+        }
+      },
+      {
+        "name": "fly-flight-dark",
+        "frameMs": {
+          "median": 16.57,
+          "p95": 18.39,
+          "mean": 16.619
+        },
+        "cpuSubmitMs": {
+          "median": 1.52,
+          "p95": 2.555,
+          "mean": 1.64
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 349,
+          "p95": 451,
+          "mean": 388.667
+        },
+        "triangles": {
+          "median": 2056481,
+          "p95": 2374415,
+          "mean": 2180122
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "counters": {
+          "shadowUpdates": 70
+        }
+      },
+      {
+        "name": "arena-default-paused",
+        "frameMs": {
+          "median": 16.655,
+          "p95": 17.73,
+          "mean": 16.613
+        },
+        "cpuSubmitMs": {
+          "median": 0.755,
+          "p95": 1.47,
+          "mean": 0.842
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 116,
+          "p95": 116,
+          "mean": 116
+        },
+        "triangles": {
+          "median": 132540,
+          "p95": 132540,
+          "mean": 132540
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 71
+        }
+      },
+      {
+        "name": "arena-macro-paused",
+        "frameMs": {
+          "median": 16.725,
+          "p95": 20.125,
+          "mean": 16.975
+        },
+        "cpuSubmitMs": {
+          "median": 1.115,
+          "p95": 1.86,
+          "mean": 1.162
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 270,
+          "p95": 270,
+          "mean": 270
+        },
+        "triangles": {
+          "median": 1811041,
+          "p95": 1811041,
+          "mean": 1811041
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 73
+        }
+      },
+      {
+        "name": "arena-macro-running",
+        "frameMs": {
+          "median": 16.68,
+          "p95": 18.06,
+          "mean": 16.617
+        },
+        "cpuSubmitMs": {
+          "median": 0.76,
+          "p95": 0.955,
+          "mean": 0.77
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 270,
+          "p95": 355,
+          "mean": 300.367
+        },
+        "triangles": {
+          "median": 1811041,
+          "p95": 2083471,
+          "mean": 1907911.933
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 64,
+          "brainUploads": 25,
+          "brainDraws": 73
+        }
+      },
+      {
+        "name": "arena-flight-fixture",
+        "frameMs": {
+          "median": 16.68,
+          "p95": 17.815,
+          "mean": 16.64
+        },
+        "cpuSubmitMs": {
+          "median": 1.175,
+          "p95": 1.55,
+          "mean": 1.176
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 268,
+          "p95": 268,
+          "mean": 268
+        },
+        "triangles": {
+          "median": 1785489,
+          "p95": 1785489,
+          "mean": 1785489
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 71
+        }
+      },
+      {
+        "name": "arena-wide-paused",
+        "frameMs": {
+          "median": 16.66,
+          "p95": 17.56,
+          "mean": 16.65
+        },
+        "cpuSubmitMs": {
+          "median": 0.65,
+          "p95": 1.245,
+          "mean": 0.731
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 95,
+          "p95": 95,
+          "mean": 95
+        },
+        "triangles": {
+          "median": 69793,
+          "p95": 69793,
+          "mean": 69793
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          0
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 70
+        }
+      },
+      {
+        "name": "arena-social-paused",
+        "frameMs": {
+          "median": 16.655,
+          "p95": 16.935,
+          "mean": 16.63
+        },
+        "cpuSubmitMs": {
+          "median": 1.555,
+          "p95": 1.9,
+          "mean": 1.538
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 489,
+          "p95": 489,
+          "mean": 489
+        },
+        "triangles": {
+          "median": 638877,
+          "p95": 638877,
+          "mean": 638877
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 69
+        }
+      },
+      {
+        "name": "arena-social-running",
+        "frameMs": {
+          "median": 19.56,
+          "p95": 63.805,
+          "mean": 26.886
+        },
+        "cpuSubmitMs": {
+          "median": 1.285,
+          "p95": 1.845,
+          "mean": 1.324
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 493,
+          "p95": 918,
+          "mean": 625.3
+        },
+        "triangles": {
+          "median": 642653,
+          "p95": 1210088,
+          "mean": 836360.672
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 88,
+          "brainUploads": 40,
+          "brainDraws": 89
+        }
+      }
+    ],
+    "errors": []
+  },
+  "materialRevisionRetina": {
+    "errors": [],
+    "evidence": [
+      {
+        "name": "fly",
+        "fps": 60.094348126576634,
+        "dpr": 0.9,
+        "width": 1260,
+        "height": 810
+      },
+      {
+        "name": "arena",
+        "fps": 60.42341709531342,
+        "dpr": 0.9971447332497019,
+        "width": 1396,
+        "height": 897
+      }
+    ]
+  },
+  "blenderDetailRevision": {
+    "baseline": false,
+    "browser": "152.0.7977.83",
+    "frames": 180,
+    "results": [
+      {
+        "name": "fly-rest",
+        "frameMs": {
+          "median": 16.675,
+          "p95": 18.655,
+          "mean": 16.638
+        },
+        "cpuSubmitMs": {
+          "median": 1.57,
+          "p95": 3.48,
+          "mean": 1.817
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 357,
+          "p95": 461,
+          "mean": 398.022
+        },
+        "triangles": {
+          "median": 2222889,
+          "p95": 2553279,
+          "mean": 2353209.5
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "counters": {
+          "shadowUpdates": 71
+        }
+      },
+      {
+        "name": "fly-flight-dark",
+        "frameMs": {
+          "median": 16.545,
+          "p95": 19.775,
+          "mean": 16.628
+        },
+        "cpuSubmitMs": {
+          "median": 1.815,
+          "p95": 4.06,
+          "mean": 2.134
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 349,
+          "p95": 451,
+          "mean": 387.533
+        },
+        "triangles": {
+          "median": 2180361,
+          "p95": 2498295,
+          "mean": 2300469.4
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "counters": {
+          "shadowUpdates": 68
+        }
+      },
+      {
+        "name": "arena-default-paused",
+        "frameMs": {
+          "median": 16.595,
+          "p95": 21.01,
+          "mean": 16.616
+        },
+        "cpuSubmitMs": {
+          "median": 0.65,
+          "p95": 1.955,
+          "mean": 0.948
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 116,
+          "p95": 116,
+          "mean": 116
+        },
+        "triangles": {
+          "median": 132540,
+          "p95": 132540,
+          "mean": 132540
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 72
+        }
+      },
+      {
+        "name": "arena-macro-paused",
+        "frameMs": {
+          "median": 16.52,
+          "p95": 21.47,
+          "mean": 16.619
+        },
+        "cpuSubmitMs": {
+          "median": 1.235,
+          "p95": 3.17,
+          "mean": 1.751
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 270,
+          "p95": 270,
+          "mean": 270
+        },
+        "triangles": {
+          "median": 1934921,
+          "p95": 1934921,
+          "mean": 1934921
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 70
+        }
+      },
+      {
+        "name": "arena-macro-running",
+        "frameMs": {
+          "median": 16.66,
+          "p95": 20.44,
+          "mean": 16.589
+        },
+        "cpuSubmitMs": {
+          "median": 0.93,
+          "p95": 1.385,
+          "mean": 0.976
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 270,
+          "p95": 355,
+          "mean": 299.006
+        },
+        "triangles": {
+          "median": 1934921,
+          "p95": 2207351,
+          "mean": 2027254.1
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 61,
+          "brainUploads": 25,
+          "brainDraws": 69
+        }
+      },
+      {
+        "name": "arena-flight-fixture",
+        "frameMs": {
+          "median": 15.945,
+          "p95": 20.405,
+          "mean": 16.62
+        },
+        "cpuSubmitMs": {
+          "median": 0.895,
+          "p95": 1.465,
+          "mean": 0.975
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 268,
+          "p95": 268,
+          "mean": 268
+        },
+        "triangles": {
+          "median": 1909369,
+          "p95": 1909369,
+          "mean": 1909369
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": true,
+        "detail": [
+          2
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 70
+        }
+      },
+      {
+        "name": "arena-wide-paused",
+        "frameMs": {
+          "median": 16.605,
+          "p95": 20.065,
+          "mean": 16.638
+        },
+        "cpuSubmitMs": {
+          "median": 0.56,
+          "p95": 1.805,
+          "mean": 0.838
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 95,
+          "p95": 95,
+          "mean": 95
+        },
+        "triangles": {
+          "median": 69793,
+          "p95": 69793,
+          "mean": 69793
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          0
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 69
+        }
+      },
+      {
+        "name": "arena-social-paused",
+        "frameMs": {
+          "median": 16.43,
+          "p95": 20.67,
+          "mean": 16.599
+        },
+        "cpuSubmitMs": {
+          "median": 1.415,
+          "p95": 3.485,
+          "mean": 1.737
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 489,
+          "p95": 489,
+          "mean": 489
+        },
+        "triangles": {
+          "median": 638877,
+          "p95": 638877,
+          "mean": 638877
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 0,
+          "brainUploads": 0,
+          "brainDraws": 67
+        }
+      },
+      {
+        "name": "arena-social-running",
+        "frameMs": {
+          "median": 16.415,
+          "p95": 21.26,
+          "mean": 16.639
+        },
+        "cpuSubmitMs": {
+          "median": 1.9,
+          "p95": 4.14,
+          "mean": 2.192
+        },
+        "gpuMs": null,
+        "calls": {
+          "median": 493,
+          "p95": 918,
+          "mean": 654.8
+        },
+        "triangles": {
+          "median": 642653,
+          "p95": 1210088,
+          "mean": 863474.872
+        },
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "dpr": 1,
+        "viewport": [
+          1400,
+          900
+        ],
+        "ao": false,
+        "detail": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counters": {
+          "shadowUpdates": 71,
+          "brainUploads": 24,
+          "brainDraws": 71
+        }
+      }
+    ],
+    "errors": []
+  },
+  "blenderDetailSocialLong": {
+    "warmupSeconds": 10,
+    "frames": 600,
+    "viewport": [
+      1400,
+      900
+    ],
+    "deviceScale": 1,
+    "initial": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fps": 59.992590915025566,
+    "meanMs": 16.668724999999007,
+    "p95Ms": 21.905000001192093,
+    "before": [
+      1086,
+      1107,
+      1178,
+      1189,
+      1077
+    ],
+    "after": [
+      2194,
+      2185,
+      2216,
+      2209,
+      2132
+    ],
+    "dpr": 1,
+    "details": [
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "errors": []
+  },
+  "renderedPage": {
+    "date": "2026-09-13",
+    "fullBodyRender": {
+      "blender": "5.2.1 LTS",
+      "engine": "CYCLES",
+      "device": "GPU",
+      "samples": 256,
+      "resolution": [
+        2400,
+        1600
+      ],
+      "view": "full",
+      "seconds_including_scene_setup": 43.85,
+      "render": "/Users/lulzx/work/fly-brain/art/fly/full-body.png",
+      "blend": "/Users/lulzx/work/fly-brain/art/fly/fly-full-body.blend"
+    },
+    "production": {
+      "initialResources": [
+        {
+          "name": "http://localhost:5175/assets/fly-CStD3qv7.js",
+          "bytes": 3205
+        },
+        {
+          "name": "http://localhost:5175/assets/modulepreload-polyfill-P2Xu9kJm.js",
+          "bytes": 970
+        },
+        {
+          "name": "http://localhost:5175/assets/fly-CaXpff7T.css",
+          "bytes": 1802
+        },
+        {
+          "name": "http://localhost:5175/body/renders/full-body.webp",
+          "bytes": 218364
+        },
+        {
+          "name": "http://localhost:5175/favicon.ico",
+          "bytes": 300
+        }
+      ],
+      "passed": true,
+      "errors": []
+    },
+    "status": "Superseded: photo gallery removed in favor of one interactive Blender-prepared 3D viewer."
+  },
+  "blenderInteractive": {
+    "bake": {
+      "generator": "Blender 5.2.1 LTS / Cycles",
+      "samples": 128,
+      "parts": 85,
+      "triangles": 1169030,
+      "vertices": 587293,
+      "seconds": 171.89,
+      "bytes": 28334050,
+      "gzipBytes": 17859163,
+      "packedBytes": 9261127,
+      "maxPositionError": 2.0377648515569613e-06,
+      "maxLightError": 0.004396501697325306
+    },
+    "production": {
+      "readyMs": 441,
+      "assets": {
+        "generator": "Blender 5.2.1 LTS / Cycles",
+        "parts": 85,
+        "triangles": 1169030,
+        "irradiance": true,
+        "bakedHairs": 35038,
+        "lights": 4,
+        "ao": false
+      },
+      "resources": [
+        {
+          "name": "/assets/fly-ChkCsMFe.js",
+          "bytes": 122704
+        },
+        {
+          "name": "/assets/OrbitControls-SCYECjiS.js",
+          "bytes": 189134
+        },
+        {
+          "name": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+          "bytes": 970
+        },
+        {
+          "name": "/assets/render-resolution-BWNvmIvc.js",
+          "bytes": 16847
+        },
+        {
+          "name": "/assets/fly-BuQ8j7DC.css",
+          "bytes": 1428
+        },
+        {
+          "name": "/body/blender/fly.json",
+          "bytes": 22016
+        },
+        {
+          "name": "/body/blender/fly.mesh",
+          "bytes": 9261427
+        },
+        {
+          "name": "/body/cuticle_detail.png",
+          "bytes": 491808
+        },
+        {
+          "name": "/body/blender/agx-look.png",
+          "bytes": 43951
+        },
+        {
+          "name": "/favicon.ico",
+          "bytes": 300
+        }
+      ],
+      "fullBody": {
+        "fps": 60.01104203157642,
+        "medianMs": 16.614999994635582,
+        "p95Ms": 17.61999998986721,
+        "dpr": 1,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 267,
+          "triangles": 3742331,
+          "renderMs": 1.2000000029802322,
+          "shadowUpdates": 184
+        }
+      },
+      "headDetail": {
+        "fps": 60.08839002177217,
+        "medianMs": 16.689999997615814,
+        "p95Ms": 18.625,
+        "dpr": 1,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 201,
+          "triangles": 3542571,
+          "renderMs": 1.3450000137090683,
+          "shadowUpdates": 366
+        }
+      },
+      "flying": {
+        "fps": 60.06432889629805,
+        "medianMs": 16.62000000476837,
+        "p95Ms": 21.200000002980232,
+        "dpr": 1,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 269,
+          "triangles": 3753869,
+          "renderMs": 3.1749999970197678,
+          "shadowUpdates": 615
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    "retina": {
+      "fps": 60.31858264732499,
+      "p95Ms": 18.549999997019768,
+      "deviceDpr": 2,
+      "renderDpr": 1.3801311186847085,
+      "triangles": 1169030,
+      "viewport": [
+        1400,
+        900
+      ],
+      "errors": []
+    },
+    "arena": {
+      "baseline": false,
+      "browser": "152.0.7977.83",
+      "frames": 180,
+      "results": [
+        {
+          "name": "fly-rest",
+          "frameMs": {
+            "median": 16.43,
+            "p95": 19.795,
+            "mean": 16.64
+          },
+          "cpuSubmitMs": {
+            "median": 1.365,
+            "p95": 3.935,
+            "mean": 1.788
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 268,
+            "p95": 375,
+            "mean": 309.611
+          },
+          "triangles": {
+            "median": 3742395,
+            "p95": 4969331,
+            "mean": 4219536.778
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "counters": {
+            "shadowUpdates": 70
+          }
+        },
+        {
+          "name": "fly-flight-dark",
+          "frameMs": {
+            "median": 16.895,
+            "p95": 20.19,
+            "mean": 16.809
+          },
+          "cpuSubmitMs": {
+            "median": 1.29,
+            "p95": 3.555,
+            "mean": 1.548
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 258,
+            "p95": 363,
+            "mean": 302.917
+          },
+          "triangles": {
+            "median": 3688511,
+            "p95": 4902991,
+            "mean": 4208038.556
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "counters": {
+            "shadowUpdates": 77
+          }
+        },
+        {
+          "name": "arena-default-paused",
+          "frameMs": {
+            "median": 16.68,
+            "p95": 18.495,
+            "mean": 16.609
+          },
+          "cpuSubmitMs": {
+            "median": 0.915,
+            "p95": 2.04,
+            "mean": 1.112
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 116,
+            "p95": 116,
+            "mean": 116
+          },
+          "triangles": {
+            "median": 132540,
+            "p95": 132540,
+            "mean": 132540
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            1
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 72
+          }
+        },
+        {
+          "name": "arena-macro-paused",
+          "frameMs": {
+            "median": 16.74,
+            "p95": 18.905,
+            "mean": 16.664
+          },
+          "cpuSubmitMs": {
+            "median": 1.22,
+            "p95": 3.175,
+            "mean": 1.632
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 270,
+            "p95": 270,
+            "mean": 270
+          },
+          "triangles": {
+            "median": 1934921,
+            "p95": 1934921,
+            "mean": 1934921
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": true,
+          "detail": [
+            2
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 71
+          }
+        },
+        {
+          "name": "arena-macro-running",
+          "frameMs": {
+            "median": 16.69,
+            "p95": 18.87,
+            "mean": 16.607
+          },
+          "cpuSubmitMs": {
+            "median": 0.93,
+            "p95": 1.35,
+            "mean": 0.973
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 270,
+            "p95": 355,
+            "mean": 298.806
+          },
+          "triangles": {
+            "median": 1934921,
+            "p95": 2207351,
+            "mean": 2027244.5
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": true,
+          "detail": [
+            2
+          ],
+          "counters": {
+            "shadowUpdates": 61,
+            "brainUploads": 25,
+            "brainDraws": 72
+          }
+        },
+        {
+          "name": "arena-flight-fixture",
+          "frameMs": {
+            "median": 16.67,
+            "p95": 20.36,
+            "mean": 16.616
+          },
+          "cpuSubmitMs": {
+            "median": 1.155,
+            "p95": 3.17,
+            "mean": 1.568
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 268,
+            "p95": 268,
+            "mean": 268
+          },
+          "triangles": {
+            "median": 1909369,
+            "p95": 1909369,
+            "mean": 1909369
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": true,
+          "detail": [
+            2
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 72
+          }
+        },
+        {
+          "name": "arena-wide-paused",
+          "frameMs": {
+            "median": 16.475,
+            "p95": 19.99,
+            "mean": 16.655
+          },
+          "cpuSubmitMs": {
+            "median": 1.29,
+            "p95": 2.01,
+            "mean": 1.189
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 95,
+            "p95": 95,
+            "mean": 95
+          },
+          "triangles": {
+            "median": 69793,
+            "p95": 69793,
+            "mean": 69793
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            0
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 69
+          }
+        },
+        {
+          "name": "arena-social-paused",
+          "frameMs": {
+            "median": 16.665,
+            "p95": 19.405,
+            "mean": 16.649
+          },
+          "cpuSubmitMs": {
+            "median": 1.39,
+            "p95": 3.845,
+            "mean": 1.733
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 489,
+            "p95": 489,
+            "mean": 489
+          },
+          "triangles": {
+            "median": 638877,
+            "p95": 638877,
+            "mean": 638877
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 70
+          }
+        },
+        {
+          "name": "arena-social-running",
+          "frameMs": {
+            "median": 16.705,
+            "p95": 19.465,
+            "mean": 16.629
+          },
+          "cpuSubmitMs": {
+            "median": 1.725,
+            "p95": 3.38,
+            "mean": 1.893
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 493,
+            "p95": 918,
+            "mean": 630.078
+          },
+          "triangles": {
+            "median": 642653,
+            "p95": 1210088,
+            "mean": 843612.439
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "counters": {
+            "shadowUpdates": 68,
+            "brainUploads": 25,
+            "brainDraws": 68
+          }
+        }
+      ],
+      "errors": []
+    },
+    "notes": [
+      "Production fly page: 1400x900 CSS pixels, Chrome 152/ANGLE Metal, M4 Pro, 300 warm frames per view, device scale 1.",
+      "The default, head and flight views retain 1,169,030 body triangles plus instanced hairs. The diffuse bake replaces screen-space AO.",
+      "The 9,261,127-byte mesh includes the original sampler, subdivided geometry and body/hair lighting. No fly photographs load.",
+      "Retina sample: 8 seconds warmup then 180 frames, actual render density reported separately from device scale.",
+      "Baked diffuse lighting follows the fixed studio/rest pose. Gloss, wings and camera interaction are live; pose-dependent self-shadowing and female scattering remain approximations.",
+      "Arena regression checks use its dynamic-lighting appearance and verify all five workers advance; these are render FPS measurements, not neural throughput."
+    ]
+  },
+  "browserOptimization": {
+    "date": "2026-09-13",
+    "baselineCommit": "fccb518",
+    "notes": [
+      "Separate production builds, Chrome 152 on Apple M4 Pro, ANGLE Metal, 1400x900, DPR 1 fixed during profiling, 240 frames per view after 1.8 seconds warmup.",
+      "GPU timers run separately from ordinary frame profiling because ANGLE instrumentation can serialize GPU work.",
+      "Loading uses three fresh browser contexts with the HTTP cache disabled on a local server; OS and driver caches remain warm. CPU-throttled loading is one 4x run, not a phone measurement.",
+      "afterFrames predates the final material-clone startup fix, which does not change the render loop. afterLoading and validation use that fix. CPU submission times varied between runs; no percentage improvement is claimed.",
+      "No geometry, hairs, MSAA samples or shadow resolution removed. The body-only half-resolution focus depth pass is replaced with the full-resolution resolved color depth, including opaque hairs.",
+      "WebGPU adapter/device initialization succeeded on apple metal-3, with timestamp-query support. The fly graphics renderer is still WebGL 2; no WebGPU speedup is claimed."
+    ],
+    "bytes": {
+      "before": 9261127,
+      "after": 8224812
+    },
+    "before": {
+      "browser": "152.0.7977.83",
+      "loads": [
+        {
+          "rate": 1,
+          "readyMs": 546.9549999982119,
+          "longTasks": [
+            {
+              "start": 163.51000000536442,
+              "duration": 383
+            }
+          ],
+          "heapBytes": 67998141,
+          "resources": [
+            {
+              "path": "/assets/fly-ChkCsMFe.js",
+              "bytes": 122404
+            },
+            {
+              "path": "/assets/OrbitControls-SCYECjiS.js",
+              "bytes": 188834
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-BWNvmIvc.js",
+              "bytes": 16547
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 21716
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 9261127
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/favicon.ico",
+              "bytes": 0
+            }
+          ]
+        },
+        {
+          "rate": 1,
+          "readyMs": 485.4949999898672,
+          "longTasks": [
+            {
+              "start": 145.26500000059605,
+              "duration": 339
+            }
+          ],
+          "heapBytes": 68106901,
+          "resources": [
+            {
+              "path": "/assets/fly-ChkCsMFe.js",
+              "bytes": 122404
+            },
+            {
+              "path": "/assets/OrbitControls-SCYECjiS.js",
+              "bytes": 188834
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-BWNvmIvc.js",
+              "bytes": 16547
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 21716
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 9261127
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            }
+          ]
+        },
+        {
+          "rate": 1,
+          "readyMs": 458.6200000047684,
+          "longTasks": [
+            {
+              "start": 128.26500000059605,
+              "duration": 330
+            }
+          ],
+          "heapBytes": 68253493,
+          "resources": [
+            {
+              "path": "/assets/fly-ChkCsMFe.js",
+              "bytes": 122404
+            },
+            {
+              "path": "/assets/OrbitControls-SCYECjiS.js",
+              "bytes": 188834
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-BWNvmIvc.js",
+              "bytes": 16547
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 21716
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 9261127
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            }
+          ]
+        },
+        {
+          "rate": 4,
+          "readyMs": 1470.4200000017881,
+          "longTasks": [
+            {
+              "start": 41.04999999701977,
+              "duration": 73
+            },
+            {
+              "start": 120.65999999642372,
+              "duration": 113
+            },
+            {
+              "start": 411.97499999403954,
+              "duration": 52
+            },
+            {
+              "start": 472.4299999922514,
+              "duration": 996
+            }
+          ],
+          "heapBytes": 66863077,
+          "resources": [
+            {
+              "path": "/assets/fly-ChkCsMFe.js",
+              "bytes": 122404
+            },
+            {
+              "path": "/assets/OrbitControls-SCYECjiS.js",
+              "bytes": 188834
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-BWNvmIvc.js",
+              "bytes": 16547
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 21716
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 9261127
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            }
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "name": "full-body",
+          "cpu": {
+            "mean": 1.820041667111218,
+            "median": 1.5099999904632568,
+            "p95": 3.894999995827675,
+            "max": 4.810000002384186
+          },
+          "triangles": {
+            "mean": 4212631.166666667,
+            "median": 3742331,
+            "p95": 4969201,
+            "max": 4969201
+          },
+          "calls": {
+            "mean": 306.8666666666667,
+            "median": 267,
+            "p95": 371,
+            "max": 371
+          },
+          "interval": {
+            "mean": 16.646958333378038,
+            "median": 16.635000005364418,
+            "p95": 20.37999999523163,
+            "max": 22.894999995827675
+          },
+          "gpuMs": null,
+          "shadowUpdates": 92,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 13
+          }
+        },
+        {
+          "name": "head-detail",
+          "cpu": {
+            "mean": 1.4966875002409021,
+            "median": 1.2100000083446503,
+            "p95": 3.7349999994039536,
+            "max": 4.545000001788139
+          },
+          "triangles": {
+            "mean": 4017983.125,
+            "median": 3542571,
+            "p95": 4769441,
+            "max": 4769441
+          },
+          "calls": {
+            "mean": 241.3,
+            "median": 201,
+            "p95": 305,
+            "max": 305
+          },
+          "interval": {
+            "mean": 16.63337500002235,
+            "median": 16.42000000178814,
+            "p95": 19.83500000834465,
+            "max": 23.055000007152557
+          },
+          "gpuMs": null,
+          "shadowUpdates": 93,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 13
+          }
+        },
+        {
+          "name": "orbit",
+          "cpu": {
+            "mean": 1.861187499947846,
+            "median": 1.5549999922513962,
+            "p95": 3.719999998807907,
+            "max": 4.570000007748604
+          },
+          "triangles": {
+            "mean": 3733476.658333333,
+            "median": 3495571,
+            "p95": 4729281,
+            "max": 4769441
+          },
+          "calls": {
+            "mean": 218.35,
+            "median": 195,
+            "p95": 300,
+            "max": 305
+          },
+          "interval": {
+            "mean": 16.596479166671635,
+            "median": 16.555000007152557,
+            "p95": 19.839999988675117,
+            "max": 22.640000000596046
+          },
+          "gpuMs": null,
+          "shadowUpdates": 93,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 13
+          }
+        }
+      ],
+      "errors": []
+    },
+    "afterFrames": {
+      "browser": "152.0.7977.83",
+      "loads": [
+        {
+          "rate": 1,
+          "readyMs": 611.9899999946356,
+          "longTasks": [
+            {
+              "start": 167.2199999988079,
+              "duration": 77
+            },
+            {
+              "start": 498.65000000596046,
+              "duration": 113
+            }
+          ],
+          "heapBytes": 66364403,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 167.55500000715256
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 229.67000000178814
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 498.7300000041723
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CVIHAdY0.js",
+              "bytes": 113620
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/favicon.ico",
+              "bytes": 0
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        },
+        {
+          "rate": 1,
+          "readyMs": 379.6050000041723,
+          "longTasks": [
+            {
+              "start": 159.90000000596046,
+              "duration": 77
+            },
+            {
+              "start": 281.07500000298023,
+              "duration": 98
+            }
+          ],
+          "heapBytes": 62774799,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 160.21000000834465
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 223.05000001192093
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 281.190000012517
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CVIHAdY0.js",
+              "bytes": 113620
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        },
+        {
+          "rate": 1,
+          "readyMs": 376.4450000077486,
+          "longTasks": [
+            {
+              "start": 154.52500000596046,
+              "duration": 77
+            },
+            {
+              "start": 276.9150000065565,
+              "duration": 99
+            }
+          ],
+          "heapBytes": 62913715,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 154.84000000357628
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 217.48000000417233
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 277.0050000101328
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CVIHAdY0.js",
+              "bytes": 113620
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        },
+        {
+          "rate": 4,
+          "readyMs": 863.7249999940395,
+          "longTasks": [
+            {
+              "start": 28.79500000178814,
+              "duration": 52
+            },
+            {
+              "start": 84.84000000357628,
+              "duration": 79
+            },
+            {
+              "start": 262.25,
+              "duration": 58
+            },
+            {
+              "start": 387.8700000047684,
+              "duration": 279
+            },
+            {
+              "start": 688.2249999940395,
+              "duration": 175
+            }
+          ],
+          "heapBytes": 69697660,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 389.4800000041723
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 609.7899999916553
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 688.3349999934435
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CVIHAdY0.js",
+              "bytes": 113620
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "name": "full-body",
+          "cpu": {
+            "mean": 1.7268749998882413,
+            "median": 1.425000011920929,
+            "p95": 3.634999990463257,
+            "max": 4.940000012516975
+          },
+          "triangles": {
+            "mean": 3042758.1666666665,
+            "median": 2572458,
+            "p95": 3799328,
+            "max": 3799328
+          },
+          "calls": {
+            "mean": 218.86666666666667,
+            "median": 179,
+            "p95": 283,
+            "max": 283
+          },
+          "interval": {
+            "mean": 16.651458333308497,
+            "median": 16.5,
+            "p95": 20.37000000476837,
+            "max": 23.280000001192093
+          },
+          "gpuMs": null,
+          "shadowUpdates": 92,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 12
+          }
+        },
+        {
+          "name": "head-detail",
+          "cpu": {
+            "mean": 1.4588958328589796,
+            "median": 1.1400000005960464,
+            "p95": 3.2150000035762787,
+            "max": 4.284999996423721
+          },
+          "triangles": {
+            "mean": 2940814.0416666665,
+            "median": 2455178,
+            "p95": 3682048,
+            "max": 3682048
+          },
+          "calls": {
+            "mean": 178.16666666666666,
+            "median": 137,
+            "p95": 241,
+            "max": 241
+          },
+          "interval": {
+            "mean": 16.641291666651764,
+            "median": 16.339999988675117,
+            "p95": 19.96500000357628,
+            "max": 22.785000011324883
+          },
+          "gpuMs": null,
+          "shadowUpdates": 95,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 12
+          }
+        },
+        {
+          "name": "orbit",
+          "cpu": {
+            "mean": 1.8075208325559895,
+            "median": 1.6950000077486038,
+            "p95": 3.634999990463257,
+            "max": 5.439999997615814
+          },
+          "triangles": {
+            "mean": 2698332.5166666666,
+            "median": 2424378,
+            "p95": 3658088,
+            "max": 3682048
+          },
+          "calls": {
+            "mean": 161.48333333333332,
+            "median": 133,
+            "p95": 238,
+            "max": 241
+          },
+          "interval": {
+            "mean": 16.652416666721304,
+            "median": 16.650000005960464,
+            "p95": 19.95499999821186,
+            "max": 21.589999988675117
+          },
+          "gpuMs": null,
+          "shadowUpdates": 94,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 12
+          }
+        }
+      ],
+      "errors": []
+    },
+    "afterLoading": {
+      "browser": "152.0.7977.83",
+      "loads": [
+        {
+          "rate": 1,
+          "readyMs": 330.4350000023842,
+          "longTasks": [
+            {
+              "start": 217.87000000476837,
+              "duration": 112
+            }
+          ],
+          "heapBytes": 62989619,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 163.89499999582767
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 178.68000000715256
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 217.93000000715256
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CFp1Rq2S.js",
+              "bytes": 113642
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/favicon.ico",
+              "bytes": 0
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        },
+        {
+          "rate": 1,
+          "readyMs": 327.10999999940395,
+          "longTasks": [
+            {
+              "start": 226.8449999988079,
+              "duration": 100
+            }
+          ],
+          "heapBytes": 62801931,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 152.82999999821186
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 167.6199999898672
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 226.90499998629093
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CFp1Rq2S.js",
+              "bytes": 113642
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        },
+        {
+          "rate": 1,
+          "readyMs": 324.0700000077486,
+          "longTasks": [
+            {
+              "start": 226.48499999940395,
+              "duration": 97
+            }
+          ],
+          "heapBytes": 62907235,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 151.6950000077486
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 166.32500000298023
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 226.60500000417233
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CFp1Rq2S.js",
+              "bytes": 113642
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        },
+        {
+          "rate": 4,
+          "readyMs": 675.8449999988079,
+          "longTasks": [
+            {
+              "start": 30.185000002384186,
+              "duration": 53
+            },
+            {
+              "start": 87.30500000715256,
+              "duration": 78
+            },
+            {
+              "start": 263.64500001072884,
+              "duration": 57
+            },
+            {
+              "start": 387.7600000053644,
+              "duration": 103
+            },
+            {
+              "start": 502.15000000596046,
+              "duration": 172
+            }
+          ],
+          "heapBytes": 65621449,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 388.77500000596046
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 434.65000000596046
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 502.190000012517
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CFp1Rq2S.js",
+              "bytes": 113642
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        }
+      ],
+      "frames": [],
+      "errors": []
+    },
+    "beforeGpuDiagnostic": {
+      "browser": "152.0.7977.83",
+      "loads": [
+        {
+          "rate": 1,
+          "readyMs": 479.13499999046326,
+          "longTasks": [
+            {
+              "start": 147.7449999898672,
+              "duration": 331
+            }
+          ],
+          "heapBytes": 69416573,
+          "resources": [
+            {
+              "path": "/assets/fly-ChkCsMFe.js",
+              "bytes": 122404
+            },
+            {
+              "path": "/assets/OrbitControls-SCYECjiS.js",
+              "bytes": 188834
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-BWNvmIvc.js",
+              "bytes": 16547
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 21716
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 9261127
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/favicon.ico",
+              "bytes": 0
+            }
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "name": "full-body",
+          "cpu": {
+            "mean": 1.159729166328907,
+            "median": 1.1299999952316284,
+            "p95": 1.625,
+            "max": 1.8550000041723251
+          },
+          "triangles": {
+            "mean": 4207519.208333333,
+            "median": 3742331,
+            "p95": 4969201,
+            "max": 4969201
+          },
+          "calls": {
+            "mean": 306.43333333333334,
+            "median": 267,
+            "p95": 371,
+            "max": 371
+          },
+          "interval": {
+            "mean": 16.623520833315947,
+            "median": 16.635000005364418,
+            "p95": 19.58499999344349,
+            "max": 20.37999999523163
+          },
+          "gpuMs": {
+            "mean": 8.666313368200836,
+            "median": 8.487541,
+            "p95": 11.044624,
+            "max": 12.076166
+          },
+          "shadowUpdates": 91,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 13
+          }
+        },
+        {
+          "name": "head-detail",
+          "cpu": {
+            "mean": 1.0445208334053555,
+            "median": 1.0349999964237213,
+            "p95": 1.5349999964237213,
+            "max": 1.7450000047683716
+          },
+          "triangles": {
+            "mean": 4012871.1666666665,
+            "median": 3542571,
+            "p95": 4769441,
+            "max": 4769441
+          },
+          "calls": {
+            "mean": 240.86666666666667,
+            "median": 201,
+            "p95": 305,
+            "max": 305
+          },
+          "interval": {
+            "mean": 16.648875000017384,
+            "median": 16.319999992847443,
+            "p95": 19.560000002384186,
+            "max": 20.265000000596046
+          },
+          "gpuMs": {
+            "mean": 11.6841919707113,
+            "median": 11.543,
+            "p95": 14.404499,
+            "max": 15.390375
+          },
+          "shadowUpdates": 92,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 13
+          }
+        },
+        {
+          "name": "orbit",
+          "cpu": {
+            "mean": 1.008625000094374,
+            "median": 0.9950000047683716,
+            "p95": 1.5,
+            "max": 1.709999993443489
+          },
+          "triangles": {
+            "mean": 3733859.158333333,
+            "median": 3495571,
+            "p95": 4729281,
+            "max": 4769441
+          },
+          "calls": {
+            "mean": 218.35416666666666,
+            "median": 195,
+            "p95": 300,
+            "max": 305
+          },
+          "interval": {
+            "mean": 16.601687500004967,
+            "median": 16.46500000357628,
+            "p95": 19.28499999642372,
+            "max": 20.110000014305115
+          },
+          "gpuMs": {
+            "mean": 11.017964962343104,
+            "median": 10.904083,
+            "p95": 13.717208,
+            "max": 14.906125
+          },
+          "shadowUpdates": 93,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 13
+          }
+        }
+      ],
+      "errors": []
+    },
+    "afterGpuDiagnostic": {
+      "browser": "152.0.7977.83",
+      "loads": [
+        {
+          "rate": 1,
+          "readyMs": 383.0899999886751,
+          "longTasks": [
+            {
+              "start": 169.79999999701977,
+              "duration": 77
+            },
+            {
+              "start": 270.25999999046326,
+              "duration": 112
+            }
+          ],
+          "heapBytes": 62701755,
+          "phases": [
+            {
+              "name": "fly:decoded",
+              "ms": 170.11499999463558
+            },
+            {
+              "name": "fly:assembled",
+              "ms": 232.01999999582767
+            },
+            {
+              "name": "fly:compiled",
+              "ms": 270.35499998927116
+            }
+          ],
+          "resources": [
+            {
+              "path": "/assets/fly-CVIHAdY0.js",
+              "bytes": 113620
+            },
+            {
+              "path": "/assets/OrbitControls-CPah7c_5.js",
+              "bytes": 188830
+            },
+            {
+              "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+              "bytes": 670
+            },
+            {
+              "path": "/assets/render-resolution-LSp5x87y.js",
+              "bytes": 9641
+            },
+            {
+              "path": "/assets/fly-BuQ8j7DC.css",
+              "bytes": 1128
+            },
+            {
+              "path": "/body/blender/fly.json",
+              "bytes": 24820
+            },
+            {
+              "path": "/body/blender/fly.mesh",
+              "bytes": 8224812
+            },
+            {
+              "path": "/body/cuticle_detail.png",
+              "bytes": 491508
+            },
+            {
+              "path": "/body/blender/agx-look.png",
+              "bytes": 43651
+            },
+            {
+              "path": "/favicon.ico",
+              "bytes": 0
+            },
+            {
+              "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+              "bytes": 32782
+            }
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "name": "full-body",
+          "cpu": {
+            "mean": 1.8763750004892548,
+            "median": 1.614999994635582,
+            "p95": 3.709999993443489,
+            "max": 4.575000002980232
+          },
+          "triangles": {
+            "mean": 3052982.0833333335,
+            "median": 2572458,
+            "p95": 3799328,
+            "max": 3799328
+          },
+          "calls": {
+            "mean": 219.73333333333332,
+            "median": 179,
+            "p95": 283,
+            "max": 283
+          },
+          "interval": {
+            "mean": 16.631729166644316,
+            "median": 16.614999994635582,
+            "p95": 22.614999994635582,
+            "max": 24.979999989271164
+          },
+          "gpuMs": {
+            "mean": 6.428352033472802,
+            "median": 6.255625,
+            "p95": 8.865333,
+            "max": 11.345624
+          },
+          "shadowUpdates": 94,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 12
+          }
+        },
+        {
+          "name": "head-detail",
+          "cpu": {
+            "mean": 1.8886666655540467,
+            "median": 1.6400000005960464,
+            "p95": 3.989999994635582,
+            "max": 4.63000001013279
+          },
+          "triangles": {
+            "mean": 2945926,
+            "median": 2455178,
+            "p95": 3682048,
+            "max": 3682048
+          },
+          "calls": {
+            "mean": 178.6,
+            "median": 137,
+            "p95": 241,
+            "max": 241
+          },
+          "interval": {
+            "mean": 16.639500000017385,
+            "median": 15.980000004172325,
+            "p95": 22.969999998807907,
+            "max": 24.54500000178814
+          },
+          "gpuMs": {
+            "mean": 7.036591389121338,
+            "median": 6.780124,
+            "p95": 8.874874,
+            "max": 10.290291
+          },
+          "shadowUpdates": 96,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 12
+          }
+        },
+        {
+          "name": "orbit",
+          "cpu": {
+            "mean": 1.8670000002409022,
+            "median": 1.6599999964237213,
+            "p95": 3.7950000017881393,
+            "max": 4.435000002384186
+          },
+          "triangles": {
+            "mean": 2693183.808333333,
+            "median": 2424378,
+            "p95": 3658088,
+            "max": 3682048
+          },
+          "calls": {
+            "mean": 161.04583333333332,
+            "median": 133,
+            "p95": 238,
+            "max": 241
+          },
+          "interval": {
+            "mean": 16.638541666666665,
+            "median": 16.58499999344349,
+            "p95": 22.75,
+            "max": 23.814999997615814
+          },
+          "gpuMs": {
+            "mean": 6.801417209205021,
+            "median": 6.489999,
+            "p95": 8.90225,
+            "max": 12.010291
+          },
+          "shadowUpdates": 93,
+          "dpr": 1,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "geometry": {
+            "geometries": 178,
+            "textures": 12
+          }
+        }
+      ],
+      "errors": []
+    },
+    "validation": {
+      "readyMs": 340,
+      "assets": {
+        "generator": "Blender 5.2.1 LTS / Cycles",
+        "parts": 85,
+        "triangles": 1169030,
+        "irradiance": true,
+        "bakedHairs": 35038,
+        "lights": 4,
+        "ao": false
+      },
+      "resources": [
+        {
+          "name": "/assets/fly-CFp1Rq2S.js",
+          "bytes": 113942
+        },
+        {
+          "name": "/assets/OrbitControls-CPah7c_5.js",
+          "bytes": 189130
+        },
+        {
+          "name": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+          "bytes": 970
+        },
+        {
+          "name": "/assets/render-resolution-LSp5x87y.js",
+          "bytes": 9941
+        },
+        {
+          "name": "/assets/fly-BuQ8j7DC.css",
+          "bytes": 1428
+        },
+        {
+          "name": "/body/blender/fly.json",
+          "bytes": 25120
+        },
+        {
+          "name": "/body/blender/fly.mesh",
+          "bytes": 8225112
+        },
+        {
+          "name": "/body/cuticle_detail.png",
+          "bytes": 491808
+        },
+        {
+          "name": "/body/blender/agx-look.png",
+          "bytes": 43951
+        },
+        {
+          "name": "/favicon.ico",
+          "bytes": 300
+        },
+        {
+          "name": "/assets/fly-decode.worker-CfbSvjl-.js",
+          "bytes": 33082
+        }
+      ],
+      "fullBody": {
+        "fps": 60.07082350103662,
+        "medianMs": 16.65999999642372,
+        "p95Ms": 19.759999990463257,
+        "dpr": 1,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 283,
+          "triangles": 3799328,
+          "renderMs": 1.969999998807907,
+          "shadowUpdates": 183
+        }
+      },
+      "headDetail": {
+        "fps": 60.1227104521906,
+        "medianMs": 16.689999997615814,
+        "p95Ms": 21.87999999523163,
+        "dpr": 1,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 137,
+          "triangles": 2455178,
+          "renderMs": 1.2049999982118607,
+          "shadowUpdates": 359
+        }
+      },
+      "flying": {
+        "fps": 60.110362625867076,
+        "medianMs": 16.410000011324883,
+        "p95Ms": 23.625,
+        "dpr": 1,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 269,
+          "triangles": 3753869,
+          "renderMs": 2.4400000125169754,
+          "shadowUpdates": 604
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    "arenaValidation": {
+      "baseline": false,
+      "browser": "152.0.7977.83",
+      "frames": 180,
+      "results": [
+        {
+          "name": "fly-rest",
+          "frameMs": {
+            "median": 16.585,
+            "p95": 19.39,
+            "mean": 16.597
+          },
+          "cpuSubmitMs": {
+            "median": 1.33,
+            "p95": 3.52,
+            "mean": 1.631
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 179,
+            "p95": 283,
+            "mean": 217.711
+          },
+          "triangles": {
+            "median": 2572458,
+            "p95": 3799328,
+            "mean": 3029126.278
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "counters": {
+            "shadowUpdates": 67
+          }
+        },
+        {
+          "name": "fly-flight-dark",
+          "frameMs": {
+            "median": 16.71,
+            "p95": 19.18,
+            "mean": 16.624
+          },
+          "cpuSubmitMs": {
+            "median": 1.93,
+            "p95": 4,
+            "mean": 2.113
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 173,
+            "p95": 275,
+            "mean": 212.667
+          },
+          "triangles": {
+            "median": 2542936,
+            "p95": 3757350,
+            "mean": 3015208.111
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "counters": {
+            "shadowUpdates": 70
+          }
+        },
+        {
+          "name": "arena-default-paused",
+          "frameMs": {
+            "median": 16.86,
+            "p95": 20.64,
+            "mean": 16.596
+          },
+          "cpuSubmitMs": {
+            "median": 0.855,
+            "p95": 2.19,
+            "mean": 1.035
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 116,
+            "p95": 116,
+            "mean": 116
+          },
+          "triangles": {
+            "median": 132540,
+            "p95": 132540,
+            "mean": 132540
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            1
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 71
+          }
+        },
+        {
+          "name": "arena-macro-paused",
+          "frameMs": {
+            "median": 16.325,
+            "p95": 20.925,
+            "mean": 16.64
+          },
+          "cpuSubmitMs": {
+            "median": 1.205,
+            "p95": 3,
+            "mean": 1.336
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 270,
+            "p95": 270,
+            "mean": 270
+          },
+          "triangles": {
+            "median": 1934921,
+            "p95": 1934921,
+            "mean": 1934921
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": true,
+          "detail": [
+            2
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 70
+          }
+        },
+        {
+          "name": "arena-macro-running",
+          "frameMs": {
+            "median": 15.95,
+            "p95": 20.74,
+            "mean": 16.638
+          },
+          "cpuSubmitMs": {
+            "median": 0.78,
+            "p95": 1,
+            "mean": 0.813
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 270,
+            "p95": 355,
+            "mean": 299.883
+          },
+          "triangles": {
+            "median": 1934921,
+            "p95": 2207351,
+            "mean": 2030277.9
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": true,
+          "detail": [
+            2
+          ],
+          "counters": {
+            "shadowUpdates": 63,
+            "brainUploads": 25,
+            "brainDraws": 69
+          }
+        },
+        {
+          "name": "arena-flight-fixture",
+          "frameMs": {
+            "median": 16,
+            "p95": 20.5,
+            "mean": 16.609
+          },
+          "cpuSubmitMs": {
+            "median": 0.7,
+            "p95": 0.78,
+            "mean": 0.7
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 268,
+            "p95": 268,
+            "mean": 268
+          },
+          "triangles": {
+            "median": 1909369,
+            "p95": 1909369,
+            "mean": 1909369
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": true,
+          "detail": [
+            2
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 70
+          }
+        },
+        {
+          "name": "arena-wide-paused",
+          "frameMs": {
+            "median": 16.455,
+            "p95": 20.51,
+            "mean": 16.637
+          },
+          "cpuSubmitMs": {
+            "median": 0.385,
+            "p95": 0.45,
+            "mean": 0.383
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 95,
+            "p95": 95,
+            "mean": 95
+          },
+          "triangles": {
+            "median": 69793,
+            "p95": 69793,
+            "mean": 69793
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            0
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 70
+          }
+        },
+        {
+          "name": "arena-social-paused",
+          "frameMs": {
+            "median": 16.225,
+            "p95": 20.495,
+            "mean": 16.621
+          },
+          "cpuSubmitMs": {
+            "median": 1.065,
+            "p95": 1.16,
+            "mean": 1.062
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 489,
+            "p95": 489,
+            "mean": 489
+          },
+          "triangles": {
+            "median": 638877,
+            "p95": 638877,
+            "mean": 638877
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "counters": {
+            "shadowUpdates": 0,
+            "brainUploads": 0,
+            "brainDraws": 71
+          }
+        },
+        {
+          "name": "arena-social-running",
+          "frameMs": {
+            "median": 16.5,
+            "p95": 21.06,
+            "mean": 16.635
+          },
+          "cpuSubmitMs": {
+            "median": 1.22,
+            "p95": 1.925,
+            "mean": 1.35
+          },
+          "gpuMs": null,
+          "calls": {
+            "median": 493,
+            "p95": 918,
+            "mean": 611.728
+          },
+          "triangles": {
+            "median": 642653,
+            "p95": 1210088,
+            "mean": 813359.472
+          },
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "dpr": 1,
+          "viewport": [
+            1400,
+            900
+          ],
+          "ao": false,
+          "detail": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "counters": {
+            "shadowUpdates": 70,
+            "brainUploads": 25,
+            "brainDraws": 70
+          }
+        }
+      ],
+      "errors": []
+    },
+    "fixedPoseVisual": {
+      "fullBodyMAE255": 0.011705026455026454,
+      "headDetailMAE255": 0.9889886243386243,
+      "focusOffMAE255": 0,
+      "artifacts": "/tmp/fly-perf/visual"
+    },
+    "assetValidation": {
+      "triangles": 1169030,
+      "hairs": 35060,
+      "exactHairMatrices": true,
+      "originalBandBounds": true,
+      "noTextureSerialization": true
+    },
+    "retinaValidation": {
+      "readyMs": 354,
+      "assets": {
+        "generator": "Blender 5.2.1 LTS / Cycles",
+        "parts": 85,
+        "triangles": 1169030,
+        "irradiance": true,
+        "bakedHairs": 35038,
+        "lights": 4,
+        "ao": false
+      },
+      "resources": [
+        {
+          "name": "/assets/fly-CFp1Rq2S.js",
+          "bytes": 113942
+        },
+        {
+          "name": "/assets/OrbitControls-CPah7c_5.js",
+          "bytes": 189130
+        },
+        {
+          "name": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+          "bytes": 970
+        },
+        {
+          "name": "/assets/render-resolution-LSp5x87y.js",
+          "bytes": 9941
+        },
+        {
+          "name": "/assets/fly-BuQ8j7DC.css",
+          "bytes": 1428
+        },
+        {
+          "name": "/body/blender/fly.json",
+          "bytes": 25120
+        },
+        {
+          "name": "/body/blender/fly.mesh",
+          "bytes": 8225112
+        },
+        {
+          "name": "/body/cuticle_detail.png",
+          "bytes": 491808
+        },
+        {
+          "name": "/body/blender/agx-look.png",
+          "bytes": 43951
+        },
+        {
+          "name": "/favicon.ico",
+          "bytes": 300
+        },
+        {
+          "name": "/assets/fly-decode.worker-CfbSvjl-.js",
+          "bytes": 33082
+        }
+      ],
+      "fullBody": {
+        "fps": 60.06006006006007,
+        "medianMs": 16.42000000178814,
+        "p95Ms": 20.32499998807907,
+        "dpr": 1.3801311186847085,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 179,
+          "triangles": 2572458,
+          "renderMs": 1.2049999982118607,
+          "shadowUpdates": 181
+        }
+      },
+      "headDetail": {
+        "fps": 60.05633284017544,
+        "medianMs": 16.770000010728836,
+        "p95Ms": 19.71500000357628,
+        "dpr": 1.3801311186847085,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 137,
+          "triangles": 2455178,
+          "renderMs": 2.435000002384186,
+          "shadowUpdates": 362
+        }
+      },
+      "flying": {
+        "fps": 60.10265533521223,
+        "medianMs": 16.355000004172325,
+        "p95Ms": 19.405000001192093,
+        "dpr": 1.3801311186847085,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+        "metrics": {
+          "calls": 169,
+          "triangles": 2540335,
+          "renderMs": 0.7150000035762787,
+          "shadowUpdates": 615
+        }
+      },
+      "passed": true,
+      "errors": []
+    },
+    "target120": {
+      "targetFps": 120,
+      "notes": [
+        "Uncapped Chrome with --disable-frame-rate-limit --disable-gpu-vsync; 600 frames per view after 5 seconds warmup, device DPR 2, adaptive raster resolution. These are throughput averages, not proof of 120 Hz physical presentation or a guarantee that every frame is below 8.33 ms.",
+        "The initial strict both-page run failed the dark flying view at 79.3 FPS. Isolating wing ghosts identified expensive overlapping per-fragment area-light shading. The final run uses smooth per-vertex illumination for the same 16 wing-stroke samples; resting wing materials are unchanged.",
+        "Both pages now target 120 Hz when refresh sampling detects a fast display. 60 Hz displays retain their original resolution policy. A successful high-refresh raster size is held until resize to avoid recurring MSAA allocations.",
+        "Fly shadows keep the same geometry, 1024-square map and 30 Hz upper limit; updates are skipped when all caster bounds move less than half a shadow texel. Camera damping and double-click focus are time-based.",
+        "Final throughput builds precede only the sustained refresh-transition guard; that guard is independently covered by check_render_resolution.mjs and the final browser interaction check."
+      ],
+      "initialViewer": {
+        "browser": "152.0.7977.83",
+        "uncapped": true,
+        "adaptive": true,
+        "loads": [
+          {
+            "rate": 1,
+            "readyMs": 390.07999999821186,
+            "longTasks": [
+              {
+                "start": 249.26500000059605,
+                "duration": 140
+              }
+            ],
+            "heapBytes": 69704475,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 191.5949999988079
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 209.04999999701977
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 249.31999999284744
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-C40BKjl8.js",
+                "bytes": 113651
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-BHXe76vb.js",
+                "bytes": 9787
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/favicon.ico",
+                "bytes": 0
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          },
+          {
+            "rate": 1,
+            "readyMs": 412.1050000041723,
+            "longTasks": [
+              {
+                "start": 298.34999999403954,
+                "duration": 113
+              }
+            ],
+            "heapBytes": 65169839,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 184.0549999922514
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 201.6899999976158
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 298.42499999701977
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-C40BKjl8.js",
+                "bytes": 113651
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-BHXe76vb.js",
+                "bytes": 9787
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          },
+          {
+            "rate": 1,
+            "readyMs": 409.2250000089407,
+            "longTasks": [
+              {
+                "start": 293.8550000041723,
+                "duration": 115
+              }
+            ],
+            "heapBytes": 70330695,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 190.45499999821186
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 208.8800000101328
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 293.9050000011921
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-C40BKjl8.js",
+                "bytes": 113651
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-BHXe76vb.js",
+                "bytes": 9787
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          },
+          {
+            "rate": 4,
+            "readyMs": 760.4000000059605,
+            "longTasks": [
+              {
+                "start": 29.950000002980232,
+                "duration": 54
+              },
+              {
+                "start": 89.21000000834465,
+                "duration": 89
+              },
+              {
+                "start": 297.25,
+                "duration": 70
+              },
+              {
+                "start": 449.375,
+                "duration": 111
+              },
+              {
+                "start": 571.2300000041723,
+                "duration": 188
+              }
+            ],
+            "heapBytes": 67612695,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 450.24000000953674
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 498.705000013113
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 571.3000000119209
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-C40BKjl8.js",
+                "bytes": 113651
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-BHXe76vb.js",
+                "bytes": 9787
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          }
+        ],
+        "frames": [
+          {
+            "name": "full-body",
+            "cpu": {
+              "mean": 5.987574999655286,
+              "median": 5.689999997615814,
+              "p95": 8.275000005960464,
+              "max": 13.63000001013279
+            },
+            "triangles": {
+              "mean": 2778981.1166666667,
+              "median": 2572458,
+              "p95": 3799328,
+              "max": 3799328
+            },
+            "calls": {
+              "mean": 196.50666666666666,
+              "median": 179,
+              "p95": 283,
+              "max": 283
+            },
+            "interval": {
+              "mean": 6.115058333327373,
+              "median": 5.804999992251396,
+              "p95": 8.429999992251396,
+              "max": 13.810000002384186
+            },
+            "gpuMs": null,
+            "shadowUpdates": 101,
+            "dpr": 1.3801311186847085,
+            "targetFps": 120,
+            "refreshInterval": 3.6799999999999926,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          },
+          {
+            "name": "head-detail",
+            "cpu": {
+              "mean": 7.1915666666130225,
+              "median": 6.829999998211861,
+              "p95": 14.725000008940697,
+              "max": 20.439999997615814
+            },
+            "triangles": {
+              "mean": 2700552,
+              "median": 2455178,
+              "p95": 3682048,
+              "max": 3682048
+            },
+            "calls": {
+              "mean": 157.8,
+              "median": 137,
+              "p95": 241,
+              "max": 241
+            },
+            "interval": {
+              "mean": 7.314966666648785,
+              "median": 6.954999998211861,
+              "p95": 14.855000004172325,
+              "max": 20.58499999344349
+            },
+            "gpuMs": null,
+            "shadowUpdates": 120,
+            "dpr": 1.1731114508820022,
+            "targetFps": 120,
+            "refreshInterval": 3.6799999999999926,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          },
+          {
+            "name": "orbit",
+            "cpu": {
+              "mean": 7.092833333189289,
+              "median": 6.950000002980232,
+              "p95": 14.015000000596046,
+              "max": 19.650000005960464
+            },
+            "triangles": {
+              "mean": 2472889.3,
+              "median": 2424378,
+              "p95": 3682048,
+              "max": 3682048
+            },
+            "calls": {
+              "mean": 142.49,
+              "median": 133,
+              "p95": 241,
+              "max": 241
+            },
+            "interval": {
+              "mean": 7.635566666672627,
+              "median": 7.105000004172325,
+              "p95": 14.290000006556511,
+              "max": 226.8200000077486
+            },
+            "gpuMs": null,
+            "shadowUpdates": 116,
+            "dpr": 1.047001969912187,
+            "targetFps": 120,
+            "refreshInterval": 3.6799999999999926,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          },
+          {
+            "name": "flight",
+            "cpu": {
+              "mean": 7.835916666388512,
+              "median": 7.804999992251396,
+              "p95": 15.464999988675117,
+              "max": 25.890000000596046
+            },
+            "triangles": {
+              "mean": 2801772.8466666667,
+              "median": 2554842,
+              "p95": 3769256,
+              "max": 3769256
+            },
+            "calls": {
+              "mean": 195.74,
+              "median": 175,
+              "p95": 277,
+              "max": 277
+            },
+            "interval": {
+              "mean": 7.9809083333363136,
+              "median": 7.925000011920929,
+              "p95": 15.650000005960464,
+              "max": 26.03499999642372
+            },
+            "gpuMs": null,
+            "shadowUpdates": 122,
+            "dpr": 0.9,
+            "targetFps": 120,
+            "refreshInterval": 3.6799999999999926,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          }
+        ],
+        "errors": []
+      },
+      "failedBothPages": {
+        "baseline": false,
+        "browser": "152.0.7977.83",
+        "frames": 600,
+        "results": [
+          {
+            "name": "fly-rest",
+            "frameMs": {
+              "median": 7.68,
+              "p95": 15.515,
+              "mean": 7.021
+            },
+            "cpuSubmitMs": {
+              "median": 7.53,
+              "p95": 15.315,
+              "mean": 6.852
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 179,
+              "p95": 283,
+              "mean": 192.52
+            },
+            "triangles": {
+              "median": 2572458,
+              "p95": 3799328,
+              "mean": 2731951.1
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 0.9,
+            "viewport": [
+              1400,
+              900
+            ],
+            "counters": {
+              "shadowUpdates": 78
+            }
+          },
+          {
+            "name": "fly-flight-dark",
+            "frameMs": {
+              "median": 12.92,
+              "p95": 19.295,
+              "mean": 12.612
+            },
+            "cpuSubmitMs": {
+              "median": 12.76,
+              "p95": 19.005,
+              "mean": 12.406
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 173,
+              "p95": 275,
+              "mean": 204.45
+            },
+            "triangles": {
+              "median": 2542936,
+              "p95": 3757350,
+              "mean": 2917380.317
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 0.9,
+            "viewport": [
+              1400,
+              900
+            ],
+            "counters": {
+              "shadowUpdates": 185
+            }
+          },
+          {
+            "name": "arena-default-paused",
+            "frameMs": {
+              "median": 2.57,
+              "p95": 3.96,
+              "mean": 2.154
+            },
+            "cpuSubmitMs": {
+              "median": 2.29,
+              "p95": 3.695,
+              "mean": 1.876
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 116,
+              "p95": 116,
+              "mean": 116
+            },
+            "triangles": {
+              "median": 132540,
+              "p95": 132540,
+              "mean": 132540
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              1
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 37
+            }
+          },
+          {
+            "name": "arena-macro-paused",
+            "frameMs": {
+              "median": 5.785,
+              "p95": 12.21,
+              "mean": 6.001
+            },
+            "cpuSubmitMs": {
+              "median": 5.32,
+              "p95": 11.82,
+              "mean": 5.538
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 270,
+              "p95": 270,
+              "mean": 270
+            },
+            "triangles": {
+              "median": 1934921,
+              "p95": 1934921,
+              "mean": 1934921
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": true,
+            "detail": [
+              2
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 99
+            }
+          },
+          {
+            "name": "arena-macro-running",
+            "frameMs": {
+              "median": 5.715,
+              "p95": 11.985,
+              "mean": 6.034
+            },
+            "cpuSubmitMs": {
+              "median": 5.1,
+              "p95": 11.535,
+              "mean": 5.384
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 272,
+              "p95": 357,
+              "mean": 283.68
+            },
+            "triangles": {
+              "median": 1935017,
+              "p95": 2207447,
+              "mean": 1973593.89
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": true,
+            "detail": [
+              2
+            ],
+            "counters": {
+              "shadowUpdates": 85,
+              "brainUploads": 29,
+              "brainDraws": 99
+            }
+          },
+          {
+            "name": "arena-flight-fixture",
+            "frameMs": {
+              "median": 5.685,
+              "p95": 11.46,
+              "mean": 5.873
+            },
+            "cpuSubmitMs": {
+              "median": 5.285,
+              "p95": 11.08,
+              "mean": 5.466
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 269,
+              "p95": 269,
+              "mean": 269
+            },
+            "triangles": {
+              "median": 1909417,
+              "p95": 1909417,
+              "mean": 1909417
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": true,
+            "detail": [
+              2
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 98
+            }
+          },
+          {
+            "name": "arena-wide-paused",
+            "frameMs": {
+              "median": 2.415,
+              "p95": 3.59,
+              "mean": 1.954
+            },
+            "cpuSubmitMs": {
+              "median": 2.105,
+              "p95": 3.365,
+              "mean": 1.655
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 95,
+              "p95": 95,
+              "mean": 95
+            },
+            "triangles": {
+              "median": 69793,
+              "p95": 69793,
+              "mean": 69793
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              0
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 34
+            }
+          },
+          {
+            "name": "arena-social-paused",
+            "frameMs": {
+              "median": 3.18,
+              "p95": 5.04,
+              "mean": 2.913
+            },
+            "cpuSubmitMs": {
+              "median": 2.765,
+              "p95": 4.76,
+              "mean": 2.55
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 489,
+              "p95": 489,
+              "mean": 489
+            },
+            "triangles": {
+              "median": 638877,
+              "p95": 638877,
+              "mean": 638877
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 50
+            }
+          },
+          {
+            "name": "arena-social-running",
+            "frameMs": {
+              "median": 3.555,
+              "p95": 7.22,
+              "mean": 3.933
+            },
+            "cpuSubmitMs": {
+              "median": 2.47,
+              "p95": 6.34,
+              "mean": 2.981
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 471,
+              "p95": 896,
+              "mean": 489.41
+            },
+            "triangles": {
+              "median": 632332,
+              "p95": 1199138,
+              "mean": 677441.612
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "counters": {
+              "shadowUpdates": 66,
+              "brainUploads": 20,
+              "brainDraws": 66
+            }
+          }
+        ],
+        "errors": [
+          "fly-flight-dark: 79.3 FPS is below 120"
+        ]
+      },
+      "finalBothPages": {
+        "baseline": false,
+        "browser": "152.0.7977.83",
+        "frames": 600,
+        "results": [
+          {
+            "name": "fly-rest",
+            "frameMs": {
+              "median": 6.315,
+              "p95": 11.375,
+              "mean": 6.314
+            },
+            "cpuSubmitMs": {
+              "median": 6.21,
+              "p95": 11.255,
+              "mean": 6.188
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 179,
+              "p95": 283,
+              "mean": 191.48
+            },
+            "triangles": {
+              "median": 2572458,
+              "p95": 3799328,
+              "mean": 2719682.4
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "counters": {
+              "shadowUpdates": 72
+            }
+          },
+          {
+            "name": "fly-flight-dark",
+            "frameMs": {
+              "median": 6.565,
+              "p95": 12.795,
+              "mean": 6.599
+            },
+            "cpuSubmitMs": {
+              "median": 6.4,
+              "p95": 12.605,
+              "mean": 6.416
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 173,
+              "p95": 275,
+              "mean": 191.19
+            },
+            "triangles": {
+              "median": 2542936,
+              "p95": 3757350,
+              "mean": 2759506.497
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "counters": {
+              "shadowUpdates": 107
+            }
+          },
+          {
+            "name": "arena-default-paused",
+            "frameMs": {
+              "median": 2.625,
+              "p95": 3.88,
+              "mean": 2.167
+            },
+            "cpuSubmitMs": {
+              "median": 2.36,
+              "p95": 3.6,
+              "mean": 1.877
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 116,
+              "p95": 116,
+              "mean": 116
+            },
+            "triangles": {
+              "median": 132540,
+              "p95": 132540,
+              "mean": 132540
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              1
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 37
+            }
+          },
+          {
+            "name": "arena-macro-paused",
+            "frameMs": {
+              "median": 5.745,
+              "p95": 11.63,
+              "mean": 5.854
+            },
+            "cpuSubmitMs": {
+              "median": 5.255,
+              "p95": 11.165,
+              "mean": 5.374
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 270,
+              "p95": 270,
+              "mean": 270
+            },
+            "triangles": {
+              "median": 1934921,
+              "p95": 1934921,
+              "mean": 1934921
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": true,
+            "detail": [
+              2
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 98
+            }
+          },
+          {
+            "name": "arena-macro-running",
+            "frameMs": {
+              "median": 5.63,
+              "p95": 11.88,
+              "mean": 5.934
+            },
+            "cpuSubmitMs": {
+              "median": 5,
+              "p95": 11.335,
+              "mean": 5.326
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 272,
+              "p95": 357,
+              "mean": 284.042
+            },
+            "triangles": {
+              "median": 1935017,
+              "p95": 2207447,
+              "mean": 1973611.25
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": true,
+            "detail": [
+              2
+            ],
+            "counters": {
+              "shadowUpdates": 85,
+              "brainUploads": 29,
+              "brainDraws": 96
+            }
+          },
+          {
+            "name": "arena-flight-fixture",
+            "frameMs": {
+              "median": 5.69,
+              "p95": 11.755,
+              "mean": 5.968
+            },
+            "cpuSubmitMs": {
+              "median": 5.37,
+              "p95": 11.405,
+              "mean": 5.602
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 268,
+              "p95": 268,
+              "mean": 268
+            },
+            "triangles": {
+              "median": 1909369,
+              "p95": 1909369,
+              "mean": 1909369
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": true,
+            "detail": [
+              2
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 96
+            }
+          },
+          {
+            "name": "arena-wide-paused",
+            "frameMs": {
+              "median": 2.345,
+              "p95": 3.76,
+              "mean": 1.967
+            },
+            "cpuSubmitMs": {
+              "median": 2.005,
+              "p95": 3.495,
+              "mean": 1.648
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 95,
+              "p95": 95,
+              "mean": 95
+            },
+            "triangles": {
+              "median": 69793,
+              "p95": 69793,
+              "mean": 69793
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              0
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 34
+            }
+          },
+          {
+            "name": "arena-social-paused",
+            "frameMs": {
+              "median": 3.07,
+              "p95": 4.89,
+              "mean": 2.939
+            },
+            "cpuSubmitMs": {
+              "median": 2.675,
+              "p95": 4.54,
+              "mean": 2.524
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 489,
+              "p95": 489,
+              "mean": 489
+            },
+            "triangles": {
+              "median": 638877,
+              "p95": 638877,
+              "mean": 638877
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "counters": {
+              "shadowUpdates": 0,
+              "brainUploads": 0,
+              "brainDraws": 51
+            }
+          },
+          {
+            "name": "arena-social-running",
+            "frameMs": {
+              "median": 3.29,
+              "p95": 6.555,
+              "mean": 3.602
+            },
+            "cpuSubmitMs": {
+              "median": 2.165,
+              "p95": 5.31,
+              "mean": 2.573
+            },
+            "gpuMs": null,
+            "calls": {
+              "median": 304,
+              "p95": 724,
+              "mean": 339.953
+            },
+            "triangles": {
+              "median": 389357,
+              "p95": 912532,
+              "mean": 444490.083
+            },
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "dpr": 1.3801311186847085,
+            "viewport": [
+              1400,
+              900
+            ],
+            "ao": false,
+            "detail": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "counters": {
+              "shadowUpdates": 61,
+              "brainUploads": 18,
+              "brainDraws": 61
+            }
+          }
+        ],
+        "errors": []
+      },
+      "finalViewer": {
+        "browser": "152.0.7977.83",
+        "uncapped": true,
+        "adaptive": true,
+        "loads": [
+          {
+            "rate": 1,
+            "readyMs": 386.07999999821186,
+            "longTasks": [
+              {
+                "start": 247.26500000059605,
+                "duration": 138
+              }
+            ],
+            "heapBytes": 67431857,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 190.14499999582767
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 208.67499999701977
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 247.3149999976158
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-CmpgwBEu.js",
+                "bytes": 114510
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-uuaNSceo.js",
+                "bytes": 9792
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/favicon.ico",
+                "bytes": 0
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          },
+          {
+            "rate": 1,
+            "readyMs": 487.3850000053644,
+            "longTasks": [
+              {
+                "start": 368.5,
+                "duration": 118
+              }
+            ],
+            "heapBytes": 67566525,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 244.64500001072884
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 266.2300000041723
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 368.57500000298023
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-CmpgwBEu.js",
+                "bytes": 114510
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-uuaNSceo.js",
+                "bytes": 9792
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          },
+          {
+            "rate": 1,
+            "readyMs": 443.6200000047684,
+            "longTasks": [
+              {
+                "start": 326.6299999952316,
+                "duration": 116
+              }
+            ],
+            "heapBytes": 65261693,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 218.17000000178814
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 239.25499999523163
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 326.70000000298023
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-CmpgwBEu.js",
+                "bytes": 114510
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-uuaNSceo.js",
+                "bytes": 9792
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          },
+          {
+            "rate": 4,
+            "readyMs": 837.75,
+            "longTasks": [
+              {
+                "start": 34.03000000119209,
+                "duration": 59
+              },
+              {
+                "start": 98.12000000476837,
+                "duration": 99
+              },
+              {
+                "start": 331.07500000298023,
+                "duration": 77
+              },
+              {
+                "start": 499.1850000023842,
+                "duration": 124
+              },
+              {
+                "start": 634.1650000065565,
+                "duration": 202
+              }
+            ],
+            "heapBytes": 68957725,
+            "phases": [
+              {
+                "name": "fly:decoded",
+                "ms": 500.14500001072884
+              },
+              {
+                "name": "fly:assembled",
+                "ms": 556.7750000059605
+              },
+              {
+                "name": "fly:compiled",
+                "ms": 634.4250000119209
+              }
+            ],
+            "resources": [
+              {
+                "path": "/assets/fly-CmpgwBEu.js",
+                "bytes": 114510
+              },
+              {
+                "path": "/assets/OrbitControls-CPah7c_5.js",
+                "bytes": 188830
+              },
+              {
+                "path": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+                "bytes": 670
+              },
+              {
+                "path": "/assets/render-resolution-uuaNSceo.js",
+                "bytes": 9792
+              },
+              {
+                "path": "/assets/fly-BuQ8j7DC.css",
+                "bytes": 1128
+              },
+              {
+                "path": "/body/blender/fly.json",
+                "bytes": 24820
+              },
+              {
+                "path": "/body/blender/fly.mesh",
+                "bytes": 8224812
+              },
+              {
+                "path": "/body/cuticle_detail.png",
+                "bytes": 491508
+              },
+              {
+                "path": "/body/blender/agx-look.png",
+                "bytes": 43651
+              },
+              {
+                "path": "/assets/fly-decode.worker-CfbSvjl-.js",
+                "bytes": 32782
+              }
+            ]
+          }
+        ],
+        "frames": [
+          {
+            "name": "full-body",
+            "cpu": {
+              "mean": 5.964083333114783,
+              "median": 5.729999989271164,
+              "p95": 11.469999998807907,
+              "max": 17.695000007748604
+            },
+            "triangles": {
+              "mean": 2713548.05,
+              "median": 2572458,
+              "p95": 3799328,
+              "max": 3799328
+            },
+            "calls": {
+              "mean": 190.96,
+              "median": 179,
+              "p95": 283,
+              "max": 283
+            },
+            "interval": {
+              "mean": 6.098300000006954,
+              "median": 5.875,
+              "p95": 11.640000000596046,
+              "max": 17.760000005364418
+            },
+            "gpuMs": null,
+            "shadowUpdates": 69,
+            "dpr": 1.3801311186847085,
+            "targetFps": 120,
+            "refreshInterval": 5.299999999999997,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          },
+          {
+            "name": "head-detail",
+            "cpu": {
+              "mean": 7.623333333656192,
+              "median": 7.655000001192093,
+              "p95": 14.91499999165535,
+              "max": 23.424999997019768
+            },
+            "triangles": {
+              "mean": 2635118.933333333,
+              "median": 2455178,
+              "p95": 3682048,
+              "max": 3682048
+            },
+            "calls": {
+              "mean": 152.25333333333333,
+              "median": 137,
+              "p95": 241,
+              "max": 241
+            },
+            "interval": {
+              "mean": 7.79272500000894,
+              "median": 7.83500000834465,
+              "p95": 15.129999995231628,
+              "max": 23.685000002384186
+            },
+            "gpuMs": null,
+            "shadowUpdates": 88,
+            "dpr": 1.1731114508820022,
+            "targetFps": 120,
+            "refreshInterval": 5.299999999999997,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          },
+          {
+            "name": "orbit",
+            "cpu": {
+              "mean": 6.47829166640838,
+              "median": 6.5250000059604645,
+              "p95": 12.415000006556511,
+              "max": 14.969999998807907
+            },
+            "triangles": {
+              "mean": 2178349.533333333,
+              "median": 1962578,
+              "p95": 3189448,
+              "max": 3576608
+            },
+            "calls": {
+              "mean": 122.155,
+              "median": 108,
+              "p95": 212,
+              "max": 230
+            },
+            "interval": {
+              "mean": 6.63974166666468,
+              "median": 6.659999996423721,
+              "p95": 12.559999987483025,
+              "max": 15.159999996423721
+            },
+            "gpuMs": null,
+            "shadowUpdates": 74,
+            "dpr": 1.1731114508820022,
+            "targetFps": 120,
+            "refreshInterval": 5.299999999999997,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          },
+          {
+            "name": "flight",
+            "cpu": {
+              "mean": 5.662708333532016,
+              "median": 5.489999994635582,
+              "p95": 11.04500000178814,
+              "max": 15.890000000596046
+            },
+            "triangles": {
+              "mean": 2735220.216666667,
+              "median": 2542938,
+              "p95": 3757352,
+              "max": 3757352
+            },
+            "calls": {
+              "mean": 190.15,
+              "median": 174,
+              "p95": 276,
+              "max": 276
+            },
+            "interval": {
+              "mean": 5.8212083333233995,
+              "median": 5.61999998986721,
+              "p95": 11.219999998807907,
+              "max": 16.105000004172325
+            },
+            "gpuMs": null,
+            "shadowUpdates": 95,
+            "dpr": 1.1731114508820022,
+            "targetFps": 120,
+            "refreshInterval": 5.299999999999997,
+            "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+            "geometry": {
+              "geometries": 178,
+              "textures": 12
+            }
+          }
+        ],
+        "errors": []
+      },
+      "finalInteraction": {
+        "readyMs": 346,
+        "assets": {
+          "generator": "Blender 5.2.1 LTS / Cycles",
+          "parts": 85,
+          "triangles": 1169030,
+          "irradiance": true,
+          "bakedHairs": 35038,
+          "lights": 4,
+          "ao": false
+        },
+        "resources": [
+          {
+            "name": "/assets/fly-adhUc-hB.js",
+            "bytes": 114812
+          },
+          {
+            "name": "/assets/OrbitControls-CPah7c_5.js",
+            "bytes": 189130
+          },
+          {
+            "name": "/assets/modulepreload-polyfill-P2Xu9kJm.js",
+            "bytes": 970
+          },
+          {
+            "name": "/assets/render-resolution-CkrmzqRR.js",
+            "bytes": 10137
+          },
+          {
+            "name": "/assets/fly-BuQ8j7DC.css",
+            "bytes": 1428
+          },
+          {
+            "name": "/body/blender/fly.json",
+            "bytes": 25120
+          },
+          {
+            "name": "/body/blender/fly.mesh",
+            "bytes": 8225112
+          },
+          {
+            "name": "/body/cuticle_detail.png",
+            "bytes": 491808
+          },
+          {
+            "name": "/body/blender/agx-look.png",
+            "bytes": 43951
+          },
+          {
+            "name": "/favicon.ico",
+            "bytes": 300
+          },
+          {
+            "name": "/assets/fly-decode.worker-CfbSvjl-.js",
+            "bytes": 33082
+          }
+        ],
+        "fullBody": {
+          "fps": 60.110964841146924,
+          "medianMs": 16.625,
+          "p95Ms": 19.770000010728836,
+          "dpr": 1.3801311186847085,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "metrics": {
+            "calls": 179,
+            "triangles": 2572458,
+            "renderMs": 1.334999993443489,
+            "shadowUpdates": 129
+          }
+        },
+        "headDetail": {
+          "fps": 60.07334955986272,
+          "medianMs": 16.774999991059303,
+          "p95Ms": 19.695000007748604,
+          "dpr": 1.3801311186847085,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "metrics": {
+            "calls": 137,
+            "triangles": 2455178,
+            "renderMs": 0.5799999982118607,
+            "shadowUpdates": 265
+          }
+        },
+        "flying": {
+          "fps": 60.08020707659049,
+          "medianMs": 16.614999994635582,
+          "p95Ms": 19.814999997615814,
+          "dpr": 1.3801311186847085,
+          "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+          "metrics": {
+            "calls": 169,
+            "triangles": 2540335,
+            "renderMs": 1.4549999982118607,
+            "shadowUpdates": 496
+          }
+        },
+        "passed": true,
+        "errors": []
+      },
+      "resolutionPolicyChecks": [
+        "60 Hz detail retained",
+        "120 Hz adapts to missed budget",
+        "stable size held",
+        "refresh transition recognized"
+      ]
+    }
+  }
+}

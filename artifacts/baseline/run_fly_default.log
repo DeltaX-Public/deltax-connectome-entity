@@ -1,0 +1,26 @@
+COMMAND: node scripts/run_fly.mjs 2 default descending
+START=2026-09-17T20:47:18+00:00
+scenario default, mode descending, start pos 0,0, {}
+t=0.1s [standing] up 1.00 pos -0.00,0.00,0.13 yaw -0 | active 38165 | DN fwd 0 back 0 turn 0.00 v 0.00 GF 4 TO 10 | MN9 8 rostrum -0.27 | energy 0.600 eaten 0.0000 health 1.00 | sensory 30212
+t=0.2s [proboscis extended] up 1.00 pos -0.00,0.00,0.12 yaw -0 | active 36983 | DN fwd 0 back 0 turn -0.08 v 0.00 GF 0 TO 3 | MN9 43 rostrum -0.70 | energy 0.599 eaten 0.0000 health 1.00 | sensory 30202
+t=0.3s [proboscis extended] up 1.00 pos -0.01,0.00,0.12 yaw -0 | active 36377 | DN fwd 0 back 0 turn -0.11 v 0.00 GF 0 TO 7 | MN9 42 rostrum -0.86 | energy 0.599 eaten 0.0000 health 1.00 | sensory 29976
+t=0.4s [walking (proboscis out)] up 0.98 pos 0.08,-0.02,0.13 yaw -25 | active 39178 | DN fwd 28 back 0 turn -0.23 v 0.86 GF 0 TO 142 | MN9 32 rostrum -0.82 | energy 0.598 eaten 0.0000 health 1.00 | sensory 30620
+t=0.5s [turning right (proboscis out)] up 0.99 pos 0.33,-0.13,0.13 yaw -28 | active 48613 | DN fwd 46 back 0 turn -0.39 v 0.97 GF 0 TO 26 | MN9 33 rostrum -0.78 | energy 0.597 eaten 0.0000 health 1.00 | sensory 33347
+t=0.6s [turning right (proboscis out)] up 0.99 pos 0.53,-0.25,0.13 yaw -53 | active 51341 | DN fwd 50 back 0 turn -0.60 v 0.98 GF 0 TO 3 | MN9 30 rostrum -0.74 | energy 0.596 eaten 0.0000 health 1.00 | sensory 33118
+t=0.7s [turning left] up 1.00 pos 0.67,-0.46,0.14 yaw -57 | active 52338 | DN fwd 29 back 10 turn 0.42 v 0.39 GF 0 TO 0 | MN9 6 rostrum -0.09 | energy 0.595 eaten 0.0000 health 1.00 | sensory 34425
+t=0.8s [turning left] up 0.98 pos 0.73,-0.54,0.13 yaw -23 | active 50065 | DN fwd 20 back 1 turn 0.60 v 0.68 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.595 eaten 0.0000 health 1.00 | sensory 33560
+t=0.9s [turning left] up 0.98 pos 0.92,-0.58,0.14 yaw 3 | active 51100 | DN fwd 16 back 0 turn 0.60 v 0.62 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.594 eaten 0.0000 health 1.00 | sensory 33559
+t=1.0s [walking] up 0.93 pos 1.06,-0.54,0.13 yaw 18 | active 52337 | DN fwd 17 back 0 turn 0.23 v 0.65 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.593 eaten 0.0000 health 1.00 | sensory 34131
+t=1.1s [turning right] up 1.00 pos 1.31,-0.50,0.14 yaw 12 | active 52278 | DN fwd 11 back 0 turn -0.30 v 0.46 GF 0 TO 1 | MN9 0 rostrum 0.18 | energy 0.592 eaten 0.0000 health 1.00 | sensory 33385
+t=1.2s [turning right] up 0.94 pos 1.45,-0.48,0.14 yaw 11 | active 50569 | DN fwd 13 back 0 turn -0.40 v 0.52 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.592 eaten 0.0000 health 1.00 | sensory 35529
+t=1.3s [turning right] up 0.99 pos 1.55,-0.45,0.14 yaw 1 | active 50149 | DN fwd 15 back 2 turn -0.53 v 0.42 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.591 eaten 0.0000 health 1.00 | sensory 33015
+t=1.4s [walking backward] up 1.00 pos 1.69,-0.46,0.14 yaw -16 | active 48676 | DN fwd 9 back 18 turn -0.60 v -0.24 GF 0 TO 2 | MN9 0 rostrum 0.18 | energy 0.590 eaten 0.0000 health 1.00 | sensory 31944
+t=1.5s [turning right] up 0.97 pos 1.70,-0.46,0.14 yaw -6 | active 48579 | DN fwd 19 back 1 turn -0.60 v 0.63 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.590 eaten 0.0000 health 1.00 | sensory 33684
+t=1.6s [turning right] up 0.98 pos 1.89,-0.51,0.13 yaw -35 | active 51980 | DN fwd 23 back 0 turn -0.60 v 0.80 GF 0 TO 0 | MN9 1 rostrum 0.18 | energy 0.589 eaten 0.0000 health 1.00 | sensory 33263
+t=1.7s [turning right] up 0.99 pos 2.05,-0.66,0.13 yaw -64 | active 53109 | DN fwd 18 back 0 turn -0.41 v 0.70 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.588 eaten 0.0000 health 1.00 | sensory 33340
+t=1.8s [walking] up 0.96 pos 2.11,-0.87,0.14 yaw -73 | active 53011 | DN fwd 18 back 0 turn 0.12 v 0.68 GF 0 TO 0 | MN9 0 rostrum 0.18 | energy 0.587 eaten 0.0000 health 1.00 | sensory 32637
+t=1.9s [walking backward] up 0.98 pos 2.20,-0.99,0.14 yaw -59 | active 52550 | DN fwd 8 back 101 turn 0.01 v -0.35 GF 0 TO 18 | MN9 8 rostrum -0.28 | energy 0.587 eaten 0.0000 health 1.00 | sensory 34962
+t=2.0s [walking backward] up 1.00 pos 2.16,-0.91,0.14 yaw -71 | active 50663 | DN fwd 3 back 157 turn -0.01 v -0.35 GF 35 TO 57 | MN9 1 rostrum 0.18 | energy 0.586 eaten 0.0000 health 1.00 | sensory 35340
+wall 35.733s for 2s sim (17.87x real-time)
+END=2026-09-17T20:47:55+00:00
+EXIT=0

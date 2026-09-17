@@ -99,3 +99,12 @@ Until incorporation: this repository holds Phase 0 documentation only; it does *
 ## Claim discipline (reminder)
 
 Do not describe this project as conscious, sentient, artificial life, a digital brain equivalent to a fly, a synthetic prefrontal cortex, or biological intelligence recreated. Prefer: connectome-derived recurrent substrate, whole-CNS computational model, synthetic executive control plane (future), causal neural intervention (future).
+
+## Phase 1 incorporation (baseline/upstream-reproduced)
+
+- **Source:** [Lulzx/fly-brain](https://github.com/Lulzx/fly-brain)
+- **Pinned commit:** `054e402853d370b004facc1946e36a409de601e8`
+- **Method:** the pinned commit was checked out in Codespaces and exported with `git archive` into `upstream/fly-brain/`. This is a vendored, separable upstream tree; no upstream files were flattened into the DeltaX root and no DeltaX executive code was added.
+- **License:** upstream `LICENSE` is preserved at `upstream/fly-brain/LICENSE`. Upstream `package.json` and `package-lock.json` are also retained.
+- **Runnable tree:** `upstream/fly-brain` (the directory containing `package.json`, `public/data/brain_params.json`, and `scripts/`).
+- **Evidence:** reproducibility commands and measured results are recorded in `docs/BASELINE_AUDIT.md`; raw logs are under `artifacts/baseline/`.

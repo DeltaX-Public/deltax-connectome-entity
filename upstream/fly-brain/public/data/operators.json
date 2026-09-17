@@ -1,0 +1,634 @@
+[
+ {
+  "name": "ring_attractor",
+  "isa": "cyclic state estimator",
+  "section": "cx",
+  "substrate": {
+   "types": [
+    "EPG",
+    "Delta7",
+    "PEG",
+    "PEN_a(PEN1)",
+    "PEN_b(PEN2)"
+   ],
+   "cells": 88
+  },
+  "signature": "columnar population + 2-hop inhibitory kernel \u221d 1\u2212cos(\u0394\u03b8) + mirror-symmetric shifter",
+  "semantics": {
+   "inputs": [
+    "self-motion rotation",
+    "visual landmark"
+   ],
+   "operations": [
+    "recurrent bump sustainment",
+    "asymmetric shifter integration",
+    "divisive gain (Delta7)"
+   ],
+   "state": "\u03b8 (heading), bump position on ring",
+   "output": "heading phase"
+  },
+  "conventional_equivalent": "continuous-attractor heading estimator (cf. EKF orientation tracking \u2014 same problem, not same mechanism)",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "Delta7 kernel fits a \u2212 b\u00b7cos(2\u03c0k/8)",
+    "value": "R\u00b2=0.99",
+    "weight": 0.35
+   },
+   {
+    "item": "kernel contrast (min at bump, max opposite)",
+    "value": 0.878,
+    "weight": 0.15
+   },
+   {
+    "item": "PEN shifter mirror-symmetric",
+    "value": "L +1.47 / R -1.45 cols",
+    "weight": 0.2
+   },
+   {
+    "item": "dynamics: realised Delta7 kernel on the ring",
+    "value": "pass=True",
+    "weight": 0.15
+   },
+   {
+    "item": "dynamics: realised PEN push field",
+    "value": "L 1.49 / R -1.46",
+    "weight": 0.15
+   }
+  ],
+  "counterevidence": [
+   "calibrated LIF does not sustain a free-running bump without tonic drive \u2014 the attractor is structurally present but subthreshold in this model",
+   "predicted transmitter signs; receptor kinetics and delays unmodelled"
+  ],
+  "predictions": [
+   "lesion Delta7 \u2192 kernel contrast collapses, bump fragments",
+   "sustained unilateral PEN drive \u2192 persistent heading drift at rate \u221d drive asymmetry",
+   "sufficient tonic EPG excitation \u2192 bump persists in darkness"
+  ],
+  "reduced_model": "theta += k * (PEN_L - PEN_R)\nif landmark: theta += gain * (landmark_angle - theta)\n# Delta7: global divisive normalisation of the bump",
+  "confidence": 0.7,
+  "status": "detected"
+ },
+ {
+  "name": "phasor_vector_shift",
+  "isa": "vector rotation by wiring offset",
+  "section": "cx",
+  "substrate": {
+   "types": [
+    "hDelta",
+    "PFNv",
+    "PFNd",
+    "PFL3",
+    "PFL2"
+   ],
+   "cells": 113770
+  },
+  "signature": "sinusoidal population code + fixed columnar offset between input and output + convergent summation",
+  "semantics": {
+   "inputs": [
+    "heading phasor",
+    "translational velocity phasor"
+   ],
+   "operations": [
+    "amplitude modulation",
+    "fixed phase shift (wired)",
+    "population summation"
+   ],
+   "state": "O(1) per column",
+   "output": "allocentric travel-direction signal"
+  },
+  "conventional_equivalent": "coordinate transform \u2014 but the transform is partially compiled into the wiring",
+  "topology_folded": true,
+  "evidence": [
+   {
+    "item": "hDelta fans out at peak offset +4/+5 columns (\u2248180\u00b0) to downstream types",
+    "value": "13 targets, 113,770 synapses",
+    "weight": 0.5
+   },
+   {
+    "item": "PFN phasor arms arrive at hDelta with opposite-sign offsets",
+    "value": "PFNd -3, PFNv +2",
+    "weight": 0.25
+   },
+   {
+    "item": "weight at |offset| \u2265 3 columns",
+    "value": "145,788 synapses",
+    "weight": 0.1
+   }
+  ],
+  "counterevidence": [
+   "static offsets only \u2014 the summation step is measured, the phase-shifted phasor arithmetic is inferred from anatomy + literature",
+   "FB has 10 columns but PB-derived offsets are mod-8; the 180\u00b0 reading assumes the published phase convention"
+  ],
+  "predictions": [
+   "drive PFNv/PFNd \u2192 hDelta output phasor rotates by the wired offset",
+   "silence hDelta \u2192 travel-direction signal lost, heading intact"
+  ],
+  "reduced_model": "out[col] = sum(in[col - offset])   # the adder is wiring, not arithmetic",
+  "confidence": 0.55,
+  "status": "detected"
+ },
+ {
+  "name": "motion_correlator",
+  "isa": "spatiotemporal correlation detector",
+  "section": "ol",
+  "substrate": {
+   "types": [
+    "T4a",
+    "T4b",
+    "T4c",
+    "T4d",
+    "T5a",
+    "T5b",
+    "T5c",
+    "T5d"
+   ],
+   "cells": null
+  },
+  "signature": "ON/OFF channel split + identical input composition across directional subtypes + spatial offset of inputs",
+  "semantics": {
+   "inputs": [
+    "local luminance changes"
+   ],
+   "operations": [
+    "delay",
+    "multiply (correlate)",
+    "threshold"
+   ],
+   "state": "none (feedforward)",
+   "output": "direction-selective motion, 4 channels"
+  },
+  "conventional_equivalent": "Reichardt correlator / spatiotemporal matched filter",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "T4 subtypes share input composition",
+    "value": "cosine 0.94 across a\u2013d",
+    "weight": 0.5
+   },
+   {
+    "item": "lamina splits ON/OFF with no cross-talk",
+    "value": "block-diagonal L1/L2 pathways",
+    "weight": 0.2
+   },
+   {
+    "item": "columnar kernel weight CV 0.2\u20130.4",
+    "value": "40 shared-kernel pairs",
+    "weight": 0.15
+   }
+  ],
+  "counterevidence": [
+   "the delay arm is implemented by temporal dynamics of the interneurons \u2014 not measurable from connectivity alone",
+   "direction selectivity is inferred from anatomy + physiology literature, not proven by the graph"
+  ],
+  "predictions": [
+   "silence T4a \u2192 behavioural responses to front-to-back motion lost only",
+   "the four subtypes should tile all directions; the fifth found would break the model"
+  ],
+  "reduced_model": "y = thresh( x[t, r] * x[t-\u03c4, r+\u03b4] - x[t-\u03c4, r] * x[t, r+\u03b4] )   # per subtype \u03b4",
+  "confidence": 0.55,
+  "status": "detected"
+ },
+ {
+  "name": "convolution_front_end",
+  "isa": "shared-kernel spatial transform",
+  "section": "ol",
+  "substrate": {
+   "types": null,
+   "cells": null,
+   "note": "47 columnar types"
+  },
+  "signature": "one cell type per column, identical partner counts, low CV of total weight across columns",
+  "semantics": {
+   "inputs": [
+    "retinal array"
+   ],
+   "operations": [
+    "same kernel at every position"
+   ],
+   "state": "none",
+   "output": "feature maps"
+  },
+  "conventional_equivalent": "convolution layer",
+  "topology_folded": true,
+  "evidence": [
+   {
+    "item": "47 types with one copy per column",
+    "value": "partner counts fixed per type",
+    "weight": 0.4
+   },
+   {
+    "item": "weight CV across columns",
+    "value": "0.19\u20130.47",
+    "weight": 0.3
+   }
+  ],
+  "counterevidence": [
+   "positional variation exists (some pairs CV ~0.36) \u2014 not a perfect convolution"
+  ],
+  "predictions": [
+   "kernel transfer: a feature learned at one eccentricity should hold at all eccentricities"
+  ],
+  "reduced_model": "out[:, x] = K * in[:, x]   # same K for all columns",
+  "confidence": 0.55,
+  "status": "detected"
+ },
+ {
+  "name": "sparse_associative_memory",
+  "isa": "random-projection content-addressable memory",
+  "section": "mb",
+  "substrate": {
+   "types": [
+    "KC",
+    "APL",
+    "MBON",
+    "DAN"
+   ],
+   "cells": 4064
+  },
+  "signature": "large sparse expansion + near-random input mixing + global feedback inhibition + compartmental modulatory gating",
+  "semantics": {
+   "inputs": [
+    "odor / feature vector"
+   ],
+   "operations": [
+    "random projection",
+    "top-k sparsification",
+    "local 3-factor update"
+   ],
+   "state": "synaptic weights (learned)",
+   "output": "valence per learned pattern"
+  },
+  "conventional_equivalent": "locality-sensitive hashing + linear readout (FlyHash); three-factor Hebbian rather than backprop",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "expansion ratio",
+    "value": "5.9\u00d7",
+    "weight": 0.25
+   },
+   {
+    "item": "PN-pair KC-correlation \u2248 shuffle",
+    "value": "0.0234 vs 0.0125",
+    "weight": 0.2
+   },
+   {
+    "item": "APL covers all KCs (global normalisation)",
+    "value": "1.0",
+    "weight": 0.15
+   },
+   {
+    "item": "DAN\u2192KC \u226b DAN\u2192MBON (gate at the synapse)",
+    "value": "89,036 vs 37,972",
+    "weight": 0.15
+   },
+   {
+    "item": "dynamics: ABL silencing broadens KC code",
+    "value": "0.16\u21920.31 active",
+    "weight": 0.1
+   }
+  ],
+  "counterevidence": [
+   "no plasticity in the sim \u2014 the learning rule is inferred from DAN anatomy, not demonstrated",
+   "odor identity of PN channels is anatomical, not verified per-channel"
+  ],
+  "predictions": [
+   "present odor + shock \u2192 MBON valence flips for that odor only",
+   "lesion APL \u2192 code density rises, discrimination falls"
+  ],
+  "reduced_model": "x = topk(sparse_random_project(odor), k=5%)\nvalue = W_dan_gated @ x   # W updated locally by DAN reward signal",
+  "confidence": 0.55,
+  "status": "detected"
+ },
+ {
+  "name": "feedforward_inhibition",
+  "isa": "temporal derivative / gain limiter",
+  "section": "motif",
+  "substrate": {
+   "types": null,
+   "cells": null,
+   "note": "type-level census"
+  },
+  "signature": "A\u2192B plus A\u2192I\u2192B with I inhibitory",
+  "semantics": {
+   "inputs": [
+    "signal"
+   ],
+   "operations": [
+    "delay",
+    "subtract"
+   ],
+   "state": "none",
+   "output": "band-passed / amplitude-limited signal"
+  },
+  "conventional_equivalent": "feedforward cancellation; noise shaping",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "share of strong E edges with a parallel I path",
+    "value": "0.799",
+    "weight": 0.3
+   },
+   {
+    "item": "enrichment vs degree/sign-preserving null",
+    "value": "z=296.7",
+    "weight": 0.4
+   }
+  ],
+  "counterevidence": [
+   "fractional sign: some edges counted E are mixed"
+  ],
+  "predictions": [
+   "blocking the I arm should broaden temporal tuning of B"
+  ],
+  "reduced_model": "y = x[t] - g\u00b7x[t-1]   # implemented as A\u2192B and A\u2192I\u2192B",
+  "confidence": 0.55,
+  "status": "detected"
+ },
+ {
+  "name": "winner_take_all",
+  "isa": "mutual-inhibition competition",
+  "section": "motif",
+  "substrate": {
+   "types": [
+    "ER ring neurons",
+    "ILN2 family",
+    "many more"
+   ],
+   "cells": null
+  },
+  "signature": "I\u2194I reciprocal type pairs",
+  "semantics": {
+   "inputs": [
+    "competing drives"
+   ],
+   "operations": [
+    "mutual suppression"
+   ],
+   "state": "winner identity (persistent)",
+   "output": "single active channel"
+  },
+  "conventional_equivalent": "argmax with hysteresis; bistable switch",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "I\u2194I type pairs",
+    "value": "6375",
+    "weight": 0.25
+   },
+   {
+    "item": "enrichment vs null",
+    "value": "z=416.5",
+    "weight": 0.5
+   }
+  ],
+  "counterevidence": [
+   "measured at type level; neuron-level I\u2194I is even more numerous"
+  ],
+  "predictions": [
+   "simultaneous strong drive to both sides \u2192 bistability / oscillation rather than compromise"
+  ],
+  "reduced_model": "a.x -= g*b.x; b.x -= g*a.x   # last-one-standing dynamics",
+  "confidence": 0.6,
+  "status": "detected"
+ },
+ {
+  "name": "divisive_normalization",
+  "isa": "gain control by population total",
+  "section": "al",
+  "substrate": {
+   "types": [
+    "APL",
+    "lLN2F_b",
+    "lLN2P_a",
+    "lLN2P_a",
+    "lLN2P_b",
+    "lLN2P_b",
+    "lLN2P_c",
+    "lLN2P_c"
+   ],
+   "cells": null
+  },
+  "signature": "inhibitory cell whose dominant input population equals its dominant output population",
+  "semantics": {
+   "inputs": [
+    "population activity vector"
+   ],
+   "operations": [
+    "sum",
+    "divide"
+   ],
+   "state": "none",
+   "output": "normalised vector"
+  },
+  "conventional_equivalent": "divisive normalisation / RMS gain control",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "30 candidate cells",
+    "value": "top: APL, lLN2F_b, lLN2P_a",
+    "weight": 0.3
+   },
+   {
+    "item": "APL in/out KC coverage",
+    "value": "1.0",
+    "weight": 0.2
+   },
+   {
+    "item": "AL LNs span glomeruli broadly + presynaptic LN\u2192ORN feedback",
+    "value": "median 8 glomeruli, LN\u2192ORN/ORN\u2192PN 0.408",
+    "weight": 0.15
+   }
+  ],
+  "counterevidence": [
+   "in/out-overlap does not prove divisive (could be subtractive) \u2014 needs the nonlinearity"
+  ],
+  "predictions": [
+   "inject a common-mode offset into the population \u2192 output ratios preserved"
+  ],
+  "reduced_model": "y = x / (eps + mean(x))",
+  "confidence": 0.5,
+  "status": "detected"
+ },
+ {
+  "name": "command_funnel",
+  "isa": "population-vote bottleneck",
+  "section": "dn",
+  "substrate": {
+   "types": null,
+   "cells": 1314
+  },
+  "signature": "many circuits converge onto a small set of descending channels",
+  "semantics": {
+   "inputs": [
+    "whole-brain state"
+   ],
+   "operations": [
+    "weighted vote",
+    "compression"
+   ],
+   "state": "none",
+   "output": "~1300 motor commands"
+  },
+  "conventional_equivalent": "low-rank readout / API boundary",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "share of brain output carried by DNs",
+    "value": "0.0374",
+    "weight": 0.3
+   },
+   {
+    "item": "DN\u2194AN loop weight comparable to DN output",
+    "value": "closed loop with the cord",
+    "weight": 0.15
+   }
+  ],
+  "counterevidence": [
+   "the funnel count mixes cell types with very different functions \u2014 a bottleneck of bandwidth, not necessarily of decisions"
+  ],
+  "predictions": [
+   "silence a single DN type \u2192 a specific motor program drops out"
+  ],
+  "reduced_model": "cmd = W_vote @ brain_state   # tall-skinny readout",
+  "confidence": 0.3,
+  "status": "marginal"
+ },
+ {
+  "name": "feedforward_inhibition",
+  "isa": "temporal derivative / gain limiter",
+  "section": null,
+  "substrate": {
+   "types": null,
+   "cells": null,
+   "species": "celegans_herm"
+  },
+  "signature": "A\u2192B plus A\u2192I\u2192B with I inhibitory (type level)",
+  "semantics": {
+   "inputs": [
+    "signal"
+   ],
+   "operations": [
+    "delay",
+    "subtract"
+   ],
+   "state": "none",
+   "output": "band-passed signal"
+  },
+  "conventional_equivalent": "feedforward cancellation",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "FFI share",
+    "value": "0.172",
+    "weight": 0.25
+   },
+   {
+    "item": "z vs null",
+    "value": "3.7",
+    "weight": 0.3
+   }
+  ],
+  "counterevidence": [
+   "only 179/302 neurons have NT assignments; sign-conditioned counts undercount",
+   "169-type graph is small \u2014 z-scores are directional"
+  ],
+  "predictions": [
+   "FFI should concentrate on sensory\u2192interneuron edges where temporal filtering matters"
+  ],
+  "reduced_model": "y = x[t] - g\u00b7x[t-1]",
+  "confidence": 0.25,
+  "status": "marginal"
+ },
+ {
+  "name": "winner_take_all",
+  "isa": "mutual-inhibition competition",
+  "section": null,
+  "substrate": {
+   "types": [
+    "AVA",
+    "AVB",
+    "RMD",
+    "SMD",
+    "command interneurons"
+   ],
+   "cells": null,
+   "species": "celegans_herm"
+  },
+  "signature": "I\u2194I dominant among neuron-level 2-cycles",
+  "semantics": {
+   "inputs": [
+    "competing drives"
+   ],
+   "operations": [
+    "mutual suppression"
+   ],
+   "state": "winner identity",
+   "output": "single motor program"
+  },
+  "conventional_equivalent": "argmax with hysteresis",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "I\u2194I is the most common neuron-level 2-cycle",
+    "value": "371 pairs",
+    "weight": 0.4
+   },
+   {
+    "item": "dominant eigenmode on head-steering circuit",
+    "value": "RMD/RIA/SMD",
+    "weight": 0.15
+   }
+  ],
+  "counterevidence": [
+   "at type level I\u2194I enrichment is absent (z\u2248\u22120.4): the motif lives at cell resolution because worm motor classes are singletons",
+   "command rivalry could also be implemented by excitatory-biased bistability, not only I\u2194I"
+  ],
+  "predictions": [
+   "lesion one member of an I\u2194I pair \u2192 its rival tonically wins"
+  ],
+  "reduced_model": "a.x -= g*b.x; b.x -= g*a.x",
+  "confidence": 0.25,
+  "status": "marginal"
+ },
+ {
+  "name": "ring_attractor",
+  "isa": "cyclic state estimator",
+  "section": null,
+  "substrate": {
+   "types": null,
+   "cells": null,
+   "species": "celegans_herm"
+  },
+  "signature": "columnar population + folded inhibitory kernel + shifter asymmetry",
+  "semantics": {
+   "inputs": [
+    "rotation"
+   ],
+   "operations": [
+    "bump sustain",
+    "shift"
+   ],
+   "state": "\u03b8",
+   "output": "phase"
+  },
+  "conventional_equivalent": "continuous attractor",
+  "topology_folded": false,
+  "evidence": [
+   {
+    "item": "dominant eigenmode concentrated on 10.8 cells",
+    "value": "RMD/RIA/SMD head circuit",
+    "weight": 0.1
+   }
+  ],
+  "counterevidence": [
+   "no columnar coordinate data loaded for the worm \u2014 the kernel test cannot run; attractor-like head dynamics are physiologically known but not provable from this IR"
+  ],
+  "predictions": [
+   "if the head circuit is a ring attractor, RIA should show a bump that rotates with head oscillation"
+  ],
+  "reduced_model": "undetermined: needs cyclic column labels",
+  "confidence": 0.0,
+  "status": "undetermined"
+ }
+]

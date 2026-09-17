@@ -1,0 +1,369 @@
+{
+ "ring_attractor": {
+  "geometry": "ring",
+  "operator": "ring_attractor",
+  "populations": {
+   "bump": "EPG",
+   "surround": "Delta7",
+   "copy": "PEG",
+   "shifter": [
+    "PEN_a(PEN1)",
+    "PEN_b(PEN2)"
+   ]
+  },
+  "roles": {
+   "bump": "bump",
+   "shifter": "shifter"
+  },
+  "edge_params": [
+   {
+    "pre": "EPG",
+    "post": "EPG",
+    "param": "epgRecur",
+    "why": "EPG->EPG recurrence gain is not fixed by synapse counts"
+   },
+   {
+    "pre": "Delta7",
+    "post": "EPG",
+    "param": "d7Gain",
+    "why": "Delta7 inhibition is glutamatergic via GluClA; effective sign/strength uncertain"
+   },
+   {
+    "pre": [
+     "PEN_a(PEN1)",
+     "PEN_b(PEN2)"
+    ],
+    "post": "EPG",
+    "param": "penGain",
+    "why": "PEN->EPG shifted feedback gain"
+   }
+  ],
+  "tonics": [
+   {
+    "pop": "bump",
+    "param": "epgTonic",
+    "why": "tonic EPG excitability (resting drive) is unknown"
+   }
+  ],
+  "grid": {
+   "epgRecur": [
+    1,
+    3,
+    4,
+    6
+   ],
+   "d7Gain": [
+    0.5,
+    1.0,
+    1.3
+   ],
+   "epgTonic": [
+    0,
+    3,
+    5,
+    7
+   ],
+   "penGain": [
+    1
+   ]
+  },
+  "perturbations": [
+   {
+    "name": "d7_silence",
+    "silence": "surround",
+    "why": "top-ranked discriminator in the LIF ensemble"
+   },
+   {
+    "name": "peg_lesion",
+    "silence": "copy",
+    "why": "tests whether the PEG copy pathway is load-bearing"
+   }
+  ],
+  "mech_perturbation": "d7_silence",
+  "hypotheses": [
+   "attractor_free",
+   "attractor_tonic",
+   "filter",
+   "frozen",
+   "silent"
+  ],
+  "provenance": {
+   "signature": "columnar population + 2-hop inhibitory kernel \u221d 1\u2212cos(\u0394\u03b8) + mirror-symmetric shifter",
+   "evidence": [
+    {
+     "item": "Delta7 kernel fits a \u2212 b\u00b7cos(2\u03c0k/8)",
+     "value": "R\u00b2=0.99",
+     "weight": 0.35
+    },
+    {
+     "item": "kernel contrast (min at bump, max opposite)",
+     "value": 0.878,
+     "weight": 0.15
+    },
+    {
+     "item": "PEN shifter mirror-symmetric",
+     "value": "L +1.47 / R -1.45 cols",
+     "weight": 0.2
+    },
+    {
+     "item": "dynamics: realised Delta7 kernel on the ring",
+     "value": "pass=True",
+     "weight": 0.15
+    },
+    {
+     "item": "dynamics: realised PEN push field",
+     "value": "L 1.49 / R -1.46",
+     "weight": 0.15
+    }
+   ],
+   "topology_folded": false
+  }
+ },
+ "phasor_vector_shift": {
+  "geometry": "linear",
+  "operator": "phasor_vector_shift",
+  "populations": {
+   "PFNd": "PFNd",
+   "PFNv": "PFNv",
+   "target": "hDeltaB"
+  },
+  "roles": {
+   "sources": [
+    "PFNd",
+    "PFNv"
+   ],
+   "target": "target"
+  },
+  "structural_offsets": {
+   "PFNd": -3,
+   "PFNv": 2
+  },
+  "drive_column": 6,
+  "edge_params": [
+   {
+    "pre": "PFNd",
+    "post": "hDeltaB",
+    "param": "pfndGain"
+   },
+   {
+    "pre": "PFNv",
+    "post": "hDeltaB",
+    "param": "pfnvGain"
+   },
+   {
+    "pre": "hDeltaB",
+    "post": "hDeltaB",
+    "param": "hdRecur"
+   },
+   {
+    "pre": "PFNd",
+    "post": "PFNd",
+    "param": "pfnRecur"
+   },
+   {
+    "pre": "hDeltaB",
+    "post": [
+     "PFNd",
+     "PFNv"
+    ],
+    "param": "hd2pfn"
+   }
+  ],
+  "tonics": [
+   {
+    "pop": "target",
+    "param": "hdTonic"
+   }
+  ],
+  "grid": {
+   "pfndGain": [
+    0.5,
+    1,
+    2
+   ],
+   "pfnvGain": [
+    0.5,
+    1,
+    2
+   ],
+   "hdRecur": [
+    0,
+    0.5,
+    1,
+    2
+   ],
+   "hdTonic": [
+    0,
+    4
+   ],
+   "pfnRecur": [
+    1
+   ],
+   "hd2pfn": [
+    1
+   ]
+  },
+  "perturbations": [
+   {
+    "name": "hd_recur_off",
+    "param": "hdRecur",
+    "set": 0
+   },
+   {
+    "name": "pfn_recur_off",
+    "param": "pfnRecur",
+    "set": 0
+   },
+   {
+    "name": "hd2pfn_off",
+    "param": "hd2pfn",
+    "set": 0
+   },
+   {
+    "name": "pfnv_silenced",
+    "silence": "PFNv"
+   }
+  ],
+  "hypotheses": [
+   "wired_shift",
+   "passthrough",
+   "distorted",
+   "silent"
+  ],
+  "provenance": {
+   "signature": "sinusoidal population code + fixed columnar offset between input and output + convergent summation",
+   "evidence": [
+    {
+     "item": "hDelta fans out at peak offset +4/+5 columns (\u2248180\u00b0) to downstream types",
+     "value": "13 targets, 113,770 synapses",
+     "weight": 0.5
+    },
+    {
+     "item": "PFN phasor arms arrive at hDelta with opposite-sign offsets",
+     "value": "PFNd -3, PFNv +2",
+     "weight": 0.25
+    },
+    {
+     "item": "weight at |offset| \u2265 3 columns",
+     "value": "145,788 synapses",
+     "weight": 0.1
+    }
+   ],
+   "topology_folded": true
+  }
+ },
+ "sparse_associative_memory": {
+  "geometry": "memory",
+  "operator": "sparse_associative_memory",
+  "populations": {
+   "kc": "KC*",
+   "apl": "APL*",
+   "mbon": "MBON*",
+   "dan": [
+    "PPL*",
+    "PAM*"
+   ]
+  },
+  "roles": {
+   "input": "kc",
+   "output": "mbon",
+   "control": "apl"
+  },
+  "odor_size": 200,
+  "odor_overlap": 0.5,
+  "edge_params": [
+   {
+    "pre": "KC*",
+    "post": "MBON*",
+    "param": "kc2mb",
+    "why": "KC->MBON readout gain (44k edges; plastic in vivo)"
+   },
+   {
+    "pre": "APL*",
+    "post": "KC*",
+    "param": "aplGain",
+    "why": "APL feedback inhibition sets KC sparsity"
+   },
+   {
+    "pre": "MBON*",
+    "post": "MBON*",
+    "param": "mbRecur",
+    "why": "MBON->MBON recurrence (936 edges)"
+   }
+  ],
+  "tonics": [
+   {
+    "pop": "mbon",
+    "param": "mbonTonic"
+   }
+  ],
+  "grid": {
+   "kc2mb": [
+    0.5,
+    1,
+    2
+   ],
+   "aplGain": [
+    0.5,
+    1,
+    2
+   ],
+   "mbonTonic": [
+    0,
+    4
+   ],
+   "mbRecur": [
+    1
+   ]
+  },
+  "perturbations": [
+   {
+    "name": "apl_silence",
+    "silence": "apl",
+    "why": "does separation survive without feedback inhibition?"
+   },
+   {
+    "name": "mb_recur_off",
+    "param": "mbRecur",
+    "set": 0
+   }
+  ],
+  "hypotheses": [
+   "gain_controlled",
+   "linear_passthrough",
+   "collapsed",
+   "silent"
+  ],
+  "provenance": {
+   "signature": "large sparse expansion + near-random input mixing + global feedback inhibition + compartmental modulatory gating",
+   "evidence": [
+    {
+     "item": "expansion ratio",
+     "value": "5.9\u00d7",
+     "weight": 0.25
+    },
+    {
+     "item": "PN-pair KC-correlation \u2248 shuffle",
+     "value": "0.0234 vs 0.0125",
+     "weight": 0.2
+    },
+    {
+     "item": "APL covers all KCs (global normalisation)",
+     "value": "1.0",
+     "weight": 0.15
+    },
+    {
+     "item": "DAN\u2192KC \u226b DAN\u2192MBON (gate at the synapse)",
+     "value": "89,036 vs 37,972",
+     "weight": 0.15
+    },
+    {
+     "item": "dynamics: ABL silencing broadens KC code",
+     "value": "0.16\u21920.31 active",
+     "weight": 0.1
+    }
+   ],
+   "topology_folded": false
+  }
+ }
+}
