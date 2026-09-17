@@ -569,3 +569,9 @@ DeltaX should provide executive coherence.
 The connectome should provide the recurrent substrate.
 
 Neither should be falsely credited with the other's work.
+
+## Local canonical API deployment
+
+This repository is a public demo harness. DeltaX intelligence and governance live in the local API outside this repository. Set `DELTAX_API_URL=http://127.0.0.1:<port>` and run the demo with `DELTAX_EXECUTIVE=DELTAX` (or `DELTAX_DEBUG`); the transport selects `executive_source: canonical_api`. The adapter is transport-swappable and does not recreate DeltaX logic.
+
+For CI and development, select `DELTAX_EXECUTIVE=stub` explicitly. `DELTAX`/`DELTAX_DEBUG` without a URL fails loudly and never silently falls back to the stub. Status and exported runs identify `canonical_api`, `stub`, or `disabled`. Every request and returned decision is logged as a redacted packet for causal audit; configure additional sensitive keys when needed.
