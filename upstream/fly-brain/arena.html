@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Embodied fly connectome — arena</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="coi-serviceworker.js"></script><!-- COOP/COEP via service worker (static hosts such as GitHub Pages cannot set headers) -->
+<link rel="stylesheet" href="/src/style.css" />
+<link rel="stylesheet" href="/src/arena.css" />
+</head>
+<body>
+<canvas id="c"></canvas>
+<aside id="brainpanel" hidden>
+  <header><h2 id="bpTitle">Inside fly 0</h2><span class="lr"><i class="l"></i>left <i class="r"></i>right</span><button id="bpFold" class="fold" title="Hide brain panel (])" aria-expanded="true">›</button></header>
+  <div id="bpBody">
+    <div class="eyes"><figure><canvas id="eyeL" width="168" height="116"></canvas><figcaption>left eye</figcaption></figure><figure><canvas id="eyeR" width="168" height="116"></canvas><figcaption>right eye</figcaption></figure></div>
+    <div class="note">What each eye sees: brightness in its 721 columns, as fed to the optic-lobe model.</div>
+    <div id="groups"></div>
+  </div>
+  <canvas id="brain"></canvas>
+</aside>
+<div id="loading"><div class="title">Embodied male fly connectome</div><div id="status">loading…</div></div>
+<aside id="panel">
+  <header>
+    <div class="hrow"><h1>Fly arena</h1><button id="panelFold" class="fold" title="Hide controls ([)" aria-expanded="true">‹</button></div>
+    <div class="sub">Each fly: 165,122-neuron connectome brain in a flybody physics body. <a href="./">brain viewer</a> · <a href="structures.html">algorithmic structures</a></div>
+  </header>
+  <section>
+    <div class="row">
+      <button id="play" class="primary">▶ Run</button>
+      <button id="addFly">+ Fly</button>
+      <button id="addFemale" title="Add a female fly (males court her)">+ ♀</button>
+      <label>speed <input id="speed" type="range" min="0.05" max="2" step="0.05" value="2"><span id="speedv">2.00×</span></label>
+    </div>
+    <div class="row"><label>world <select id="preset"></select></label></div>
+    <div class="row">
+      <label>motor <select id="mode"><option value="descending">descending commands</option><option value="connectome">full connectome VNC</option></select></label>
+      <label><input type="checkbox" id="follow" checked> follow</label>
+    </div>
+    <div class="stats" id="clock"><div><b id="simt">0.0</b><span>sim s</span></div><div><b id="rt">–</b><span>× real time</span></div><div><b id="nfly">0</b><span>flies</span></div><div><b id="fps">0</b><span>fps</span></div></div>
+  </section>
+  <section>
+    <h2>Place</h2>
+    <div class="row tools">
+      <button data-tool="food">sugar</button><button data-tool="odor">vinegar odor</button><button data-tool="bitter">bitter</button>
+      <button data-tool="hazard">heat</button><button data-tool="obstacle">block</button><button data-tool="co2">CO₂</button><button data-tool="none" class="on">none</button>
+    </div>
+    <div class="note">Click the floor to place. Flies sense these only through their sensory neurons.</div>
+  </section>
+  <section>
+    <h2>Challenges</h2>
+    <div class="row"><button id="threat">Looming threat → selected fly</button><button id="takeoff" title="Excite the selected fly's takeoff descending neurons (DNp02, DNp04), as optogenetic activation would">Activate takeoff DNs</button></div>
+    <div class="row"><label>wind <input id="wind" type="range" min="0" max="30" step="1" value="0"> <span id="windv">0</span> cm/s</label>
+    <label>light <input id="light" type="range" min="0.05" max="1.5" step="0.05" value="1"></label></div>
+  </section>
+  <section>
+    <h2>Flies</h2>
+    <div id="flies"></div>
+  </section>
+  <section id="selsec" hidden>
+    <h2>Selected fly</h2>
+    <div id="sel"></div>
+  </section>
+</aside>
+<script type="module" src="/src/arena.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "blender": "5.2.1 LTS",
+  "engine": "CYCLES",
+  "device": "GPU",
+  "samples": 256,
+  "resolution": [
+    2400,
+    1600
+  ],
+  "view": "full",
+  "seconds_including_scene_setup": 43.85,
+  "render": "/Users/lulzx/work/fly-brain/art/fly/full-body.png",
+  "blend": "/Users/lulzx/work/fly-brain/art/fly/fly-full-body.blend"
+}

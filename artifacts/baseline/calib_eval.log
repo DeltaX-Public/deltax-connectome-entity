@@ -1,0 +1,5 @@
+COMMAND: node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"
+START=2026-09-17T20:45:33+00:00
+{"sugarMN9":62.5,"relay":15,"relay2":15,"sugarPeak":11707,"afterSugar":8734,"bitterMN9":0,"mixMN9":0,"tarsalMN9":35,"sugarFwd":10.932,"sugarMDN":0,"baseActive":10994.667,"baseMN9":32.5,"baseFwd":9.047,"baseKC":0.064,"basePN":498,"kcFrac":0.076,"kcJaccard":1,"dm1PN":178.75,"pnFrac":0.733,"loomGF":0,"loomTO":33.125,"flowGF":0,"flowTO":6.25,"vpnBase":30,"staticGF":0,"legActive":42,"legRhythm":0.221,"score":0.689,"terms":{"sugar":0.75,"bitter":1,"mix":1,"kcSparse":0.98,"kcSpecific":0,"pnSpecific":0,"dm1PN":1,"baseline":0.45,"offset":1,"legs":1,"rhythm":0.368,"tarsalPER":1,"sugarStop":0,"noMDN":1,"quietMN9":0,"loom":0.358,"noFalseAlarm":1}} 8.684s
+END=2026-09-17T20:45:42+00:00
+EXIT=0

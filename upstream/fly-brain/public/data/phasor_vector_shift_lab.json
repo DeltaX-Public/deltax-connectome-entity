@@ -1,0 +1,7330 @@
+{
+ "seed": 42,
+ "spec": "phasor_vector_shift",
+ "summary": {
+  "ensemble_size": 72,
+  "hypotheses": {
+   "wired_shift": 11,
+   "passthrough": 56,
+   "silent": 5
+  },
+  "mechanisms": {
+   "needs_pfnv_silenced": 1,
+   "needs_hd_recur_off+pfn_recur_off+hd2pfn_off": 1,
+   "needs_hd_recur_off+pfn_recur_off": 1,
+   "needs_hd2pfn_off+pfnv_silenced": 1,
+   "needs_hd_recur_off+pfn_recur_off+hd2pfn_off+pfnv_silenced": 1
+  },
+  "best_experiment": "amp_scaling",
+  "best_experiment_separation": 0.461
+ },
+ "spec_def": {
+  "geometry": "linear",
+  "operator": "phasor_vector_shift",
+  "populations": {
+   "PFNd": "PFNd",
+   "PFNv": "PFNv",
+   "target": "hDeltaB"
+  },
+  "roles": {
+   "sources": [
+    "PFNd",
+    "PFNv"
+   ],
+   "target": "target"
+  },
+  "structural_offsets": {
+   "PFNd": -3,
+   "PFNv": 2
+  },
+  "drive_column": 6,
+  "edge_params": [
+   {
+    "pre": "PFNd",
+    "post": "hDeltaB",
+    "param": "pfndGain"
+   },
+   {
+    "pre": "PFNv",
+    "post": "hDeltaB",
+    "param": "pfnvGain"
+   },
+   {
+    "pre": "hDeltaB",
+    "post": "hDeltaB",
+    "param": "hdRecur"
+   },
+   {
+    "pre": "PFNd",
+    "post": "PFNd",
+    "param": "pfnRecur"
+   },
+   {
+    "pre": "hDeltaB",
+    "post": [
+     "PFNd",
+     "PFNv"
+    ],
+    "param": "hd2pfn"
+   }
+  ],
+  "tonics": [
+   {
+    "pop": "target",
+    "param": "hdTonic"
+   }
+  ],
+  "grid": {
+   "pfndGain": [
+    0.5,
+    1,
+    2
+   ],
+   "pfnvGain": [
+    0.5,
+    1,
+    2
+   ],
+   "hdRecur": [
+    0,
+    0.5,
+    1,
+    2
+   ],
+   "hdTonic": [
+    0,
+    4
+   ],
+   "pfnRecur": [
+    1
+   ],
+   "hd2pfn": [
+    1
+   ]
+  },
+  "perturbations": [
+   {
+    "name": "hd_recur_off",
+    "param": "hdRecur",
+    "set": 0
+   },
+   {
+    "name": "pfn_recur_off",
+    "param": "pfnRecur",
+    "set": 0
+   },
+   {
+    "name": "hd2pfn_off",
+    "param": "hd2pfn",
+    "set": 0
+   },
+   {
+    "name": "pfnv_silenced",
+    "silence": "PFNv"
+   }
+  ],
+  "hypotheses": [
+   "wired_shift",
+   "passthrough",
+   "distorted",
+   "silent"
+  ],
+  "provenance": {
+   "signature": "sinusoidal population code + fixed columnar offset between input and output + convergent summation",
+   "evidence": [
+    {
+     "item": "hDelta fans out at peak offset +4/+5 columns (≈180°) to downstream types",
+     "value": "13 targets, 113,770 synapses",
+     "weight": 0.5
+    },
+    {
+     "item": "PFN phasor arms arrive at hDelta with opposite-sign offsets",
+     "value": "PFNd -3, PFNv +2",
+     "weight": 0.25
+    },
+    {
+     "item": "weight at |offset| ≥ 3 columns",
+     "value": "145,788 synapses",
+     "weight": 0.1
+    }
+   ],
+   "topology_folded": true
+  }
+ },
+ "members": [
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "wired_shift",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -2,
+     "cen_offset": -2.909,
+     "rate": 11
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -2
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     2,
+     8,
+     11
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.8,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": "needs_pfnv_silenced"
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.2,
+     "rate": 25
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 5,
+    "3": 6,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     16,
+     24,
+     22
+    ],
+    "scale_160v40": 1.375
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 23
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.231,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.083,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.231,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "wired_shift",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -2,
+     "cen_offset": -2.909,
+     "rate": 11
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -2
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     4,
+     8,
+     11
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.3,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": "needs_hd_recur_off+pfn_recur_off+hd2pfn_off"
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.393,
+     "rate": 28
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     18,
+     21,
+     24
+    ],
+    "scale_160v40": 1.333
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.44,
+      "rate": 25
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.231,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.4,
+      "rate": 25
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.231,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.545,
+      "rate": 11
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "silent",
+   "arms": {
+    "PFNd": "silent",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": null,
+     "rate": 0
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     3,
+     11,
+     10
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.8,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "passthrough"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.2,
+     "rate": 25
+    },
+    "PFNv": {
+     "offset": 0,
+     "cen_offset": -0.833,
+     "rate": 12
+    }
+   },
+   "col_sweep": {
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     20,
+     23,
+     25
+    ],
+    "scale_160v40": 1.25
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.125,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.333,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.818,
+      "rate": 11
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.333,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.111,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.231,
+     "rate": 13
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -2
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     3,
+     13,
+     12
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.3,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.8,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 0.5,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.333,
+     "rate": 27
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     18,
+     24,
+     28
+    ],
+    "scale_160v40": 1.556
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.933,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.818,
+      "rate": 11
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.034,
+      "rate": 29
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.125,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.933,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "silent",
+   "arms": {
+    "PFNd": "silent",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": null,
+     "rate": 0
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     3,
+     10,
+     11
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2,
+     "rate": 23
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -2,
+    "6": -2,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     17,
+     21,
+     22
+    ],
+    "scale_160v40": 1.294
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.217,
+      "rate": 23
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.455,
+      "rate": 22
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.409,
+      "rate": 22
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.381,
+      "rate": 21
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "wired_shift",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -2,
+     "cen_offset": -2.909,
+     "rate": 11
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     4,
+     11,
+     12
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.455,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": "needs_hd_recur_off+pfn_recur_off"
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.125,
+     "rate": 24
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     17,
+     23,
+     24
+    ],
+    "scale_160v40": 1.412
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.304,
+      "rate": 23
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.44,
+      "rate": 25
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.706,
+      "rate": 17
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.44,
+      "rate": 25
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.375,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "silent",
+   "arms": {
+    "PFNd": "silent",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": null,
+     "rate": 0
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     7,
+     11,
+     12
+    ],
+    "scale_160v40": 1.714
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.8,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "passthrough"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.179,
+     "rate": 28
+    },
+    "PFNv": {
+     "offset": 0,
+     "cen_offset": -0.706,
+     "rate": 17
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     12,
+     24,
+     24
+    ],
+    "scale_160v40": 2
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 23
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.706,
+      "rate": 17
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.926,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.706,
+      "rate": 17
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.333,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.083,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.769,
+     "rate": 13
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     3,
+     11,
+     12
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.455,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 1,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.688,
+     "rate": 32
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     21,
+     26,
+     24
+    ],
+    "scale_160v40": 1.143
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.933,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.933,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.034,
+      "rate": 29
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.688,
+      "rate": 16
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.034,
+      "rate": 29
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "wired_shift",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -2,
+     "cen_offset": -2.909,
+     "rate": 11
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {},
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     5,
+     8,
+     12
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.909,
+      "rate": 11
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": "needs_hd2pfn_off+pfnv_silenced"
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.2,
+     "rate": 25
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     16,
+     19,
+     21
+    ],
+    "scale_160v40": 1.313
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.381,
+      "rate": 21
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.083,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.182,
+      "rate": 22
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.64,
+      "rate": 25
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "silent",
+   "arms": {
+    "PFNd": "silent",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": null,
+     "rate": 0
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {},
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     3,
+     8,
+     10
+    ],
+    "scale_160v40": null
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.882,
+      "rate": 17
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.3,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.333,
+     "rate": 27
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     18,
+     19,
+     24
+    ],
+    "scale_160v40": 1.333
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.333,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.083,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.5,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.038,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "silent",
+   "arms": {
+    "PFNd": "silent",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": null,
+     "rate": 0
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "6": -2
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     8,
+     9,
+     11
+    ],
+    "scale_160v40": 1.375
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.5,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.231,
+     "rate": 26
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     15,
+     23,
+     24
+    ],
+    "scale_160v40": 1.6
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.125,
+      "rate": 24
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.179,
+      "rate": 28
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.348,
+      "rate": 23
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.333,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.348,
+      "rate": 23
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.889,
+      "rate": 27
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "wired_shift"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": 0,
+     "cen_offset": -1.364,
+     "rate": 11
+    },
+    "PFNv": {
+     "offset": 1,
+     "cen_offset": -0.474,
+     "rate": 19
+    }
+   },
+   "col_sweep": {
+    "3": 5,
+    "6": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     7,
+     9,
+     12
+    ],
+    "scale_160v40": 1.714
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.3,
+      "rate": 10
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.583,
+      "rate": 12
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": null,
+      "rate": 0
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 0.5,
+    "pfnvGain": 2,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "wired_shift"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.933,
+     "rate": 30
+    },
+    "PFNv": {
+     "offset": 1,
+     "cen_offset": -0.28,
+     "rate": 25
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     21,
+     25,
+     26
+    ],
+    "scale_160v40": 1.238
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.034,
+      "rate": 29
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.933,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.933,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.808,
+      "rate": 26
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.417,
+     "rate": 36
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -2,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     23,
+     25,
+     30
+    ],
+    "scale_160v40": 1.304
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.563,
+      "rate": 32
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.171,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.371,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.606,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.019,
+     "rate": 54
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     38,
+     41,
+     49
+    ],
+    "scale_160v40": 1.289
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 48
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 52
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.294,
+     "rate": 34
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -2,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     21,
+     29,
+     30
+    ],
+    "scale_160v40": 1.429
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.417,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.188,
+      "rate": 32
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.273,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.111,
+     "rate": 54
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     38,
+     44,
+     50
+    ],
+    "scale_160v40": 1.316
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.902,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.833,
+      "rate": 12
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.089,
+      "rate": 56
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.371,
+     "rate": 35
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     19,
+     29,
+     36
+    ],
+    "scale_160v40": 1.895
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.417,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.222,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.273,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "passthrough"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2,
+     "rate": 53
+    },
+    "PFNv": {
+     "offset": 0,
+     "cen_offset": -0.833,
+     "rate": 12
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     25,
+     44,
+     48
+    ],
+    "scale_160v40": 1.92
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.105,
+      "rate": 57
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.111,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 56
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.056,
+     "rate": 36
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     22,
+     32,
+     35
+    ],
+    "scale_160v40": 1.591
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.108,
+      "rate": 37
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.083,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.371,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.057,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 0.5,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.898,
+     "rate": 59
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     45,
+     44,
+     50
+    ],
+    "scale_160v40": 1.111
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.944,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.833,
+      "rate": 12
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.948,
+      "rate": 58
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.982,
+      "rate": 55
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.818,
+      "rate": 11
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "wired_shift",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -2,
+     "cen_offset": -2.606,
+     "rate": 33
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -2,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     21,
+     24,
+     34
+    ],
+    "scale_160v40": 1.619
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.371,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.467,
+      "rate": 30
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": "needs_hd_recur_off+pfn_recur_off+hd2pfn_off+pfnv_silenced"
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.125,
+     "rate": 48
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     33,
+     43,
+     48
+    ],
+    "scale_160v40": 1.455
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.08,
+      "rate": 50
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.02,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.164,
+      "rate": 55
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.5,
+     "rate": 34
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     22,
+     29,
+     34
+    ],
+    "scale_160v40": 1.545
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.371,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.563,
+      "rate": 32
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.636,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.111,
+     "rate": 54
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     41,
+     44,
+     48
+    ],
+    "scale_160v40": 1.171
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.923,
+      "rate": 52
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.037,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.058,
+      "rate": 52
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.942,
+      "rate": 52
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.171,
+     "rate": 35
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     17,
+     29,
+     33
+    ],
+    "scale_160v40": 1.941
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.417,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.273,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.471,
+      "rate": 34
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.455,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.926,
+     "rate": 54
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     34,
+     42,
+     52
+    ],
+    "scale_160v40": 1.529
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.039,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.982,
+      "rate": 56
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.211,
+     "rate": 38
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     22,
+     31,
+     36
+    ],
+    "scale_160v40": 1.636
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.417,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.278,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.371,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.2,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 1,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.825,
+     "rate": 57
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     31,
+     46,
+     51
+    ],
+    "scale_160v40": 1.645
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.944,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.948,
+      "rate": 58
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.942,
+      "rate": 52
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.706,
+      "rate": 17
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.873,
+      "rate": 55
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "passthrough"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.471,
+     "rate": 34
+    },
+    "PFNv": {
+     "offset": 0,
+     "cen_offset": -0.882,
+     "rate": 17
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -2,
+    "6": -2,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     20,
+     23,
+     31
+    ],
+    "scale_160v40": 1.55
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.71,
+      "rate": 31
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.71,
+      "rate": 31
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -1.067,
+      "rate": 15
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.882,
+      "rate": 17
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.516,
+      "rate": 31
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "wired_shift"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.061,
+     "rate": 49
+    },
+    "PFNv": {
+     "offset": 1,
+     "cen_offset": -0.476,
+     "rate": 21
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     31,
+     42,
+     48
+    ],
+    "scale_160v40": 1.548
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.094,
+      "rate": 53
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.125,
+      "rate": 48
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.882,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.6,
+      "rate": 20
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.038,
+      "rate": 52
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.371,
+     "rate": 35
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -2,
+    "6": -2,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     20,
+     27,
+     33
+    ],
+    "scale_160v40": 1.65
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.455,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.636,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -1.067,
+      "rate": 15
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.455,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -1.067,
+      "rate": 15
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.323,
+      "rate": 31
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.098,
+     "rate": 51
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 5,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     33,
+     45,
+     49
+    ],
+    "scale_160v40": 1.485
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.157,
+      "rate": 51
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.964,
+      "rate": 55
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.037,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.019,
+      "rate": 54
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.348,
+      "rate": 23
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "wired_shift"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.406,
+     "rate": 32
+    },
+    "PFNv": {
+     "offset": 1,
+     "cen_offset": -0.474,
+     "rate": 19
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -2,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     24,
+     29,
+     33
+    ],
+    "scale_160v40": 1.375
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.324,
+      "rate": 37
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.474,
+      "rate": 19
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.424,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.636,
+      "rate": 33
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -2,
+      "cen_offset": -2.514,
+      "rate": 35
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "wired_shift"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.019,
+     "rate": 54
+    },
+    "PFNv": {
+     "offset": 1,
+     "cen_offset": -0.348,
+     "rate": 23
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     36,
+     43,
+     50
+    ],
+    "scale_160v40": 1.389
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.036,
+      "rate": 55
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 53
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.982,
+      "rate": 55
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.348,
+      "rate": 23
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.962,
+      "rate": 53
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "wired_shift",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "wired_shift"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.111,
+     "rate": 36
+    },
+    "PFNv": {
+     "offset": 1,
+     "cen_offset": -0.474,
+     "rate": 19
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     23,
+     32,
+     33
+    ],
+    "scale_160v40": 1.435
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.053,
+      "rate": 38
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.297,
+      "rate": 37
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.27,
+      "rate": 37
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.083,
+      "rate": 36
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 1,
+    "pfnvGain": 2,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.904,
+     "rate": 52
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     35,
+     54,
+     53
+    ],
+    "scale_160v40": 1.514
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.81,
+      "rate": 58
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.948,
+      "rate": 58
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.897,
+      "rate": 58
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.982,
+      "rate": 56
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.066,
+     "rate": 76
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     44,
+     60,
+     70
+    ],
+    "scale_160v40": 1.591
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.014,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.972,
+      "rate": 72
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.027,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.99,
+     "rate": 96
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     63,
+     75,
+     86
+    ],
+    "scale_160v40": 1.365
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.011,
+      "rate": 91
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.055,
+      "rate": 91
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.989,
+      "rate": 93
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.053,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.987,
+     "rate": 75
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     51,
+     62,
+     70
+    ],
+    "scale_160v40": 1.373
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.101,
+      "rate": 69
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.918,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.973,
+      "rate": 75
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.04,
+      "rate": 75
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2,
+     "rate": 94
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     66,
+     77,
+     88
+    ],
+    "scale_160v40": 1.333
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.904,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.945,
+      "rate": 91
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.027,
+     "rate": 74
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     50,
+     62,
+     73
+    ],
+    "scale_160v40": 1.46
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.013,
+      "rate": 77
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.987,
+      "rate": 78
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.095,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.918,
+     "rate": 98
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     66,
+     79,
+     90
+    ],
+    "scale_160v40": 1.364
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.833,
+      "rate": 96
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.856,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.856,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.884,
+      "rate": 95
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.055,
+     "rate": 73
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     50,
+     60,
+     73
+    ],
+    "scale_160v40": 1.46
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.961,
+      "rate": 77
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.028,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.855,
+      "rate": 76
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.962,
+      "rate": 78
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 0.5,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.79,
+     "rate": 100
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": 0,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     76,
+     78,
+     90
+    ],
+    "scale_160v40": 1.184
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.888,
+      "rate": 98
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -1.167,
+      "rate": 12
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.77,
+      "rate": 100
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.856,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.838,
+      "rate": 99
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.013,
+     "rate": 75
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     48,
+     55,
+     68
+    ],
+    "scale_160v40": 1.417
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.056,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.027,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.108,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.053,
+      "rate": 76
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.055,
+     "rate": 91
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     66,
+     80,
+     84
+    ],
+    "scale_160v40": 1.273
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.011,
+      "rate": 89
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.75,
+      "rate": 16
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.989,
+      "rate": 93
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.972,
+     "rate": 72
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     49,
+     61,
+     71
+    ],
+    "scale_160v40": 1.449
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.972,
+      "rate": 72
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 70
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.014,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.027,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.989,
+     "rate": 91
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     69,
+     79,
+     86
+    ],
+    "scale_160v40": 1.246
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.979,
+      "rate": 96
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.979,
+      "rate": 96
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.899,
+      "rate": 99
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.011,
+      "rate": 89
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -1,
+      "rate": 16
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.934,
+     "rate": 76
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     45,
+     60,
+     70
+    ],
+    "scale_160v40": 1.556
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.028,
+      "rate": 72
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.013,
+      "rate": 77
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.974,
+      "rate": 78
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.958,
+     "rate": 95
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     78,
+     79,
+     89
+    ],
+    "scale_160v40": 1.141
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.907,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.928,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.888,
+      "rate": 98
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.01,
+      "rate": 98
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.878,
+     "rate": 74
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     51,
+     66,
+     74
+    ],
+    "scale_160v40": 1.451
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 72
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 76
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 1,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "passthrough"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.796,
+     "rate": 98
+    },
+    "PFNv": {
+     "offset": 0,
+     "cen_offset": -0.706,
+     "rate": 17
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     69,
+     82,
+     90
+    ],
+    "scale_160v40": 1.304
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.871,
+      "rate": 101
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.777,
+      "rate": 103
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.706,
+      "rate": 17
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.85,
+      "rate": 100
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.78,
+      "rate": 100
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 0,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.014,
+     "rate": 71
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     49,
+     52,
+     70
+    ],
+    "scale_160v40": 1.429
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.015,
+      "rate": 68
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.028,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -1.067,
+      "rate": 15
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.014,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 0,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.021,
+     "rate": 95
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     65,
+     79,
+     87
+    ],
+    "scale_160v40": 1.338
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.989,
+      "rate": 88
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.989,
+      "rate": 93
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.967,
+      "rate": 90
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.476,
+      "rate": 21
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 94
+     },
+     "PFNv": {
+      "offset": 1,
+      "cen_offset": -0.476,
+      "rate": 21
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 0.5,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.93,
+     "rate": 71
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     49,
+     60,
+     70
+    ],
+    "scale_160v40": 1.429
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 70
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.111,
+      "rate": 72
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.013,
+      "rate": 77
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.882,
+      "rate": 17
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 0.5,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.978,
+     "rate": 93
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     61,
+     75,
+     85
+    ],
+    "scale_160v40": 1.393
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.924,
+      "rate": 92
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.044,
+      "rate": 91
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.022,
+      "rate": 92
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.958,
+      "rate": 95
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 1,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -2.053,
+     "rate": 75
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     56,
+     64,
+     72
+    ],
+    "scale_160v40": 1.286
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.986,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.014,
+      "rate": 74
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.055,
+      "rate": 73
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.901,
+      "rate": 71
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 1,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.979,
+     "rate": 94
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     50,
+     78,
+     92
+    ],
+    "scale_160v40": 1.84
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.91,
+      "rate": 100
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.878,
+      "rate": 98
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.935,
+      "rate": 92
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.949,
+      "rate": 99
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 2,
+    "hdTonic": 0,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.93,
+     "rate": 71
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 5,
+    "4": 5,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     51,
+     65,
+     75
+    ],
+    "scale_160v40": 1.471
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.91,
+      "rate": 78
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.972,
+      "rate": 72
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -2.038,
+      "rate": 78
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.91,
+      "rate": 78
+     },
+     "PFNv": {
+      "offset": 0,
+      "cen_offset": -0.789,
+      "rate": 19
+     }
+    }
+   },
+   "mechanism": null
+  },
+  {
+   "params": {
+    "pfndGain": 2,
+    "pfnvGain": 2,
+    "hdRecur": 2,
+    "hdTonic": 4,
+    "pfnRecur": 1,
+    "hd2pfn": 1
+   },
+   "hypothesis": "passthrough",
+   "arms": {
+    "PFNd": "passthrough",
+    "PFNv": "silent"
+   },
+   "offsets": {
+    "PFNd": {
+     "offset": -1,
+     "cen_offset": -1.859,
+     "rate": 99
+    },
+    "PFNv": {
+     "offset": null,
+     "rate": 0
+    }
+   },
+   "col_sweep": {
+    "1": 4,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": -1,
+    "6": -1,
+    "7": 0,
+    "8": 0
+   },
+   "sweep_rigid": false,
+   "amp": {
+    "profile": [
+     56,
+     81,
+     89
+    ],
+    "scale_160v40": 1.589
+   },
+   "perturbations": {
+    "hd_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.856,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfn_recur_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.856,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "hd2pfn_off": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.844,
+      "rate": 96
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    },
+    "pfnv_silenced": {
+     "PFNd": {
+      "offset": -1,
+      "cen_offset": -1.856,
+      "rate": 97
+     },
+     "PFNv": {
+      "offset": null,
+      "rate": 0
+     }
+    }
+   },
+   "mechanism": null
+  }
+ ],
+ "ranked_experiments": [
+  {
+   "experiment": "amp_scaling",
+   "separation": 0.461,
+   "outcomes": [
+    "silent",
+    "scales",
+    "silent",
+    "scales",
+    "silent",
+    "flat",
+    "silent",
+    "scales",
+    "silent",
+    "flat",
+    "silent",
+    "scales",
+    "scales",
+    "scales",
+    "silent",
+    "flat",
+    "silent",
+    "scales",
+    "silent",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "flat",
+    "scales",
+    "flat",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "flat",
+    "scales",
+    "scales",
+    "scales",
+    "flat",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "flat",
+    "scales",
+    "flat",
+    "scales",
+    "flat",
+    "scales",
+    "flat",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "scales",
+    "flat",
+    "scales",
+    "scales",
+    "scales"
+   ]
+  },
+  {
+   "experiment": "pfnv_silenced",
+   "separation": 0.352,
+   "outcomes": [
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ]
+  },
+  {
+   "experiment": "pfn_recur_off",
+   "separation": 0.336,
+   "outcomes": [
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ]
+  },
+  {
+   "experiment": "hd2pfn_off",
+   "separation": 0.317,
+   "outcomes": [
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ]
+  },
+  {
+   "experiment": "sweep_rigidity",
+   "separation": 0.282,
+   "outcomes": [
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "silent",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped",
+    "warped"
+   ]
+  },
+  {
+   "experiment": "measure_PFNv_offset",
+   "separation": 0.274,
+   "outcomes": [
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "pass",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "pass",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "shift",
+    "shift",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "pass",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "pass",
+    "shift",
+    "silent",
+    "silent",
+    "shift",
+    "shift",
+    "shift",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "pass",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent",
+    "silent"
+   ]
+  },
+  {
+   "experiment": "measure_PFNd_offset",
+   "separation": 0.252,
+   "outcomes": [
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "pass",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "silent",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ]
+  },
+  {
+   "experiment": "hd_recur_off",
+   "separation": 0.249,
+   "outcomes": [
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "shift",
+    "pass",
+    "silent",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "shift",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass",
+    "pass"
+   ]
+  }
+ ]
+}
