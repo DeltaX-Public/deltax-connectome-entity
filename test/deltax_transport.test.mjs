@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import http from 'node:http';
+import { CanonicalDeltaXAdapter } from '../src/deltax/canonical.mjs';
+
+assert.throws(() => new CanonicalDeltaXAdapter({ mode: 'DELTAX', apiUrl: undefined }), /requires DELTAX_API_URL/);
+const stub = new CanonicalDeltaXAdapter({ mode: 'stub' });
+assert.equal(stub.status().executive_source, 'stub');
+assert.equal((await stub.decide({ packet: 'ci' })).executive_source, 'stub');
+let received;
+const server = http.createServer((request, response) => {
+  let body = '';
+  request.on('data', (chunk) => { body += chunk; });
+  request.on('end', () => { received = JSON.parse(body); response.setHeader('content-type', 'application/json'); response.end(JSON.stringify({ decision: 'ALLOW', packet_id: received.packet_id })); });
+});
+await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+const { port } = server.address();
+const canonical = new CanonicalDeltaXAdapter({ mode: 'DELTAX', apiUrl: `http://127.0.0.1:${port}` });
+assert.equal(canonical.status().executive_source, 'canonical_api');
+const decision = await canonical.decide({ packet_id: 'p1', token: 'secret-value', nested: { password: 'pw' } });
+assert.equal(decision.executive_source, 'canonical_api');
+assert.equal(decision.decision, 'ALLOW');
+assert.equal(received.packet_id, 'p1');
+const audit = canonical.exportExperiment();
+assert.equal(audit.packets.filter((event) => event.type === 'deltax_request').length, 1);
+assert.equal(audit.packets.filter((event) => event.type === 'deltax_decision').length, 1);
+const auditText = JSON.stringify(audit);
+assert.equal(auditText.includes('secret-value'), false);
+assert.equal(auditText.includes('pw'), false);
+await new Promise((resolve) => server.close(resolve));
+console.log('DeltaX transport tests: PASS');
