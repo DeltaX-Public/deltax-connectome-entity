@@ -1,0 +1,1457 @@
+{
+  "schema": "causal_intervention.bundle.v1",
+  "checkpoint_id": "causal-intervention-8",
+  "neurocontrol_checkpoint": {
+    "schema": "neurocontrol.checkpoint.v1",
+    "checkpoint_id": "causal-intervention-8",
+    "run_id": "run-stub",
+    "created_by": "EXPERIMENTER",
+    "seeds": {
+      "seed": 8
+    },
+    "objective": {
+      "task": "causal intervention demo"
+    },
+    "substrate": {
+      "membrane": {},
+      "firing": {},
+      "selectedPopulations": {},
+      "sensoryInjection": {},
+      "descendingActivity": {},
+      "modulation": {},
+      "mode": "stub",
+      "perturbations": {
+        "silencedPopulations": [],
+        "excitedPopulations": [],
+        "regionalGain": {},
+        "maskedConnections": [],
+        "sensoryChannels": {}
+      },
+      "actor": "EXPERIMENTER",
+      "authority": "OBSERVATION_ONLY"
+    },
+    "neural_summary_refs": {
+      "membrane": {},
+      "firing": {},
+      "selectedPopulations": {},
+      "sensoryInjection": {},
+      "descendingActivity": {},
+      "modulation": {},
+      "mode": "stub"
+    },
+    "deltax_adapter": {
+      "present": false
+    },
+    "environment": {},
+    "perturbations": {
+      "silencedPopulations": [],
+      "excitedPopulations": [],
+      "regionalGain": {},
+      "maskedConnections": [],
+      "sensoryChannels": {}
+    },
+    "event_ledger": {
+      "position": 1,
+      "events": [
+        {
+          "id": "event-1",
+          "sequence": 0,
+          "type": "neurocontrol_checkpoint",
+          "layer": "experimenter",
+          "actor": "EXPERIMENTER",
+          "payload": {
+            "checkpointId": "causal-intervention-8"
+          }
+        }
+      ]
+    },
+    "reproducibility": {
+      "perturbation_digest": "d0c11a62512ba810",
+      "substrate_digest": "ecdf7447f7e8dfaa"
+    },
+    "path": "/workspaces/deltax-connectome-entity/artifacts/checkpoints/causal-intervention-8.json"
+  },
+  "ledger": {
+    "position": 1,
+    "events": [
+      {
+        "id": "event-1",
+        "sequence": 0,
+        "type": "neurocontrol_checkpoint",
+        "layer": "experimenter",
+        "actor": "EXPERIMENTER",
+        "payload": {
+          "checkpointId": "causal-intervention-8"
+        }
+      }
+    ]
+  },
+  "seeds": {
+    "seed": 8
+  },
+  "config": {
+    "model": "implemented computational model; not a biological memory-trace claim",
+    "phase_a": {
+      "steps": 4,
+      "reason": "fixed checkpoint duration"
+    },
+    "run_steps": 6,
+    "deterministic": true,
+    "perturbation": {
+      "type": "silence_population",
+      "population": "causal_demo_population"
+    }
+  },
+  "executive_source": "stub",
+  "world": {
+    "phase_a": {
+      "mode": "SUBSTRATE_ONLY",
+      "reachedGoal": false,
+      "state": {
+        "body": {
+          "x": 5,
+          "y": 2,
+          "heading": 0,
+          "energy": 16
+        },
+        "energy": 20,
+        "hazard": {
+          "cells": [
+            {
+              "x": 6,
+              "y": 2
+            }
+          ],
+          "cost": 2
+        },
+        "door": {
+          "x": 5,
+          "y": 2,
+          "closed": false,
+          "passage": "central"
+        },
+        "step": 4
+      },
+      "events": [
+        {
+          "id": 1,
+          "timestamp": 1789688174019,
+          "type": "EXPECTED",
+          "state": {
+            "body": {
+              "x": 1,
+              "y": 2,
+              "heading": 0,
+              "energy": 20
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": true,
+              "passage": "central"
+            },
+            "step": 0
+          },
+          "detail": {
+            "fact": "door_state",
+            "value": "closed",
+            "basis": "initial_logged_state"
+          }
+        },
+        {
+          "id": 2,
+          "timestamp": 1789688174019,
+          "type": "OBSERVED",
+          "state": {
+            "body": {
+              "x": 2,
+              "y": 2,
+              "heading": 0,
+              "energy": 19
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": true,
+              "passage": "central"
+            },
+            "step": 1
+          },
+          "detail": {
+            "action": "forward",
+            "result": {
+              "status": "MOVED",
+              "state": {
+                "x": 2,
+                "y": 2,
+                "heading": 0,
+                "energy": 19
+              }
+            },
+            "senses": {
+              "visual_field": {
+                "corridor": "west_corridor",
+                "nearest_obstacle_distance": 2
+              },
+              "proximity": {
+                "nearest_distance": 2
+              },
+              "collision": {
+                "blocked": false
+              },
+              "gradients": {
+                "energy": 20,
+                "hazard": false
+              },
+              "energy": {
+                "remaining": 20
+              },
+              "event": {
+                "last": "EXPECTED"
+              }
+            }
+          }
+        },
+        {
+          "id": 3,
+          "timestamp": 1789688174019,
+          "type": "SUBSTRATE RESPONSE",
+          "state": {
+            "body": {
+              "x": 2,
+              "y": 2,
+              "heading": 0,
+              "energy": 19
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": true,
+              "passage": "central"
+            },
+            "step": 1
+          },
+          "detail": {
+            "action": "forward",
+            "result": "MOVED",
+            "basis": "logged-state"
+          }
+        },
+        {
+          "id": 4,
+          "timestamp": 1789688174019,
+          "type": "OBSERVED",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": true,
+              "passage": "central"
+            },
+            "step": 2
+          },
+          "detail": {
+            "action": "forward",
+            "result": {
+              "status": "MOVED",
+              "state": {
+                "x": 3,
+                "y": 2,
+                "heading": 0,
+                "energy": 18
+              }
+            },
+            "senses": {
+              "visual_field": {
+                "corridor": "west_corridor",
+                "nearest_obstacle_distance": 1
+              },
+              "proximity": {
+                "nearest_distance": 1
+              },
+              "collision": {
+                "blocked": false
+              },
+              "gradients": {
+                "energy": 20,
+                "hazard": false
+              },
+              "energy": {
+                "remaining": 20
+              },
+              "event": {
+                "last": "SUBSTRATE RESPONSE"
+              }
+            }
+          }
+        },
+        {
+          "id": 5,
+          "timestamp": 1789688174019,
+          "type": "SUBSTRATE RESPONSE",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": true,
+              "passage": "central"
+            },
+            "step": 2
+          },
+          "detail": {
+            "action": "forward",
+            "result": "MOVED",
+            "basis": "logged-state"
+          }
+        },
+        {
+          "id": 6,
+          "timestamp": 1789688174020,
+          "type": "WORLD_MUTATION",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "source": "external",
+            "timestamp": 1789688174019,
+            "change": {
+              "door_closed": false
+            }
+          }
+        },
+        {
+          "id": 7,
+          "timestamp": 1789688174020,
+          "type": "OBSERVED",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "sourceEvent": 6,
+            "observation": {
+              "door_state": "open"
+            }
+          }
+        },
+        {
+          "id": 8,
+          "timestamp": 1789688174020,
+          "type": "CONTRADICTION",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "sourceEvents": [
+              1,
+              6
+            ],
+            "expected": "closed",
+            "observed": "open"
+          }
+        },
+        {
+          "id": 9,
+          "timestamp": 1789688174020,
+          "type": "EXECUTIVE RESPONSE",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "sourceEvent": 6,
+            "response": "update_policy_pending"
+          }
+        },
+        {
+          "id": 10,
+          "timestamp": 1789688174020,
+          "type": "SUBSTRATE RESPONSE",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "sourceEvent": 6,
+            "response": "recurrent_state_update_pending"
+          }
+        },
+        {
+          "id": 11,
+          "timestamp": 1789688174020,
+          "type": "NEW ACTION",
+          "state": {
+            "body": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "sourceEvent": 6,
+            "action": "forward",
+            "basis": "logged-state"
+          }
+        },
+        {
+          "id": 12,
+          "timestamp": 1789688174020,
+          "type": "OBSERVED",
+          "state": {
+            "body": {
+              "x": 4,
+              "y": 2,
+              "heading": 0,
+              "energy": 17
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "action": "forward",
+            "result": {
+              "status": "MOVED",
+              "state": {
+                "x": 4,
+                "y": 2,
+                "heading": 0,
+                "energy": 17
+              }
+            },
+            "senses": {
+              "visual_field": {
+                "corridor": "west_corridor",
+                "nearest_obstacle_distance": 1
+              },
+              "proximity": {
+                "nearest_distance": 1
+              },
+              "collision": {
+                "blocked": false
+              },
+              "gradients": {
+                "energy": 20,
+                "hazard": false
+              },
+              "energy": {
+                "remaining": 20
+              },
+              "event": {
+                "last": "NEW ACTION"
+              }
+            }
+          }
+        },
+        {
+          "id": 13,
+          "timestamp": 1789688174020,
+          "type": "SUBSTRATE RESPONSE",
+          "state": {
+            "body": {
+              "x": 4,
+              "y": 2,
+              "heading": 0,
+              "energy": 17
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 3
+          },
+          "detail": {
+            "action": "forward",
+            "result": "MOVED",
+            "basis": "logged-state"
+          }
+        },
+        {
+          "id": 14,
+          "timestamp": 1789688174020,
+          "type": "OBSERVED",
+          "state": {
+            "body": {
+              "x": 5,
+              "y": 2,
+              "heading": 0,
+              "energy": 16
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 4
+          },
+          "detail": {
+            "action": "forward",
+            "result": {
+              "status": "MOVED",
+              "state": {
+                "x": 5,
+                "y": 2,
+                "heading": 0,
+                "energy": 16
+              }
+            },
+            "senses": {
+              "visual_field": {
+                "corridor": "east_corridor",
+                "nearest_obstacle_distance": 0
+              },
+              "proximity": {
+                "nearest_distance": 0
+              },
+              "collision": {
+                "blocked": false
+              },
+              "gradients": {
+                "energy": 20,
+                "hazard": false
+              },
+              "energy": {
+                "remaining": 20
+              },
+              "event": {
+                "last": "SUBSTRATE RESPONSE"
+              }
+            }
+          }
+        },
+        {
+          "id": 15,
+          "timestamp": 1789688174020,
+          "type": "SUBSTRATE RESPONSE",
+          "state": {
+            "body": {
+              "x": 5,
+              "y": 2,
+              "heading": 0,
+              "energy": 16
+            },
+            "energy": 20,
+            "hazard": {
+              "cells": [
+                {
+                  "x": 6,
+                  "y": 2
+                }
+              ],
+              "cost": 2
+            },
+            "door": {
+              "x": 5,
+              "y": 2,
+              "closed": false,
+              "passage": "central"
+            },
+            "step": 4
+          },
+          "detail": {
+            "action": "forward",
+            "result": "MOVED",
+            "basis": "logged-state"
+          }
+        }
+      ]
+    },
+    "state": {
+      "body": {
+        "x": 5,
+        "y": 2,
+        "heading": 0,
+        "energy": 16
+      },
+      "energy": 20,
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "step": 4
+    },
+    "events": [
+      {
+        "id": 1,
+        "timestamp": 1789688174019,
+        "type": "EXPECTED",
+        "state": {
+          "body": {
+            "x": 1,
+            "y": 2,
+            "heading": 0,
+            "energy": 20
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": true,
+            "passage": "central"
+          },
+          "step": 0
+        },
+        "detail": {
+          "fact": "door_state",
+          "value": "closed",
+          "basis": "initial_logged_state"
+        }
+      },
+      {
+        "id": 2,
+        "timestamp": 1789688174019,
+        "type": "OBSERVED",
+        "state": {
+          "body": {
+            "x": 2,
+            "y": 2,
+            "heading": 0,
+            "energy": 19
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": true,
+            "passage": "central"
+          },
+          "step": 1
+        },
+        "detail": {
+          "action": "forward",
+          "result": {
+            "status": "MOVED",
+            "state": {
+              "x": 2,
+              "y": 2,
+              "heading": 0,
+              "energy": 19
+            }
+          },
+          "senses": {
+            "visual_field": {
+              "corridor": "west_corridor",
+              "nearest_obstacle_distance": 2
+            },
+            "proximity": {
+              "nearest_distance": 2
+            },
+            "collision": {
+              "blocked": false
+            },
+            "gradients": {
+              "energy": 20,
+              "hazard": false
+            },
+            "energy": {
+              "remaining": 20
+            },
+            "event": {
+              "last": "EXPECTED"
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "timestamp": 1789688174019,
+        "type": "SUBSTRATE RESPONSE",
+        "state": {
+          "body": {
+            "x": 2,
+            "y": 2,
+            "heading": 0,
+            "energy": 19
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": true,
+            "passage": "central"
+          },
+          "step": 1
+        },
+        "detail": {
+          "action": "forward",
+          "result": "MOVED",
+          "basis": "logged-state"
+        }
+      },
+      {
+        "id": 4,
+        "timestamp": 1789688174019,
+        "type": "OBSERVED",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": true,
+            "passage": "central"
+          },
+          "step": 2
+        },
+        "detail": {
+          "action": "forward",
+          "result": {
+            "status": "MOVED",
+            "state": {
+              "x": 3,
+              "y": 2,
+              "heading": 0,
+              "energy": 18
+            }
+          },
+          "senses": {
+            "visual_field": {
+              "corridor": "west_corridor",
+              "nearest_obstacle_distance": 1
+            },
+            "proximity": {
+              "nearest_distance": 1
+            },
+            "collision": {
+              "blocked": false
+            },
+            "gradients": {
+              "energy": 20,
+              "hazard": false
+            },
+            "energy": {
+              "remaining": 20
+            },
+            "event": {
+              "last": "SUBSTRATE RESPONSE"
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "timestamp": 1789688174019,
+        "type": "SUBSTRATE RESPONSE",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": true,
+            "passage": "central"
+          },
+          "step": 2
+        },
+        "detail": {
+          "action": "forward",
+          "result": "MOVED",
+          "basis": "logged-state"
+        }
+      },
+      {
+        "id": 6,
+        "timestamp": 1789688174020,
+        "type": "WORLD_MUTATION",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "source": "external",
+          "timestamp": 1789688174019,
+          "change": {
+            "door_closed": false
+          }
+        }
+      },
+      {
+        "id": 7,
+        "timestamp": 1789688174020,
+        "type": "OBSERVED",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "sourceEvent": 6,
+          "observation": {
+            "door_state": "open"
+          }
+        }
+      },
+      {
+        "id": 8,
+        "timestamp": 1789688174020,
+        "type": "CONTRADICTION",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "sourceEvents": [
+            1,
+            6
+          ],
+          "expected": "closed",
+          "observed": "open"
+        }
+      },
+      {
+        "id": 9,
+        "timestamp": 1789688174020,
+        "type": "EXECUTIVE RESPONSE",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "sourceEvent": 6,
+          "response": "update_policy_pending"
+        }
+      },
+      {
+        "id": 10,
+        "timestamp": 1789688174020,
+        "type": "SUBSTRATE RESPONSE",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "sourceEvent": 6,
+          "response": "recurrent_state_update_pending"
+        }
+      },
+      {
+        "id": 11,
+        "timestamp": 1789688174020,
+        "type": "NEW ACTION",
+        "state": {
+          "body": {
+            "x": 3,
+            "y": 2,
+            "heading": 0,
+            "energy": 18
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "sourceEvent": 6,
+          "action": "forward",
+          "basis": "logged-state"
+        }
+      },
+      {
+        "id": 12,
+        "timestamp": 1789688174020,
+        "type": "OBSERVED",
+        "state": {
+          "body": {
+            "x": 4,
+            "y": 2,
+            "heading": 0,
+            "energy": 17
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "action": "forward",
+          "result": {
+            "status": "MOVED",
+            "state": {
+              "x": 4,
+              "y": 2,
+              "heading": 0,
+              "energy": 17
+            }
+          },
+          "senses": {
+            "visual_field": {
+              "corridor": "west_corridor",
+              "nearest_obstacle_distance": 1
+            },
+            "proximity": {
+              "nearest_distance": 1
+            },
+            "collision": {
+              "blocked": false
+            },
+            "gradients": {
+              "energy": 20,
+              "hazard": false
+            },
+            "energy": {
+              "remaining": 20
+            },
+            "event": {
+              "last": "NEW ACTION"
+            }
+          }
+        }
+      },
+      {
+        "id": 13,
+        "timestamp": 1789688174020,
+        "type": "SUBSTRATE RESPONSE",
+        "state": {
+          "body": {
+            "x": 4,
+            "y": 2,
+            "heading": 0,
+            "energy": 17
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 3
+        },
+        "detail": {
+          "action": "forward",
+          "result": "MOVED",
+          "basis": "logged-state"
+        }
+      },
+      {
+        "id": 14,
+        "timestamp": 1789688174020,
+        "type": "OBSERVED",
+        "state": {
+          "body": {
+            "x": 5,
+            "y": 2,
+            "heading": 0,
+            "energy": 16
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 4
+        },
+        "detail": {
+          "action": "forward",
+          "result": {
+            "status": "MOVED",
+            "state": {
+              "x": 5,
+              "y": 2,
+              "heading": 0,
+              "energy": 16
+            }
+          },
+          "senses": {
+            "visual_field": {
+              "corridor": "east_corridor",
+              "nearest_obstacle_distance": 0
+            },
+            "proximity": {
+              "nearest_distance": 0
+            },
+            "collision": {
+              "blocked": false
+            },
+            "gradients": {
+              "energy": 20,
+              "hazard": false
+            },
+            "energy": {
+              "remaining": 20
+            },
+            "event": {
+              "last": "SUBSTRATE RESPONSE"
+            }
+          }
+        }
+      },
+      {
+        "id": 15,
+        "timestamp": 1789688174020,
+        "type": "SUBSTRATE RESPONSE",
+        "state": {
+          "body": {
+            "x": 5,
+            "y": 2,
+            "heading": 0,
+            "energy": 16
+          },
+          "energy": 20,
+          "hazard": {
+            "cells": [
+              {
+                "x": 6,
+                "y": 2
+              }
+            ],
+            "cost": 2
+          },
+          "door": {
+            "x": 5,
+            "y": 2,
+            "closed": false,
+            "passage": "central"
+          },
+          "step": 4
+        },
+        "detail": {
+          "action": "forward",
+          "result": "MOVED",
+          "basis": "logged-state"
+        }
+      }
+    ]
+  },
+  "disclaimer": "Causal intervention on the implemented computational model; no biological memory trace is inferred."
+}

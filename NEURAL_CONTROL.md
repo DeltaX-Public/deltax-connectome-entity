@@ -11,3 +11,7 @@
 - `compare(checkpoint, { interventions })` replays CONTROL and INTERVENTION from the same checkpoint and writes machine-readable `<checkpoint>-compare.json`.
 
 Checkpoint, restore, perturb, run, and compare events use the experimenter ledger and are labeled `actor: EXPERIMENTER`. Default replay is an explicitly marked deterministic stub; no proprietary neural math is implemented.
+
+## Phase 8 causal intervention and replay
+
+The demo uses the existing neurocontrol checkpoint/restore and perturbation APIs. The checkpoint bundle carries the neurocontrol checkpoint, event ledger, seeds, configuration, Broken World state/events, and `executive_source`. CONTROL, INTERVENTION, and RESTORED runs are compared packet-by-packet. Perturbations are EXPERIMENTER authority; executive packets remain DeltaX authority, and substrate proposals are exported before DeltaX at every intervention step. `replay_run.mjs` is deterministic for the stub path. A `canonical_api` replay is only possible from recorded packets when the remote API is unavailable.
