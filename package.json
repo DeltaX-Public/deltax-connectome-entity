@@ -4,6 +4,11 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/*.mjs",
+    "verify:sovereign": "node --test test/sovereign_acceptance.test.mjs",
+    "battery:smoke": "node scripts/battery.mjs --seeds=5",
+    "battery:small": "node scripts/battery.mjs --seeds=25",
+    "battery:main": "node scripts/battery.mjs --seeds=100",
+    "stress:local": "node scripts/stress.mjs",
     "demo:causal": "node scripts/causal_intervention_demo.mjs",
     "demo:entity": "node scripts/entity_demo_hint.mjs",
     "demo:local-runtime": "node scripts/local_runtime_smoke.mjs",

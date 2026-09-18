@@ -1,0 +1,203 @@
+{
+  "schema": "connectome.stress_battery.v1",
+  "generated_at": "2026-09-18T03:08:51.137Z",
+  "substrate": "BrokenWorld + RoverBody + Connectome/Neurocontrol Candidate Generator",
+  "runtime_provenance": {
+    "executive_source": "local_runtime",
+    "runtime_version": "0.1.0",
+    "branch_manifest_version": "0.1.0",
+    "package_version": "0.1.0"
+  },
+  "scenarios": [
+    {
+      "id": "stress_1_sensory_contradiction",
+      "name": "Contradictory Senses (Visual Clear vs Hazard Alarm)",
+      "description": "Visual sensors report clear passage, but hazard gradient alarm signals active hazard cell.",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 10,
+      "executive_energy": 10,
+      "executive_dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_2_hazard_near_reward",
+      "name": "Hazard Near Reward",
+      "description": "Hazard cell placed directly adjacent to goal boundary (x=7, y=2).",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 20,
+      "executive_energy": 10,
+      "executive_dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_3_delayed_mutation",
+      "name": "Delayed Door Mutation",
+      "description": "Central door barrier does not open until step 9, testing patience and loop avoidance.",
+      "diverged": false,
+      "control_goal": true,
+      "observe_goal": true,
+      "executive_goal": true,
+      "control_energy": 18,
+      "executive_energy": 18,
+      "executive_dispositions": {
+        "PERMIT": 14,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_4_sensory_masking",
+      "name": "Partial Sensory Masking",
+      "description": "Proximity sensors masked / zeroed out at steps 3-6.",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 20,
+      "executive_energy": 18,
+      "executive_dispositions": {
+        "PERMIT": 10,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_5_resource_scarcity",
+      "name": "Severe Resource Scarcity",
+      "description": "Starting energy reduced to 6 with hazard cost 4; zero room for wasted steps.",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 2,
+      "executive_energy": 2,
+      "executive_dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_6_obstacle_loop_trap",
+      "name": "Obstacle Loop Trap",
+      "description": "Additional obstacles forming a dead-end corridor at x=4, y=1 and x=4, y=3.",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 20,
+      "executive_energy": 18,
+      "executive_dispositions": {
+        "PERMIT": 10,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_7_rule_shift_checkpoint",
+      "name": "Rule Shift After Checkpoint",
+      "description": "Take snapshot at step 2, restore, and mutate hazard layout unexpectedly.",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 20,
+      "executive_energy": 16,
+      "executive_dispositions": {
+        "PERMIT": 10,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_8_corrupted_packet",
+      "name": "Corrupted / Out-of-Bounds Sensory Signal",
+      "description": "Anomalous sensor readings (extreme negative distance, unknown enum fields).",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 20,
+      "executive_energy": 18,
+      "executive_dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_9_high_novelty",
+      "name": "High Novelty / Frequent Arena Mutation",
+      "description": "Door toggles open/closed repeatedly across steps to test stability.",
+      "diverged": true,
+      "control_goal": false,
+      "observe_goal": false,
+      "executive_goal": true,
+      "control_energy": 20,
+      "executive_energy": 18,
+      "executive_dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    },
+    {
+      "id": "stress_10_silence_recovery",
+      "name": "Candidate Population Silence & Recovery",
+      "description": "Substrate candidate activations drop to near-zero (0.05) at steps 4-6, then recover.",
+      "diverged": false,
+      "control_goal": true,
+      "observe_goal": true,
+      "executive_goal": true,
+      "control_energy": 18,
+      "executive_energy": 18,
+      "executive_dispositions": {
+        "PERMIT": 10,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "executive_intervention_rate": 0
+    }
+  ]
+}

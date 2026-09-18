@@ -36,8 +36,11 @@ const pushFrame = (note, extra = {}) => {
 
 pushFrame('start', { phase: 'expect_door_closed' });
 
+const exec = process.env.DELTAX_LOCAL_RUNTIME_CMD
+  ? createExecutive({ mode: 'local_runtime', command: process.env.DELTAX_LOCAL_RUNTIME_CMD })
+  : null;
 let decision = null;
-let executive_source = 'stub';
+let executive_source = exec ? 'local_runtime' : 'stub';
 
 for (let i = 0; i < actions.length; i += 1) {
   const action = actions[i];
@@ -72,11 +75,9 @@ for (let i = 0; i < actions.length; i += 1) {
       available_executive_actions: ['PERMIT', 'VETO', 'MODULATE', 'DEFER', 'ESCALATE'],
     };
 
-    if (process.env.DELTAX_LOCAL_RUNTIME_CMD) {
-      const exec = createExecutive({ mode: 'local_runtime' });
+    if (exec) {
       decision = await exec.decide(packet);
       executive_source = 'local_runtime';
-      await exec.transport?.close?.();
     } else {
       decision = {
         disposition: 'PERMIT',
@@ -113,6 +114,11 @@ for (let i = 0; i < actions.length; i += 1) {
     });
   }
 }
+
+if (exec) {
+  await exec.transport?.close?.();
+}
+
 
 const artifact = {
   schema: 'entity.observatory.playback.v1',

@@ -1,0 +1,4831 @@
+{
+  "schema": "connectome.validation_battery.v1",
+  "generated_at": "2026-09-18T03:10:49.613Z",
+  "substrate": "BrokenWorld + RoverBody + Connectome/Neurocontrol Candidate Generator",
+  "runtime_provenance": {
+    "executive_source": "local_runtime",
+    "runtime_version": "0.1.0",
+    "branch_manifest_version": "0.1.0",
+    "package_version": "0.1.0"
+  },
+  "aggregate": {
+    "total_seeds": 100,
+    "seed_range": "100..199",
+    "divergence_rate": 0.5,
+    "goal_completion": {
+      "CONTROL": 0.5,
+      "EXECUTIVE": 1
+    },
+    "mean_final_energy": {
+      "CONTROL": 19,
+      "EXECUTIVE": 18
+    },
+    "executive_governance": {
+      "mean_intervention_rate": 0,
+      "total_vetoes": 0,
+      "total_modulations": 0
+    }
+  },
+  "runs": [
+    {
+      "seed": 100,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 101,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 102,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 103,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 104,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 105,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 106,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 107,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 108,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 109,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 110,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 111,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 112,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 113,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 114,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 115,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 116,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 117,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 118,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 119,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 120,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 121,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 122,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 123,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 124,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 125,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 126,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 127,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 128,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 129,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 130,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 131,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 132,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 133,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 134,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 135,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 136,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 137,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 138,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 139,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 140,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 141,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 142,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 143,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 144,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 145,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 146,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 147,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 148,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 149,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 150,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 151,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 152,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 153,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 154,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 155,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 156,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 157,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 158,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 159,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 160,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 161,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 162,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 163,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 164,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 165,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 166,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 167,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 168,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 169,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 170,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 171,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 172,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 173,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 174,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 175,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 176,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 177,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 178,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 179,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 180,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 181,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 182,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 183,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 184,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 185,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 186,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 187,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 18,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 188,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 189,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 22,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 190,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 191,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 17,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 192,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 193,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 21,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 194,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    },
+    {
+      "seed": 195,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 16,
+        "EXECUTIVE": 16
+      }
+    },
+    {
+      "seed": 196,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 17
+      }
+    },
+    {
+      "seed": 197,
+      "diverged": true,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop",
+        "stop"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": false,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 18
+      }
+    },
+    {
+      "seed": 198,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 19,
+        "EXECUTIVE": 19
+      }
+    },
+    {
+      "seed": 199,
+      "diverged": false,
+      "control_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "exec_actions": [
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward",
+        "forward"
+      ],
+      "dispositions": {
+        "PERMIT": 12,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "reached_goal": {
+        "CONTROL": true,
+        "EXECUTIVE": true
+      },
+      "final_energy": {
+        "CONTROL": 20,
+        "EXECUTIVE": 20
+      }
+    }
+  ]
+}
