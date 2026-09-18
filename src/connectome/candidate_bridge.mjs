@@ -36,7 +36,7 @@ export class ConnectomeCandidateBridge {
       id: `cand_fwd_${tick}`,
       substrate_candidate_id: `sub_dn_forward_${tick}`,
       action_class: "locomotion_forward",
-      activation_strength: Math.max(0.05, Math.min(1.0, fwdStrength || 0.75)),
+      activation_strength: Math.max(0.05, Math.min(1.0, fwdStrength)),
       originating_population: fwd.types,
       originating_neuron_indices: fwd.neurons.map((n) => n.index),
       raw_activity_measure: {
@@ -74,7 +74,7 @@ export class ConnectomeCandidateBridge {
       id: `cand_turn_left_${tick}`,
       substrate_candidate_id: `sub_dn_turn_left_${tick}`,
       action_class: "turn_left",
-      activation_strength: Math.max(0.05, Math.min(1.0, turnLStrength || 0.25)),
+      activation_strength: Math.max(0.05, Math.min(1.0, turnLStrength)),
       originating_population: turnL.types,
       originating_neuron_indices: turnL.neurons.map((n) => n.index),
       raw_activity_measure: {
@@ -94,7 +94,7 @@ export class ConnectomeCandidateBridge {
       id: `cand_turn_right_${tick}`,
       substrate_candidate_id: `sub_dn_turn_right_${tick}`,
       action_class: "turn_right",
-      activation_strength: Math.max(0.05, Math.min(1.0, turnRStrength || 0.25)),
+      activation_strength: Math.max(0.05, Math.min(1.0, turnRStrength)),
       originating_population: turnR.types,
       originating_neuron_indices: turnR.neurons.map((n) => n.index),
       raw_activity_measure: {

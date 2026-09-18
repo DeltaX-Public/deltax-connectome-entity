@@ -113,7 +113,7 @@ export class ConnectomeRuntime {
     // Apply excited population boosts
     for (const [idx, hz] of this.excitedNeurons.entries()) {
       if (!this.silencedNeurons.has(idx)) {
-        this.net.addDrive([idx], hz);
+        this.net.setRate([idx], hz);
       }
     }
 
@@ -191,7 +191,7 @@ export class ConnectomeRuntime {
     if (typeof targets === "string") {
       indices = this.data.byType(targets, 0);
     } else if (Array.isArray(targets)) {
-      indices = targets;
+      indices = targets.flatMap((t) => (typeof t === "string" ? this.data.byType(t, 0) : [t]));
     }
 
     for (const i of indices) {
@@ -221,7 +221,7 @@ export class ConnectomeRuntime {
     if (typeof targets === "string") {
       indices = this.data.byType(targets, 0);
     } else if (Array.isArray(targets)) {
-      indices = targets;
+      indices = targets.flatMap((t) => (typeof t === "string" ? this.data.byType(t, 0) : [t]));
     }
 
     for (const i of indices) {

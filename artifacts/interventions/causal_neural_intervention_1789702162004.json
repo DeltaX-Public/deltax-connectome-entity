@@ -1,0 +1,123 @@
+{
+  "schema": "connectome.causal_intervention.v1",
+  "generated_at": "2026-09-18T03:29:22.004Z",
+  "seed": 105,
+  "checkpoint_step": 2,
+  "perturbation": {
+    "type": "optogenetic_silencing",
+    "target_populations": [
+      "DNg100",
+      "DNg97",
+      "DNp09"
+    ],
+    "description": "Selective bilateral silencing of primary descending locomotor command neurons"
+  },
+  "comparison": {
+    "diverged_actions": true,
+    "diverged_positions": true,
+    "branch_a_intact": [
+      {
+        "step": 3,
+        "dn_forward_hz": 1.046,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "forward",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "step": 4,
+        "dn_forward_hz": 2.155,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "forward",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "step": 5,
+        "dn_forward_hz": 4.008,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "forward",
+        "pos": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "step": 6,
+        "dn_forward_hz": 5.997,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "forward",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      }
+    ],
+    "branch_b_perturbed": [
+      {
+        "step": 3,
+        "dn_forward_hz": 0.814,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "stop",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "step": 4,
+        "dn_forward_hz": 2.023,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "stop",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "step": 5,
+        "dn_forward_hz": 3.931,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "stop",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "step": 6,
+        "dn_forward_hz": 5.918,
+        "dn_escape_hz": 0,
+        "top_candidate": "halt",
+        "disposition": "PERMIT",
+        "action": "stop",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      }
+    ]
+  },
+  "synthesis": {
+    "causal_effect_demonstrated": true,
+    "summary": "Targeted neural silencing of descending locomotor command neurons causally suppressed forward candidate activation, causing the entity to halt rather than transit through the open door."
+  }
+}
