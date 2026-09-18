@@ -32,3 +32,20 @@ The causal-intervention harness demonstrates causal intervention on this impleme
 ## Entity Observatory scope (phase 10)
 
 The Entity Observatory is a polished, secondary view over available harness artifacts. It is not a full connectome viewer and does not claim to expose internal DeltaX reasoning. SUBSTRATE values are summaries only. DELTAX values are displayed from ledger fields when available, with `executive_source` explicitly shown as `canonical_api`, `stub`, or `disabled`; stub output is not genuine DeltaX. The experiment controls are an honest local observatory surface and export path; headless harness artifacts and tests remain authoritative.
+
+## Phase II Causal Integrity Pass & Claim Boundaries
+
+1. **Superseded Initial Claims (`superseded_pre_integrity_pass`):**  
+   Initial reports claiming +100.0% goal completion lift on seeds 200..224 were achieved with post-DeltaX actuator shortcuts (`MODULATE -> forward`, `PERMIT -> forward`, `blocked -> left`). Following rigorous audit, all actuator shortcuts were excised, and initial 100% lift claims are formally designated as `superseded_pre_integrity_pass`.
+
+2. **Strict Causal Sequence:**  
+   Under the corrected causal architecture, every physical action executed by the body must strictly originate from an explicit substrate candidate present in the pre-evaluation candidate field (`connectome activity -> substrate candidates -> DeltaX governance -> permitted candidate set -> candidate selection -> actuator`).
+
+3. **Candidate Provenance Typing:**  
+   Every candidate is explicitly typed as `MEASURED_NEURAL` (direct descending neuron readouts), `DERIVED_NEURAL` (antagonistic balance/posture derivation), or `FALLBACK` (`cand_safe_noop`). No candidate may be injected or selected outside this set.
+
+4. **Biological Multi-Synaptic Latency:**  
+   In the intact 165,122-neuron connectome graph, sensory signals require 4–5 simulation steps (~40–50 ms) to traverse sensory afferents and intermediate interneurons before descending locomotor command neurons (`DNg100/97/p09`) overcome postural balance suppression (`halt`). Within a 12-step budget, the intact biological entity naturally pauses before walking forward, reaching $x=7$ or $x=8$ (near goal) before time expires.
+
+5. **Degree-Preserving Circuit Scrambling Control:**  
+   The `SHUFFLED_CONNECTOME` control preserves exact in-degrees, out-degrees, and weight distributions while swapping 100% of synaptic edges. Because randomized connections bypass multi-layer interneuron delay lines, sensory inputs immediately trigger descending motor neurons from step 1, sprinting forward blindly without biological latency.
