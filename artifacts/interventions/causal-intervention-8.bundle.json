@@ -69,7 +69,7 @@
       "perturbation_digest": "d0c11a62512ba810",
       "substrate_digest": "ecdf7447f7e8dfaa"
     },
-    "path": "/workspaces/deltax-connectome-entity/artifacts/checkpoints/causal-intervention-8.json"
+    "path": "/Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/checkpoints/causal-intervention-8.json"
   },
   "ledger": {
     "position": 1,
@@ -135,7 +135,7 @@
       "events": [
         {
           "id": 1,
-          "timestamp": 1789688174019,
+          "timestamp": 1789695803322,
           "type": "EXPECTED",
           "state": {
             "body": {
@@ -170,7 +170,7 @@
         },
         {
           "id": 2,
-          "timestamp": 1789688174019,
+          "timestamp": 1789695803322,
           "type": "OBSERVED",
           "state": {
             "body": {
@@ -234,7 +234,7 @@
         },
         {
           "id": 3,
-          "timestamp": 1789688174019,
+          "timestamp": 1789695803322,
           "type": "SUBSTRATE RESPONSE",
           "state": {
             "body": {
@@ -269,7 +269,7 @@
         },
         {
           "id": 4,
-          "timestamp": 1789688174019,
+          "timestamp": 1789695803322,
           "type": "OBSERVED",
           "state": {
             "body": {
@@ -333,7 +333,7 @@
         },
         {
           "id": 5,
-          "timestamp": 1789688174019,
+          "timestamp": 1789695803322,
           "type": "SUBSTRATE RESPONSE",
           "state": {
             "body": {
@@ -368,7 +368,7 @@
         },
         {
           "id": 6,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "WORLD_MUTATION",
           "state": {
             "body": {
@@ -397,7 +397,7 @@
           },
           "detail": {
             "source": "external",
-            "timestamp": 1789688174019,
+            "timestamp": 1789695803322,
             "change": {
               "door_closed": false
             }
@@ -405,7 +405,7 @@
         },
         {
           "id": 7,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "OBSERVED",
           "state": {
             "body": {
@@ -441,7 +441,7 @@
         },
         {
           "id": 8,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "CONTRADICTION",
           "state": {
             "body": {
@@ -479,7 +479,7 @@
         },
         {
           "id": 9,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "EXECUTIVE RESPONSE",
           "state": {
             "body": {
@@ -513,7 +513,7 @@
         },
         {
           "id": 10,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "SUBSTRATE RESPONSE",
           "state": {
             "body": {
@@ -547,7 +547,7 @@
         },
         {
           "id": 11,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "NEW ACTION",
           "state": {
             "body": {
@@ -582,7 +582,7 @@
         },
         {
           "id": 12,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "OBSERVED",
           "state": {
             "body": {
@@ -646,7 +646,7 @@
         },
         {
           "id": 13,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "SUBSTRATE RESPONSE",
           "state": {
             "body": {
@@ -681,7 +681,7 @@
         },
         {
           "id": 14,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "OBSERVED",
           "state": {
             "body": {
@@ -745,7 +745,7 @@
         },
         {
           "id": 15,
-          "timestamp": 1789688174020,
+          "timestamp": 1789695803322,
           "type": "SUBSTRATE RESPONSE",
           "state": {
             "body": {
@@ -808,7 +808,7 @@
     "events": [
       {
         "id": 1,
-        "timestamp": 1789688174019,
+        "timestamp": 1789695803322,
         "type": "EXPECTED",
         "state": {
           "body": {
@@ -843,7 +843,7 @@
       },
       {
         "id": 2,
-        "timestamp": 1789688174019,
+        "timestamp": 1789695803322,
         "type": "OBSERVED",
         "state": {
           "body": {
@@ -907,7 +907,7 @@
       },
       {
         "id": 3,
-        "timestamp": 1789688174019,
+        "timestamp": 1789695803322,
         "type": "SUBSTRATE RESPONSE",
         "state": {
           "body": {
@@ -942,7 +942,7 @@
       },
       {
         "id": 4,
-        "timestamp": 1789688174019,
+        "timestamp": 1789695803322,
         "type": "OBSERVED",
         "state": {
           "body": {
@@ -1006,7 +1006,7 @@
       },
       {
         "id": 5,
-        "timestamp": 1789688174019,
+        "timestamp": 1789695803322,
         "type": "SUBSTRATE RESPONSE",
         "state": {
           "body": {
@@ -1041,7 +1041,7 @@
       },
       {
         "id": 6,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "WORLD_MUTATION",
         "state": {
           "body": {
@@ -1070,7 +1070,7 @@
         },
         "detail": {
           "source": "external",
-          "timestamp": 1789688174019,
+          "timestamp": 1789695803322,
           "change": {
             "door_closed": false
           }
@@ -1078,7 +1078,7 @@
       },
       {
         "id": 7,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "OBSERVED",
         "state": {
           "body": {
@@ -1114,7 +1114,7 @@
       },
       {
         "id": 8,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "CONTRADICTION",
         "state": {
           "body": {
@@ -1152,7 +1152,7 @@
       },
       {
         "id": 9,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "EXECUTIVE RESPONSE",
         "state": {
           "body": {
@@ -1186,7 +1186,7 @@
       },
       {
         "id": 10,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "SUBSTRATE RESPONSE",
         "state": {
           "body": {
@@ -1220,7 +1220,7 @@
       },
       {
         "id": 11,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "NEW ACTION",
         "state": {
           "body": {
@@ -1255,7 +1255,7 @@
       },
       {
         "id": 12,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "OBSERVED",
         "state": {
           "body": {
@@ -1319,7 +1319,7 @@
       },
       {
         "id": 13,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "SUBSTRATE RESPONSE",
         "state": {
           "body": {
@@ -1354,7 +1354,7 @@
       },
       {
         "id": 14,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "OBSERVED",
         "state": {
           "body": {
@@ -1418,7 +1418,7 @@
       },
       {
         "id": 15,
-        "timestamp": 1789688174020,
+        "timestamp": 1789695803322,
         "type": "SUBSTRATE RESPONSE",
         "state": {
           "body": {
