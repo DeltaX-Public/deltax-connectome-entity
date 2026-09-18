@@ -28,3 +28,7 @@ This branch adds a declarative sensory/action map, a minimal rover body, and a l
 ## Phase 8 claim boundary
 
 The causal-intervention harness demonstrates causal intervention on this implemented computational model only. It does **not** demonstrate, identify, or claim biological memory traces, biological adaptation, or organism-level causality. The stub path reports measurable packet divergence under population silence and recovery after restore; these are computational replay results. DeltaX remains the executive authority and the substrate is limited to proposals recorded before DeltaX.
+
+## Entity Observatory scope (phase 10)
+
+The Entity Observatory is a polished, secondary view over available harness artifacts. It is not a full connectome viewer and does not claim to expose internal DeltaX reasoning. SUBSTRATE values are summaries only. DELTAX values are displayed from ledger fields when available, with `executive_source` explicitly shown as `canonical_api`, `stub`, or `disabled`; stub output is not genuine DeltaX. The experiment controls are an honest local observatory surface and export path; headless harness artifacts and tests remain authoritative.
