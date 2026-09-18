@@ -27,6 +27,7 @@ export class ConnectomeClosedLoop {
     this.condition = opts.condition ?? "EXECUTIVE"; // CONTROL | OBSERVE | EXECUTIVE | SHAM | SHUFFLED_CONNECTOME
     this.steps = opts.steps ?? 12;
     this.runId = opts.runId ?? `connectome_${this.condition.toLowerCase()}_${this.seed}_${Date.now()}`;
+    this.ablateContradictions = opts.ablateContradictions ?? false;
     this.command = opts.command || process.env.DELTAX_LOCAL_RUNTIME_CMD;
 
     // 1. World instance
@@ -118,21 +119,23 @@ export class ConnectomeClosedLoop {
       let decision = null;
 
       const detectedContradictions = [];
-      if (st.energy < 3) {
-        detectedContradictions.push({
-          type: "energy_depletion",
-          severity: "high",
-          remaining: st.energy,
-        });
-        contradictionEvents++;
-      }
-      if (isHazard) {
-        detectedContradictions.push({
-          type: "hazard_proximity",
-          severity: "critical",
-          loc: { x: st.body.x, y: st.body.y },
-        });
-        contradictionEvents++;
+      if (!this.ablateContradictions) {
+        if (st.energy < 3) {
+          detectedContradictions.push({
+            type: "energy_depletion",
+            severity: "high",
+            remaining: st.energy,
+          });
+          contradictionEvents++;
+        }
+        if (isHazard) {
+          detectedContradictions.push({
+            type: "hazard_proximity",
+            severity: "critical",
+            loc: { x: st.body.x, y: st.body.y },
+          });
+          contradictionEvents++;
+        }
       }
 
       const packet = {

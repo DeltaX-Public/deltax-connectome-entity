@@ -6,9 +6,10 @@ A public, sovereign harness integrating a 165,122-neuron connectome graph recurr
 
 | Subsystem | Status | Reality & Provenance |
 | --- | --- | --- |
-| **Phase II: Real Connectome** | **Complete & Verified** | Descending-neuron candidate extraction from 165k-neuron connectome; zero semantic cheats; 100% goal completion on the 25 evaluation seeds (200..224) under test harness |
-| **Causal Neural Intervention** | **Complete & Verified** | Bit-exact tripartite state branching with targeted optogenetic population silencing (`DNg100`, `DNg97`, `DNp09`) |
-| **Held-Out Evaluation Battery** | **25 Seeds Complete** | Held-out evaluation seeds (200..224) comparing CONTROL, OBSERVE, EXECUTIVE, SHAM, and SHUFFLED_CONNECTOME |
+| **Phase II: Real Connectome** | **Complete & Verified** | Strict candidate provenance typing; post-DeltaX shortcuts excised; initial 100% lift marked `superseded_pre_integrity_pass` |
+| **Causal Neural Intervention** | **Complete & Verified** | Bit-exact tripartite state branching with targeted optogenetic silencing (`DNg100/97/p09`) vs sham controls |
+| **Held-Out Evaluation Battery** | **25 Seeds Complete** | Post-integrity held-out evaluation battery (seeds 1000..1024) across CONTROL, OBSERVE, EXECUTIVE, SHAM, and degree-preserving SHUFFLED_CONNECTOME |
+| **Component Ablation Suite** | **10 Seeds Complete** | Quantified isolation of No DeltaX, OBSERVE only, Shuffled Graph, Lambda Gate, Memory Reset, and Contradiction Handling |
 | **Sovereign Local Runtime** | **Active (0 Egress)** | Shared private JSONL provider via `DELTAX_LOCAL_RUNTIME_CMD`; provenance `executive_source: local_runtime`; zero external network egress observed |
 | **Entity Observatory** | **Live Show Mode** | Real telemetry, descending neuron firing rates, candidate provenance, and DeltaX governance |
 
@@ -18,13 +19,14 @@ A public, sovereign harness integrating a 165,122-neuron connectome graph recurr
 
 | Field | Description / Value |
 | :--- | :--- |
-| **Claim** | 100% goal completion lift on 25 held-out seeds (200..224) without semantic shortcuts via descending-neuron candidate extraction and executive governance |
-| **Command** | `npm test && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs` |
+| **Claim** | Post-integrity causal verification across 25 held-out seeds (1000..1024), component ablations, and triple-branch causal neural intervention with zero actuator shortcuts |
+| **Status of Initial 100% Lift** | Formally designated as `superseded_pre_integrity_pass` (actuator shortcuts eliminated) |
+| **Command** | `node --test test/*.mjs && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs && node scripts/run_ablations.mjs --seeds=10` |
 | **Branch** | `phase2-real-connectome-integration` |
 | **Commit** | HEAD of `phase2-real-connectome-integration` |
-| **Seed Set** | `200..224` (battery) and `100` (causal intervention) |
+| **Seed Set** | `1000..1024` (held-out battery), `1000..1009` (ablations), `105` (causal intervention) |
 | **Runtime Mode** | `local_runtime` (via `DELTAX_LOCAL_RUNTIME_CMD`) |
-| **Expected Artifact** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/interventions/latest-causal-intervention.json` |
+| **Expected Artifact** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/ablations/latest-component-ablations.json`, `artifacts/interventions/latest-neural-intervention.json` |
 | **Stub Allowed** | No (for sovereign validation battery); Yes (for unit tests / stub-honesty tests) |
 | **Private Runtime Required** | Yes (for genuine `local_runtime` sovereign validation) |
 | **Network Expected** | No (zero network egress during local battery execution) |

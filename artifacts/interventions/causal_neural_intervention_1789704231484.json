@@ -1,0 +1,201 @@
+{
+  "schema": "connectome.causal_intervention.v2",
+  "generated_at": "2026-09-18T04:03:51.484Z",
+  "seed": 105,
+  "checkpoint_step": 2,
+  "protocol": "triple_branch_causal_neural_intervention",
+  "branches": {
+    "branch_a_intact": {
+      "type": "intact_unperturbed",
+      "history": [
+        {
+          "step": 3,
+          "dn_forward_hz": 1.05,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 4,
+          "dn_forward_hz": 2.1,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 5,
+          "dn_forward_hz": 3.877,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 6,
+          "dn_forward_hz": 5.58,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "locomotion_forward",
+          "provenance_type": "MEASURED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "forward",
+          "pos": {
+            "x": 2,
+            "y": 2
+          }
+        }
+      ]
+    },
+    "branch_b_targeted": {
+      "type": "optogenetic_silencing_locomotor",
+      "target_populations": [
+        "DNg100",
+        "DNg97",
+        "DNp09"
+      ],
+      "history": [
+        {
+          "step": 3,
+          "dn_forward_hz": 0,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 4,
+          "dn_forward_hz": 0,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 5,
+          "dn_forward_hz": 0,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 6,
+          "dn_forward_hz": 0.066,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        }
+      ]
+    },
+    "branch_c_sham": {
+      "type": "sham_silencing_grooming",
+      "target_populations": [
+        "DNg07",
+        "DNg08"
+      ],
+      "history": [
+        {
+          "step": 3,
+          "dn_forward_hz": 1.05,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 4,
+          "dn_forward_hz": 2.1,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 5,
+          "dn_forward_hz": 3.877,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "halt",
+          "provenance_type": "DERIVED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "stop",
+          "pos": {
+            "x": 1,
+            "y": 2
+          }
+        },
+        {
+          "step": 6,
+          "dn_forward_hz": 5.581,
+          "dn_escape_hz": 0,
+          "chosen_candidate": "locomotion_forward",
+          "provenance_type": "MEASURED_NEURAL",
+          "disposition": "PERMIT",
+          "action": "forward",
+          "pos": {
+            "x": 2,
+            "y": 2
+          }
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "targeted_vs_intact_diverged_actions": true,
+    "targeted_vs_intact_diverged_positions": true,
+    "sham_vs_intact_matched_actions": true,
+    "sham_vs_intact_matched_positions": true,
+    "neural_specificity_demonstrated": true
+  },
+  "synthesis": {
+    "causal_effect_demonstrated": true,
+    "specificity_proven": true,
+    "summary": "Targeted silencing of descending locomotor command neurons (DNg100, DNg97, DNp09) causally abolished forward drive and halted the entity, while sham silencing of unrelated grooming neurons (DNg07, DNg08) preserved forward locomotion identically to intact control."
+  }
+}
