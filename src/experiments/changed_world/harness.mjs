@@ -21,6 +21,15 @@ function computeEntropy(candidates) {
   return -probs.reduce((acc, p) => acc + (p > 0 ? p * Math.log2(p) : 0), 0);
 }
 
+export const PHASE3_CONDITIONS = Object.freeze([
+  "CONTROL",
+  "OBSERVE",
+  "STATIC_GUARD",
+  "EXECUTIVE",
+  "EXECUTIVE_MEMORY_RESET",
+  "SHUFFLED_CONNECTOME",
+]);
+
 export class ChangedWorldHarness {
   constructor({
     seed = 2000,
@@ -36,15 +45,7 @@ export class ChangedWorldHarness {
     this.maxStepsPerTrial = maxStepsPerTrial;
     this.changeAtStep = changeAtStep;
 
-    const validConditions = [
-      "CONTROL",
-      "OBSERVE",
-      "STATIC_GUARD",
-      "EXECUTIVE",
-      "EXECUTIVE_MEMORY_RESET",
-      "SHUFFLED_CONNECTOME",
-    ];
-    if (!validConditions.includes(condition)) {
+    if (!PHASE3_CONDITIONS.includes(condition)) {
       throw new Error(`Invalid condition: ${condition}`);
     }
 
