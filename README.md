@@ -7,6 +7,7 @@ A public, sovereign harness integrating a 165,122-neuron connectome graph recurr
 | Subsystem | Status | Reality & Provenance |
 | --- | --- | --- |
 | **Phase II: Real Connectome** | **Causal-Integrity Pass Complete** | Strict candidate provenance typing; post-DeltaX shortcuts excised; initial 100% lift marked `superseded_pre_integrity_pass`; current 12-step horizon does not yet establish DeltaX performance advantage |
+| **Phase III: Long-Horizon Adaptation** | **Empirically Verified** | 100% goal completion under unexpected change (vs 0% control); decisive memory advantage in recurrence (100% hazard elimination, +4.0 energy units, preemptive $x=3$ diversion); 4-branch causal replay proves necessity of steering DN circuit (`DNa02/DNa01/DNp09`) |
 | **Causal Neural Intervention** | **Verified** | Bit-exact tripartite state branching with targeted optogenetic silencing (`DNg100/97/p09`) vs sham controls |
 | **Held-Out Evaluation Battery** | **25 Seeds Complete** | Post-integrity held-out evaluation battery (seeds 1000..1024) across CONTROL, OBSERVE, EXECUTIVE, SHAM, and degree-preserving SHUFFLED_CONNECTOME |
 | **Component Ablation Suite** | **10 Seeds Complete** | Quantified isolation of No DeltaX, OBSERVE only, Shuffled Graph, Lambda Gate, Memory Reset, and Contradiction Handling |
@@ -58,6 +59,8 @@ python3 -m http.server 4173
 
 ## Documentation
 
+- [docs/PHASE_3_LONG_HORIZON_ADAPTATION_REPORT.md](docs/PHASE_3_LONG_HORIZON_ADAPTATION_REPORT.md) — Comprehensive Phase III Empirical Adaptation & Recurrence Report
+- [docs/PHASE_3_EXPERIMENT_PLAN.md](docs/PHASE_3_EXPERIMENT_PLAN.md) — Pre-Registered Protocol and Frozen Hypotheses
 - [docs/PHASE_2_CONNECTOME_CAUSAL_INTEGRATION_REPORT.md](docs/PHASE_2_CONNECTOME_CAUSAL_INTEGRATION_REPORT.md) — Comprehensive Phase II Empirical Evidence Report
 - [docs/EVIDENCE_BATTERY_REPORT.md](docs/EVIDENCE_BATTERY_REPORT.md) — Phase I Sovereign Runtime Battery Report
 - [UPSTREAM.md](UPSTREAM.md) — Upstream Janelia fly-brain connectome boundary
