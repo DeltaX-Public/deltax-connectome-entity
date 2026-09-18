@@ -233,9 +233,9 @@ export class ChangedWorld {
 
     // Hazard penalties
     if (this.isChanged && this.hazards.some((h) => h.x === this.body.x && h.y === this.body.y)) {
-      this.energy = Math.max(0, this.energy - 2);
+      this.body.energy = Math.max(0, this.body.energy - 2);
     }
-    this.energy = Math.min(this.energy, this.body.energy);
+    this.energy = this.body.energy;
 
     const logEntry = {
       id: this.events.length + 1,
