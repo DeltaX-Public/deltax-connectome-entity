@@ -1,7 +1,7 @@
 {
-  "schema": "deltax-causal-replay-branches-v1",
-  "generated_at": "2026-09-18T20:05:50.513Z",
-  "seed": 3000,
+  "schema": "deltax-causal-replay-branches-v2",
+  "generated_at": "2026-09-18T20:24:56.877Z",
+  "seed": 4000,
   "fork_step": 4,
   "fork_position": {
     "x": 5,
@@ -11,14 +11,15 @@
   "branches": {
     "BRANCH_A": {
       "branchId": "BRANCH_A",
-      "name": "Intact Sovereign Closed Loop",
+      "name": "Intact Sovereign Closed Loop (Retained Executive State)",
+      "startingTick": 4,
       "perturbationDetails": null,
-      "reachedGoal": true,
-      "finalOutcome": "COMPLETED_RECOVERY",
-      "stepsExecuted": 13,
-      "finalEnergy": 35.8,
+      "reachedGoal": false,
+      "finalOutcome": "TIMEOUT",
+      "stepsExecuted": 25,
+      "finalEnergy": 4,
       "collisionCount": 1,
-      "hazardCount": 2,
+      "hazardCount": 20,
       "history": [
         {
           "step": 1,
@@ -71,120 +72,277 @@
         },
         {
           "step": 6,
-          "action": "left",
-          "status": "TURNED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
             "y": 3,
-            "heading": 3
+            "heading": 0
           },
-          "energy": 41.9,
-          "chosenCandidateClass": "turn_left",
+          "energy": 42,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 7,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 2,
-            "heading": 3
+            "y": 3,
+            "heading": 0
           },
-          "energy": 40.9,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 40,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 8,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 1,
-            "heading": 3
+            "y": 3,
+            "heading": 0
           },
-          "energy": 39.9,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 38,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 9,
-          "action": "right",
-          "status": "TURNED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 1,
+            "y": 3,
             "heading": 0
           },
-          "energy": 39.8,
-          "chosenCandidateClass": "turn_right",
+          "energy": 36,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 10,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 6,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 38.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 34,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 11,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 7,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 37.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 32,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 12,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 8,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 36.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 30,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 13,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 9,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 35.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 28,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 14,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 26,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 15,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 24,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 16,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 22,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 17,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 20,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 18,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 18,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 19,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 16,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 20,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 14,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 21,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 12,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 22,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 10,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 23,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 8,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 24,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 6,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 25,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 4,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         }
       ]
     },
     "BRANCH_B": {
       "branchId": "BRANCH_B",
-      "name": "Executive Memory Reset at Fork Point",
+      "name": "Executive Memory Reset at Fork Point (Fresh Executive State)",
+      "startingTick": 0,
       "perturbationDetails": null,
-      "reachedGoal": true,
-      "finalOutcome": "COMPLETED_RECOVERY",
-      "stepsExecuted": 13,
-      "finalEnergy": 35.8,
+      "reachedGoal": false,
+      "finalOutcome": "TIMEOUT",
+      "stepsExecuted": 25,
+      "finalEnergy": 4,
       "collisionCount": 1,
-      "hazardCount": 2,
+      "hazardCount": 20,
       "history": [
         {
           "step": 1,
@@ -237,120 +395,278 @@
         },
         {
           "step": 6,
-          "action": "left",
-          "status": "TURNED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
             "y": 3,
-            "heading": 3
+            "heading": 0
           },
-          "energy": 41.9,
-          "chosenCandidateClass": "turn_left",
+          "energy": 42,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 7,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 2,
-            "heading": 3
+            "y": 3,
+            "heading": 0
           },
-          "energy": 40.9,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 40,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 8,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 1,
-            "heading": 3
+            "y": 3,
+            "heading": 0
           },
-          "energy": 39.9,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 38,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 9,
-          "action": "right",
-          "status": "TURNED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 1,
+            "y": 3,
             "heading": 0
           },
-          "energy": 39.8,
-          "chosenCandidateClass": "turn_right",
+          "energy": 36,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 10,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 6,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 38.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 34,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 11,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 7,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 37.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 32,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 12,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 8,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 36.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 30,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 13,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 9,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 35.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 28,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 14,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 26,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 15,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 24,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 16,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 22,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 17,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 20,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 18,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 18,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 19,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 16,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 20,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 14,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 21,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 12,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 22,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 10,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 23,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 8,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 24,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 6,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 25,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 4,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         }
       ]
     },
     "BRANCH_C": {
       "branchId": "BRANCH_C",
-      "name": "Targeted Substrate Silencing (DNa02, DNa01, DNp09)",
+      "name": "Targeted Steering Substrate Silencing (DNa02, DNa01, DNp09; count=6; Retained Executive)",
+      "startingTick": 4,
       "perturbationDetails": {
         "silenced_types": [
           "DNa02",
           "DNa01",
           "DNp09"
         ],
-        "silenced_count": 6
+        "silenced_count": 6,
+        "functional_classification": "Descending steering torque command neurons (ipsilateral & contralateral)"
       },
       "reachedGoal": false,
       "finalOutcome": "TIMEOUT",
@@ -672,21 +988,23 @@
     },
     "BRANCH_D": {
       "branchId": "BRANCH_D",
-      "name": "Sham Control Silencing (DNp01, DNp02, DNp04 - matched count = 6)",
+      "name": "Sham Control Silencing (DNp01, DNp02, DNp04; count=6; Retained Executive)",
+      "startingTick": 4,
       "perturbationDetails": {
         "sham_types": [
           "DNp01",
           "DNp02",
           "DNp04"
         ],
-        "silenced_count": 6
+        "silenced_count": 6,
+        "functional_classification": "Non-steering descending command neurons (giant fibre escape and takeoff; matched count=6)"
       },
-      "reachedGoal": true,
-      "finalOutcome": "COMPLETED_RECOVERY",
-      "stepsExecuted": 13,
-      "finalEnergy": 35.8,
+      "reachedGoal": false,
+      "finalOutcome": "TIMEOUT",
+      "stepsExecuted": 25,
+      "finalEnergy": 4,
       "collisionCount": 1,
-      "hazardCount": 2,
+      "hazardCount": 20,
       "history": [
         {
           "step": 1,
@@ -739,119 +1057,287 @@
         },
         {
           "step": 6,
-          "action": "left",
-          "status": "TURNED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
             "y": 3,
-            "heading": 3
+            "heading": 0
           },
-          "energy": 41.9,
-          "chosenCandidateClass": "turn_left",
+          "energy": 42,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 7,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 2,
-            "heading": 3
+            "y": 3,
+            "heading": 0
           },
-          "energy": 40.9,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 40,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 8,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 1,
-            "heading": 3
+            "y": 3,
+            "heading": 0
           },
-          "energy": 39.9,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 38,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 9,
-          "action": "right",
-          "status": "TURNED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
             "x": 5,
-            "y": 1,
+            "y": 3,
             "heading": 0
           },
-          "energy": 39.8,
-          "chosenCandidateClass": "turn_right",
+          "energy": 36,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 10,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 6,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 38.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 34,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 11,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 7,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 37.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 32,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 12,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 8,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 36.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 30,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         },
         {
           "step": 13,
-          "action": "forward",
-          "status": "MOVED",
+          "action": "stop",
+          "status": "STOPPED",
           "position": {
-            "x": 9,
-            "y": 1,
+            "x": 5,
+            "y": 3,
             "heading": 0
           },
-          "energy": 35.8,
-          "chosenCandidateClass": "locomotion_forward",
+          "energy": 28,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 14,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 26,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 15,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 24,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 16,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 22,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 17,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 20,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 18,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 18,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 19,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 16,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 20,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 14,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 21,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 12,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 22,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 10,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 23,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 8,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 24,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 6,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 25,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 4,
+          "chosenCandidateClass": "halt",
           "disposition": "PERMIT"
         }
       ]
     }
   },
   "findings": {
-    "branch_a_intact": "COMPLETED_RECOVERY",
-    "branch_b_memory_reset": "COMPLETED_RECOVERY",
+    "branch_a_intact": "TIMEOUT",
+    "branch_b_memory_reset": "TIMEOUT",
     "branch_c_targeted_silencing": "TIMEOUT",
-    "branch_d_sham_silencing": "COMPLETED_RECOVERY",
-    "causal_attribution": {
-      "executive_contribution_proven": true,
-      "steering_circuit_necessity_proven": true
+    "branch_d_sham_silencing": "TIMEOUT",
+    "comparisons": {
+      "A_vs_B": {
+        "description": "Differs strictly by executive persistent state (restored vs fresh) under identical neural and physical state",
+        "branch_a_outcome": "TIMEOUT",
+        "branch_b_outcome": "TIMEOUT",
+        "branch_a_collisions": 1,
+        "branch_b_collisions": 1
+      },
+      "C_vs_D": {
+        "description": "Differs strictly by targeted steering silencing vs matched count sham non-steering silencing under identical executive and physical state",
+        "branch_c_outcome": "TIMEOUT",
+        "branch_d_outcome": "TIMEOUT",
+        "branch_c_collisions": 1,
+        "branch_d_collisions": 1
+      }
     }
   }
 }
