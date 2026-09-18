@@ -1,0 +1,19 @@
+# DeltaX Connectome Entity Codeowners
+# All changes to repository code, workflows, governance, and evidence require review from verified owner.
+
+* @randynov
+
+# Core implementation & adapters
+/src/ @randynov
+
+# Experimental harnesses and evaluation scripts
+/scripts/ @randynov
+
+# CI / CD and automation policies
+/.github/ @randynov
+
+# Empirical evidence bundles, battery outputs, and benchmarks
+/artifacts/ @randynov
+
+# Governance, protocols, and scientific reports
+/docs/ @randynov

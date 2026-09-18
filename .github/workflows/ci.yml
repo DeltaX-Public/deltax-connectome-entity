@@ -1,10 +1,13 @@
-name: Public Repository CI
+name: Public Integrity CI
 
 on:
   push:
-    branches: [ main, phase3-long-horizon-adaptation ]
+    branches:
+      - main
+      - '**'
   pull_request:
-    branches: [ main, phase3-long-horizon-adaptation ]
+    branches:
+      - main
 
 jobs:
   public-validation:
@@ -19,11 +22,40 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
       - name: Run Public-Safe Test Suite (Units, Parity, Causal Invariants, Controls)
         run: |
           echo "=== RUNNING PUBLIC CI (DELTAX_LOCAL_RUNTIME_CMD unset) ==="
-          echo "Note: Private runtime tests requiring deltax-python-runtime are skipped in public CI."
+          echo "Note: Private runtime tests requiring deltax-python-runtime are safely skipped in public CI."
           node --test test/*.test.mjs
+
+      - name: Validate Artifact and Data JSON Schemas
+        run: |
+          echo "=== VALIDATING ARTIFACT AND DATA JSON INTEGRITY ==="
+          python3 -c '
+          import os, sys, json
+          dirs_to_check = ["artifacts", "data"]
+          errors = 0
+          for d in dirs_to_check:
+              if not os.path.exists(d): continue
+              for root, _, files in os.walk(d):
+                  for f in files:
+                      if f.endswith(".json"):
+                          p = os.path.join(root, f)
+                          try:
+                              with open(p, "r", encoding="utf-8") as fh:
+                                  json.load(fh)
+                          except Exception as e:
+                              print(f"JSON ERROR in {p}: {e}")
+                              errors += 1
+          if errors > 0:
+              sys.exit(1)
+          print("All JSON artifacts and data files validated successfully.")
+          '
 
       - name: Run Repository Boundary & Leak Scan
         run: |
@@ -33,7 +65,9 @@ jobs:
           FORBIDDEN = [
               re.compile(r"/Users/[a-zA-Z0-9_-]+/Projects/private/deltax-python-runtime", re.I),
               re.compile(r"ghp_[a-zA-Z0-9]{36}"),
+              re.compile(r"gho_[a-zA-Z0-9]{36}"),
               re.compile(r"xox[baprs]-[0-9a-zA-Z]+"),
+              re.compile(r"-----BEGIN (RSA|EC|OPENSSH|PRIVATE) KEY-----"),
           ]
           violations = 0
           for root, dirs, files in os.walk("."):
@@ -53,5 +87,5 @@ jobs:
                       pass
           if violations > 0:
               sys.exit(1)
-          print("Leak scan passed cleanly (0 violations).")
+          print("Repository boundary leak scan passed cleanly (0 violations).")
           '
