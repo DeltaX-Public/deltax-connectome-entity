@@ -1,0 +1,13 @@
+{
+  "name": "deltax-connectome-entity",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.mjs",
+    "demo:causal": "node scripts/causal_intervention_demo.mjs",
+    "demo:entity": "node scripts/entity_demo_hint.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

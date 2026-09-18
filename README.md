@@ -1,83 +1,45 @@
-# deltax-connectome-entity
+# DeltaX Connectome Entity
 
-Connectome-derived **recurrent computational substrate** plus a planned **DeltaX synthetic executive control plane**, with persistent state, causal neural intervention, and an unfamiliar embodied task (Broken World).
+A public, honest harness for a recurrent connectome substrate, causal replay, and a DeltaX executive control plane. The browser surface is an observatory, not a claim of a full connectome visualization.
 
-This is **not** a fruit-fly behavior product demo, and it does **not** claim consciousness, AGI, or a simulated biological prefrontal cortex.
+## Status
 
-## Current status
+| Work | Reality |
+| --- | --- |
+| PRs 1-6 | Merged: upstream baseline, interface, neurocontrol, Broken World scaffold, causal intervention and Entity Observatory |
+| Phases 1-10 | Evidence and harness work is complete for the merged scope; learning claims remain explicitly limited |
+| Canonical DeltaX transport | Implemented as an adapter; requires a reachable local API |
+| Stub transport | Available only when explicitly selected, and labeled as stub |
 
-| Phase | Status |
-|---|---|
-| Phase 0 — audit & lineage | **Docs landed** — see [`UPSTREAM.md`](UPSTREAM.md), [`docs/phase0/REMOTE_AUDIT.md`](docs/phase0/REMOTE_AUDIT.md) |
-| Phase 1 — reproduce upstream baseline | **Held** (Cloud Agents unavailable; no local checkout authorized yet) |
-| Milestone 1 — DeltaX observe / veto / modulate | Not started |
-| Broken World + causal intervention demo | Not started |
+## One launch path
 
-Primary upstream candidate: [`Lulzx/fly-brain`](https://github.com/Lulzx/fly-brain) @ `054e402853d370b004facc1946e36a409de601e8` (MIT). Dataset and body/eye licenses remain with their sources (see `UPSTREAM.md`).
+1. **Upstream fly validation.** Read [UPSTREAM.md](UPSTREAM.md), then run the upstream checks from `upstream/fly-brain` without changing that package.
+2. **Headless Broken World and causal intervention.** Run `npm run demo:causal`. This uses the checked-in harness and an explicit `executive_source: stub`; it is a CI scaffold, not proof of learned behavior.
+3. **Real demo.** Start the local canonical API, then launch the demo with `DELTAX_API_URL=http://127.0.0.1:<port> DELTAX_EXECUTIVE=DELTAX ...`. The adapter fails clearly when the API is absent; it does not silently substitute the stub.
+## Entity Observatory
 
-## Quick start (after Phase 1 incorporation)
+From the repository root run `python3 -m http.server 4173`, then open `http://127.0.0.1:4173/entity.html`. In Codespaces, forward port 4173. The page reads the latest checked-in intervention artifact when available and otherwise shows an explicit empty state.
 
-Upstream today:
-
-```sh
-# once upstream tree is vendored / submoduled — see UPSTREAM.md
-npm install
-npm run dev   # arena: http://localhost:5173/arena.html
-```
-
-Headless examples (upstream):
+## Commands
 
 ```sh
-node scripts/run_fly.mjs 6 nearodor
-node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"
+npm test
+npm run demo:causal
+npm run demo:entity
 ```
 
-## Architecture target
+`demo:entity` prints the static-server instruction. `entity.html` exposes only recorded fields: world, substrate proposals, DeltaX decisions, experiment metadata, source provenance, and export. It does not invent neural activity or animation.
 
-```
-ENVIRONMENT → SENSORY TRANSLATION → CONNECTOME SUBSTRATE
-  → STATE / ACTION-PROPOSAL EXTRACTION → DELTAX EXECUTIVE
-  → MODULATION / VETO / PERMISSION → MOTOR INTERFACE → BODY → ENVIRONMENT
-```
+## Documents
 
-DeltaX must not replace the connectome with direct actuator control in normal demo mode. Canonical DeltaX code is adapted if available; otherwise only a labeled stub interface is allowed — never presented as DeltaX.
+- [UPSTREAM.md](UPSTREAM.md) - upstream boundary and fly validation
+- [DELTAX_INTERFACE.md](DELTAX_INTERFACE.md) - executive adapter and transport contract
+- [NEURAL_CONTROL.md](NEURAL_CONTROL.md) - checkpoint and replay boundaries
+- [EXPERIMENT.md](EXPERIMENT.md) - canonical experiment protocol; historical pointer: [docs/EXPERIMENT.md](docs/EXPERIMENT.md)
+- [CLAIMS.md](CLAIMS.md) - claims and evidence
+- [ARCHITECTURE.md](ARCHITECTURE.md) - runtime and ownership diagram
+- [LIMITATIONS.md](LIMITATIONS.md) - known limitations and non-claims
 
-## Documentation
+## Repository boundary
 
-- [`UPSTREAM.md`](UPSTREAM.md) — source pins and licenses
-- [`docs/phase0/REMOTE_AUDIT.md`](docs/phase0/REMOTE_AUDIT.md) — Phase 0 remote audit
-- [`docs/BASELINE_AUDIT.md`](docs/BASELINE_AUDIT.md) — provisional baseline template (complete after reproduction)
-
-## License
-
-Project documentation in this repository: TBD with first code commit.  
-Upstream software and datasets: see `UPSTREAM.md` (MIT + CC-BY 4.0 + Apache-2.0 + …).
-
-## Phase 1 quick start: the vendored upstream baseline
-
-The untouched upstream reproduction is kept separate under `upstream/fly-brain/` and is pinned in [UPSTREAM.md](UPSTREAM.md). Run it from that directory:
-
-```sh
-cd upstream/fly-brain
-npm install
-node scripts/calib_eval.mjs "$(cat public/data/brain_params.json)"
-node scripts/run_fly.mjs 2 default descending
-```
-
-The Phase 1 evidence and raw command logs are in [docs/BASELINE_AUDIT.md](docs/BASELINE_AUDIT.md) and `artifacts/baseline/`. DeltaX additions are intentionally not mixed into this upstream runnable tree.
-
-## Quick start with the local DeltaX API
-
-The repository is a public demo harness; the real executive runs in a local API. Copy `.env.example`, then launch the API and run the demo with:
-
-```sh
-DELTAX_API_URL=http://127.0.0.1:<port> DELTAX_EXECUTIVE=DELTAX node your-demo-entrypoint.mjs
-```
-
-The status is `executive_source: canonical_api`. For CI/development only, select the clearly labeled stub with `DELTAX_EXECUTIVE=stub`. DeltaX mode without `DELTAX_API_URL` fails loudly; it never silently substitutes the stub. See `DELTAX_INTERFACE.md` and `NEURAL_CONTROL.md`.
-
-## Entity Observatory (phase 10)
-
-`entity.html` is a separate, intentionally modest visualization surface for the Broken World harness. It has WORLD, SUBSTRATE, DELTAX, and EXPERIMENT panels. The page reads `artifacts/checkpoints/causal-intervention-8.json` when served from the repository and otherwise stays explicit about missing telemetry. The executive badge is driven only by `executive_source` (`canonical_api`, `stub`, or `disabled`); a stub is never presented as genuine DeltaX and neural activity is never labeled as DeltaX reasoning.
-
-Open it from the repository root with a static server (for example `python3 -m http.server 4173`) and visit `http://localhost:4173/entity.html`. In Codespaces, forward port 4173. The controls provide a local observatory surface and JSONL export; authoritative experiment state remains the headless harness and its tests. This is not a full connectome visualization.
+`upstream/` is the preserved upstream fly tree. `src/` contains the DeltaX adapter, neurocontrol, and observatory support. Root scripts and tests are the reproducible harness around those boundaries.
