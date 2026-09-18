@@ -17,6 +17,7 @@ import { createExecutive } from "../src/deltax/index.mjs";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -39,15 +40,53 @@ export function wilsonCI(k, n, z = 1.96) {
 export function meanAndStdErr(arr) {
   if (!arr || arr.length === 0) return { mean: 0, stdErr: 0, n: 0 };
   const mean = arr.reduce((s, x) => s + x, 0) / arr.length;
-  const variance = arr.reduce((s, x) => s + (x - mean) ** 2, 0) / arr.length;
+  const variance = arr.reduce((s, x) => s + (x - mean) ** 2, 0) / (arr.length > 1 ? arr.length - 1 : 1);
   const stdErr = Math.sqrt(variance / arr.length);
   return { mean: +mean.toFixed(2), stdErr: +stdErr.toFixed(2), n: arr.length };
 }
 
+export function exactMcNemar(b, c) {
+  const n = b + c;
+  if (n === 0) return { b, c, n_discordant: 0, p_value: 1.0, test: "exact_binomial" };
+  const k = Math.min(b, c);
+  let pCum = 0;
+  for (let i = 0; i <= k; i++) {
+    let coeff = 1;
+    for (let j = 0; j < i; j++) {
+      coeff = (coeff * (n - j)) / (j + 1);
+    }
+    pCum += coeff * Math.pow(0.5, n);
+  }
+  const twoTailed = Math.min(1.0, 2 * pCum);
+  return { b, c, n_discordant: n, p_value: +twoTailed.toExponential(4), test: "exact_binomial_two_tailed" };
+}
+
+export function pairedDifferenceStats(aArr, bArr) {
+  if (aArr.length !== bArr.length || aArr.length === 0) return null;
+  const diffs = aArr.map((val, i) => val - bArr[i]);
+  const n = diffs.length;
+  const meanDiff = diffs.reduce((s, x) => s + x, 0) / n;
+  const variance = diffs.reduce((s, x) => s + (x - meanDiff) ** 2, 0) / (n > 1 ? n - 1 : 1);
+  const stdErr = Math.sqrt(variance / n);
+  const stdDev = Math.sqrt(variance);
+  const cohensD = stdDev > 1e-9 ? +(meanDiff / stdDev).toFixed(4) : (meanDiff === 0 ? 0 : (meanDiff > 0 ? Infinity : -Infinity));
+  const isDeterministic = variance < 1e-9;
+
+  return {
+    n,
+    mean_difference: +meanDiff.toFixed(3),
+    std_error: +stdErr.toFixed(3),
+    std_dev: +stdDev.toFixed(3),
+    cohens_d: cohensD,
+    deterministic_consistency: isDeterministic,
+    identical_value: isDeterministic ? diffs[0] : null,
+  };
+}
+
 // ── Battery Runner ────────────────────────────────────────────────────────────
 export async function runPhase3Battery({
-  startSeed = 3000,
-  seedCount = 25,
+  startSeed = 4000,
+  seedCount = 100,
   maxStepsPerTrial = 25,
   changeAtStep = 5,
 } = {}) {
@@ -55,12 +94,18 @@ export async function runPhase3Battery({
     throw new Error("DELTAX_LOCAL_RUNTIME_CMD is required for Phase III battery; refusing silent fallback");
   }
 
+  let commitSha = "unknown";
+  try {
+    commitSha = execSync("git rev-parse HEAD", { cwd: ROOT, encoding: "utf8" }).trim();
+  } catch {}
+
   const seeds = Array.from({ length: seedCount }, (_, i) => startSeed + i);
   const startTime = Date.now();
 
   console.log("\n=======================================================");
-  console.log("   PHASE III HELD-OUT LONG-HORIZON ADAPTATION BATTERY");
+  console.log("   PHASE III HELD-OUT LONG-HORIZON ADAPTATION BATTERY (V2)");
   console.log(`   Cohort: ${seedCount} seeds (${seeds[0]}..${seeds[seeds.length - 1]})`);
+  console.log(`   Commit SHA: ${commitSha}`);
   console.log(`   Conditions: ${PHASE3_CONDITIONS.join(", ")}`);
   console.log("=======================================================\n");
 
@@ -119,7 +164,6 @@ export async function runPhase3Battery({
   const n = results.length;
   let controlObserveMatches = 0;
 
-  // Trackers per condition
   const stats = {};
   for (const cond of PHASE3_CONDITIONS) {
     stats[cond] = {
@@ -201,28 +245,33 @@ export async function runPhase3Battery({
     };
   }
 
-  // Memory differential (EXECUTIVE vs EXECUTIVE_MEMORY_RESET in Trial 2)
-  const retHaz = summaryPerCondition.EXECUTIVE.trial2_hazards.mean;
-  const rstHaz = summaryPerCondition.EXECUTIVE_MEMORY_RESET.trial2_hazards.mean;
-  const hazardReduction = +(rstHaz - retHaz).toFixed(2);
-
-  const retEnergy = summaryPerCondition.EXECUTIVE.trial2_final_energy.mean;
-  const rstEnergy = summaryPerCondition.EXECUTIVE_MEMORY_RESET.trial2_final_energy.mean;
-  const energyPreserved = +(retEnergy - rstEnergy).toFixed(2);
+  // Exact Paired Statistics
+  const pairedMemoryHazard = pairedDifferenceStats(
+    stats.EXECUTIVE.t2Hazards,
+    stats.EXECUTIVE_MEMORY_RESET.t2Hazards
+  );
+  const pairedMemoryEnergy = pairedDifferenceStats(
+    stats.EXECUTIVE.t2Energy,
+    stats.EXECUTIVE_MEMORY_RESET.t2Energy
+  );
+  const pairedCollisionReduction = pairedDifferenceStats(
+    stats.CONTROL.t1Collisions,
+    stats.EXECUTIVE.t1Collisions
+  );
 
   const summary = {
-    schema: "deltax-phase3-held-out-battery-v1",
+    schema: "deltax-phase3-held-out-battery-v2",
     generated_at: new Date().toISOString(),
+    protocol_version: "V2_AUDITED_UNASSISTED",
+    experiment_commit_sha: commitSha,
+    runtime_provenance: ping.provenance,
     seed_cohort: { startSeed, seedCount: n, seeds },
     runtime_seconds: +((Date.now() - startTime) / 1000).toFixed(2),
     control_observe_action_parity_rate: controlObserveParityRate,
-    memory_differential: {
-      trial2_hazard_reduction: hazardReduction,
-      trial2_energy_preserved: energyPreserved,
-      retained_trial2_hazards_mean: retHaz,
-      reset_trial2_hazards_mean: rstHaz,
-      retained_trial2_energy_mean: retEnergy,
-      reset_trial2_energy_mean: rstEnergy,
+    paired_analyses: {
+      memory_trial2_hazard_difference: pairedMemoryHazard,
+      memory_trial2_energy_difference: pairedMemoryEnergy,
+      collision_avoidance_control_vs_executive: pairedCollisionReduction,
     },
     conditions: summaryPerCondition,
   };
@@ -238,9 +287,10 @@ export async function runPhase3Battery({
   writeFileSync(tsFile, JSON.stringify(payload, null, 2) + "\n");
 
   console.log("\n=======================================================");
-  console.log("            PHASE III BATTERY SUMMARY");
+  console.log("            PHASE III BATTERY SUMMARY (V2)");
   console.log("=======================================================");
   console.log(`Seeds Evaluated: ${n} (${seeds[0]}..${seeds[n - 1]})`);
+  console.log(`Commit SHA: ${commitSha}`);
   console.log(`CONTROL vs OBSERVE Action Parity: ${(controlObserveParityRate * 100).toFixed(1)}%`);
   console.log("\nCondition           | T1 Goal Rate (95% CI)     | T2 Goal Rate (95% CI)     | T2 Hazards | T2 Energy");
   console.log("--------------------+---------------------------+---------------------------+------------+----------");
@@ -253,7 +303,8 @@ export async function runPhase3Battery({
     console.log(`${cond.padEnd(19)} | ${t1} | ${t2} | ${haz} | ${eng}`);
   }
   console.log("------------------------------------------------------------------------------------------------");
-  console.log(`Memory Advantage: Hazard Reduction = ${hazardReduction} cells, Energy Conserved = +${energyPreserved} units`);
+  console.log(`Paired Memory Hazard Diff: ${pairedMemoryHazard?.mean_difference} ± ${pairedMemoryHazard?.std_error} (Cohen's d: ${pairedMemoryHazard?.cohens_d})`);
+  console.log(`Paired Memory Energy Diff: ${pairedMemoryEnergy?.mean_difference} ± ${pairedMemoryEnergy?.std_error} (Cohen's d: ${pairedMemoryEnergy?.cohens_d})`);
   console.log(`Artifact written to: ${latestFile}\n`);
 
   return summary;
@@ -263,8 +314,8 @@ export async function runPhase3Battery({
 if (process.argv[1] && process.argv[1].endsWith("phase3_battery.mjs")) {
   const isDev = process.argv.includes("--dev");
   const countArg = process.argv.find((a) => a.startsWith("--count="));
-  const count = countArg ? parseInt(countArg.split("=")[1], 10) : 25;
-  const start = isDev ? 2000 : 3000;
+  const count = countArg ? parseInt(countArg.split("=")[1], 10) : (isDev ? 5 : 100);
+  const start = isDev ? 2000 : 4000;
 
   runPhase3Battery({ startSeed: start, seedCount: count }).catch((err) => {
     console.error("Battery run failed:", err);

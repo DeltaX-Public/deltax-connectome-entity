@@ -1,0 +1,12 @@
+{
+  "status": "FROZEN_PRE_INTEGRITY_AUDIT",
+  "archived_at": "2026-09-18T20:18:00Z",
+  "git_commit_sha": "e0165088be574bfa3e7fd66c8059cbc010cf602a",
+  "branch": "phase3-long-horizon-adaptation",
+  "pr_number": 14,
+  "description": "Preserved artifacts from Phase III pre-integrity audit run prior to removal of harness-side steering and memory heuristics.",
+  "artifacts": [
+    "phase3-held-out-battery.json",
+    "causal-replay-branches.json"
+  ]
+}

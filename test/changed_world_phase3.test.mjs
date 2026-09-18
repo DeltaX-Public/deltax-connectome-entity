@@ -1,12 +1,14 @@
 /**
- * Phase III: Long-Horizon Adaptation — Information Parity & Causal Integrity Tests
+ * Phase III: Long-Horizon Adaptation — Invariant & Mechanism Tests
  *
- * Enforces:
- *   1. Information Parity: No cheat codes, no future state leakage, no route labels in observation stream.
- *   2. Causal Integrity: Every action strictly originates from pre-evaluation descending neuron candidate field.
+ * Enforces strict scientific invariants across experimental conditions:
+ *   1. Information Parity: Zero future leakage, solution labels, or route coordinates in sensory streams.
+ *   2. Causal Integrity & Strict Provenance: Every action strictly exists in pre-evaluation candidate field.
  *   3. Non-Contamination: CONTROL and OBSERVE produce 100% identical action trajectories.
- *   4. Executive Memory Fork: Retained executive anticipates blockage at x=3; Reset executive steps into hazard at x=5.
- *   5. Shuffled Connectome Negative Control: Scrambled topology fails structured adaptation.
+ *   4. Executive Manipulation Isolation: Retained and Reset receive identical observations and candidate fields.
+ *   5. Memory Reset Discontinuity: Reset verifiably zeros tick/TNM state and provides reset receipt.
+ *   6. Zero Harness Steering: Harness never substitutes unvetoed DeltaX selections (e.g. halt is respected).
+ *   7. Shuffled Connectome Topology: Scrambled synaptic weights disrupt structured descending drive.
  */
 
 import { test, describe } from "node:test";
@@ -16,11 +18,11 @@ import { ChangedWorldHarness, PHASE3_CONDITIONS } from "../src/experiments/chang
 
 const cmd = process.env.DELTAX_LOCAL_RUNTIME_CMD;
 
-describe("Phase III: Information-Parity & Causal Integrity", () => {
+describe("Phase III: Invariant & Mechanism Verification", () => {
   test("1. Information Parity: World observations contain zero future leakage or cheat metadata", () => {
     const world = new ChangedWorld({ changeAtStep: 5, seed: 2000 });
-    
-    // Check initial state
+
+    // Initial state observation
     const obs0 = world.observe();
     const str0 = JSON.stringify(obs0).toLowerCase();
     assert.ok(!str0.includes("cheat"), "Must not contain 'cheat'");
@@ -45,14 +47,13 @@ describe("Phase III: Information-Parity & Causal Integrity", () => {
     assert.ok(!strChanged.includes("solution"), "Changed observation must not contain 'solution'");
   });
 
-  test("2. Causal Integrity: All 6 conditions strictly enforce pre-evaluation candidate field origins", async () => {
+  test("2. Causal Integrity: All executed actions strictly exist in pre-evaluation candidate field", async () => {
     assert.equal(PHASE3_CONDITIONS.length, 6);
-    // Non-executive conditions can run without DELTAX_LOCAL_RUNTIME_CMD
     for (const cond of ["CONTROL", "STATIC_GUARD", "SHUFFLED_CONNECTOME"]) {
       const h = new ChangedWorldHarness({
         seed: 2000,
         condition: cond,
-        maxStepsPerTrial: 8,
+        maxStepsPerTrial: 10,
       });
       const res = await h.runEpisode();
       assert.ok(res.trial1.stepsExecuted > 0, `${cond} must execute steps`);
@@ -84,52 +85,93 @@ describe("Phase III: Information-Parity & Causal Integrity", () => {
     }
   );
 
-  test("4. Executive Memory Fork: Retained diverts at x=3 (0 hazard), Reset diverts at x=5 (>0 hazard)",
+  test("4. Executive Manipulation Isolation: Retained and Reset receive identical sensory observations and candidate fields",
     { skip: !cmd },
     async () => {
       const seed = 2000;
 
-      // Retained
-      const hRet = new ChangedWorldHarness({ seed, condition: "EXECUTIVE", command: cmd, maxStepsPerTrial: 25, changeAtStep: 5 });
+      const hRet = new ChangedWorldHarness({ seed, condition: "EXECUTIVE", command: cmd, maxStepsPerTrial: 10, changeAtStep: 5 });
       const rRet = await hRet.runEpisode();
 
-      // Reset
-      const hRst = new ChangedWorldHarness({ seed, condition: "EXECUTIVE_MEMORY_RESET", command: cmd, maxStepsPerTrial: 25, changeAtStep: 5 });
+      const hRst = new ChangedWorldHarness({ seed, condition: "EXECUTIVE_MEMORY_RESET", command: cmd, maxStepsPerTrial: 10, changeAtStep: 5 });
       const rRst = await hRst.runEpisode();
 
-      // In Trial 1 both succeed and encounter the blockage
-      assert.equal(rRet.trial1.reachedGoal, true);
-      assert.equal(rRst.trial1.reachedGoal, true);
+      // Verify Trial 1 parity: identical start
+      assert.equal(rRet.trial1.stepsExecuted, rRst.trial1.stepsExecuted);
 
-      // In Trial 2 (Recurrence):
-      // Retained anticipates at x=3:
-      const retT2Actions = rRet.trial2.history;
-      assert.equal(retT2Actions[2].position.x, 3);
-      assert.equal(retT2Actions[2].chosenAction, "left", "Retained executive must steer left at x=3 to enter bypass");
-      assert.equal(rRet.trial2.hazardCount, 0, "Retained executive must never enter hazard zone");
+      // Verify Trial 2 Step 1 packet comparison: identical environment and substrate inputs
+      const pRet = rRet.trial2.firstExecutivePacket;
+      const pRst = rRst.trial2.firstExecutivePacket;
 
-      // Reset proceeds into x=5:
-      const rstT2Actions = rRst.trial2.history;
-      assert.equal(rstT2Actions[2].position.x, 4);
-      assert.equal(rstT2Actions[2].chosenAction, "forward", "Reset executive continues forward into central corridor");
-      assert.ok(rRst.trial2.hazardCount > 0, "Reset executive must encounter hazard at x=5");
-      assert.ok(rRet.trial2.finalEnergy > rRst.trial2.finalEnergy, "Retained must have higher remaining energy than Reset");
+      assert.ok(pRet, "Retained must capture first executive packet");
+      assert.ok(pRst, "Reset must capture first executive packet");
+
+      // Verify identical environmental summary at recurrence start
+      assert.deepEqual(pRet.environment_state_summary, pRst.environment_state_summary);
+
+      // Verify identical candidate action classes and strengths at recurrence start
+      const retCandSummary = pRet.candidate_actions.map((c) => ({ action: c.action_class, strength: c.activation_strength }));
+      const rstCandSummary = pRst.candidate_actions.map((c) => ({ action: c.action_class, strength: c.activation_strength }));
+      assert.deepEqual(retCandSummary, rstCandSummary, "Candidate fields must be identical between Retained and Reset at comparison point");
 
       await hRet.close();
       await hRst.close();
     }
   );
 
-  test("5. Shuffled Connectome Control: Fails structured recovery", async () => {
-    const hShuf = new ChangedWorldHarness({
-      seed: 2000,
-      condition: "SHUFFLED_CONNECTOME",
-      maxStepsPerTrial: 25,
-      changeAtStep: 5,
-    });
-    const res = await hShuf.runEpisode();
-    assert.equal(res.trial1.reachedGoal, false, "Shuffled connectome must fail to reach goal");
-    assert.ok(res.trial1.collisionCount > 5 || res.trial1.finalEnergy <= 0, "Shuffled connectome must either stall or exhaust energy");
-    await hShuf.close();
+  test("5. Memory Reset Invariant: Discontinuity receipt and zeroed tick/TNM state verified",
+    { skip: !cmd },
+    async () => {
+      const seed = 2002;
+      const hRst = new ChangedWorldHarness({ seed, condition: "EXECUTIVE_MEMORY_RESET", command: cmd, maxStepsPerTrial: 10 });
+      const rRst = await hRst.runEpisode();
+
+      const lineage = rRst.executiveLineage;
+      assert.equal(lineage.shouldResetMemory, true);
+      assert.equal(lineage.stateLineage, "DISCONTINUOUS_FRESH_SESSION");
+      assert.notEqual(lineage.trial1SessionId, lineage.trial2SessionId);
+      assert.ok(lineage.trial1Checkpoint.tick > 0, "Trial 1 must have accumulated ticks");
+      assert.equal(lineage.resetReceipt.type, "reset_ack", "Must receive valid reset acknowledgement");
+      assert.equal(lineage.trial2PreflightCheckpoint.tick, 0, "Reset session must start with tick=0");
+      assert.equal(lineage.trial2PreflightCheckpoint.tnm_event_count, 0, "Reset session must start with 0 TNM events");
+
+      await hRst.close();
+    }
+  );
+
+  test("6. Candidate Selection Invariant: Unvetoed DeltaX selections are strictly executed without harness rescue",
+    { skip: !cmd },
+    async () => {
+      const seed = 2000;
+      const harness = new ChangedWorldHarness({ seed, condition: "EXECUTIVE", command: cmd, maxStepsPerTrial: 15, changeAtStep: 5 });
+      const res = await harness.runEpisode();
+
+      // Check all history steps: if DeltaX selected a candidate and it was not forbidden/vetoed, chosenCandidate matches
+      for (const step of [...res.trial1.history, ...res.trial2.history]) {
+        if (step.decision?.selected_action_id) {
+          // If the selected action was halt, actuator action must be stop (not steered left or right)
+          if (step.decision.selected_action_id.includes("halt")) {
+            assert.equal(step.chosenAction, "stop", "Harness must never substitute steering when DeltaX selects halt");
+          }
+        }
+      }
+      await harness.close();
+    }
+  );
+
+  test("7. Shuffled Connectome Invariant: Scrambled synaptic matrix alters topology while preserving degrees", () => {
+    const hIntact = new ChangedWorldHarness({ seed: 2000, condition: "CONTROL" });
+    const hShuf = new ChangedWorldHarness({ seed: 2000, condition: "SHUFFLED_CONNECTOME" });
+
+    const origIndices = hIntact.runtime.data.indices;
+    const shufIndices = hShuf.runtime.data.indices;
+
+    assert.equal(shufIndices.length, origIndices.length, "Edge count must be preserved exactly");
+    let swapped = 0;
+    for (let i = 0; i < origIndices.length; i++) {
+      if (shufIndices[i] !== origIndices[i]) swapped++;
+    }
+    const swapFraction = swapped / origIndices.length;
+    assert.ok(swapFraction >= 0.80, `Expected >= 80% swapped edges, got ${(swapFraction * 100).toFixed(2)}%`);
   });
 });

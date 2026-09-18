@@ -1,14 +1,14 @@
 /**
- * Phase III: Causal Counterfactual Replay Script
+ * Phase III: Causal Counterfactual Replay Script (Audited V2)
  *
  * Checkpoints identical physical & neural substrate state immediately before
  * environmental mutation at Step 4 (position (5, 3), heading 0).
  *
  * Forks into 4 counterfactual branches:
- *   - Branch A (Intact Closed Loop): Sovereign DeltaX governance on intact connectome.
- *   - Branch B (Executive Memory Reset): Executive session reset at fork point.
- *   - Branch C (Targeted Substrate Silencing): Bilateral silencing of steering DNs (DNg100, DNg97, DNp09).
- *   - Branch D (Sham Control Silencing): Matched count (6) silencing of non-steering DNs (DNp01, DNp02, DNp04).
+ *   - Branch A (Intact Closed Loop): Sovereign DeltaX with restored executive persistent state.
+ *   - Branch B (Executive Memory Reset): Sovereign DeltaX with fresh executive state (A vs B isolated).
+ *   - Branch C (Targeted Substrate Silencing): Silencing of steering DNs (DNa02, DNa01, DNp09; count=6) with restored executive.
+ *   - Branch D (Sham Control Silencing): Silencing of non-steering DNs (DNp01, DNp02, DNp04; count=6) with restored executive.
  *
  * Output: artifacts/changed_world/causal-replay-branches.json
  */
@@ -26,13 +26,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const cmd = process.env.DELTAX_LOCAL_RUNTIME_CMD;
 
-export async function runCausalReplay({ seed = 3000 } = {}) {
+export async function runCausalReplay({ seed = 4000 } = {}) {
   if (!cmd) {
     throw new Error("DELTAX_LOCAL_RUNTIME_CMD required for causal replay; refusing silent fallback");
   }
 
   console.log("\n=======================================================");
-  console.log("     PHASE III CAUSAL COUNTERFACTUAL REPLAY");
+  console.log("     PHASE III CAUSAL COUNTERFACTUAL REPLAY (AUDITED V2)");
   console.log(`     Evaluation Seed: ${seed}`);
   console.log("=======================================================\n");
 
@@ -64,9 +64,7 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
 
     const dnReadouts = baselineRuntime.getDescendingNeuronReadouts();
     const candidates = bridge.generateCandidates(dnReadouts, step);
-    const topCand = [...candidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
 
-    // Executive evaluation
     const packet = {
       session_id: baselineSessionId,
       condition: "EXECUTIVE",
@@ -102,20 +100,21 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
     });
   }
 
-  // Checkpoint at step 4
+  // Pre-mutation checkpoint at step 4
   const checkpointPos = { x: baselineWorld.body.x, y: baselineWorld.body.y, heading: baselineWorld.body.heading };
   const checkpointEnergy = baselineWorld.energy;
   const connectomeSnapshot = baselineRuntime.snapshot();
+  const executiveCheckpoint = await sharedExec.checkpoint(baselineSessionId);
 
   console.log(`Checkpoint Created at Step 4: pos=(${checkpointPos.x}, ${checkpointPos.y}, h=${checkpointPos.heading}), energy=${checkpointEnergy}`);
+  console.log(`Executive Checkpoint State: tick=${executiveCheckpoint?.state?.tick}, tnm_events=${executiveCheckpoint?.state?.tnm_events?.length}`);
 
   // ── Helper to run a branch post-checkpoint ────────────────────────────────
-  async function runBranch({ branchId, name, perturbationFn, sessionId }) {
+  async function runBranch({ branchId, name, perturbationFn, restoreExecutive = true }) {
     console.log(`\nExecuting ${branchId}: ${name}...`);
 
     // Restore identical physical world state
     const world = new ChangedWorld({ seed, changeAtStep: 5, initialEnergy: 50 });
-    // Replay steps 1..4 in world to match exact internal history & event ordering
     for (let s = 1; s <= 4; s++) world.applyAction("forward");
 
     // Restore bit-exact connectome neural snapshot
@@ -128,10 +127,17 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
       perturbationDetails = perturbationFn(runtime);
     }
 
+    // Configure branch executive session
+    const branchSessionId = `branch_${branchId.toLowerCase()}_${Date.now()}`;
+    let startingTick = 0;
+    if (restoreExecutive && executiveCheckpoint?.state) {
+      await sharedExec.restore(branchSessionId, executiveCheckpoint.state);
+      startingTick = executiveCheckpoint.state.tick;
+    }
+
     const branchHistory = [...baselineHistory];
     let collisionCount = 0;
     let hazardCount = 0;
-    let divertWait = 0;
 
     for (let step = 5; step <= 25; step++) {
       if (world.isGoal()) break;
@@ -155,6 +161,7 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
       const dnReadouts = runtime.getDescendingNeuronReadouts();
       const candidates = bridge.generateCandidates(dnReadouts, step);
 
+      // Enforce hard physical impossibility for forward locomotion
       if (isBlocked) {
         for (const c of candidates) {
           if (c.action_class === "locomotion_forward") c.forbidden = true;
@@ -172,7 +179,7 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
       }
 
       const packet = {
-        session_id: sessionId,
+        session_id: branchSessionId,
         condition: "EXECUTIVE",
         step_id: step,
         objective: "navigate_to_goal_with_coherence",
@@ -206,30 +213,16 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
         (c) => c.id === decision.selected_action_id || c.substrate_candidate_id === decision.selected_action_id
       );
 
+      // Strict unassisted candidate selection: follow DeltaX decision without harness rescue
       let chosenCandidate = null;
-      if (isBlocked) {
-        divertWait++;
-        const steerCand = admitted.find((c) => ["turn_left", "turn_right"].includes(c.action_class));
-        if ((divertWait >= 1 || selected?.action_class === "halt") && steerCand) {
-          chosenCandidate = steerCand;
-        } else {
-          chosenCandidate = (selected && !selected.forbidden && !vetoedIds.has(selected.id))
-            ? selected
-            : (admitted[0] || candidates.find((c) => c.provenance_type === "FALLBACK"));
-        }
+      if (selected && !selected.forbidden && !vetoedIds.has(selected.id) && !vetoedIds.has(selected.substrate_candidate_id)) {
+        chosenCandidate = selected;
+      } else if (admitted.length > 0) {
+        chosenCandidate = admitted[0];
       } else {
-        divertWait = 0;
-        const isBypassWall = (st.body.y === 1 && st.body.heading === 3) || (st.body.y === 5 && st.body.heading === 1);
-        if (isBypassWall) {
-          const reorientSteer = admitted.find((c) => (st.body.heading === 3 ? c.action_class === "turn_right" : c.action_class === "turn_left")) ||
-                                admitted.find((c) => ["turn_left", "turn_right"].includes(c.action_class));
-          chosenCandidate = reorientSteer || (selected && !selected.forbidden ? selected : admitted[0]);
-        } else {
-          chosenCandidate = (selected && !selected.forbidden && !vetoedIds.has(selected.id)) ? selected : (admitted[0] || topCand);
-        }
+        chosenCandidate = candidates.find((c) => c.provenance_type === "FALLBACK") || topCand;
       }
 
-      // Causal integrity check
       if (!chosenCandidate || !candidates.some((c) => c.id === chosenCandidate.id && c.substrate_candidate_id === chosenCandidate.substrate_candidate_id)) {
         throw new Error(`Causal integrity violation in ${branchId}`);
       }
@@ -261,6 +254,7 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
     return {
       branchId,
       name,
+      startingTick,
       perturbationDetails,
       reachedGoal,
       finalOutcome,
@@ -272,43 +266,51 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
     };
   }
 
-  // ── Branch A: Intact Closed Loop ──────────────────────────────────────────
+  // ── Branch A: Intact Closed Loop (Retained Executive State) ───────────────
   const branchA = await runBranch({
     branchId: "BRANCH_A",
-    name: "Intact Sovereign Closed Loop",
-    sessionId: baselineSessionId,
+    name: "Intact Sovereign Closed Loop (Retained Executive State)",
+    restoreExecutive: true,
     perturbationFn: null,
   });
 
-  // ── Branch B: Executive Memory Reset at Fork ──────────────────────────────
+  // ── Branch B: Executive Memory Reset at Fork Point (Fresh Executive State) ──
   const branchB = await runBranch({
     branchId: "BRANCH_B",
-    name: "Executive Memory Reset at Fork Point",
-    sessionId: `fork_reset_${Date.now()}`,
+    name: "Executive Memory Reset at Fork Point (Fresh Executive State)",
+    restoreExecutive: false,
     perturbationFn: null,
   });
 
-  // ── Branch C: Targeted Silencing of Steering DNs ──────────────────────────
+  // ── Branch C: Targeted Steering Silencing (DNa02, DNa01, DNp09; count=6) ──
   const branchC = await runBranch({
     branchId: "BRANCH_C",
-    name: "Targeted Substrate Silencing (DNa02, DNa01, DNp09)",
-    sessionId: baselineSessionId + "_branch_c",
+    name: "Targeted Steering Substrate Silencing (DNa02, DNa01, DNp09; count=6; Retained Executive)",
+    restoreExecutive: true,
     perturbationFn: (rt) => {
       const silencedTypes = ["DNa02", "DNa01", "DNp09"];
       const res = rt.silence(silencedTypes);
-      return { silenced_types: silencedTypes, silenced_count: res.silenced_count };
+      return {
+        silenced_types: silencedTypes,
+        silenced_count: res.silenced_count,
+        functional_classification: "Descending steering torque command neurons (ipsilateral & contralateral)",
+      };
     },
   });
 
-  // ── Branch D: Sham Control Silencing ──────────────────────────────────────
+  // ── Branch D: Sham Control Silencing (DNp01, DNp02, DNp04; count=6) ────────
   const branchD = await runBranch({
     branchId: "BRANCH_D",
-    name: "Sham Control Silencing (DNp01, DNp02, DNp04 - matched count = 6)",
-    sessionId: baselineSessionId + "_branch_d",
+    name: "Sham Control Silencing (DNp01, DNp02, DNp04; count=6; Retained Executive)",
+    restoreExecutive: true,
     perturbationFn: (rt) => {
       const shamTypes = ["DNp01", "DNp02", "DNp04"];
       const res = rt.silence(shamTypes);
-      return { sham_types: shamTypes, silenced_count: res.silenced_count };
+      return {
+        sham_types: shamTypes,
+        silenced_count: res.silenced_count,
+        functional_classification: "Non-steering descending command neurons (giant fibre escape and takeoff; matched count=6)",
+      };
     },
   });
 
@@ -317,7 +319,7 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
   }
 
   const causalReplayReport = {
-    schema: "deltax-causal-replay-branches-v1",
+    schema: "deltax-causal-replay-branches-v2",
     generated_at: new Date().toISOString(),
     seed,
     fork_step: 4,
@@ -333,9 +335,21 @@ export async function runCausalReplay({ seed = 3000 } = {}) {
       branch_b_memory_reset: branchB.finalOutcome,
       branch_c_targeted_silencing: branchC.finalOutcome,
       branch_d_sham_silencing: branchD.finalOutcome,
-      causal_attribution: {
-        executive_contribution_proven: branchA.reachedGoal && !branchC.reachedGoal,
-        steering_circuit_necessity_proven: branchA.reachedGoal && !branchC.reachedGoal && branchD.reachedGoal,
+      comparisons: {
+        "A_vs_B": {
+          description: "Differs strictly by executive persistent state (restored vs fresh) under identical neural and physical state",
+          branch_a_outcome: branchA.finalOutcome,
+          branch_b_outcome: branchB.finalOutcome,
+          branch_a_collisions: branchA.collisionCount,
+          branch_b_collisions: branchB.collisionCount,
+        },
+        "C_vs_D": {
+          description: "Differs strictly by targeted steering silencing vs matched count sham non-steering silencing under identical executive and physical state",
+          branch_c_outcome: branchC.finalOutcome,
+          branch_d_outcome: branchD.finalOutcome,
+          branch_c_collisions: branchC.collisionCount,
+          branch_d_collisions: branchD.collisionCount,
+        },
       },
     },
   };
@@ -355,3 +369,4 @@ if (process.argv[1] && process.argv[1].endsWith("causal_replay.mjs")) {
     process.exit(1);
   });
 }
+

@@ -104,18 +104,40 @@ export class ChangedWorldHarness {
       isRecurrence: false,
     });
 
+    let trial1Checkpoint = null;
+    if (this.executive && typeof this.executive.checkpoint === "function") {
+      try {
+        trial1Checkpoint = await this.executive.checkpoint(this.sessionId);
+      } catch (err) {
+        trial1Checkpoint = { error: err.message };
+      }
+    }
+
     // --- FORK FOR RECURRENCE ---
     this.world.resetForRecurrence({ preserveChanged: true });
 
     let trial2SessionId = this.sessionId;
+    let resetReceipt = null;
+    let stateLineage = "RETAINED_CONTINUATION";
+
     if (shouldResetMemory && this.executive) {
       trial2SessionId = `${this.sessionId}_trial2_reset_${Date.now()}`;
+      stateLineage = "DISCONTINUOUS_FRESH_SESSION";
       if (typeof this.executive.reset === "function") {
         try {
-          await this.executive.reset(this.sessionId);
-        } catch {
-          // ignore if reset unsupported
+          resetReceipt = await this.executive.reset(trial2SessionId);
+        } catch (err) {
+          resetReceipt = { error: err.message };
         }
+      }
+    }
+
+    let trial2PreflightCheckpoint = null;
+    if (this.executive && typeof this.executive.checkpoint === "function") {
+      try {
+        trial2PreflightCheckpoint = await this.executive.checkpoint(trial2SessionId);
+      } catch (err) {
+        trial2PreflightCheckpoint = { error: err.message };
       }
     }
 
@@ -143,6 +165,28 @@ export class ChangedWorldHarness {
       collisionReduction,
       recurrenceSpeedup,
       episodeWallTimeMs,
+      executiveLineage: {
+        condition: this.condition,
+        shouldResetMemory,
+        stateLineage,
+        trial1SessionId: this.sessionId,
+        trial2SessionId,
+        trial1Checkpoint: trial1Checkpoint?.state ? {
+          session_id: trial1Checkpoint.session_id,
+          tick: trial1Checkpoint.state.tick,
+          tnm_event_count: trial1Checkpoint.state.tnm_events?.length ?? 0,
+        } : trial1Checkpoint,
+        resetReceipt: resetReceipt ? {
+          type: resetReceipt.type,
+          session_id: resetReceipt.session_id,
+          provenance: resetReceipt.provenance,
+        } : null,
+        trial2PreflightCheckpoint: trial2PreflightCheckpoint?.state ? {
+          session_id: trial2PreflightCheckpoint.session_id,
+          tick: trial2PreflightCheckpoint.state.tick,
+          tnm_event_count: trial2PreflightCheckpoint.state.tnm_events?.length ?? 0,
+        } : trial2PreflightCheckpoint,
+      },
       trial1,
       trial2,
       summary: {
@@ -181,9 +225,8 @@ export class ChangedWorldHarness {
     let connectomeSimTimeMs = 0;
     let deltaxIpcTimeMs = 0;
     let decisionTickTimeMs = 0;
-    let divertWait = 0;
+    let firstExecutivePacket = null;
     const session = sessionIdOverride || this.sessionId;
-    const isRetainedSession = isRecurrence && !sessionIdOverride?.includes("reset");
 
     for (let step = 1; step <= this.maxStepsPerTrial; step++) {
       if (this.world.isGoal()) break;
@@ -197,11 +240,6 @@ export class ChangedWorldHarness {
       const isHazard = senses.gradients.hazard;
 
       if (isHazard) hazardCount++;
-
-      // Memory anticipation: Retained executive knows central corridor is blocked downstream
-      // when passing the bypass junction at (x=3, y=3, heading=0)
-      const isKnownBlockedAhead = isRetainedSession && st.body.x === 3 && st.body.y === 3 && st.body.heading === 0;
-      const shouldDivert = isBlocked || isKnownBlockedAhead;
 
       // 2. Transduce sensory inputs to connectome drives
       const sensoryDrives = this.transduction.transduce({
@@ -222,8 +260,8 @@ export class ChangedWorldHarness {
       const dnReadouts = this.runtime.getDescendingNeuronReadouts();
       const candidates = this.bridge.generateCandidates(dnReadouts, step);
 
-      // Suppress forward action when blocked or anticipating blockage
-      if (shouldDivert) {
+      // Hard physical constraint: forward locomotion is physically impossible when blocked ahead
+      if (isBlocked) {
         for (const c of candidates) {
           if (c.action_class === "locomotion_forward") {
             c.forbidden = true;
@@ -242,7 +280,7 @@ export class ChangedWorldHarness {
         chosenCandidate = topCandidate;
 
       } else if (this.condition === "STATIC_GUARD") {
-        // Fixed nonlearning reflex: only intervenes on direct obstacle collision/detection, never memory
+        // Fixed nonlearning reflex: intervenes on direct physical obstacle collision/detection
         if (isBlocked) {
           staticGuardIntervened = true;
           const steerCand = candidates.find((c) => !c.forbidden && ["turn_left", "turn_right"].includes(c.action_class)) ||
@@ -259,6 +297,10 @@ export class ChangedWorldHarness {
           if (contradictionOnsetStep === null) contradictionOnsetStep = step;
           totalContradictions++;
         }
+        if (isHazard) {
+          contradictions.push({ expected: "safe_passage", observed: "hazard_cell", severity: "medium" });
+          totalContradictions++;
+        }
 
         const packet = this._buildExecutivePacket({
           sessionId: session,
@@ -271,6 +313,10 @@ export class ChangedWorldHarness {
           dnReadouts,
         });
 
+        if (!firstExecutivePacket) {
+          firstExecutivePacket = JSON.parse(JSON.stringify(packet));
+        }
+
         const ipcStart = Date.now();
         decision = await this.executive.decide(packet);
         deltaxIpcTimeMs += (Date.now() - ipcStart);
@@ -281,10 +327,6 @@ export class ChangedWorldHarness {
         const contradictions = [];
         if (isBlocked) {
           contradictions.push({ expected: "corridor_clear", observed: "obstacle_collision", severity: "high" });
-          if (contradictionOnsetStep === null) contradictionOnsetStep = step;
-          totalContradictions++;
-        } else if (isKnownBlockedAhead) {
-          contradictions.push({ expected: "corridor_clear", observed: "known_downstream_blockage_in_memory", severity: "high" });
           if (contradictionOnsetStep === null) contradictionOnsetStep = step;
           totalContradictions++;
         }
@@ -303,6 +345,10 @@ export class ChangedWorldHarness {
           contradictions,
           dnReadouts,
         });
+
+        if (!firstExecutivePacket) {
+          firstExecutivePacket = JSON.parse(JSON.stringify(packet));
+        }
 
         const ipcStart = Date.now();
         decision = await this.executive.decide(packet);
@@ -323,27 +369,14 @@ export class ChangedWorldHarness {
           (c) => c.id === decision.selected_action_id || c.substrate_candidate_id === decision.selected_action_id
         );
 
-        if (shouldDivert) {
-          divertWait++;
-          const steerCand = admitted.find((c) => ["turn_left", "turn_right"].includes(c.action_class));
-          if ((divertWait >= 1 || selected?.action_class === "halt") && steerCand) {
-            chosenCandidate = steerCand;
-          } else {
-            chosenCandidate = (selected && !selected.forbidden && !vetoedIds.has(selected.id))
-              ? selected
-              : (admitted[0] || candidates.find((c) => c.provenance_type === "FALLBACK"));
-          }
+        // Strict unassisted candidate selection: Follow DeltaX decision wherever non-forbidden and unvetoed.
+        // Zero harness-side steering overrides. If DeltaX selects halt, the entity halts.
+        if (selected && !selected.forbidden && !vetoedIds.has(selected.id) && !vetoedIds.has(selected.substrate_candidate_id)) {
+          chosenCandidate = selected;
+        } else if (admitted.length > 0) {
+          chosenCandidate = admitted[0];
         } else {
-          divertWait = 0;
-          // In bypass corridor facing wall (y=1 or y=5, heading North or South): steer towards East
-          const isBypassWall = (st.body.y === 1 && st.body.heading === 3) || (st.body.y === 5 && st.body.heading === 1);
-          if (isBypassWall) {
-            const reorientSteer = admitted.find((c) => (st.body.heading === 3 ? c.action_class === "turn_right" : c.action_class === "turn_left")) ||
-                                  admitted.find((c) => ["turn_left", "turn_right"].includes(c.action_class));
-            chosenCandidate = reorientSteer || (selected && !selected.forbidden ? selected : admitted[0]);
-          } else {
-            chosenCandidate = (selected && !selected.forbidden && !vetoedIds.has(selected.id)) ? selected : (admitted[0] || topCandidate);
-          }
+          chosenCandidate = candidates.find((c) => c.provenance_type === "FALLBACK") || topCandidate;
         }
       }
 
@@ -432,6 +465,7 @@ export class ChangedWorldHarness {
         decisionTickTimeMs,
         meanTickMs: +(decisionTickTimeMs / Math.max(1, history.length)).toFixed(2),
       },
+      firstExecutivePacket,
       history,
     };
   }
