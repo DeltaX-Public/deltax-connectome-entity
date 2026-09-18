@@ -52,7 +52,11 @@ test("2. Candidate Provenance Integrity (originating populations & zero semantic
     assert.ok(c.action_class, "Candidate must have action_class");
     assert.ok(typeof c.activation_strength === "number", "activation_strength must be numeric");
     assert.ok(c.originating_population.length > 0, "Must declare originating neuron population");
-    assert.ok(c.originating_neuron_indices.length > 0, "Must declare individual neuron indices");
+    assert.ok(["MEASURED_NEURAL", "DERIVED_NEURAL", "FALLBACK"].includes(c.provenance_type), "Must declare valid provenance_type");
+    assert.ok(c.actuator_action, "Must declare actuator_action");
+    if (c.provenance_type !== "FALLBACK") {
+      assert.ok(c.originating_neuron_indices.length > 0, "Must declare individual neuron indices for neural candidates");
+    }
     assert.ok(c.raw_activity_measure, "Must include raw activity measure");
     assert.ok(c.normalization_method, "Must include normalization method");
 
