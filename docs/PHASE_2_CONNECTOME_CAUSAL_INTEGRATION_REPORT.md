@@ -2,8 +2,8 @@
 
 **Project:** `DeltaX-Public/deltax-connectome-entity`  
 **Date:** September 18, 2026  
-**Status:** Complete & Verified Baseline  
-**Active Branch:** `phase2-real-connectome-integration`  
+**Status:** Phase II causal-integrity pass complete — post-integrity experimental baseline  
+**Active Branch:** `main`  
 **Execution:** 100% Sovereign Local Subprocess IPC (macOS Darwin, Zero Cloud Network Egress)
 
 ---
@@ -104,32 +104,22 @@ To prove that downstream actions are causally driven by biological neural popula
 
 ---
 
-## 6. Executive Divergence Mechanism: Candidate Arbitration under PERMIT
+## 6. Task Horizon vs. Connectome Settling Time
 
-A skeptical reviewer reading the evaluation battery may ask:
-> *If DeltaX did not veto, modulate, defer, or escalate (reporting `intervention_rate: 0`), why did EXECUTIVE achieve 100% goal completion while CONTROL achieved 0%?*
+> [!IMPORTANT]
+> **The current 12-step task horizon is shorter than the intact connectome's effective sensory-to-locomotor settling time.**
+> Biological multi-synaptic latency through 4–5 interneuron relay layers means descending motor neurons (`DNg100/97/p09`) do not exceed postural halting suppression (`halt`) until step 5–6. This leaves only 6–7 forward-walking steps within the 12-step budget—insufficient to traverse the corridor to the goal at $x=9$.
+>
+> Consequently, this experiment **does not currently establish a DeltaX performance advantage** over unguided substrate control. All conditions sharing the intact connectome (CONTROL, OBSERVE, EXECUTIVE, SHAM) exhibit identical 0% goal completion, demonstrating that the current task horizon falls within the connectome's biological ramping window.
+>
+> The `SHUFFLED_CONNECTOME` achieves 100% because degree-preserving random rewiring creates direct sensory-to-descending connections that bypass multi-layer interneuron delay, enabling forward motion from step 1. This is a legitimate biological specificity finding—not a DeltaX advantage.
 
-### The Causal Mechanism: Executive Candidate Arbitration
-1. **Substrate Proposal Phase:** At each step, the connectome recurrent substrate emits multiple descending-neuron candidates:
-   - `cand_fwd` (forward locomotor command: `DNg100/97/p09/a05`)
-   - `cand_halt` (standing balance / stopping posture: `MDN/DNa02`)
-   - `cand_turn_left` / `cand_turn_right` (steering torque: `DNa02/01/DNp09`)
-2. **Unguided CONTROL Logic:**
-   - `CONTROL` blindly executes the single candidate with the highest raw activation strength (`substrateWinner`).
-   - In early steps or obstacle boundaries, raw local mechanosensory drive makes `cand_halt` or `cand_turn_left` the raw max-activation winner, causing `CONTROL` to halt or loop in place without advancing.
-3. **Governed EXECUTIVE Logic:**
-   - In `EXECUTIVE`, DeltaX evaluates all proposed substrate candidates through its 16-step canonical pipeline:
-     - Evidence integration & objective alignment (`objective: reach_goal_with_coherence`)
-     - Predictor $\hat{\chi}$ projection
-     - Multi-threshold coherence evaluation ($\chi_{\text{safety}}, \chi_{\text{recovery}}, \chi_{\text{identity}}$)
-     - $\Lambda$-governance filtering
-     - Coherence-maximizing action selection: `select(valid_actions, p_valid, coherence)`
-   - DeltaX identifies `cand_fwd` as the coherent, admissible candidate aligned with goal progress.
-   - The execution gate verifies and issues a `PERMIT` for `cand_fwd`.
-4. **Metrics Distinction:**
-   - **Hard Interventions (`intervention_rate`):** Explicit blocks or modifications (`VETO`, `MODULATE`, `DEFER`).
-   - **Executive Arbitration (`arbitration_rate`):** Selection and permission of an admissible substrate candidate different from the raw max-activation substrate winner.
-   - In this battery, DeltaX exercised 100% `arbitration_rate` under `PERMIT`, successfully guiding the rover through the corridor and door without requiring emergency `VETO` or `MODULATE`.
+### Superseded Historical Evidence (Pre-Integrity Pass)
+
+> [!WARNING]
+> **The following is archived for provenance only and does NOT reflect current experimental results.**
+
+Prior to the Phase II Causal Integrity Pass, Section 6 contained an explanation of how `EXECUTIVE` achieved 100% goal completion via "candidate arbitration under PERMIT." That mechanism relied on post-evaluation actuator shortcuts (`MODULATE → forward`, `PERMIT → forward`, `blocked → left`) that forced forward actuation independent of descending neuron state. Those shortcuts have been excised and the 100% result is formally designated `superseded_pre_integrity_pass`. The current EXECUTIVE goal rate is **0.0%** under 25 held-out seeds (1000..1024).
 
 ---
 
@@ -163,8 +153,8 @@ To isolate the functional contributions of individual architectural subsystems:
 | **Claim** | Post-integrity causal verification across 25 held-out seeds (1000..1024), component ablations, and triple-branch causal neural intervention with zero actuator shortcuts |
 | **Status of Initial 100% Lift** | Formally designated as `superseded_pre_integrity_pass` (actuator shortcuts eliminated) |
 | **Command** | `node --test test/*.mjs && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs && node scripts/run_ablations.mjs --seeds=10` |
-| **Branch** | `phase2-real-connectome-integration` |
-| **Commit** | HEAD of `phase2-real-connectome-integration` |
+| **Branch** | `main` (follow-up from `fix/post-integrity-corrections`) |
+| **Commit** | HEAD of `main` |
 | **Seed Set** | `1000..1024` (held-out battery), `1000..1009` (ablations), `105` (causal intervention) |
 | **Runtime Mode** | `local_runtime` (via `DELTAX_LOCAL_RUNTIME_CMD`) |
 | **Artifacts** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/ablations/latest-component-ablations.json`, `artifacts/interventions/latest-neural-intervention.json` |

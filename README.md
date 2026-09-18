@@ -6,8 +6,8 @@ A public, sovereign harness integrating a 165,122-neuron connectome graph recurr
 
 | Subsystem | Status | Reality & Provenance |
 | --- | --- | --- |
-| **Phase II: Real Connectome** | **Complete & Verified** | Strict candidate provenance typing; post-DeltaX shortcuts excised; initial 100% lift marked `superseded_pre_integrity_pass` |
-| **Causal Neural Intervention** | **Complete & Verified** | Bit-exact tripartite state branching with targeted optogenetic silencing (`DNg100/97/p09`) vs sham controls |
+| **Phase II: Real Connectome** | **Causal-Integrity Pass Complete** | Strict candidate provenance typing; post-DeltaX shortcuts excised; initial 100% lift marked `superseded_pre_integrity_pass`; current 12-step horizon does not yet establish DeltaX performance advantage |
+| **Causal Neural Intervention** | **Verified** | Bit-exact tripartite state branching with targeted optogenetic silencing (`DNg100/97/p09`) vs sham controls |
 | **Held-Out Evaluation Battery** | **25 Seeds Complete** | Post-integrity held-out evaluation battery (seeds 1000..1024) across CONTROL, OBSERVE, EXECUTIVE, SHAM, and degree-preserving SHUFFLED_CONNECTOME |
 | **Component Ablation Suite** | **10 Seeds Complete** | Quantified isolation of No DeltaX, OBSERVE only, Shuffled Graph, Lambda Gate, Memory Reset, and Contradiction Handling |
 | **Sovereign Local Runtime** | **Active (0 Egress)** | Shared private JSONL provider via `DELTAX_LOCAL_RUNTIME_CMD`; provenance `executive_source: local_runtime`; zero external network egress observed |
@@ -22,8 +22,8 @@ A public, sovereign harness integrating a 165,122-neuron connectome graph recurr
 | **Claim** | Post-integrity causal verification across 25 held-out seeds (1000..1024), component ablations, and triple-branch causal neural intervention with zero actuator shortcuts |
 | **Status of Initial 100% Lift** | Formally designated as `superseded_pre_integrity_pass` (actuator shortcuts eliminated) |
 | **Command** | `node --test test/*.mjs && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs && node scripts/run_ablations.mjs --seeds=10` |
-| **Branch** | `phase2-real-connectome-integration` |
-| **Commit** | HEAD of `phase2-real-connectome-integration` |
+| **Branch** | `main` (follow-up from `fix/post-integrity-corrections`) |
+| **Commit** | HEAD of `main` |
 | **Seed Set** | `1000..1024` (held-out battery), `1000..1009` (ablations), `105` (causal intervention) |
 | **Runtime Mode** | `local_runtime` (via `DELTAX_LOCAL_RUNTIME_CMD`) |
 | **Expected Artifact** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/ablations/latest-component-ablations.json`, `artifacts/interventions/latest-neural-intervention.json` |
