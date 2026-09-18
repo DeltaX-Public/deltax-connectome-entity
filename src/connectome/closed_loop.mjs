@@ -12,6 +12,14 @@ import { ConnectomeCandidateBridge } from "./candidate_bridge.mjs";
 import { createShuffledConnectome } from "./shuffled_control.mjs";
 import { createExecutive } from "../deltax/index.mjs";
 
+function computeEntropy(candidates) {
+  const strengths = (candidates || []).map((c) => Math.max(1e-9, c.activation_strength || 0));
+  const sum = strengths.reduce((a, b) => a + b, 0);
+  if (sum === 0) return 0;
+  const probs = strengths.map((s) => s / sum);
+  return -probs.reduce((acc, p) => acc + (p > 0 ? p * Math.log2(p) : 0), 0);
+}
+
 export class ConnectomeClosedLoop {
   constructor(opts = {}) {
     this.opts = opts;
@@ -70,10 +78,13 @@ export class ConnectomeClosedLoop {
     let hazardEncounters = 0;
     let contradictionEvents = 0;
     let repeatedLoops = 0;
+    let fallbackCount = 0;
+    const stepLatencies = [];
     let lastAction = null;
     const t0 = Date.now();
 
     for (let i = 0; i < this.steps; i++) {
+      const stepStart = Date.now();
       const stepNum = i + 1;
 
       // 1. Observe physical world state
@@ -98,103 +109,120 @@ export class ConnectomeClosedLoop {
       // 4. Measure descending neuron populations and form Candidate Action Field
       const dnReadouts = this.runtime.getDescendingNeuronReadouts();
       const candidates = this.bridge.generateCandidates(dnReadouts, stepNum);
-
-      // Determine top candidate from substrate
       const substrateWinner = [...candidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
+      const entropyBefore = computeEntropy(candidates);
 
-      let chosenAction = "halt";
+      // 5. Build canonical DeltaX packet & evaluate
+      let chosenAction = "stop";
+      let chosenCandidate = null;
       let decision = null;
 
-      // 5. DeltaX Executive Governance (conditioned on experimental mode)
-      if (this.condition === "CONTROL" || this.condition === "SHUFFLED_CONNECTOME") {
-        // Pure substrate decision
-        chosenAction = this._mapActionClassToRover(substrateWinner.action_class);
-      } else if (this.condition === "SHAM") {
-        // Sham matched latency call without executive veto
-        chosenAction = this._mapActionClassToRover(substrateWinner.action_class);
+      const detectedContradictions = [];
+      if (st.energy < 3) {
+        detectedContradictions.push({
+          type: "energy_depletion",
+          severity: "high",
+          remaining: st.energy,
+        });
+        contradictionEvents++;
+      }
+      if (isHazard) {
+        detectedContradictions.push({
+          type: "hazard_proximity",
+          severity: "critical",
+          loc: { x: st.body.x, y: st.body.y },
+        });
+        contradictionEvents++;
+      }
+
+      const packet = {
+        session_id: this.sessionId,
+        condition: this.condition,
+        step_id: stepNum,
+        objective: "reach_goal_with_coherence",
+        environment_state_summary: {
+          hazard: isHazard,
+          door_closed: this.world.arena.door.closed,
+          wall_ahead: senses.visual_field?.wall_ahead || false,
+        },
+        substrate_state_summary: {
+          energy: st.energy,
+          heading: st.body.heading,
+          step: st.step,
+          mean_active_neurons: simInfo.mean_active_neurons,
+          descending_forward_hz: dnReadouts.forward?.weighted_mean || 0,
+          descending_turn_l_hz: dnReadouts.turn_left?.weighted_mean || 0,
+          descending_turn_r_hz: dnReadouts.turn_right?.weighted_mean || 0,
+        },
+        candidate_actions: candidates,
+        detected_contradictions: detectedContradictions,
+        active_constraints: isHazard ? ["sandbox", "no_hidden_actuator"] : ["sandbox"],
+        available_executive_actions: ["PERMIT", "VETO", "MODULATE", "DEFER", "ESCALATE"],
+      };
+
+      if (!this.executive || this.condition === "CONTROL") {
+        // Pure substrate choice: no DeltaX governance
+        chosenCandidate = substrateWinner;
       } else {
-        // OBSERVE or EXECUTIVE
-        const detectedContradictions = [];
-        if (isHazard) {
-          detectedContradictions.push({ expected: "safe_corridor", observed: "hazard_gradient_active" });
-          contradictionEvents++;
-        }
+        decision = await this.executive.decide(packet);
+        const disp = decision.disposition ?? decision.selected_disposition ?? "DEFER";
+        if (dispositionCounts[disp] != null) dispositionCounts[disp]++;
 
-        const packet = {
-          session_id: `${this.runId}_${this.condition.toLowerCase()}`,
-          condition: this.condition,
-          step_id: stepNum,
-          objective: "reach_goal_with_coherence",
-          environment_state_summary: {
-            corridor: senses.visual_field?.corridor,
-            door_closed: this.world.arena.door.closed,
-            hazard_gradient: isHazard,
-            nearest_obstacle: senses.proximity?.nearest_distance,
-          },
-          substrate_state_summary: {
-            energy: st.energy,
-            heading: st.body.heading,
-            step: st.step,
-            mean_active_neurons: simInfo.mean_active_neurons,
-            descending_forward_hz: dnReadouts.forward?.weighted_mean || 0,
-            descending_turn_l_hz: dnReadouts.turn_left?.weighted_mean || 0,
-            descending_turn_r_hz: dnReadouts.turn_right?.weighted_mean || 0,
-          },
-          candidate_actions: candidates,
-          detected_contradictions: detectedContradictions,
-          active_constraints: isHazard ? ["sandbox", "no_hidden_actuator"] : ["sandbox"],
-          available_executive_actions: ["PERMIT", "VETO", "MODULATE", "DEFER", "ESCALATE"],
-        };
+        if (disp === "VETO") vetoCount++;
+        if (disp === "MODULATE") modulationCount++;
+        if (disp === "DEFER") deferCount++;
+        if (disp === "PERMIT") permitCount++;
 
-        if (this.executive) {
-          decision = await this.executive.decide(packet);
-          const disp = decision.disposition ?? decision.selected_disposition ?? "DEFER";
-          if (dispositionCounts[disp] != null) dispositionCounts[disp]++;
-
-          if (disp === "VETO") vetoCount++;
-          if (disp === "MODULATE") modulationCount++;
-          if (disp === "DEFER") deferCount++;
-          if (disp === "PERMIT") permitCount++;
-
-          // EXECUTIVE arbitration detection
+        if (this.condition === "OBSERVE") {
+          // OBSERVE condition: DeltaX records evaluation ephemerally, never alters execution
+          chosenCandidate = substrateWinner;
+        } else {
+          // EXECUTIVE condition: strict intersection of candidate field and permitted candidate set
           const permittedSubIds = new Set((decision.permitted || []).map((p) => p.substrate_candidate_id || p.id));
-          const permittedCandidate = candidates.find(
+          const permittedCandidates = candidates.filter(
             (c) => permittedSubIds.has(c.substrate_candidate_id) || permittedSubIds.has(c.id)
           );
 
-          if (this.condition === "OBSERVE") {
-            // OBSERVE does not alter execution: pure substrate winner is actuated
-            chosenAction = this._mapActionClassToRover(substrateWinner.action_class);
-          } else {
-            // EXECUTIVE governs action: candidate arbitration or hard intervention
-            if (disp === "PERMIT" && permittedCandidate) {
-              chosenAction = this._mapActionClassToRover(permittedCandidate.action_class);
-              if (permittedCandidate.id !== substrateWinner.id) {
-                arbitrationCount++;
-              }
-            } else if (disp === "MODULATE") {
-              chosenAction = "forward";
-            } else if (disp === "VETO" || disp === "DEFER") {
-              chosenAction = "stop";
-            } else if (permittedCandidate) {
-              chosenAction = this._mapActionClassToRover(permittedCandidate.action_class);
-              if (permittedCandidate.id !== substrateWinner.id) {
-                arbitrationCount++;
-              }
-            } else {
-              chosenAction = "stop";
+          if (permittedCandidates.length > 0) {
+            // Select by governed priority or activation strength
+            const selectedActionId = decision.selected_action_id;
+            chosenCandidate =
+              permittedCandidates.find((c) => c.id === selectedActionId || c.substrate_candidate_id === selectedActionId) ||
+              [...permittedCandidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
+
+            if (chosenCandidate.id !== substrateWinner.id) {
+              arbitrationCount++;
             }
+          } else {
+            // All neural candidates vetoed or excluded: select declared safe fallback
+            chosenCandidate =
+              candidates.find((c) => c.provenance_type === "FALLBACK") ||
+              candidates.find((c) => c.action_class === "safe_noop");
+            fallbackCount++;
           }
-        } else {
-          chosenAction = this._mapActionClassToRover(substrateWinner.action_class);
         }
       }
+
+      // Causal Integrity Assertion: chosen candidate MUST exist in pre-evaluation candidate field
+      if (!chosenCandidate || !candidates.some((c) => c.id === chosenCandidate.id && c.substrate_candidate_id === chosenCandidate.substrate_candidate_id)) {
+        throw new Error(`Causal integrity violation: candidate ${chosenCandidate?.id} was not present in pre-evaluation candidate field`);
+      }
+
+      // Actuator command strictly derives from the chosen candidate's actuator mapping
+      chosenAction = chosenCandidate.actuator_action || this._mapActionClassToRover(chosenCandidate.action_class);
 
       if (chosenAction === lastAction) repeatedLoops++;
       lastAction = chosenAction;
 
       // 6. Actuate action in the physical world & record consequence
       const actionResult = this.world.applyAction(chosenAction);
+      const stepDuration = Date.now() - stepStart;
+      stepLatencies.push(stepDuration);
+
+      const permittedSubIds = new Set((decision?.permitted || []).map((p) => p.substrate_candidate_id || p.id));
+      const entropyAfter = (this.condition === "EXECUTIVE" && decision?.permitted?.length)
+        ? computeEntropy(candidates.filter((c) => permittedSubIds.has(c.substrate_candidate_id) || permittedSubIds.has(c.id)))
+        : entropyBefore;
 
       history.push({
         step: stepNum,
@@ -205,9 +233,25 @@ export class ConnectomeClosedLoop {
           action_class: substrateWinner.action_class,
           strength: substrateWinner.activation_strength,
         },
+        chosen_candidate: {
+          id: chosenCandidate.id,
+          substrate_candidate_id: chosenCandidate.substrate_candidate_id,
+          action_class: chosenCandidate.action_class,
+          actuator_action: chosenCandidate.actuator_action,
+          provenance_type: chosenCandidate.provenance_type,
+          strength: chosenCandidate.activation_strength,
+        },
+        winner_before: { id: substrateWinner.id, action_class: substrateWinner.action_class },
+        winner_after: { id: chosenCandidate.id, action_class: chosenCandidate.action_class },
+        entropy_before: +entropyBefore.toFixed(3),
+        entropy_after: +entropyAfter.toFixed(3),
+        step_latency_ms: stepDuration,
         candidates: candidates.map((c) => ({
           id: c.id,
+          substrate_candidate_id: c.substrate_candidate_id,
           action: c.action_class,
+          actuator_action: c.actuator_action,
+          provenance_type: c.provenance_type,
           strength: c.activation_strength,
           provenance: {
             originating_population: c.originating_population,
@@ -227,6 +271,12 @@ export class ConnectomeClosedLoop {
 
     const latencyMs = Date.now() - t0;
     const hardInterventionCount = vetoCount + modulationCount + deferCount;
+    const sortedLatencies = [...stepLatencies].sort((a, b) => a - b);
+    const medianLatency = sortedLatencies.length ? sortedLatencies[Math.floor(sortedLatencies.length / 2)] : 0;
+    const p95Latency = sortedLatencies.length ? sortedLatencies[Math.min(sortedLatencies.length - 1, Math.floor(sortedLatencies.length * 0.95))] : 0;
+    const minLatency = sortedLatencies.length ? sortedLatencies[0] : 0;
+    const maxLatency = sortedLatencies.length ? sortedLatencies[sortedLatencies.length - 1] : 0;
+
     return {
       run_id: this.runId,
       seed: this.seed,
@@ -243,11 +293,18 @@ export class ConnectomeClosedLoop {
       defer_count: deferCount,
       permit_count: permitCount,
       arbitration_count: arbitrationCount,
+      fallback_count: fallbackCount,
       hard_intervention_count: hardInterventionCount,
       intervention_rate: +( hardInterventionCount / this.steps ).toFixed(3),
       arbitration_rate: +( arbitrationCount / this.steps ).toFixed(3),
       total_executive_influence_rate: +( (hardInterventionCount + arbitrationCount) / this.steps ).toFixed(3),
       latency_ms: latencyMs,
+      step_latency_ms: {
+        min: minLatency,
+        max: maxLatency,
+        median: medianLatency,
+        p95: p95Latency,
+      },
       history,
     };
   }
@@ -261,7 +318,8 @@ export class ConnectomeClosedLoop {
       case "halt": return "stop";
       case "giant_fiber_escape": return "stop";
       case "groom": return "stop";
-      default: return "forward";
+      case "safe_noop": return "stop";
+      default: return "stop";
     }
   }
 

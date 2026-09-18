@@ -169,24 +169,25 @@ export class ChangedWorldHarness {
       const candidates = this.bridge.generateCandidates(dnReadouts, step);
       const topCandidate = [...candidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
 
-      let chosenAction = "forward";
+      let chosenAction = "stop";
+      let chosenCandidate = null;
       let decision = null;
       let staticGuardIntervened = false;
 
       // 5. Condition Logic
       if (this.condition === "CONTROL") {
         // Pure connectome proposal
-        chosenAction = this._mapCandidateToRover(topCandidate.action_class);
+        chosenCandidate = topCandidate;
 
       } else if (this.condition === "STATIC_GUARD") {
         // Baseline: Fixed, nonlearning rule filter
-        // If obstacle directly ahead, veto forward and pivot away
+        // If obstacle directly ahead, veto forward and select steering alternative from candidates
         if (isBlocked) {
           staticGuardIntervened = true;
-          // Fixed rule: steer left into bypass if open, otherwise right
-          chosenAction = "left";
+          const steerCand = candidates.find((c) => c.action_class === "turn_left") || candidates.find((c) => c.action_class === "turn_right") || candidates.find((c) => c.provenance_type === "FALLBACK");
+          chosenCandidate = steerCand;
         } else {
-          chosenAction = this._mapCandidateToRover(topCandidate.action_class);
+          chosenCandidate = topCandidate;
         }
 
       } else if (this.condition === "OBSERVE") {
@@ -212,7 +213,7 @@ export class ChangedWorldHarness {
         if (dispositionCounts[disp] != null) dispositionCounts[disp]++;
 
         // Action remains strictly the unguided substrate winner
-        chosenAction = this._mapCandidateToRover(topCandidate.action_class);
+        chosenCandidate = topCandidate;
 
       } else if (this.condition === "EXECUTIVE") {
         // Real sovereign DeltaX governance
@@ -244,25 +245,31 @@ export class ChangedWorldHarness {
         if (disp === "DEFER") deferCount++;
         if (disp === "PERMIT") permitCount++;
 
-        // Apply governed selection
+        // Apply governed selection strictly from intersection of candidate field and permitted set
         const permittedSubIds = new Set((decision.permitted || []).map((p) => p.substrate_candidate_id || p.id));
+        const permittedCandidates = candidates.filter(
+          (c) => permittedSubIds.has(c.substrate_candidate_id) || permittedSubIds.has(c.id)
+        );
 
-        if (disp === "PERMIT" && permittedSubIds.has(topCandidate.substrate_candidate_id)) {
-          chosenAction = this._mapCandidateToRover(topCandidate.action_class);
-        } else if (disp === "VETO" || isBlocked) {
-          // Vetoed or blocked: select permitted steering alternative or safe turn
-          const turnCand = candidates.find((c) => (c.action_class === "turn_left" || c.action_class === "turn_right") && permittedSubIds.has(c.substrate_candidate_id));
-          if (turnCand) {
-            chosenAction = this._mapCandidateToRover(turnCand.action_class);
-          } else {
-            chosenAction = "left"; // Safe licensed fallback
-          }
-        } else if (disp === "MODULATE") {
-          chosenAction = "left";
+        if (permittedCandidates.length > 0) {
+          const selectedActionId = decision.selected_action_id;
+          chosenCandidate =
+            permittedCandidates.find((c) => c.id === selectedActionId || c.substrate_candidate_id === selectedActionId) ||
+            [...permittedCandidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
         } else {
-          chosenAction = "stop";
+          // All neural candidates vetoed: select declared safe fallback
+          chosenCandidate =
+            candidates.find((c) => c.provenance_type === "FALLBACK") ||
+            candidates.find((c) => c.action_class === "safe_noop");
         }
       }
+
+      // Strict Causal Assertion: chosen candidate MUST exist in pre-evaluation candidate field
+      if (!chosenCandidate || !candidates.some((c) => c.id === chosenCandidate.id && c.substrate_candidate_id === chosenCandidate.substrate_candidate_id)) {
+        throw new Error(`Causal integrity violation: candidate ${chosenCandidate?.id} was not present in pre-evaluation candidate field`);
+      }
+
+      chosenAction = chosenCandidate.actuator_action || this._mapCandidateToRover(chosenCandidate.action_class);
 
       if (chosenAction === lastAction) repeatedActions++;
       lastAction = chosenAction;
@@ -344,7 +351,10 @@ export class ChangedWorldHarness {
       case "turn_left": return "left";
       case "turn_right": return "right";
       case "halt": return "stop";
-      default: return "forward";
+      case "giant_fiber_escape": return "stop";
+      case "groom": return "stop";
+      case "safe_noop": return "stop";
+      default: return "stop";
     }
   }
 

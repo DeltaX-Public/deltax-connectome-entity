@@ -67,7 +67,11 @@ test('3. Connectome candidate generation changes with neural and sensory state',
   for (const c of stimulatedCandidates) {
     assert.ok(c.substrate_candidate_id, 'Candidate must have substrate_candidate_id');
     assert.ok(c.originating_population.length > 0, 'Candidate must declare originating population');
-    assert.ok(c.originating_neuron_indices.length > 0, 'Candidate must declare originating neuron indices');
+    assert.ok(['MEASURED_NEURAL', 'DERIVED_NEURAL', 'FALLBACK'].includes(c.provenance_type), 'Candidate must have valid provenance_type');
+    assert.ok(c.actuator_action, 'Candidate must declare actuator_action');
+    if (c.provenance_type !== 'FALLBACK') {
+      assert.ok(c.originating_neuron_indices.length > 0, 'Neural candidate must declare originating neuron indices');
+    }
     assert.ok(c.raw_activity_measure, 'Candidate must declare raw activity measure');
   }
 
