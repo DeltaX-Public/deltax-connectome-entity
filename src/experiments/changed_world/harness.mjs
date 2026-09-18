@@ -47,13 +47,17 @@ export class ChangedWorldHarness {
     this.transduction = new ConnectomeSensoryTransduction(this.runtime.data);
     this.bridge = new ConnectomeCandidateBridge();
 
-    // 3. Executive connection
+    // 3. Executive connection (only for OBSERVE and EXECUTIVE)
     this.sessionId = `changed_world_${condition.toLowerCase()}_seed_${seed}_${Date.now()}`;
-    this.executive = executive || (this.command ? createExecutive({
-      mode: "local_runtime",
-      command: this.command,
-      sessionId: this.sessionId,
-    }) : null);
+    this.executive = executive || (
+      ["OBSERVE", "EXECUTIVE"].includes(condition) && this.command
+        ? createExecutive({
+            mode: "local_runtime",
+            command: this.command,
+            sessionId: this.sessionId,
+          })
+        : null
+    );
   }
 
   /**
