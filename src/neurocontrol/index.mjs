@@ -107,10 +107,11 @@ export class NeurocontrolHarness {
       deltax_adapter: adapterState(this.adapter), environment: clone(this.environment), perturbations: clone(this.perturbations), event_ledger: this.ledger.snapshot(),
       reproducibility: { perturbation_digest: hash(this.perturbations), substrate_digest: hash(substrate) }
     };
+    const relPath = path.relative(process.cwd(), path.resolve(this.checkpointDir, `${checkpointId}.json`));
     const filePath = path.resolve(this.checkpointDir, `${checkpointId}.json`);
     fs.writeFileSync(filePath, JSON.stringify(bundle, null, 2) + '\n');
     this._lastCheckpoint = clone(bundle);
-    return { ...clone(bundle), path: filePath };
+    return { ...clone(bundle), path: relPath };
   }
   restore(checkpoint) {
     const bundle = typeof checkpoint === 'string' ? JSON.parse(fs.readFileSync(checkpoint, 'utf8')) : clone(checkpoint);

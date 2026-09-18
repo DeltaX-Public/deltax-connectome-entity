@@ -106,6 +106,22 @@ export class JsonlLocalRuntimeTransport {
     });
   }
 
+  async ping() {
+    return this.request({ type: 'ping' });
+  }
+
+  async checkpoint(sessionId = 'default') {
+    return this.request({ type: 'checkpoint', session_id: sessionId });
+  }
+
+  async restore(sessionId = 'default', state = {}) {
+    return this.request({ type: 'restore', session_id: sessionId, state });
+  }
+
+  async reset(sessionId = 'default') {
+    return this.request({ type: 'reset', session_id: sessionId });
+  }
+
   async close() {
     if (this.rl) this.rl.close();
     if (this.child && !this.child.killed) {
@@ -118,18 +134,21 @@ export class JsonlLocalRuntimeTransport {
 
 /** Adapter that talks to the shared private local runtime provider. */
 export class LocalRuntimeDeltaXAdapter {
-  constructor({
-    mode = process.env.DELTAX_EXECUTIVE ?? 'local_runtime',
-    command = process.env.DELTAX_LOCAL_RUNTIME_CMD,
-    transport = null,
-    ledger = null,
-    sensitiveKeys = ['token', 'secret', 'password', 'authorization', 'api_key', 'apikey'],
-  } = {}) {
+  constructor(options = {}) {
+    const {
+      mode = process.env.DELTAX_EXECUTIVE ?? 'local_runtime',
+      transport = null,
+      ledger = null,
+      sessionId = null,
+      sensitiveKeys = ['token', 'secret', 'password', 'authorization', 'api_key', 'apikey'],
+    } = options;
+    const command = 'command' in options ? options.command : process.env.DELTAX_LOCAL_RUNTIME_CMD;
     this.mode = mode;
+    this.sessionId = sessionId;
     this.sensitiveKeys = sensitiveKeys;
     this.ledger = ledger ?? new EventLedger();
     this.executive_source = 'local_runtime';
-    if (!transport && !command) {
+    if (!transport && (!command || typeof command !== 'string' || !command.trim())) {
       throw Object.assign(
         new Error('local_runtime requires DELTAX_LOCAL_RUNTIME_CMD; refusing silent stub fallback'),
         { code: 'LOCAL_RUNTIME_UNAVAILABLE' },
@@ -138,11 +157,13 @@ export class LocalRuntimeDeltaXAdapter {
     this.transport = transport ?? new JsonlLocalRuntimeTransport({ command });
   }
 
+
   status() {
     return {
       executive_source: this.executive_source,
       mode: this.mode,
       local_runtime_configured: true,
+      session_id: this.sessionId,
     };
   }
 
@@ -162,18 +183,36 @@ export class LocalRuntimeDeltaXAdapter {
         throw new Error('connectome-origin required: every candidate needs substrate_candidate_id before local_runtime evaluation');
       }
     }
-    this._record('deltax_request', { request: packet });
-    const decision = await this.transport.request(packet);
+    const payload = this.sessionId && !packet.session_id ? { ...packet, session_id: this.sessionId } : packet;
+    this._record('deltax_request', { request: payload });
+    const decision = await this.transport.request(payload);
     const result = {
       ...decision,
       executive_source: 'local_runtime',
       selected_disposition: decision.disposition ?? decision.selected_disposition,
     };
-    this._record('deltax_decision', { request: packet, response: result });
+    this._record('deltax_decision', { request: payload, response: result });
     return result;
+  }
+
+  async ping() {
+    return this.transport.ping();
+  }
+
+  async checkpoint(sessionId = this.sessionId || 'default') {
+    return this.transport.checkpoint(sessionId);
+  }
+
+  async restore(sessionId = this.sessionId || 'default', state = {}) {
+    return this.transport.restore(sessionId, state);
+  }
+
+  async reset(sessionId = this.sessionId || 'default') {
+    return this.transport.reset(sessionId);
   }
 
   exportExperiment() {
     return { status: this.status(), packets: this.ledger.events };
   }
 }
+

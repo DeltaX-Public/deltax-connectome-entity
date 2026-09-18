@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeltaX Connectome Sensory Transduction Contract",
+  "version": "1.0.0",
+  "declaration_date": "2026-09-18",
+  "description": "Formal contract and mathematical specification of physical observation to biological receptor transduction in the DeltaX Connectome entity.",
+  "guarantee": {
+    "zero_policy_shortcuts": true,
+    "zero_solution_encodings": true,
+    "strictly_physical_observations": true,
+    "statement": "Transduction produces exclusively biological sensory receptor excitations (Hz). It does not compute, encode, or leak optimal steering policies, goal coordinates, path solutions, or precomputed executive decisions."
+  },
+  "hill_equation_specification": {
+    "formula": "hill(c, k, n) = c^n / (c^n + k^n)",
+    "description": "Sigmoidal receptor activation mapping normalized sensory stimulus intensity c in [0, 1] to fractional response."
+  },
+  "channels": [
+    {
+      "channel_name": "visual_field.nearest_obstacle_distance",
+      "physical_units": "simulation grid distance units [0.0, 10.0]",
+      "observation_semantics": "Continuous Euclidean distance from rover body to the nearest forward barrier or wall.",
+      "receptor_mapping": [
+        "JO wind/gravity left",
+        "JO wind/gravity right",
+        "tactile T1 left",
+        "tactile T1 right"
+      ],
+      "transduction_function": "For dist < 2.5: proxStrength = (2.5 - dist) / 2.5; rate = 120.0 * hill(proxStrength, k=0.4, n=1.4) Hz.",
+      "policy_cheat_audit": "PASS: Scalar distance only; no vector orientation, direction recommendations, or waypoint cues."
+    },
+    {
+      "channel_name": "collision.blocked",
+      "physical_units": "boolean [true, false]",
+      "observation_semantics": "Immediate physical mechanical resistance encountered when attempting to move into an occupied grid cell.",
+      "receptor_mapping": [
+        "JO wind/gravity left",
+        "JO wind/gravity right",
+        "tactile T1 left",
+        "tactile T1 right"
+      ],
+      "transduction_function": "When blocked: JO rate = 140.0 Hz, tactile T1 rate = 160.0 Hz (burst mechanosensory deflection).",
+      "policy_cheat_audit": "PASS: Binary mechanical contact; does not suggest turning direction or recovery policy."
+    },
+    {
+      "channel_name": "photoreceptors",
+      "physical_units": "photon flux / ambient illumination rate [10.0, 65.0 Hz]",
+      "observation_semantics": "Ambient light level reaching compound eyes based on corridor clearance vs looming shadow.",
+      "receptor_mapping": [
+        "photoreceptors"
+      ],
+      "transduction_function": "Clear corridor: 65.0 Hz; looming obstacle: max(10.0, 65.0 - (2.0 - proxDist) * 25.0) Hz.",
+      "policy_cheat_audit": "PASS: Scalar ambient illumination; contains zero goal coordinates or navigational vectors."
+    },
+    {
+      "channel_name": "gradients.food_signal",
+      "physical_units": "chemical concentration gradient [0.0, 1.0]",
+      "observation_semantics": "Diffusive nutrient concentration sensed at mouthparts and tarsi.",
+      "receptor_mapping": [
+        "taste T1 left",
+        "taste T1 right",
+        "labellar taste left",
+        "labellar taste right"
+      ],
+      "transduction_function": "rate = 160.0 * hill(food_signal, k=0.3, n=1.5) Hz; labellar rate = 0.9 * rate.",
+      "policy_cheat_audit": "PASS: Local scalar chemical concentration; no directional gradient vectors or path hints."
+    },
+    {
+      "channel_name": "gradients.hazard",
+      "physical_units": "boolean / noxious intensity [true, false]",
+      "observation_semantics": "Presence of thermal or chemical danger in current substrate microenvironment.",
+      "receptor_mapping": [
+        "thermosensory left",
+        "thermosensory right",
+        "taste T1 left",
+        "taste T1 right"
+      ],
+      "transduction_function": "When hazard active: thermosensory rate = 180.0 Hz; bitter GRN rate = 150.0 Hz.",
+      "policy_cheat_audit": "PASS: Local noxious stimulus; does not encode avoidance maneuvers or executive vetoes."
+    }
+  ],
+  "verification_suite": "test/connectome_causal_integration.test.mjs"
+}
