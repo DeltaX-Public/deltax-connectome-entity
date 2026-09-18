@@ -15,9 +15,9 @@ This report synthesizes the empirical results from the **multi-seed validation b
 Both substrates executed closed-loop evaluations against the private local Python runtime (`deltax-python-runtime`) via child process stdio JSONL transport.
 
 ### Sovereignty & Egress Verification
-- **Network Calls:** Exactly 0 bytes transmitted externally.
-- **External Dependencies:** Zero cloud APIs, remote LLMs, or hosted authorization endpoints used.
-- **Private/Public Boundary:** 100% isolated. Proprietary specifications, active canon files, and internal mathematics remain exclusively in the private local environment and are completely excluded from public repositories.
+- **Network Calls:** Zero external network egress observed under the local test harness during offline experiment runs.
+- **External Dependencies:** Zero cloud APIs, remote LLMs, or hosted authorization endpoints required for local execution.
+- **Private/Public Boundary:** Public scan found no private runtime files, active canon docx artifacts, or internal formulas in the public repository tree.
 
 ---
 
@@ -35,7 +35,7 @@ Validation batteries were conducted across matched random seeds (5, 25, and 100 
 | **Small** | 25 (100..124) | 48.0% | **100.0%** | 52.0% | 1.6ms |
 | **Main** | 100 (100..199) | 50.0% | **100.0%** | 50.0% | 1.5ms |
 
-*Key Finding*: The unguided substrate (`CONTROL`) frequently deadlocks or depletes energy when environmental doors dynamically shift. The governed executive (`EXECUTIVE`) maintains a 100% task completion rate across 100 seeds by ensuring coherence and unblocking passage.
+*Finding in this local deterministic battery*: The unguided substrate (`CONTROL`) frequently deadlocks or depletes energy when environmental doors dynamically shift. The governed executive (`EXECUTIVE`) achieves 100% task completion across the evaluated 100 seeds in this harness by ensuring coherence and unblocking passage.
 
 ### PumpBrains Chamber Battery (`LocalTwinChamber`)
 | Battery Tier | Seeds | Evaluated Steps | Divergence Rate | Total Permits | Total Vetoes | Mean Latency / Seed |
@@ -44,11 +44,26 @@ Validation batteries were conducted across matched random seeds (5, 25, and 100 
 | **Small** | 25 (20260900..24) | 200 | 100.0% | 200 | 0 | 10.1ms |
 | **Main** | 100 (20260900..99) | 800 | 100.0% | 800 | 0 | 10.0ms |
 
-*Key Finding*: Under nominal multi-channel stimuli, the executive permits actions while continuously modulating internal gain and caution parameters, maintaining steady-state equilibrium across 800 evaluated steps.
+---
+
+## 3. Executive Divergence Mechanism (Arbitration vs Hard Intervention)
+
+A key empirical property observed in the twin chamber is that `EXECUTIVE` can diverge from `CONTROL` even when `disposition` is `PERMIT` (reporting `veto_count: 0` and `modulation_count: 0`).
+
+### Divergence Explanation
+1. **Candidate Proposal:** The computational substrate emits multiple candidate actions at each step (e.g., `cand_feed`, `cand_groom`, `cand_rest`, `cand_fwd`, `cand_halt`).
+2. **Substrate Winner vs Executive Selection:**
+   - In `CONTROL`, the harness strictly executes the candidate with the highest raw substrate activation strength (`controlWinner` / `substrateWinner`).
+   - In `EXECUTIVE`, DeltaX evaluates all proposed candidates through its 16-step canonical coherence pipeline (`coherence_mod.evaluate`, `predictor.predict`, `select`). When multiple valid candidates exist, DeltaX selects the candidate maximizing coherence with the objective.
+3. **Candidate Arbitration:** When the DeltaX-selected candidate differs from the raw substrate activation winner, DeltaX issues a `PERMIT` for its selected candidate. This is **Executive Candidate Arbitration** (admitted candidate selection).
+4. **Classification:**
+   - **Hard Interventions:** Actions blocked via `VETO`, modified via `MODULATE`, or held via `DEFER`.
+   - **Executive Arbitration:** Selection of a different admitted substrate candidate under `PERMIT`.
+   - Both produce behavioral divergence from unguided controls while remaining within governed safety invariants.
 
 ---
 
-## 3. Matched Adversarial & Stress Suite (10 Scenarios)
+## 4. Matched Adversarial & Stress Suite (10 Scenarios)
 
 Both substrates were subjected to 10 matched stress scenarios designed to test edge cases, constraint clashes, and recovery:
 
@@ -67,57 +82,74 @@ Both substrates were subjected to 10 matched stress scenarios designed to test e
 
 ---
 
-## 4. Empirical Answers to the 8 Core Research Questions
+## 5. Empirical Answers to the 8 Core Research Questions
 
 ### Q1: Invariant Enforcement Across Substrates
-**Finding:** Identical Invariant Enforcement.  
+**Finding:** Identical Invariant Enforcement in this test harness.  
 The private Python runtime validates schemas, enforces candidate provenance, and rejects unauthorized actions across both spatial and rate-coded substrates.
 
 ### Q2: OBSERVE Condition Purity
-**Finding:** 100% Non-Intervening & Non-Polluting.  
+**Finding:** Non-Intervening & Non-Polluting under current test harness.  
 `OBSERVE` ticks clone state ephemerally in Python, produce zero external interventions, and do not advance the primary executive session tick count.
 
 ### Q3: Divergence Dynamics (CONTROL vs EXECUTIVE)
 **Finding:** Selective Divergence Under Environmental Perturbation.  
-Divergence occurs precisely when the unguided substrate encounters hazards, deadlocks, or shifting constraints where executive modulation alters the trajectory.
+Divergence occurs precisely when the unguided substrate encounters hazards, deadlocks, or shifting constraints where executive modulation or candidate arbitration alters the trajectory.
 
 ### Q4: Intervention Taxonomy & Modulation
 **Finding:** Context-Sensitive Safety Allocation.  
-In nominal environments, `PERMIT` minimizes computational drag; under detected contradictions or constraint violations, `VETO` and `MODULATE` actively steer the substrate.
+In nominal environments, `PERMIT` with candidate arbitration minimizes unnecessary vetoes; under detected contradictions or constraint violations, `VETO` and `MODULATE` actively steer the substrate.
 
 ### Q5: Checkpoint / Restore Determinism
-**Finding:** Exact State Resumption.  
-Serializing and deserializing runtime state snapshots restores full memory and tick tables, yielding 100% reproducible replayed decisions.
+**Finding:** Exact State Resumption in local test runs.  
+Serializing and deserializing runtime state snapshots restores memory and tick tables, yielding reproducible replayed decisions.
 
 ### Q6: Adversarial Robustness
-**Finding:** Zero Failures Across 20 Stress Scenarios.  
-Neither substrate crashed, deadlocked in infinite loops, or violated safety boundaries when exposed to extreme perturbations.
+**Finding:** Bounded Stability Across the 20 Tested Stress Scenarios.  
+Neither substrate crashed, deadlocked in infinite loops, or violated safety boundaries when exposed to the tested perturbation scenarios.
 
 ### Q7: IPC Latency & Overhead
-**Finding:** Sub-2ms Decision Latency.  
+**Finding:** Sub-2ms Decision Latency on Apple Silicon test system.  
 JSONL stdio IPC between Node.js and the Python runtime executes in ~1.0–1.5ms per step on Apple Silicon, demonstrating that local sovereign IPC is practical for real-time control.
 
 ### Q8: Public / Private Boundary Protection
-**Finding:** Complete Boundary Integrity.  
+**Finding:** Public scan found no private runtime files.  
 Automated test scans confirm zero leaks of private specification files, canonical docx artifacts, or internal mathematics in public repository trees.
 
 ---
 
-## 5. Local Reproduction Commands
+## 6. Reproducibility Table
+
+| Field | Description / Value |
+| :--- | :--- |
+| **Claim** | Deterministic closed-loop sovereign execution with candidate provenance and OBSERVE non-contamination |
+| **Command** | `npm test && node scripts/battery.mjs --seeds=25 && node scripts/stress.mjs` |
+| **Branch** | `phase2-real-connectome-integration` |
+| **Commit** | HEAD of `phase2-real-connectome-integration` |
+| **Seed Set** | `100..124` (battery) and `100..109` (stress) |
+| **Runtime Mode** | `local_runtime` (via `DELTAX_LOCAL_RUNTIME_CMD`) |
+| **Expected Artifact** | `artifacts/battery/latest-battery.json`, `artifacts/stress/latest-stress.json` |
+| **Stub Allowed** | No (for sovereign validation battery); Yes (for unit tests / stub-honesty tests) |
+| **Private Runtime Required** | Yes (for genuine `local_runtime` sovereign validation) |
+| **Network Expected** | No (zero network egress during local battery execution) |
+
+---
+
+## 7. Local Reproduction Commands
 
 ```bash
-# Set local provider
-export DELTAX_LOCAL_RUNTIME_CMD="/Users/dominicknoval/Projects/private/deltax-python-runtime/.venv/bin/python3 -m deltax_runtime.provider"
+# 1. Set private local provider command
+export DELTAX_LOCAL_RUNTIME_CMD="/path/to/private/runtime/.venv/bin/python3 -m deltax_runtime.provider"
 
-# Run Connectome Battery & Tests
-cd /Users/dominicknoval/Projects/tmp/deltax-connectome-entity
+# 2. Run Connectome Battery & Tests
+cd /path/to/deltax-connectome-entity
 npm test
 npm run verify:sovereign
 npm run battery:main
 npm run stress:local
 
-# Run Chamber Battery & Tests
-cd /Users/dominicknoval/Projects/tmp/deltax-pumpbrains-chamber
+# 3. Run Chamber Battery & Tests
+cd /path/to/deltax-pumpbrains-chamber
 npm test
 npm run verify:sovereign
 npm run battery:main
@@ -127,7 +159,7 @@ npm run compare:cross-substrate
 
 ---
 
-## 6. Claim Boundaries
+## 8. Claim Boundaries
 
 - **No Biological Mind Claims:** The models and chambers described herein are purely computational simulations (LIF models and grid-world state machines). No biological consciousness, sentience, or living organism status is claimed.
 - **No AGI Claims:** The DeltaX executive acts as a deterministic coherence and invariant governor, not a general artificial intelligence.

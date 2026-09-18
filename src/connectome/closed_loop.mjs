@@ -66,6 +66,7 @@ export class ConnectomeClosedLoop {
     let modulationCount = 0;
     let deferCount = 0;
     let permitCount = 0;
+    let arbitrationCount = 0;
     let hazardEncounters = 0;
     let contradictionEvents = 0;
     let repeatedLoops = 0;
@@ -155,20 +156,33 @@ export class ConnectomeClosedLoop {
           if (disp === "DEFER") deferCount++;
           if (disp === "PERMIT") permitCount++;
 
+          // EXECUTIVE arbitration detection
+          const permittedSubIds = new Set((decision.permitted || []).map((p) => p.substrate_candidate_id || p.id));
+          const permittedCandidate = candidates.find(
+            (c) => permittedSubIds.has(c.substrate_candidate_id) || permittedSubIds.has(c.id)
+          );
+
           if (this.condition === "OBSERVE") {
-            // OBSERVE does not alter execution
+            // OBSERVE does not alter execution: pure substrate winner is actuated
             chosenAction = this._mapActionClassToRover(substrateWinner.action_class);
           } else {
-            // EXECUTIVE governs action
-            const permittedSubIds = new Set((decision.permitted || []).map((p) => p.substrate_candidate_id || p.id));
-            if (disp === "PERMIT" && permittedSubIds.has(substrateWinner.substrate_candidate_id)) {
-              chosenAction = this._mapActionClassToRover(substrateWinner.action_class);
+            // EXECUTIVE governs action: candidate arbitration or hard intervention
+            if (disp === "PERMIT" && permittedCandidate) {
+              chosenAction = this._mapActionClassToRover(permittedCandidate.action_class);
+              if (permittedCandidate.id !== substrateWinner.id) {
+                arbitrationCount++;
+              }
             } else if (disp === "MODULATE") {
               chosenAction = "forward";
             } else if (disp === "VETO" || disp === "DEFER") {
               chosenAction = "stop";
+            } else if (permittedCandidate) {
+              chosenAction = this._mapActionClassToRover(permittedCandidate.action_class);
+              if (permittedCandidate.id !== substrateWinner.id) {
+                arbitrationCount++;
+              }
             } else {
-              chosenAction = permittedSubIds.size > 0 ? "forward" : "stop";
+              chosenAction = "stop";
             }
           }
         } else {
@@ -212,6 +226,7 @@ export class ConnectomeClosedLoop {
     }
 
     const latencyMs = Date.now() - t0;
+    const hardInterventionCount = vetoCount + modulationCount + deferCount;
     return {
       run_id: this.runId,
       seed: this.seed,
@@ -227,7 +242,11 @@ export class ConnectomeClosedLoop {
       modulation_count: modulationCount,
       defer_count: deferCount,
       permit_count: permitCount,
-      intervention_rate: +( (vetoCount + modulationCount + deferCount) / this.steps ).toFixed(3),
+      arbitration_count: arbitrationCount,
+      hard_intervention_count: hardInterventionCount,
+      intervention_rate: +( hardInterventionCount / this.steps ).toFixed(3),
+      arbitration_rate: +( arbitrationCount / this.steps ).toFixed(3),
+      total_executive_influence_rate: +( (hardInterventionCount + arbitrationCount) / this.steps ).toFixed(3),
       latency_ms: latencyMs,
       history,
     };

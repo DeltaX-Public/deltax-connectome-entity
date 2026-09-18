@@ -1,16 +1,33 @@
 # DeltaX Connectome Entity
 
-A public, sovereign harness integrating a 165,122-neuron biological connectome recurrent substrate (*Drosophila* whole-CNS), causal neural intervention, and the DeltaX executive control plane.
+A public, sovereign harness integrating a 165,122-neuron connectome graph recurrent substrate (*Drosophila* whole-CNS dataset), causal neural intervention, and the DeltaX executive control plane.
 
 ## Status
 
 | Subsystem | Status | Reality & Provenance |
 | --- | --- | --- |
-| **Phase II: Real Connectome** | **Complete & Verified** | Descending-neuron candidate extraction from 165k-neuron connectome; zero semantic cheats; 100% goal completion on held-out seeds |
+| **Phase II: Real Connectome** | **Complete & Verified** | Descending-neuron candidate extraction from 165k-neuron connectome; zero semantic cheats; 100% goal completion on the 25 evaluation seeds (200..224) under test harness |
 | **Causal Neural Intervention** | **Complete & Verified** | Bit-exact tripartite state branching with targeted optogenetic population silencing (`DNg100`, `DNg97`, `DNp09`) |
 | **Held-Out Evaluation Battery** | **25 Seeds Complete** | Held-out evaluation seeds (200..224) comparing CONTROL, OBSERVE, EXECUTIVE, SHAM, and SHUFFLED_CONNECTOME |
-| **Sovereign Local Runtime** | **Active (0 Egress)** | Shared private JSONL provider via `DELTAX_LOCAL_RUNTIME_CMD`; provenance `executive_source: local_runtime` |
+| **Sovereign Local Runtime** | **Active (0 Egress)** | Shared private JSONL provider via `DELTAX_LOCAL_RUNTIME_CMD`; provenance `executive_source: local_runtime`; zero external network egress observed |
 | **Entity Observatory** | **Live Show Mode** | Real telemetry, descending neuron firing rates, candidate provenance, and DeltaX governance |
+
+---
+
+## Reproducibility Table
+
+| Field | Description / Value |
+| :--- | :--- |
+| **Claim** | 100% goal completion lift on 25 held-out seeds (200..224) without semantic shortcuts via descending-neuron candidate extraction and executive governance |
+| **Command** | `npm test && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs` |
+| **Branch** | `phase2-real-connectome-integration` |
+| **Commit** | HEAD of `phase2-real-connectome-integration` |
+| **Seed Set** | `200..224` (battery) and `100` (causal intervention) |
+| **Runtime Mode** | `local_runtime` (via `DELTAX_LOCAL_RUNTIME_CMD`) |
+| **Expected Artifact** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/interventions/latest-causal-intervention.json` |
+| **Stub Allowed** | No (for sovereign validation battery); Yes (for unit tests / stub-honesty tests) |
+| **Private Runtime Required** | Yes (for genuine `local_runtime` sovereign validation) |
+| **Network Expected** | No (zero network egress during local battery execution) |
 
 ---
 
@@ -18,7 +35,7 @@ A public, sovereign harness integrating a 165,122-neuron biological connectome r
 
 ```bash
 # 1. Point to private local provider
-export DELTAX_LOCAL_RUNTIME_CMD="/Users/dominicknoval/Projects/private/deltax-python-runtime/.venv/bin/python3 -m deltax_runtime.provider"
+export DELTAX_LOCAL_RUNTIME_CMD="/path/to/private/runtime/.venv/bin/python3 -m deltax_runtime.provider"
 
 # 2. Run unit and integration tests
 npm test
