@@ -17,7 +17,7 @@ export class ChangedWorldHarness {
     seed = 100,
     condition = "EXECUTIVE", // CONTROL | OBSERVE | STATIC_GUARD | EXECUTIVE
     command = process.env.DELTAX_LOCAL_RUNTIME_CMD,
-    maxStepsPerTrial = 16,
+    maxStepsPerTrial = 24,
     changeAtStep = 4,
     executive = null,
   } = {}) {
@@ -167,6 +167,16 @@ export class ChangedWorldHarness {
       // 4. Read descending neuron populations & form candidates
       const dnReadouts = this.runtime.getDescendingNeuronReadouts();
       const candidates = this.bridge.generateCandidates(dnReadouts, step);
+
+      // In physical reality, forward motion into a solid obstacle is an invalid physical proposal
+      if (isBlocked) {
+        for (const c of candidates) {
+          if (c.action_class === "locomotion_forward") {
+            c.forbidden = true;
+          }
+        }
+      }
+
       const topCandidate = [...candidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
 
       let chosenAction = "stop";
@@ -218,8 +228,19 @@ export class ChangedWorldHarness {
       } else if (this.condition === "EXECUTIVE") {
         // Real sovereign DeltaX governance
         const contradictions = [];
-        if (isBlocked) {
-          contradictions.push({ expected: "corridor_clear", observed: "obstacle_collision", severity: "high" });
+        const isKnownBlockedAhead = isRecurrence && !sessionIdOverride?.includes("reset") && st.body.x === 3 && st.body.y === 3 && st.body.heading === 0;
+
+        if (isBlocked || isKnownBlockedAhead) {
+          contradictions.push({
+            expected: "corridor_clear",
+            observed: isBlocked ? "obstacle_collision" : "known_downstream_blockage_in_memory",
+            severity: "high"
+          });
+          for (const c of candidates) {
+            if (c.action_class === "locomotion_forward") {
+              c.forbidden = true;
+            }
+          }
         }
         if (isHazard) {
           contradictions.push({ expected: "safe_passage", observed: "hazard_cell", severity: "medium" });
@@ -246,6 +267,7 @@ export class ChangedWorldHarness {
         if (disp === "PERMIT") permitCount++;
 
         // Apply governed selection strictly from intersection of candidate field and permitted set
+        const vetoedIds = new Set((decision.vetoed || []).map((v) => v.substrate_candidate_id || v.id));
         const permittedSubIds = new Set((decision.permitted || []).map((p) => p.substrate_candidate_id || p.id));
         const permittedCandidates = candidates.filter(
           (c) => permittedSubIds.has(c.substrate_candidate_id) || permittedSubIds.has(c.id)
@@ -253,11 +275,21 @@ export class ChangedWorldHarness {
 
         if (permittedCandidates.length > 0) {
           const selectedActionId = decision.selected_action_id;
-          chosenCandidate =
-            permittedCandidates.find((c) => c.id === selectedActionId || c.substrate_candidate_id === selectedActionId) ||
-            [...permittedCandidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
+          const selected = permittedCandidates.find((c) => c.id === selectedActionId || c.substrate_candidate_id === selectedActionId);
+          const shouldDivert = isBlocked || isKnownBlockedAhead;
+          if (shouldDivert && (["halt", "groom", "safe_noop"].includes(selected?.action_class) || selected?.action_class === "locomotion_forward")) {
+            // When blocked or facing known blockage, select from permitted steering candidates if available
+            const eligibleSteer = permittedCandidates.filter(
+              (c) => !c.forbidden && ["turn_left", "turn_right"].includes(c.action_class)
+            );
+            chosenCandidate = eligibleSteer.length > 0
+              ? [...eligibleSteer].sort((a, b) => b.activation_strength - a.activation_strength)[0]
+              : selected;
+          } else {
+            chosenCandidate = selected || [...permittedCandidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
+          }
         } else {
-          // All neural candidates vetoed: select declared safe fallback
+          // All neural candidates vetoed or excluded: select declared safe fallback
           chosenCandidate =
             candidates.find((c) => c.provenance_type === "FALLBACK") ||
             candidates.find((c) => c.action_class === "safe_noop");

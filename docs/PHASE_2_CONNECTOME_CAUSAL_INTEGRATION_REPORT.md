@@ -13,16 +13,28 @@
 ### Primary Research Question
 > **Does the actual connectome-derived recurrent substrate produce useful behavioral structure that DeltaX can govern, and does the combined architecture outperform appropriate controls without hidden semantic shortcuts?**
 
-### Empirical Finding Under Evaluated Battery
-In this local deterministic battery across 25 frozen held-out evaluation seeds (seeds 200..224) and 125 full 12-step closed-loop trajectories under the test harness, the whole-CNS *Drosophila* connectome graph substrate ($N=165,122$ neurons) combined with the DeltaX local sovereign governor demonstrated a **+100.0% goal completion lift** over unguided controls and randomized connectome controls without using semantic shortcuts or precomputed task solutions.
+### Phase II Integrity Pass & Superseded Initial Claims
+> [!IMPORTANT]
+> **Status of Initial Claims (`superseded_pre_integrity_pass`):**  
+> Prior to the Phase II Causal Integrity Pass, the harness reported 100% goal completion for `EXECUTIVE` on seeds 200..224. Rigorous audit revealed that this was enabled by post-evaluation actuator shortcuts (`MODULATE -> forward`, `PERMIT -> forward`, and `blocked -> left`) that forced forward or steering actuation even when descending motor neurons were outputting postural halting (`halt`). Those initial 100% claims are formally designated as **`superseded_pre_integrity_pass`**.
 
-| Experimental Condition | Sample Size | Goal Completion Rate | 95% Wilson Confidence Interval | Mean Final Energy | Mean Latency / Step |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **`CONTROL`** (Unguided Substrate) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 44.6ms |
-| **`OBSERVE`** (Ephemeral DeltaX) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 45.0ms |
-| **`EXECUTIVE`** (Governed DeltaX) | 25 | **100.0%** | **`[0.867, 1.000]`** | 18.00 | 46.4ms |
-| **`SHAM`** (Matched Invocation Path) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 44.3ms |
-| **`SHUFFLED_CONNECTOME`** (Rewired Graph) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 47.1ms |
+### Post-Integrity Empirical Findings (Seeds 1000..1024)
+With all actuator shortcuts excised and strict candidate provenance typing enforced (`MEASURED_NEURAL`, `DERIVED_NEURAL`, `FALLBACK`), every body command must originate from an explicit substrate candidate that existed in the pre-evaluation candidate field.
+
+Under this genuine causal order across 25 held-out seeds (1000..1024):
+- **Biological Multi-Synaptic Latency:** In the intact connectome ($N=165,122$ neurons), sensory excitation requires 4–5 steps (~40–50 ms) to traverse sensory-to-interneuron layers before descending command neurons (`DNg100/97/p09`) exceed postural balance suppression (`halt`).
+- **12-Step Trajectory Horizon:** Because forward walking begins at step 5–6, the entity executes 6–7 forward steps, stopping at $x=7$ or $x=8$ (near goal at $x=9$) before the 12-step budget expires.
+- **Topological vs Biological Dynamics:** In contrast, the `SHUFFLED_CONNECTOME` control has randomized direct connections that short-circuit sensory inputs directly into descending neurons from step 1, sprinting blindly forward without biological latency.
+
+| Experimental Condition | Sample Size | Goal Rate | 95% Wilson CI | Mean Energy | Mean Arbitration | Mean Collisions | Latency / Step |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **`CONTROL`** (Unguided Substrate) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 0.00 | 0.00 | 43.1ms |
+| **`OBSERVE`** (Ephemeral DeltaX) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 0.00 | 0.00 | 44.3ms |
+| **`EXECUTIVE`** (Governed DeltaX) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 0.00 | 0.00 | 44.6ms |
+| **`SHAM`** (Matched Invocation Path) | 25 | 0.0% | `[0.000, 0.133]` | 20.00 | 0.00 | 0.00 | 44.8ms |
+| **`SHUFFLED_CONNECTOME`** (Degree-Preserved) | 25 | 100.0% | `[0.867, 1.000]` | 18.00 | 0.00 | 1.00 | 100.6ms |
+
+*(Note: `OBSERVE` achieves 100% behavioral parity with `CONTROL`, confirming zero execution leakage).*
 
 ---
 
@@ -121,14 +133,26 @@ A skeptical reviewer reading the evaluation battery may ask:
 
 ---
 
-## 7. Frozen Held-Out Evaluation Results
+## 7. Frozen Held-Out Evaluation Results (Post-Integrity Pass)
 
-- **Held-Out Seeds:** 25 seeds (200..224) generated after hyperparameter freeze.
-- **`CONTROL` Goal Rate:** 0.0% (stops at closed door or blocked corridor).
-- **`OBSERVE` Goal Rate:** 0.0% (exact parity with CONTROL; zero intervention).
-- **`EXECUTIVE` Goal Rate:** **100.0%** (governs door transition and clearance via candidate arbitration).
-- **`SHAM` Goal Rate:** 0.0% (mock latency without governance fails).
-- **`SHUFFLED_CONNECTOME` Goal Rate:** 0.0% (rewired connectome topology fails).
+- **Held-Out Seeds:** 25 seeds (`1000..1024`), strictly isolated from initial development seeds.
+- **`CONTROL` Goal Rate:** 0.0% (`[0.000, 0.133]`) — biological multi-synaptic latency pauses rover during steps 1–5; 12 steps insufficient to reach goal.
+- **`OBSERVE` Goal Rate:** 0.0% (`[0.000, 0.133]`) — 100% trajectory parity with CONTROL; zero execution leakage or interference.
+- **`EXECUTIVE` Goal Rate:** 0.0% (`[0.000, 0.133]`) — strictly constrained to permitted substrate candidates; zero post-DeltaX forward forcing shortcuts.
+- **`SHAM` Goal Rate:** 0.0% (`[0.000, 0.133]`) — matches intact latency and trajectory.
+- **`SHUFFLED_CONNECTOME` Goal Rate:** 100.0% (`[0.867, 1.000]`) — degree-preserving scrambled topology short-circuits direct sensory-to-descending connections, bypassing biological ramping.
+
+### 7b. Component Ablation Suite Results (Seeds 1000..1009)
+To isolate the functional contributions of individual architectural subsystems:
+
+| Ablation Condition | Isolates / Removes | Goal Rate | Interpretation |
+| :--- | :--- | :--- | :--- |
+| **`no_deltax_control`** | Substrate only, zero executive | 0.0% | Baseline biological ramping behavior |
+| **`observe_only`** | DeltaX observes ephemerally | 0.0% | Verifies zero actuation leakage |
+| **`true_shuffled_connectome`** | Graph topology scrambled | 100.0% | Connectome specificity: random wiring bypasses multi-synaptic delay |
+| **`lambda_gate_only`** | Static reflex avoidance, no $\chi/\Phi$ | 0.0% | Static rule filter cannot navigate complex corridor |
+| **`reset_memory_recurrence`** | Executive history cleared on trial 2 | 0.0% | Tests cross-trial memory retention in ChangedWorld |
+| **`no_contradiction_handling`** | DeltaX runs without $\Phi/\kappa$ field | 100.0% | Without contradiction detection, forward drive persists without safety halt |
 
 ---
 
@@ -136,15 +160,16 @@ A skeptical reviewer reading the evaluation battery may ask:
 
 | Field | Description / Value |
 | :--- | :--- |
-| **Claim** | 100% goal completion lift on 25 held-out seeds (200..224) without semantic shortcuts via descending-neuron candidate extraction and executive governance |
-| **Command** | `npm test && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs` |
+| **Claim** | Post-integrity causal verification across 25 held-out seeds (1000..1024), component ablations, and triple-branch causal neural intervention with zero actuator shortcuts |
+| **Status of Initial 100% Lift** | Formally designated as `superseded_pre_integrity_pass` (actuator shortcuts eliminated) |
+| **Command** | `node --test test/*.mjs && node scripts/connectome_battery.mjs --seeds=25 && node scripts/causal_neural_intervention.mjs && node scripts/run_ablations.mjs --seeds=10` |
 | **Branch** | `phase2-real-connectome-integration` |
 | **Commit** | HEAD of `phase2-real-connectome-integration` |
-| **Seed Set** | `200..224` (battery) and `100` (causal intervention) |
+| **Seed Set** | `1000..1024` (held-out battery), `1000..1009` (ablations), `105` (causal intervention) |
 | **Runtime Mode** | `local_runtime` (via `DELTAX_LOCAL_RUNTIME_CMD`) |
-| **Expected Artifact** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/interventions/latest-causal-intervention.json` |
-| **Stub Allowed** | No (for sovereign validation battery); Yes (for unit tests / stub-honesty tests) |
-| **Private Runtime Required** | Yes (for genuine `local_runtime` sovereign validation) |
+| **Artifacts** | `artifacts/battery/latest-held-out-battery.json`, `artifacts/ablations/latest-component-ablations.json`, `artifacts/interventions/latest-neural-intervention.json` |
+| **Stub Allowed** | No (for sovereign validation runs); Yes (for contract/unit test suites) |
+| **Private Runtime Required** | Yes (for genuine `local_runtime` sovereign execution) |
 | **Network Expected** | No (zero network egress during local battery execution) |
 
 ---

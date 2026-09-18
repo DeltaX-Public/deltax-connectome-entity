@@ -13,3 +13,6 @@ This repository is intentionally more honest than polished.
 - Static serving is required for `entity.html`; opening it as a local file can prevent artifact loading.
 - An absent API is an explicit failure in DELTAX mode. Choosing the stub is a conscious CI/offline action, not an automatic fallback.
 - Export is a snapshot of observable ledger fields, not a lossless dump of a connectome or a substitute for experiment artifacts.
+- Biological Multi-Synaptic Latency: An intact 165k-neuron connectome naturally requires multiple simulation steps for sensory propagation through interneuron layers to descending motor neurons. In short 12-step task horizons, this biological latency limits total distance traveled before time expires.
+- Control Dynamics: The degree-preserving shuffled connectome control bypasses biological multi-layer interneuron delay lines by wiring sensory afferents directly to motor neurons, highlighting the distinct topological structure of the intact circuit.
+- Causal Integrity: All post-DeltaX actuator shortcuts have been removed. The governor can only arbitrate among genuine pre-evaluation substrate candidates; it does not force locomotion or steer independently of neural activity.

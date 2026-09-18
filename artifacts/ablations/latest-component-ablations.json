@@ -1,0 +1,378 @@
+{
+  "schema": "connectome.ablations.v1",
+  "generated_at": "2026-09-18T04:12:19.216Z",
+  "seeds": {
+    "total": 10,
+    "range": "1000..1009"
+  },
+  "summary": {
+    "no_deltax_control": {
+      "samples": 10,
+      "goal_rate": 0
+    },
+    "observe_only": {
+      "samples": 10,
+      "goal_rate": 0
+    },
+    "true_shuffled_connectome": {
+      "samples": 10,
+      "goal_rate": 1
+    },
+    "lambda_gate_only": {
+      "samples": 10,
+      "goal_rate": 0
+    },
+    "reset_memory_recurrence": {
+      "samples": 10,
+      "goal_rate": 0
+    },
+    "no_contradiction_handling": {
+      "samples": 10,
+      "goal_rate": 1
+    }
+  },
+  "raw": {
+    "no_deltax_control": [
+      {
+        "seed": 1000,
+        "reached_goal": false,
+        "energy": 18,
+        "latency": 580
+      },
+      {
+        "seed": 1001,
+        "reached_goal": false,
+        "energy": 19,
+        "latency": 544
+      },
+      {
+        "seed": 1002,
+        "reached_goal": false,
+        "energy": 20,
+        "latency": 537
+      },
+      {
+        "seed": 1003,
+        "reached_goal": false,
+        "energy": 21,
+        "latency": 548
+      },
+      {
+        "seed": 1004,
+        "reached_goal": false,
+        "energy": 22,
+        "latency": 504
+      },
+      {
+        "seed": 1005,
+        "reached_goal": false,
+        "energy": 18,
+        "latency": 536
+      },
+      {
+        "seed": 1006,
+        "reached_goal": false,
+        "energy": 19,
+        "latency": 519
+      },
+      {
+        "seed": 1007,
+        "reached_goal": false,
+        "energy": 20,
+        "latency": 501
+      },
+      {
+        "seed": 1008,
+        "reached_goal": false,
+        "energy": 21,
+        "latency": 508
+      },
+      {
+        "seed": 1009,
+        "reached_goal": false,
+        "energy": 22,
+        "latency": 534
+      }
+    ],
+    "observe_only": [
+      {
+        "seed": 1000,
+        "reached_goal": false,
+        "energy": 18,
+        "latency": 556
+      },
+      {
+        "seed": 1001,
+        "reached_goal": false,
+        "energy": 19,
+        "latency": 556
+      },
+      {
+        "seed": 1002,
+        "reached_goal": false,
+        "energy": 20,
+        "latency": 550
+      },
+      {
+        "seed": 1003,
+        "reached_goal": false,
+        "energy": 21,
+        "latency": 601
+      },
+      {
+        "seed": 1004,
+        "reached_goal": false,
+        "energy": 22,
+        "latency": 511
+      },
+      {
+        "seed": 1005,
+        "reached_goal": false,
+        "energy": 18,
+        "latency": 532
+      },
+      {
+        "seed": 1006,
+        "reached_goal": false,
+        "energy": 19,
+        "latency": 513
+      },
+      {
+        "seed": 1007,
+        "reached_goal": false,
+        "energy": 20,
+        "latency": 520
+      },
+      {
+        "seed": 1008,
+        "reached_goal": false,
+        "energy": 21,
+        "latency": 519
+      },
+      {
+        "seed": 1009,
+        "reached_goal": false,
+        "energy": 22,
+        "latency": 533
+      }
+    ],
+    "lambda_gate_only": [
+      {
+        "seed": 1000,
+        "reached_goal": false,
+        "interventions": 0
+      },
+      {
+        "seed": 1001,
+        "reached_goal": false,
+        "interventions": 1
+      },
+      {
+        "seed": 1002,
+        "reached_goal": false,
+        "interventions": 1
+      },
+      {
+        "seed": 1003,
+        "reached_goal": false,
+        "interventions": 1
+      },
+      {
+        "seed": 1004,
+        "reached_goal": false,
+        "interventions": 0
+      },
+      {
+        "seed": 1005,
+        "reached_goal": false,
+        "interventions": 1
+      },
+      {
+        "seed": 1006,
+        "reached_goal": false,
+        "interventions": 0
+      },
+      {
+        "seed": 1007,
+        "reached_goal": false,
+        "interventions": 1
+      },
+      {
+        "seed": 1008,
+        "reached_goal": false,
+        "interventions": 1
+      },
+      {
+        "seed": 1009,
+        "reached_goal": false,
+        "interventions": 0
+      }
+    ],
+    "no_contradiction_handling": [
+      {
+        "seed": 1000,
+        "reached_goal": true,
+        "energy": 16
+      },
+      {
+        "seed": 1001,
+        "reached_goal": true,
+        "energy": 17
+      },
+      {
+        "seed": 1002,
+        "reached_goal": true,
+        "energy": 18
+      },
+      {
+        "seed": 1003,
+        "reached_goal": true,
+        "energy": 19
+      },
+      {
+        "seed": 1004,
+        "reached_goal": true,
+        "energy": 20
+      },
+      {
+        "seed": 1005,
+        "reached_goal": true,
+        "energy": 16
+      },
+      {
+        "seed": 1006,
+        "reached_goal": true,
+        "energy": 17
+      },
+      {
+        "seed": 1007,
+        "reached_goal": true,
+        "energy": 18
+      },
+      {
+        "seed": 1008,
+        "reached_goal": true,
+        "energy": 19
+      },
+      {
+        "seed": 1009,
+        "reached_goal": true,
+        "energy": 20
+      }
+    ],
+    "reset_memory_recurrence": [
+      {
+        "seed": 1000,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1001,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1002,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1003,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1004,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1005,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1006,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1007,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1008,
+        "reached_goal": false,
+        "retained_goal": false
+      },
+      {
+        "seed": 1009,
+        "reached_goal": false,
+        "retained_goal": false
+      }
+    ],
+    "true_shuffled_connectome": [
+      {
+        "seed": 1000,
+        "reached_goal": true,
+        "energy": 16,
+        "latency": 1231
+      },
+      {
+        "seed": 1001,
+        "reached_goal": true,
+        "energy": 17,
+        "latency": 1255
+      },
+      {
+        "seed": 1002,
+        "reached_goal": true,
+        "energy": 18,
+        "latency": 1252
+      },
+      {
+        "seed": 1003,
+        "reached_goal": true,
+        "energy": 19,
+        "latency": 1257
+      },
+      {
+        "seed": 1004,
+        "reached_goal": true,
+        "energy": 20,
+        "latency": 1191
+      },
+      {
+        "seed": 1005,
+        "reached_goal": true,
+        "energy": 16,
+        "latency": 1206
+      },
+      {
+        "seed": 1006,
+        "reached_goal": true,
+        "energy": 17,
+        "latency": 1188
+      },
+      {
+        "seed": 1007,
+        "reached_goal": true,
+        "energy": 18,
+        "latency": 1229
+      },
+      {
+        "seed": 1008,
+        "reached_goal": true,
+        "energy": 19,
+        "latency": 1187
+      },
+      {
+        "seed": 1009,
+        "reached_goal": true,
+        "energy": 20,
+        "latency": 1198
+      }
+    ]
+  }
+}
