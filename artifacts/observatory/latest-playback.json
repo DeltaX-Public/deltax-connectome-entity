@@ -1,0 +1,745 @@
+{
+  "schema": "entity.observatory.playback.v1",
+  "generated_at": "2026-09-18T02:10:36.414Z",
+  "objective": "reach goal region after door opens",
+  "executive_source": "local_runtime",
+  "arena": {
+    "width": 10,
+    "height": 5,
+    "obstacles": [
+      {
+        "x": 3,
+        "y": 1
+      },
+      {
+        "x": 7,
+        "y": 3
+      }
+    ],
+    "goalRegion": {
+      "xMin": 8,
+      "xMax": 9,
+      "yMin": 1,
+      "yMax": 3
+    },
+    "hazard": {
+      "cells": [
+        {
+          "x": 6,
+          "y": 2
+        }
+      ],
+      "cost": 2
+    }
+  },
+  "decision_summary": {
+    "disposition": "PERMIT",
+    "executive_source": "local_runtime",
+    "permitted": [
+      {
+        "id": "cand_0",
+        "substrate_candidate_id": "c-forward"
+      }
+    ],
+    "vetoed": [],
+    "provenance": {
+      "executive_source": "local_runtime",
+      "runtime_version": "0.1.0",
+      "branch_manifest_version": "0.1.0",
+      "branch_id": "pumpbrains_experimental",
+      "package_version": "0.1.0",
+      "tick_id": 1,
+      "tnm_event_id": "tnm_4eb2f9648b3f4c24"
+    }
+  },
+  "frames": [
+    {
+      "step": 0,
+      "note": "start",
+      "body": {
+        "x": 1,
+        "y": 2,
+        "heading": 0,
+        "energy": 20
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": true,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 20,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "EXPECTED",
+          "detail": "door_state"
+        }
+      ],
+      "phase": "expect_door_closed"
+    },
+    {
+      "step": 1,
+      "note": "move_door_closed",
+      "body": {
+        "x": 2,
+        "y": 2,
+        "heading": 0,
+        "energy": 19
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": true,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 20,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "EXPECTED",
+          "detail": "door_state"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "blocked_or_west",
+      "telemetry": {
+        "spikes": 40,
+        "regions": {
+          "sensory": 71,
+          "descending": 30,
+          "recurrent": 45
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 2,
+      "note": "move_door_closed",
+      "body": {
+        "x": 3,
+        "y": 2,
+        "heading": 0,
+        "energy": 18
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": true,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 20,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "blocked_or_west",
+      "telemetry": {
+        "spikes": 47,
+        "regions": {
+          "sensory": 63,
+          "descending": 34,
+          "recurrent": 45
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 3,
+      "note": "executive_decision",
+      "body": {
+        "x": 4,
+        "y": 2,
+        "heading": 0,
+        "energy": 17
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 20,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "NEW ACTION",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "door_opened",
+      "telemetry": {
+        "spikes": 54,
+        "regions": {
+          "sensory": 63,
+          "descending": 38,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward",
+      "candidates": [
+        {
+          "substrate_candidate_id": "c-forward",
+          "action_class": "locomotion",
+          "activation_strength": 0.85,
+          "label": "forward through passage"
+        },
+        {
+          "substrate_candidate_id": "c-stop",
+          "action_class": "halt",
+          "activation_strength": 0.35,
+          "label": "stop at door"
+        }
+      ],
+      "decision": {
+        "disposition": "PERMIT",
+        "executive_source": "local_runtime",
+        "permitted": [
+          {
+            "id": "cand_0",
+            "substrate_candidate_id": "c-forward"
+          }
+        ],
+        "vetoed": [],
+        "unresolved": [
+          {
+            "id": "cand_1",
+            "substrate_candidate_id": "c-stop",
+            "reason": "not_selected"
+          }
+        ],
+        "provenance": {
+          "executive_source": "local_runtime",
+          "runtime_version": "0.1.0",
+          "branch_manifest_version": "0.1.0",
+          "branch_id": "pumpbrains_experimental",
+          "package_version": "0.1.0",
+          "tick_id": 1,
+          "tnm_event_id": "tnm_4eb2f9648b3f4c24"
+        }
+      }
+    },
+    {
+      "step": 4,
+      "note": "move",
+      "body": {
+        "x": 5,
+        "y": 2,
+        "heading": 0,
+        "energy": 16
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 20,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 61,
+        "regions": {
+          "sensory": 55,
+          "descending": 42,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 5,
+      "note": "move",
+      "body": {
+        "x": 6,
+        "y": 2,
+        "heading": 0,
+        "energy": 15
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 68,
+        "regions": {
+          "sensory": 63,
+          "descending": 46,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 6,
+      "note": "move",
+      "body": {
+        "x": 7,
+        "y": 2,
+        "heading": 0,
+        "energy": 14
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": false,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 75,
+        "regions": {
+          "sensory": 63,
+          "descending": 50,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 7,
+      "note": "move",
+      "body": {
+        "x": 8,
+        "y": 2,
+        "heading": 0,
+        "energy": 13
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": true,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 82,
+        "regions": {
+          "sensory": 71,
+          "descending": 54,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 8,
+      "note": "move",
+      "body": {
+        "x": 9,
+        "y": 2,
+        "heading": 0,
+        "energy": 12
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": true,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 89,
+        "regions": {
+          "sensory": 79,
+          "descending": 58,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 9,
+      "note": "move",
+      "body": {
+        "x": 9,
+        "y": 2,
+        "heading": 0,
+        "energy": 12
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": true,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 96,
+        "regions": {
+          "sensory": 79,
+          "descending": 62,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 10,
+      "note": "move",
+      "body": {
+        "x": 9,
+        "y": 2,
+        "heading": 0,
+        "energy": 12
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": true,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 103,
+        "regions": {
+          "sensory": 79,
+          "descending": 66,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 11,
+      "note": "move",
+      "body": {
+        "x": 9,
+        "y": 2,
+        "heading": 0,
+        "energy": 12
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": true,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 110,
+        "regions": {
+          "sensory": 79,
+          "descending": 70,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    },
+    {
+      "step": 12,
+      "note": "move",
+      "body": {
+        "x": 9,
+        "y": 2,
+        "heading": 0,
+        "energy": 12
+      },
+      "door": {
+        "x": 5,
+        "y": 2,
+        "closed": false,
+        "passage": "central"
+      },
+      "hazard": {
+        "cells": [
+          {
+            "x": 6,
+            "y": 2
+          }
+        ],
+        "cost": 2
+      },
+      "energy": 18,
+      "reached_goal": true,
+      "last_events": [
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        },
+        {
+          "type": "OBSERVED",
+          "detail": "forward"
+        },
+        {
+          "type": "SUBSTRATE RESPONSE",
+          "detail": "forward"
+        }
+      ],
+      "phase": "east_corridor",
+      "telemetry": {
+        "spikes": 117,
+        "regions": {
+          "sensory": 79,
+          "descending": 74,
+          "recurrent": 65
+        }
+      },
+      "substrate_proposal": "forward"
+    }
+  ],
+  "honesty": "Playback from harness. Stub is labeled stub. local_runtime is labeled local_runtime, never canonical_api."
+}
