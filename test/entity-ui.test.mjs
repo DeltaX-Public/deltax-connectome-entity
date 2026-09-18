@@ -1,3 +1,10 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {executiveSource,sourceCopy} from '../src/entity-ui/state.mjs';
 test('entity UI assets exist',()=>{assert.equal(fs.existsSync('entity.html'),true);assert.equal(fs.existsSync('src/entity-ui/styles.css'),true);assert.equal(fs.existsSync('src/entity-ui/entity.mjs'),true)});
-test('executive source badge is honest',()=>{assert.equal(executiveSource('canonical_api'),'canonical_api');assert.equal(executiveSource('stub'),'stub');assert.equal(executiveSource('unknown'),'disabled');assert.match(sourceCopy('stub'),/not genuine/)})
+test('executive source badge is honest',()=>{
+  assert.equal(executiveSource('canonical_api'),'canonical_api');
+  assert.equal(executiveSource('local_runtime'),'local_runtime');
+  assert.equal(executiveSource('stub'),'stub');
+  assert.equal(executiveSource('unknown'),'disabled');
+  assert.match(sourceCopy('stub'),/not genuine/);
+  assert.match(sourceCopy('local_runtime'),/local_runtime/);
+});
