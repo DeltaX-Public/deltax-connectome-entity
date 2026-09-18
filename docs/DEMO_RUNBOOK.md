@@ -58,6 +58,14 @@ that a remote or local executive call occurred.
 
 ## 5. Open the Entity Observatory
 
+Regenerate the playback artifact (uses live `local_runtime` when `DELTAX_LOCAL_RUNTIME_CMD` is set):
+
+```sh
+npm run demo:observatory
+```
+
+Then serve and open:
+
 ```sh
 python3 -m http.server 4173
 # open http://127.0.0.1:4173/entity.html

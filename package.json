@@ -6,7 +6,8 @@
     "test": "node --test test/*.mjs",
     "demo:causal": "node scripts/causal_intervention_demo.mjs",
     "demo:entity": "node scripts/entity_demo_hint.mjs",
-    "demo:local-runtime": "node scripts/local_runtime_smoke.mjs"
+    "demo:local-runtime": "node scripts/local_runtime_smoke.mjs",
+    "demo:observatory": "node scripts/observatory_playback.mjs"
   },
   "engines": {
     "node": ">=20"
