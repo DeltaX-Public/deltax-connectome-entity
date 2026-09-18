@@ -1,3 +1,5 @@
+> Launch day: see [the demo runbook](docs/DEMO_RUNBOOK.md).
+
 # DeltaX Connectome Entity
 
 A public, honest harness for a recurrent connectome substrate, causal replay, and a DeltaX executive control plane. The browser surface is an observatory, not a claim of a full connectome visualization.
