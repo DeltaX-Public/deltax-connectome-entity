@@ -75,3 +75,9 @@ DELTAX_API_URL=http://127.0.0.1:<port> DELTAX_EXECUTIVE=DELTAX node your-demo-en
 ```
 
 The status is `executive_source: canonical_api`. For CI/development only, select the clearly labeled stub with `DELTAX_EXECUTIVE=stub`. DeltaX mode without `DELTAX_API_URL` fails loudly; it never silently substitutes the stub. See `DELTAX_INTERFACE.md` and `NEURAL_CONTROL.md`.
+
+## Entity Observatory (phase 10)
+
+`entity.html` is a separate, intentionally modest visualization surface for the Broken World harness. It has WORLD, SUBSTRATE, DELTAX, and EXPERIMENT panels. The page reads `artifacts/checkpoints/causal-intervention-8.json` when served from the repository and otherwise stays explicit about missing telemetry. The executive badge is driven only by `executive_source` (`canonical_api`, `stub`, or `disabled`); a stub is never presented as genuine DeltaX and neural activity is never labeled as DeltaX reasoning.
+
+Open it from the repository root with a static server (for example `python3 -m http.server 4173`) and visit `http://localhost:4173/entity.html`. In Codespaces, forward port 4173. The controls provide a local observatory surface and JSONL export; authoritative experiment state remains the headless harness and its tests. This is not a full connectome visualization.
