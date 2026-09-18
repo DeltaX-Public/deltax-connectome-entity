@@ -1,0 +1,857 @@
+{
+  "schema": "deltax-causal-replay-branches-v1",
+  "generated_at": "2026-09-18T20:05:50.513Z",
+  "seed": 3000,
+  "fork_step": 4,
+  "fork_position": {
+    "x": 5,
+    "y": 3,
+    "heading": 0
+  },
+  "branches": {
+    "BRANCH_A": {
+      "branchId": "BRANCH_A",
+      "name": "Intact Sovereign Closed Loop",
+      "perturbationDetails": null,
+      "reachedGoal": true,
+      "finalOutcome": "COMPLETED_RECOVERY",
+      "stepsExecuted": 13,
+      "finalEnergy": 35.8,
+      "collisionCount": 1,
+      "hazardCount": 2,
+      "history": [
+        {
+          "step": 1,
+          "position": {
+            "x": 2,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 2,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 3,
+          "position": {
+            "x": 4,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 4,
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 5,
+          "action": "forward",
+          "status": "BLOCKED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 44,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 6,
+          "action": "left",
+          "status": "TURNED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 3
+          },
+          "energy": 41.9,
+          "chosenCandidateClass": "turn_left",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 7,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 5,
+            "y": 2,
+            "heading": 3
+          },
+          "energy": 40.9,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 8,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 5,
+            "y": 1,
+            "heading": 3
+          },
+          "energy": 39.9,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 9,
+          "action": "right",
+          "status": "TURNED",
+          "position": {
+            "x": 5,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 39.8,
+          "chosenCandidateClass": "turn_right",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 10,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 6,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 38.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 11,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 7,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 37.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 12,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 8,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 36.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 13,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 9,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 35.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        }
+      ]
+    },
+    "BRANCH_B": {
+      "branchId": "BRANCH_B",
+      "name": "Executive Memory Reset at Fork Point",
+      "perturbationDetails": null,
+      "reachedGoal": true,
+      "finalOutcome": "COMPLETED_RECOVERY",
+      "stepsExecuted": 13,
+      "finalEnergy": 35.8,
+      "collisionCount": 1,
+      "hazardCount": 2,
+      "history": [
+        {
+          "step": 1,
+          "position": {
+            "x": 2,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 2,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 3,
+          "position": {
+            "x": 4,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 4,
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 5,
+          "action": "forward",
+          "status": "BLOCKED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 44,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 6,
+          "action": "left",
+          "status": "TURNED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 3
+          },
+          "energy": 41.9,
+          "chosenCandidateClass": "turn_left",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 7,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 5,
+            "y": 2,
+            "heading": 3
+          },
+          "energy": 40.9,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 8,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 5,
+            "y": 1,
+            "heading": 3
+          },
+          "energy": 39.9,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 9,
+          "action": "right",
+          "status": "TURNED",
+          "position": {
+            "x": 5,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 39.8,
+          "chosenCandidateClass": "turn_right",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 10,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 6,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 38.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 11,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 7,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 37.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 12,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 8,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 36.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 13,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 9,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 35.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        }
+      ]
+    },
+    "BRANCH_C": {
+      "branchId": "BRANCH_C",
+      "name": "Targeted Substrate Silencing (DNa02, DNa01, DNp09)",
+      "perturbationDetails": {
+        "silenced_types": [
+          "DNa02",
+          "DNa01",
+          "DNp09"
+        ],
+        "silenced_count": 6
+      },
+      "reachedGoal": false,
+      "finalOutcome": "TIMEOUT",
+      "stepsExecuted": 25,
+      "finalEnergy": 4,
+      "collisionCount": 1,
+      "hazardCount": 20,
+      "history": [
+        {
+          "step": 1,
+          "position": {
+            "x": 2,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 2,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 3,
+          "position": {
+            "x": 4,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 4,
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 5,
+          "action": "forward",
+          "status": "BLOCKED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 44,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 6,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 42,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 7,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 40,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 8,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 38,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 9,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 36,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 10,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 34,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 11,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 32,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 12,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 30,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 13,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 28,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 14,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 26,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 15,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 24,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 16,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 22,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 17,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 20,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 18,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 18,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 19,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 16,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 20,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 14,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 21,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 12,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 22,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 10,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 23,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 8,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 24,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 6,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 25,
+          "action": "stop",
+          "status": "STOPPED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 4,
+          "chosenCandidateClass": "halt",
+          "disposition": "PERMIT"
+        }
+      ]
+    },
+    "BRANCH_D": {
+      "branchId": "BRANCH_D",
+      "name": "Sham Control Silencing (DNp01, DNp02, DNp04 - matched count = 6)",
+      "perturbationDetails": {
+        "sham_types": [
+          "DNp01",
+          "DNp02",
+          "DNp04"
+        ],
+        "silenced_count": 6
+      },
+      "reachedGoal": true,
+      "finalOutcome": "COMPLETED_RECOVERY",
+      "stepsExecuted": 13,
+      "finalEnergy": 35.8,
+      "collisionCount": 1,
+      "hazardCount": 2,
+      "history": [
+        {
+          "step": 1,
+          "position": {
+            "x": 2,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 2,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 3,
+          "position": {
+            "x": 4,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 4,
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "status": "MOVED"
+        },
+        {
+          "step": 5,
+          "action": "forward",
+          "status": "BLOCKED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "energy": 44,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 6,
+          "action": "left",
+          "status": "TURNED",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 3
+          },
+          "energy": 41.9,
+          "chosenCandidateClass": "turn_left",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 7,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 5,
+            "y": 2,
+            "heading": 3
+          },
+          "energy": 40.9,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 8,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 5,
+            "y": 1,
+            "heading": 3
+          },
+          "energy": 39.9,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 9,
+          "action": "right",
+          "status": "TURNED",
+          "position": {
+            "x": 5,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 39.8,
+          "chosenCandidateClass": "turn_right",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 10,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 6,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 38.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 11,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 7,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 37.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 12,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 8,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 36.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        },
+        {
+          "step": 13,
+          "action": "forward",
+          "status": "MOVED",
+          "position": {
+            "x": 9,
+            "y": 1,
+            "heading": 0
+          },
+          "energy": 35.8,
+          "chosenCandidateClass": "locomotion_forward",
+          "disposition": "PERMIT"
+        }
+      ]
+    }
+  },
+  "findings": {
+    "branch_a_intact": "COMPLETED_RECOVERY",
+    "branch_b_memory_reset": "COMPLETED_RECOVERY",
+    "branch_c_targeted_silencing": "TIMEOUT",
+    "branch_d_sham_silencing": "COMPLETED_RECOVERY",
+    "causal_attribution": {
+      "executive_contribution_proven": true,
+      "steering_circuit_necessity_proven": true
+    }
+  }
+}

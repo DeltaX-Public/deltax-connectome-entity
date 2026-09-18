@@ -73,20 +73,23 @@ export class ConnectomeCandidateBridge {
 
     // 3. Turn Left (DNa02, DNa01, DNp09 - Left Hemisphere)
     const turnL = dnReadouts.turn_left || { weighted_mean: 0, neurons: [], types: [] };
-    const turnLStrength = +(1 - Math.exp(-turnL.weighted_mean / this.turnScale)).toFixed(3);
+    const turnLSilenced = turnL.neurons.length > 0 && turnL.neurons.every((n) => n.silenced);
+    const turnLStrength = turnLSilenced ? 0 : +(1 - Math.exp(-turnL.weighted_mean / this.turnScale)).toFixed(3);
     candidates.push({
       id: `cand_turn_left_${tick}`,
       substrate_candidate_id: `sub_dn_turn_left_${tick}`,
       action_class: "turn_left",
       actuator_action: "left",
       provenance_type: "MEASURED_NEURAL",
-      activation_strength: Math.max(0.05, Math.min(1.0, turnLStrength)),
+      forbidden: turnLSilenced,
+      activation_strength: turnLSilenced ? 0 : Math.max(0.05, Math.min(1.0, turnLStrength)),
       originating_population: turnL.types,
       originating_neuron_indices: turnL.neurons.map((n) => n.index),
       raw_activity_measure: {
         mean_rate_hz: turnL.mean_rate,
         max_rate_hz: turnL.max_rate,
         weighted_mean_hz: turnL.weighted_mean,
+        silenced: turnLSilenced,
       },
       normalization_method: "1 - exp(-weighted_mean / turnScale)",
       tick,
@@ -95,20 +98,23 @@ export class ConnectomeCandidateBridge {
 
     // 4. Turn Right (DNa02, DNa01, DNp09 - Right Hemisphere)
     const turnR = dnReadouts.turn_right || { weighted_mean: 0, neurons: [], types: [] };
-    const turnRStrength = +(1 - Math.exp(-turnR.weighted_mean / this.turnScale)).toFixed(3);
+    const turnRSilenced = turnR.neurons.length > 0 && turnR.neurons.every((n) => n.silenced);
+    const turnRStrength = turnRSilenced ? 0 : +(1 - Math.exp(-turnR.weighted_mean / this.turnScale)).toFixed(3);
     candidates.push({
       id: `cand_turn_right_${tick}`,
       substrate_candidate_id: `sub_dn_turn_right_${tick}`,
       action_class: "turn_right",
       actuator_action: "right",
       provenance_type: "MEASURED_NEURAL",
-      activation_strength: Math.max(0.05, Math.min(1.0, turnRStrength)),
+      forbidden: turnRSilenced,
+      activation_strength: turnRSilenced ? 0 : Math.max(0.05, Math.min(1.0, turnRStrength)),
       originating_population: turnR.types,
       originating_neuron_indices: turnR.neurons.map((n) => n.index),
       raw_activity_measure: {
         mean_rate_hz: turnR.mean_rate,
         max_rate_hz: turnR.max_rate,
         weighted_mean_hz: turnR.weighted_mean,
+        silenced: turnRSilenced,
       },
       normalization_method: "1 - exp(-weighted_mean / turnScale)",
       tick,

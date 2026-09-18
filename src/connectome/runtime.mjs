@@ -166,16 +166,20 @@ export class ConnectomeRuntime {
           type: n.type,
           weight: n.weight,
           rate_hz: +rate.toFixed(2),
+          silenced: this.silencedNeurons.has(n.index),
         });
       }
+
+      const allSilenced = neurons.length > 0 && neurons.every((n) => this.silencedNeurons.has(n.index));
 
       readouts[role] = {
         mean_rate: +(sum / neurons.length).toFixed(3),
         max_rate: +maxRate.toFixed(3),
         weighted_mean: +(weightSum > 0 ? weightedSum / weightSum : 0).toFixed(3),
         count: neurons.length,
-        types: [...new Set(neurons.map((n) => n.type))],
         neurons: neuronDetails,
+        types: [...new Set(neurons.map((n) => n.type))],
+        all_silenced: allSilenced,
       };
     }
 
