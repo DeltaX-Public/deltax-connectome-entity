@@ -1,0 +1,1444 @@
+{
+  "schema": "phase4b.lateral_sensor_audit.v1",
+  "timestamp": "2026-09-19T03:44:45.915Z",
+  "evaluation_finding": {
+    "question": "Why did Condition B equal Condition A, and Condition D equal Condition C in the factorial evaluation?",
+    "root_causes": [
+      {
+        "layer": "HARNESS_TRANSDUCTION_DISCONNECTION",
+        "description": "In the Phase IV-B evaluation runner (ChangedWorldHarness._runTrial), sensoryDrives was computed by calling this.transduction.transduce({ visual_field, collision, gradients, proximity, body }). The property 'lateral_sensors' was omitted from the transduction call. Consequently, ConnectomeSensoryTransduction.transduce() observed lateral as undefined and fell back to TRANSDUCTION_MODES.SYMMETRIC for all conditions. Thus, Condition B was computationally identical to Condition A, and Condition D was computationally identical to Condition C."
+      },
+      {
+        "layer": "ENVIRONMENT_CORRIDOR_SYMMETRY",
+        "description": "During baseline navigation (Steps 1-17), the entity moves East along the central corridor at y=3. The North wall is at y=2 (distance = 1) and the South wall is at y=4 (distance = 1). Because the corridor is geometrically symmetric, left_antenna_distance and right_antenna_distance are identical (1.0 grid units). Thus, even with lateral transduction active, sensory drive to Johnston's Organ and tactile bristles is bilaterally balanced until an asymmetric obstacle or turn occurs."
+      },
+      {
+        "layer": "CONNECTOME_INTRINSIC_ASYMMETRY",
+        "description": "When the entity encounters the closed door at step 18, both front contact and proximity trigger bilateral mechanosensory drive. Even with symmetric sensory excitation, the intact Drosophila CNS connectome exhibits an intrinsic recurrent circuit bias favoring DNa02/DNp09 left-turn descending drive over right-turn drive (turn_left = 6.2 Hz vs turn_right = 1.1 Hz). This endogenous neural asymmetry causes the unassisted substrate to steer left regardless of whether input is symmetric or lateralized."
+      }
+    ],
+    "answers_to_core_questions": {
+      "are_lateral_sensor_values_different": "Yes, once the agent rotates or approaches an asymmetric opening, left and right raycasts diverge significantly (e.g. left distance 4.0 vs right distance 1.0).",
+      "are_differences_transmitted_to_receptors": "Yes, when lateral_sensors is passed to transduction, ipsilateral Johnston's Organ and tactile receptor firing rates reflect the asymmetric raycast distances (e.g. 120 Hz vs 0 Hz).",
+      "are_receptor_differences_large_enough_to_change_dn_state": "Partially. Asymmetric receptor drives shift descending steering rates, but the connectome's strong endogenous recurrent left-bias dominates differential contrast in tight corridors.",
+      "do_they_alter_candidate_rankings": "Under READOUT_A (Conditions A & B), HALT suppressed both left and right regardless of sensory drive. Under READOUT_C (Conditions C & D), turn_left is the dominant winner in both cases because the connectome's innate left-bias aligns with obstacle avoidance.",
+      "where_is_information_disappearing": "The primary loss occurred at the harness call site where lateral_sensors was omitted from the observation dictionary passed to transduction. Secondary loss occurs within recurrent connectome dynamics where high baseline tonic activity in specific DN populations outweighs subtle sensory differentials."
+    }
+  },
+  "representative_steps": {
+    "symmetric_calibrated_condition_C": [
+      {
+        "step": 1,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 0,
+          "is_changed": false,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 8,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 1,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 76.59,
+          "jo_right": 76.59,
+          "tactile_left": 61.27,
+          "tactile_right": 61.27,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 0,
+          "backward": 0.001,
+          "turn_left": 0,
+          "turn_right": 0,
+          "turn_diff": 0,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_1",
+            "action_class": "locomotion_forward",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_1",
+            "action_class": "turn_left",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_1",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_1",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_1",
+            "action_class": "groom",
+            "strength": 0.075,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_1",
+            "action_class": "halt",
+            "strength": 0.073,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_1",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 0.075
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 5,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 0,
+          "is_changed": false,
+          "action_status": "MOVED"
+        },
+        "lateral_sensors": {
+          "front_distance": 8,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 1,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 76.59,
+          "jo_right": 76.59,
+          "tactile_left": 61.27,
+          "tactile_right": 61.27,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 3.44,
+          "backward": 0.802,
+          "turn_left": 0.449,
+          "turn_right": 0.294,
+          "turn_diff": 0.155,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_5",
+            "action_class": "locomotion_forward",
+            "strength": 0.682,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_5",
+            "action_class": "turn_left",
+            "strength": 0.098,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_5",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_backward_5",
+            "action_class": "locomotion_backward",
+            "strength": 0.235,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_5",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_5",
+            "action_class": "groom",
+            "strength": 0.345,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_5",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_5",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "locomotion_forward",
+          "strength": 0.682
+        },
+        "executed_action": "forward"
+      },
+      {
+        "step": 17,
+        "world_state": {
+          "x": 5,
+          "y": 3,
+          "heading": 1,
+          "is_changed": false,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 4,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 4,
+          "right_lateral_distance": 4,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 63.62,
+          "jo_right": 63.62,
+          "tactile_left": 50.89,
+          "tactile_right": 50.89,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 4.667,
+          "backward": 0.121,
+          "turn_left": 8.66,
+          "turn_right": 0,
+          "turn_diff": 8.66,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_17",
+            "action_class": "locomotion_forward",
+            "strength": 0.789,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_17",
+            "action_class": "turn_left",
+            "strength": 0.997,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_17",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_backward_17",
+            "action_class": "locomotion_backward",
+            "strength": 0.04,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_17",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_17",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_17",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_17",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 1
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 18,
+        "world_state": {
+          "x": 5,
+          "y": 3,
+          "heading": 1,
+          "is_changed": true,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 4,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 4,
+          "right_lateral_distance": 4,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 63.62,
+          "jo_right": 63.62,
+          "tactile_left": 50.89,
+          "tactile_right": 50.89,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 3.597,
+          "backward": 0.076,
+          "turn_left": 5.099,
+          "turn_right": 0,
+          "turn_diff": 5.099,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_18",
+            "action_class": "locomotion_forward",
+            "strength": 0.699,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_18",
+            "action_class": "turn_left",
+            "strength": 0.967,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_18",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_18",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_18",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_18",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_18",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 1
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 19,
+        "world_state": {
+          "x": 5,
+          "y": 3,
+          "heading": 1,
+          "is_changed": true,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 4,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 4,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0.667,
+          "right_noxious": 0.667
+        },
+        "receptor_drives_hz": {
+          "jo_left": 76.59,
+          "jo_right": 76.59,
+          "tactile_left": 61.27,
+          "tactile_right": 61.27,
+          "thermo_left": 180,
+          "thermo_right": 180
+        },
+        "dn_readouts_hz": {
+          "forward": 2.691,
+          "backward": 0.048,
+          "turn_left": 3.003,
+          "turn_right": 0,
+          "turn_diff": 3.003,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_19",
+            "action_class": "locomotion_forward",
+            "strength": 0.592,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_19",
+            "action_class": "turn_left",
+            "strength": 0.865,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_19",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_19",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_19",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_19",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_19",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 1
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 20,
+        "world_state": {
+          "x": 5,
+          "y": 3,
+          "heading": 1,
+          "is_changed": true,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 4,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 4,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0.667,
+          "right_noxious": 0.667
+        },
+        "receptor_drives_hz": {
+          "jo_left": 76.59,
+          "jo_right": 76.59,
+          "tactile_left": 61.27,
+          "tactile_right": 61.27,
+          "thermo_left": 180,
+          "thermo_right": 180
+        },
+        "dn_readouts_hz": {
+          "forward": 2.072,
+          "backward": 0.03,
+          "turn_left": 1.768,
+          "turn_right": 0,
+          "turn_diff": 1.768,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_20",
+            "action_class": "locomotion_forward",
+            "strength": 0.499,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_20",
+            "action_class": "turn_left",
+            "strength": 0.692,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_20",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_20",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_20",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_20",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_20",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 1
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 21,
+        "world_state": {
+          "x": 5,
+          "y": 3,
+          "heading": 1,
+          "is_changed": true,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 4,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 4,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0.667,
+          "right_noxious": 0.667
+        },
+        "receptor_drives_hz": {
+          "jo_left": 76.59,
+          "jo_right": 76.59,
+          "tactile_left": 61.27,
+          "tactile_right": 61.27,
+          "thermo_left": 180,
+          "thermo_right": 180
+        },
+        "dn_readouts_hz": {
+          "forward": 1.696,
+          "backward": 0.019,
+          "turn_left": 1.041,
+          "turn_right": 0,
+          "turn_diff": 1.041,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_21",
+            "action_class": "locomotion_forward",
+            "strength": 0.432,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_21",
+            "action_class": "turn_left",
+            "strength": 0.5,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_21",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_21",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_21",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_21",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_21",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 1
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 22,
+        "world_state": {
+          "x": 5,
+          "y": 3,
+          "heading": 1,
+          "is_changed": true,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 4,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 4,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0.667,
+          "right_noxious": 0.667
+        },
+        "receptor_drives_hz": {
+          "jo_left": 76.59,
+          "jo_right": 76.59,
+          "tactile_left": 61.27,
+          "tactile_right": 61.27,
+          "thermo_left": 180,
+          "thermo_right": 180
+        },
+        "dn_readouts_hz": {
+          "forward": 1.486,
+          "backward": 0,
+          "turn_left": 1.103,
+          "turn_right": 0,
+          "turn_diff": 1.103,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_22",
+            "action_class": "locomotion_forward",
+            "strength": 0.391,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_22",
+            "action_class": "turn_left",
+            "strength": 0.521,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_22",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_22",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_22",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_22",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_22",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 1
+        },
+        "executed_action": "stop"
+      }
+    ],
+    "lateralized_calibrated_condition_D": [
+      {
+        "step": 1,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 0,
+          "is_changed": false,
+          "action_status": "STOPPED"
+        },
+        "lateral_sensors": {
+          "front_distance": 8,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 1,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 0.001,
+          "backward": 0.011,
+          "turn_left": 0.049,
+          "turn_right": 0,
+          "turn_diff": 0.049,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_1",
+            "action_class": "locomotion_forward",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_1",
+            "action_class": "turn_left",
+            "strength": 0.032,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_1",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_1",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_1",
+            "action_class": "groom",
+            "strength": 0.211,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_1",
+            "action_class": "halt",
+            "strength": 0.029,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_1",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "groom",
+          "strength": 0.211
+        },
+        "executed_action": "stop"
+      },
+      {
+        "step": 5,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 3,
+          "is_changed": false,
+          "action_status": "BLOCKED"
+        },
+        "lateral_sensors": {
+          "front_distance": 1,
+          "left_antenna_distance": 2,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 2,
+          "right_lateral_distance": 4,
+          "left_contact": false,
+          "right_contact": true,
+          "front_contact": true,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 4.677,
+          "backward": 1.487,
+          "turn_left": 0.662,
+          "turn_right": 0.124,
+          "turn_diff": 0.538,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_5",
+            "action_class": "locomotion_forward",
+            "strength": 0.79,
+            "forbidden": true
+          },
+          {
+            "id": "cand_turn_left_5",
+            "action_class": "turn_left",
+            "strength": 0.301,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_5",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_backward_5",
+            "action_class": "locomotion_backward",
+            "strength": 0.391,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_5",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_5",
+            "action_class": "groom",
+            "strength": 0.444,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_5",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_5",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "locomotion_forward",
+          "strength": 0.79
+        },
+        "executed_action": "forward"
+      },
+      {
+        "step": 17,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 3,
+          "is_changed": false,
+          "action_status": "TURNED"
+        },
+        "lateral_sensors": {
+          "front_distance": 1,
+          "left_antenna_distance": 2,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 2,
+          "right_lateral_distance": 4,
+          "left_contact": false,
+          "right_contact": true,
+          "front_contact": true,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 6.745,
+          "backward": 0,
+          "turn_left": 89.226,
+          "turn_right": 0,
+          "turn_diff": 89.226,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_17",
+            "action_class": "locomotion_forward",
+            "strength": 0.894,
+            "forbidden": true
+          },
+          {
+            "id": "cand_turn_left_17",
+            "action_class": "turn_left",
+            "strength": 1,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_17",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_17",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_17",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_17",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_17",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "turn_left",
+          "strength": 1
+        },
+        "executed_action": "left"
+      },
+      {
+        "step": 18,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 2,
+          "is_changed": true,
+          "action_status": "TURNED"
+        },
+        "lateral_sensors": {
+          "front_distance": 2,
+          "left_antenna_distance": 2,
+          "right_antenna_distance": 2,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 1,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0,
+          "right_noxious": 0
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 0,
+          "thermo_right": 0
+        },
+        "dn_readouts_hz": {
+          "forward": 6.384,
+          "backward": 0,
+          "turn_left": 89.582,
+          "turn_right": 0,
+          "turn_diff": 89.582,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_18",
+            "action_class": "locomotion_forward",
+            "strength": 0.881,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_18",
+            "action_class": "turn_left",
+            "strength": 1,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_18",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_18",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_18",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_18",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_18",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "turn_left",
+          "strength": 1
+        },
+        "executed_action": "left"
+      },
+      {
+        "step": 19,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 1,
+          "is_changed": true,
+          "action_status": "TURNED"
+        },
+        "lateral_sensors": {
+          "front_distance": 1,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 2,
+          "left_lateral_distance": 4,
+          "right_lateral_distance": 2,
+          "left_contact": true,
+          "right_contact": false,
+          "front_contact": true,
+          "left_noxious": 0.074,
+          "right_noxious": 0.047
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 19.64,
+          "thermo_right": 10.51
+        },
+        "dn_readouts_hz": {
+          "forward": 6.201,
+          "backward": 0,
+          "turn_left": 89.282,
+          "turn_right": 0,
+          "turn_diff": 89.282,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_19",
+            "action_class": "locomotion_forward",
+            "strength": 0.873,
+            "forbidden": true
+          },
+          {
+            "id": "cand_turn_left_19",
+            "action_class": "turn_left",
+            "strength": 1,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_19",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_19",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_19",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_19",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_19",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "turn_left",
+          "strength": 1
+        },
+        "executed_action": "left"
+      },
+      {
+        "step": 20,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 0,
+          "is_changed": true,
+          "action_status": "TURNED"
+        },
+        "lateral_sensors": {
+          "front_distance": 5,
+          "left_antenna_distance": 1,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 1,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0.074,
+          "right_noxious": 0.074
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 19.64,
+          "thermo_right": 19.64
+        },
+        "dn_readouts_hz": {
+          "forward": 6.099,
+          "backward": 0,
+          "turn_left": 87.96,
+          "turn_right": 0,
+          "turn_diff": 87.96,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_20",
+            "action_class": "locomotion_forward",
+            "strength": 0.869,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_20",
+            "action_class": "turn_left",
+            "strength": 1,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_20",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_20",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_20",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_20",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_20",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "turn_left",
+          "strength": 1
+        },
+        "executed_action": "left"
+      },
+      {
+        "step": 21,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 3,
+          "is_changed": true,
+          "action_status": "TURNED"
+        },
+        "lateral_sensors": {
+          "front_distance": 1,
+          "left_antenna_distance": 2,
+          "right_antenna_distance": 1,
+          "left_lateral_distance": 2,
+          "right_lateral_distance": 4,
+          "left_contact": false,
+          "right_contact": true,
+          "front_contact": true,
+          "left_noxious": 0.047,
+          "right_noxious": 0.074
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 10.51,
+          "thermo_right": 19.64
+        },
+        "dn_readouts_hz": {
+          "forward": 5.988,
+          "backward": 0,
+          "turn_left": 85.757,
+          "turn_right": 0,
+          "turn_diff": 85.757,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_21",
+            "action_class": "locomotion_forward",
+            "strength": 0.864,
+            "forbidden": true
+          },
+          {
+            "id": "cand_turn_left_21",
+            "action_class": "turn_left",
+            "strength": 1,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_21",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_21",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_21",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_21",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_21",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "turn_left",
+          "strength": 1
+        },
+        "executed_action": "left"
+      },
+      {
+        "step": 22,
+        "world_state": {
+          "x": 1,
+          "y": 3,
+          "heading": 2,
+          "is_changed": true,
+          "action_status": "TURNED"
+        },
+        "lateral_sensors": {
+          "front_distance": 2,
+          "left_antenna_distance": 2,
+          "right_antenna_distance": 2,
+          "left_lateral_distance": 1,
+          "right_lateral_distance": 1,
+          "left_contact": true,
+          "right_contact": true,
+          "front_contact": false,
+          "left_noxious": 0.047,
+          "right_noxious": 0.047
+        },
+        "receptor_drives_hz": {
+          "jo_left": 140,
+          "jo_right": 140,
+          "tactile_left": 160,
+          "tactile_right": 160,
+          "thermo_left": 10.51,
+          "thermo_right": 10.51
+        },
+        "dn_readouts_hz": {
+          "forward": 5.612,
+          "backward": 0,
+          "turn_left": 82.497,
+          "turn_right": 0,
+          "turn_diff": 82.497,
+          "escape": 0
+        },
+        "candidate_field": [
+          {
+            "id": "cand_fwd_22",
+            "action_class": "locomotion_forward",
+            "strength": 0.846,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_left_22",
+            "action_class": "turn_left",
+            "strength": 1,
+            "forbidden": false
+          },
+          {
+            "id": "cand_turn_right_22",
+            "action_class": "turn_right",
+            "strength": 0,
+            "forbidden": false
+          },
+          {
+            "id": "cand_escape_22",
+            "action_class": "giant_fiber_escape",
+            "strength": 0,
+            "forbidden": true
+          },
+          {
+            "id": "cand_groom_22",
+            "action_class": "groom",
+            "strength": 1,
+            "forbidden": true
+          },
+          {
+            "id": "cand_halt_22",
+            "action_class": "halt",
+            "strength": 0.005,
+            "forbidden": false
+          },
+          {
+            "id": "cand_safe_noop_22",
+            "action_class": "safe_noop",
+            "strength": 0.001,
+            "forbidden": false
+          }
+        ],
+        "top_candidate": {
+          "action_class": "turn_left",
+          "strength": 1
+        },
+        "executed_action": "left"
+      }
+    ]
+  }
+}

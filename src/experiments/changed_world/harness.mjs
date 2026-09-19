@@ -8,8 +8,8 @@
  */
 import { ChangedWorld } from "../../worlds/changed_world/world.mjs";
 import { ConnectomeRuntime } from "../../connectome/runtime.mjs";
-import { ConnectomeSensoryTransduction } from "../../connectome/sensory_transduction.mjs";
-import { ConnectomeCandidateBridge } from "../../connectome/candidate_bridge.mjs";
+import { ConnectomeSensoryTransduction, TRANSDUCTION_MODES } from "../../connectome/sensory_transduction.mjs";
+import { ConnectomeCandidateBridge, READOUT_MODES } from "../../connectome/candidate_bridge.mjs";
 import { createShuffledConnectome } from "../../connectome/shuffled_control.mjs";
 import { createExecutive } from "../../deltax/index.mjs";
 
@@ -38,12 +38,16 @@ export class ChangedWorldHarness {
     maxStepsPerTrial = 35,
     changeAtStep = 18,
     executive = null,
+    sensoryMode = TRANSDUCTION_MODES.SYMMETRIC,
+    readoutMode = READOUT_MODES.READOUT_A_CURRENT,
   } = {}) {
     this.seed = seed;
     this.condition = condition;
     this.command = command;
     this.maxStepsPerTrial = maxStepsPerTrial;
     this.changeAtStep = changeAtStep;
+    this.sensoryMode = sensoryMode;
+    this.readoutMode = readoutMode;
 
     if (!PHASE3_CONDITIONS.includes(condition)) {
       throw new Error(`Invalid condition: ${condition}`);
@@ -70,8 +74,8 @@ export class ChangedWorldHarness {
       this.runtime.net.indptr = this.runtime.data.indptr;
     }
 
-    this.transduction = new ConnectomeSensoryTransduction(this.runtime.data);
-    this.bridge = new ConnectomeCandidateBridge();
+    this.transduction = new ConnectomeSensoryTransduction(this.runtime.data, null, { mode: this.sensoryMode });
+    this.bridge = new ConnectomeCandidateBridge({ readoutMode: this.readoutMode });
 
     // 3. Executive connection (for OBSERVE, EXECUTIVE, EXECUTIVE_MEMORY_RESET)
     this.sessionId = `phase3_${condition.toLowerCase()}_seed_${seed}_${Date.now()}`;
@@ -247,6 +251,7 @@ export class ChangedWorldHarness {
         collision: senses.collision,
         gradients: senses.gradients,
         proximity: senses.proximity,
+        lateral_sensors: senses.lateral_sensors,
         body: st.body,
       });
       this.runtime.setSensoryDrives(sensoryDrives);
@@ -260,12 +265,17 @@ export class ChangedWorldHarness {
       const dnReadouts = this.runtime.getDescendingNeuronReadouts();
       const candidates = this.bridge.generateCandidates(dnReadouts, step);
 
-      // Hard physical constraint: forward locomotion is physically impossible when blocked ahead
-      if (isBlocked) {
-        for (const c of candidates) {
-          if (c.action_class === "locomotion_forward") {
-            c.forbidden = true;
-          }
+      // Hard physical constraints:
+      // 1. Forward locomotion is physically impossible when blocked ahead
+      // 2. Unembodied actions are rejected as actuator-unavailable
+      for (const c of candidates) {
+        if (isBlocked && c.action_class === "locomotion_forward") {
+          c.forbidden = true;
+          c.forbidden_reason = "BLOCKED_AHEAD";
+        }
+        if (c.embodiment_status === "UNEMBODIED" || c.is_executable === false) {
+          c.forbidden = true;
+          c.forbidden_reason = "UNEMBODIED_ACTUATOR";
         }
       }
 
@@ -501,6 +511,7 @@ export class ChangedWorldHarness {
   _mapCandidateToRover(actionClass) {
     switch (actionClass) {
       case "locomotion_forward": return "forward";
+      case "locomotion_backward": return "backward";
       case "turn_left": return "left";
       case "turn_right": return "right";
       case "halt": return "stop";

@@ -1,0 +1,800 @@
+{
+  "timestamp": "2026-09-19T01:16:57.879Z",
+  "neural_corpus_size": 35,
+  "comparison": {
+    "READOUT_A_CURRENT": {
+      "readout_name": "READOUT_A_CURRENT",
+      "total_states_evaluated": 35,
+      "sign_preservation_rate": 0.2381,
+      "spearman_steering_correlation": 0.1319,
+      "mean_entropy": 1.256,
+      "unique_rank_orderings": 3,
+      "collapsed_state_ratio": 0.914,
+      "saturation_fraction": 0.143,
+      "dead_zone_fraction": 0.678,
+      "winner_distribution": {
+        "halt": 35
+      },
+      "sample_records": [
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=0",
+          "neural": {
+            "fwd": 0.071,
+            "back": 0.065,
+            "turnL": 0.813,
+            "turnR": 0.016,
+            "diff": 0.797
+          },
+          "winner": "halt",
+          "winner_strength": 0.996,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.247,
+          "ranking": [
+            "halt(0.996)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=30",
+          "neural": {
+            "fwd": 0.067,
+            "back": 0.065,
+            "turnL": 0.794,
+            "turnR": 0.018,
+            "diff": 0.776
+          },
+          "winner": "halt",
+          "winner_strength": 0.997,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.246,
+          "ranking": [
+            "halt(0.997)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=90",
+          "neural": {
+            "fwd": 0.064,
+            "back": 0.073,
+            "turnL": 0.78,
+            "turnR": 0.018,
+            "diff": 0.762
+          },
+          "winner": "halt",
+          "winner_strength": 0.997,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.246,
+          "ranking": [
+            "halt(0.997)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=180",
+          "neural": {
+            "fwd": 0.069,
+            "back": 0.091,
+            "turnL": 0.765,
+            "turnR": 0.014,
+            "diff": 0.751
+          },
+          "winner": "halt",
+          "winner_strength": 0.996,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.247,
+          "ranking": [
+            "halt(0.996)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=90 / R=180",
+          "neural": {
+            "fwd": 0.063,
+            "back": 0.026,
+            "turnL": 0.174,
+            "turnR": 0.017,
+            "diff": 0.157
+          },
+          "winner": "halt",
+          "winner_strength": 0.997,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.246,
+          "ranking": [
+            "halt(0.997)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=30 / R=180",
+          "neural": {
+            "fwd": 0.015,
+            "back": 0,
+            "turnL": 0.026,
+            "turnR": 0.006,
+            "diff": 0.02
+          },
+          "winner": "halt",
+          "winner_strength": 0.999,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.244,
+          "ranking": [
+            "halt(0.999)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=0 / R=180",
+          "neural": {
+            "fwd": 0,
+            "back": 0,
+            "turnL": 0,
+            "turnR": 0.001,
+            "diff": -0.001
+          },
+          "winner": "halt",
+          "winner_strength": 1,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.244,
+          "ranking": [
+            "halt(1)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=0",
+          "neural": {
+            "fwd": 0.259,
+            "back": 0.006,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "halt",
+          "winner_strength": 0.986,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.254,
+          "ranking": [
+            "halt(0.986)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=30",
+          "neural": {
+            "fwd": 0.262,
+            "back": 0.011,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "halt",
+          "winner_strength": 0.986,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.254,
+          "ranking": [
+            "halt(0.986)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=90",
+          "neural": {
+            "fwd": 0.292,
+            "back": 0.047,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "halt",
+          "winner_strength": 0.984,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.255,
+          "ranking": [
+            "halt(0.984)",
+            "locomotion_forward(0.05)",
+            "turn_left(0.05)"
+          ]
+        }
+      ]
+    },
+    "READOUT_B_UPSTREAM_REFERENCE": {
+      "readout_name": "READOUT_B_UPSTREAM_REFERENCE",
+      "total_states_evaluated": 35,
+      "sign_preservation_rate": 0.5238,
+      "spearman_steering_correlation": 0.7218,
+      "mean_entropy": 0.348,
+      "unique_rank_orderings": 3,
+      "collapsed_state_ratio": 0.914,
+      "saturation_fraction": 0.183,
+      "dead_zone_fraction": 0.583,
+      "winner_distribution": {
+        "halt": 35
+      },
+      "sample_records": [
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=0",
+          "neural": {
+            "fwd": 0.071,
+            "back": 0.065,
+            "turnL": 0.813,
+            "turnR": 0.016,
+            "diff": 0.797
+          },
+          "winner": "halt",
+          "winner_strength": 0.947,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0.043,
+          "entropy": 0.526,
+          "ranking": [
+            "halt(0.947)",
+            "turn_left(0.053)",
+            "locomotion_forward(0.01)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=30",
+          "neural": {
+            "fwd": 0.067,
+            "back": 0.065,
+            "turnL": 0.794,
+            "turnR": 0.018,
+            "diff": 0.776
+          },
+          "winner": "halt",
+          "winner_strength": 0.948,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0.042,
+          "entropy": 0.522,
+          "ranking": [
+            "halt(0.948)",
+            "turn_left(0.052)",
+            "locomotion_forward(0.01)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=90",
+          "neural": {
+            "fwd": 0.064,
+            "back": 0.073,
+            "turnL": 0.78,
+            "turnR": 0.018,
+            "diff": 0.762
+          },
+          "winner": "halt",
+          "winner_strength": 0.949,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0.041,
+          "entropy": 0.518,
+          "ranking": [
+            "halt(0.949)",
+            "turn_left(0.051)",
+            "locomotion_forward(0.01)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=180",
+          "neural": {
+            "fwd": 0.069,
+            "back": 0.091,
+            "turnL": 0.765,
+            "turnR": 0.014,
+            "diff": 0.751
+          },
+          "winner": "halt",
+          "winner_strength": 0.95,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0.04,
+          "entropy": 0.514,
+          "ranking": [
+            "halt(0.95)",
+            "turn_left(0.05)",
+            "locomotion_forward(0.01)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=90 / R=180",
+          "neural": {
+            "fwd": 0.063,
+            "back": 0.026,
+            "turnL": 0.174,
+            "turnR": 0.017,
+            "diff": 0.157
+          },
+          "winner": "halt",
+          "winner_strength": 0.99,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 0.315,
+          "ranking": [
+            "halt(0.99)",
+            "locomotion_forward(0.01)",
+            "turn_left(0.01)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=30 / R=180",
+          "neural": {
+            "fwd": 0.015,
+            "back": 0,
+            "turnL": 0.026,
+            "turnR": 0.006,
+            "diff": 0.02
+          },
+          "winner": "halt",
+          "winner_strength": 0.999,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 0.312,
+          "ranking": [
+            "halt(0.999)",
+            "locomotion_forward(0.01)",
+            "turn_left(0.01)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=0 / R=180",
+          "neural": {
+            "fwd": 0,
+            "back": 0,
+            "turnL": 0,
+            "turnR": 0.001,
+            "diff": -0.001
+          },
+          "winner": "halt",
+          "winner_strength": 1,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 0.312,
+          "ranking": [
+            "halt(1)",
+            "locomotion_forward(0.01)",
+            "turn_left(0.01)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=0",
+          "neural": {
+            "fwd": 0.259,
+            "back": 0.006,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "halt",
+          "winner_strength": 1,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 0.312,
+          "ranking": [
+            "halt(1)",
+            "locomotion_forward(0.01)",
+            "turn_left(0.01)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=30",
+          "neural": {
+            "fwd": 0.262,
+            "back": 0.011,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "halt",
+          "winner_strength": 1,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 0.312,
+          "ranking": [
+            "halt(1)",
+            "locomotion_forward(0.01)",
+            "turn_left(0.01)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=90",
+          "neural": {
+            "fwd": 0.292,
+            "back": 0.047,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "halt",
+          "winner_strength": 1,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 0.312,
+          "ranking": [
+            "halt(1)",
+            "locomotion_forward(0.01)",
+            "turn_left(0.01)"
+          ]
+        }
+      ]
+    },
+    "READOUT_C_INDEPENDENT_AXES": {
+      "readout_name": "READOUT_C_INDEPENDENT_AXES",
+      "total_states_evaluated": 35,
+      "sign_preservation_rate": 1,
+      "spearman_steering_correlation": 1,
+      "mean_entropy": 0.975,
+      "unique_rank_orderings": 15,
+      "collapsed_state_ratio": 0.571,
+      "saturation_fraction": 0,
+      "dead_zone_fraction": 0.586,
+      "winner_distribution": {
+        "turn_left": 5,
+        "halt": 9,
+        "locomotion_forward": 9,
+        "turn_right": 5,
+        "locomotion_backward": 7
+      },
+      "sample_records": [
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=0",
+          "neural": {
+            "fwd": 0.071,
+            "back": 0.065,
+            "turnL": 0.813,
+            "turnR": 0.016,
+            "diff": 0.797
+          },
+          "winner": "turn_left",
+          "winner_strength": 0.412,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0.412,
+          "entropy": 0.446,
+          "ranking": [
+            "turn_left(0.412)",
+            "locomotion_forward(0.023)",
+            "halt(0.008)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=30",
+          "neural": {
+            "fwd": 0.067,
+            "back": 0.065,
+            "turnL": 0.794,
+            "turnR": 0.018,
+            "diff": 0.776
+          },
+          "winner": "turn_left",
+          "winner_strength": 0.404,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0.404,
+          "entropy": 0.443,
+          "ranking": [
+            "turn_left(0.404)",
+            "locomotion_forward(0.022)",
+            "halt(0.008)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=90",
+          "neural": {
+            "fwd": 0.064,
+            "back": 0.073,
+            "turnL": 0.78,
+            "turnR": 0.018,
+            "diff": 0.762
+          },
+          "winner": "turn_left",
+          "winner_strength": 0.398,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0.398,
+          "entropy": 0.439,
+          "ranking": [
+            "turn_left(0.398)",
+            "locomotion_forward(0.021)",
+            "halt(0.008)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=180 / R=180",
+          "neural": {
+            "fwd": 0.069,
+            "back": 0.091,
+            "turnL": 0.765,
+            "turnR": 0.014,
+            "diff": 0.751
+          },
+          "winner": "turn_left",
+          "winner_strength": 0.394,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0.394,
+          "entropy": 0.472,
+          "ranking": [
+            "turn_left(0.394)",
+            "locomotion_forward(0.023)",
+            "halt(0.009)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=90 / R=180",
+          "neural": {
+            "fwd": 0.063,
+            "back": 0.026,
+            "turnL": 0.174,
+            "turnR": 0.017,
+            "diff": 0.157
+          },
+          "winner": "turn_left",
+          "winner_strength": 0.099,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0.099,
+          "entropy": 1.408,
+          "ranking": [
+            "turn_left(0.099)",
+            "halt(0.062)",
+            "locomotion_forward(0.021)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=30 / R=180",
+          "neural": {
+            "fwd": 0.015,
+            "back": 0,
+            "turnL": 0.026,
+            "turnR": 0.006,
+            "diff": 0.02
+          },
+          "winner": "halt",
+          "winner_strength": 0.11,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": 0.013,
+          "entropy": 0.766,
+          "ranking": [
+            "halt(0.11)",
+            "turn_left(0.013)",
+            "locomotion_forward(0.005)"
+          ]
+        },
+        {
+          "population": "tactile T1",
+          "label": "L=0 / R=180",
+          "neural": {
+            "fwd": 0,
+            "back": 0,
+            "turnL": 0,
+            "turnR": 0.001,
+            "diff": -0.001
+          },
+          "winner": "halt",
+          "winner_strength": 0.119,
+          "winner_provenance": "DERIVED_NEURAL",
+          "cand_diff": -0.001,
+          "entropy": 0.138,
+          "ranking": [
+            "halt(0.119)",
+            "turn_right(0.001)",
+            "safe_noop(0.001)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=0",
+          "neural": {
+            "fwd": 0.259,
+            "back": 0.006,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "locomotion_forward",
+          "winner_strength": 0.083,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.517,
+          "ranking": [
+            "locomotion_forward(0.083)",
+            "halt(0.069)",
+            "giant_fiber_escape(0.03)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=30",
+          "neural": {
+            "fwd": 0.262,
+            "back": 0.011,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "locomotion_forward",
+          "winner_strength": 0.084,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.508,
+          "ranking": [
+            "locomotion_forward(0.084)",
+            "halt(0.069)",
+            "giant_fiber_escape(0.029)"
+          ]
+        },
+        {
+          "population": "JO wind/gravity",
+          "label": "L=180 / R=90",
+          "neural": {
+            "fwd": 0.292,
+            "back": 0.047,
+            "turnL": 0,
+            "turnR": 0,
+            "diff": 0
+          },
+          "winner": "locomotion_forward",
+          "winner_strength": 0.093,
+          "winner_provenance": "MEASURED_NEURAL",
+          "cand_diff": 0,
+          "entropy": 1.452,
+          "ranking": [
+            "locomotion_forward(0.093)",
+            "halt(0.065)",
+            "giant_fiber_escape(0.024)"
+          ]
+        }
+      ]
+    }
+  },
+  "causal_counterfactual": {
+    "stimulus": "Unilateral Tactile T1 (L=180 Hz, R=0 Hz)",
+    "neural_state": {
+      "population": "tactile T1",
+      "label": "L=180 / R=0",
+      "forward": 0.071,
+      "backward": 0.065,
+      "turn_left": 0.813,
+      "turn_right": 0.016,
+      "escape": 0,
+      "groom": 0,
+      "net_steering_hz": 0.7969999999999999
+    },
+    "outcomes": {
+      "READOUT_A_CURRENT": [
+        {
+          "action": "locomotion_forward",
+          "strength": 0.05,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "halt",
+          "strength": 0.996,
+          "provenance": "DERIVED_NEURAL"
+        },
+        {
+          "action": "turn_left",
+          "strength": 0.05,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "turn_right",
+          "strength": 0.05,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "giant_fiber_escape",
+          "strength": 0.05,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "groom",
+          "strength": 0.05,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "safe_noop",
+          "strength": 0.01,
+          "provenance": "FALLBACK"
+        }
+      ],
+      "READOUT_B_UPSTREAM_REFERENCE": [
+        {
+          "action": "locomotion_forward",
+          "strength": 0.01,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "turn_left",
+          "strength": 0.053,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "turn_right",
+          "strength": 0.01,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "halt",
+          "strength": 0.947,
+          "provenance": "DERIVED_NEURAL"
+        },
+        {
+          "action": "safe_noop",
+          "strength": 0.01,
+          "provenance": "FALLBACK"
+        }
+      ],
+      "READOUT_C_INDEPENDENT_AXES": [
+        {
+          "action": "locomotion_forward",
+          "strength": 0.023,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "turn_left",
+          "strength": 0.412,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "turn_right",
+          "strength": 0,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "giant_fiber_escape",
+          "strength": 0,
+          "provenance": "MEASURED_NEURAL"
+        },
+        {
+          "action": "halt",
+          "strength": 0.008,
+          "provenance": "DERIVED_NEURAL"
+        },
+        {
+          "action": "safe_noop",
+          "strength": 0.001,
+          "provenance": "FALLBACK"
+        }
+      ]
+    }
+  }
+}

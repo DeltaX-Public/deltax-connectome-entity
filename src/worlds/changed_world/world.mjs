@@ -162,6 +162,50 @@ export class ChangedWorld {
 
     const isHazard = this.isChanged && this.hazards.some((h) => h.x === this.body.x && h.y === this.body.y);
 
+    // --- Physical Lateral Sensor Geometry (Phase IV-B) ---
+    // Heading indices: 0=East, 1=South, 2=West, 3=North
+    const h = this.body.heading;
+    const [fwdX, fwdY] = DELTAS[h];
+    const [leftFlankX, leftFlankY] = DELTAS[(h + 3) % 4];
+    const [rightFlankX, rightFlankY] = DELTAS[(h + 1) % 4];
+
+    // Antennal rays at ±45 degrees
+    const leftAntX = fwdX + leftFlankX;
+    const leftAntY = fwdY + leftFlankY;
+    const rightAntX = fwdX + rightFlankX;
+    const rightAntY = fwdY + rightFlankY;
+
+    // Raycast helper
+    const raycastSteps = (sx, sy, stepX, stepY, maxR) => {
+      for (let r = 1; r <= maxR; r++) {
+        if (this.isObstacle(sx + stepX * r, sy + stepY * r)) return r;
+      }
+      return maxR;
+    };
+
+    const leftAntDist = raycastSteps(this.body.x, this.body.y, leftAntX, leftAntY, 6);
+    const rightAntDist = raycastSteps(this.body.x, this.body.y, rightAntX, rightAntY, 6);
+    const leftLatDist = raycastSteps(this.body.x, this.body.y, leftFlankX, leftFlankY, 4);
+    const rightLatDist = raycastSteps(this.body.x, this.body.y, rightFlankX, rightFlankY, 4);
+
+    const leftContact = this.isObstacle(this.body.x + leftAntX, this.body.y + leftAntY) ||
+                        this.isObstacle(this.body.x + leftFlankX, this.body.y + leftFlankY);
+    const rightContact = this.isObstacle(this.body.x + rightAntX, this.body.y + rightAntY) ||
+                         this.isObstacle(this.body.x + rightFlankX, this.body.y + rightFlankY);
+    const frontContact = this.isObstacle(frontX, frontY);
+
+    // Noxious/hazard gradient at lateral sensor poses
+    let leftNoxious = 0;
+    let rightNoxious = 0;
+    if (this.isChanged && this.hazards.length > 0) {
+      for (const hz of this.hazards) {
+        const dLeft = Math.hypot(hz.x - (this.body.x + leftAntX * 0.5), hz.y - (this.body.y + leftAntY * 0.5));
+        const dRight = Math.hypot(hz.x - (this.body.x + rightAntX * 0.5), hz.y - (this.body.y + rightAntY * 0.5));
+        leftNoxious = Math.max(leftNoxious, 1 / (1 + dLeft * dLeft));
+        rightNoxious = Math.max(rightNoxious, 1 / (1 + dRight * dRight));
+      }
+    }
+
     return {
       visual_field: {
         front_distance: frontDist,
@@ -172,6 +216,18 @@ export class ChangedWorld {
       proximity: {
         nearest_distance: +nearestDist.toFixed(2),
         front_distance: frontDist,
+      },
+      lateral_sensors: {
+        front_distance: frontDist,
+        left_antenna_distance: leftAntDist,
+        right_antenna_distance: rightAntDist,
+        left_lateral_distance: leftLatDist,
+        right_lateral_distance: rightLatDist,
+        left_contact: leftContact,
+        right_contact: rightContact,
+        front_contact: frontContact,
+        left_noxious: +leftNoxious.toFixed(3),
+        right_noxious: +rightNoxious.toFixed(3),
       },
       collision: {
         blocked: this.lastCollision,
@@ -225,7 +281,7 @@ export class ChangedWorld {
     }
 
     // Post-change recovery tracking: entity moves beyond blockage along a bypass corridor
-    if (this.isChanged && this.recoveryStep === null && result.status === 'MOVED') {
+    if (this.isChanged && this.recoveryStep === null && (result.status === 'MOVED' || result.status === 'MOVED_BACKWARD')) {
       if ((this.body.y === 1 || this.body.y === 5) && this.body.x >= 6) {
         this.recoveryStep = this.stepCount;
       }

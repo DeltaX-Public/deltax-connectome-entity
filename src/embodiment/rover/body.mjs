@@ -14,13 +14,21 @@ export class RoverBody {
   }
 
   proposal(action) {
-    if (!['forward', 'left', 'right', 'stop'].includes(action)) {
+    if (!ROVER_ACTIONS.includes(action)) {
       throw new Error(`Unsupported rover action: ${action}`);
     }
     const turn = action === 'left' ? -1 : action === 'right' ? 1 : 0;
     const nextHeading = (this.heading + turn + 4) % 4;
-    const [dx, dy] = DELTAS[nextHeading];
-    return {action, nextHeading, target: action === 'forward' ? {x: this.x + dx, y: this.y + dy} : {x: this.x, y: this.y}};
+    let target = { x: this.x, y: this.y };
+    if (action === 'forward') {
+      const [dx, dy] = DELTAS[nextHeading];
+      target = { x: this.x + dx, y: this.y + dy };
+    } else if (action === 'backward') {
+      const oppositeHeading = (this.heading + 2) % 4;
+      const [bx, by] = DELTAS[oppositeHeading];
+      target = { x: this.x + bx, y: this.y + by };
+    }
+    return { action, nextHeading, target };
   }
 
   apply(proposal, {canMove = () => true} = {}) {
@@ -30,6 +38,13 @@ export class RoverBody {
       this.energy = Math.max(0, this.energy - 0.1);
       return {status: 'TURNED', state: this.snapshot()};
     }
+    if (proposal.action === 'backward') {
+      if (!canMove(proposal.target)) return {status: 'BLOCKED', target: proposal.target, state: this.snapshot()};
+      this.x = proposal.target.x;
+      this.y = proposal.target.y;
+      this.energy = Math.max(0, this.energy - 1.0);
+      return {status: 'MOVED_BACKWARD', target: proposal.target, state: this.snapshot()};
+    }
     if (!canMove(proposal.target)) return {status: 'BLOCKED', target: proposal.target, state: this.snapshot()};
     this.x = proposal.target.x;
     this.y = proposal.target.y;
@@ -38,4 +53,4 @@ export class RoverBody {
   }
 }
 
-export const ROVER_ACTIONS = Object.freeze(['forward', 'left', 'right', 'stop']);
+export const ROVER_ACTIONS = Object.freeze(['forward', 'backward', 'left', 'right', 'stop']);
