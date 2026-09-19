@@ -7,6 +7,7 @@ A public, sovereign harness integrating a 165,122-neuron connectome graph recurr
 | Subsystem | Status | Reality & Provenance |
 | --- | --- | --- |
 | **Phase II: Real Connectome** | **Causal-Integrity Pass Complete** | Strict candidate provenance typing; post-DeltaX shortcuts excised; initial 100% lift marked `superseded_pre_integrity_pass`; current 12-step horizon does not yet establish DeltaX performance advantage |
+| **Phase III: Long-Horizon Adaptation** | **Audited V2 Record** | 100-seed held-out battery (4000..4099) under strict unassisted causal integrity. Collision safety via halting confirmed (0 collisions in Trial 2); pre-audit 100% recovery and 2-hazard memory advantage superseded as harness shortcuts; CI enabled. |
 | **Causal Neural Intervention** | **Verified** | Bit-exact tripartite state branching with targeted optogenetic silencing (`DNg100/97/p09`) vs sham controls |
 | **Held-Out Evaluation Battery** | **25 Seeds Complete** | Post-integrity held-out evaluation battery (seeds 1000..1024) across CONTROL, OBSERVE, EXECUTIVE, SHAM, and degree-preserving SHUFFLED_CONNECTOME |
 | **Component Ablation Suite** | **10 Seeds Complete** | Quantified isolation of No DeltaX, OBSERVE only, Shuffled Graph, Lambda Gate, Memory Reset, and Contradiction Handling |
@@ -58,6 +59,10 @@ python3 -m http.server 4173
 
 ## Documentation
 
+- [docs/PHASE_3_LONG_HORIZON_ADAPTATION_REPORT.md](docs/PHASE_3_LONG_HORIZON_ADAPTATION_REPORT.md) — Comprehensive Phase III Empirical Adaptation & Recurrence Report (Audited V2)
+- [docs/PHASE_3_PROTOCOL_DEVIATIONS.md](docs/PHASE_3_PROTOCOL_DEVIATIONS.md) — Methodological Audit & Protocol Deviations Record
+- [docs/PHASE_3_EXPERIMENT_PLAN_V2.md](docs/PHASE_3_EXPERIMENT_PLAN_V2.md) — Frozen Pre-Registration Protocol V2 (Held-Out Seeds 4000..4099)
+- [docs/PHASE_3_EXPERIMENT_PLAN.md](docs/PHASE_3_EXPERIMENT_PLAN.md) — Initial Pre-Registered Protocol V1
 - [docs/PHASE_2_CONNECTOME_CAUSAL_INTEGRATION_REPORT.md](docs/PHASE_2_CONNECTOME_CAUSAL_INTEGRATION_REPORT.md) — Comprehensive Phase II Empirical Evidence Report
 - [docs/EVIDENCE_BATTERY_REPORT.md](docs/EVIDENCE_BATTERY_REPORT.md) — Phase I Sovereign Runtime Battery Report
 - [UPSTREAM.md](UPSTREAM.md) — Upstream Janelia fly-brain connectome boundary

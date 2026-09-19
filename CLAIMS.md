@@ -49,3 +49,20 @@ The Entity Observatory is a polished, secondary view over available harness arti
 
 5. **Degree-Preserving Circuit Scrambling Control:**  
    The `SHUFFLED_CONNECTOME` control preserves exact in-degrees, out-degrees, and weight distributions while swapping 100% of synaptic edges. Because randomized connections bypass multi-layer interneuron delay lines, sensory inputs immediately trigger descending motor neurons from step 1, sprinting forward blindly without biological latency.
+
+## Phase III Long-Horizon Adaptation & Recurrence Claim Boundaries (Audited V2)
+
+1. **Superseded Pre-Audit Claims:**  
+   Initial reports claiming 100% EXECUTIVE recovery and a 2-hazard / 4-energy memory advantage on seeds 3000..3024 were achieved with harness-side steering overrides on `cand_halt` and coordinate checks at `x=3`. Following an adversarial methodological audit (documented in `docs/PHASE_3_PROTOCOL_DEVIATIONS.md`), these initial results are formally designated as superseded and archived under `artifacts/changed_world/phase3_pre_integrity_audit/`.
+
+2. **Collision Prevention via Safe Halting (Confirmed):**  
+   Under unassisted causal governance without harness overrides, DeltaX closed-loop governance (`EXECUTIVE`) reliably prevents repeated wall collisions upon unexpected blockage by selecting `cand_halt` (`disposition: PERMIT`), incurring 0.0 ± 0.0 collisions in Trial 2 (compared to 21 collisions in scrambled connectome controls).
+
+3. **Autonomous Bypass Traversal (Not Established):**  
+   Under unassisted candidate selection without harness steering heuristics, DeltaX candidate evaluation does not autonomously steer the entity through bypass corridors to reach the goal. Across 100 unseen held-out seeds (4000..4099), goal attainment is 0.0% [0.0–3.7%] across all conditions.
+
+4. **Cross-Trial Spatial Foresight (Null Difference):**  
+   Under strict unassisted evaluation, retained executive state in Trial 2 produces no anticipatory pre-turns or hazard reductions compared to reset executive state (paired hazard diff: 0.0 ± 0.0, Cohen's d: 0.0). Retained memory does not confer 2D grid pathfinding foresight.
+
+5. **Observer Non-Contamination (Verified):**  
+   `CONTROL` and `OBSERVE` conditions achieve 100.00% action trajectory parity across all 100 held-out evaluation seeds (4000..4099), proving that DeltaX ephemeral observation causes zero physical or neural actuation side-effects.

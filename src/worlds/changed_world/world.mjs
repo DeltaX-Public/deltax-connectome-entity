@@ -3,24 +3,29 @@ import { RoverBody, ROVER_ACTIONS } from '../../embodiment/rover/body.mjs';
 const DELTAS = Object.freeze([[1, 0], [0, 1], [-1, 0], [0, -1]]); // 0=East, 1=South, 2=West, 3=North
 
 /**
- * ChangedWorld Environment.
- * A structured grid world designed for behavioral adaptation testing:
- *   - Phase 1 (Familiarization): Direct central corridor (y=3) is open and optimal.
- *   - Phase 2 (Unexpected Change): Central corridor becomes blocked at (6, 3);
- *     bypass corridors (North at y=1, South at y=5) remain feasible.
- *   - Phase 3 (Recurrence): Second trial / repeated encounter under the changed rules.
+ * ChangedWorld Environment — Phase III Long-Horizon Adaptation Protocol.
  *
- * NO CHEATS:
- * Does NOT inject solution labels, change schedules, or executive decisions into entity observations.
+ * A structured grid world designed for long-horizon behavioral adaptation testing:
+ *   - Phase A (Baseline Settling): Steps 1–10: Entity begins in stable environment;
+ *     biological connectome settling and forward locomotion emergence.
+ *   - Phase B (Stable Experience): Steps 11–18: Central corridor (y=3) is open and reliable;
+ *     entity develops stable traversal experience.
+ *   - Phase C (Unexpected Change): At changeAtStep (default 18): Central corridor becomes blocked at (6, 3);
+ *     bypass passages (North at y=1, South at y=5 with openings at x=3, x=5, x=8) remain feasible.
+ *   - Phase D (Recovery): Steps 19–40: Entity must detect contradiction, recover, and navigate bypass.
+ *   - Phase E (Recurrence): Trial 2: Repeated encounter under the changed rules.
+ *
+ * STRICT INFORMATION PARITY:
+ * Zero cheat codes, zero future world state leaks, zero route labels.
  */
 export class ChangedWorld {
   constructor({
     clock = () => Date.now(),
     width = 11,
     height = 7,
-    changeAtStep = 4,
+    changeAtStep = 18,
     startPos = { x: 1, y: 3, heading: 0 },
-    initialEnergy = 30,
+    initialEnergy = 50,
     seed = 42,
   } = {}) {
     this.clock = clock;
@@ -32,6 +37,14 @@ export class ChangedWorld {
     this.initialEnergy = initialEnergy;
     this.energy = initialEnergy;
     this.isChanged = false;
+    this.startPos = { ...startPos };
+
+    // Temporal Phase Tracking
+    this.phase = "PHASE_A_BASELINE";
+    this.worldChangeStep = null;
+    this.firstPostChangeFailureStep = null;
+    this.recoveryStep = null;
+    this.repeatedMistakeCount = 0;
 
     // Body initialization
     this.body = new RoverBody({
@@ -41,12 +54,12 @@ export class ChangedWorld {
       energy: initialEnergy,
     });
 
-    // Static arena geometry: corridor walls with bypass openings at x=3 and x=8
+    // Static arena geometry: corridor dividing walls with bypass passages at x=3, x=5, and x=8
     this.staticObstacles = [
-      // North dividing wall (y=2) with passage at x=3 and x=8
-      { x: 1, y: 2 }, { x: 2, y: 2 }, { x: 4, y: 2 }, { x: 5, y: 2 }, { x: 6, y: 2 }, { x: 7, y: 2 },
-      // South dividing wall (y=4) with passage at x=3 and x=8
-      { x: 1, y: 4 }, { x: 2, y: 4 }, { x: 4, y: 4 }, { x: 5, y: 4 }, { x: 6, y: 4 }, { x: 7, y: 4 },
+      // North dividing wall (y=2) with passages at x=3, x=5, and x=8
+      { x: 1, y: 2 }, { x: 2, y: 2 }, { x: 4, y: 2 }, { x: 6, y: 2 }, { x: 7, y: 2 },
+      // South dividing wall (y=4) with passages at x=3, x=5, and x=8
+      { x: 1, y: 4 }, { x: 2, y: 4 }, { x: 4, y: 4 }, { x: 6, y: 4 }, { x: 7, y: 4 },
     ];
 
     // Dynamic blockage (drops at changeAtStep)
@@ -55,8 +68,8 @@ export class ChangedWorld {
     // Hazard zone in changed state (surrounding the blockage)
     this.hazards = [{ x: 5, y: 3, cost: 2 }];
 
-    // Goal Region at East end
-    this.goalRegion = { xMin: 9, xMax: 10, yMin: 2, yMax: 4 };
+    // Goal Region at East end (accessible via central corridor and North/South bypass corridors)
+    this.goalRegion = { xMin: 9, xMax: 10, yMin: 1, yMax: 5 };
 
     this.events = [];
     this.lastCollision = false;
@@ -67,9 +80,14 @@ export class ChangedWorld {
       body: this.body.snapshot(),
       energy: this.energy,
       step: this.stepCount,
+      phase: this.phase,
       isChanged: this.isChanged,
       blockedCell: this.isChanged ? { ...this.dynamicBlockage } : null,
       reachedGoal: this.isGoal(),
+      worldChangeStep: this.worldChangeStep,
+      firstPostChangeFailureStep: this.firstPostChangeFailureStep,
+      recoveryStep: this.recoveryStep,
+      repeatedMistakeCount: this.repeatedMistakeCount,
     };
   }
 
@@ -97,11 +115,14 @@ export class ChangedWorld {
   triggerEnvironmentChange() {
     if (this.isChanged) return null;
     this.isChanged = true;
+    this.phase = "PHASE_C_UNEXPECTED_CHANGE";
+    this.worldChangeStep = this.stepCount;
     const evt = {
       id: this.events.length + 1,
       type: 'ENVIRONMENT_MUTATION',
       timestamp: this.clock(),
       step: this.stepCount,
+      phase: this.phase,
       detail: {
         change: 'route_blocked',
         location: { ...this.dynamicBlockage },
@@ -179,21 +200,48 @@ export class ChangedWorld {
       this.triggerEnvironmentChange();
     }
 
+    // Phase progression
+    if (this.phase !== "PHASE_E_RECURRENCE") {
+      if (this.isChanged) {
+        this.phase = "PHASE_D_RECOVERY";
+      } else if (this.stepCount <= 10) {
+        this.phase = "PHASE_A_BASELINE";
+      } else {
+        this.phase = "PHASE_B_STABLE_EXPERIENCE";
+      }
+    }
+
     const proposal = this.body.proposal(action);
     const result = this.body.apply(proposal, { canMove: (t) => this.canEnter(t) });
 
     this.lastCollision = (result.status === 'BLOCKED');
 
+    // Post-change collision and repeated mistake tracking
+    if (this.isChanged && this.lastCollision) {
+      if (this.firstPostChangeFailureStep === null) {
+        this.firstPostChangeFailureStep = this.stepCount;
+      }
+      this.repeatedMistakeCount++;
+    }
+
+    // Post-change recovery tracking: entity moves beyond blockage along a bypass corridor
+    if (this.isChanged && this.recoveryStep === null && result.status === 'MOVED') {
+      if ((this.body.y === 1 || this.body.y === 5) && this.body.x >= 6) {
+        this.recoveryStep = this.stepCount;
+      }
+    }
+
     // Hazard penalties
     if (this.isChanged && this.hazards.some((h) => h.x === this.body.x && h.y === this.body.y)) {
-      this.energy = Math.max(0, this.energy - 2);
+      this.body.energy = Math.max(0, this.body.energy - 2);
     }
-    this.energy = Math.min(this.energy, this.body.energy);
+    this.energy = this.body.energy;
 
     const logEntry = {
       id: this.events.length + 1,
       type: 'STEP_EXECUTION',
       step: this.stepCount,
+      phase: this.phase,
       timestamp: this.clock(),
       action,
       status: result.status,
@@ -205,6 +253,7 @@ export class ChangedWorld {
 
     return {
       step: this.stepCount,
+      phase: this.phase,
       action,
       status: result.status,
       target: proposal.target,
@@ -220,11 +269,17 @@ export class ChangedWorld {
     this.stepCount = 0;
     this.energy = this.initialEnergy;
     this.isChanged = preserveChanged;
-    this.body = new RoverBody({ x: 1, y: 3, heading: 0, energy: this.initialEnergy });
+    this.phase = "PHASE_E_RECURRENCE";
+    this.worldChangeStep = preserveChanged ? 0 : null;
+    this.firstPostChangeFailureStep = null;
+    this.recoveryStep = null;
+    this.repeatedMistakeCount = 0;
+    this.body = new RoverBody({ x: this.startPos.x, y: this.startPos.y, heading: this.startPos.heading, energy: this.initialEnergy });
     this.lastCollision = false;
     this.events.push({
       id: this.events.length + 1,
       type: 'RECURRENCE_RESET',
+      phase: this.phase,
       timestamp: this.clock(),
       detail: { preservedChangedState: preserveChanged },
     });

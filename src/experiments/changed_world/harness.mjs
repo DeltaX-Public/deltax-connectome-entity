@@ -10,15 +10,33 @@ import { ChangedWorld } from "../../worlds/changed_world/world.mjs";
 import { ConnectomeRuntime } from "../../connectome/runtime.mjs";
 import { ConnectomeSensoryTransduction } from "../../connectome/sensory_transduction.mjs";
 import { ConnectomeCandidateBridge } from "../../connectome/candidate_bridge.mjs";
+import { createShuffledConnectome } from "../../connectome/shuffled_control.mjs";
 import { createExecutive } from "../../deltax/index.mjs";
+
+function computeEntropy(candidates) {
+  const strengths = (candidates || []).map((c) => Math.max(1e-9, c.activation_strength || 0));
+  const sum = strengths.reduce((a, b) => a + b, 0);
+  if (sum === 0) return 0;
+  const probs = strengths.map((s) => s / sum);
+  return -probs.reduce((acc, p) => acc + (p > 0 ? p * Math.log2(p) : 0), 0);
+}
+
+export const PHASE3_CONDITIONS = Object.freeze([
+  "CONTROL",
+  "OBSERVE",
+  "STATIC_GUARD",
+  "EXECUTIVE",
+  "EXECUTIVE_MEMORY_RESET",
+  "SHUFFLED_CONNECTOME",
+]);
 
 export class ChangedWorldHarness {
   constructor({
-    seed = 100,
-    condition = "EXECUTIVE", // CONTROL | OBSERVE | STATIC_GUARD | EXECUTIVE
+    seed = 2000,
+    condition = "EXECUTIVE", // CONTROL | OBSERVE | STATIC_GUARD | EXECUTIVE | EXECUTIVE_MEMORY_RESET | SHUFFLED_CONNECTOME
     command = process.env.DELTAX_LOCAL_RUNTIME_CMD,
-    maxStepsPerTrial = 24,
-    changeAtStep = 4,
+    maxStepsPerTrial = 35,
+    changeAtStep = 18,
     executive = null,
   } = {}) {
     this.seed = seed;
@@ -27,11 +45,12 @@ export class ChangedWorldHarness {
     this.maxStepsPerTrial = maxStepsPerTrial;
     this.changeAtStep = changeAtStep;
 
-    if (!["CONTROL", "OBSERVE", "STATIC_GUARD", "EXECUTIVE"].includes(condition)) {
+    if (!PHASE3_CONDITIONS.includes(condition)) {
       throw new Error(`Invalid condition: ${condition}`);
     }
 
-    if (["OBSERVE", "EXECUTIVE"].includes(condition) && !command && !executive) {
+    const needsExecutive = ["OBSERVE", "EXECUTIVE", "EXECUTIVE_MEMORY_RESET"].includes(condition);
+    if (needsExecutive && !command && !executive) {
       throw new Error("DELTAX_LOCAL_RUNTIME_CMD is required for OBSERVE and EXECUTIVE conditions; refusing silent stub fallback");
     }
 
@@ -39,18 +58,25 @@ export class ChangedWorldHarness {
     this.world = new ChangedWorld({
       changeAtStep: this.changeAtStep,
       seed: this.seed,
-      initialEnergy: 30,
+      initialEnergy: 50,
     });
 
     // 2. Connectome substrate
     this.runtime = new ConnectomeRuntime({ seed: this.seed, substepsPerTick: 10 });
+    if (condition === "SHUFFLED_CONNECTOME") {
+      this.runtime.data = createShuffledConnectome(this.runtime.data, this.seed);
+      this.runtime.net.weights = this.runtime.data.weights;
+      this.runtime.net.indices = this.runtime.data.indices;
+      this.runtime.net.indptr = this.runtime.data.indptr;
+    }
+
     this.transduction = new ConnectomeSensoryTransduction(this.runtime.data);
     this.bridge = new ConnectomeCandidateBridge();
 
-    // 3. Executive connection (only for OBSERVE and EXECUTIVE)
-    this.sessionId = `changed_world_${condition.toLowerCase()}_seed_${seed}_${Date.now()}`;
+    // 3. Executive connection (for OBSERVE, EXECUTIVE, EXECUTIVE_MEMORY_RESET)
+    this.sessionId = `phase3_${condition.toLowerCase()}_seed_${seed}_${Date.now()}`;
     this.executive = executive || (
-      ["OBSERVE", "EXECUTIVE"].includes(condition) && this.command
+      needsExecutive && this.command
         ? createExecutive({
             mode: "local_runtime",
             command: this.command,
@@ -66,32 +92,53 @@ export class ChangedWorldHarness {
    *   Trial 2 (Recurrence in Changed World)
    *
    * @param {Object} opts
-   * @param {boolean} [opts.resetExecutiveMemoryOnRecurrence=false] For memory ablation test
+   * @param {boolean} [opts.resetExecutiveMemoryOnRecurrence=null] Override memory retention
    */
-  async runEpisode({ resetExecutiveMemoryOnRecurrence = false } = {}) {
-    const t0 = Date.now();
+  async runEpisode({ resetExecutiveMemoryOnRecurrence = null } = {}) {
+    const episodeStart = Date.now();
+    const shouldResetMemory = resetExecutiveMemoryOnRecurrence ?? (this.condition === "EXECUTIVE_MEMORY_RESET");
 
-    // --- TRIAL 1: Familiarization & Unexpected Change ---
+    // --- TRIAL 1: Baseline Settling + Stable Experience + Unexpected Change + Recovery ---
     const trial1 = await this._runTrial({
       trialNum: 1,
       isRecurrence: false,
     });
 
-    // --- SNAPSHOT & FORK FOR RECURRENCE ---
-    const connectomeSnapshot = this.runtime.snapshot();
-    let deltaXSnapshot = null;
-    if (this.executive && this.condition === "EXECUTIVE") {
-      deltaXSnapshot = await this.executive.checkpoint(this.sessionId);
+    let trial1Checkpoint = null;
+    if (this.executive && typeof this.executive.checkpoint === "function") {
+      try {
+        trial1Checkpoint = await this.executive.checkpoint(this.sessionId);
+      } catch (err) {
+        trial1Checkpoint = { error: err.message };
+      }
     }
 
-    // Reset world for recurrence (preserving changed blockage state)
+    // --- FORK FOR RECURRENCE ---
     this.world.resetForRecurrence({ preserveChanged: true });
 
-    // Handle memory condition for Trial 2
     let trial2SessionId = this.sessionId;
-    if (resetExecutiveMemoryOnRecurrence && this.executive) {
+    let resetReceipt = null;
+    let stateLineage = "RETAINED_CONTINUATION";
+
+    if (shouldResetMemory && this.executive) {
       trial2SessionId = `${this.sessionId}_trial2_reset_${Date.now()}`;
-      // In reset condition, executive starts fresh with no prior session memory
+      stateLineage = "DISCONTINUOUS_FRESH_SESSION";
+      if (typeof this.executive.reset === "function") {
+        try {
+          resetReceipt = await this.executive.reset(trial2SessionId);
+        } catch (err) {
+          resetReceipt = { error: err.message };
+        }
+      }
+    }
+
+    let trial2PreflightCheckpoint = null;
+    if (this.executive && typeof this.executive.checkpoint === "function") {
+      try {
+        trial2PreflightCheckpoint = await this.executive.checkpoint(trial2SessionId);
+      } catch (err) {
+        trial2PreflightCheckpoint = { error: err.message };
+      }
     }
 
     // --- TRIAL 2: Recurrence in Changed World ---
@@ -101,29 +148,61 @@ export class ChangedWorldHarness {
       sessionIdOverride: trial2SessionId,
     });
 
-    const totalLatencyMs = Date.now() - t0;
+    const episodeWallTimeMs = Date.now() - episodeStart;
+    const totalSimulatedTimeMs = (trial1.stepsExecuted + trial2.stepsExecuted) * 10;
+    const totalSteps = trial1.stepsExecuted + trial2.stepsExecuted;
+    const bothReachedGoal = trial1.reachedGoal && trial2.reachedGoal;
+    const collisionReduction = trial1.collisionCount - trial2.collisionCount;
+    const recurrenceSpeedup = trial1.stepsExecuted - trial2.stepsExecuted;
 
     return {
       seed: this.seed,
       condition: this.condition,
-      resetExecutiveMemory: resetExecutiveMemoryOnRecurrence,
+      resetExecutiveMemory: shouldResetMemory,
+      totalSimulatedTimeMs,
+      totalSteps,
+      bothReachedGoal,
+      collisionReduction,
+      recurrenceSpeedup,
+      episodeWallTimeMs,
+      executiveLineage: {
+        condition: this.condition,
+        shouldResetMemory,
+        stateLineage,
+        trial1SessionId: this.sessionId,
+        trial2SessionId,
+        trial1Checkpoint: trial1Checkpoint?.state ? {
+          session_id: trial1Checkpoint.session_id,
+          tick: trial1Checkpoint.state.tick,
+          tnm_event_count: trial1Checkpoint.state.tnm_events?.length ?? 0,
+        } : trial1Checkpoint,
+        resetReceipt: resetReceipt ? {
+          type: resetReceipt.type,
+          session_id: resetReceipt.session_id,
+          provenance: resetReceipt.provenance,
+        } : null,
+        trial2PreflightCheckpoint: trial2PreflightCheckpoint?.state ? {
+          session_id: trial2PreflightCheckpoint.session_id,
+          tick: trial2PreflightCheckpoint.state.tick,
+          tnm_event_count: trial2PreflightCheckpoint.state.tnm_events?.length ?? 0,
+        } : trial2PreflightCheckpoint,
+      },
       trial1,
       trial2,
-      divergenceFromControl: {
-        trial1Diverged: trial1.divergedFromControl,
-        trial2Diverged: trial2.divergedFromControl,
-      },
-      recurrencePerformance: {
+      summary: {
         trial1ReachedGoal: trial1.reachedGoal,
         trial2ReachedGoal: trial2.reachedGoal,
-        trial1Collisions: trial1.collisionCount,
-        trial2Collisions: trial2.collisionCount,
         trial1Steps: trial1.stepsExecuted,
         trial2Steps: trial2.stepsExecuted,
-        collisionReduction: trial1.collisionCount - trial2.collisionCount,
-        progressResumed: trial2.reachedGoal && trial2.stepsExecuted <= trial1.stepsExecuted,
+        trial1Collisions: trial1.collisionCount,
+        trial2Collisions: trial2.collisionCount,
+        trial1EnergyUsed: trial1.energyUsed,
+        trial2EnergyUsed: trial2.energyUsed,
+        trial1RecoveryStep: trial1.recoveryStep,
+        trial2RecoveryStep: trial2.recoveryStep,
+        trial1RepeatedMistakes: trial1.repeatedMistakeCount,
+        trial2RepeatedMistakes: trial2.repeatedMistakeCount,
       },
-      totalLatencyMs,
     };
   }
 
@@ -136,12 +215,23 @@ export class ChangedWorldHarness {
     let modulationCount = 0;
     let deferCount = 0;
     let permitCount = 0;
+    let arbitrationCount = 0;
+    let fallbackCount = 0;
     let repeatedActions = 0;
     let lastAction = null;
+    let stepsToInitialStable = null;
+    let contradictionOnsetStep = null;
+    let totalContradictions = 0;
+    let connectomeSimTimeMs = 0;
+    let deltaxIpcTimeMs = 0;
+    let decisionTickTimeMs = 0;
+    let firstExecutivePacket = null;
     const session = sessionIdOverride || this.sessionId;
 
     for (let step = 1; step <= this.maxStepsPerTrial; step++) {
       if (this.world.isGoal()) break;
+
+      const tickStart = Date.now();
 
       // 1. Physical world observation
       const senses = this.world.observe();
@@ -151,7 +241,7 @@ export class ChangedWorldHarness {
 
       if (isHazard) hazardCount++;
 
-      // 2. Transduce observation to biological receptor firing rates
+      // 2. Transduce sensory inputs to connectome drives
       const sensoryDrives = this.transduction.transduce({
         visual_field: senses.visual_field,
         collision: senses.collision,
@@ -162,13 +252,15 @@ export class ChangedWorldHarness {
       this.runtime.setSensoryDrives(sensoryDrives);
 
       // 3. Step biological connectome (10ms)
+      const simStart = Date.now();
       this.runtime.step(10);
+      connectomeSimTimeMs += (Date.now() - simStart);
 
-      // 4. Read descending neuron populations & form candidates
+      // 4. Generate candidate actions
       const dnReadouts = this.runtime.getDescendingNeuronReadouts();
       const candidates = this.bridge.generateCandidates(dnReadouts, step);
 
-      // In physical reality, forward motion into a solid obstacle is an invalid physical proposal
+      // Hard physical constraint: forward locomotion is physically impossible when blocked ahead
       if (isBlocked) {
         for (const c of candidates) {
           if (c.action_class === "locomotion_forward") {
@@ -179,32 +271,35 @@ export class ChangedWorldHarness {
 
       const topCandidate = [...candidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
 
-      let chosenAction = "stop";
       let chosenCandidate = null;
       let decision = null;
       let staticGuardIntervened = false;
 
       // 5. Condition Logic
-      if (this.condition === "CONTROL") {
-        // Pure connectome proposal
+      if (this.condition === "CONTROL" || this.condition === "SHUFFLED_CONNECTOME") {
         chosenCandidate = topCandidate;
 
       } else if (this.condition === "STATIC_GUARD") {
-        // Baseline: Fixed, nonlearning rule filter
-        // If obstacle directly ahead, veto forward and select steering alternative from candidates
+        // Fixed nonlearning reflex: intervenes on direct physical obstacle collision/detection
         if (isBlocked) {
           staticGuardIntervened = true;
-          const steerCand = candidates.find((c) => c.action_class === "turn_left") || candidates.find((c) => c.action_class === "turn_right") || candidates.find((c) => c.provenance_type === "FALLBACK");
-          chosenCandidate = steerCand;
+          const steerCand = candidates.find((c) => !c.forbidden && ["turn_left", "turn_right"].includes(c.action_class)) ||
+                            candidates.find((c) => c.provenance_type === "FALLBACK");
+          chosenCandidate = steerCand || topCandidate;
         } else {
           chosenCandidate = topCandidate;
         }
 
       } else if (this.condition === "OBSERVE") {
-        // DeltaX evaluates ephemerally; cannot alter chosen action
         const contradictions = [];
         if (isBlocked) {
           contradictions.push({ expected: "corridor_clear", observed: "obstacle_collision", severity: "high" });
+          if (contradictionOnsetStep === null) contradictionOnsetStep = step;
+          totalContradictions++;
+        }
+        if (isHazard) {
+          contradictions.push({ expected: "safe_passage", observed: "hazard_cell", severity: "medium" });
+          totalContradictions++;
         }
 
         const packet = this._buildExecutivePacket({
@@ -218,32 +313,26 @@ export class ChangedWorldHarness {
           dnReadouts,
         });
 
-        decision = await this.executive.decide(packet);
-        const disp = decision.disposition ?? decision.selected_disposition ?? "DEFER";
-        if (dispositionCounts[disp] != null) dispositionCounts[disp]++;
+        if (!firstExecutivePacket) {
+          firstExecutivePacket = JSON.parse(JSON.stringify(packet));
+        }
 
-        // Action remains strictly the unguided substrate winner
+        const ipcStart = Date.now();
+        decision = await this.executive.decide(packet);
+        deltaxIpcTimeMs += (Date.now() - ipcStart);
+
         chosenCandidate = topCandidate;
 
-      } else if (this.condition === "EXECUTIVE") {
-        // Real sovereign DeltaX governance
+      } else if (["EXECUTIVE", "EXECUTIVE_MEMORY_RESET"].includes(this.condition)) {
         const contradictions = [];
-        const isKnownBlockedAhead = isRecurrence && !sessionIdOverride?.includes("reset") && st.body.x === 3 && st.body.y === 3 && st.body.heading === 0;
-
-        if (isBlocked || isKnownBlockedAhead) {
-          contradictions.push({
-            expected: "corridor_clear",
-            observed: isBlocked ? "obstacle_collision" : "known_downstream_blockage_in_memory",
-            severity: "high"
-          });
-          for (const c of candidates) {
-            if (c.action_class === "locomotion_forward") {
-              c.forbidden = true;
-            }
-          }
+        if (isBlocked) {
+          contradictions.push({ expected: "corridor_clear", observed: "obstacle_collision", severity: "high" });
+          if (contradictionOnsetStep === null) contradictionOnsetStep = step;
+          totalContradictions++;
         }
         if (isHazard) {
           contradictions.push({ expected: "safe_passage", observed: "hazard_cell", severity: "medium" });
+          totalContradictions++;
         }
 
         const packet = this._buildExecutivePacket({
@@ -257,63 +346,69 @@ export class ChangedWorldHarness {
           dnReadouts,
         });
 
+        if (!firstExecutivePacket) {
+          firstExecutivePacket = JSON.parse(JSON.stringify(packet));
+        }
+
+        const ipcStart = Date.now();
         decision = await this.executive.decide(packet);
+        deltaxIpcTimeMs += (Date.now() - ipcStart);
+
         const disp = decision.disposition ?? decision.selected_disposition ?? "DEFER";
         if (dispositionCounts[disp] != null) dispositionCounts[disp]++;
-
         if (disp === "VETO") vetoCount++;
         if (disp === "MODULATE") modulationCount++;
         if (disp === "DEFER") deferCount++;
         if (disp === "PERMIT") permitCount++;
 
-        // Apply governed selection strictly from intersection of candidate field and permitted set
-        const vetoedIds = new Set((decision.vetoed || []).map((v) => v.substrate_candidate_id || v.id));
-        const permittedSubIds = new Set((decision.permitted || []).map((p) => p.substrate_candidate_id || p.id));
-        const permittedCandidates = candidates.filter(
-          (c) => permittedSubIds.has(c.substrate_candidate_id) || permittedSubIds.has(c.id)
+        const vetoedIds = new Set((decision.vetoed || []).map((v) => v.id || v.substrate_candidate_id));
+        const admitted = candidates.filter(
+          (c) => !vetoedIds.has(c.id) && !vetoedIds.has(c.substrate_candidate_id) && !c.forbidden
+        );
+        const selected = candidates.find(
+          (c) => c.id === decision.selected_action_id || c.substrate_candidate_id === decision.selected_action_id
         );
 
-        if (permittedCandidates.length > 0) {
-          const selectedActionId = decision.selected_action_id;
-          const selected = permittedCandidates.find((c) => c.id === selectedActionId || c.substrate_candidate_id === selectedActionId);
-          const shouldDivert = isBlocked || isKnownBlockedAhead;
-          if (shouldDivert && (["halt", "groom", "safe_noop"].includes(selected?.action_class) || selected?.action_class === "locomotion_forward")) {
-            // When blocked or facing known blockage, select from permitted steering candidates if available
-            const eligibleSteer = permittedCandidates.filter(
-              (c) => !c.forbidden && ["turn_left", "turn_right"].includes(c.action_class)
-            );
-            chosenCandidate = eligibleSteer.length > 0
-              ? [...eligibleSteer].sort((a, b) => b.activation_strength - a.activation_strength)[0]
-              : selected;
-          } else {
-            chosenCandidate = selected || [...permittedCandidates].sort((a, b) => b.activation_strength - a.activation_strength)[0];
-          }
+        // Strict unassisted candidate selection: Follow DeltaX decision wherever non-forbidden and unvetoed.
+        // Zero harness-side steering overrides. If DeltaX selects halt, the entity halts.
+        if (selected && !selected.forbidden && !vetoedIds.has(selected.id) && !vetoedIds.has(selected.substrate_candidate_id)) {
+          chosenCandidate = selected;
+        } else if (admitted.length > 0) {
+          chosenCandidate = admitted[0];
         } else {
-          // All neural candidates vetoed or excluded: select declared safe fallback
-          chosenCandidate =
-            candidates.find((c) => c.provenance_type === "FALLBACK") ||
-            candidates.find((c) => c.action_class === "safe_noop");
+          chosenCandidate = candidates.find((c) => c.provenance_type === "FALLBACK") || topCandidate;
         }
       }
 
-      // Strict Causal Assertion: chosen candidate MUST exist in pre-evaluation candidate field
+      // Causal Integrity Assertion: chosen candidate MUST exist in pre-evaluation candidate field
       if (!chosenCandidate || !candidates.some((c) => c.id === chosenCandidate.id && c.substrate_candidate_id === chosenCandidate.substrate_candidate_id)) {
         throw new Error(`Causal integrity violation: candidate ${chosenCandidate?.id} was not present in pre-evaluation candidate field`);
       }
 
-      chosenAction = chosenCandidate.actuator_action || this._mapCandidateToRover(chosenCandidate.action_class);
+      if (chosenCandidate.provenance_type === "FALLBACK") fallbackCount++;
+      if (chosenCandidate.id !== topCandidate.id) arbitrationCount++;
+
+      const chosenAction = chosenCandidate.actuator_action || this._mapCandidateToRover(chosenCandidate.action_class);
 
       if (chosenAction === lastAction) repeatedActions++;
       lastAction = chosenAction;
+
+      if (stepsToInitialStable === null && chosenAction === "forward") {
+        stepsToInitialStable = step;
+      }
 
       // 6. Apply action in physical world
       const res = this.world.applyAction(chosenAction);
       if (res.status === "BLOCKED") collisionCount++;
 
+      decisionTickTimeMs += (Date.now() - tickStart);
+
       history.push({
         step,
         trialNum,
+        phase: res.phase,
         chosenAction,
+        chosenCandidateClass: chosenCandidate.action_class,
         status: res.status,
         position: { x: this.world.body.x, y: this.world.body.y, heading: this.world.body.heading },
         energy: this.world.energy,
@@ -324,6 +419,7 @@ export class ChangedWorldHarness {
         },
         decision: decision ? {
           disposition: decision.disposition ?? decision.selected_disposition,
+          selected_action_id: decision.selected_action_id,
           provenance: decision.provenance,
         } : null,
         staticGuardIntervened,
@@ -332,19 +428,44 @@ export class ChangedWorldHarness {
       });
     }
 
+    const worldState = this.world.currentState();
+    const finalOutcome = this.world.isGoal()
+      ? (worldState.recoveryStep ? "RECOVERED_AND_COMPLETED" : "COMPLETED_DIRECT")
+      : (this.world.energy <= 0 ? "ENERGY_DEPLETED" : (collisionCount > 5 ? "STALLED_AT_OBSTACLE" : "TIMEOUT"));
+
     return {
       trialNum,
       isRecurrence,
       stepsExecuted: history.length,
       reachedGoal: this.world.isGoal(),
+      initialEnergy: 50,
       finalEnergy: this.world.energy,
+      energyUsed: +(50 - this.world.energy).toFixed(1),
       collisionCount,
       hazardCount,
       repeatedActions,
       dispositionCounts,
       vetoCount,
       modulationCount,
-      interventionRate: +( (vetoCount + modulationCount + deferCount) / Math.max(1, history.length) ).toFixed(3),
+      deferCount,
+      permitCount,
+      arbitrationCount,
+      fallbackCount,
+      contradictionCount: totalContradictions,
+      stepsToInitialStable: stepsToInitialStable ?? this.maxStepsPerTrial,
+      worldChangeStep: worldState.worldChangeStep,
+      firstPostChangeFailureStep: worldState.firstPostChangeFailureStep,
+      contradictionOnsetStep,
+      recoveryStep: worldState.recoveryStep,
+      repeatedMistakeCount: worldState.repeatedMistakeCount,
+      finalOutcome,
+      latencies: {
+        connectomeSimTimeMs,
+        deltaxIpcTimeMs,
+        decisionTickTimeMs,
+        meanTickMs: +(decisionTickTimeMs / Math.max(1, history.length)).toFixed(2),
+      },
+      firstExecutivePacket,
       history,
     };
   }
