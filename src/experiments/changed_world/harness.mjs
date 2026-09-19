@@ -12,6 +12,7 @@ import { ConnectomeSensoryTransduction, TRANSDUCTION_MODES } from "../../connect
 import { ConnectomeCandidateBridge, READOUT_MODES } from "../../connectome/candidate_bridge.mjs";
 import { createShuffledConnectome } from "../../connectome/shuffled_control.mjs";
 import { createExecutive } from "../../deltax/index.mjs";
+import { CONTROLLER_TYPES, selectCandidate, createPrng } from "../../controllers/candidate_selectors.mjs";
 
 function computeEntropy(candidates) {
   const strengths = (candidates || []).map((c) => Math.max(1e-9, c.activation_strength || 0));
@@ -40,6 +41,8 @@ export class ChangedWorldHarness {
     executive = null,
     sensoryMode = TRANSDUCTION_MODES.SYMMETRIC,
     readoutMode = READOUT_MODES.READOUT_A_CURRENT,
+    worldFactory = null,
+    controllerType = null,
   } = {}) {
     this.seed = seed;
     this.condition = condition;
@@ -48,6 +51,9 @@ export class ChangedWorldHarness {
     this.changeAtStep = changeAtStep;
     this.sensoryMode = sensoryMode;
     this.readoutMode = readoutMode;
+    this.worldFactory = worldFactory;
+    this.controllerType = controllerType;
+    this.prng = createPrng(seed);
 
     if (!PHASE3_CONDITIONS.includes(condition)) {
       throw new Error(`Invalid condition: ${condition}`);
@@ -59,11 +65,13 @@ export class ChangedWorldHarness {
     }
 
     // 1. World instance
-    this.world = new ChangedWorld({
-      changeAtStep: this.changeAtStep,
-      seed: this.seed,
-      initialEnergy: 50,
-    });
+    this.world = typeof this.worldFactory === "function"
+      ? this.worldFactory({ changeAtStep: this.changeAtStep, seed: this.seed, initialEnergy: 50 })
+      : new ChangedWorld({
+          changeAtStep: this.changeAtStep,
+          seed: this.seed,
+          initialEnergy: 50,
+        });
 
     // 2. Connectome substrate
     this.runtime = new ConnectomeRuntime({ seed: this.seed, substepsPerTick: 10 });
@@ -285,8 +293,15 @@ export class ChangedWorldHarness {
       let decision = null;
       let staticGuardIntervened = false;
 
-      // 5. Condition Logic
-      if (this.condition === "CONTROL" || this.condition === "SHUFFLED_CONNECTOME") {
+      // 5. Condition / Controller Logic
+      if (this.controllerType && [CONTROLLER_TYPES.SUBSTRATE_TOP, CONTROLLER_TYPES.SIMPLE_REFLEX, CONTROLLER_TYPES.STOCHASTIC_WEIGHTED].includes(this.controllerType)) {
+        chosenCandidate = selectCandidate({
+          controller: this.controllerType,
+          candidates,
+          senses,
+          prng: this.prng,
+        });
+      } else if (this.condition === "CONTROL" || this.condition === "SHUFFLED_CONNECTOME") {
         chosenCandidate = topCandidate;
 
       } else if (this.condition === "STATIC_GUARD") {

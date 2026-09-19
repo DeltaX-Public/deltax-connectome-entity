@@ -27,6 +27,11 @@ export class ChangedWorld {
     startPos = { x: 1, y: 3, heading: 0 },
     initialEnergy = 50,
     seed = 42,
+    staticObstacles = null,
+    dynamicBlockage = null,
+    hazards = null,
+    goalRegion = null,
+    recoveryZone = null,
   } = {}) {
     this.clock = clock;
     this.width = width;
@@ -54,8 +59,8 @@ export class ChangedWorld {
       energy: initialEnergy,
     });
 
-    // Static arena geometry: corridor dividing walls with bypass passages at x=3, x=5, and x=8
-    this.staticObstacles = [
+    // Static arena geometry
+    this.staticObstacles = staticObstacles ? [...staticObstacles] : [
       // North dividing wall (y=2) with passages at x=3, x=5, and x=8
       { x: 1, y: 2 }, { x: 2, y: 2 }, { x: 4, y: 2 }, { x: 6, y: 2 }, { x: 7, y: 2 },
       // South dividing wall (y=4) with passages at x=3, x=5, and x=8
@@ -63,14 +68,15 @@ export class ChangedWorld {
     ];
 
     // Dynamic blockage (drops at changeAtStep)
-    this.dynamicBlockage = { x: 6, y: 3 };
+    this.dynamicBlockage = dynamicBlockage ? { ...dynamicBlockage } : { x: 6, y: 3 };
 
     // Hazard zone in changed state (surrounding the blockage)
-    this.hazards = [{ x: 5, y: 3, cost: 2 }];
+    this.hazards = hazards ? [...hazards] : [{ x: 5, y: 3, cost: 2 }];
 
-    // Goal Region at East end (accessible via central corridor and North/South bypass corridors)
-    this.goalRegion = { xMin: 9, xMax: 10, yMin: 1, yMax: 5 };
+    // Goal Region
+    this.goalRegion = goalRegion ? { ...goalRegion } : { xMin: 9, xMax: 10, yMin: 1, yMax: 5 };
 
+    this.recoveryZone = recoveryZone;
     this.events = [];
     this.lastCollision = false;
   }
@@ -280,9 +286,13 @@ export class ChangedWorld {
       this.repeatedMistakeCount++;
     }
 
-    // Post-change recovery tracking: entity moves beyond blockage along a bypass corridor
+    // Post-change recovery tracking
     if (this.isChanged && this.recoveryStep === null && (result.status === 'MOVED' || result.status === 'MOVED_BACKWARD')) {
-      if ((this.body.y === 1 || this.body.y === 5) && this.body.x >= 6) {
+      if (typeof this.recoveryZone === "function") {
+        if (this.recoveryZone(this.body)) {
+          this.recoveryStep = this.stepCount;
+        }
+      } else if ((this.body.y === 1 || this.body.y === 5) && this.body.x >= 6) {
         this.recoveryStep = this.stepCount;
       }
     }
