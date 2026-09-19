@@ -1,0 +1,2041 @@
+{
+  "schema": "phase4c.failure_attribution.v2",
+  "timestamp": "2026-09-19T09:33:07.200Z",
+  "cohort": "held_out",
+  "seed_range": "12000..12099",
+  "seed_count": 100,
+  "total_episodes": 9000,
+  "failed_episodes": 4697,
+  "overall_failure_distribution": {
+    "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 1197,
+    "SUBSTRATE_CANDIDATE_ABSENCE": 3395,
+    "CONTROLLER_SELECTION_FAILURE": 105
+  },
+  "failures_by_controller": {
+    "SUBSTRATE_TOP": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 1159,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 341
+    },
+    "SIMPLE_REFLEX": {
+      "CONTROLLER_SELECTION_FAILURE": 105,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 392
+    },
+    "STOCHASTIC_WEIGHTED": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 1462,
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 38
+    },
+    "DELTAX_EXECUTIVE": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 400
+    },
+    "DELTAX_TRIAL_RESET": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 400
+    },
+    "DELTAX_STEP_RESET": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 400
+    }
+  },
+  "failures_by_environment": {
+    "ENV_1_MIRROR_RIGHT_REQUIRED": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 97,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 103,
+      "CONTROLLER_SELECTION_FAILURE": 4
+    },
+    "ENV_3_OBSTACLE_SHIFT_LEFT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 96,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 104,
+      "CONTROLLER_SELECTION_FAILURE": 7
+    },
+    "ENV_4_OBSTACLE_SHIFT_RIGHT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 97,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 103,
+      "CONTROLLER_SELECTION_FAILURE": 6
+    },
+    "ENV_2_MIRROR_HORIZONTAL": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 97,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 103,
+      "CONTROLLER_SELECTION_FAILURE": 37
+    },
+    "ENV_5_HAZARD_BIAS_LEFT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 96,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 104,
+      "CONTROLLER_SELECTION_FAILURE": 8
+    },
+    "ENV_6_HAZARD_BIAS_RIGHT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 96,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 104,
+      "CONTROLLER_SELECTION_FAILURE": 8
+    },
+    "ENV_0_ORIGINAL": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 96,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 104,
+      "CONTROLLER_SELECTION_FAILURE": 8
+    },
+    "ENV_1B_TRUE_RIGHT_REQUIRED": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 571,
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 28,
+      "CONTROLLER_SELECTION_FAILURE": 1
+    },
+    "ENV_8_DEAD_END": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 97,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 103,
+      "CONTROLLER_SELECTION_FAILURE": 6
+    },
+    "ENV_POLARITY_LEFT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 112,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 88,
+      "CONTROLLER_SELECTION_FAILURE": 1
+    },
+    "ENV_7_DUAL_BYPASS": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 96,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 104,
+      "CONTROLLER_SELECTION_FAILURE": 8
+    },
+    "ENV_9_NOVEL_START_HEADING": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 97,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 103,
+      "CONTROLLER_SELECTION_FAILURE": 10
+    },
+    "ENV_CHOICE_WITH_REVERSAL": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 564,
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 33
+    },
+    "ENV_TEMPORAL_NON_MARKOVIAN": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 566,
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 31
+    },
+    "ENV_POLARITY_RIGHT": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 571,
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 28,
+      "CONTROLLER_SELECTION_FAILURE": 1
+    }
+  },
+  "diagnostic_forks": {
+    "ENV_1B_TRUE_RIGHT_REQUIRED": {
+      "id": "ENV_1B_TRUE_RIGHT_REQUIRED",
+      "forks": [
+        {
+          "fork_id": "FORK_ENV_1B_CENTRAL_BLOCKAGE",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "Confronting blocked central passage at (5, 3); North corridor is sealed wall. Only South passage is open via right turn."
+        }
+      ]
+    },
+    "ENV_POLARITY_LEFT": {
+      "id": "ENV_POLARITY_LEFT",
+      "forks": [
+        {
+          "fork_id": "FORK_POLARITY_LEFT_BLOCKAGE",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_left",
+          "valid_action_classes": [
+            "turn_left"
+          ],
+          "description": "Confronting blocked central passage at (5, 3); South wall is solid. North passage is open via left turn."
+        }
+      ]
+    },
+    "ENV_POLARITY_RIGHT": {
+      "id": "ENV_POLARITY_RIGHT",
+      "forks": [
+        {
+          "fork_id": "FORK_POLARITY_RIGHT_BLOCKAGE",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "Confronting blocked central passage at (5, 3); North wall is solid. South passage is open via right turn."
+        }
+      ]
+    },
+    "ENV_CHOICE_WITH_REVERSAL": {
+      "id": "ENV_CHOICE_WITH_REVERSAL",
+      "forks": [
+        {
+          "fork_id": "FORK_REVERSAL_BARRIER_1",
+          "position": {
+            "x": 4,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_left",
+          "valid_action_classes": [
+            "turn_left"
+          ],
+          "description": "First barrier blocks central/south routes; North corridor open via left turn."
+        },
+        {
+          "fork_id": "FORK_REVERSAL_BARRIER_2",
+          "position": {
+            "x": 8,
+            "y": 1,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "North corridor terminates at (9, 1); passage to goal requires right turn back toward South."
+        }
+      ]
+    },
+    "ENV_TEMPORAL_NON_MARKOVIAN": {
+      "id": "ENV_TEMPORAL_NON_MARKOVIAN",
+      "forks": [
+        {
+          "fork_id": "FORK_JUNCTION_J_TRIAL1",
+          "trialNum": 1,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_left",
+          "valid_action_classes": [
+            "turn_left"
+          ],
+          "description": "Junction J facing East in Trial 1; North corridor is open downstream to goal."
+        },
+        {
+          "fork_id": "FORK_JUNCTION_J_TRIAL2",
+          "trialNum": 2,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "Junction J facing East in Trial 2; North corridor blocked downstream; South corridor open via right turn."
+        }
+      ]
+    }
+  },
+  "sample_failures": [
+    {
+      "seed": 12000,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 8,
+        "backward": 2,
+        "left": 60,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12001,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 7,
+        "left": 56,
+        "right": 5,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12002,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 6,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12003,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 63,
+        "right": 2,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12004,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12005,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12006,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 2,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12007,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 11,
+        "backward": 7,
+        "left": 42,
+        "right": 9,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 12008,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12009,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 7,
+        "left": 59,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12010,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 5,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12011,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 7,
+        "backward": 0,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12012,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12013,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 3,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12014,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12015,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 9,
+        "left": 60,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12016,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 5,
+        "left": 39,
+        "right": 23,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12017,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 7,
+        "left": 51,
+        "right": 10,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12018,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 8,
+        "left": 57,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12019,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 9,
+        "left": 60,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12020,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12021,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 10,
+        "backward": 3,
+        "left": 57,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12022,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 3,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12023,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12024,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12025,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 10,
+        "left": 57,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12026,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 47,
+      "action_counts": {
+        "forward": 12,
+        "backward": 0,
+        "left": 35,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 12027,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 2,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12028,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 0,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12029,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 54,
+        "right": 10,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12030,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 48,
+      "action_counts": {
+        "forward": 9,
+        "backward": 0,
+        "left": 38,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12031,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12032,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 7,
+        "left": 60,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12033,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 0,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12034,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12035,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 0,
+        "left": 67,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12036,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 6,
+        "left": 50,
+        "right": 9,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12037,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 7,
+        "left": 54,
+        "right": 6,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12038,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 2,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12039,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12040,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 5,
+        "left": 58,
+        "right": 6,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12041,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12042,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12043,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12044,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 54,
+        "right": 7,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12045,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12046,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 9,
+        "left": 60,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12047,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12048,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12049,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 7,
+        "left": 51,
+        "right": 5,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12050,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 5,
+        "left": 58,
+        "right": 7,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12051,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12052,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12053,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12054,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12055,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 60,
+        "right": 3,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12056,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12057,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 14,
+        "left": 51,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12058,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 5,
+        "left": 55,
+        "right": 7,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12059,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 3,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12060,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12061,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 54,
+        "right": 12,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12062,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 6,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12063,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12064,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 13,
+        "backward": 0,
+        "left": 51,
+        "right": 5,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 12065,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12066,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 5,
+        "left": 64,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12067,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12068,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 2,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12069,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 6,
+        "left": 59,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12070,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12071,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12072,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 7,
+        "left": 56,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12073,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12074,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 11,
+        "backward": 0,
+        "left": 59,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 12075,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 6,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12076,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 0,
+        "left": 60,
+        "right": 7,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12077,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 4,
+        "left": 60,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12078,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12079,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 10,
+        "backward": 4,
+        "left": 54,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12080,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12081,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 5,
+        "left": 60,
+        "right": 3,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12082,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 3,
+        "left": 64,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12083,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12084,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 6,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12085,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 9,
+        "left": 55,
+        "right": 5,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12086,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 11,
+        "backward": 8,
+        "left": 40,
+        "right": 10,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 12087,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 7,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12088,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12089,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 56,
+        "right": 9,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12090,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 1,
+        "left": 49,
+        "right": 15,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12091,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 3,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12092,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 9,
+        "backward": 5,
+        "left": 56,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12093,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 7,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12094,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 2,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12095,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12096,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 0,
+        "left": 67,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12097,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 3,
+        "left": 57,
+        "right": 6,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12098,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 0,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 12099,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 9,
+        "left": 45,
+        "right": 12,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    }
+  ]
+}

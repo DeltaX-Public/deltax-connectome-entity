@@ -1,0 +1,2038 @@
+{
+  "schema": "phase4c.failure_attribution.v2",
+  "timestamp": "2026-09-19T07:31:37.809Z",
+  "cohort": "dev",
+  "seed_range": "13000..13049",
+  "seed_count": 50,
+  "total_episodes": 4500,
+  "failed_episodes": 2326,
+  "overall_failure_distribution": {
+    "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 582,
+    "SUBSTRATE_CANDIDATE_ABSENCE": 1705,
+    "CONTROLLER_SELECTION_FAILURE": 39
+  },
+  "failures_by_controller": {
+    "SUBSTRATE_TOP": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 558,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 192
+    },
+    "STOCHASTIC_WEIGHTED": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 726,
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 24
+    },
+    "SIMPLE_REFLEX": {
+      "CONTROLLER_SELECTION_FAILURE": 39,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 187
+    },
+    "DELTAX_EXECUTIVE": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 200
+    },
+    "DELTAX_TRIAL_RESET": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 200
+    },
+    "DELTAX_STEP_RESET": {
+      "SUBSTRATE_CANDIDATE_ABSENCE": 200
+    }
+  },
+  "failures_by_environment": {
+    "ENV_1_MIRROR_RIGHT_REQUIRED": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54
+    },
+    "ENV_3_OBSTACLE_SHIFT_LEFT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54,
+      "CONTROLLER_SELECTION_FAILURE": 1
+    },
+    "ENV_4_OBSTACLE_SHIFT_RIGHT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 45,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 55
+    },
+    "ENV_2_MIRROR_HORIZONTAL": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 48,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 52,
+      "CONTROLLER_SELECTION_FAILURE": 13
+    },
+    "ENV_6_HAZARD_BIAS_RIGHT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54,
+      "CONTROLLER_SELECTION_FAILURE": 2
+    },
+    "ENV_5_HAZARD_BIAS_LEFT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54,
+      "CONTROLLER_SELECTION_FAILURE": 2
+    },
+    "ENV_0_ORIGINAL": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54,
+      "CONTROLLER_SELECTION_FAILURE": 2
+    },
+    "ENV_1B_TRUE_RIGHT_REQUIRED": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 14,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 286
+    },
+    "ENV_POLARITY_LEFT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 57,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 43,
+      "CONTROLLER_SELECTION_FAILURE": 1
+    },
+    "ENV_8_DEAD_END": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54
+    },
+    "ENV_9_NOVEL_START_HEADING": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 48,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 52,
+      "CONTROLLER_SELECTION_FAILURE": 3
+    },
+    "ENV_7_DUAL_BYPASS": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 46,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 54,
+      "CONTROLLER_SELECTION_FAILURE": 2
+    },
+    "ENV_CHOICE_WITH_REVERSAL": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 16,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 283,
+      "CONTROLLER_SELECTION_FAILURE": 1
+    },
+    "ENV_TEMPORAL_NON_MARKOVIAN": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 18,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 270,
+      "CONTROLLER_SELECTION_FAILURE": 12
+    },
+    "ENV_POLARITY_RIGHT": {
+      "SUBSTRATE_DYNAMICS_LIMIT_CYCLE": 14,
+      "SUBSTRATE_CANDIDATE_ABSENCE": 286
+    }
+  },
+  "diagnostic_forks": {
+    "ENV_1B_TRUE_RIGHT_REQUIRED": {
+      "id": "ENV_1B_TRUE_RIGHT_REQUIRED",
+      "forks": [
+        {
+          "fork_id": "FORK_ENV_1B_CENTRAL_BLOCKAGE",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "Confronting blocked central passage at (5, 3); North corridor is sealed wall. Only South passage is open via right turn."
+        }
+      ]
+    },
+    "ENV_POLARITY_LEFT": {
+      "id": "ENV_POLARITY_LEFT",
+      "forks": [
+        {
+          "fork_id": "FORK_POLARITY_LEFT_BLOCKAGE",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_left",
+          "valid_action_classes": [
+            "turn_left"
+          ],
+          "description": "Confronting blocked central passage at (5, 3); South wall is solid. North passage is open via left turn."
+        }
+      ]
+    },
+    "ENV_POLARITY_RIGHT": {
+      "id": "ENV_POLARITY_RIGHT",
+      "forks": [
+        {
+          "fork_id": "FORK_POLARITY_RIGHT_BLOCKAGE",
+          "position": {
+            "x": 5,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "Confronting blocked central passage at (5, 3); North wall is solid. South passage is open via right turn."
+        }
+      ]
+    },
+    "ENV_CHOICE_WITH_REVERSAL": {
+      "id": "ENV_CHOICE_WITH_REVERSAL",
+      "forks": [
+        {
+          "fork_id": "FORK_REVERSAL_BARRIER_1",
+          "position": {
+            "x": 4,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_left",
+          "valid_action_classes": [
+            "turn_left"
+          ],
+          "description": "First barrier blocks central/south routes; North corridor open via left turn."
+        },
+        {
+          "fork_id": "FORK_REVERSAL_BARRIER_2",
+          "position": {
+            "x": 8,
+            "y": 1,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "North corridor terminates at (9, 1); passage to goal requires right turn back toward South."
+        }
+      ]
+    },
+    "ENV_TEMPORAL_NON_MARKOVIAN": {
+      "id": "ENV_TEMPORAL_NON_MARKOVIAN",
+      "forks": [
+        {
+          "fork_id": "FORK_JUNCTION_J_TRIAL1",
+          "trialNum": 1,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_left",
+          "valid_action_classes": [
+            "turn_left"
+          ],
+          "description": "Junction J facing East in Trial 1; North corridor is open downstream to goal."
+        },
+        {
+          "fork_id": "FORK_JUNCTION_J_TRIAL2",
+          "trialNum": 2,
+          "position": {
+            "x": 3,
+            "y": 3,
+            "heading": 0
+          },
+          "isBlocked": true,
+          "necessary_action_class": "turn_right",
+          "valid_action_classes": [
+            "turn_right"
+          ],
+          "description": "Junction J facing East in Trial 2; North corridor blocked downstream; South corridor open via right turn."
+        }
+      ]
+    }
+  },
+  "sample_failures": [
+    {
+      "seed": 13000,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 5,
+        "left": 56,
+        "right": 6,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13001,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 0,
+        "left": 59,
+        "right": 8,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13002,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13003,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 64,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13004,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 12,
+        "backward": 2,
+        "left": 55,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13005,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 1,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13006,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 8,
+        "left": 51,
+        "right": 9,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13007,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13008,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 0,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13009,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13010,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13011,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 7,
+        "left": 60,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13012,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 59,
+        "right": 3,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13013,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 2,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13014,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 0,
+        "left": 62,
+        "right": 2,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13015,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13016,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 4,
+        "left": 54,
+        "right": 9,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13017,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 5,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13018,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 6,
+        "left": 52,
+        "right": 9,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13019,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 7,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13020,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 2,
+        "left": 60,
+        "right": 2,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13021,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13022,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13023,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 65,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13024,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 11,
+        "backward": 2,
+        "left": 57,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13025,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 5,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13026,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 2,
+        "backward": 1,
+        "left": 67,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13027,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13028,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13029,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 7,
+        "backward": 0,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13030,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13031,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 6,
+        "left": 62,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13032,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 3,
+        "backward": 3,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13033,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 3,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13034,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 55,
+      "action_counts": {
+        "forward": 12,
+        "backward": 9,
+        "left": 23,
+        "right": 9,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13035,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 11,
+        "backward": 3,
+        "left": 55,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13036,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 3,
+        "left": 63,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13037,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 9,
+        "left": 61,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13038,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 5,
+        "backward": 0,
+        "left": 64,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13039,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 0,
+        "left": 66,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13040,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13041,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 6,
+        "backward": 0,
+        "left": 64,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13042,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 1,
+        "backward": 7,
+        "left": 62,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13043,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13044,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13045,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 6,
+        "left": 63,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13046,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 62,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13047,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 4,
+        "backward": 1,
+        "left": 65,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13048,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 0,
+        "backward": 8,
+        "left": 61,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13049,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "SUBSTRATE_TOP",
+      "steps": 70,
+      "action_counts": {
+        "forward": 10,
+        "backward": 8,
+        "left": 42,
+        "right": 0,
+        "stop": 10
+      },
+      "attribution": {
+        "category": "SUBSTRATE_DYNAMICS_LIMIT_CYCLE",
+        "causal_layer": "substrate_recurrent_dynamics",
+        "detail": "Unregulated substrate entered rotational or translational limit cycle"
+      }
+    },
+    {
+      "seed": 13000,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 20,
+        "backward": 5,
+        "left": 42,
+        "right": 2,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13001,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 19,
+        "backward": 7,
+        "left": 39,
+        "right": 4,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13002,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 3,
+        "left": 42,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13003,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 48,
+      "action_counts": {
+        "forward": 18,
+        "backward": 3,
+        "left": 26,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13004,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 22,
+        "backward": 5,
+        "left": 42,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13005,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 0,
+        "left": 46,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13006,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 17,
+        "backward": 4,
+        "left": 46,
+        "right": 2,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13007,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 15,
+        "backward": 5,
+        "left": 49,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13008,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 18,
+        "backward": 4,
+        "left": 48,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13009,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 26,
+        "backward": 2,
+        "left": 40,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13010,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 25,
+        "backward": 6,
+        "left": 39,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13011,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 13,
+        "backward": 4,
+        "left": 53,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13012,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 17,
+        "backward": 1,
+        "left": 49,
+        "right": 1,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13013,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 60,
+      "action_counts": {
+        "forward": 17,
+        "backward": 4,
+        "left": 39,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13014,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 68,
+      "action_counts": {
+        "forward": 21,
+        "backward": 6,
+        "left": 40,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13015,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 32,
+        "backward": 2,
+        "left": 35,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13016,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 21,
+        "backward": 4,
+        "left": 38,
+        "right": 6,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13017,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 16,
+        "backward": 4,
+        "left": 49,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13018,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 28,
+        "backward": 2,
+        "left": 32,
+        "right": 7,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13019,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 4,
+        "left": 39,
+        "right": 2,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13020,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 27,
+        "backward": 4,
+        "left": 36,
+        "right": 2,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13021,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 20,
+        "backward": 4,
+        "left": 44,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13022,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 18,
+        "backward": 3,
+        "left": 44,
+        "right": 4,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13023,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 27,
+        "backward": 1,
+        "left": 41,
+        "right": 1,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13024,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 23,
+        "backward": 1,
+        "left": 42,
+        "right": 0,
+        "stop": 4
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13025,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 25,
+        "backward": 7,
+        "left": 37,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13026,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 5,
+        "left": 40,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13027,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 8,
+        "left": 37,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13028,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 4,
+        "left": 42,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13029,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 19,
+        "backward": 4,
+        "left": 46,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13030,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 31,
+        "backward": 3,
+        "left": 36,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13031,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 19,
+        "backward": 5,
+        "left": 43,
+        "right": 0,
+        "stop": 3
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13032,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 27,
+        "backward": 3,
+        "left": 40,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13033,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 19,
+        "backward": 4,
+        "left": 45,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13034,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 21,
+        "backward": 4,
+        "left": 37,
+        "right": 5,
+        "stop": 3
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13035,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 29,
+        "backward": 3,
+        "left": 37,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13036,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 19,
+        "backward": 2,
+        "left": 48,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13037,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 26,
+        "backward": 3,
+        "left": 41,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13038,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 20,
+        "backward": 4,
+        "left": 44,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13039,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 14,
+        "backward": 6,
+        "left": 50,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13040,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 30,
+        "backward": 3,
+        "left": 36,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13041,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 27,
+        "backward": 3,
+        "left": 39,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13042,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 19,
+        "backward": 1,
+        "left": 49,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13043,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 24,
+        "backward": 6,
+        "left": 38,
+        "right": 0,
+        "stop": 2
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13044,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 27,
+        "backward": 3,
+        "left": 40,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13045,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 16,
+        "backward": 2,
+        "left": 49,
+        "right": 0,
+        "stop": 3
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13046,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 25,
+        "backward": 5,
+        "left": 40,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13047,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 21,
+        "backward": 3,
+        "left": 46,
+        "right": 0,
+        "stop": 0
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13048,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 26,
+        "backward": 2,
+        "left": 41,
+        "right": 0,
+        "stop": 1
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    },
+    {
+      "seed": 13049,
+      "environment": "ENV_1_MIRROR_RIGHT_REQUIRED",
+      "controller": "STOCHASTIC_WEIGHTED",
+      "steps": 70,
+      "action_counts": {
+        "forward": 20,
+        "backward": 5,
+        "left": 42,
+        "right": 0,
+        "stop": 3
+      },
+      "attribution": {
+        "category": "SUBSTRATE_CANDIDATE_ABSENCE",
+        "causal_layer": "substrate_candidate_generation",
+        "detail": "Substrate failed to generate admissible forward/turning candidates"
+      }
+    }
+  ]
+}
