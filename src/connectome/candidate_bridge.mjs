@@ -23,11 +23,20 @@ export { READOUT_MODES };
 export class ConnectomeCandidateBridge {
   constructor(opts = {}) {
     this.readoutMode = opts.readoutMode ?? READOUT_MODES.READOUT_A_CURRENT;
-    this.fwdScale = opts.fwdScale ?? 15.0;
-    this.turnScale = opts.turnScale ?? 20.0;
-    this.escapeScale = opts.escapeScale ?? 50.0;
-    this.groomScale = opts.groomScale ?? 40.0;
+    if (this.readoutMode === READOUT_MODES.READOUT_C_INDEPENDENT_AXES) {
+      this.fwdScale = opts.fwdScale ?? 3.0;
+      this.turnScale = opts.turnScale ?? 1.5;
+      this.backScale = opts.backScale ?? 3.0;
+      this.escapeScale = opts.escapeScale ?? 30.0;
+      this.groomScale = opts.groomScale ?? 20.0;
+    } else {
+      this.fwdScale = opts.fwdScale ?? 15.0;
+      this.turnScale = opts.turnScale ?? 20.0;
+      this.escapeScale = opts.escapeScale ?? 50.0;
+      this.groomScale = opts.groomScale ?? 40.0;
+    }
   }
+
 
   /**
    * Generate candidate action field from connectome descending neuron readouts.
@@ -44,6 +53,7 @@ export class ConnectomeCandidateBridge {
       return generateCandidates_C_IndependentAxes(dnReadouts, tick, {
         fwdScale: this.fwdScale,
         turnScale: this.turnScale,
+        backScale: this.backScale,
         escapeScale: this.escapeScale,
         groomScale: this.groomScale,
       });

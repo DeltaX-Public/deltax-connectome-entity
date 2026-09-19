@@ -359,11 +359,12 @@ export function generateCandidates_B_Upstream(dnReadouts, tick = 1) {
  * - Safe noop is strictly FALLBACK
  */
 export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scales = {}) {
-  const fwdScale = scales.fwdScale ?? 10.0;
-  const turnScale = scales.turnScale ?? 10.0;
-  const backScale = scales.backScale ?? 10.0;
-  const escapeScale = scales.escapeScale ?? 50.0;
-  const groomScale = scales.groomScale ?? 40.0;
+  // Calibrated to the empirical dynamic ranges of whole-CNS connectome descending populations
+  const fwdScale = scales.fwdScale ?? 3.0;
+  const turnScale = scales.turnScale ?? 1.5;
+  const backScale = scales.backScale ?? 3.0;
+  const escapeScale = scales.escapeScale ?? 30.0;
+  const groomScale = scales.groomScale ?? 20.0;
 
   const fwd = dnReadouts.forward || { weighted_mean: 0, neurons: [], types: [] };
   const back = dnReadouts.backward || { weighted_mean: 0, neurons: [], types: [] };
@@ -380,7 +381,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
   const escapeHz = Math.max(gf.mean_rate || 0, to.weighted_mean || 0);
   const groomHz = groom.weighted_mean || 0;
 
-  // Normalized measured strengths: s = 1 - exp(-rate / scale)
+  // Normalized measured strengths: continuous s = 1 - exp(-rate / scale), zero floor
   const fwdStrength = +(1.0 - Math.exp(-fwdHz / fwdScale)).toFixed(3);
   const backStrength = +(1.0 - Math.exp(-backHz / backScale)).toFixed(3);
 
@@ -388,11 +389,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
   const turnLSilenced = (turnL.neurons || []).length > 0 && turnL.neurons.every((n) => n.silenced);
   const turnRSilenced = (turnR.neurons || []).length > 0 && turnR.neurons.every((n) => n.silenced);
 
-  // Ipsilateral rate normalized, but scaled by net contrast if contralateral is firing
-  const rawL = 1.0 - Math.exp(-turnLHz / turnScale);
-  const rawR = 1.0 - Math.exp(-turnRHz / turnScale);
-
-  // Bilateral differential contrast factor: if both fire symmetrically, steering torque cancels
+  // Bilateral differential drive: net torque from ipsilateral vs contralateral contrast
   const diffL = Math.max(0, turnLHz - turnRHz);
   const diffR = Math.max(0, turnRHz - turnLHz);
   const turnLStrength = turnLSilenced ? 0 : +(1.0 - Math.exp(-diffL / turnScale)).toFixed(3);
@@ -410,7 +407,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     action_class: "locomotion_forward",
     actuator_action: "forward",
     provenance_type: "MEASURED_NEURAL",
-    activation_strength: Math.max(0.05, Math.min(1.0, fwdStrength)),
+    activation_strength: Math.min(1.0, fwdStrength),
     originating_population: fwd.types,
     originating_neuron_indices: (fwd.neurons || []).map((n) => n.index),
     raw_activity_measure: { weighted_mean_hz: fwdHz },
@@ -427,7 +424,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     actuator_action: "left",
     provenance_type: "MEASURED_NEURAL",
     forbidden: turnLSilenced,
-    activation_strength: turnLSilenced ? 0 : Math.max(0.05, Math.min(1.0, turnLStrength)),
+    activation_strength: turnLSilenced ? 0 : Math.min(1.0, turnLStrength),
     originating_population: turnL.types,
     originating_neuron_indices: (turnL.neurons || []).map((n) => n.index),
     raw_activity_measure: {
@@ -449,7 +446,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     actuator_action: "right",
     provenance_type: "MEASURED_NEURAL",
     forbidden: turnRSilenced,
-    activation_strength: turnRSilenced ? 0 : Math.max(0.05, Math.min(1.0, turnRStrength)),
+    activation_strength: turnRSilenced ? 0 : Math.min(1.0, turnRStrength),
     originating_population: turnR.types,
     originating_neuron_indices: (turnR.neurons || []).map((n) => n.index),
     raw_activity_measure: {
@@ -464,14 +461,14 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
   });
 
   // 4. Backward Locomotion / Aversive Withdrawal (MDN)
-  if (backHz > 0.5) {
+  if (backHz > 0.1) {
     candidates.push({
       id: `cand_backward_${tick}`,
       substrate_candidate_id: `sub_dn_backward_${tick}`,
       action_class: "locomotion_backward",
-      actuator_action: "stop", // In standard 4-action rover, maps to stop or reverse
+      actuator_action: "stop",
       provenance_type: "MEASURED_NEURAL",
-      activation_strength: Math.max(0.05, Math.min(1.0, backStrength)),
+      activation_strength: Math.min(1.0, backStrength),
       originating_population: back.types || ["MDN"],
       originating_neuron_indices: (back.neurons || []).map((n) => n.index),
       raw_activity_measure: { weighted_mean_hz: backHz },
@@ -482,14 +479,14 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
   }
 
   // 5. Giant Fibre Escape
-  if (escapeStrength > 0.1 || (gf.neurons || []).length > 0) {
+  if (escapeStrength > 0.05 || (gf.neurons || []).length > 0) {
     candidates.push({
       id: `cand_escape_${tick}`,
       substrate_candidate_id: `sub_dn_escape_${tick}`,
       action_class: "giant_fiber_escape",
       actuator_action: "stop",
       provenance_type: "MEASURED_NEURAL",
-      activation_strength: Math.max(0.05, escapeStrength),
+      activation_strength: escapeStrength,
       originating_population: [...(gf.types || []), ...(to.types || [])],
       originating_neuron_indices: [...(gf.neurons || []), ...(to.neurons || [])].map((n) => n.index),
       raw_activity_measure: { escape_hz: escapeHz },
@@ -507,7 +504,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
       action_class: "groom",
       actuator_action: "stop",
       provenance_type: "MEASURED_NEURAL",
-      activation_strength: Math.max(0.05, groomStrength),
+      activation_strength: groomStrength,
       originating_population: groom.types || [],
       originating_neuron_indices: (groom.neurons || []).map((n) => n.index),
       raw_activity_measure: { weighted_mean_hz: groomHz },
@@ -518,7 +515,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
   }
 
   // 7. Halt / Quiescent Stance (DERIVED_NEURAL)
-  // CRITICAL DISTINCTION: Halt represents quiescence across ALL active drives, not merely low forward.
+  // Quiescent stance is active only in the absence of active locomotor/steering commands.
   const maxActiveDrive = Math.max(
     fwdStrength,
     backStrength,
@@ -527,7 +524,8 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     escapeStrength,
     groomStrength
   );
-  const quiescence = +(Math.max(0.05, Math.min(1.0, 1.0 - maxActiveDrive))).toFixed(3);
+  // Exponential decay with active motor commands: baseline stance is 0.12 when idle
+  const quiescence = +(Math.max(0.005, 0.12 * Math.exp(-maxActiveDrive / 0.15))).toFixed(3);
   candidates.push({
     id: `cand_halt_${tick}`,
     substrate_candidate_id: `sub_dn_halt_${tick}`,
@@ -538,7 +536,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     originating_population: ["QUIESCENT_STANCE"],
     originating_neuron_indices: [],
     raw_activity_measure: { max_active_neural_drive: maxActiveDrive },
-    normalization_method: "max(0.05, 1.0 - max(active_drives))",
+    normalization_method: "max(0.005, 0.12 * exp(-maxActiveDrive / 0.15))",
     tick,
     description: "Quiescent standing posture: active only when translational, steering, and reflex drives are low",
   });
@@ -550,10 +548,10 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     action_class: "safe_noop",
     actuator_action: "stop",
     provenance_type: "FALLBACK",
-    activation_strength: 0.01,
+    activation_strength: 0.001,
     originating_population: ["DECLARED_SAFETY_SPEC"],
     originating_neuron_indices: [],
-    raw_activity_measure: { fallback_floor: 0.01 },
+    raw_activity_measure: { fallback_floor: 0.001 },
     normalization_method: "declared_constant_floor",
     tick,
     description: "Declared fallback candidate: zero motor actuation when ordinary candidates are excluded",
