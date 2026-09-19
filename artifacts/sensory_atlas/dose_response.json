@@ -1,0 +1,1742 @@
+{
+  "schema": "sensory.dose_response.v1",
+  "timestamp": "2026-09-19T00:47:56.191Z",
+  "seed": 7000,
+  "intensity_grid_hz": [
+    0,
+    25,
+    50,
+    75,
+    100,
+    125,
+    150,
+    175,
+    200
+  ],
+  "populations_tested": [
+    "tactile T1",
+    "JO wind/gravity",
+    "thermosensory",
+    "taste T1",
+    "labellar taste",
+    "photoreceptors",
+    "wing/notum bristles"
+  ],
+  "dose_response_results": {
+    "tactile T1": [
+      {
+        "population": "tactile T1",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 23,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2443,
+        "peaks": {
+          "turn_left": 1.243,
+          "turn_right": 2.288,
+          "forward": 2.752,
+          "backward": 3.35,
+          "escape": 6.578,
+          "groom": 0,
+          "peak_left_right_diff": -1.045
+        },
+        "stimulus_means": {
+          "turn_left": 0.029,
+          "turn_right": 0,
+          "forward": 0.016,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.029
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 21,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2454,
+        "peaks": {
+          "turn_left": 2.055,
+          "turn_right": 2.807,
+          "forward": 2.536,
+          "backward": 4.945,
+          "escape": 9.623,
+          "groom": 0,
+          "peak_left_right_diff": -0.752
+        },
+        "stimulus_means": {
+          "turn_left": 0.076,
+          "turn_right": 0.002,
+          "forward": 0.042,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.074
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 21,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2459,
+        "peaks": {
+          "turn_left": 3.233,
+          "turn_right": 2.737,
+          "forward": 2.051,
+          "backward": 5.886,
+          "escape": 7.724,
+          "groom": 0,
+          "peak_left_right_diff": 0.496
+        },
+        "stimulus_means": {
+          "turn_left": 0.123,
+          "turn_right": 0.008,
+          "forward": 0.054,
+          "backward": 0.009,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.116
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 19,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2509,
+        "peaks": {
+          "turn_left": 4.823,
+          "turn_right": 2.484,
+          "forward": 1.439,
+          "backward": 6.887,
+          "escape": 4.251,
+          "groom": 0,
+          "peak_left_right_diff": 2.339
+        },
+        "stimulus_means": {
+          "turn_left": 0.233,
+          "turn_right": 0.012,
+          "forward": 0.06,
+          "backward": 0.025,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.221
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 18,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2595,
+        "peaks": {
+          "turn_left": 6.77,
+          "turn_right": 2.177,
+          "forward": 0.957,
+          "backward": 8.282,
+          "escape": 0.765,
+          "groom": 0,
+          "peak_left_right_diff": 4.593
+        },
+        "stimulus_means": {
+          "turn_left": 0.381,
+          "turn_right": 0.013,
+          "forward": 0.064,
+          "backward": 0.042,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.367
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 16,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2693,
+        "peaks": {
+          "turn_left": 8.766,
+          "turn_right": 1.825,
+          "forward": 0.709,
+          "backward": 10.414,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 6.941
+        },
+        "stimulus_means": {
+          "turn_left": 0.546,
+          "turn_right": 0.014,
+          "forward": 0.066,
+          "backward": 0.06,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.532
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 15,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2797,
+        "peaks": {
+          "turn_left": 10.89,
+          "turn_right": 1.501,
+          "forward": 0.665,
+          "backward": 13.109,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 9.389
+        },
+        "stimulus_means": {
+          "turn_left": 0.728,
+          "turn_right": 0.014,
+          "forward": 0.068,
+          "backward": 0.085,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.714
+      },
+      {
+        "population": "tactile T1",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 15,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2897,
+        "peaks": {
+          "turn_left": 13.467,
+          "turn_right": 1.252,
+          "forward": 0.689,
+          "backward": 16.597,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 12.215
+        },
+        "stimulus_means": {
+          "turn_left": 0.911,
+          "turn_right": 0.014,
+          "forward": 0.072,
+          "backward": 0.116,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0.897
+      }
+    ],
+    "JO wind/gravity": [
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 7,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0.643,
+          "backward": 1.503,
+          "escape": 0.234,
+          "groom": 2.547,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0.13
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 3,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2438,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 1.892,
+          "backward": 0.215,
+          "escape": 0,
+          "groom": 5.013,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0.002,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0.57
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 3,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2442,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 3.263,
+          "backward": 0.331,
+          "escape": 0,
+          "groom": 6.325,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0.011,
+          "backward": 0,
+          "escape": 0,
+          "groom": 1.15
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 2,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2537,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 4.058,
+          "backward": 0.622,
+          "escape": 0,
+          "groom": 7.296,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0.034,
+          "backward": 0,
+          "escape": 0,
+          "groom": 1.839
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 2,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2996,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 5.014,
+          "backward": 1.209,
+          "escape": 0.019,
+          "groom": 8.037,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0.08,
+          "backward": 0.006,
+          "escape": 0.007,
+          "groom": 2.66
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 2,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.3519,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.055,
+          "forward": 5.721,
+          "backward": 2.123,
+          "escape": 0.223,
+          "groom": 8.747,
+          "peak_left_right_diff": -0.055
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.02,
+          "forward": 0.164,
+          "backward": 0.025,
+          "escape": 0.121,
+          "groom": 3.691
+        },
+        "steering_bias": -0.02
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 2,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.423,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.158,
+          "forward": 6.523,
+          "backward": 3.188,
+          "escape": 0.859,
+          "groom": 9.762,
+          "peak_left_right_diff": -0.158
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.061,
+          "forward": 0.301,
+          "backward": 0.075,
+          "escape": 0.426,
+          "groom": 5.27
+        },
+        "steering_bias": -0.061
+      },
+      {
+        "population": "JO wind/gravity",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 2,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.5192,
+        "peaks": {
+          "turn_left": 0.062,
+          "turn_right": 0.27,
+          "forward": 6.59,
+          "backward": 3.918,
+          "escape": 2.69,
+          "groom": 14.127,
+          "peak_left_right_diff": -0.208
+        },
+        "stimulus_means": {
+          "turn_left": 0.025,
+          "turn_right": 0.108,
+          "forward": 0.456,
+          "backward": 0.16,
+          "escape": 1.354,
+          "groom": 9.12
+        },
+        "steering_bias": -0.082
+      }
+    ],
+    "thermosensory": [
+      {
+        "population": "thermosensory",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 14,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.3002,
+        "peaks": {
+          "turn_left": 21.336,
+          "turn_right": 3.38,
+          "forward": 3.894,
+          "backward": 0.325,
+          "escape": 5.022,
+          "groom": 5.565,
+          "peak_left_right_diff": 17.956
+        },
+        "stimulus_means": {
+          "turn_left": 0.601,
+          "turn_right": 0.255,
+          "forward": 0.329,
+          "backward": 0.071,
+          "escape": 0.153,
+          "groom": 0.012
+        },
+        "steering_bias": 0.346
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 13,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.3473,
+        "peaks": {
+          "turn_left": 22.844,
+          "turn_right": 5.057,
+          "forward": 4.055,
+          "backward": 0.86,
+          "escape": 4.476,
+          "groom": 6.545,
+          "peak_left_right_diff": 17.787
+        },
+        "stimulus_means": {
+          "turn_left": 1.019,
+          "turn_right": 0.653,
+          "forward": 0.399,
+          "backward": 0.229,
+          "escape": 0.217,
+          "groom": 0.016
+        },
+        "steering_bias": 0.366
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 13,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.369,
+        "peaks": {
+          "turn_left": 22.735,
+          "turn_right": 5.946,
+          "forward": 4.045,
+          "backward": 0.912,
+          "escape": 4.123,
+          "groom": 7.129,
+          "peak_left_right_diff": 16.789
+        },
+        "stimulus_means": {
+          "turn_left": 1.107,
+          "turn_right": 0.94,
+          "forward": 0.439,
+          "backward": 0.264,
+          "escape": 0.25,
+          "groom": 0.019
+        },
+        "steering_bias": 0.167
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 12,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.3816,
+        "peaks": {
+          "turn_left": 21.545,
+          "turn_right": 6.497,
+          "forward": 4.07,
+          "backward": 0.814,
+          "escape": 3.824,
+          "groom": 7.569,
+          "peak_left_right_diff": 15.048
+        },
+        "stimulus_means": {
+          "turn_left": 1.153,
+          "turn_right": 1.119,
+          "forward": 0.467,
+          "backward": 0.249,
+          "escape": 0.272,
+          "groom": 0.021
+        },
+        "steering_bias": 0.034
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 12,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.3926,
+        "peaks": {
+          "turn_left": 20.62,
+          "turn_right": 7.199,
+          "forward": 4.113,
+          "backward": 0.766,
+          "escape": 3.567,
+          "groom": 7.936,
+          "peak_left_right_diff": 13.421
+        },
+        "stimulus_means": {
+          "turn_left": 1.182,
+          "turn_right": 1.298,
+          "forward": 0.49,
+          "backward": 0.242,
+          "escape": 0.284,
+          "groom": 0.023
+        },
+        "steering_bias": -0.117
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 12,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.3993,
+        "peaks": {
+          "turn_left": 20.811,
+          "turn_right": 7.832,
+          "forward": 4.203,
+          "backward": 0.703,
+          "escape": 3.375,
+          "groom": 8.232,
+          "peak_left_right_diff": 12.979
+        },
+        "stimulus_means": {
+          "turn_left": 1.175,
+          "turn_right": 1.444,
+          "forward": 0.508,
+          "backward": 0.227,
+          "escape": 0.291,
+          "groom": 0.025
+        },
+        "steering_bias": -0.269
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 12,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.4056,
+        "peaks": {
+          "turn_left": 21.274,
+          "turn_right": 8.516,
+          "forward": 4.306,
+          "backward": 0.661,
+          "escape": 3.228,
+          "groom": 8.466,
+          "peak_left_right_diff": 12.758
+        },
+        "stimulus_means": {
+          "turn_left": 1.169,
+          "turn_right": 1.586,
+          "forward": 0.524,
+          "backward": 0.216,
+          "escape": 0.298,
+          "groom": 0.026
+        },
+        "steering_bias": -0.417
+      },
+      {
+        "population": "thermosensory",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 12,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.4107,
+        "peaks": {
+          "turn_left": 21.29,
+          "turn_right": 9.06,
+          "forward": 4.376,
+          "backward": 0.609,
+          "escape": 3.124,
+          "groom": 8.651,
+          "peak_left_right_diff": 12.23
+        },
+        "stimulus_means": {
+          "turn_left": 1.175,
+          "turn_right": 1.698,
+          "forward": 0.537,
+          "backward": 0.201,
+          "escape": 0.302,
+          "groom": 0.027
+        },
+        "steering_bias": -0.523
+      }
+    ],
+    "taste T1": [
+      {
+        "population": "taste T1",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 18,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2474,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.322,
+          "forward": 2.753,
+          "backward": 11.758,
+          "escape": 0,
+          "groom": 1.963,
+          "peak_left_right_diff": -0.322
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.087,
+          "forward": 0.091,
+          "backward": 1.313,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.087
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.248,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.317,
+          "forward": 2.783,
+          "backward": 11.699,
+          "escape": 0,
+          "groom": 2.198,
+          "peak_left_right_diff": -0.317
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.093,
+          "forward": 0.104,
+          "backward": 1.434,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.093
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2482,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.311,
+          "forward": 2.805,
+          "backward": 11.611,
+          "escape": 0,
+          "groom": 2.326,
+          "peak_left_right_diff": -0.311
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.094,
+          "forward": 0.111,
+          "backward": 1.497,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.094
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2484,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.305,
+          "forward": 2.822,
+          "backward": 11.325,
+          "escape": 0,
+          "groom": 2.403,
+          "peak_left_right_diff": -0.305
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.095,
+          "forward": 0.115,
+          "backward": 1.541,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.095
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2486,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.3,
+          "forward": 2.833,
+          "backward": 10.961,
+          "escape": 0,
+          "groom": 2.458,
+          "peak_left_right_diff": -0.3
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.095,
+          "forward": 0.119,
+          "backward": 1.571,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.095
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2487,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.295,
+          "forward": 2.843,
+          "backward": 10.54,
+          "escape": 0,
+          "groom": 2.493,
+          "peak_left_right_diff": -0.295
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.094,
+          "forward": 0.122,
+          "backward": 1.592,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.094
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2488,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.289,
+          "forward": 2.856,
+          "backward": 10.092,
+          "escape": 0,
+          "groom": 2.508,
+          "peak_left_right_diff": -0.289
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.094,
+          "forward": 0.124,
+          "backward": 1.605,
+          "escape": 0,
+          "groom": 0.001
+        },
+        "steering_bias": -0.094
+      },
+      {
+        "population": "taste T1",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 17,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2489,
+        "peaks": {
+          "turn_left": 0.463,
+          "turn_right": 0.282,
+          "forward": 2.913,
+          "backward": 9.291,
+          "escape": 0,
+          "groom": 2.501,
+          "peak_left_right_diff": 0.181
+        },
+        "stimulus_means": {
+          "turn_left": 0.02,
+          "turn_right": 0.092,
+          "forward": 0.126,
+          "backward": 1.609,
+          "escape": 0,
+          "groom": 0.001
+        },
+        "steering_bias": -0.072
+      }
+    ],
+    "labellar taste": [
+      {
+        "population": "labellar taste",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 21,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2453,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.384,
+          "forward": 2.597,
+          "backward": 10.887,
+          "escape": 0,
+          "groom": 0.989,
+          "peak_left_right_diff": -0.384
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.054,
+          "forward": 0.038,
+          "backward": 0.24,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.054
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2456,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.375,
+          "forward": 2.75,
+          "backward": 9.764,
+          "escape": 0.171,
+          "groom": 1.086,
+          "peak_left_right_diff": -0.375
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.061,
+          "forward": 0.046,
+          "backward": 0.199,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.061
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2457,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.354,
+          "forward": 2.838,
+          "backward": 8.7,
+          "escape": 0.177,
+          "groom": 1.183,
+          "peak_left_right_diff": -0.354
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.062,
+          "forward": 0.049,
+          "backward": 0.159,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.062
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2457,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.344,
+          "forward": 2.922,
+          "backward": 7.718,
+          "escape": 0.138,
+          "groom": 1.247,
+          "peak_left_right_diff": -0.344
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.062,
+          "forward": 0.05,
+          "backward": 0.137,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.062
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2458,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.333,
+          "forward": 2.989,
+          "backward": 6.645,
+          "escape": 0.081,
+          "groom": 1.289,
+          "peak_left_right_diff": -0.333
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.062,
+          "forward": 0.051,
+          "backward": 0.119,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.062
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2457,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.321,
+          "forward": 3.05,
+          "backward": 5.138,
+          "escape": 0,
+          "groom": 1.273,
+          "peak_left_right_diff": -0.321
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.06,
+          "forward": 0.05,
+          "backward": 0.102,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.06
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2457,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.307,
+          "forward": 3.108,
+          "backward": 4.208,
+          "escape": 0,
+          "groom": 1.239,
+          "peak_left_right_diff": -0.307
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.058,
+          "forward": 0.049,
+          "backward": 0.086,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.058
+      },
+      {
+        "population": "labellar taste",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 20,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.2456,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0.276,
+          "forward": 3.185,
+          "backward": 3.045,
+          "escape": 0,
+          "groom": 1.166,
+          "peak_left_right_diff": -0.276
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0.053,
+          "forward": 0.047,
+          "backward": 0.075,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": -0.053
+      }
+    ],
+    "photoreceptors": [
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "photoreceptors",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      }
+    ],
+    "wing/notum bristles": [
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 0,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": -1,
+        "settling_time_ms": 1,
+        "mean_entropy": 1.2437,
+        "peaks": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0,
+          "peak_left_right_diff": 0
+        },
+        "stimulus_means": {
+          "turn_left": 0,
+          "turn_right": 0,
+          "forward": 0,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0
+        },
+        "steering_bias": 0
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 25,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 9,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.6967,
+        "peaks": {
+          "turn_left": 17.347,
+          "turn_right": 14.821,
+          "forward": 10.808,
+          "backward": 0,
+          "escape": 8.691,
+          "groom": 2.906,
+          "peak_left_right_diff": 2.526
+        },
+        "stimulus_means": {
+          "turn_left": 4.042,
+          "turn_right": 3.3,
+          "forward": 3.756,
+          "backward": 0,
+          "escape": 0.086,
+          "groom": 0.004
+        },
+        "steering_bias": 0.742
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 50,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 9,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.7251,
+        "peaks": {
+          "turn_left": 15.739,
+          "turn_right": 12.732,
+          "forward": 9.376,
+          "backward": 0,
+          "escape": 0,
+          "groom": 9.403,
+          "peak_left_right_diff": 3.007
+        },
+        "stimulus_means": {
+          "turn_left": 4.321,
+          "turn_right": 3.231,
+          "forward": 3.817,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0.064
+        },
+        "steering_bias": 1.09
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 75,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 9,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.7398,
+        "peaks": {
+          "turn_left": 13.242,
+          "turn_right": 10.818,
+          "forward": 8.678,
+          "backward": 0,
+          "escape": 0,
+          "groom": 9.181,
+          "peak_left_right_diff": 2.424
+        },
+        "stimulus_means": {
+          "turn_left": 4.347,
+          "turn_right": 3.226,
+          "forward": 3.832,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0.134
+        },
+        "steering_bias": 1.121
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 100,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 8,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.75,
+        "peaks": {
+          "turn_left": 12.221,
+          "turn_right": 9.509,
+          "forward": 8.389,
+          "backward": 0,
+          "escape": 0,
+          "groom": 8.813,
+          "peak_left_right_diff": 2.712
+        },
+        "stimulus_means": {
+          "turn_left": 4.388,
+          "turn_right": 3.207,
+          "forward": 3.879,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0.178
+        },
+        "steering_bias": 1.181
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 125,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 8,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.758,
+        "peaks": {
+          "turn_left": 12.121,
+          "turn_right": 8.91,
+          "forward": 8.31,
+          "backward": 0,
+          "escape": 0,
+          "groom": 8.691,
+          "peak_left_right_diff": 3.211
+        },
+        "stimulus_means": {
+          "turn_left": 4.458,
+          "turn_right": 3.215,
+          "forward": 3.945,
+          "backward": 0,
+          "escape": 0,
+          "groom": 0.203
+        },
+        "steering_bias": 1.243
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 150,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 8,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.764,
+        "peaks": {
+          "turn_left": 12.327,
+          "turn_right": 8.714,
+          "forward": 8.354,
+          "backward": 0.058,
+          "escape": 0,
+          "groom": 8.706,
+          "peak_left_right_diff": 3.613
+        },
+        "stimulus_means": {
+          "turn_left": 4.519,
+          "turn_right": 3.247,
+          "forward": 4.014,
+          "backward": 0.021,
+          "escape": 0,
+          "groom": 0.22
+        },
+        "steering_bias": 1.272
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 175,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 8,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.7687,
+        "peaks": {
+          "turn_left": 12.499,
+          "turn_right": 8.676,
+          "forward": 8.438,
+          "backward": 0.174,
+          "escape": 0,
+          "groom": 8.709,
+          "peak_left_right_diff": 3.823
+        },
+        "stimulus_means": {
+          "turn_left": 4.547,
+          "turn_right": 3.273,
+          "forward": 4.082,
+          "backward": 0.066,
+          "escape": 0,
+          "groom": 0.232
+        },
+        "steering_bias": 1.273
+      },
+      {
+        "population": "wing/notum bristles",
+        "intensity_hz": 200,
+        "dominant_winner": "halt",
+        "dominant_winner_pct": 100,
+        "onset_latency_ms": 8,
+        "settling_time_ms": -1,
+        "mean_entropy": 1.7713,
+        "peaks": {
+          "turn_left": 12.407,
+          "turn_right": 8.542,
+          "forward": 8.457,
+          "backward": 0.275,
+          "escape": 0,
+          "groom": 8.656,
+          "peak_left_right_diff": 3.865
+        },
+        "stimulus_means": {
+          "turn_left": 4.538,
+          "turn_right": 3.267,
+          "forward": 4.116,
+          "backward": 0.105,
+          "escape": 0,
+          "groom": 0.24
+        },
+        "steering_bias": 1.271
+      }
+    ]
+  }
+}

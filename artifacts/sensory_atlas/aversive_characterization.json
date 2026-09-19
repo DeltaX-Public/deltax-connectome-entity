@@ -1,0 +1,1051 @@
+{
+  "schema": "sensory.aversive_characterization.v1",
+  "timestamp": "2026-09-19T00:48:51.635Z",
+  "seed": 7000,
+  "results": [
+    {
+      "modality": "thermosensory",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "SYMMETRIC",
+      "left_hz": 50,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.019,
+        "turn_right": 0.653,
+        "forward": 0.399,
+        "backward": 0.229,
+        "escape": 0.217,
+        "groom": 0.016
+      },
+      "peaks": {
+        "turn_left": 22.844,
+        "turn_right": 5.057,
+        "forward": 4.055,
+        "backward": 0.86,
+        "escape": 4.476,
+        "groom": 6.545,
+        "peak_left_right_diff": 17.787
+      },
+      "steering_bias_hz": 0.366,
+      "mean_candidate_entropy": 1.3473
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 50,
+      "right_hz": 10,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.695,
+        "turn_right": 0.169,
+        "forward": 0.33,
+        "backward": 0.116,
+        "escape": 0.131,
+        "groom": 0.009
+      },
+      "peaks": {
+        "turn_left": 17.03,
+        "turn_right": 2.342,
+        "forward": 3.689,
+        "backward": 0.501,
+        "escape": 4.23,
+        "groom": 5.71,
+        "peak_left_right_diff": 14.688
+      },
+      "steering_bias_hz": 0.526,
+      "mean_candidate_entropy": 1.3001
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 10,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.595,
+        "turn_right": 0.507,
+        "forward": 0.354,
+        "backward": 0.045,
+        "escape": 0.196,
+        "groom": 0.015
+      },
+      "peaks": {
+        "turn_left": 23.503,
+        "turn_right": 4.718,
+        "forward": 3.896,
+        "backward": 0.202,
+        "escape": 5.79,
+        "groom": 5.829,
+        "peak_left_right_diff": 18.785
+      },
+      "steering_bias_hz": 0.088,
+      "mean_candidate_entropy": 1.3165
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "SYMMETRIC",
+      "left_hz": 100,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.153,
+        "turn_right": 1.119,
+        "forward": 0.467,
+        "backward": 0.249,
+        "escape": 0.272,
+        "groom": 0.021
+      },
+      "peaks": {
+        "turn_left": 21.545,
+        "turn_right": 6.497,
+        "forward": 4.07,
+        "backward": 0.814,
+        "escape": 3.824,
+        "groom": 7.569,
+        "peak_left_right_diff": 15.048
+      },
+      "steering_bias_hz": 0.034,
+      "mean_candidate_entropy": 1.3816
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 100,
+      "right_hz": 20,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.77,
+        "turn_right": 0.611,
+        "forward": 0.39,
+        "backward": 0.177,
+        "escape": 0.182,
+        "groom": 0.013
+      },
+      "peaks": {
+        "turn_left": 14.561,
+        "turn_right": 4.582,
+        "forward": 3.565,
+        "backward": 0.628,
+        "escape": 3.863,
+        "groom": 6.535,
+        "peak_left_right_diff": 9.979
+      },
+      "steering_bias_hz": 0.159,
+      "mean_candidate_entropy": 1.3341
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 20,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.917,
+        "turn_right": 0.822,
+        "forward": 0.421,
+        "backward": 0.115,
+        "escape": 0.254,
+        "groom": 0.019
+      },
+      "peaks": {
+        "turn_left": 24.05,
+        "turn_right": 5.804,
+        "forward": 4.061,
+        "backward": 0.433,
+        "escape": 5.302,
+        "groom": 6.699,
+        "peak_left_right_diff": 18.246
+      },
+      "steering_bias_hz": 0.094,
+      "mean_candidate_entropy": 1.3537
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "SYMMETRIC",
+      "left_hz": 180,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.169,
+        "turn_right": 1.611,
+        "forward": 0.527,
+        "backward": 0.213,
+        "escape": 0.299,
+        "groom": 0.026
+      },
+      "peaks": {
+        "turn_left": 21.302,
+        "turn_right": 8.639,
+        "forward": 4.322,
+        "backward": 0.651,
+        "escape": 3.203,
+        "groom": 8.506,
+        "peak_left_right_diff": 12.663
+      },
+      "steering_bias_hz": -0.442,
+      "mean_candidate_entropy": 1.4068
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 180,
+      "right_hz": 36,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.881,
+        "turn_right": 1.017,
+        "forward": 0.446,
+        "backward": 0.209,
+        "escape": 0.226,
+        "groom": 0.017
+      },
+      "peaks": {
+        "turn_left": 16.212,
+        "turn_right": 6.091,
+        "forward": 3.742,
+        "backward": 0.674,
+        "escape": 3.378,
+        "groom": 7.406,
+        "peak_left_right_diff": 10.121
+      },
+      "steering_bias_hz": -0.135,
+      "mean_candidate_entropy": 1.3642
+    },
+    {
+      "modality": "thermosensory",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 36,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.065,
+        "turn_right": 1.14,
+        "forward": 0.472,
+        "backward": 0.151,
+        "escape": 0.292,
+        "groom": 0.023
+      },
+      "peaks": {
+        "turn_left": 24.123,
+        "turn_right": 7.241,
+        "forward": 4.241,
+        "backward": 0.507,
+        "escape": 4.72,
+        "groom": 7.474,
+        "peak_left_right_diff": 16.882
+      },
+      "steering_bias_hz": -0.075,
+      "mean_candidate_entropy": 1.3793
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "SYMMETRIC",
+      "left_hz": 50,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.093,
+        "forward": 0.104,
+        "backward": 1.434,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.317,
+        "forward": 2.783,
+        "backward": 11.699,
+        "escape": 0,
+        "groom": 2.198,
+        "peak_left_right_diff": -0.317
+      },
+      "steering_bias_hz": -0.093,
+      "mean_candidate_entropy": 1.248
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 50,
+      "right_hz": 10,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.058,
+        "forward": 0.07,
+        "backward": 1.143,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.224,
+        "forward": 2.628,
+        "backward": 14.037,
+        "escape": 0,
+        "groom": 1.834,
+        "peak_left_right_diff": -0.224
+      },
+      "steering_bias_hz": -0.058,
+      "mean_candidate_entropy": 1.2466
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 10,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.097,
+        "forward": 0.093,
+        "backward": 1.315,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.362,
+        "forward": 2.703,
+        "backward": 10.128,
+        "escape": 0,
+        "groom": 2.012,
+        "peak_left_right_diff": -0.362
+      },
+      "steering_bias_hz": -0.097,
+      "mean_candidate_entropy": 1.2475
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "SYMMETRIC",
+      "left_hz": 100,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.095,
+        "forward": 0.115,
+        "backward": 1.541,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.305,
+        "forward": 2.822,
+        "backward": 11.325,
+        "escape": 0,
+        "groom": 2.403,
+        "peak_left_right_diff": -0.305
+      },
+      "steering_bias_hz": -0.095,
+      "mean_candidate_entropy": 1.2484
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 100,
+      "right_hz": 20,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.085,
+        "forward": 0.097,
+        "backward": 1.324,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.307,
+        "forward": 2.711,
+        "backward": 13.407,
+        "escape": 0,
+        "groom": 2.082,
+        "peak_left_right_diff": -0.307
+      },
+      "steering_bias_hz": -0.085,
+      "mean_candidate_entropy": 1.2477
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 20,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.095,
+        "forward": 0.102,
+        "backward": 1.443,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.327,
+        "forward": 2.76,
+        "backward": 9.865,
+        "escape": 0,
+        "groom": 2.235,
+        "peak_left_right_diff": -0.327
+      },
+      "steering_bias_hz": -0.095,
+      "mean_candidate_entropy": 1.2478
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "SYMMETRIC",
+      "left_hz": 180,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.093,
+        "forward": 0.124,
+        "backward": 1.608,
+        "escape": 0,
+        "groom": 0.001
+      },
+      "peaks": {
+        "turn_left": 0.001,
+        "turn_right": 0.287,
+        "forward": 2.86,
+        "backward": 9.995,
+        "escape": 0,
+        "groom": 2.51,
+        "peak_left_right_diff": -0.286
+      },
+      "steering_bias_hz": -0.093,
+      "mean_candidate_entropy": 1.2488
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 180,
+      "right_hz": 36,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.031,
+        "turn_right": 0.1,
+        "forward": 0.115,
+        "backward": 1.427,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0.967,
+        "turn_right": 0.34,
+        "forward": 2.841,
+        "backward": 12.951,
+        "escape": 0,
+        "groom": 2.253,
+        "peak_left_right_diff": 0.627
+      },
+      "steering_bias_hz": -0.069,
+      "mean_candidate_entropy": 1.2484
+    },
+    {
+      "modality": "taste_bitter",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 36,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0.091,
+        "forward": 0.109,
+        "backward": 1.542,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 0,
+        "turn_right": 0.298,
+        "forward": 2.814,
+        "backward": 9.84,
+        "escape": 0,
+        "groom": 2.377,
+        "peak_left_right_diff": -0.298
+      },
+      "steering_bias_hz": -0.091,
+      "mean_candidate_entropy": 1.2482
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "SYMMETRIC",
+      "left_hz": 50,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.076,
+        "turn_right": 0.002,
+        "forward": 0.042,
+        "backward": 0,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 2.055,
+        "turn_right": 2.807,
+        "forward": 2.536,
+        "backward": 4.945,
+        "escape": 9.623,
+        "groom": 0,
+        "peak_left_right_diff": -0.752
+      },
+      "steering_bias_hz": 0.074,
+      "mean_candidate_entropy": 1.2454
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 50,
+      "right_hz": 10,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.095,
+        "turn_right": 0.002,
+        "forward": 0.053,
+        "backward": 0,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 1.749,
+        "turn_right": 2.968,
+        "forward": 2.107,
+        "backward": 4.645,
+        "escape": 14.982,
+        "groom": 0,
+        "peak_left_right_diff": -1.219
+      },
+      "steering_bias_hz": 0.093,
+      "mean_candidate_entropy": 1.2459
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 10,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0,
+        "backward": 0,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 2.31,
+        "turn_right": 0,
+        "forward": 2.704,
+        "backward": 1.816,
+        "escape": 0,
+        "groom": 0,
+        "peak_left_right_diff": 2.31
+      },
+      "steering_bias_hz": 0,
+      "mean_candidate_entropy": 1.2437
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "SYMMETRIC",
+      "left_hz": 100,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.233,
+        "turn_right": 0.012,
+        "forward": 0.06,
+        "backward": 0.025,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 4.823,
+        "turn_right": 2.484,
+        "forward": 1.439,
+        "backward": 6.887,
+        "escape": 4.251,
+        "groom": 0,
+        "peak_left_right_diff": 2.339
+      },
+      "steering_bias_hz": 0.221,
+      "mean_candidate_entropy": 1.2509
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 100,
+      "right_hz": 20,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.26,
+        "turn_right": 0.013,
+        "forward": 0.068,
+        "backward": 0.018,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 3.815,
+        "turn_right": 2.5,
+        "forward": 1.343,
+        "backward": 5.316,
+        "escape": 12.356,
+        "groom": 0,
+        "peak_left_right_diff": 1.315
+      },
+      "steering_bias_hz": 0.247,
+      "mean_candidate_entropy": 1.253
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 20,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.003,
+        "turn_right": 0,
+        "forward": 0.002,
+        "backward": 0,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 4.81,
+        "turn_right": 0.923,
+        "forward": 6.298,
+        "backward": 5.941,
+        "escape": 0,
+        "groom": 0,
+        "peak_left_right_diff": 3.887
+      },
+      "steering_bias_hz": 0.003,
+      "mean_candidate_entropy": 1.2438
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "SYMMETRIC",
+      "left_hz": 180,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.765,
+        "turn_right": 0.014,
+        "forward": 0.069,
+        "backward": 0.091,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 11.302,
+        "turn_right": 1.441,
+        "forward": 0.666,
+        "backward": 13.734,
+        "escape": 0,
+        "groom": 0,
+        "peak_left_right_diff": 9.861
+      },
+      "steering_bias_hz": 0.752,
+      "mean_candidate_entropy": 1.2819
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 180,
+      "right_hz": 36,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.791,
+        "turn_right": 0.018,
+        "forward": 0.066,
+        "backward": 0.065,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 9.332,
+        "turn_right": 1.689,
+        "forward": 0.708,
+        "backward": 7.465,
+        "escape": 0.038,
+        "groom": 0,
+        "peak_left_right_diff": 7.643
+      },
+      "steering_bias_hz": 0.773,
+      "mean_candidate_entropy": 1.2832
+    },
+    {
+      "modality": "tactile_collision",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 36,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.042,
+        "turn_right": 0.008,
+        "forward": 0.023,
+        "backward": 0,
+        "escape": 0,
+        "groom": 0
+      },
+      "peaks": {
+        "turn_left": 4.557,
+        "turn_right": 2.455,
+        "forward": 5.275,
+        "backward": 10.246,
+        "escape": 0,
+        "groom": 0,
+        "peak_left_right_diff": 2.102
+      },
+      "steering_bias_hz": 0.034,
+      "mean_candidate_entropy": 1.2447
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "SYMMETRIC",
+      "left_hz": 50,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.644,
+        "turn_right": 0.719,
+        "forward": 0.449,
+        "backward": 3.061,
+        "escape": 0.156,
+        "groom": 0.017
+      },
+      "peaks": {
+        "turn_left": 19.248,
+        "turn_right": 18.16,
+        "forward": 4.457,
+        "backward": 19.031,
+        "escape": 0.924,
+        "groom": 5.713,
+        "peak_left_right_diff": 1.088
+      },
+      "steering_bias_hz": 0.925,
+      "mean_candidate_entropy": 1.3773
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 50,
+      "right_hz": 10,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.263,
+        "turn_right": 0.205,
+        "forward": 0.38,
+        "backward": 2.299,
+        "escape": 0.105,
+        "groom": 0.01
+      },
+      "peaks": {
+        "turn_left": 16.642,
+        "turn_right": 12.615,
+        "forward": 4.227,
+        "backward": 14.536,
+        "escape": 0.847,
+        "groom": 4.965,
+        "peak_left_right_diff": 4.027
+      },
+      "steering_bias_hz": 1.057,
+      "mean_candidate_entropy": 1.3329
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "MILD",
+      "base_hz": 50,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 10,
+      "right_hz": 50,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 0.976,
+        "turn_right": 0.618,
+        "forward": 0.391,
+        "backward": 2.407,
+        "escape": 0.173,
+        "groom": 0.016
+      },
+      "peaks": {
+        "turn_left": 14.511,
+        "turn_right": 21.453,
+        "forward": 4.278,
+        "backward": 17.393,
+        "escape": 1.209,
+        "groom": 5.05,
+        "peak_left_right_diff": -6.942
+      },
+      "steering_bias_hz": 0.358,
+      "mean_candidate_entropy": 1.3427
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "SYMMETRIC",
+      "left_hz": 100,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 2.275,
+        "turn_right": 1.275,
+        "forward": 0.528,
+        "backward": 3.642,
+        "escape": 0.171,
+        "groom": 0.022
+      },
+      "peaks": {
+        "turn_left": 19.31,
+        "turn_right": 14.572,
+        "forward": 4.382,
+        "backward": 20.892,
+        "escape": 0.764,
+        "groom": 6.407,
+        "peak_left_right_diff": 4.738
+      },
+      "steering_bias_hz": 1,
+      "mean_candidate_entropy": 1.4271
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 100,
+      "right_hz": 20,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.914,
+        "turn_right": 0.649,
+        "forward": 0.455,
+        "backward": 2.999,
+        "escape": 0.11,
+        "groom": 0.013
+      },
+      "peaks": {
+        "turn_left": 16.232,
+        "turn_right": 9.901,
+        "forward": 3.732,
+        "backward": 15.993,
+        "escape": 0.66,
+        "groom": 5.524,
+        "peak_left_right_diff": 6.331
+      },
+      "steering_bias_hz": 1.266,
+      "mean_candidate_entropy": 1.3853
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "MODERATE",
+      "base_hz": 100,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 20,
+      "right_hz": 100,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.378,
+        "turn_right": 1.07,
+        "forward": 0.461,
+        "backward": 2.975,
+        "escape": 0.209,
+        "groom": 0.021
+      },
+      "peaks": {
+        "turn_left": 14.43,
+        "turn_right": 20.789,
+        "forward": 4.311,
+        "backward": 19.495,
+        "escape": 1.161,
+        "groom": 5.643,
+        "peak_left_right_diff": -6.359
+      },
+      "steering_bias_hz": 0.308,
+      "mean_candidate_entropy": 1.3856
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "SYMMETRIC",
+      "left_hz": 180,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 3.171,
+        "turn_right": 1.877,
+        "forward": 0.61,
+        "backward": 4.161,
+        "escape": 0.149,
+        "groom": 0.026
+      },
+      "peaks": {
+        "turn_left": 21.753,
+        "turn_right": 17.557,
+        "forward": 4.649,
+        "backward": 26.49,
+        "escape": 0.525,
+        "groom": 6.761,
+        "peak_left_right_diff": 4.196
+      },
+      "steering_bias_hz": 1.294,
+      "mean_candidate_entropy": 1.4747
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "LEFT_BIASED",
+      "left_hz": 180,
+      "right_hz": 36,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 3.029,
+        "turn_right": 0.971,
+        "forward": 0.533,
+        "backward": 3.59,
+        "escape": 0.095,
+        "groom": 0.017
+      },
+      "peaks": {
+        "turn_left": 22.648,
+        "turn_right": 9.786,
+        "forward": 4.173,
+        "backward": 18.967,
+        "escape": 0.456,
+        "groom": 6.053,
+        "peak_left_right_diff": 12.862
+      },
+      "steering_bias_hz": 2.057,
+      "mean_candidate_entropy": 1.4346
+    },
+    {
+      "modality": "multimodal_hazard",
+      "intensity_level": "STRONG",
+      "base_hz": 180,
+      "laterality": "RIGHT_BIASED",
+      "left_hz": 36,
+      "right_hz": 180,
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "measured_dn_means": {
+        "turn_left": 1.581,
+        "turn_right": 1.599,
+        "forward": 0.517,
+        "backward": 3.426,
+        "escape": 0.217,
+        "groom": 0.024
+      },
+      "peaks": {
+        "turn_left": 12.001,
+        "turn_right": 23.145,
+        "forward": 4.46,
+        "backward": 21.514,
+        "escape": 0.988,
+        "groom": 6.092,
+        "peak_left_right_diff": -11.144
+      },
+      "steering_bias_hz": -0.019,
+      "mean_candidate_entropy": 1.4182
+    }
+  ]
+}
