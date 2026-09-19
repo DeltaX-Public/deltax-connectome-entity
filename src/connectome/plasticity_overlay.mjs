@@ -98,6 +98,7 @@ export class PlasticityOverlay {
 
     // Optional reference to RateNetwork active weights array for in-place propagation syncing
     this.netWeights = netWeights;
+    this.initialActiveWeights = netWeights ? netWeights.slice() : null;
 
     // Record initial base weights checksum to guarantee immutability
     this.baseChecksum = this._computeBaseChecksum();
@@ -254,11 +255,17 @@ export class PlasticityOverlay {
     if (Math.abs(clampedAlpha - 1.0) < 1e-6) {
       this.alpha.delete(edgeIndex);
       this.deltaW.delete(edgeIndex);
-      if (this.netWeights) this.netWeights[edgeIndex] = baseW;
+      if (this.netWeights) {
+        this.netWeights[edgeIndex] = this.initialActiveWeights ? this.initialActiveWeights[edgeIndex] : baseW;
+      }
     } else {
       this.alpha.set(edgeIndex, clampedAlpha);
       this.deltaW.set(edgeIndex, deltaW);
-      if (this.netWeights) this.netWeights[edgeIndex] = baseW * clampedAlpha;
+      if (this.netWeights) {
+        const eff = baseW * clampedAlpha;
+        const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIndex] === 0;
+        this.netWeights[edgeIndex] = (wasZero && eff < 5) ? 0 : eff;
+      }
     }
     this.verifyBaseImmutability();
     return true;
@@ -476,11 +483,17 @@ export class PlasticityOverlay {
         if (Math.abs(candidateDeltaW) < 1e-7) {
           this.deltaW.delete(edgeIdx);
           this.alpha.delete(edgeIdx);
-          if (this.netWeights) this.netWeights[edgeIdx] = baseW;
+          if (this.netWeights) {
+            this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : baseW;
+          }
         } else {
           this.deltaW.set(edgeIdx, candidateDeltaW);
           this.alpha.set(edgeIdx, candidateAlpha);
-          if (this.netWeights) this.netWeights[edgeIdx] = baseW + candidateDeltaW;
+          if (this.netWeights) {
+            const eff = baseW + candidateDeltaW;
+            const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIdx] === 0;
+            this.netWeights[edgeIdx] = (wasZero && eff < 5) ? 0 : eff;
+          }
         }
         currentGlobalBudget += (Math.abs(candidateDeltaW) - Math.abs(deltaWBefore));
         modifiedCount++;
@@ -519,10 +532,10 @@ export class PlasticityOverlay {
   reset() {
     if (this.netWeights) {
       for (const edgeIdx of this.deltaW.keys()) {
-        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+        this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : this.baseSynapseCounts[edgeIdx];
       }
       for (const edgeIdx of this.alpha.keys()) {
-        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+        this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : this.baseSynapseCounts[edgeIdx];
       }
     }
     this.alpha.clear();
@@ -591,10 +604,10 @@ export class PlasticityOverlay {
     // Revert current modifications in netWeights
     if (this.netWeights) {
       for (const edgeIdx of this.deltaW.keys()) {
-        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+        this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : this.baseSynapseCounts[edgeIdx];
       }
       for (const edgeIdx of this.alpha.keys()) {
-        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+        this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : this.baseSynapseCounts[edgeIdx];
       }
     }
     this.deltaW.clear();
@@ -607,7 +620,9 @@ export class PlasticityOverlay {
       const alphaVal = baseW > 0 ? (baseW + deltaVal) / baseW : 1.0;
       this.alpha.set(edgeIdx, alphaVal);
       if (this.netWeights) {
-        this.netWeights[edgeIdx] = baseW + deltaVal;
+        const eff = baseW + deltaVal;
+        const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIdx] === 0;
+        this.netWeights[edgeIdx] = (wasZero && eff < 5) ? 0 : eff;
       }
     }
     if (snap.alpha) {

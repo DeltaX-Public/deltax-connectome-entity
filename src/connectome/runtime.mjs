@@ -65,7 +65,7 @@ export class ConnectomeRuntime {
           E: this.E,
           indptr: this.data.indptr,
           indices: this.data.indices,
-          baseSynapseCounts: this.net.weights.slice(),
+          baseSynapseCounts: this.data.weights.slice(),
           netWeights: this.net.weights,
           config: opts.plasticity.config || opts.plasticity,
           eligibleEdgeMask: opts.plasticity.eligibleEdgeMask,
