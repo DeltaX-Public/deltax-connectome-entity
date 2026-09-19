@@ -1,0 +1,89 @@
+% NeurIPS 2024 Style File (Self-Contained Clean Definition)
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2024}[2024/04/01 NeurIPS 2024 submission/camera-ready style]
+
+% Margins
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\textwidth}{5.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\topmargin}{-0.2in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{0.5in}
+\setlength{\evensidemargin}{0.5in}
+\setlength{\footskip}{0.4in}
+
+% Paragraph formatting
+\setlength{\parindent}{1.0pc}
+\setlength{\parskip}{0pt}
+
+% Line spacing
+\linespread{1.0}
+
+% Section headings
+\def\section{\@startsection{section}{1}{\z@}%
+  {-2.0ex plus -0.5ex minus -.2ex}{1.5ex plus .2ex}%
+  {\large\bf\raggedright}}
+\def\subsection{\@startsection{subsection}{2}{\z@}%
+  {-1.8ex plus -0.5ex minus -.2ex}{1.2ex plus .2ex}%
+  {\normalsize\bf\raggedright}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-1.5ex plus -0.5ex minus -.2ex}{1.0ex plus .2ex}%
+  {\normalsize\bf\raggedright}}
+
+% Title & Author
+\def\maketitle{%
+  \par
+  \begingroup
+    \def\thefootnote{\fnsymbol{footnote}}
+    \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}}
+    \long\def\@makefntext##1{\parindent 1em\noindent
+      \hb@xt@1.8em{%
+        \hss\@textsuperscript{\normalfont\@thefnmark}}##1}
+    \if@twocolumn
+      \twocolumn[\@maketitle]
+    \else
+      \newpage
+      \global\@topnum\z@
+      \@maketitle
+    \fi
+    \thispagestyle{plain}
+    \@thanks
+  \endgroup
+  \setcounter{footnote}{0}
+  \let\maketitle\relax
+  \let\@maketitle\relax
+  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax
+}
+
+\def\@maketitle{%
+  \vbox to 1.8in{%
+    \hsize\textwidth
+    \linewidth\hsize
+    \vfil
+    \centering
+    {\LARGE\bf \@title \par}
+    \vskip 0.2in
+    {\def\and{\unskip\enspace{\rm and}\enspace}%
+     \def\And{\end{tabular}\hss \egroup \hskip 1in plus 2fil 
+              \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}%
+     \def\AND{\end{tabular}\hss\egroup \hfil\hfil\egroup
+              \vskip 0.2in
+              \hbox to \linewidth\bgroup\large \hfil\hfil
+                \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}
+     \hbox to \linewidth\bgroup\large \hfil\hfil
+       \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf\@author\end{tabular}\hss\egroup
+     \hfil\hfil\egroup}
+    \vfil
+  }
+}
+
+% Abstract environment
+\renewenvironment{abstract}%
+  {\centerline{\large\bf Abstract}%
+   \vspace{0.5ex}%
+   \begin{quote}}%
+  {\par\end{quote}\vskip 1ex}
+
+\endinput
