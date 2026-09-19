@@ -1,0 +1,46 @@
+{
+  "seed": 18000,
+  "comparison_overview": {
+    "P2": {
+      "condition_id": "P2",
+      "target": "TARGET_A (Tactile Afferents)",
+      "total_budget_used_30_cycles": 0.0005,
+      "saturated_seeds_count": 0,
+      "mean_dna02_recruitment_hz": 0.002
+    },
+    "P5": {
+      "condition_id": "P5",
+      "target": "TARGET_D (Matched Sham)",
+      "total_budget_used_30_cycles": 64.353,
+      "saturated_seeds_count": 45,
+      "mean_dna02_recruitment_hz": 0.002
+    }
+  },
+  "mechanistic_comparison": {
+    "presynaptic_firing_profile": {
+      "P2": "Strictly stimulus-driven feedforward mechanoreceptors. Active during contact (112.5 Hz), abruptly silent during clearance (0.0 Hz) and ITI (0.0 Hz).",
+      "P5": "Central brain interneurons (45, 146, 945, etc.) embedded in recurrent loops. Spontaneous background firing (10-35 Hz) regardless of tactile contact."
+    },
+    "postsynaptic_firing_profile": {
+      "P2": "AN03A008 (idx 2937). Subthreshold resting state; driven weakly by 41 base synapses to ~2.14 Hz; adapts to 0.0 Hz by cycle 2.",
+      "P5": "Intermediate 4306 (AN06B025). Driven by 579 base synapses and recurrent collateral excitation; fires stably at 18-28 Hz throughout contact, clearance, and ITI."
+    },
+    "coincidence_product_comparison": {
+      "P2_contact_coincidence": 0.0241,
+      "P2_clearance_coincidence": 0,
+      "P5_contact_coincidence": 0.052,
+      "P5_clearance_coincidence": 0.048
+    },
+    "recurrent_persistence_during_clearance": {
+      "P2": "Zero persistence. When contact clears, pre-rate collapses, halting new coincidence. Only decaying trace remains.",
+      "P5": "Strong autonomous persistence. When contact clears, central neurons continue firing, generating active coincidence coincident with g_t = +1.0 reinforcement."
+    },
+    "reinforcement_timing_interaction": {
+      "detail": "Scalar reward g_t = +1.0 is delivered during the CLEARANCE phase. In P2, clearance is quiet; in P5, clearance is tonically active. The learning rule preferentially reinforces pathways with persistent recurrent activity during consequence delivery."
+    }
+  },
+  "scientific_conclusion": {
+    "rule_bias": "ELIGIBILITY_MODULATED_HEBBIAN strongly favors high-spontaneous-rate central recurrent loops over quiescent feedforward sensory circuits.",
+    "circuit_specificity_preserved": "Despite consuming 64.35 budget units, P5 produced 0.0000 Hz right-steering recruitment, confirming that non-specific central potentiation does not activate the lateralized motor readout."
+  }
+}

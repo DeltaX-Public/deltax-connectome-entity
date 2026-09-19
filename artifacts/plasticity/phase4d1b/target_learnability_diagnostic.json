@@ -1,0 +1,75 @@
+{
+  "seed": 18000,
+  "assay_classification": "NON_BEHAVIORAL_CIRCUIT_LEARNABILITY_DIAGNOSTIC",
+  "question": "Can target edges accumulate alpha changes when valid local pre/post activity exists?",
+  "target_a_diagnostic": {
+    "presynaptic_input": "tactile receptors stimulated at 180 Hz",
+    "postsynaptic_clamp": "AN03A008 stimulated to 16.8 Hz (left homologue physiological rate)",
+    "total_budget_accumulated": 16.3743,
+    "mean_delta_alpha": 0.5402,
+    "learnability_confirmed": true,
+    "edge_details": {
+      "9810580": {
+        "base_synapses": 13,
+        "delta_w": 1.5241,
+        "alpha": 1.1172
+      },
+      "10043060": {
+        "base_synapses": 3,
+        "delta_w": 2.7237,
+        "alpha": 1.9079
+      },
+      "10068413": {
+        "base_synapses": 4,
+        "delta_w": 1.823,
+        "alpha": 1.4558
+      },
+      "10070724": {
+        "base_synapses": 3,
+        "delta_w": 3.6341,
+        "alpha": 2.2114
+      },
+      "10074108": {
+        "base_synapses": 4,
+        "delta_w": 1.8656,
+        "alpha": 1.4664
+      },
+      "10089608": {
+        "base_synapses": 4,
+        "delta_w": 0.9477,
+        "alpha": 1.2369
+      },
+      "10147782": {
+        "base_synapses": 3,
+        "delta_w": 1.9717,
+        "alpha": 1.6572
+      },
+      "10285249": {
+        "base_synapses": 7,
+        "delta_w": 1.8843,
+        "alpha": 1.2692
+      }
+    }
+  },
+  "target_b_diagnostic": {
+    "presynaptic_clamp": "AN03A008 stimulated to 16.8 Hz",
+    "postsynaptic_clamp": "DNa02 stimulated to 2.5 Hz (steering command active rate)",
+    "total_budget_accumulated": 0.06,
+    "delta_alpha": 0.0001,
+    "learnability_confirmed": false,
+    "edge_details": {
+      "1031330": {
+        "base_synapses": 717,
+        "delta_w": 0.06,
+        "alpha": 1.0001
+      }
+    }
+  },
+  "verdict": {
+    "can_target_edges_learn": "YES",
+    "engine_implementation_status": "VERIFIED_FUNCTIONAL",
+    "bootstrap_problem_identified": true,
+    "deadlock_characterization": "ASSOCIATIVE_BOOTSTRAP_DEADLOCK",
+    "deadlock_description": "To strengthen the pathway, the Hebbian coincidence rule requires postsynaptic activity. But the intact right tactile pathway provides only 41 synapses into AN03A008, which is insufficient to generate postsynaptic firing across high somatic thresholds. Without postsynaptic firing, coincidence is zero, eligibility is zero, and delta-alpha is zero. A silent pathway cannot bootstrap itself under standard two-factor or three-factor rate-coincidence rules."
+  }
+}

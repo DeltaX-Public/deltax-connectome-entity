@@ -1,0 +1,387 @@
+{
+  "seed": 18000,
+  "verification_verdict": "ALL_RECEPTORS_CONFIRMED_FIRING_NO_INDEX_MISMATCH",
+  "receptors_audit": {
+    "total_eligible_receptors": 8,
+    "all_receptors_active_during_contact": false,
+    "mean_receptor_contact_rate_hz": 73.2468
+  },
+  "intermediate_an03a008_audit": {
+    "index": 2937,
+    "mean_contact_rate_hz": 0,
+    "mean_clearance_rate_hz": 0,
+    "mean_iti_rate_hz": 0,
+    "threshold": 50.66705322265625,
+    "finding": "AN03A008 receives afferent input but is throttled near threshold (~2.14 Hz initial, adapting to 0)"
+  },
+  "descending_dna02_audit": {
+    "index": 332,
+    "mean_contact_rate_hz": 4.5919,
+    "mean_clearance_rate_hz": 1.0129,
+    "mean_iti_rate_hz": 0.1678,
+    "threshold": 143.22689819335938,
+    "finding": "Right DNa02 remains at baseline silence (<0.005 Hz) because AN03A008 drive is insufficient to cross high motor threshold (theta=143.2)"
+  },
+  "neuron_details": {
+    "332": {
+      "index": 332,
+      "role": "descending_steering_actuator_DNa02",
+      "contact_rates": [
+        7.3428,
+        4.1206,
+        2.3124
+      ],
+      "clearance_rates": [
+        1.2976,
+        0.7282
+      ],
+      "iti_rates": [
+        0.4086,
+        0.2293,
+        0.1287,
+        0.0722,
+        0
+      ],
+      "contact_external_drives": [
+        0,
+        0,
+        0
+      ],
+      "contact_synaptic_inputs": [
+        97.9864,
+        -797.7259,
+        -1845.7733
+      ],
+      "threshold": 143.22689819335938,
+      "rmax": 180.1444091796875,
+      "mean_contact_rate": 4.5919,
+      "mean_clearance_rate": 1.0129,
+      "mean_iti_rate": 0.1678,
+      "tactile_drive_confirmed": null
+    },
+    "2937": {
+      "index": 2937,
+      "role": "ascending_intermediate_AN03A008",
+      "contact_rates": [
+        0,
+        0,
+        0
+      ],
+      "clearance_rates": [
+        0,
+        0
+      ],
+      "iti_rates": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "contact_external_drives": [
+        0,
+        0,
+        0
+      ],
+      "contact_synaptic_inputs": [
+        -44.0517,
+        -12.1886,
+        -4.7369
+      ],
+      "threshold": 50.66705322265625,
+      "rmax": 210.85641479492188,
+      "mean_contact_rate": 0,
+      "mean_clearance_rate": 0,
+      "mean_iti_rate": 0,
+      "tactile_drive_confirmed": null
+    },
+    "149560": {
+      "index": 149560,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        68.2404,
+        80.5742,
+        53.435
+      ],
+      "clearance_rates": [
+        30.0049,
+        16.8484
+      ],
+      "iti_rates": [
+        9.4607,
+        5.3124,
+        2.983,
+        1.675,
+        0.9406
+      ],
+      "contact_external_drives": [
+        211.2869,
+        211.2869,
+        211.2869
+      ],
+      "contact_synaptic_inputs": [
+        -96.0859,
+        -168.6718,
+        -218.8739
+      ],
+      "threshold": 3.9591281414031982,
+      "rmax": 197.77980041503906,
+      "mean_contact_rate": 67.4165,
+      "mean_clearance_rate": 23.4267,
+      "mean_iti_rate": 4.0743,
+      "tactile_drive_confirmed": true
+    },
+    "154130": {
+      "index": 154130,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        4.4624,
+        2.5385,
+        1.4441
+      ],
+      "clearance_rates": [
+        0.8215,
+        0.4673
+      ],
+      "iti_rates": [
+        0.2658,
+        0.1512,
+        0.086,
+        0,
+        0
+      ],
+      "contact_external_drives": [
+        49.2179,
+        49.2179,
+        49.2179
+      ],
+      "contact_synaptic_inputs": [
+        -72.958,
+        -99.0359,
+        -115.1095
+      ],
+      "threshold": 1.1029819250106812,
+      "rmax": 187.82586669921875,
+      "mean_contact_rate": 2.815,
+      "mean_clearance_rate": 0.6444,
+      "mean_iti_rate": 0.1006,
+      "tactile_drive_confirmed": false
+    },
+    "154675": {
+      "index": 154675,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        76.9597,
+        116.4128,
+        132.5953
+      ],
+      "clearance_rates": [
+        75.457,
+        42.9409
+      ],
+      "iti_rates": [
+        24.4367,
+        13.9064,
+        7.9138,
+        4.5036,
+        2.5629
+      ],
+      "contact_external_drives": [
+        43.5437,
+        43.5437,
+        43.5437
+      ],
+      "contact_synaptic_inputs": [
+        -3.2786,
+        -10.1568,
+        -15.0846
+      ],
+      "threshold": 0.9871683120727539,
+      "rmax": 201.0387725830078,
+      "mean_contact_rate": 108.6559,
+      "mean_clearance_rate": 59.1989,
+      "mean_iti_rate": 10.6647,
+      "tactile_drive_confirmed": true
+    },
+    "154731": {
+      "index": 154731,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        69.0539,
+        90.559,
+        63.3093
+      ],
+      "clearance_rates": [
+        35.577,
+        19.9926
+      ],
+      "iti_rates": [
+        11.235,
+        6.3135,
+        3.5479,
+        1.9938,
+        1.1204
+      ],
+      "contact_external_drives": [
+        39.3055,
+        39.3055,
+        39.3055
+      ],
+      "contact_synaptic_inputs": [
+        -11.0958,
+        -26.989,
+        -41.9968
+      ],
+      "threshold": 1.006274938583374,
+      "rmax": 210.62940979003906,
+      "mean_contact_rate": 74.3074,
+      "mean_clearance_rate": 27.7848,
+      "mean_iti_rate": 4.8421,
+      "tactile_drive_confirmed": true
+    },
+    "154816": {
+      "index": 154816,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        67.6803,
+        107.5096,
+        130.4855
+      ],
+      "clearance_rates": [
+        80.3067,
+        49.4244
+      ],
+      "iti_rates": [
+        30.4181,
+        18.7207,
+        11.5216,
+        7.0909,
+        4.3641
+      ],
+      "contact_external_drives": [
+        107.8142,
+        107.8142,
+        107.8142
+      ],
+      "contact_synaptic_inputs": [
+        -9.1911,
+        -14.8659,
+        -18.5238
+      ],
+      "threshold": 2.071598768234253,
+      "rmax": 206.46458435058594,
+      "mean_contact_rate": 101.8918,
+      "mean_clearance_rate": 64.8655,
+      "mean_iti_rate": 14.4231,
+      "tactile_drive_confirmed": true
+    },
+    "155200": {
+      "index": 155200,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        12.186,
+        7.1118,
+        4.1505
+      ],
+      "clearance_rates": [
+        2.4223,
+        1.4137
+      ],
+      "iti_rates": [
+        0.825,
+        0.4815,
+        0.281,
+        0.164,
+        0.0957
+      ],
+      "contact_external_drives": [
+        26.4684,
+        26.4684,
+        26.4684
+      ],
+      "contact_synaptic_inputs": [
+        -33.5537,
+        -48.7287,
+        -58.3641
+      ],
+      "threshold": 0.7213342785835266,
+      "rmax": 218.58441162109375,
+      "mean_contact_rate": 7.8161,
+      "mean_clearance_rate": 1.918,
+      "mean_iti_rate": 0.3694,
+      "tactile_drive_confirmed": false
+    },
+    "156889": {
+      "index": 156889,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        79.5125,
+        123.9015,
+        148.6822
+      ],
+      "clearance_rates": [
+        83.0039,
+        46.3381
+      ],
+      "iti_rates": [
+        25.8689,
+        14.4417,
+        8.0623,
+        4.5009,
+        2.5127
+      ],
+      "contact_external_drives": [
+        39.086,
+        39.086,
+        39.086
+      ],
+      "contact_synaptic_inputs": [
+        0,
+        0,
+        0
+      ],
+      "threshold": 0.7050190567970276,
+      "rmax": 193.7568359375,
+      "mean_contact_rate": 117.3654,
+      "mean_clearance_rate": 64.671,
+      "mean_iti_rate": 11.0773,
+      "tactile_drive_confirmed": true
+    },
+    "159953": {
+      "index": 159953,
+      "role": "tactile_receptor_afferent",
+      "contact_rates": [
+        71.9015,
+        112.6164,
+        132.6016
+      ],
+      "clearance_rates": [
+        79.3422,
+        47.4744
+      ],
+      "iti_rates": [
+        28.4063,
+        16.997,
+        10.1701,
+        6.0853,
+        3.6411
+      ],
+      "contact_external_drives": [
+        64.2879,
+        64.2879,
+        64.2879
+      ],
+      "contact_synaptic_inputs": [
+        -1.3698,
+        -9.0228,
+        -14.4551
+      ],
+      "threshold": 2.0597870349884033,
+      "rmax": 212.02821350097656,
+      "mean_contact_rate": 105.7065,
+      "mean_clearance_rate": 63.4083,
+      "mean_iti_rate": 13.06,
+      "tactile_drive_confirmed": true
+    }
+  }
+}

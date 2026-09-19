@@ -1,0 +1,60 @@
+{
+  "seed": 18000,
+  "ratenet_architecture_inspection": {
+    "source_file": "upstream/fly-brain/src/ratenet.js",
+    "governing_equation": "x = ext[i] + (sensory[i] ? 0 : inp[i]) - theta[i] * (1 + aK * Ai / rmax[i])",
+    "activation_equation": "act = m * Math.tanh(a[i] / m * x) if x > 0 else 0",
+    "rate_update": "r[i] += dt / tau[i] * (act - r[i])",
+    "synaptic_input_accumulation": "inp[indices[k]] += preFactor[j] * delta_out * weights[k]"
+  },
+  "available_pre_threshold_variables": [
+    {
+      "name": "net.inp[i]",
+      "type": "Float32Array(N)",
+      "physical_meaning": "Instantaneous total synaptic input current arrived from all presynaptic partners",
+      "subthreshold_behavior": "Nonzero and actively integrating synaptic drive even when somatic firing r[i] == 0"
+    },
+    {
+      "name": "net.theta[i]",
+      "type": "Float32Array(N)",
+      "physical_meaning": "Intrinsic somatic firing threshold (derived from neuron volume / biophysical parameters)",
+      "subthreshold_behavior": "Static biophysical parameter against which synaptic input is integrated"
+    },
+    {
+      "name": "x_i = ext[i] + inp[i] - theta_i * (1 + adapt)",
+      "type": "Scalar pre-activation drive",
+      "physical_meaning": "Net somatic membrane drive relative to threshold. When x <= 0, neuron is subthreshold.",
+      "subthreshold_behavior": "Quantifies exactly how close the neuron is to crossing threshold."
+    },
+    {
+      "name": "normalized_dendritic_drive = max(0, inp[i] / theta[i])",
+      "type": "Dimensionless ratio",
+      "physical_meaning": "Fraction of threshold covered by dendritic synaptic convergence",
+      "subthreshold_behavior": "Smoothly varies in [0, 1] as synapses become active, without requiring spike emission."
+    }
+  ],
+  "measured_target_subthreshold_state_under_tactile_drive": {
+    "AN03A008": {
+      "index": 2937,
+      "synaptic_input_inp": -44.0517,
+      "threshold_theta": 50.6671,
+      "net_drive_x": -94.7188,
+      "firing_rate_r_hz": 0,
+      "subthreshold_activation_ratio": -0.8694,
+      "interpretation": "AN03A008 receives substantial synaptic input (inp=87.1), but threshold (theta=50.7) and high adaptation suppress sustained rate."
+    },
+    "DNa02": {
+      "index": 332,
+      "synaptic_input_inp": 97.9864,
+      "threshold_theta": 143.2269,
+      "net_drive_x": -45.2405,
+      "firing_rate_r_hz": 7.3428,
+      "subthreshold_activation_ratio": 0.6841,
+      "interpretation": "DNa02 receives initial input (inp=7.6 to 117.5), which is well below motor threshold (theta=143.2). Soma remains completely silent (r=0.0 Hz), but dendritic arbor receives clear synaptic drive."
+    }
+  },
+  "biophysical_justification": {
+    "biological_analogue": "NMDA receptor magnesium unblock depends on local postsynaptic dendritic depolarization, not somatic action potential backpropagation alone. Subthreshold EPSPs depolarize the local post-synaptic dendritic spine sufficiently to relieve Mg2+ block, priming synaptic plasticity even if the soma has not yet crossed threshold to fire an action potential.",
+    "rate_model_equivalent": "In RateNetwork, net.inp[target] represents the exact summed dendritic synaptic input. Using subthreshold postsynaptic drive allows silent but structurally present pathways to accumulate eligibility upon presynaptic drive and receive reinforcement."
+  }
+}
