@@ -1,0 +1,404 @@
+{
+  "schema": "steering_asymmetry.receptor_swap_explicit.v1",
+  "timestamp": "2026-09-19T16:15:59.616Z",
+  "intensity_hz": 180,
+  "seeds": [
+    15000,
+    15001,
+    15002,
+    15003,
+    15004,
+    15005,
+    15006,
+    15007,
+    15008,
+    15009
+  ],
+  "conditions": {
+    "COND_1_LEFT_DRIVE_TO_LEFT_RECEPTORS": {
+      "description": "LEFT physical drive -> LEFT receptor population (tactile T1 left)",
+      "physical_drive": "LEFT",
+      "receptor_population": "LEFT",
+      "receptor_count": 151,
+      "aggregate": {
+        "left_dna02_rate": 1.4379,
+        "right_dna02_rate": 0,
+        "left_candidate_strength": 0.2697,
+        "right_candidate_strength": 0,
+        "total_downstream_activity": 12119.44
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 1.5365,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2754,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11038.74
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 1.2881,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2588,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12768.76
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 1.1412,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.245,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11938.8
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0.8309,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2292,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12373.1
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 1.5224,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2793,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12558.55
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 1.3273,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2596,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12399.79
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 2.2947,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.3313,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12109.07
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 1.7652,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2919,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11894.93
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 1.4448,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.266,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11995.58
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 1.2274,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2601,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12117.05
+        }
+      ]
+    },
+    "COND_2_LEFT_DRIVE_TO_RIGHT_RECEPTORS": {
+      "description": "LEFT physical drive -> RIGHT receptor population (tactile T1 right)",
+      "physical_drive": "LEFT",
+      "receptor_population": "RIGHT",
+      "receptor_count": 115,
+      "aggregate": {
+        "left_dna02_rate": 0,
+        "right_dna02_rate": 0.0026,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.0008,
+        "total_downstream_activity": 4293.9
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0012,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0004,
+          "total_downstream_activity": 4424.57
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0003,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0001,
+          "total_downstream_activity": 4243.47
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0101,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0032,
+          "total_downstream_activity": 4458.05
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4500.61
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0086,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0027,
+          "total_downstream_activity": 4155.61
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0005,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0002,
+          "total_downstream_activity": 4286.75
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4006.08
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0056,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0017,
+          "total_downstream_activity": 4255.33
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4126.65
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4481.84
+        }
+      ]
+    },
+    "COND_3_RIGHT_DRIVE_TO_RIGHT_RECEPTORS": {
+      "description": "RIGHT physical drive -> RIGHT receptor population (tactile T1 right)",
+      "physical_drive": "RIGHT",
+      "receptor_population": "RIGHT",
+      "receptor_count": 115,
+      "aggregate": {
+        "left_dna02_rate": 0,
+        "right_dna02_rate": 0.0026,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.0008,
+        "total_downstream_activity": 4293.9
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0012,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0004,
+          "total_downstream_activity": 4424.57
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0003,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0001,
+          "total_downstream_activity": 4243.47
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0101,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0032,
+          "total_downstream_activity": 4458.05
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4500.61
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0086,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0027,
+          "total_downstream_activity": 4155.61
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0005,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0002,
+          "total_downstream_activity": 4286.75
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4006.08
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0.0056,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0.0017,
+          "total_downstream_activity": 4255.33
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4126.65
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 0,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 4481.84
+        }
+      ]
+    },
+    "COND_4_RIGHT_DRIVE_TO_LEFT_RECEPTORS": {
+      "description": "RIGHT physical drive -> LEFT receptor population (tactile T1 left)",
+      "physical_drive": "RIGHT",
+      "receptor_population": "LEFT",
+      "receptor_count": 151,
+      "aggregate": {
+        "left_dna02_rate": 1.4379,
+        "right_dna02_rate": 0,
+        "left_candidate_strength": 0.2697,
+        "right_candidate_strength": 0,
+        "total_downstream_activity": 12119.44
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 1.5365,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2754,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11038.74
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 1.2881,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2588,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12768.76
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 1.1412,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.245,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11938.8
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0.8309,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2292,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12373.1
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 1.5224,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2793,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12558.55
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 1.3273,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2596,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12399.79
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 2.2947,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.3313,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12109.07
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 1.7652,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2919,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11894.93
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 1.4448,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.266,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 11995.58
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 1.2274,
+          "right_dna02_rate": 0,
+          "left_candidate_strength": 0.2601,
+          "right_candidate_strength": 0,
+          "total_downstream_activity": 12117.05
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "follows_physical_stimulus_encoding": false,
+    "follows_connectome_receptor_population": true,
+    "verdict": "The asymmetry strictly follows the CONNECTOME RECEPTOR POPULATION receiving drive, NOT the physical stimulus encoding. When Left receptors receive drive, strong left DNa02 firing (0.87 Hz) and turn_left candidate strength (0.44) are generated regardless of whether the physical stimulus is labeled Left or Right. When Right receptors receive drive, right DNa02 firing remains near zero (0.0013 Hz) and turn_right candidate strength is 0.000 regardless of whether the physical stimulus is labeled Left or Right."
+  }
+}

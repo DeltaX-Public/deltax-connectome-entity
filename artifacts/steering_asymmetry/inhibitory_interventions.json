@@ -1,0 +1,524 @@
+{
+  "schema": "steering_asymmetry.inhibitory_interventions.v1",
+  "timestamp": "2026-09-19T16:17:47.169Z",
+  "inhibitory_inputs_identified": {
+    "to_right_dna02": [
+      {
+        "source_idx": 17903,
+        "edge_pos": 2832187,
+        "weight": 528,
+        "nt_code": 2,
+        "type": "PS049",
+        "side": 2
+      },
+      {
+        "source_idx": 57,
+        "edge_pos": 56580,
+        "weight": 289,
+        "nt_code": 2,
+        "type": "AOTU019",
+        "side": 1
+      },
+      {
+        "source_idx": 1395,
+        "edge_pos": 662057,
+        "weight": 263,
+        "nt_code": 2,
+        "type": "PS059",
+        "side": 2
+      },
+      {
+        "source_idx": 1055,
+        "edge_pos": 558633,
+        "weight": 259,
+        "nt_code": 2,
+        "type": "PS059",
+        "side": 2
+      },
+      {
+        "source_idx": 3955,
+        "edge_pos": 1228085,
+        "weight": 219,
+        "nt_code": 2,
+        "type": "LAL046",
+        "side": 2
+      },
+      {
+        "source_idx": 1634,
+        "edge_pos": 734619,
+        "weight": 185,
+        "nt_code": 3,
+        "type": "LAL083",
+        "side": 1
+      },
+      {
+        "source_idx": 5152,
+        "edge_pos": 1417092,
+        "weight": 174,
+        "nt_code": 2,
+        "type": "GNG515",
+        "side": 1
+      },
+      {
+        "source_idx": 1675,
+        "edge_pos": 745342,
+        "weight": 172,
+        "nt_code": 3,
+        "type": "LAL083",
+        "side": 1
+      },
+      {
+        "source_idx": 65628,
+        "edge_pos": 5794244,
+        "weight": 172,
+        "nt_code": 3,
+        "type": "VES051",
+        "side": 2
+      },
+      {
+        "source_idx": 1524,
+        "edge_pos": 700480,
+        "weight": 162,
+        "nt_code": 3,
+        "type": "LAL126",
+        "side": 1
+      }
+    ],
+    "to_right_an03a008": [
+      {
+        "source_idx": 143283,
+        "edge_pos": 9228216,
+        "weight": 40,
+        "nt_code": 2,
+        "type": "IN13B001",
+        "side": 1
+      },
+      {
+        "source_idx": 159569,
+        "edge_pos": 10252999,
+        "weight": 39,
+        "nt_code": 2,
+        "type": "IN13B005",
+        "side": 1
+      },
+      {
+        "source_idx": 18104,
+        "edge_pos": 2847684,
+        "weight": 37,
+        "nt_code": 2,
+        "type": "AN13B002",
+        "side": 1
+      },
+      {
+        "source_idx": 2814,
+        "edge_pos": 1004779,
+        "weight": 25,
+        "nt_code": 2,
+        "type": "DNge076",
+        "side": 1
+      },
+      {
+        "source_idx": 160798,
+        "edge_pos": 10343483,
+        "weight": 18,
+        "nt_code": 3,
+        "type": "IN16B064",
+        "side": 2
+      },
+      {
+        "source_idx": 26733,
+        "edge_pos": 3499597,
+        "weight": 13,
+        "nt_code": 2,
+        "type": "IN27X001",
+        "side": 1
+      },
+      {
+        "source_idx": 453,
+        "edge_pos": 325500,
+        "weight": 12,
+        "nt_code": 2,
+        "type": "GNG502",
+        "side": 2
+      },
+      {
+        "source_idx": 914,
+        "edge_pos": 510849,
+        "weight": 12,
+        "nt_code": 3,
+        "type": "AVLP712m",
+        "side": 2
+      },
+      {
+        "source_idx": 162530,
+        "edge_pos": 10431796,
+        "weight": 11,
+        "nt_code": 3,
+        "type": "AN09B017g",
+        "side": 1
+      },
+      {
+        "source_idx": 137,
+        "edge_pos": 124085,
+        "weight": 10,
+        "nt_code": 2,
+        "type": "DNge103",
+        "side": 2
+      }
+    ]
+  },
+  "results": [
+    {
+      "condition_id": "COND_A_INTACT",
+      "label": "Intact Right Tactile Baseline",
+      "mean_right_dna02_rate": 0.0026,
+      "mean_turn_right_strength": 0.0008,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0012,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0003,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0101,
+          "turn_right_strength": 0.0032
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0086,
+          "turn_right_strength": 0.0027
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0005,
+          "turn_right_strength": 0.0002
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0056,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_B_SILENCE_TOP_INH",
+      "label": "Silence Top 10 Inhibitory Inputs",
+      "mean_right_dna02_rate": 0.0027,
+      "mean_turn_right_strength": 0.0008,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0013,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0004,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0102,
+          "turn_right_strength": 0.0032
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0089,
+          "turn_right_strength": 0.0028
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0005,
+          "turn_right_strength": 0.0002
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0056,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_C_SHAM_INH_SILENCE",
+      "label": "Sham: Silence 10 Unrelated Inhibitory Neurons",
+      "mean_right_dna02_rate": 0.0026,
+      "mean_turn_right_strength": 0.0008,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0012,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0003,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0101,
+          "turn_right_strength": 0.0032
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0086,
+          "turn_right_strength": 0.0027
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0005,
+          "turn_right_strength": 0.0002
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0056,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_D1_REDUCE_INH_50",
+      "label": "Reduce All Direct Inhibitory Weights by 50%",
+      "mean_right_dna02_rate": 0.0025,
+      "mean_turn_right_strength": 0.0008,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0014,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0004,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0102,
+          "turn_right_strength": 0.0032
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0073,
+          "turn_right_strength": 0.0023
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0005,
+          "turn_right_strength": 0.0002
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0053,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0002,
+          "turn_right_strength": 0
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_D2_BLOCK_ALL_INH_100",
+      "label": "Block 100% of All Direct Inhibitory Weights (weight=0)",
+      "mean_right_dna02_rate": 0.0076,
+      "mean_turn_right_strength": 0.0024,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0074,
+          "turn_right_strength": 0.0023
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0039,
+          "turn_right_strength": 0.0012
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0211,
+          "turn_right_strength": 0.0064
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0201,
+          "turn_right_strength": 0.0062
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0035,
+          "turn_right_strength": 0.0011
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.001,
+          "turn_right_strength": 0.0003
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0147,
+          "turn_right_strength": 0.0046
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0011,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0032,
+          "turn_right_strength": 0.001
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_E_EXCITATORY_BOOST",
+      "label": "Excitatory-Path Boost (+20 Hz into AN03A008) without Inh change",
+      "mean_right_dna02_rate": 1.7063,
+      "mean_turn_right_strength": 0.3119,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 1.7323,
+          "turn_right_strength": 0.3143
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 1.7129,
+          "turn_right_strength": 0.312
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 1.703,
+          "turn_right_strength": 0.3246
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 1.485,
+          "turn_right_strength": 0.2949
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 2.7521,
+          "turn_right_strength": 0.4142
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 1.6252,
+          "turn_right_strength": 0.302
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 1.814,
+          "turn_right_strength": 0.3261
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 1.5375,
+          "turn_right_strength": 0.2937
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 1.1271,
+          "turn_right_strength": 0.2413
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 1.5743,
+          "turn_right_strength": 0.2961
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "active_inhibitory_suppression_supported": false,
+    "verdict": "ACTIVE INHIBITORY SUPPRESSION REJECTED: Blocking 100% of direct inhibitory synapses or silencing top inhibitory inputs did NOT restore right DNa02 activity (rate remained ~0 Hz). The failure is NOT caused by active inhibitory clamping, but by insufficient feedforward excitatory convergence."
+  }
+}

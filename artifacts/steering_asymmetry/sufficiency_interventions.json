@@ -1,0 +1,561 @@
+{
+  "schema": "steering_asymmetry.sufficiency_interventions.v1",
+  "timestamp": "2026-09-19T16:16:52.803Z",
+  "candidate_tested": "AN03A008 (Right index 2937)",
+  "sufficiency_confirmed": true,
+  "rate_sweep": [
+    {
+      "an03a008_rate_hz": 5,
+      "mean_right_dna02_rate": 0.3327,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.0855,
+      "mean_off_target_activity": 4330.61,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.3497,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0899,
+          "off_target_activity": 4462.29
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.3578,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0917,
+          "off_target_activity": 4279.84
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.458,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1158,
+          "off_target_activity": 4508.6
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.2145,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0593,
+          "off_target_activity": 4530.59
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.5861,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1374,
+          "off_target_activity": 4192.77
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.258,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0689,
+          "off_target_activity": 4317.16
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.2928,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0772,
+          "off_target_activity": 4039.59
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.3532,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0912,
+          "off_target_activity": 4296.61
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.187,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0523,
+          "off_target_activity": 4159.65
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.2697,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.0716,
+          "off_target_activity": 4519.01
+        }
+      ]
+    },
+    {
+      "an03a008_rate_hz": 10,
+      "mean_right_dna02_rate": 0.6887,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.1583,
+      "mean_off_target_activity": 4366.71,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.7077,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1623,
+          "off_target_activity": 4497.83
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.7153,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1636,
+          "off_target_activity": 4313.19
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.8048,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1854,
+          "off_target_activity": 4552.21
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.5327,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1321,
+          "off_target_activity": 4564.78
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 1.1714,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2355,
+          "off_target_activity": 4232.12
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.5953,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1412,
+          "off_target_activity": 4349.56
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.6748,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.157,
+          "off_target_activity": 4074.73
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.6697,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1564,
+          "off_target_activity": 4333.05
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.4202,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.108,
+          "off_target_activity": 4193.55
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.5952,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1412,
+          "off_target_activity": 4556.08
+        }
+      ]
+    },
+    {
+      "an03a008_rate_hz": 15,
+      "mean_right_dna02_rate": 1.156,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.2368,
+      "mean_off_target_activity": 4415.93,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 1.1745,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2395,
+          "off_target_activity": 4545.76
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 1.1741,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2393,
+          "off_target_activity": 4358.68
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 1.2266,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.257,
+          "off_target_activity": 4610.04
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.97,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2152,
+          "off_target_activity": 4613.19
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 1.9115,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3314,
+          "off_target_activity": 4286.52
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 1.0616,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2228,
+          "off_target_activity": 4394.46
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 1.1916,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2434,
+          "off_target_activity": 4123.24
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 1.0696,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2259,
+          "off_target_activity": 4380.41
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.7409,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.1739,
+          "off_target_activity": 4240.26
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 1.0396,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2195,
+          "off_target_activity": 4606.75
+        }
+      ]
+    },
+    {
+      "an03a008_rate_hz": 20,
+      "mean_right_dna02_rate": 1.7063,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.3119,
+      "mean_off_target_activity": 4478.11,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 1.7323,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3143,
+          "off_target_activity": 4606.02
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 1.7129,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.312,
+          "off_target_activity": 4416.08
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 1.703,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3246,
+          "off_target_activity": 4681.81
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 1.485,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2949,
+          "off_target_activity": 4675.11
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 2.7521,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4142,
+          "off_target_activity": 4356.43
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 1.6252,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.302,
+          "off_target_activity": 4451.58
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 1.814,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3261,
+          "off_target_activity": 4184.74
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 1.5375,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2937,
+          "off_target_activity": 4438.31
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 1.1271,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2413,
+          "off_target_activity": 4299.86
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 1.5743,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.2961,
+          "off_target_activity": 4671.12
+        }
+      ]
+    },
+    {
+      "an03a008_rate_hz": 25,
+      "mean_right_dna02_rate": 2.3137,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.379,
+      "mean_off_target_activity": 4553.01,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 2.3487,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3806,
+          "off_target_activity": 4678.4
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 2.306,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.377,
+          "off_target_activity": 4485.12
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 2.2143,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.385,
+          "off_target_activity": 4767.53
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 2.052,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3662,
+          "off_target_activity": 4750.2
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 3.6614,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4833,
+          "off_target_activity": 4441.59
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 2.2586,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3731,
+          "off_target_activity": 4520.87
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 2.5045,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3985,
+          "off_target_activity": 4259.19
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 2.0537,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3558,
+          "off_target_activity": 4506.22
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 1.5631,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3052,
+          "off_target_activity": 4372.22
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 2.1749,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3658,
+          "off_target_activity": 4748.81
+        }
+      ]
+    },
+    {
+      "an03a008_rate_hz": 30,
+      "mean_right_dna02_rate": 2.9568,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.4368,
+      "mean_off_target_activity": 4640.44,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 3.0089,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4383,
+          "off_target_activity": 4762.73
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 2.9377,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4335,
+          "off_target_activity": 4565.91
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 2.7456,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4374,
+          "off_target_activity": 4866.17
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 2.6516,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4272,
+          "off_target_activity": 4837.99
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 4.6006,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5383,
+          "off_target_activity": 4541.91
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 2.9369,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4345,
+          "off_target_activity": 4602.14
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 3.2352,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4592,
+          "off_target_activity": 4346.26
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 2.6032,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4107,
+          "off_target_activity": 4584.04
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 2.0311,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.3629,
+          "off_target_activity": 4457.08
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 2.8173,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4263,
+          "off_target_activity": 4840.14
+        }
+      ]
+    },
+    {
+      "an03a008_rate_hz": 40,
+      "mean_right_dna02_rate": 4.301,
+      "mean_left_dna02_rate": 0,
+      "mean_right_candidate_strength": 0.5271,
+      "mean_off_target_activity": 4850.06,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 4.3945,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5285,
+          "off_target_activity": 4964.61
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 4.2572,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5218,
+          "off_target_activity": 4760.47
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 3.8459,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5212,
+          "off_target_activity": 5099.34
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 3.9013,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5218,
+          "off_target_activity": 5048.75
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 6.5391,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.62,
+          "off_target_activity": 4784.03
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 4.3612,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5288,
+          "off_target_activity": 4799.03
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 4.7682,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5522,
+          "off_target_activity": 4555.83
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 3.7551,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4991,
+          "off_target_activity": 4767.58
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 3.0199,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.4571,
+          "off_target_activity": 4661.65
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 4.1679,
+          "left_dna02_rate": 0,
+          "right_candidate_strength": 0.5204,
+          "off_target_activity": 5059.33
+        }
+      ]
+    }
+  ]
+}

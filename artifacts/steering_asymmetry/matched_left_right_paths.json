@@ -1,0 +1,368 @@
+{
+  "schema": "steering_asymmetry.matched_left_right_paths.v1",
+  "timestamp": "2026-09-19T16:16:15.803Z",
+  "total_left_intermediates": 6,
+  "total_right_intermediates": 2,
+  "matched_pathways_by_cell_type": [
+    {
+      "cell_type": "AN03A008",
+      "left_present": true,
+      "right_present": true,
+      "left_instances": [
+        {
+          "index": 3305,
+          "body_id": "13538",
+          "cell_type": "AN03A008",
+          "side": 1,
+          "nt_code": 1,
+          "nt_sign": 1,
+          "receptor_to_m_weight": 78,
+          "convergent_tactile_inputs": 13,
+          "m_to_dna02_weight": 741,
+          "receptors": [
+            {
+              "receptor_idx": 153591,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 153768,
+              "weight": 6
+            },
+            {
+              "receptor_idx": 154094,
+              "weight": 11
+            },
+            {
+              "receptor_idx": 154339,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 154636,
+              "weight": 7
+            },
+            {
+              "receptor_idx": 155022,
+              "weight": 8
+            },
+            {
+              "receptor_idx": 155874,
+              "weight": 13
+            },
+            {
+              "receptor_idx": 157183,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 157711,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 157766,
+              "weight": 5
+            },
+            {
+              "receptor_idx": 159274,
+              "weight": 6
+            },
+            {
+              "receptor_idx": 161041,
+              "weight": 7
+            },
+            {
+              "receptor_idx": 164748,
+              "weight": 3
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 24.916,
+          "rate_delta_hz": 24.916,
+          "structural_coupling_score": 57798,
+          "functional_dna02_drive_estimate": 18462.756
+        }
+      ],
+      "right_instances": [
+        {
+          "index": 2937,
+          "body_id": "13137",
+          "cell_type": "AN03A008",
+          "side": 2,
+          "nt_code": 1,
+          "nt_sign": 1,
+          "receptor_to_m_weight": 41,
+          "convergent_tactile_inputs": 8,
+          "m_to_dna02_weight": 717,
+          "receptors": [
+            {
+              "receptor_idx": 149560,
+              "weight": 13
+            },
+            {
+              "receptor_idx": 154130,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 154675,
+              "weight": 4
+            },
+            {
+              "receptor_idx": 154731,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 154816,
+              "weight": 4
+            },
+            {
+              "receptor_idx": 155200,
+              "weight": 4
+            },
+            {
+              "receptor_idx": 156889,
+              "weight": 3
+            },
+            {
+              "receptor_idx": 159953,
+              "weight": 7
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 4.984,
+          "rate_delta_hz": 4.984,
+          "structural_coupling_score": 29397,
+          "functional_dna02_drive_estimate": 3573.528,
+          "left_comparator": {
+            "index": 3305,
+            "cell_type": "AN03A008",
+            "receptor_to_m_weight": 78,
+            "convergent_tactile_inputs": 13,
+            "m_to_dna02_weight": 741,
+            "stimulated_rate_hz": 24.916,
+            "functional_drive": 18462.756
+          }
+        }
+      ],
+      "left_total_structural_coupling": 57798,
+      "right_total_structural_coupling": 29397,
+      "left_total_dna02_drive": 18462.756,
+      "right_total_dna02_drive": 3573.528
+    },
+    {
+      "cell_type": "AN03B094",
+      "left_present": true,
+      "right_present": false,
+      "left_instances": [
+        {
+          "index": 18754,
+          "body_id": "30837",
+          "cell_type": "AN03B094",
+          "side": 1,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "receptor_to_m_weight": 13,
+          "convergent_tactile_inputs": 2,
+          "m_to_dna02_weight": 20,
+          "receptors": [
+            {
+              "receptor_idx": 150487,
+              "weight": 10
+            },
+            {
+              "receptor_idx": 154574,
+              "weight": 3
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 0,
+          "rate_delta_hz": 0,
+          "structural_coupling_score": -260,
+          "functional_dna02_drive_estimate": 0
+        }
+      ],
+      "right_instances": [],
+      "left_total_structural_coupling": -260,
+      "right_total_structural_coupling": 0,
+      "left_total_dna02_drive": 0,
+      "right_total_dna02_drive": 0
+    },
+    {
+      "cell_type": "DNg34",
+      "left_present": true,
+      "right_present": true,
+      "left_instances": [
+        {
+          "index": 273,
+          "body_id": "10295",
+          "cell_type": "DNg34",
+          "side": 1,
+          "nt_code": 0,
+          "nt_sign": 1,
+          "receptor_to_m_weight": 14,
+          "convergent_tactile_inputs": 3,
+          "m_to_dna02_weight": 4,
+          "receptors": [
+            {
+              "receptor_idx": 154500,
+              "weight": 7
+            },
+            {
+              "receptor_idx": 156898,
+              "weight": 4
+            },
+            {
+              "receptor_idx": 159274,
+              "weight": 3
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 0,
+          "rate_delta_hz": 0,
+          "structural_coupling_score": 56,
+          "functional_dna02_drive_estimate": 0
+        }
+      ],
+      "right_instances": [
+        {
+          "index": 3348,
+          "body_id": "13585",
+          "cell_type": "DNg34",
+          "side": 2,
+          "nt_code": 0,
+          "nt_sign": 1,
+          "receptor_to_m_weight": 6,
+          "convergent_tactile_inputs": 1,
+          "m_to_dna02_weight": 4,
+          "receptors": [
+            {
+              "receptor_idx": 160742,
+              "weight": 6
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 0,
+          "rate_delta_hz": 0,
+          "structural_coupling_score": 24,
+          "functional_dna02_drive_estimate": 0,
+          "left_comparator": {
+            "index": 273,
+            "cell_type": "DNg34",
+            "receptor_to_m_weight": 14,
+            "convergent_tactile_inputs": 3,
+            "m_to_dna02_weight": 4,
+            "stimulated_rate_hz": 0,
+            "functional_drive": 0
+          }
+        }
+      ],
+      "left_total_structural_coupling": 56,
+      "right_total_structural_coupling": 24,
+      "left_total_dna02_drive": 0,
+      "right_total_dna02_drive": 0
+    },
+    {
+      "cell_type": "IN03A080",
+      "left_present": true,
+      "right_present": false,
+      "left_instances": [
+        {
+          "index": 161283,
+          "body_id": "909324",
+          "cell_type": "IN03A080",
+          "side": 1,
+          "nt_code": 1,
+          "nt_sign": 1,
+          "receptor_to_m_weight": 8,
+          "convergent_tactile_inputs": 2,
+          "m_to_dna02_weight": 11,
+          "receptors": [
+            {
+              "receptor_idx": 150487,
+              "weight": 5
+            },
+            {
+              "receptor_idx": 154574,
+              "weight": 3
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 0,
+          "rate_delta_hz": 0,
+          "structural_coupling_score": 88,
+          "functional_dna02_drive_estimate": 0
+        }
+      ],
+      "right_instances": [],
+      "left_total_structural_coupling": 88,
+      "right_total_structural_coupling": 0,
+      "left_total_dna02_drive": 0,
+      "right_total_dna02_drive": 0
+    },
+    {
+      "cell_type": "IN19A013",
+      "left_present": true,
+      "right_present": false,
+      "left_instances": [
+        {
+          "index": 160234,
+          "body_id": "905910",
+          "cell_type": "IN19A013",
+          "side": 1,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "receptor_to_m_weight": 3,
+          "convergent_tactile_inputs": 1,
+          "m_to_dna02_weight": 20,
+          "receptors": [
+            {
+              "receptor_idx": 162206,
+              "weight": 3
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 0,
+          "rate_delta_hz": 0,
+          "structural_coupling_score": -60,
+          "functional_dna02_drive_estimate": 0
+        }
+      ],
+      "right_instances": [],
+      "left_total_structural_coupling": -60,
+      "right_total_structural_coupling": 0,
+      "left_total_dna02_drive": 0,
+      "right_total_dna02_drive": 0
+    },
+    {
+      "cell_type": "IN16B045",
+      "left_present": true,
+      "right_present": false,
+      "left_instances": [
+        {
+          "index": 164789,
+          "body_id": "1051358866",
+          "cell_type": "IN16B045",
+          "side": 1,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "receptor_to_m_weight": 4,
+          "convergent_tactile_inputs": 1,
+          "m_to_dna02_weight": 7,
+          "receptors": [
+            {
+              "receptor_idx": 152763,
+              "weight": 4
+            }
+          ],
+          "baseline_rate_hz": 0,
+          "stimulated_rate_hz": 8.946,
+          "rate_delta_hz": 8.946,
+          "structural_coupling_score": -28,
+          "functional_dna02_drive_estimate": -62.622
+        }
+      ],
+      "right_instances": [],
+      "left_total_structural_coupling": -28,
+      "right_total_structural_coupling": 0,
+      "left_total_dna02_drive": -62.622,
+      "right_total_dna02_drive": 0
+    }
+  ]
+}

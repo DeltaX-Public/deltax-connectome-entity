@@ -1,0 +1,343 @@
+{
+  "schema": "steering_asymmetry.necessity_interventions.v1",
+  "timestamp": "2026-09-19T16:16:52.798Z",
+  "candidate_tested": "AN03A008 (Left index 2693)",
+  "necessity_confirmed": false,
+  "reduction_fraction": 0,
+  "conditions": {
+    "COND_A_INTACT": {
+      "label": "Intact Left Tactile (180 Hz)",
+      "silenced_neurons": [],
+      "aggregate": {
+        "left_dna02_rate": 1.4379,
+        "turn_left_strength": 0.2697,
+        "onset_latency_ms": 13.5,
+        "total_network_activity": 23578.39
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 1.5365,
+          "turn_left_strength": 0.2754,
+          "onset_latency_ms": 13,
+          "total_network_activity": 22392.83
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 1.2881,
+          "turn_left_strength": 0.2588,
+          "onset_latency_ms": 14,
+          "total_network_activity": 24375.28
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 1.1412,
+          "turn_left_strength": 0.245,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23356.47
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0.8309,
+          "turn_left_strength": 0.2292,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23650.12
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 1.5224,
+          "turn_left_strength": 0.2793,
+          "onset_latency_ms": 13,
+          "total_network_activity": 24177.34
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 1.3273,
+          "turn_left_strength": 0.2596,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23774.83
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 2.2947,
+          "turn_left_strength": 0.3313,
+          "onset_latency_ms": 12,
+          "total_network_activity": 23663.84
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 1.7652,
+          "turn_left_strength": 0.2919,
+          "onset_latency_ms": 13,
+          "total_network_activity": 23384.14
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 1.4448,
+          "turn_left_strength": 0.266,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23467.6
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 1.2274,
+          "turn_left_strength": 0.2601,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23541.5
+        }
+      ]
+    },
+    "COND_B_SILENCE_AN03A008": {
+      "label": "Silence Left AN03A008 (idx 2693)",
+      "silenced_neurons": [
+        2693
+      ],
+      "aggregate": {
+        "left_dna02_rate": 1.4379,
+        "turn_left_strength": 0.2697,
+        "onset_latency_ms": 13.5,
+        "total_network_activity": 23578.39
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 1.5365,
+          "turn_left_strength": 0.2754,
+          "onset_latency_ms": 13,
+          "total_network_activity": 22392.83
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 1.2881,
+          "turn_left_strength": 0.2588,
+          "onset_latency_ms": 14,
+          "total_network_activity": 24375.28
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 1.1412,
+          "turn_left_strength": 0.245,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23356.47
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0.8309,
+          "turn_left_strength": 0.2292,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23650.12
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 1.5224,
+          "turn_left_strength": 0.2793,
+          "onset_latency_ms": 13,
+          "total_network_activity": 24177.34
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 1.3273,
+          "turn_left_strength": 0.2596,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23774.83
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 2.2947,
+          "turn_left_strength": 0.3313,
+          "onset_latency_ms": 12,
+          "total_network_activity": 23663.84
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 1.7652,
+          "turn_left_strength": 0.2919,
+          "onset_latency_ms": 13,
+          "total_network_activity": 23384.14
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 1.4448,
+          "turn_left_strength": 0.266,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23467.6
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 1.2274,
+          "turn_left_strength": 0.2601,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23541.5
+        }
+      ]
+    },
+    "COND_C_SHAM_SILENCE": {
+      "label": "Sham Silence (unrelated DNg07 idx 2707)",
+      "silenced_neurons": [
+        2707
+      ],
+      "aggregate": {
+        "left_dna02_rate": 1.4379,
+        "turn_left_strength": 0.2697,
+        "onset_latency_ms": 13.5,
+        "total_network_activity": 23578.39
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 1.5365,
+          "turn_left_strength": 0.2754,
+          "onset_latency_ms": 13,
+          "total_network_activity": 22392.83
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 1.2881,
+          "turn_left_strength": 0.2588,
+          "onset_latency_ms": 14,
+          "total_network_activity": 24375.28
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 1.1412,
+          "turn_left_strength": 0.245,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23356.47
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0.8309,
+          "turn_left_strength": 0.2292,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23650.12
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 1.5224,
+          "turn_left_strength": 0.2793,
+          "onset_latency_ms": 13,
+          "total_network_activity": 24177.34
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 1.3273,
+          "turn_left_strength": 0.2596,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23774.83
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 2.2947,
+          "turn_left_strength": 0.3313,
+          "onset_latency_ms": 12,
+          "total_network_activity": 23663.84
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 1.7652,
+          "turn_left_strength": 0.2919,
+          "onset_latency_ms": 13,
+          "total_network_activity": 23384.14
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 1.4448,
+          "turn_left_strength": 0.266,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23467.6
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 1.2274,
+          "turn_left_strength": 0.2601,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23541.5
+        }
+      ]
+    },
+    "COND_D_SILENCE_RIGHT_HOMOLOG": {
+      "label": "Silence Right Homolog AN03A008 (idx 2937)",
+      "silenced_neurons": [
+        2937
+      ],
+      "aggregate": {
+        "left_dna02_rate": 1.4379,
+        "turn_left_strength": 0.2697,
+        "onset_latency_ms": 13.5,
+        "total_network_activity": 23578.39
+      },
+      "trials": [
+        {
+          "seed": 15000,
+          "left_dna02_rate": 1.5365,
+          "turn_left_strength": 0.2754,
+          "onset_latency_ms": 13,
+          "total_network_activity": 22392.83
+        },
+        {
+          "seed": 15001,
+          "left_dna02_rate": 1.2881,
+          "turn_left_strength": 0.2588,
+          "onset_latency_ms": 14,
+          "total_network_activity": 24375.28
+        },
+        {
+          "seed": 15002,
+          "left_dna02_rate": 1.1412,
+          "turn_left_strength": 0.245,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23356.47
+        },
+        {
+          "seed": 15003,
+          "left_dna02_rate": 0.8309,
+          "turn_left_strength": 0.2292,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23650.12
+        },
+        {
+          "seed": 15004,
+          "left_dna02_rate": 1.5224,
+          "turn_left_strength": 0.2793,
+          "onset_latency_ms": 13,
+          "total_network_activity": 24177.34
+        },
+        {
+          "seed": 15005,
+          "left_dna02_rate": 1.3273,
+          "turn_left_strength": 0.2596,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23774.83
+        },
+        {
+          "seed": 15006,
+          "left_dna02_rate": 2.2947,
+          "turn_left_strength": 0.3313,
+          "onset_latency_ms": 12,
+          "total_network_activity": 23663.84
+        },
+        {
+          "seed": 15007,
+          "left_dna02_rate": 1.7652,
+          "turn_left_strength": 0.2919,
+          "onset_latency_ms": 13,
+          "total_network_activity": 23384.14
+        },
+        {
+          "seed": 15008,
+          "left_dna02_rate": 1.4448,
+          "turn_left_strength": 0.266,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23467.6
+        },
+        {
+          "seed": 15009,
+          "left_dna02_rate": 1.2274,
+          "turn_left_strength": 0.2601,
+          "onset_latency_ms": 14,
+          "total_network_activity": 23541.5
+        }
+      ]
+    }
+  }
+}
