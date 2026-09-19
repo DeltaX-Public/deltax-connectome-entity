@@ -43,6 +43,8 @@ export const FORBIDDEN_POLICY_FIELDS = Object.freeze([
   "target_weight",
   "target_weights",
   "policy",
+  "steer_action",
+  "intended_direction",
 ]);
 
 /**

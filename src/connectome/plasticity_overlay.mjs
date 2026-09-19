@@ -52,27 +52,52 @@ export class PlasticityOverlay {
    * @param {Object} [params.config] Plasticity configuration and safety bounds
    * @param {Set<number>|Uint8Array|Array<number>} [params.eligibleEdgeMask] Eligible edge index set
    */
+  /**
+   * @param {Object} params
+   * @param {number} params.N Neuron count
+   * @param {number} params.E Edge count
+   * @param {TypedArray} params.indptr CSR row pointers (length N+1)
+   * @param {TypedArray} params.indices CSR column targets (length E)
+   * @param {TypedArray} [params.baseSynapseCounts] Measured connectome base anatomical synapse counts (S_ij)
+   * @param {TypedArray} [params.baseWeights] Alias for baseSynapseCounts (length E)
+   * @param {TypedArray} [params.netWeights] Active weights array used in RateNetwork propagation (Float32Array)
+   * @param {Object} [params.config] Plasticity configuration and safety bounds
+   * @param {Set<number>|Uint8Array|Array<number>} [params.eligibleEdgeMask] Eligible edge index set
+   */
   constructor({
     N,
     E,
     indptr,
     indices,
-    baseWeights,
+    baseSynapseCounts = null,
+    baseWeights = null,
+    netWeights = null,
     config = {},
     eligibleEdgeMask = null,
   }) {
-    if (!baseWeights || baseWeights.length === 0) {
-      throw new Error("baseWeights is required and must not be empty.");
+    const structuralCounts = baseSynapseCounts ?? baseWeights;
+    if (!structuralCounts || structuralCounts.length === 0) {
+      throw new Error("baseSynapseCounts (or baseWeights) is required and must not be empty.");
     }
     if (!indptr || !indices) {
       throw new Error("CSR indptr and indices arrays are required.");
     }
 
     this.N = N ?? (indptr.length - 1);
-    this.E = E ?? baseWeights.length;
+    this.E = E ?? structuralCounts.length;
     this.indptr = indptr;
     this.indices = indices;
-    this.baseWeights = baseWeights;
+    // S_ij: immutable measured anatomical synapse counts
+    // If netWeights is provided and identical by reference to structuralCounts, ensure structuralCounts is a frozen copy!
+    if (netWeights && netWeights === structuralCounts) {
+      this.baseSynapseCounts = structuralCounts.slice();
+    } else {
+      this.baseSynapseCounts = structuralCounts;
+    }
+    this.baseWeights = this.baseSynapseCounts; // backwards-compatible alias
+
+    // Optional reference to RateNetwork active weights array for in-place propagation syncing
+    this.netWeights = netWeights;
 
     // Record initial base weights checksum to guarantee immutability
     this.baseChecksum = this._computeBaseChecksum();
@@ -83,7 +108,10 @@ export class PlasticityOverlay {
       ...config,
     };
 
-    // Sparse delta-W: Map<edgeIndex, deltaValue>
+    // Dimensionless efficacy multipliers: Map<edgeIndex, alpha_ij(t)> where alpha_ij(0) = 1.0
+    this.alpha = new Map();
+
+    // Sparse delta-W in coupling units: Map<edgeIndex, deltaValue> where deltaW = S_ij * (alpha - 1.0)
     this.deltaW = new Map();
 
     // Sparse eligibility traces: Map<edgeIndex, traceValue>
@@ -170,17 +198,74 @@ export class PlasticityOverlay {
   }
 
   /**
-   * Get immutable base weight W_base[k].
+   * Get immutable structural anatomical synapse count S_ij.
+   * @param {number} edgeIndex
+   * @returns {number}
+   */
+  getStructuralSynapseCount(edgeIndex) {
+    if (edgeIndex < 0 || edgeIndex >= this.E) return 0;
+    return this.baseSynapseCounts[edgeIndex];
+  }
+
+  /**
+   * Get immutable base weight W_base[k] (alias for getStructuralSynapseCount).
    * @param {number} edgeIndex
    * @returns {number}
    */
   getBaseWeight(edgeIndex) {
-    if (edgeIndex < 0 || edgeIndex >= this.E) return 0;
-    return this.baseWeights[edgeIndex];
+    return this.getStructuralSynapseCount(edgeIndex);
   }
 
   /**
-   * Get current delta-W value ΔW[k].
+   * Get current dimensionless efficacy multiplier alpha_ij(t) (baseline = 1.0).
+   * @param {number} edgeIndex
+   * @returns {number}
+   */
+  getEfficacyMultiplier(edgeIndex) {
+    if (this.alpha.has(edgeIndex)) return this.alpha.get(edgeIndex);
+    if (this.deltaW.has(edgeIndex)) {
+      const baseW = this.baseSynapseCounts[edgeIndex];
+      return baseW > 0 ? (baseW + this.deltaW.get(edgeIndex)) / baseW : 1.0;
+    }
+    return 1.0;
+  }
+
+  /**
+   * Get current delta efficacy (alpha_ij - 1.0).
+   * @param {number} edgeIndex
+   * @returns {number}
+   */
+  getDeltaEfficacy(edgeIndex) {
+    return this.getEfficacyMultiplier(edgeIndex) - 1.0;
+  }
+
+  /**
+   * Set or modulate efficacy multiplier alpha_ij for an edge.
+   * W_effective = S_ij * alpha_ij.
+   * @param {number} edgeIndex
+   * @param {number} alpha Dimensionless efficacy multiplier (e.g. 1.5 = +50% efficacy)
+   */
+  setEfficacyMultiplier(edgeIndex, alpha) {
+    if (edgeIndex < 0 || edgeIndex >= this.E) return false;
+    const baseW = this.baseSynapseCounts[edgeIndex];
+    const clampedAlpha = Math.max(0.0, alpha);
+    const deltaW = baseW * (clampedAlpha - 1.0);
+
+    if (Math.abs(clampedAlpha - 1.0) < 1e-6) {
+      this.alpha.delete(edgeIndex);
+      this.deltaW.delete(edgeIndex);
+      if (this.netWeights) this.netWeights[edgeIndex] = baseW;
+    } else {
+      this.alpha.set(edgeIndex, clampedAlpha);
+      this.deltaW.set(edgeIndex, deltaW);
+      if (this.netWeights) this.netWeights[edgeIndex] = baseW * clampedAlpha;
+    }
+    this.verifyBaseImmutability();
+    return true;
+  }
+
+  /**
+   * Get current delta-W value ΔW[k] in coupling units: S_ij * (alpha - 1.0).
    * @param {number} edgeIndex
    * @returns {number}
    */
@@ -189,14 +274,14 @@ export class PlasticityOverlay {
   }
 
   /**
-   * Get current effective weight W_effective(t) = W_base + ΔW(t).
+   * Get current effective weight W_effective(t) = S_ij * alpha_ij(t).
    * Strictly clamped non-negative (synapse count floor = 0).
    * @param {number} edgeIndex
    * @returns {number}
    */
   getEffectiveWeight(edgeIndex) {
     if (edgeIndex < 0 || edgeIndex >= this.E) return 0;
-    const base = this.baseWeights[edgeIndex];
+    const base = this.baseSynapseCounts[edgeIndex];
     const delta = this.deltaW.get(edgeIndex) ?? 0.0;
     return Math.max(0, base + delta);
   }
@@ -387,10 +472,15 @@ export class PlasticityOverlay {
       }
 
       if (Math.abs(boundedChange) > 1e-7) {
+        const candidateAlpha = baseW > 0 ? (baseW + candidateDeltaW) / baseW : 1.0;
         if (Math.abs(candidateDeltaW) < 1e-7) {
           this.deltaW.delete(edgeIdx);
+          this.alpha.delete(edgeIdx);
+          if (this.netWeights) this.netWeights[edgeIdx] = baseW;
         } else {
           this.deltaW.set(edgeIdx, candidateDeltaW);
+          this.alpha.set(edgeIdx, candidateAlpha);
+          if (this.netWeights) this.netWeights[edgeIdx] = baseW + candidateDeltaW;
         }
         currentGlobalBudget += (Math.abs(candidateDeltaW) - Math.abs(deltaWBefore));
         modifiedCount++;
@@ -402,12 +492,15 @@ export class PlasticityOverlay {
           source,
           target,
           baseWeight: baseW,
+          structuralSynapseCount: baseW,
           deltaWBefore,
+          efficacyMultiplier: candidateAlpha,
           eligibility,
           modulatorySignal: g_t,
           proposedChange,
           boundedAppliedChange: boundedChange,
           deltaWAfter: candidateDeltaW,
+          effectiveWeightAfter: baseW + candidateDeltaW,
           rule,
         });
       }
@@ -424,6 +517,15 @@ export class PlasticityOverlay {
    * Guarantees exact return to W_base.
    */
   reset() {
+    if (this.netWeights) {
+      for (const edgeIdx of this.deltaW.keys()) {
+        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+      }
+      for (const edgeIdx of this.alpha.keys()) {
+        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+      }
+    }
+    this.alpha.clear();
     this.deltaW.clear();
     this.eligibilityTraces.clear();
     if (this.prevRates) this.prevRates.fill(0);
@@ -470,6 +572,7 @@ export class PlasticityOverlay {
       step: this.stepCount,
       config: { ...this.config },
       deltaW: Array.from(this.deltaW.entries()),
+      alpha: Array.from(this.alpha.entries()),
       eligibilityTraces: Array.from(this.eligibilityTraces.entries()),
       eligibleEdgeMask: this.eligibleEdgeMask ? Array.from(this.eligibleEdgeMask) : null,
       globalBudgetUsed: this.getGlobalBudgetUsed(),
@@ -485,9 +588,32 @@ export class PlasticityOverlay {
     if (!snap || typeof snap !== "object") {
       throw new Error("Invalid snapshot provided to restore.");
     }
+    // Revert current modifications in netWeights
+    if (this.netWeights) {
+      for (const edgeIdx of this.deltaW.keys()) {
+        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+      }
+      for (const edgeIdx of this.alpha.keys()) {
+        this.netWeights[edgeIdx] = this.baseSynapseCounts[edgeIdx];
+      }
+    }
     this.deltaW.clear();
+    this.alpha.clear();
     for (const [k, v] of snap.deltaW) {
-      this.deltaW.set(Number(k), Number(v));
+      const edgeIdx = Number(k);
+      const deltaVal = Number(v);
+      this.deltaW.set(edgeIdx, deltaVal);
+      const baseW = this.baseSynapseCounts[edgeIdx];
+      const alphaVal = baseW > 0 ? (baseW + deltaVal) / baseW : 1.0;
+      this.alpha.set(edgeIdx, alphaVal);
+      if (this.netWeights) {
+        this.netWeights[edgeIdx] = baseW + deltaVal;
+      }
+    }
+    if (snap.alpha) {
+      for (const [k, v] of snap.alpha) {
+        this.alpha.set(Number(k), Number(v));
+      }
     }
 
     this.eligibilityTraces.clear();

@@ -1,0 +1,108 @@
+{
+  "manifest_id": "TARGET_C_BALANCED_TWO_STAGE",
+  "schema_version": "1.0.0",
+  "status": "CAUSAL_TARGET_FROZEN",
+  "source_evidence_artifact": "artifacts/steering_asymmetry/plasticity_target_candidate.json",
+  "rationale": "Combined two-stage plasticity target covering both feedforward tactile receptor afferents into right AN03A008 (8 edges, 41 base synapses) and ascending projection from right AN03A008 into right DNa02 (1 edge, 717 base synapses). Allows balanced moderate potentiation across both stages (e.g. 1.5x afferents + 1.5x projection) as validated in Lane B counterfactual sweeps.",
+  "eligible_populations": [
+    {
+      "population_name": "tactile_t1_right_receptors",
+      "role": "sensory_afferents",
+      "neuron_indices": [
+        149560,
+        154130,
+        154675,
+        154731,
+        154816,
+        155200,
+        156889,
+        159953
+      ]
+    },
+    {
+      "population_name": "AN03A008_right",
+      "role": "ascending_intermediate",
+      "neuron_indices": [
+        2937
+      ]
+    },
+    {
+      "population_name": "DNa02_right",
+      "role": "descending_steering_actuator",
+      "neuron_indices": [
+        332
+      ]
+    }
+  ],
+  "eligible_edges": [
+    {
+      "source": 149560,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 20.0,
+      "notes": "Tactile receptor afferent (base weight 13)"
+    },
+    {
+      "source": 154130,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 6.0,
+      "notes": "Tactile receptor afferent (base weight 3)"
+    },
+    {
+      "source": 154675,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 8.0,
+      "notes": "Tactile receptor afferent (base weight 4)"
+    },
+    {
+      "source": 154731,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 6.0,
+      "notes": "Tactile receptor afferent (base weight 3)"
+    },
+    {
+      "source": 154816,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 8.0,
+      "notes": "Tactile receptor afferent (base weight 4)"
+    },
+    {
+      "source": 155200,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 8.0,
+      "notes": "Tactile receptor afferent (base weight 4)"
+    },
+    {
+      "source": 156889,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 6.0,
+      "notes": "Tactile receptor afferent (base weight 3)"
+    },
+    {
+      "source": 159953,
+      "target": 2937,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 14.0,
+      "notes": "Tactile receptor afferent (base weight 7)"
+    },
+    {
+      "source": 2937,
+      "target": 332,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 358.5,
+      "notes": "Ascending premotor projection into right DNa02 (base weight 717, up to +50% efficacy)"
+    }
+  ],
+  "safety_bounds": {
+    "max_total_budget": 420.0,
+    "max_edge_delta": 358.5,
+    "max_percentage_change": 1.5
+  },
+  "created_at": "2026-09-19T16:30:00.000Z"
+}

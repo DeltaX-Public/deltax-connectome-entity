@@ -53,6 +53,11 @@ export class ConnectomeRuntime {
       { seed: this.seed, ...opts.rateParams }
     );
 
+    // If plasticity is enabled, ensure this.net.weights is a Float32Array so fractional efficacy multipliers are preserved
+    if (opts.plasticity && !(this.net.weights instanceof Float32Array)) {
+      this.net.weights = new Float32Array(this.net.weights);
+    }
+
     // Optional Phase IV-D Plasticity Overlay (default: null / disabled)
     this.plasticity = opts.plasticity
       ? new PlasticityOverlay({
@@ -60,7 +65,8 @@ export class ConnectomeRuntime {
           E: this.E,
           indptr: this.data.indptr,
           indices: this.data.indices,
-          baseWeights: this.net.weights,
+          baseSynapseCounts: this.net.weights.slice(),
+          netWeights: this.net.weights,
           config: opts.plasticity.config || opts.plasticity,
           eligibleEdgeMask: opts.plasticity.eligibleEdgeMask,
         })
@@ -211,10 +217,12 @@ export class ConnectomeRuntime {
    */
   silence(targets) {
     let indices = [];
-    if (typeof targets === "string") {
+    if (typeof targets === "number") {
+      indices = [targets];
+    } else if (typeof targets === "string") {
       indices = this.data.byType(targets, 0);
     } else if (Array.isArray(targets)) {
-      indices = targets.flatMap((t) => (typeof t === "string" ? this.data.byType(t, 0) : [t]));
+      indices = targets.flatMap((t) => (typeof t === "number" ? [t] : typeof t === "string" ? this.data.byType(t, 0) : []));
     }
 
     for (const i of indices) {
@@ -241,10 +249,12 @@ export class ConnectomeRuntime {
    */
   excite(targets, rateHz = 100) {
     let indices = [];
-    if (typeof targets === "string") {
+    if (typeof targets === "number") {
+      indices = [targets];
+    } else if (typeof targets === "string") {
       indices = this.data.byType(targets, 0);
     } else if (Array.isArray(targets)) {
-      indices = targets.flatMap((t) => (typeof t === "string" ? this.data.byType(t, 0) : [t]));
+      indices = targets.flatMap((t) => (typeof t === "number" ? [t] : typeof t === "string" ? this.data.byType(t, 0) : []));
     }
 
     for (const i of indices) {

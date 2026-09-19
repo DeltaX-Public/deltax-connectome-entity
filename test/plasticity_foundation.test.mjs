@@ -379,3 +379,134 @@ test("10. Causal Counterfactual Branching on Runtime", async () => {
   const branchC = runtime.createCounterfactualBranch("BRANCH_C_ELIGIBILITY_RESET_ONLY", snap);
   assert.equal(branchC.branch, "BRANCH_C_ELIGIBILITY_RESET_ONLY");
 });
+
+test("11. Real Connectome RateNetwork Non-Zero Plasticity Propagation & Exact Reset Parity", async () => {
+  // Use non-steering diagnostic edge 102 (VES074) -> 196 (CB0677)
+  const pre = 102;
+  const post = 196;
+
+  // Run Baseline (intact connectome)
+  const baseRuntime = new ConnectomeRuntime({ seed: 42 });
+  const edgeIdx = baseRuntime.plasticity ? baseRuntime.plasticity.findEdgeIndex(pre, post) : (() => {
+    const s = baseRuntime.data.indptr[pre], e = baseRuntime.data.indptr[pre + 1];
+    for (let k = s; k < e; k++) if (baseRuntime.data.indices[k] === post) return k;
+    return -1;
+  })();
+  assert.ok(edgeIdx >= 0, "Diagnostic edge 102 -> 196 must exist");
+  const structuralSynapses = baseRuntime.data.weights[edgeIdx];
+  assert.equal(structuralSynapses, 177, "Diagnostic edge must have 177 anatomical synapses");
+
+  baseRuntime.excite(pre, 150);
+  for (let i = 0; i < 5; i++) baseRuntime.step();
+  const baselinePostRate = baseRuntime.net.r[post];
+  assert.ok(baselinePostRate > 2.0, "Baseline postsynaptic rate must be active");
+
+  // Run Potentiated (+50% efficacy multiplier: alpha = 1.5)
+  const potentiatedRuntime = new ConnectomeRuntime({
+    seed: 42,
+    plasticity: {
+      enabled: true,
+      rule: PLASTICITY_RULES.ELIGIBILITY_MODULATED_HEBBIAN,
+    },
+  });
+  potentiatedRuntime.plasticity.setEfficacyMultiplier(edgeIdx, 1.5);
+  assert.equal(potentiatedRuntime.plasticity.getEffectiveWeight(edgeIdx), 177 * 1.5);
+  assert.equal(potentiatedRuntime.plasticity.getEfficacyMultiplier(edgeIdx), 1.5);
+  assert.equal(potentiatedRuntime.plasticity.verifyBaseImmutability(), true);
+
+  potentiatedRuntime.excite(pre, 150);
+  for (let i = 0; i < 5; i++) potentiatedRuntime.step();
+  const potentiatedPostRate = potentiatedRuntime.net.r[post];
+
+  // Verify that potentiation significantly increased postsynaptic firing rate (+222%)
+  assert.ok(
+    potentiatedPostRate > baselinePostRate + 5.0,
+    `Potentiated rate (${potentiatedPostRate.toFixed(2)} Hz) must exceed baseline (${baselinePostRate.toFixed(2)} Hz)`
+  );
+
+  // Now Reset and verify exact return to baseline
+  potentiatedRuntime.plasticity.reset();
+  assert.equal(potentiatedRuntime.plasticity.getEffectiveWeight(edgeIdx), 177);
+  assert.equal(potentiatedRuntime.plasticity.getEfficacyMultiplier(edgeIdx), 1.0);
+  assert.equal(potentiatedRuntime.plasticity.verifyBaseImmutability(), true);
+
+  // Re-run fresh with reset weights
+  const resetRuntime = new ConnectomeRuntime({
+    seed: 42,
+    plasticity: {
+      enabled: true,
+      rule: PLASTICITY_RULES.ELIGIBILITY_MODULATED_HEBBIAN,
+    },
+  });
+  // Potentiate then reset immediately
+  resetRuntime.plasticity.setEfficacyMultiplier(edgeIdx, 1.5);
+  resetRuntime.plasticity.reset();
+  resetRuntime.excite(pre, 150);
+  for (let i = 0; i < 5; i++) resetRuntime.step();
+  const resetPostRate = resetRuntime.net.r[post];
+
+  assert.equal(
+    resetPostRate.toFixed(6),
+    baselinePostRate.toFixed(6),
+    "Reset runtime must produce bit-exact postsynaptic firing rate matching baseline"
+  );
+});
+
+test("12. Consequence Channels Mirror Symmetry & Non-Directionality", () => {
+  const channels = new ConsequenceChannels();
+
+  // Test that symmetric left and right collision consequences produce identical scalar signals
+  const leftCollision = { collision: 1.0, noxious_exposure: 0.0, energy_consumed: 0.2, clearance: 0.0, progress: -0.1 };
+  const rightCollision = { collision: 1.0, noxious_exposure: 0.0, energy_consumed: 0.2, clearance: 0.0, progress: -0.1 };
+
+  const signalLeft = channels.evaluate(leftCollision);
+  const signalRight = channels.evaluate(rightCollision);
+
+  assert.equal(signalLeft, signalRight, "Symmetric physical encounters must yield identical scalar signals");
+  assert.ok(signalLeft < 0, "Collisions must produce negative modulatory signal");
+
+  // Verify that channels do not accept directional or actuator-specific fields
+  assert.throws(
+    () => validateLearningSignal({ scalar: signalLeft, steer_action: "turn_right" }),
+    /Policy leakage violation/
+  );
+  assert.throws(
+    () => validateLearningSignal({ scalar: signalLeft, intended_direction: "left" }),
+    /Policy leakage violation/
+  );
+});
+
+test("13. Four Frozen Target Manifests Validation & CSR Topology Verification", () => {
+  const manifests = [
+    "target_a_afferent_only.json",
+    "target_b_projection_only.json",
+    "target_c_balanced_two_stage.json",
+    "target_d_matched_sham.json",
+  ];
+
+  const runtime = new ConnectomeRuntime();
+
+  for (const filename of manifests) {
+    const filePath = path.join(ROOT, "artifacts", "plasticity", filename);
+    assert.ok(fs.existsSync(filePath), `${filename} must exist on disk`);
+
+    const manifest = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    assert.equal(validateTargetManifest(manifest), true, `${filename} must pass schema validation`);
+    assert.equal(manifest.status, "CAUSAL_TARGET_FROZEN");
+
+    // Verify each declared edge exists in the connectome graph
+    for (const edge of manifest.eligible_edges) {
+      const s = runtime.data.indptr[edge.source];
+      const e = runtime.data.indptr[edge.source + 1];
+      let found = false;
+      for (let k = s; k < e; k++) {
+        if (runtime.data.indices[k] === edge.target) {
+          found = true;
+          break;
+        }
+      }
+      assert.ok(found, `Declared edge ${edge.source} -> ${edge.target} in ${filename} must exist in connectome`);
+    }
+  }
+});
+
