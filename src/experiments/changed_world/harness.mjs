@@ -8,8 +8,8 @@
  */
 import { ChangedWorld } from "../../worlds/changed_world/world.mjs";
 import { ConnectomeRuntime } from "../../connectome/runtime.mjs";
-import { ConnectomeSensoryTransduction } from "../../connectome/sensory_transduction.mjs";
-import { ConnectomeCandidateBridge } from "../../connectome/candidate_bridge.mjs";
+import { ConnectomeSensoryTransduction, TRANSDUCTION_MODES } from "../../connectome/sensory_transduction.mjs";
+import { ConnectomeCandidateBridge, READOUT_MODES } from "../../connectome/candidate_bridge.mjs";
 import { createShuffledConnectome } from "../../connectome/shuffled_control.mjs";
 import { createExecutive } from "../../deltax/index.mjs";
 
@@ -38,12 +38,16 @@ export class ChangedWorldHarness {
     maxStepsPerTrial = 35,
     changeAtStep = 18,
     executive = null,
+    sensoryMode = TRANSDUCTION_MODES.SYMMETRIC,
+    readoutMode = READOUT_MODES.READOUT_A_CURRENT,
   } = {}) {
     this.seed = seed;
     this.condition = condition;
     this.command = command;
     this.maxStepsPerTrial = maxStepsPerTrial;
     this.changeAtStep = changeAtStep;
+    this.sensoryMode = sensoryMode;
+    this.readoutMode = readoutMode;
 
     if (!PHASE3_CONDITIONS.includes(condition)) {
       throw new Error(`Invalid condition: ${condition}`);
@@ -70,8 +74,8 @@ export class ChangedWorldHarness {
       this.runtime.net.indptr = this.runtime.data.indptr;
     }
 
-    this.transduction = new ConnectomeSensoryTransduction(this.runtime.data);
-    this.bridge = new ConnectomeCandidateBridge();
+    this.transduction = new ConnectomeSensoryTransduction(this.runtime.data, null, { mode: this.sensoryMode });
+    this.bridge = new ConnectomeCandidateBridge({ readoutMode: this.readoutMode });
 
     // 3. Executive connection (for OBSERVE, EXECUTIVE, EXECUTIVE_MEMORY_RESET)
     this.sessionId = `phase3_${condition.toLowerCase()}_seed_${seed}_${Date.now()}`;
