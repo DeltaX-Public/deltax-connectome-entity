@@ -22,7 +22,7 @@
 \author{
     Dominick Noval\textsuperscript{1,*} \\
     \small \textsuperscript{1}DeltaX Research Laboratories \\
-    \small \textsuperscript{*}Corresponding author: \texttt{dominick@deltax.ai}
+    \small \textsuperscript{*}Corresponding author: \texttt{hello@deltaxevaluate.com}
 }
 
 \date{\today}
@@ -327,6 +327,20 @@ A critical contribution of this study is methodological rigor. In preliminary ex
     \item Harness-level coordinate checks at $x=3$ injecting synthetic bypass triggers.
 \end{enumerate}
 All such shortcuts were formally retracted and designated \texttt{superseded\_pre\_integrity\_pass}. When strict candidate provenance and zero-leakage validators were enforced, the true biophysical boundaries emerged: DeltaX provides flawless candidate arbitration, but cannot manufacture actions absent from the substrate.
+
+\subsection{Phase IV-D.1: Connectome Plasticity and Biophysical Mechanisms of Resistance}
+
+To test whether the identified right-steering deficit could be resolved through experience-dependent synaptic adaptation, we executed the initial Phase IV-D.1 experiment across $N = 50$ pre-registered development seeds (\texttt{18000..18049}) evaluating three-factor eligibility-modulated Hebbian plasticity on the \texttt{AN03A008} $\to$ \texttt{DNa02} pathway under a frozen, unassisted protocol.
+
+This initial experiment yielded a definitive, frozen negative result: across all experimental conditions (afferent modulation, projection modulation, and two-stage modulation), evoked right \texttt{DNa02} firing remained locked at baseline floor ($0.0020 \pm 0.0039\text{ Hz}$), with zero seeds crossing the executable candidate threshold (strength $0.0102 \pm 0.0011$, threshold $>0.05$).
+
+Causal dissection of the simulation trace logs identified two primary biophysical mechanisms of resistance:
+\begin{enumerate}
+    \item \textbf{Temporal Credit Disconnect:} Pure mechanosensory receptors are transduction-driven without recurrent self-excitation. Upon obstacle clearance, receptor firing ceases immediately ($r_{\text{pre}} \to 0$), causing synaptic eligibility traces to decay before the arrival of delayed scalar reinforcement ($g_t = +1.0$). Consequently, three-factor coincidence collapses during the reinforcement window.
+    \item \textbf{Anatomical Volume Scaling Barrier:} In the electron microscopy reconstruction, right ascending interneuron \texttt{AN03A008\_R} has an $8\times$ larger segmented volume scale ($s = 6.37$ vs.\ $0.79$) than its left homologue, elevating its activation threshold to $\theta = 44.1$. The 41 incoming tactile synapses evoked only $2.14\text{ Hz}$ firing, which was insufficient to drive postsynaptic depolarization for Hebbian potentiation.
+\end{enumerate}
+
+In contrast, a matched sham control on central interneuron \texttt{4306} (possessing spontaneous recurrent firing) exhibited robust potentiation ($64.35$ budget consumed, 45/50 seeds saturated), confirming that the plasticity engine operates correctly when sustained pre/post co-activation is present. This negative finding confirms that overcoming anatomical connectome asymmetries cannot be achieved by naive Hebbian tuning; it requires architectures that bridge the temporal credit gap between transient peripheral sensation and delayed modulatory reward, while accounting for reconstructed somatosensory volume scaling. In strict compliance with anti-$p$-hacking governance, no parameters were tuned, and evaluation held-out seeds were not consumed.
 
 \subsection{Scientific Non-Claims}
 

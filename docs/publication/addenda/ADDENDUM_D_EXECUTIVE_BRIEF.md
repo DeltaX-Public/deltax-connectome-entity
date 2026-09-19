@@ -6,6 +6,7 @@
 **Classification:** Strategic Whitepaper & Commercial Architecture  
 **Repository:** `DeltaX-Public/deltax-connectome-entity`  
 **Target Audience:** Chief Technology Officers, VP of Robotics, Neuromorphic Hardware Architects, and Deep-Tech Investors  
+**Corresponding Author:** Dominick Noval (<hello@deltaxevaluate.com>)  
 
 ---
 

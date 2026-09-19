@@ -17,7 +17,7 @@
 \author{%
   Dominick Noval \\
   DeltaX Research Laboratories \\
-  \texttt{dominick@deltax.ai} \\
+  \texttt{hello@deltaxevaluate.com} \\
 }
 
 \begin{document}
@@ -147,9 +147,20 @@ Comparing continuous state (\texttt{DELTAX\_EXECUTIVE}), inter-trial reset (\tex
 
 \textbf{NeuroAI Benchmarks:} Existing robotics benchmarks (e.g., Habitat, Isaac Gym) evaluate artificial neural networks trained via end-to-end backpropagation. Our benchmark provides the first standardized platform for evaluating unlearned biological connectome wiring.
 
+\section{Discussion and Phase IV-D.1 Plasticity Findings}
+
+To evaluate whether the identified right-steering deficit can be resolved through autonomous synaptic adaptation, we executed the initial Phase IV-D.1 experiment across $N = 50$ pre-registered development seeds (\texttt{18000..18049}) evaluating three-factor eligibility-modulated Hebbian plasticity on the \texttt{AN03A008} $\to$ \texttt{DNa02} pathway.
+
+This initial experiment yielded a frozen negative result: across all conditions, evoked right \texttt{DNa02} firing remained at floor ($0.0020 \pm 0.0039\text{ Hz}$), with zero seeds crossing the executable candidate threshold ($>0.05$). Causal analysis revealed two primary biophysical barriers:
+\begin{enumerate}
+    \item \textbf{Temporal Credit Disconnect:} Pure mechanosensory receptors cease firing immediately upon obstacle clearance ($r_{\text{pre}} \to 0$), causing local eligibility traces to decay before the arrival of delayed reward/clearance reinforcement ($g_t = +1.0$).
+    \item \textbf{Anatomical Volume Scaling Barrier:} Right ascending interneuron \texttt{AN03A008\_R} possesses an $8\times$ larger segmented volume scale ($s = 6.37$ vs.\ $0.79$) in the EM reconstruction, elevating its somatic threshold ($\theta = 44.1$) and preventing the 41 incoming tactile synapses from driving sufficient postsynaptic depolarization for Hebbian potentiation.
+\end{enumerate}
+A matched sham control on central interneuron \texttt{4306} (with spontaneous recurrent activity) exhibited robust potentiation ($64.35$ budget consumed, 45/50 seeds saturated), confirming that the plasticity engine operates correctly when sustained co-activation is present. This frozen negative result confirms that overcoming anatomical connectome asymmetries cannot be achieved by standard Hebbian tuning alone; it requires bridging the temporal gap between transient peripheral sensation and delayed modulatory reward, as well as accounting for reconstructed somatosensory volume scaling. In strict compliance with anti-$p$-hacking governance, parameters were not tuned and evaluation held-out seeds were not consumed.
+
 \section{Conclusion and Limitations}
 
-The Whole-CNS Connectome Embodiment Benchmark provides an unassisted, leak-free evaluation suite for testing connectome dynamics. We demonstrate that executive candidate arbitration successfully harnesses biological connectivity for spatial navigation, while identifying strict biophysical and memory boundaries. Future work will investigate whether bounded activity-dependent synaptic plasticity (Phase IV-D) can rescue right-steering competence without policy leakage.
+The Whole-CNS Connectome Embodiment Benchmark provides an unassisted, leak-free evaluation suite for testing connectome dynamics. We demonstrate that executive candidate arbitration successfully harnesses biological connectivity for spatial navigation, while identifying strict biophysical, memory, and plasticity boundaries.
 
 \bibliographystyle{plain}
 \bibliography{references}

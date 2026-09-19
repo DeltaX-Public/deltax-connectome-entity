@@ -5,6 +5,7 @@
 **Repository:** `DeltaX-Public/deltax-connectome-entity`  
 **Protocol:** Sovereign Local Subprocess IPC (`stdin`/`stdout` JSONL)  
 **Target Audience:** Systems Architects, Safety Engineers, and Protocol Implementers  
+**Corresponding Author:** Dominick Noval (<hello@deltaxevaluate.com>)  
 
 ---
 

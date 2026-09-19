@@ -5,6 +5,7 @@
 **Repository:** `DeltaX-Public/deltax-connectome-entity`  
 **Primary Dataset:** Janelia / FlyWire Whole-CNS *Drosophila melanogaster* Connectome ($N = 165,122$, $E = 10,511,038$)  
 **Target Audience:** Computational Neuroscientists, Neurobiologists, and NeuroAI Researchers  
+**Corresponding Author:** Dominick Noval (<hello@deltaxevaluate.com>)  
 
 ---
 

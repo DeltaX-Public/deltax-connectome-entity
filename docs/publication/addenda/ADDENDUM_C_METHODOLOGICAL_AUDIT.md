@@ -4,6 +4,7 @@
 **Classification:** Scientific Integrity, Methodology, & Mathematical Proofs  
 **Repository:** `DeltaX-Public/deltax-connectome-entity`  
 **Target Audience:** Research Ethicists, Graph Theorists, and Verification Engineers  
+**Corresponding Author:** Dominick Noval (<hello@deltaxevaluate.com>)  
 
 ---
 
