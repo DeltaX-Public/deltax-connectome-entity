@@ -1,8 +1,8 @@
 /**
- * Phase IV-C Generalization Evaluation Runner.
- * Executes the 10-environment x 5-controller matrix across:
- *   - Development Cohort: seeds 11000..11049 (N = 50)
- *   - Held-Out Cohort: seeds 12000..12099 (N = 100)
+ * Phase IV-C Generalization Evaluation Runner (V2 Repaired).
+ * Executes the complete Environment x Controller matrix across:
+ *   - Development V2 Cohort: seeds 13000..13049 (N = 50)
+ *   - Held-Out Cohort: seeds 12000..12099 (N = 100) — UNTOUCHED / SEALED
  *
  * Parallelized across worker processes by environment.
  * PUBLIC-SAFE: Never exposes private filesystem paths or credentials.
@@ -12,7 +12,7 @@ import path from "node:path";
 import { fork } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { ENVIRONMENT_SUITE } from "../src/worlds/changed_world/environment_suite.mjs";
-import { CONTROLLER_TYPES } from "../src/controllers/candidate_selectors.mjs";
+import { CONTROLLER_TYPES, FAILURE_TAXONOMY } from "../src/controllers/candidate_selectors.mjs";
 import { ChangedWorldHarness } from "../src/experiments/changed_world/harness.mjs";
 import { TRANSDUCTION_MODES } from "../src/connectome/sensory_transduction.mjs";
 import { READOUT_MODES } from "../src/connectome/candidate_bridge.mjs";
@@ -30,7 +30,8 @@ export const CONTROLLERS_TO_EVALUATE = Object.freeze([
   CONTROLLER_TYPES.SIMPLE_REFLEX,
   CONTROLLER_TYPES.STOCHASTIC_WEIGHTED,
   CONTROLLER_TYPES.DELTAX_EXECUTIVE,
-  CONTROLLER_TYPES.DELTAX_STATE_RESET,
+  CONTROLLER_TYPES.DELTAX_TRIAL_RESET,
+  CONTROLLER_TYPES.DELTAX_STEP_RESET,
 ]);
 
 function wilsonCI(k, n, z = 1.96) {
@@ -70,9 +71,9 @@ export async function executeEnvController({
   const episodes = [];
 
   const harnessCondition =
-    controllerKey === CONTROLLER_TYPES.DELTAX_STATE_RESET
+    (controllerKey === CONTROLLER_TYPES.DELTAX_TRIAL_RESET || controllerKey === CONTROLLER_TYPES.DELTAX_STATE_RESET)
       ? "EXECUTIVE_MEMORY_RESET"
-      : controllerKey === CONTROLLER_TYPES.DELTAX_EXECUTIVE
+      : (controllerKey === CONTROLLER_TYPES.DELTAX_EXECUTIVE || controllerKey === CONTROLLER_TYPES.DELTAX_STEP_RESET)
       ? "EXECUTIVE"
       : "CONTROL";
 
@@ -112,6 +113,9 @@ export async function executeEnvController({
       t1Steps: ep.trial1.stepsExecuted,
       t2Steps: ep.trial2.stepsExecuted,
       actionHist,
+      failureClassification: ep.summary.trial2FailureClassification || ep.summary.trial1FailureClassification || null,
+      executiveSelectionSummary: ep.summary.executiveSelectionSummary || null,
+      forkCandidateLogs: ep.summary.forkCandidateLogs || [],
     });
   }
 
@@ -129,6 +133,19 @@ export async function executeEnvController({
   const t2CollisionsArr = episodes.map((e) => e.t2Collisions);
   const t2StepsArr = episodes.map((e) => e.t2Steps);
 
+  // Executive matching summary across episodes
+  let totalExecDecisions = 0;
+  let matchedExecDecisions = 0;
+  let fallbackExecDecisions = 0;
+  for (const e of episodes) {
+    const s = e.executiveSelectionSummary;
+    if (s) {
+      totalExecDecisions += (s.trial1?.total_decisions || 0) + (s.trial2?.total_decisions || 0);
+      matchedExecDecisions += (s.trial1?.matched_decisions || 0) + (s.trial2?.matched_decisions || 0);
+      fallbackExecDecisions += (s.trial1?.fallback_count || 0) + (s.trial2?.fallback_count || 0);
+    }
+  }
+
   return {
     envKey,
     controllerKey,
@@ -141,6 +158,12 @@ export async function executeEnvController({
       t2_collisions: meanAndStdErr(t2CollisionsArr),
       t2_steps: meanAndStdErr(t2StepsArr),
       action_histogram: aggActionHist,
+      executive_matching: totalExecDecisions > 0 ? {
+        total_decisions: totalExecDecisions,
+        matched_decisions: matchedExecDecisions,
+        match_rate: +(matchedExecDecisions / totalExecDecisions).toFixed(4),
+        fallback_count: fallbackExecDecisions,
+      } : null,
     },
     episodes,
   };
@@ -149,9 +172,13 @@ export async function executeEnvController({
 /**
  * Worker process evaluating all controllers for a single environment.
  */
-async function runEnvWorker({ envKey, startSeed, seedCount, command }) {
+async function runEnvWorker({ envKey, startSeed, seedCount, command, cohortName = "dev" }) {
   const results = {};
+  const tEnvStart = Date.now();
+  console.log(`[${envKey}] Starting evaluation across ${CONTROLLERS_TO_EVALUATE.length} controllers (seeds ${startSeed}..${startSeed + seedCount - 1})...`);
+
   for (const controllerKey of CONTROLLERS_TO_EVALUATE) {
+    const tCtrlStart = Date.now();
     results[controllerKey] = await executeEnvController({
       envKey,
       controllerKey,
@@ -159,64 +186,105 @@ async function runEnvWorker({ envKey, startSeed, seedCount, command }) {
       seedCount,
       command,
     });
+    const ctrlDur = ((Date.now() - tCtrlStart) / 1000).toFixed(1);
+    const goalRate = ((results[controllerKey].summary.both_goal_rate || 0) * 100).toFixed(1);
+    console.log(`[${envKey}] ✓ ${controllerKey}: ${goalRate}% goal (${ctrlDur}s)`);
   }
+
+  const envDur = ((Date.now() - tEnvStart) / 1000).toFixed(1);
+  console.log(`[${envKey}] ★ All controllers completed in ${envDur}s`);
+
+  // Write directly to disk to prevent IPC pipe truncation
+  const workerFile = path.join(outDir, `.worker_${cohortName}_${envKey}.json`);
+  const tmpFile = `${workerFile}.tmp_${Date.now()}`;
+  fs.writeFileSync(tmpFile, JSON.stringify(results, null, 2), "utf8");
+  fs.renameSync(tmpFile, workerFile);
+
   return results;
 }
 
 /**
- * Orchestrate parallel cohort evaluation across all 10 environments.
+ * Orchestrate parallel cohort evaluation across all environments with concurrency control.
  */
 export async function runPhase4CCohort({
   cohortName = "dev",
-  startSeed = 11000,
+  startSeed = 13000,
   seedCount = 50,
   environments = Object.keys(ENVIRONMENT_SUITE),
   command = process.env.DELTAX_LOCAL_RUNTIME_CMD || null,
+  concurrency = 8,
 } = {}) {
   console.log(`\n======================================================`);
   console.log(`Starting Phase IV-C Generalization Evaluation: ${cohortName}`);
   console.log(`Seeds: ${startSeed}..${startSeed + seedCount - 1} (N = ${seedCount})`);
   console.log(`Environments (${environments.length}): ${environments.join(", ")}`);
   console.log(`Controllers (${CONTROLLERS_TO_EVALUATE.length}): ${CONTROLLERS_TO_EVALUATE.join(", ")}`);
+  console.log(`Concurrency: ${concurrency} parallel workers`);
   console.log(`Runtime Mode: ${command ? "local_runtime" : "public_only"}`);
   console.log(`======================================================\n`);
 
   const tStart = Date.now();
-  const workerPromises = environments.map((envKey) => {
-    return new Promise((resolve, reject) => {
-      const worker = fork(__filename, [
-        "--worker",
-        envKey,
-        String(startSeed),
-        String(seedCount),
-        command || "",
-      ], {
-        env: { ...process.env, DELTAX_LOCAL_RUNTIME_CMD: command || "" },
-        stdio: ["inherit", "inherit", "inherit", "ipc"],
-      });
+  const workerResults = [];
 
-      let resultData = null;
-      worker.on("message", (msg) => {
-        if (msg && msg.type === "RESULT") {
-          resultData = msg.data;
+  // Simple concurrency queue
+  let envIndex = 0;
+  async function runNextWorker() {
+    while (envIndex < environments.length) {
+      const currentIdx = envIndex++;
+      const envKey = environments[currentIdx];
+      const workerFile = path.join(outDir, `.worker_${cohortName}_${envKey}.json`);
+
+      // Check if already completed and valid
+      if (fs.existsSync(workerFile)) {
+        try {
+          const cached = JSON.parse(fs.readFileSync(workerFile, "utf8"));
+          const hasAllControllers = CONTROLLERS_TO_EVALUATE.every((c) => cached[c] && cached[c].episodes?.length === seedCount);
+          if (hasAllControllers) {
+            console.log(`[CACHE HIT] Environment ${envKey} already complete on disk`);
+            workerResults.push([envKey, cached]);
+            continue;
+          }
+        } catch {
+          // Recompute if corrupt
         }
-      });
+      }
 
-      worker.on("error", reject);
-      worker.on("exit", (code) => {
-        if (code !== 0) {
-          reject(new Error(`Worker for ${envKey} exited with code ${code}`));
-        } else if (!resultData) {
-          reject(new Error(`Worker for ${envKey} did not send result data`));
-        } else {
-          console.log(`✓ Completed environment: ${envKey}`);
-          resolve([envKey, resultData]);
-        }
-      });
-    });
-  });
+      await new Promise((resolve, reject) => {
+        const worker = fork(__filename, [
+          "--worker",
+          envKey,
+          String(startSeed),
+          String(seedCount),
+          command || "",
+          cohortName,
+        ], {
+          env: { ...process.env, DELTAX_LOCAL_RUNTIME_CMD: command || "" },
+          stdio: ["inherit", "inherit", "inherit", "ipc"],
+        });
 
-  const workerResults = await Promise.all(workerPromises);
+        worker.on("error", reject);
+        worker.on("exit", (code) => {
+          if (code !== 0) {
+            return reject(new Error(`Worker for ${envKey} exited with code ${code}`));
+          }
+          if (!fs.existsSync(workerFile)) {
+            return reject(new Error(`Worker for ${envKey} finished but ${workerFile} was not found on disk`));
+          }
+          try {
+            const data = JSON.parse(fs.readFileSync(workerFile, "utf8"));
+            workerResults.push([envKey, data]);
+            resolve();
+          } catch (err) {
+            reject(new Error(`Worker for ${envKey} produced corrupt JSON in ${workerFile}: ${err.message}`));
+          }
+        });
+      });
+    }
+  }
+
+  const pool = Array.from({ length: Math.min(concurrency, environments.length) }, () => runNextWorker());
+  await Promise.all(pool);
+
   const matrix = Object.fromEntries(workerResults);
   const durationMs = Date.now() - tStart;
 
@@ -238,7 +306,7 @@ export async function runPhase4CCohort({
   }
 
   const artifact = {
-    schema: "phase4c.generalization.v1",
+    schema: "phase4c.generalization.v2",
     timestamp: new Date().toISOString(),
     cohort: cohortName,
     seed_range: `${startSeed}..${startSeed + seedCount - 1}`,
@@ -290,12 +358,10 @@ if (isMain) {
     const startSeed = parseInt(process.argv[4], 10);
     const seedCount = parseInt(process.argv[5], 10);
     const command = process.argv[6] || process.env.DELTAX_LOCAL_RUNTIME_CMD;
+    const cohortName = process.argv[7] || "dev";
 
-    runEnvWorker({ envKey, startSeed, seedCount, command })
-      .then((data) => {
-        if (process.send) {
-          process.send({ type: "RESULT", data });
-        }
+    runEnvWorker({ envKey, startSeed, seedCount, command, cohortName })
+      .then(() => {
         process.exit(0);
       })
       .catch((err) => {
@@ -308,7 +374,7 @@ if (isMain) {
       runPhase4CCohort({ cohortName: "held_out", startSeed: 12000, seedCount: 100 }).catch(console.error);
     } else {
       const countArg = parseInt(process.argv[3] || "50", 10);
-      runPhase4CCohort({ cohortName: "dev", startSeed: 11000, seedCount: countArg }).catch(console.error);
+      runPhase4CCohort({ cohortName: "dev", startSeed: 13000, seedCount: countArg }).catch(console.error);
     }
   }
 }

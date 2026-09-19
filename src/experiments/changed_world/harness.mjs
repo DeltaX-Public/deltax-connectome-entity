@@ -12,7 +12,7 @@ import { ConnectomeSensoryTransduction, TRANSDUCTION_MODES } from "../../connect
 import { ConnectomeCandidateBridge, READOUT_MODES } from "../../connectome/candidate_bridge.mjs";
 import { createShuffledConnectome } from "../../connectome/shuffled_control.mjs";
 import { createExecutive } from "../../deltax/index.mjs";
-import { CONTROLLER_TYPES, selectCandidate, createPrng } from "../../controllers/candidate_selectors.mjs";
+import { CONTROLLER_TYPES, selectCandidate, createPrng, FAILURE_TAXONOMY, classifyFailure } from "../../controllers/candidate_selectors.mjs";
 
 function computeEntropy(candidates) {
   const strengths = (candidates || []).map((c) => Math.max(1e-9, c.activation_strength || 0));
@@ -214,12 +214,20 @@ export class ChangedWorldHarness {
         trial2RecoveryStep: trial2.recoveryStep,
         trial1RepeatedMistakes: trial1.repeatedMistakeCount,
         trial2RepeatedMistakes: trial2.repeatedMistakeCount,
+        trial1FailureClassification: trial1.failureClassification,
+        trial2FailureClassification: trial2.failureClassification,
+        executiveSelectionSummary: {
+          trial1: trial1.executiveSelectionSummary,
+          trial2: trial2.executiveSelectionSummary,
+        },
+        forkCandidateLogs: [...(trial1.forkCandidateLogs || []), ...(trial2.forkCandidateLogs || [])],
       },
     };
   }
 
   async _runTrial({ trialNum = 1, isRecurrence = false, sessionIdOverride = null } = {}) {
     const history = [];
+    const forkCandidateLogs = [];
     const dispositionCounts = { PERMIT: 0, VETO: 0, MODULATE: 0, DEFER: 0, ESCALATE: 0 };
     let collisionCount = 0;
     let hazardCount = 0;
@@ -291,6 +299,7 @@ export class ChangedWorldHarness {
 
       let chosenCandidate = null;
       let decision = null;
+      let decision_step_telemetry = null;
       let staticGuardIntervened = false;
 
       // 5. Condition / Controller Logic
@@ -360,8 +369,12 @@ export class ChangedWorldHarness {
           totalContradictions++;
         }
 
+        const stepSession = this.controllerType === CONTROLLER_TYPES.DELTAX_STEP_RESET
+          ? `${session}_s${step}_${Math.random().toString(36).slice(2)}`
+          : session;
+
         const packet = this._buildExecutivePacket({
-          sessionId: session,
+          sessionId: stepSession,
           condition: "EXECUTIVE",
           step,
           senses,
@@ -394,15 +407,74 @@ export class ChangedWorldHarness {
           (c) => c.id === decision.selected_action_id || c.substrate_candidate_id === decision.selected_action_id
         );
 
+        let candidateMatchFound = false;
+        let mismatchReason = null;
+        let fallbackUsed = false;
+        let fallbackCandId = null;
+
         // Strict unassisted candidate selection: Follow DeltaX decision wherever non-forbidden and unvetoed.
-        // Zero harness-side steering overrides. If DeltaX selects halt, the entity halts.
+        // NEVER silently use arbitrary list-order fallback on invalid IDs.
         if (selected && !selected.forbidden && !vetoedIds.has(selected.id) && !vetoedIds.has(selected.substrate_candidate_id)) {
           chosenCandidate = selected;
-        } else if (admitted.length > 0) {
-          chosenCandidate = admitted[0];
+          candidateMatchFound = true;
         } else {
-          chosenCandidate = candidates.find((c) => c.provenance_type === "FALLBACK") || topCandidate;
+          fallbackUsed = true;
+          const fallbackCand = candidates.find((c) => c.provenance_type === "FALLBACK") ||
+                               candidates.find((c) => c.action_class === "safe_noop") ||
+                               candidates[0];
+          chosenCandidate = fallbackCand;
+          fallbackCandId = fallbackCand.id;
+
+          if (!selected) {
+            mismatchReason = "ID_NOT_IN_CANDIDATE_FIELD";
+          } else if (selected.forbidden) {
+            mismatchReason = "SELECTED_CANDIDATE_FORBIDDEN";
+          } else if (vetoedIds.has(selected.id) || vetoedIds.has(selected.substrate_candidate_id)) {
+            mismatchReason = "SELECTED_CANDIDATE_VETOED";
+          }
         }
+
+        decision_step_telemetry = {
+          executive_selected_id: decision.selected_action_id,
+          candidate_match_found: candidateMatchFound,
+          mismatch_reason: mismatchReason,
+          fallback_used: fallbackUsed,
+          fallback_candidate_id: fallbackCandId,
+        };
+      }
+
+      // Check for decisive fork state: entity at (5, 3) facing East with front obstacle blocked
+      if (st.body.x === 5 && st.body.y === 3 && st.body.heading === 0 && isBlocked) {
+        forkCandidateLogs.push({
+          step,
+          trialNum,
+          position: { x: st.body.x, y: st.body.y, heading: st.body.heading },
+          candidates: {
+            turn_left: candidates.find((c) => c.action_class === "turn_left") ? {
+              raw_rate_hz: dnReadouts.turn_left?.weighted_mean || 0,
+              strength: candidates.find((c) => c.action_class === "turn_left").activation_strength,
+              forbidden: !!candidates.find((c) => c.action_class === "turn_left").forbidden,
+            } : null,
+            turn_right: candidates.find((c) => c.action_class === "turn_right") ? {
+              raw_rate_hz: dnReadouts.turn_right?.weighted_mean || 0,
+              strength: candidates.find((c) => c.action_class === "turn_right").activation_strength,
+              forbidden: !!candidates.find((c) => c.action_class === "turn_right").forbidden,
+            } : null,
+            locomotion_backward: candidates.find((c) => c.action_class === "locomotion_backward") ? {
+              raw_rate_hz: dnReadouts.backward?.weighted_mean || 0,
+              strength: candidates.find((c) => c.action_class === "locomotion_backward").activation_strength,
+              forbidden: !!candidates.find((c) => c.action_class === "locomotion_backward").forbidden,
+            } : null,
+            locomotion_forward: candidates.find((c) => c.action_class === "locomotion_forward") ? {
+              raw_rate_hz: dnReadouts.forward?.weighted_mean || 0,
+              strength: candidates.find((c) => c.action_class === "locomotion_forward").activation_strength,
+              blocked: true,
+              forbidden: true,
+            } : null,
+          },
+          chosenCandidate: { id: chosenCandidate.id, action_class: chosenCandidate.action_class },
+          decision: decision ? { selected_action_id: decision.selected_action_id, disposition: decision.disposition ?? decision.selected_disposition } : null,
+        });
       }
 
       // Causal Integrity Assertion: chosen candidate MUST exist in pre-evaluation candidate field
@@ -447,6 +519,7 @@ export class ChangedWorldHarness {
           selected_action_id: decision.selected_action_id,
           provenance: decision.provenance,
         } : null,
+        decision_telemetry: decision_step_telemetry,
         staticGuardIntervened,
         isChanged: this.world.isChanged,
         reachedGoal: this.world.isGoal(),
@@ -457,6 +530,21 @@ export class ChangedWorldHarness {
     const finalOutcome = this.world.isGoal()
       ? (worldState.recoveryStep ? "RECOVERED_AND_COMPLETED" : "COMPLETED_DIRECT")
       : (this.world.energy <= 0 ? "ENERGY_DEPLETED" : (collisionCount > 5 ? "STALLED_AT_OBSTACLE" : "TIMEOUT"));
+
+    const execStepTelemetry = history.map((h) => h.decision_telemetry).filter(Boolean);
+    const totalExecDecisions = execStepTelemetry.length;
+    const matchedDecisions = execStepTelemetry.filter((t) => t.candidate_match_found).length;
+    const fallbackDecisions = execStepTelemetry.filter((t) => t.fallback_used).length;
+    const matchRate = totalExecDecisions > 0 ? +(matchedDecisions / totalExecDecisions).toFixed(4) : 1.0;
+
+    const failureClassification = classifyFailure({
+      reachedGoal: this.world.isGoal(),
+      history,
+      controller: this.controllerType || this.condition,
+      world: this.world,
+      stepCount: history.length,
+      maxSteps: this.maxStepsPerTrial,
+    });
 
     return {
       trialNum,
@@ -484,6 +572,14 @@ export class ChangedWorldHarness {
       recoveryStep: worldState.recoveryStep,
       repeatedMistakeCount: worldState.repeatedMistakeCount,
       finalOutcome,
+      executiveSelectionSummary: {
+        total_decisions: totalExecDecisions,
+        matched_decisions: matchedDecisions,
+        match_rate: matchRate,
+        fallback_count: fallbackDecisions,
+      },
+      forkCandidateLogs,
+      failureClassification,
       latencies: {
         connectomeSimTimeMs,
         deltaxIpcTimeMs,

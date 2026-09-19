@@ -29,6 +29,7 @@ export class ChangedWorld {
     seed = 42,
     staticObstacles = null,
     dynamicBlockage = null,
+    dynamicBlockages = null,
     hazards = null,
     goalRegion = null,
     recoveryZone = null,
@@ -69,6 +70,7 @@ export class ChangedWorld {
 
     // Dynamic blockage (drops at changeAtStep)
     this.dynamicBlockage = dynamicBlockage ? { ...dynamicBlockage } : { x: 6, y: 3 };
+    this.dynamicBlockages = dynamicBlockages ? [...dynamicBlockages] : null;
 
     // Hazard zone in changed state (surrounding the blockage)
     this.hazards = hazards ? [...hazards] : [{ x: 5, y: 3, cost: 2 }];
@@ -110,7 +112,13 @@ export class ChangedWorld {
     // Static obstacles
     if (this.staticObstacles.some((o) => o.x === x && o.y === y)) return true;
     // Dynamic blockage in changed world
-    if (this.isChanged && this.dynamicBlockage.x === x && this.dynamicBlockage.y === y) return true;
+    if (this.isChanged) {
+      if (this.dynamicBlockages && this.dynamicBlockages.length > 0) {
+        if (this.dynamicBlockages.some((b) => b.x === x && b.y === y)) return true;
+      } else if (this.dynamicBlockage && this.dynamicBlockage.x === x && this.dynamicBlockage.y === y) {
+        return true;
+      }
+    }
     return false;
   }
 
@@ -241,7 +249,7 @@ export class ChangedWorld {
       gradients: {
         hazard: isHazard,
         energy: this.energy,
-        food_signal: +(Math.max(0, 1 - (Math.hypot(9.5 - this.body.x, 3 - this.body.y) / 10))).toFixed(3),
+        food_signal: +(Math.max(0, 1 - (Math.hypot(((this.goalRegion.xMin + this.goalRegion.xMax) / 2) - this.body.x, ((this.goalRegion.yMin + this.goalRegion.yMax) / 2) - this.body.y) / 10))).toFixed(3),
       },
       energy: {
         remaining: this.energy,
