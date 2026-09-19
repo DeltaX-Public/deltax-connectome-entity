@@ -281,7 +281,7 @@ export class ChangedWorld {
     }
 
     // Post-change recovery tracking: entity moves beyond blockage along a bypass corridor
-    if (this.isChanged && this.recoveryStep === null && result.status === 'MOVED') {
+    if (this.isChanged && this.recoveryStep === null && (result.status === 'MOVED' || result.status === 'MOVED_BACKWARD')) {
       if ((this.body.y === 1 || this.body.y === 5) && this.body.x >= 6) {
         this.recoveryStep = this.stepCount;
       }

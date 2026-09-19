@@ -224,13 +224,13 @@ export async function runCohortParallel({
   startSeed = 9000,
   seedCount = 50,
   conditions = Object.keys(FACTORIAL_CONDITIONS),
-  command = process.env.DELTAX_LOCAL_RUNTIME_CMD || "/Users/dominicknoval/Projects/private/deltax-python-runtime/bin/deltax_local_provider",
+  command = process.env.DELTAX_LOCAL_RUNTIME_CMD || null,
 } = {}) {
   console.log(`\n======================================================`);
   console.log(`Starting Phase IV-B Parallel Factorial Evaluation: ${cohortName}`);
   console.log(`Seeds: ${startSeed}..${startSeed + seedCount - 1} (N = ${seedCount})`);
   console.log(`Conditions: ${conditions.join(", ")}`);
-  console.log(`Runtime: ${command || "None (Sovereign/Public-only)"}`);
+  console.log(`Runtime: ${command ? "local_runtime" : "None (Sovereign/Public-only)"}`);
   console.log(`Spawning ${conditions.length} parallel worker processes...`);
   console.log(`======================================================\n`);
 
@@ -244,7 +244,7 @@ export async function runCohortParallel({
         String(seedCount),
         command || "",
       ], {
-        env: { ...process.env, DELTAX_LOCAL_RUNTIME_CMD: command },
+        env: { ...process.env, DELTAX_LOCAL_RUNTIME_CMD: command || "" },
         stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
       });
 
@@ -280,7 +280,9 @@ export async function runCohortParallel({
     seed_range: `${startSeed}..${startSeed + seedCount - 1}`,
     seed_count: seedCount,
     duration_ms: durationMs,
-    runtime_command: command,
+    executive_source: command ? "local_runtime" : "public_only",
+    runtime_available: Boolean(command),
+    runtime_version: command ? "v1.0.0-local" : null,
     conditions: resultsByCondition,
   };
 

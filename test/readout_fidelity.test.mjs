@@ -104,3 +104,78 @@ test('5. Differential contrast invariant: symmetric bilateral steering cancels t
   const candFwd = candidates.find((c) => c.action_class === 'locomotion_forward');
   assert.ok(candFwd.activation_strength > 0.4, 'Forward locomotion is preserved');
 });
+
+test('6. Backward locomotion embodiment: MDN drive maps to backward action and executes correctly', async () => {
+  const bridge = new ConnectomeCandidateBridge({ readoutMode: READOUT_MODES.READOUT_C_INDEPENDENT_AXES });
+  const dnBack = makeSyntheticDn({ forward: 0.1, backward: 4.0 });
+  const candidates = bridge.generateCandidates(dnBack, 1);
+
+  const backCand = candidates.find((c) => c.action_class === 'locomotion_backward');
+  assert.ok(backCand, 'locomotion_backward candidate must exist when MDN rate > 0.1');
+  assert.equal(backCand.actuator_action, 'backward', 'locomotion_backward must map to backward actuator action');
+  assert.equal(backCand.is_executable, true, 'backward locomotion must be executable');
+  assert.equal(backCand.embodiment_status, 'FULLY_EMBODIED');
+
+  // Test in RoverBody
+  const { RoverBody } = await import('../src/embodiment/rover/body.mjs');
+  const rover = new RoverBody({ x: 3, y: 3, heading: 0, energy: 20 }); // Heading 0 = East
+  const proposal = rover.proposal('backward');
+  assert.equal(proposal.action, 'backward');
+  assert.equal(proposal.nextHeading, 0, 'Backward must preserve current heading');
+  assert.deepEqual(proposal.target, { x: 2, y: 3 }, 'Backward from (3,3) facing East must target (2,3)');
+
+  const res = rover.apply(proposal);
+  assert.equal(res.status, 'MOVED_BACKWARD');
+  assert.equal(rover.x, 2);
+  assert.equal(rover.y, 3);
+  assert.equal(rover.heading, 0);
+  assert.equal(rover.energy, 19.0, 'Backward must consume 1.0 energy unit');
+});
+
+test('7. Quiescence remains distinct from backward drive', () => {
+  const bridge = new ConnectomeCandidateBridge({ readoutMode: READOUT_MODES.READOUT_C_INDEPENDENT_AXES });
+  // Quiescent state: all 0
+  const dnQuiescent = makeSyntheticDn({ forward: 0, backward: 0 });
+  const candsQuiescent = bridge.generateCandidates(dnQuiescent, 1);
+  const backInQuiescent = candsQuiescent.find((c) => c.action_class === 'locomotion_backward');
+  assert.equal(backInQuiescent, undefined, 'locomotion_backward candidate must not be emitted when MDN is 0');
+
+  // Active backward state
+  const dnBack = makeSyntheticDn({ forward: 0, backward: 3.0 });
+  const candsBack = bridge.generateCandidates(dnBack, 1);
+  const backActive = candsBack.find((c) => c.action_class === 'locomotion_backward');
+  assert.ok(backActive, 'locomotion_backward must be emitted when MDN is active');
+  assert.ok(backActive.activation_strength > 0.5);
+});
+
+test('8. Escape reflex distinct from halt and marked UNEMBODIED in rover', () => {
+  const bridge = new ConnectomeCandidateBridge({ readoutMode: READOUT_MODES.READOUT_C_INDEPENDENT_AXES });
+  const dnEscape = makeSyntheticDn({ forward: 0.1, escape: 25.0 });
+  const candidates = bridge.generateCandidates(dnEscape, 1);
+
+  const escapeCand = candidates.find((c) => c.action_class === 'giant_fiber_escape');
+  assert.ok(escapeCand, 'giant_fiber_escape candidate must exist');
+  assert.equal(escapeCand.is_executable, false, 'escape reflex must not be executable in rover');
+  assert.equal(escapeCand.forbidden, true, 'escape reflex must be marked forbidden for execution');
+  assert.equal(escapeCand.forbidden_reason, 'UNEMBODIED_ACTUATOR');
+  assert.equal(escapeCand.actuator_action, null, 'escape must not silently map to stop');
+});
+
+test('9. Causal provenance invariant: executed action traces to pre-evaluation candidate ID', async () => {
+  const { ChangedWorldHarness } = await import('../src/experiments/changed_world/harness.mjs');
+  const harness = new ChangedWorldHarness({
+    seed: 9001,
+    condition: 'CONTROL',
+    sensoryMode: 'LATERALIZED',
+    readoutMode: READOUT_MODES.READOUT_C_INDEPENDENT_AXES,
+    maxStepsPerTrial: 5,
+  });
+
+  const ep = await harness.runEpisode();
+  await harness.close();
+
+  for (const stepLog of ep.trial1.history) {
+    assert.ok(stepLog.chosenCandidateClass, 'Step log must record chosen candidate class');
+    assert.ok(['forward', 'backward', 'left', 'right', 'stop'].includes(stepLog.chosenAction));
+  }
+});

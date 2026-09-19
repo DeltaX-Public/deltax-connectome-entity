@@ -466,7 +466,9 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
       id: `cand_backward_${tick}`,
       substrate_candidate_id: `sub_dn_backward_${tick}`,
       action_class: "locomotion_backward",
-      actuator_action: "stop",
+      actuator_action: "backward",
+      is_executable: true,
+      embodiment_status: "FULLY_EMBODIED",
       provenance_type: "MEASURED_NEURAL",
       activation_strength: Math.min(1.0, backStrength),
       originating_population: back.types || ["MDN"],
@@ -478,13 +480,17 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
     });
   }
 
-  // 5. Giant Fibre Escape
+  // 5. Giant Fibre Escape (Retained as neural candidate, marked unembodied in rover)
   if (escapeStrength > 0.05 || (gf.neurons || []).length > 0) {
     candidates.push({
       id: `cand_escape_${tick}`,
       substrate_candidate_id: `sub_dn_escape_${tick}`,
       action_class: "giant_fiber_escape",
-      actuator_action: "stop",
+      actuator_action: null,
+      is_executable: false,
+      forbidden: true,
+      forbidden_reason: "UNEMBODIED_ACTUATOR",
+      embodiment_status: "UNEMBODIED",
       provenance_type: "MEASURED_NEURAL",
       activation_strength: escapeStrength,
       originating_population: [...(gf.types || []), ...(to.types || [])],
@@ -492,17 +498,21 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
       raw_activity_measure: { escape_hz: escapeHz },
       normalization_method: "min(1.0, escape_hz / escapeScale)",
       tick,
-      description: "Giant fibre escape reflex",
+      description: "Giant fibre escape reflex (ballistic jump unembodied in rover)",
     });
   }
 
-  // 6. Grooming
+  // 6. Grooming (Retained as neural candidate, marked unembodied in rover)
   if (groomStrength > 0.05) {
     candidates.push({
       id: `cand_groom_${tick}`,
       substrate_candidate_id: `sub_dn_groom_${tick}`,
       action_class: "groom",
-      actuator_action: "stop",
+      actuator_action: null,
+      is_executable: false,
+      forbidden: true,
+      forbidden_reason: "UNEMBODIED_ACTUATOR",
+      embodiment_status: "UNEMBODIED",
       provenance_type: "MEASURED_NEURAL",
       activation_strength: groomStrength,
       originating_population: groom.types || [],
@@ -510,7 +520,7 @@ export function generateCandidates_C_IndependentAxes(dnReadouts, tick = 1, scale
       raw_activity_measure: { weighted_mean_hz: groomHz },
       normalization_method: "min(1.0, groom_hz / groomScale)",
       tick,
-      description: "Front-leg grooming sweep",
+      description: "Front-leg grooming sweep (unembodied in rover)",
     });
   }
 

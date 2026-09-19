@@ -13,7 +13,7 @@
 Phase IV-B investigated the transmission of behavioral information across the full embodied closed-loop pipeline:
 $$\text{WORLD} \longrightarrow \text{SENSOR} \longrightarrow \text{CONNECTOME} \longrightarrow \text{DN} \longrightarrow \text{CANDIDATE} \longrightarrow \text{EXECUTIVE} \longrightarrow \text{ACTION}$$
 
-Prior to this phase, the intact *Drosophila melanogaster* whole-CNS connectome (139,255 neurons, 10.5M synapses) produced low directional steering rates ($\approx 11-13\%$) and heavy stop rates ($>80\%$) in closed-loop navigation. Phase IV-A established that sensory receptors reach descending motor neurons within 2–3 synaptic hops, and asymmetric stimulation drives differential descending neuron (DN) activity in open-loop assays.
+Prior to this phase, the intact *Drosophila melanogaster* whole-CNS connectome (165,122 neurons, approximately 10.5M synapses) produced low directional steering rates ($\approx 11-13\%$) and heavy stop rates ($>80\%$) in closed-loop navigation. Phase IV-A established that sensory receptors reach descending motor neurons within 2–3 synaptic hops, and asymmetric stimulation drives differential descending neuron (DN) activity in open-loop assays.
 
 In Phase IV-B, we conducted a rigorous, pre-registered 7-condition factorial experiment across a Development Cohort ($N = 50$, seeds `9000..9049`) and a Held-Out Cohort ($N = 100$, seeds `10000..10099`), alongside an exhaustive transfer-function audit of the candidate bridge and upstream motor reference comparison.
 
@@ -57,13 +57,15 @@ s_{\text{halt}} &= \max\left(0.1, 1.0 - 0.85 \cdot s_{\text{fwd}}\right)
 ## 2. Upstream Reference Comparison (`sim/motor.js`)
 
 We reviewed the upstream reference implementation from `upstream/fly-brain/src/sim/motor.js`:
-- Forward translation: Driven by `DNa01`, `DNa02` with a hard threshold of $4\text{ Hz}$.
-- Steering torque: Driven by bilateral difference $(R - L)$ of steering DNs (`DNb01`, `DNb02`).
-- Stop / Brake: Driven by `DNp01` (descending halt neuron).
+- Forward translation: Driven by `DNa01`, `DNa02`, `DNg100`, `DNg97`, `DNp09` with a hard threshold of $4\text{ Hz}$.
+- Steering torque: Driven by bilateral difference $(R - L)$ of steering DNs (`DNa02`, `DNa01`, `DNp09`).
+- Escape / Looming: Driven by `DNp01` (Giant Fibre) and `DNp02, DNp04` (takeoff).
+- Backward walking: Driven by `MDN` (Moonwalker Descending Neurons).
+- Stop / Stance: Passive stance when forward translation and steering are below threshold; upstream contains no dedicated descending braking population.
 
 ### Comparative Analysis:
-1. **Separation of Halt from Translation:** The upstream model does *not* compute halt as an inverse heuristic of forward motion. Halt is governed by dedicated braking populations.
-2. **Thresholding vs Normalization:** The upstream model relies on hard step thresholds ($4\text{ Hz}$ cutoff), which collapses low-frequency subthreshold dynamics.
+1. **Passive Stance vs Synthesized Competitor:** The upstream model does *not* synthesize an active competing "halt" candidate. When translational and steering drives are low, stepping amplitude decays to 0 (passive stance). In contrast, `READOUT_A` synthesized an aggressive competitor $s_{\text{halt}} = \max(0.1, 1.0 - 0.85 \cdot s_{\text{fwd}})$ that actively suppressed steering.
+2. **Thresholding vs Normalization:** The upstream model relies on hard step thresholds ($4\text{ Hz}$ cutoff), which collapses low-frequency subthreshold dynamics in sparse stimulation regimes.
 3. **Continuous Mechanics vs Discrete Candidates:** The upstream model computes continuous vector propulsion ($v_x, v_y, \omega$), whereas DeltaX governance requires discrete, typed behavioral candidates with provenance.
 
 The complete comparative analysis was documented in `docs/PHASE_4B_READOUT_COMPARISON.md`.
@@ -74,7 +76,7 @@ The complete comparative analysis was documented in `docs/PHASE_4B_READOUT_COMPA
 
 Three readout architectures were implemented in `src/connectome/candidate_readouts.mjs`:
 1. `READOUT_A_CURRENT`: The legacy inverse-heuristic formulation.
-2. `READOUT_B_UPSTREAM_REFERENCE`: Upstream FlyBrain-derived thresholded formulation with independent `DNp01` halt drive.
+2. `READOUT_B_UPSTREAM_REFERENCE`: Upstream FlyBrain-derived thresholded formulation with passive stance gating.
 3. `READOUT_C_INDEPENDENT_AXES`: Calibrated independent-axis transfer function with differential steering contrast and autonomous braking dynamics.
 
 ### Mathematical Formulation of `READOUT_C_INDEPENDENT_AXES`:
@@ -159,17 +161,21 @@ In the Phase III candidate bridge (`READOUT_A_CURRENT`), the halt candidate stre
 
 ### 2. Did the upstream reference (`sim/motor.js`) inspire a principled fix, or does it also contain information bottlenecks?
 **Both.**  
-The upstream reference inspired the principled decoupling of halt drive from forward translation by modeling braking as an active biological motor program (driven by `DNp01`) rather than an inverse heuristic of forward motion. However, `sim/motor.js` contains its own severe information bottleneck: it applies hard activation thresholds ($4\text{ Hz}$ cutoffs) that discard subthreshold synaptic dynamics, resulting in a $91.4\%$ state collapse and $0\%$ steering win rate on the empirical Atlas trajectories. `READOUT_C_INDEPENDENT_AXES` solved this by employing smooth, continuous transfer functions that preserve fine-grained DN contrast.
+The upstream reference inspired the principled decoupling of halt drive from forward translation: biological rest is a passive stance when locomotor and steering drives are low, rather than an inverse heuristic of forward motion. Upstream does not use a dedicated descending braking population; `DNp01` is mapped to Giant Fibre looming escape. However, `sim/motor.js` applies hard activation thresholds ($4\text{ Hz}$ cutoffs) that discard subthreshold synaptic dynamics, resulting in a $91.4\%$ state collapse and $0\%$ steering win rate on empirical Atlas trajectories. `READOUT_C_INDEPENDENT_AXES` solved this by employing smooth, continuous transfer functions that preserve fine-grained DN contrast.
 
 ### 3. What is the information preservation score of the new candidate readout vs the old one?
-On the frozen Phase IV-A empirical atlas states ($N=35$):
+On the frozen Phase IV-A empirical atlas states ($N = 35$):
 - **Steering Sign Preservation:** Improved from **$23.8\%$** (`READOUT_A`) to **$100.0\%$** (`READOUT_C`).
-- **Spearman Rank Correlation ($\rho$):** Improved from **$0.1319$** (`READOUT_A`) to **$1.0000$** (`READOUT_C`) ($p < 10^{-15}$).
+- **Spearman Rank Correlation ($\rho$):** Improved from **$0.1319$** (`READOUT_A`) to **$1.0000$** (`READOUT_C`) ($N = 35$, monotonic rank preservation across all empirical atlas states).
 - **State Collapse Rate:** Decreased from $91.4\%$ (where `halt` won every state) to $57.1\%$, enabling all five behavioral candidates (`forward`, `backward`, `turn_left`, `turn_right`, `halt`) to win in distinct, biologically appropriate neural states.
 
 ### 4. Did lateralized sensory input produce directional steering candidates in the fixed connectome without harness logic?
-**Yes.**  
-In the unassisted connectome under calibrated readout (Condition D), directional steering candidates were produced continuously in response to physical boundary and gradient cues, resulting in **$4,993$ turning actions ($71.3\%$)** out of $7,000$ steps without any harness steering injection.
+**Yes, but its closed-loop behavioral impact in Phase IV-B was constrained by harness and geometry factors.**  
+As documented in `artifacts/readout/lateral-sensor-closed-loop-audit.json`:
+1. In the initial factorial evaluation runner, `lateral_sensors` was omitted from the observation dictionary passed to `transduce()`, causing Conditions B and D to fall back to symmetric transduction.
+2. In the central corridor ($y = 3$), the North ($y = 2$) and South ($y = 4$) walls are equidistant ($1.0$ grid unit), so lateral antennal distances are geometrically identical during baseline traversal.
+3. Once the door at $x = 6$ closes, the intact connectome displays a strong endogenous leftward turning bias under mechanosensory contact (turning left at $6.2\text{ Hz}$ vs right at $1.1\text{ Hz}$).
+Thus, while lateralized sensory input generates asymmetric receptor drives once heading rotates, the unassisted connectome's innate left bias dominates candidate selection under both symmetric and lateralized sensing.
 
 ### 5. Did the fixed connectome navigate the changed world successfully under any condition?
 **No, not when operating autonomously without DeltaX governance.**  
@@ -178,13 +184,20 @@ In Conditions C, D, and E (fixed connectome alone), the agent achieved **$0.0\%$
 
 ### 6. What is the remaining information bottleneck across the embodiment pipeline?
 Tracing the full pipeline:
-1. $\text{WORLD} \to \text{SENSOR}$: Resolved in IV-B (5-ray array + lateral antenna mapping provides continuous spatial contrast).
+1. $\text{WORLD} \to \text{SENSOR}$: Continuous 5-ray geometry implemented; verified in audit.
 2. $\text{SENSOR} \to \text{CONNECTOME}$: Functional (reaches DNs within 2–3 hops; optogenetic and sham interventions confirm propagation).
-3. $\text{CONNECTOME} \to \text{DN}$: **Primary Bottleneck.** The fixed, unadapted connectome possesses an open-loop intrinsic bias: strong turning drive coupled with low forward persistence under aversive cues. It lacks temporal integration or synaptic plasticity to alter its motor output when a motor strategy fails.
+3. $\text{CONNECTOME} \to \text{DN}$: **Substrate Limitation.** The fixed, unadapted connectome possesses an open-loop intrinsic bias: strong turning drive coupled with low forward persistence under aversive cues. It lacks temporal integration or synaptic plasticity to alter its motor output when a motor strategy fails.
 4. $\text{DN} \to \text{CANDIDATE}$: Resolved in IV-B (`READOUT_C` achieves $\rho = 1.0$, $100\%$ sign fidelity).
-5. $\text{CANDIDATE} \to \text{EXECUTIVE}$: Resolved (DeltaX successfully resolves contradiction and orchestrates bypass navigation).
+5. $\text{CANDIDATE} \to \text{ACTUATOR}$: Resolved in IV-C audit (`locomotion_backward` mapped to true `backward` locomotion; `giant_fiber_escape` and `groom` explicitly classified as unembodied).
 6. $\text{EXECUTIVE} \to \text{ACTION}$: Proven non-contaminating ($100\%$ bit-parity between D and E; zero harness injections in F).
 
-### 7. What does this imply for Phase IV-C (Connectome Plasticity / Learning)?
-This outcome establishes the precise, empirical raison d'être for **Phase IV-C (Plasticity)**:
-Because the fixed connectome's innate wiring produces a rotational limit cycle rather than path following or obstacle avoidance, **synaptic plasticity is strictly necessary for the connectome substrate itself to learn autonomous obstacle avoidance and spatial adaptation.** DeltaX executive governance provides the supervisory contradiction signal ($\Delta C, \Lambda$) that can gate local Hebbian / STDP or neuromodulatory weight updates at sensory-to-interneuron and interneuron-to-DN synapses. Phase IV-C can now introduce executive-gated plasticity with full confidence that the sensory and readout interfaces are completely unblocked and faithful.
+### 7. What does this imply for Phase IV-C and Future Learning?
+The empirical evidence indicates that:
+**The current fixed connectome, current neural dynamics, calibrated readout, and current embodiment did not autonomously solve the ChangedWorld task.**  
+While DeltaX executive governance successfully navigates the environment by sequencing the connectome's existing candidates, the unassisted substrate remains trapped in a rotational loop. Plasticity is a justified research hypothesis, not a proven necessity. Alternative or contributing explanations remain viable, including:
+- Embodiment incompleteness (e.g. 2D discrete grid vs 3D continuous tripod kinematics);
+- Sensory encoding bandwidth and spatial resolution;
+- Fixed recurrent dynamics and endogenous circuit biases;
+- Task/environment geometry mismatch;
+- Executive temporal sequencing vs internal substrate memory.
+Evaluating whether DeltaX executive sequencing genuinely generalizes across varied geometries and how simple non-learning candidate selectors perform is the immediate objective of **Phase IV-C**.

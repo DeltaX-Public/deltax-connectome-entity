@@ -251,6 +251,7 @@ export class ChangedWorldHarness {
         collision: senses.collision,
         gradients: senses.gradients,
         proximity: senses.proximity,
+        lateral_sensors: senses.lateral_sensors,
         body: st.body,
       });
       this.runtime.setSensoryDrives(sensoryDrives);
@@ -264,12 +265,17 @@ export class ChangedWorldHarness {
       const dnReadouts = this.runtime.getDescendingNeuronReadouts();
       const candidates = this.bridge.generateCandidates(dnReadouts, step);
 
-      // Hard physical constraint: forward locomotion is physically impossible when blocked ahead
-      if (isBlocked) {
-        for (const c of candidates) {
-          if (c.action_class === "locomotion_forward") {
-            c.forbidden = true;
-          }
+      // Hard physical constraints:
+      // 1. Forward locomotion is physically impossible when blocked ahead
+      // 2. Unembodied actions are rejected as actuator-unavailable
+      for (const c of candidates) {
+        if (isBlocked && c.action_class === "locomotion_forward") {
+          c.forbidden = true;
+          c.forbidden_reason = "BLOCKED_AHEAD";
+        }
+        if (c.embodiment_status === "UNEMBODIED" || c.is_executable === false) {
+          c.forbidden = true;
+          c.forbidden_reason = "UNEMBODIED_ACTUATOR";
         }
       }
 
@@ -505,6 +511,7 @@ export class ChangedWorldHarness {
   _mapCandidateToRover(actionClass) {
     switch (actionClass) {
       case "locomotion_forward": return "forward";
+      case "locomotion_backward": return "backward";
       case "turn_left": return "left";
       case "turn_right": return "right";
       case "halt": return "stop";

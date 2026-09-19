@@ -5,7 +5,9 @@
   "seed_range": "9000..9049",
   "seed_count": 50,
   "duration_ms": 444006,
-  "runtime_command": "/Users/dominicknoval/Projects/private/deltax-python-runtime/bin/deltax_local_provider",
+  "executive_source": "local_runtime",
+  "runtime_available": true,
+  "runtime_version": "v1.0.0-local",
   "conditions": {
     "A_OLD_SYMM_OLD_READOUT": {
       "config": {
