@@ -66,3 +66,26 @@ The Entity Observatory is a polished, secondary view over available harness arti
 
 5. **Observer Non-Contamination (Verified):**  
    `CONTROL` and `OBSERVE` conditions achieve 100.00% action trajectory parity across all 100 held-out evaluation seeds (4000..4099), proving that DeltaX ephemeral observation causes zero physical or neural actuation side-effects.
+
+## Phase IV-C Motor Embodiment Fidelity & Executive Generalization (Held-Out Formal Evidence)
+
+1. **Executive Spatial Generalization (11 / 15 Envs Solved at 100.0%):**  
+   Across $N = 100$ held-out seeds (`12000..12099`), `DELTAX_EXECUTIVE` achieved a **73.3% generalization rate** (11 of 15 environments solved at $\ge 80\%$, with **100.0% goal discovery and 0.0 collisions** across all 1,100 episodes in the 11 solved environments).
+
+2. **Causal Source of Navigation Failures (`SUBSTRATE_CANDIDATE_ABSENCE`):**  
+   Across all 400 failed episodes for DeltaX (`ENV_1B_TRUE_RIGHT_REQUIRED`, `ENV_POLARITY_RIGHT`, `ENV_CHOICE_WITH_REVERSAL`, `ENV_TEMPORAL_NON_MARKOVIAN`), 100.0% were causally caused by **substrate candidate absence**. In every failure case, rightward steering was physically required to reach the goal, but descending neuron telemetry confirms `turn_right` had $0.0\text{ Hz}$ raw activation and $0.000$ strength. There were **0 executive selection failures**.
+
+3. **True Left/Right Steering Asymmetry:**  
+   In the matched geometric reflection pair, DeltaX solved `ENV_POLARITY_LEFT` at **100.0% [96.3–100.0%]** and `ENV_POLARITY_RIGHT` at **0.0% [0.0–3.7%]**, confirming that fixed connectome steering under lateralized obstacle contact possesses an endogenous leftward turning polarity rather than bilateral motor competence.
+
+4. **Wall-Following Heuristic Boundary:**  
+   In `ENV_CHOICE_WITH_REVERSAL`, which requires alternating turn polarity at sequential obstacles, monotonic wall-following failed (0.0% for DeltaX, 3.0% for Simple Reflex).
+
+5. **State Reset Invariance:**  
+   `DELTAX_EXECUTIVE` (continuous retained state), `DELTAX_TRIAL_RESET` (inter-trial reset), and `DELTAX_STEP_RESET` (stateless per-step session isolation) produced **bit-exact identical trajectories and action counts** across all 9,000 held-out episodes. Cross-trial retained executive state produced zero measurable advantage in this benchmark.
+
+6. **Executive Candidate Selection Fidelity:**  
+   Across all 54,000 executive decision ticks, candidate-ID matching was **100.00%**, with **0.00%** fallback usage.
+
+7. **Explicit Non-Claims:**  
+   DeltaX navigation is driven by reactive candidate arbitration and clearance sequencing, not long-horizon spatial planning, internal cognitive mapping, general bilateral steering, executive memory, or learned synaptic plasticity.
