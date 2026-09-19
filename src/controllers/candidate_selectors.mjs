@@ -185,12 +185,27 @@ export function classifyFailure({
   history = [],
   controller,
   world = null,
+  environmentId = null,
+  forkCandidateLogs = [],
   stepCount = 0,
   maxSteps = 35,
 }) {
   if (reachedGoal) return null;
 
-  // 1. Detect position oscillation / limit cycles
+  // 1. If at decisive fork the required candidate was absent or sub-threshold
+  if (forkCandidateLogs && forkCandidateLogs.length > 0) {
+    for (const fl of forkCandidateLogs) {
+      // If facing obstacle with right turn required and right turn was 0 / sub-threshold
+      if (fl.position?.x === 5 && fl.position?.y === 3 && fl.position?.heading === 0) {
+        const tr = fl.candidates?.turn_right;
+        if (!tr || tr.forbidden || (tr.strength <= 0 && tr.raw_rate_hz <= 0)) {
+          return FAILURE_TAXONOMY.SUBSTRATE_CANDIDATE_ABSENCE;
+        }
+      }
+    }
+  }
+
+  // 2. Detect position oscillation / limit cycles
   const posCounts = new Map();
   let maxVisits = 0;
   for (const h of history) {
@@ -201,30 +216,21 @@ export function classifyFailure({
   }
   const hasLimitCycle = maxVisits >= 3;
 
-  // 2. Substrate-only controllers
+  // 3. If limit cycle was observed in unguided substrate
   if (controller === CONTROLLER_TYPES.SUBSTRATE_TOP || controller === CONTROLLER_TYPES.STOCHASTIC_WEIGHTED) {
-    // Check if turning / forward candidates existed during the episode
-    let hadCandidates = false;
-    for (const h of history) {
-      if ((h.candidates || []).some(c => !c.forbidden && ["turn_left", "turn_right", "locomotion_forward"].includes(c.action_class))) {
-        hadCandidates = true;
-        break;
-      }
-    }
-    if (hasLimitCycle || hadCandidates) {
+    if (hasLimitCycle) {
       return FAILURE_TAXONOMY.SUBSTRATE_DYNAMICS_LIMIT_CYCLE;
     }
     return FAILURE_TAXONOMY.SUBSTRATE_CANDIDATE_ABSENCE;
   }
 
-  // 3. Simple reflex controller
+  // 4. Controller selection failure
   if (controller === CONTROLLER_TYPES.SIMPLE_REFLEX) {
     return FAILURE_TAXONOMY.CONTROLLER_SELECTION_FAILURE;
   }
 
-  // 4. Executive controllers
+  // 5. Executive selection failure (when admissible candidate existed but executive selected another)
   if ([CONTROLLER_TYPES.DELTAX_EXECUTIVE, CONTROLLER_TYPES.DELTAX_TRIAL_RESET, CONTROLLER_TYPES.DELTAX_STEP_RESET].includes(controller)) {
-    // Check if decisive unvetoed candidate existed that could have succeeded
     return FAILURE_TAXONOMY.EXECUTIVE_SELECTION_FAILURE;
   }
 

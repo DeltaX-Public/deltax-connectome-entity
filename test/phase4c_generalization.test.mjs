@@ -12,6 +12,7 @@ import {
   FAILURE_TAXONOMY,
   classifyFailure,
 } from '../src/controllers/candidate_selectors.mjs';
+import { DIAGNOSTIC_FORKS, attributeFailureCausally } from '../src/experiments/changed_world/diagnostic_forks.mjs';
 
 test('1. Environment Generalization Suite contains valid, schema-compliant environments', () => {
   const envKeys = Object.keys(ENVIRONMENT_SUITE);
@@ -158,7 +159,7 @@ test('7. classifyFailure correctly separates limit cycles from candidate absence
   });
   assert.equal(failCyclic, FAILURE_TAXONOMY.SUBSTRATE_DYNAMICS_LIMIT_CYCLE);
 
-  // 2. Simple reflex failure
+  // 2. Simple reflex failure when candidates existed
   const failReflex = classifyFailure({
     reachedGoal: false,
     history: cyclicHistory,
@@ -166,11 +167,65 @@ test('7. classifyFailure correctly separates limit cycles from candidate absence
   });
   assert.equal(failReflex, FAILURE_TAXONOMY.CONTROLLER_SELECTION_FAILURE);
 
-  // 3. Executive failure
-  const failExec = classifyFailure({
+  // 3. Substrate candidate absence at decisive fork
+  const decisiveForkLog = [{
+    position: { x: 5, y: 3, heading: 0 },
+    candidates: {
+      turn_left: { raw_rate_hz: 14.5, strength: 1.0, forbidden: false },
+      turn_right: { raw_rate_hz: 0.0, strength: 0.0, forbidden: false },
+    },
+  }];
+  const failAbsence = classifyFailure({
     reachedGoal: false,
     history: cyclicHistory,
+    forkCandidateLogs: decisiveForkLog,
     controller: CONTROLLER_TYPES.DELTAX_EXECUTIVE,
   });
-  assert.equal(failExec, FAILURE_TAXONOMY.EXECUTIVE_SELECTION_FAILURE);
+  assert.equal(failAbsence, FAILURE_TAXONOMY.SUBSTRATE_CANDIDATE_ABSENCE);
+});
+
+test('8. Evaluator-only diagnostic fork metadata cannot be read by controllers or observe()', () => {
+  // Verify observe() returns clean physical sensory packet with zero diagnostic metadata
+  for (const [key, envDef] of Object.entries(ENVIRONMENT_SUITE)) {
+    const world = envDef.createWorld();
+    const obs = world.observe();
+    const serialized = JSON.stringify(obs);
+
+    assert.equal(serialized.includes('necessary_action_class'), false, `observe() leaked metadata in ${key}`);
+    assert.equal(serialized.includes('valid_action_classes'), false, `observe() leaked metadata in ${key}`);
+    assert.equal(serialized.includes('DIAGNOSTIC_FORKS'), false, `observe() leaked metadata in ${key}`);
+    assert.equal(serialized.includes('fork_id'), false, `observe() leaked metadata in ${key}`);
+  }
+
+  // Verify candidate selection input cannot access diagnostic forks
+  const candidate = { id: 'c1', action_class: 'turn_left', activation_strength: 1.0 };
+  const decision = selectCandidate({
+    controller: CONTROLLER_TYPES.SIMPLE_REFLEX,
+    candidates: [candidate],
+    senses: { visual_field: { obstacle_ahead: false } },
+  });
+  assert.equal(decision.necessary_action_class, undefined);
+  assert.equal(decision.diagnostic_metadata, undefined);
+});
+
+test('9. attributeFailureCausally correctly attributes right-turn absence in right-required worlds', () => {
+  const decisiveForkLog = [{
+    position: { x: 5, y: 3, heading: 0 },
+    candidates: {
+      turn_left: { raw_rate_hz: 14.5, strength: 1.0, forbidden: false },
+      turn_right: { raw_rate_hz: 0.0, strength: 0.0, forbidden: false },
+    },
+  }];
+
+  const attribution = attributeFailureCausally({
+    environmentId: 'ENV_POLARITY_RIGHT',
+    controller: 'DELTAX_EXECUTIVE',
+    reachedGoal: false,
+    forkCandidateLogs: decisiveForkLog,
+    actionCounts: { forward: 35, left: 35, right: 0 },
+  });
+
+  assert.equal(attribution.category, 'SUBSTRATE_CANDIDATE_ABSENCE');
+  assert.equal(attribution.causal_layer, 'substrate_candidate_generation');
+  assert.equal(attribution.necessary_action, 'turn_right');
 });

@@ -443,8 +443,14 @@ export class ChangedWorldHarness {
         };
       }
 
-      // Check for decisive fork state: entity at (5, 3) facing East with front obstacle blocked
-      if (st.body.x === 5 && st.body.y === 3 && st.body.heading === 0 && isBlocked) {
+      // Check for decisive fork states: entity confronting blocked obstacles at diagnostic junctions
+      const isDiagnosticFork = isBlocked && (
+        (st.body.x === 5 && st.body.y === 3) ||
+        (st.body.x === 3 && st.body.y === 3) ||
+        (st.body.x === 4 && st.body.y === 3) ||
+        (st.body.x === 8 && st.body.y === 1)
+      );
+      if (isDiagnosticFork) {
         forkCandidateLogs.push({
           step,
           trialNum,
@@ -542,6 +548,7 @@ export class ChangedWorldHarness {
       history,
       controller: this.controllerType || this.condition,
       world: this.world,
+      forkCandidateLogs,
       stepCount: history.length,
       maxSteps: this.maxStepsPerTrial,
     });

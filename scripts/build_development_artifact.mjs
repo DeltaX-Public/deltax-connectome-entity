@@ -24,12 +24,18 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { attributeFailureCausally, DIAGNOSTIC_FORKS } from "../src/experiments/changed_world/diagnostic_forks.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 
-const rawPath = path.join(ROOT, "artifacts", "generalization", "phase4c-generalization-dev.json");
+const cohortArg = process.argv[2] || "dev";
+const isHeldOut = cohortArg === "held_out";
+const rawFileName = isHeldOut ? "phase4c-generalization-held_out.json" : "phase4c-generalization-dev.json";
+const outFileName = isHeldOut ? "phase4c-held-out.json" : "phase4c-development.json";
+
+const rawPath = path.join(ROOT, "artifacts", "generalization", rawFileName);
 if (!fs.existsSync(rawPath)) {
   console.error(`Missing raw data at ${rawPath}`);
   process.exit(1);
@@ -37,6 +43,7 @@ if (!fs.existsSync(rawPath)) {
 const rawData = JSON.parse(fs.readFileSync(rawPath, "utf8"));
 
 const formattedEpisodes = [];
+const failureAttributions = [];
 let totalExecDecisionsCohort = 0;
 let matchedExecDecisionsCohort = 0;
 let fallbackExecDecisionsCohort = 0;
@@ -78,6 +85,29 @@ for (const [envKey, controllers] of Object.entries(rawData.matrix)) {
         };
       }
 
+      let failureAttribution = null;
+      let failureCat = null;
+      if (!reachedGoal) {
+        failureAttribution = attributeFailureCausally({
+          environmentId: envKey,
+          controller: controllerKey,
+          reachedGoal: false,
+          history: [],
+          actionCounts: act,
+          forkCandidateLogs: ep.forkCandidateLogs || [],
+          stepCount: ep.t1Steps + ep.t2Steps,
+        });
+        failureCat = failureAttribution ? failureAttribution.category : "OTHER";
+        failureAttributions.push({
+          seed: ep.seed,
+          environment: envKey,
+          controller: controllerKey,
+          steps: ep.t1Steps + ep.t2Steps,
+          action_counts: act,
+          attribution: failureAttribution,
+        });
+      }
+
       formattedEpisodes.push({
         seed: ep.seed,
         environment: envKey,
@@ -108,7 +138,8 @@ for (const [envKey, controllers] of Object.entries(rawData.matrix)) {
         },
         dominant_selected_candidate: act.forward > act.left ? "locomotion_forward" : "turn_left",
         executive_disposition: controllerKey.startsWith("DELTAX") ? "GOVERNED" : "N/A",
-        failure_classification: reachedGoal ? "NONE" : (ep.failureClassification || "SUBSTRATE_DYNAMICS_LIMIT_CYCLE"),
+        failure_classification: reachedGoal ? "NONE" : failureCat,
+        failure_attribution: failureAttribution,
         session_state_condition: sessionState,
         executive_matching: execMatching,
         fork_candidate_logs: ep.forkCandidateLogs || [],
@@ -137,7 +168,16 @@ for (const [envKey, controllers] of Object.entries(rawData.matrix)) {
       agg.total_steps += ep.t2Steps;
       agg.total_collisions += ep.t2Collisions;
       if (!ep.bothReachedGoal) {
-        const fType = ep.failureClassification || "OTHER";
+        const epAttribution = attributeFailureCausally({
+          environmentId: envKey,
+          controller: controllerKey,
+          reachedGoal: false,
+          history: [],
+          actionCounts: ep.actionHist || {},
+          forkCandidateLogs: ep.forkCandidateLogs || [],
+          stepCount: ep.t1Steps + ep.t2Steps,
+        });
+        const fType = epAttribution ? epAttribution.category : "OTHER";
         agg.failures_by_type[fType] = (agg.failures_by_type[fType] || 0) + 1;
       }
     }
@@ -175,11 +215,47 @@ const devArtifact = {
   episodes: formattedEpisodes,
 };
 
-const devOutPath = path.join(ROOT, "artifacts", "generalization", "phase4c-development.json");
+const devOutPath = path.join(ROOT, "artifacts", "generalization", outFileName);
 fs.writeFileSync(devOutPath, JSON.stringify(devArtifact, null, 2), "utf8");
+
+// Publish failure attribution artifact
+const failureSummary = {};
+const failureByController = {};
+const failureByEnv = {};
+for (const f of failureAttributions) {
+  const cat = f.attribution?.category || "OTHER";
+  failureSummary[cat] = (failureSummary[cat] || 0) + 1;
+  if (!failureByController[f.controller]) failureByController[f.controller] = {};
+  failureByController[f.controller][cat] = (failureByController[f.controller][cat] || 0) + 1;
+  if (!failureByEnv[f.environment]) failureByEnv[f.environment] = {};
+  failureByEnv[f.environment][cat] = (failureByEnv[f.environment][cat] || 0) + 1;
+}
+
+const failureAttributionArtifact = {
+  schema: "phase4c.failure_attribution.v2",
+  timestamp: new Date().toISOString(),
+  cohort: rawData.cohort || (isHeldOut ? "held_out" : "dev_v2"),
+  seed_range: rawData.seed_range,
+  seed_count: rawData.seed_count,
+  total_episodes: formattedEpisodes.length,
+  failed_episodes: failureAttributions.length,
+  overall_failure_distribution: failureSummary,
+  failures_by_controller: failureByController,
+  failures_by_environment: failureByEnv,
+  diagnostic_forks: DIAGNOSTIC_FORKS,
+  sample_failures: failureAttributions.slice(0, 100),
+};
+
+const failureOutFileName = isHeldOut ? "phase4c-failure-attribution-held_out.json" : "phase4c-failure-attribution-v2.json";
+const failureOutPath = path.join(ROOT, "artifacts", "generalization", failureOutFileName);
+fs.writeFileSync(failureOutPath, JSON.stringify(failureAttributionArtifact, null, 2), "utf8");
+
 console.log(`\n======================================================`);
 console.log(`Compiled ${formattedEpisodes.length} development episodes into:`);
 console.log(`${devOutPath}`);
+console.log(`Published failure attribution artifact to:`);
+console.log(`${failureOutPath}`);
 console.log(`Cohort Executive Match Rate: ${(devArtifact.executive_selected_id_match_rate * 100).toFixed(2)}%`);
 console.log(`Cohort Executive Fallback Rate: ${(devArtifact.executive_fallback_rate * 100).toFixed(2)}%`);
+console.log(`Failure Breakdown:`, JSON.stringify(failureSummary));
 console.log(`======================================================\n`);
