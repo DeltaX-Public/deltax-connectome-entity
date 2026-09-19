@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PlasticityTargetManifest",
+  "description": "Evidence-selected target manifest defining eligible populations, pathways, and edges for synaptic plasticity. Integration boundary between Lane B (Steering Asymmetry Causal Investigation) and Lane A (Primary Plasticity Runtime).",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "schema_version",
+    "status",
+    "source_evidence_artifact",
+    "rationale",
+    "eligible_populations",
+    "eligible_edges",
+    "safety_bounds",
+    "created_at"
+  ],
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "description": "Unique identifier for this target manifest (e.g., MANIFEST_LANE_B_RIGHT_STEERING_V1)"
+    },
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0.0"]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING_LANE_B_EVIDENCE",
+        "CAUSAL_TARGET_FROZEN",
+        "DEPRECATED"
+      ]
+    },
+    "source_evidence_artifact": {
+      "type": "string",
+      "description": "Path or identifier of the causal evidence artifact justifying this selection (e.g. artifacts/steering_asymmetry/causal_pathway_audit.json)"
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Scientific justification describing the identified bottleneck or symmetry-breaking locus"
+    },
+    "eligible_populations": {
+      "type": "array",
+      "description": "Named neural populations or cell types identified as candidate plasticity sites",
+      "items": {
+        "type": "object",
+        "required": ["population_name", "role", "neuron_indices"],
+        "properties": {
+          "population_name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "neuron_indices": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "eligible_edges": {
+      "type": "array",
+      "description": "Explicit source->target synaptic connections eligible for modification",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "allowed_direction"],
+        "properties": {
+          "source": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "target": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "allowed_direction": {
+            "type": "string",
+            "enum": ["POTENTIATION_ONLY", "DEPRESSION_ONLY", "BIDIRECTIONAL"]
+          },
+          "max_delta_w": {
+            "type": "number",
+            "minimum": 0.0
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "safety_bounds": {
+      "type": "object",
+      "required": ["max_total_budget", "max_edge_delta", "max_percentage_change"],
+      "properties": {
+        "max_total_budget": {
+          "type": "number",
+          "minimum": 0.1
+        },
+        "max_edge_delta": {
+          "type": "number",
+          "minimum": 0.1
+        },
+        "max_percentage_change": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 5.0
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
