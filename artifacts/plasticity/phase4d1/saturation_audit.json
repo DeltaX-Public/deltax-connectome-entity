@@ -1,0 +1,24 @@
+{
+  "overview": {
+    "P1_ungated_local": {
+      "mean_budget": 0.0014,
+      "saturated_seeds": 0
+    },
+    "P2_afferent_gated": {
+      "mean_budget": 0.0005,
+      "saturated_seeds": 0
+    },
+    "P3_projection_gated": {
+      "mean_budget": 0,
+      "saturated_seeds": 0
+    },
+    "P4_balanced_two_stage": {
+      "mean_budget": 0.0005,
+      "saturated_seeds": 0
+    },
+    "P5_matched_sham": {
+      "mean_budget": 64.353,
+      "saturated_seeds": 45
+    }
+  }
+}
