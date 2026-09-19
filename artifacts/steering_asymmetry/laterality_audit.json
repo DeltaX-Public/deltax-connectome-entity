@@ -1,0 +1,1003 @@
+{
+  "schema_version": "steering_asymmetry.laterality_audit.v1",
+  "side_encoding": {
+    "left_1": 74220,
+    "right_2": 74430,
+    "midline_3": 392,
+    "unknown_0": 16080,
+    "total": 165122
+  },
+  "steering_dn": {
+    "DNa02": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 130496,
+          "nt": 1,
+          "indeg": 707,
+          "outdeg": 339
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 332,
+          "nt": 1,
+          "indeg": 730,
+          "outdeg": 322
+        }
+      ]
+    },
+    "DNa01": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 406,
+          "nt": 1,
+          "indeg": 403,
+          "outdeg": 316
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 704,
+          "nt": 1,
+          "indeg": 413,
+          "outdeg": 311
+        }
+      ]
+    },
+    "DNp09": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 725,
+          "nt": 1,
+          "indeg": 504,
+          "outdeg": 317
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 1087,
+          "nt": 1,
+          "indeg": 546,
+          "outdeg": 334
+        }
+      ]
+    }
+  },
+  "forward_backward_dn": {
+    "DNg100": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 36,
+          "nt": 1,
+          "indeg": 530,
+          "outdeg": 890
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 46,
+          "nt": 1,
+          "indeg": 538,
+          "outdeg": 943
+        }
+      ]
+    },
+    "DNg97": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 3548,
+          "nt": 1,
+          "indeg": 614,
+          "outdeg": 450
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 121193,
+          "nt": 1,
+          "indeg": 579,
+          "outdeg": 489
+        }
+      ]
+    },
+    "DNp09": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 725,
+          "nt": 1,
+          "indeg": 504,
+          "outdeg": 317
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 1087,
+          "nt": 1,
+          "indeg": 546,
+          "outdeg": 334
+        }
+      ]
+    },
+    "DNa05": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 2620,
+          "nt": 1,
+          "indeg": 211,
+          "outdeg": 307
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 1708,
+          "nt": 1,
+          "indeg": 214,
+          "outdeg": 290
+        }
+      ]
+    },
+    "DNa07": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 9057,
+          "nt": 1,
+          "indeg": 132,
+          "outdeg": 192
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 6570,
+          "nt": 1,
+          "indeg": 128,
+          "outdeg": 169
+        }
+      ]
+    },
+    "DNp26": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 523,
+          "nt": 1,
+          "indeg": 480,
+          "outdeg": 197
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 126404,
+          "nt": 1,
+          "indeg": 470,
+          "outdeg": 267
+        }
+      ]
+    },
+    "DNg25": {
+      "left_count": 0,
+      "right_count": 0,
+      "asymmetry_flag": false,
+      "left_neurons": [],
+      "right_neurons": []
+    },
+    "DNa01": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 406,
+          "nt": 1,
+          "indeg": 403,
+          "outdeg": 316
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 704,
+          "nt": 1,
+          "indeg": 413,
+          "outdeg": 311
+        }
+      ]
+    },
+    "DNa02": {
+      "left_count": 1,
+      "right_count": 1,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 130496,
+          "nt": 1,
+          "indeg": 707,
+          "outdeg": 339
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 332,
+          "nt": 1,
+          "indeg": 730,
+          "outdeg": 322
+        }
+      ]
+    },
+    "MDN": {
+      "left_count": 2,
+      "right_count": 2,
+      "asymmetry_flag": false,
+      "left_neurons": [
+        {
+          "index": 1196,
+          "nt": 1,
+          "indeg": 360,
+          "outdeg": 228
+        },
+        {
+          "index": 2194,
+          "nt": 1,
+          "indeg": 353,
+          "outdeg": 190
+        }
+      ],
+      "right_neurons": [
+        {
+          "index": 706,
+          "nt": 1,
+          "indeg": 335,
+          "outdeg": 216
+        },
+        {
+          "index": 1240,
+          "nt": 1,
+          "indeg": 362,
+          "outdeg": 215
+        }
+      ]
+    }
+  },
+  "sensory_population": {
+    "JO auditory {SIDE}": {
+      "left_name": "JO auditory left",
+      "right_name": "JO auditory right",
+      "left_count": 62,
+      "right_count": 52,
+      "asymmetry_flag": true,
+      "count_diff": 10,
+      "ratio": 1.192
+    },
+    "JO wind/gravity {SIDE}": {
+      "left_name": "JO wind/gravity left",
+      "right_name": "JO wind/gravity right",
+      "left_count": 228,
+      "right_count": 247,
+      "asymmetry_flag": true,
+      "count_diff": -19,
+      "ratio": 0.923
+    },
+    "ORN_D {SIDE}": {
+      "left_name": "ORN_D left",
+      "right_name": "ORN_D right",
+      "left_count": 14,
+      "right_count": 14,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "ORN_DA1 {SIDE}": {
+      "left_name": "ORN_DA1 left",
+      "right_name": "ORN_DA1 right",
+      "left_count": 99,
+      "right_count": 153,
+      "asymmetry_flag": true,
+      "count_diff": -54,
+      "ratio": 0.647
+    },
+    "ORN_DA2 {SIDE}": {
+      "left_name": "ORN_DA2 left",
+      "right_name": "ORN_DA2 right",
+      "left_count": 28,
+      "right_count": 27,
+      "asymmetry_flag": true,
+      "count_diff": 1,
+      "ratio": 1.037
+    },
+    "ORN_DA3 {SIDE}": {
+      "left_name": "ORN_DA3 left",
+      "right_name": "ORN_DA3 right",
+      "left_count": 19,
+      "right_count": 25,
+      "asymmetry_flag": true,
+      "count_diff": -6,
+      "ratio": 0.76
+    },
+    "ORN_DA4l {SIDE}": {
+      "left_name": "ORN_DA4l left",
+      "right_name": "ORN_DA4l right",
+      "left_count": 18,
+      "right_count": 22,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.818
+    },
+    "ORN_DA4m {SIDE}": {
+      "left_name": "ORN_DA4m left",
+      "right_name": "ORN_DA4m right",
+      "left_count": 19,
+      "right_count": 20,
+      "asymmetry_flag": true,
+      "count_diff": -1,
+      "ratio": 0.95
+    },
+    "ORN_DC1 {SIDE}": {
+      "left_name": "ORN_DC1 left",
+      "right_name": "ORN_DC1 right",
+      "left_count": 17,
+      "right_count": 15,
+      "asymmetry_flag": true,
+      "count_diff": 2,
+      "ratio": 1.133
+    },
+    "ORN_DC2 {SIDE}": {
+      "left_name": "ORN_DC2 left",
+      "right_name": "ORN_DC2 right",
+      "left_count": 11,
+      "right_count": 11,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "ORN_DC3 {SIDE}": {
+      "left_name": "ORN_DC3 left",
+      "right_name": "ORN_DC3 right",
+      "left_count": 17,
+      "right_count": 19,
+      "asymmetry_flag": true,
+      "count_diff": -2,
+      "ratio": 0.895
+    },
+    "ORN_DC4 {SIDE}": {
+      "left_name": "ORN_DC4 left",
+      "right_name": "ORN_DC4 right",
+      "left_count": 11,
+      "right_count": 12,
+      "asymmetry_flag": true,
+      "count_diff": -1,
+      "ratio": 0.917
+    },
+    "ORN_DL1 {SIDE}": {
+      "left_name": "ORN_DL1 left",
+      "right_name": "ORN_DL1 right",
+      "left_count": 43,
+      "right_count": 47,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.915
+    },
+    "ORN_DL2d {SIDE}": {
+      "left_name": "ORN_DL2d left",
+      "right_name": "ORN_DL2d right",
+      "left_count": 7,
+      "right_count": 8,
+      "asymmetry_flag": true,
+      "count_diff": -1,
+      "ratio": 0.875
+    },
+    "ORN_DL2v {SIDE}": {
+      "left_name": "ORN_DL2v left",
+      "right_name": "ORN_DL2v right",
+      "left_count": 11,
+      "right_count": 12,
+      "asymmetry_flag": true,
+      "count_diff": -1,
+      "ratio": 0.917
+    },
+    "ORN_DL3 {SIDE}": {
+      "left_name": "ORN_DL3 left",
+      "right_name": "ORN_DL3 right",
+      "left_count": 72,
+      "right_count": 86,
+      "asymmetry_flag": true,
+      "count_diff": -14,
+      "ratio": 0.837
+    },
+    "ORN_DL4 {SIDE}": {
+      "left_name": "ORN_DL4 left",
+      "right_name": "ORN_DL4 right",
+      "left_count": 41,
+      "right_count": 50,
+      "asymmetry_flag": true,
+      "count_diff": -9,
+      "ratio": 0.82
+    },
+    "ORN_DL5 {SIDE}": {
+      "left_name": "ORN_DL5 left",
+      "right_name": "ORN_DL5 right",
+      "left_count": 24,
+      "right_count": 20,
+      "asymmetry_flag": true,
+      "count_diff": 4,
+      "ratio": 1.2
+    },
+    "ORN_DM1 {SIDE}": {
+      "left_name": "ORN_DM1 left",
+      "right_name": "ORN_DM1 right",
+      "left_count": 35,
+      "right_count": 39,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.897
+    },
+    "ORN_DM2 {SIDE}": {
+      "left_name": "ORN_DM2 left",
+      "right_name": "ORN_DM2 right",
+      "left_count": 25,
+      "right_count": 30,
+      "asymmetry_flag": true,
+      "count_diff": -5,
+      "ratio": 0.833
+    },
+    "ORN_DM3 {SIDE}": {
+      "left_name": "ORN_DM3 left",
+      "right_name": "ORN_DM3 right",
+      "left_count": 31,
+      "right_count": 40,
+      "asymmetry_flag": true,
+      "count_diff": -9,
+      "ratio": 0.775
+    },
+    "ORN_DM4 {SIDE}": {
+      "left_name": "ORN_DM4 left",
+      "right_name": "ORN_DM4 right",
+      "left_count": 17,
+      "right_count": 16,
+      "asymmetry_flag": true,
+      "count_diff": 1,
+      "ratio": 1.063
+    },
+    "ORN_DM5 {SIDE}": {
+      "left_name": "ORN_DM5 left",
+      "right_name": "ORN_DM5 right",
+      "left_count": 17,
+      "right_count": 25,
+      "asymmetry_flag": true,
+      "count_diff": -8,
+      "ratio": 0.68
+    },
+    "ORN_DM6 {SIDE}": {
+      "left_name": "ORN_DM6 left",
+      "right_name": "ORN_DM6 right",
+      "left_count": 29,
+      "right_count": 36,
+      "asymmetry_flag": true,
+      "count_diff": -7,
+      "ratio": 0.806
+    },
+    "ORN_DP1l {SIDE}": {
+      "left_name": "ORN_DP1l left",
+      "right_name": "ORN_DP1l right",
+      "left_count": 15,
+      "right_count": 19,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.789
+    },
+    "ORN_DP1m {SIDE}": {
+      "left_name": "ORN_DP1m left",
+      "right_name": "ORN_DP1m right",
+      "left_count": 17,
+      "right_count": 14,
+      "asymmetry_flag": true,
+      "count_diff": 3,
+      "ratio": 1.214
+    },
+    "ORN_V {SIDE}": {
+      "left_name": "ORN_V left",
+      "right_name": "ORN_V right",
+      "left_count": 16,
+      "right_count": 39,
+      "asymmetry_flag": true,
+      "count_diff": -23,
+      "ratio": 0.41
+    },
+    "ORN_VA1d {SIDE}": {
+      "left_name": "ORN_VA1d left",
+      "right_name": "ORN_VA1d right",
+      "left_count": 56,
+      "right_count": 109,
+      "asymmetry_flag": true,
+      "count_diff": -53,
+      "ratio": 0.514
+    },
+    "ORN_VA1v {SIDE}": {
+      "left_name": "ORN_VA1v left",
+      "right_name": "ORN_VA1v right",
+      "left_count": 57,
+      "right_count": 115,
+      "asymmetry_flag": true,
+      "count_diff": -58,
+      "ratio": 0.496
+    },
+    "ORN_VA2 {SIDE}": {
+      "left_name": "ORN_VA2 left",
+      "right_name": "ORN_VA2 right",
+      "left_count": 42,
+      "right_count": 50,
+      "asymmetry_flag": true,
+      "count_diff": -8,
+      "ratio": 0.84
+    },
+    "ORN_VA3 {SIDE}": {
+      "left_name": "ORN_VA3 left",
+      "right_name": "ORN_VA3 right",
+      "left_count": 17,
+      "right_count": 23,
+      "asymmetry_flag": true,
+      "count_diff": -6,
+      "ratio": 0.739
+    },
+    "ORN_VA4 {SIDE}": {
+      "left_name": "ORN_VA4 left",
+      "right_name": "ORN_VA4 right",
+      "left_count": 18,
+      "right_count": 16,
+      "asymmetry_flag": true,
+      "count_diff": 2,
+      "ratio": 1.125
+    },
+    "ORN_VA5 {SIDE}": {
+      "left_name": "ORN_VA5 left",
+      "right_name": "ORN_VA5 right",
+      "left_count": 9,
+      "right_count": 13,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.692
+    },
+    "ORN_VA6 {SIDE}": {
+      "left_name": "ORN_VA6 left",
+      "right_name": "ORN_VA6 right",
+      "left_count": 35,
+      "right_count": 34,
+      "asymmetry_flag": true,
+      "count_diff": 1,
+      "ratio": 1.029
+    },
+    "ORN_VA7l {SIDE}": {
+      "left_name": "ORN_VA7l left",
+      "right_name": "ORN_VA7l right",
+      "left_count": 13,
+      "right_count": 17,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.765
+    },
+    "ORN_VA7m {SIDE}": {
+      "left_name": "ORN_VA7m left",
+      "right_name": "ORN_VA7m right",
+      "left_count": 13,
+      "right_count": 17,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.765
+    },
+    "ORN_VC1 {SIDE}": {
+      "left_name": "ORN_VC1 left",
+      "right_name": "ORN_VC1 right",
+      "left_count": 14,
+      "right_count": 16,
+      "asymmetry_flag": true,
+      "count_diff": -2,
+      "ratio": 0.875
+    },
+    "ORN_VC2 {SIDE}": {
+      "left_name": "ORN_VC2 left",
+      "right_name": "ORN_VC2 right",
+      "left_count": 15,
+      "right_count": 18,
+      "asymmetry_flag": true,
+      "count_diff": -3,
+      "ratio": 0.833
+    },
+    "ORN_VC3 {SIDE}": {
+      "left_name": "ORN_VC3 left",
+      "right_name": "ORN_VC3 right",
+      "left_count": 16,
+      "right_count": 20,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.8
+    },
+    "ORN_VC4 {SIDE}": {
+      "left_name": "ORN_VC4 left",
+      "right_name": "ORN_VC4 right",
+      "left_count": 21,
+      "right_count": 24,
+      "asymmetry_flag": true,
+      "count_diff": -3,
+      "ratio": 0.875
+    },
+    "ORN_VC5 {SIDE}": {
+      "left_name": "ORN_VC5 left",
+      "right_name": "ORN_VC5 right",
+      "left_count": 14,
+      "right_count": 17,
+      "asymmetry_flag": true,
+      "count_diff": -3,
+      "ratio": 0.824
+    },
+    "ORN_VL1 {SIDE}": {
+      "left_name": "ORN_VL1 left",
+      "right_name": "ORN_VL1 right",
+      "left_count": 21,
+      "right_count": 61,
+      "asymmetry_flag": true,
+      "count_diff": -40,
+      "ratio": 0.344
+    },
+    "ORN_VL2a {SIDE}": {
+      "left_name": "ORN_VL2a left",
+      "right_name": "ORN_VL2a right",
+      "left_count": 48,
+      "right_count": 75,
+      "asymmetry_flag": true,
+      "count_diff": -27,
+      "ratio": 0.64
+    },
+    "ORN_VL2p {SIDE}": {
+      "left_name": "ORN_VL2p left",
+      "right_name": "ORN_VL2p right",
+      "left_count": 23,
+      "right_count": 34,
+      "asymmetry_flag": true,
+      "count_diff": -11,
+      "ratio": 0.676
+    },
+    "ORN_VM1 {SIDE}": {
+      "left_name": "ORN_VM1 left",
+      "right_name": "ORN_VM1 right",
+      "left_count": 15,
+      "right_count": 19,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.789
+    },
+    "ORN_VM2 {SIDE}": {
+      "left_name": "ORN_VM2 left",
+      "right_name": "ORN_VM2 right",
+      "left_count": 21,
+      "right_count": 24,
+      "asymmetry_flag": true,
+      "count_diff": -3,
+      "ratio": 0.875
+    },
+    "ORN_VM3 {SIDE}": {
+      "left_name": "ORN_VM3 left",
+      "right_name": "ORN_VM3 right",
+      "left_count": 21,
+      "right_count": 28,
+      "asymmetry_flag": true,
+      "count_diff": -7,
+      "ratio": 0.75
+    },
+    "ORN_VM4 {SIDE}": {
+      "left_name": "ORN_VM4 left",
+      "right_name": "ORN_VM4 right",
+      "left_count": 31,
+      "right_count": 66,
+      "asymmetry_flag": true,
+      "count_diff": -35,
+      "ratio": 0.47
+    },
+    "ORN_VM5d {SIDE}": {
+      "left_name": "ORN_VM5d left",
+      "right_name": "ORN_VM5d right",
+      "left_count": 48,
+      "right_count": 54,
+      "asymmetry_flag": true,
+      "count_diff": -6,
+      "ratio": 0.889
+    },
+    "ORN_VM5v {SIDE}": {
+      "left_name": "ORN_VM5v left",
+      "right_name": "ORN_VM5v right",
+      "left_count": 15,
+      "right_count": 19,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.789
+    },
+    "ORN_VM6l {SIDE}": {
+      "left_name": "ORN_VM6l left",
+      "right_name": "ORN_VM6l right",
+      "left_count": 2,
+      "right_count": 12,
+      "asymmetry_flag": true,
+      "count_diff": -10,
+      "ratio": 0.167
+    },
+    "ORN_VM6m {SIDE}": {
+      "left_name": "ORN_VM6m left",
+      "right_name": "ORN_VM6m right",
+      "left_count": 11,
+      "right_count": 15,
+      "asymmetry_flag": true,
+      "count_diff": -4,
+      "ratio": 0.733
+    },
+    "ORN_VM6v {SIDE}": {
+      "left_name": "ORN_VM6v left",
+      "right_name": "ORN_VM6v right",
+      "left_count": 14,
+      "right_count": 25,
+      "asymmetry_flag": true,
+      "count_diff": -11,
+      "ratio": 0.56
+    },
+    "ORN_VM7d {SIDE}": {
+      "left_name": "ORN_VM7d left",
+      "right_name": "ORN_VM7d right",
+      "left_count": 18,
+      "right_count": 18,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "ORN_VM7v {SIDE}": {
+      "left_name": "ORN_VM7v left",
+      "right_name": "ORN_VM7v right",
+      "left_count": 11,
+      "right_count": 14,
+      "asymmetry_flag": true,
+      "count_diff": -3,
+      "ratio": 0.786
+    },
+    "campaniform T1 {SIDE}": {
+      "left_name": "campaniform T1 left",
+      "right_name": "campaniform T1 right",
+      "left_count": 2,
+      "right_count": 2,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "campaniform T2 {SIDE}": {
+      "left_name": "campaniform T2 left",
+      "right_name": "campaniform T2 right",
+      "left_count": 2,
+      "right_count": 2,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "campaniform T3 {SIDE}": {
+      "left_name": "campaniform T3 left",
+      "right_name": "campaniform T3 right",
+      "left_count": 2,
+      "right_count": 2,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "chordotonal T1 {SIDE}": {
+      "left_name": "chordotonal T1 left",
+      "right_name": "chordotonal T1 right",
+      "left_count": 23,
+      "right_count": 13,
+      "asymmetry_flag": true,
+      "count_diff": 10,
+      "ratio": 1.769
+    },
+    "chordotonal T2 {SIDE}": {
+      "left_name": "chordotonal T2 left",
+      "right_name": "chordotonal T2 right",
+      "left_count": 80,
+      "right_count": 83,
+      "asymmetry_flag": true,
+      "count_diff": -3,
+      "ratio": 0.964
+    },
+    "chordotonal T3 {SIDE}": {
+      "left_name": "chordotonal T3 left",
+      "right_name": "chordotonal T3 right",
+      "left_count": 93,
+      "right_count": 100,
+      "asymmetry_flag": true,
+      "count_diff": -7,
+      "ratio": 0.93
+    },
+    "hair plate T1 {SIDE}": {
+      "left_name": "hair plate T1 left",
+      "right_name": null,
+      "left_count": 1,
+      "right_count": 0,
+      "asymmetry_flag": true,
+      "count_diff": 1,
+      "ratio": null
+    },
+    "hair plate T2 {SIDE}": {
+      "left_name": "hair plate T2 left",
+      "right_name": "hair plate T2 right",
+      "left_count": 18,
+      "right_count": 15,
+      "asymmetry_flag": true,
+      "count_diff": 3,
+      "ratio": 1.2
+    },
+    "hair plate T3 {SIDE}": {
+      "left_name": "hair plate T3 left",
+      "right_name": "hair plate T3 right",
+      "left_count": 12,
+      "right_count": 14,
+      "asymmetry_flag": true,
+      "count_diff": -2,
+      "ratio": 0.857
+    },
+    "haltere {SIDE}": {
+      "left_name": "haltere left",
+      "right_name": "haltere right",
+      "left_count": 197,
+      "right_count": 199,
+      "asymmetry_flag": true,
+      "count_diff": -2,
+      "ratio": 0.99
+    },
+    "hygrosensory {SIDE}": {
+      "left_name": "hygrosensory left",
+      "right_name": "hygrosensory right",
+      "left_count": 29,
+      "right_count": 36,
+      "asymmetry_flag": true,
+      "count_diff": -7,
+      "ratio": 0.806
+    },
+    "labellar taste {SIDE}": {
+      "left_name": "labellar taste left",
+      "right_name": "labellar taste right",
+      "left_count": 112,
+      "right_count": 111,
+      "asymmetry_flag": true,
+      "count_diff": 1,
+      "ratio": 1.009
+    },
+    "pharyngeal taste {SIDE}": {
+      "left_name": "pharyngeal taste left",
+      "right_name": "pharyngeal taste right",
+      "left_count": 24,
+      "right_count": 24,
+      "asymmetry_flag": false,
+      "count_diff": 0,
+      "ratio": 1
+    },
+    "tactile T1 {SIDE}": {
+      "left_name": "tactile T1 left",
+      "right_name": "tactile T1 right",
+      "left_count": 151,
+      "right_count": 115,
+      "asymmetry_flag": true,
+      "count_diff": 36,
+      "ratio": 1.313
+    },
+    "tactile T2 {SIDE}": {
+      "left_name": "tactile T2 left",
+      "right_name": "tactile T2 right",
+      "left_count": 378,
+      "right_count": 428,
+      "asymmetry_flag": true,
+      "count_diff": -50,
+      "ratio": 0.883
+    },
+    "tactile T3 {SIDE}": {
+      "left_name": "tactile T3 left",
+      "right_name": "tactile T3 right",
+      "left_count": 394,
+      "right_count": 411,
+      "asymmetry_flag": true,
+      "count_diff": -17,
+      "ratio": 0.959
+    },
+    "taste T1 {SIDE}": {
+      "left_name": "taste T1 left",
+      "right_name": "taste T1 right",
+      "left_count": 149,
+      "right_count": 151,
+      "asymmetry_flag": true,
+      "count_diff": -2,
+      "ratio": 0.987
+    },
+    "taste T2 {SIDE}": {
+      "left_name": "taste T2 left",
+      "right_name": "taste T2 right",
+      "left_count": 109,
+      "right_count": 117,
+      "asymmetry_flag": true,
+      "count_diff": -8,
+      "ratio": 0.932
+    },
+    "taste T3 {SIDE}": {
+      "left_name": "taste T3 left",
+      "right_name": "taste T3 right",
+      "left_count": 124,
+      "right_count": 118,
+      "asymmetry_flag": true,
+      "count_diff": 6,
+      "ratio": 1.051
+    },
+    "thermosensory {SIDE}": {
+      "left_name": "thermosensory left",
+      "right_name": "thermosensory right",
+      "left_count": 12,
+      "right_count": 13,
+      "asymmetry_flag": true,
+      "count_diff": -1,
+      "ratio": 0.923
+    },
+    "wing/notum bristles {SIDE}": {
+      "left_name": "wing/notum bristles left",
+      "right_name": "wing/notum bristles right",
+      "left_count": 329,
+      "right_count": 326,
+      "asymmetry_flag": true,
+      "count_diff": 3,
+      "ratio": 1.009
+    }
+  },
+  "readout_c_symmetry": {
+    "algebraic_symmetry": "diffL and diffR use max(0, L-R) and max(0, R-L). Exp decays use same scale. Structurally mirror-symmetric.",
+    "test_5_0": {
+      "turnLStrength": 0.3934693402873666,
+      "turnRStrength": 0
+    },
+    "test_0_5": {
+      "turnLStrength": 0,
+      "turnRStrength": 0.3934693402873666
+    },
+    "test_3_1": {
+      "turnLStrength": 0.18126924692201818,
+      "turnRStrength": 0
+    },
+    "test_1_3": {
+      "turnLStrength": 0,
+      "turnRStrength": 0.18126924692201818
+    },
+    "symmetric_5": true,
+    "symmetric_3_1": true
+  },
+  "index_mapping": {
+    "DNa02": {
+      "is_disjoint": true
+    },
+    "DNa01": {
+      "is_disjoint": true
+    },
+    "DNp09": {
+      "is_disjoint": true
+    }
+  }
+}

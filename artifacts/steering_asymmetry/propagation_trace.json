@@ -1,0 +1,915 @@
+{
+  "schema": "steering_asymmetry.propagation_trace.v1",
+  "timestamp": "2026-09-19T09:19:38.028Z",
+  "seed": 15000,
+  "intensity_hz": 180,
+  "earliest_divergence": {
+    "step": 11,
+    "latency_from_stim_onset_ms": 1,
+    "locus_layer": "1-hop sensory interneurons"
+  },
+  "top_bottleneck_populations": [
+    {
+      "type": "IN09B038",
+      "left_activated_hz": 2.11,
+      "right_activated_hz": 170.17,
+      "absolute_divergence": 168.06,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "AN09B004",
+      "left_activated_hz": 0,
+      "right_activated_hz": 94.68,
+      "absolute_divergence": 94.68,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN14A011",
+      "left_activated_hz": 0,
+      "right_activated_hz": 93.18,
+      "absolute_divergence": 93.18,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN09B043",
+      "left_activated_hz": 12.09,
+      "right_activated_hz": 100,
+      "absolute_divergence": 87.91,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN13B025",
+      "left_activated_hz": 0,
+      "right_activated_hz": 85.52,
+      "absolute_divergence": 85.52,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "AN05B009",
+      "left_activated_hz": 0,
+      "right_activated_hz": 82.8,
+      "absolute_divergence": 82.8,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN12B043",
+      "left_activated_hz": 0,
+      "right_activated_hz": 76.67,
+      "absolute_divergence": 76.67,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN09B046",
+      "left_activated_hz": 33.38,
+      "right_activated_hz": 109.48,
+      "absolute_divergence": 76.1,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN13B052",
+      "left_activated_hz": 0,
+      "right_activated_hz": 70.79,
+      "absolute_divergence": 70.79,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN23B048",
+      "left_activated_hz": 69.39,
+      "right_activated_hz": 0,
+      "absolute_divergence": 69.39,
+      "dominant_side": "LEFT"
+    },
+    {
+      "type": "IN23B018",
+      "left_activated_hz": 83.77,
+      "right_activated_hz": 16.21,
+      "absolute_divergence": 67.56,
+      "dominant_side": "LEFT"
+    },
+    {
+      "type": "IN01A012",
+      "left_activated_hz": 0,
+      "right_activated_hz": 66.47,
+      "absolute_divergence": 66.47,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN14A004",
+      "left_activated_hz": 0,
+      "right_activated_hz": 63.97,
+      "absolute_divergence": 63.97,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN14A009",
+      "left_activated_hz": 0,
+      "right_activated_hz": 62.33,
+      "absolute_divergence": 62.33,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "AN08B012",
+      "left_activated_hz": 3.9,
+      "right_activated_hz": 65.74,
+      "absolute_divergence": 61.84,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN23B027",
+      "left_activated_hz": 59.01,
+      "right_activated_hz": 0,
+      "absolute_divergence": 59.01,
+      "dominant_side": "LEFT"
+    },
+    {
+      "type": "IN14A078",
+      "left_activated_hz": 0,
+      "right_activated_hz": 57.03,
+      "absolute_divergence": 57.03,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN12B031",
+      "left_activated_hz": 0,
+      "right_activated_hz": 56.43,
+      "absolute_divergence": 56.43,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN13B074",
+      "left_activated_hz": 0,
+      "right_activated_hz": 54.8,
+      "absolute_divergence": 54.8,
+      "dominant_side": "RIGHT"
+    },
+    {
+      "type": "IN09B047",
+      "left_activated_hz": 27.11,
+      "right_activated_hz": 81.72,
+      "absolute_divergence": 54.61,
+      "dominant_side": "RIGHT"
+    }
+  ],
+  "comparison_time_series": [
+    {
+      "step": 1,
+      "time_ms": 1,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 573.85,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 0,
+      "hop2_diff_hz": 573.85,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 2,
+      "time_ms": 2,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 1.06,
+        "hop2_hz": 1185.92,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 1.06,
+      "hop2_diff_hz": 1185.92,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 3,
+      "time_ms": 3,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 4.71,
+        "hop2_hz": 1848.05,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 4.71,
+      "hop2_diff_hz": 1848.05,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 4,
+      "time_ms": 4,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 12.79,
+        "hop2_hz": 2559.34,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 12.79,
+      "hop2_diff_hz": 2559.34,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 5,
+      "time_ms": 5,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 26.1,
+        "hop2_hz": 3323.62,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 26.1,
+      "hop2_diff_hz": 3323.62,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 6,
+      "time_ms": 6,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 44.58,
+        "hop2_hz": 4139.13,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 44.58,
+      "hop2_diff_hz": 4139.13,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 7,
+      "time_ms": 7,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 68.08,
+        "hop2_hz": 5008.08,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 68.08,
+      "hop2_diff_hz": 5008.08,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 8,
+      "time_ms": 8,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 96.15,
+        "hop2_hz": 5931.12,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 96.15,
+      "hop2_diff_hz": 5931.12,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 9,
+      "time_ms": 9,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 128.18,
+        "hop2_hz": 6907.56,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 128.18,
+      "hop2_diff_hz": 6907.56,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 10,
+      "time_ms": 10,
+      "left_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 0,
+        "hop2_hz": 0,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 0,
+        "hop1_hz": 163.64,
+        "hop2_hz": 7938.03,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 163.64,
+      "hop2_diff_hz": 7938.03,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 11,
+      "time_ms": 11,
+      "left_stim": {
+        "receptors_hz": 1372.18,
+        "hop1_hz": 480.08,
+        "hop2_hz": 1189.68,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 1042.51,
+        "hop1_hz": 670.33,
+        "hop2_hz": 9883.93,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 190.25,
+      "hop2_diff_hz": 8694.25,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 12,
+      "time_ms": 12,
+      "left_stim": {
+        "receptors_hz": 2676.56,
+        "hop1_hz": 1013.72,
+        "hop2_hz": 2396.58,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 2035.68,
+        "hop1_hz": 1194.74,
+        "hop2_hz": 11876.4,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 181.02,
+      "hop2_diff_hz": 9479.82,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 13,
+      "time_ms": 13,
+      "left_stim": {
+        "receptors_hz": 3915.09,
+        "hop1_hz": 1615.91,
+        "hop2_hz": 3636.99,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 2980.63,
+        "hop1_hz": 1747.13,
+        "hop2_hz": 13930.17,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 131.22,
+      "hop2_diff_hz": 10293.18,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 14,
+      "time_ms": 14,
+      "left_stim": {
+        "receptors_hz": 5088.74,
+        "hop1_hz": 2281.63,
+        "hop2_hz": 4910.64,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 3878.2,
+        "hop1_hz": 2320.08,
+        "hop2_hz": 16050.7,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 38.45,
+      "hop2_diff_hz": 11140.06,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 15,
+      "time_ms": 15,
+      "left_stim": {
+        "receptors_hz": 6198.52,
+        "hop1_hz": 3006.11,
+        "hop2_hz": 6221.82,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 4729.46,
+        "hop1_hz": 2908.12,
+        "hop2_hz": 18244.64,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 97.99,
+      "hop2_diff_hz": 12022.82,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 16,
+      "time_ms": 16,
+      "left_stim": {
+        "receptors_hz": 7245.25,
+        "hop1_hz": 3780.75,
+        "hop2_hz": 7569.69,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 5535.56,
+        "hop1_hz": 3505.98,
+        "hop2_hz": 20515.33,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 274.77,
+      "hop2_diff_hz": 12945.64,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 17,
+      "time_ms": 17,
+      "left_stim": {
+        "receptors_hz": 8229.39,
+        "hop1_hz": 4595.86,
+        "hop2_hz": 8957.72,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 6297.66,
+        "hop1_hz": 4109.03,
+        "hop2_hz": 22864.99,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 486.83,
+      "hop2_diff_hz": 13907.27,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 18,
+      "time_ms": 18,
+      "left_stim": {
+        "receptors_hz": 9150.83,
+        "hop1_hz": 5440.71,
+        "hop2_hz": 10387.5,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 7016.84,
+        "hop1_hz": 4713.15,
+        "hop2_hz": 25294.11,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 727.56,
+      "hop2_diff_hz": 14906.61,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 19,
+      "time_ms": 19,
+      "left_stim": {
+        "receptors_hz": 10008.86,
+        "hop1_hz": 6305.26,
+        "hop2_hz": 11859.73,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 7694.03,
+        "hop1_hz": 5314.27,
+        "hop2_hz": 27799.11,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 990.99,
+      "hop2_diff_hz": 15939.38,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 20,
+      "time_ms": 20,
+      "left_stim": {
+        "receptors_hz": 10802.09,
+        "hop1_hz": 7180.34,
+        "hop2_hz": 13378.96,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 8330,
+        "hop1_hz": 5909.08,
+        "hop2_hz": 30374.53,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 1271.26,
+      "hop2_diff_hz": 16995.57,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 21,
+      "time_ms": 21,
+      "left_stim": {
+        "receptors_hz": 11528.63,
+        "hop1_hz": 8056.3,
+        "hop2_hz": 14948.43,
+        "target_DNa02_hz": 0
+      },
+      "right_stim": {
+        "receptors_hz": 8925.38,
+        "hop1_hz": 6494.43,
+        "hop2_hz": 33021.96,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 1561.87,
+      "hop2_diff_hz": 18073.53,
+      "dna02_mirror_diff_hz": 0
+    },
+    {
+      "step": 22,
+      "time_ms": 22,
+      "left_stim": {
+        "receptors_hz": 12187.28,
+        "hop1_hz": 8924.57,
+        "hop2_hz": 16573.92,
+        "target_DNa02_hz": 0.0036
+      },
+      "right_stim": {
+        "receptors_hz": 9480.6,
+        "hop1_hz": 7067.37,
+        "hop2_hz": 35743.14,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 1857.2,
+      "hop2_diff_hz": 19169.22,
+      "dna02_mirror_diff_hz": 0.0036
+    },
+    {
+      "step": 23,
+      "time_ms": 23,
+      "left_stim": {
+        "receptors_hz": 12778.13,
+        "hop1_hz": 9776.97,
+        "hop2_hz": 18262.55,
+        "target_DNa02_hz": 0.0866
+      },
+      "right_stim": {
+        "receptors_hz": 9996.02,
+        "hop1_hz": 7625.13,
+        "hop2_hz": 38531.24,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 2151.84,
+      "hop2_diff_hz": 20268.69,
+      "dna02_mirror_diff_hz": 0.0866
+    },
+    {
+      "step": 24,
+      "time_ms": 24,
+      "left_stim": {
+        "receptors_hz": 13309.99,
+        "hop1_hz": 10609.6,
+        "hop2_hz": 20029.46,
+        "target_DNa02_hz": 0.2539
+      },
+      "right_stim": {
+        "receptors_hz": 10471.91,
+        "hop1_hz": 8164.87,
+        "hop2_hz": 41380.82,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 2444.73,
+      "hop2_diff_hz": 21351.36,
+      "dna02_mirror_diff_hz": 0.2539
+    },
+    {
+      "step": 25,
+      "time_ms": 25,
+      "left_stim": {
+        "receptors_hz": 13791.08,
+        "hop1_hz": 11419.73,
+        "hop2_hz": 21889.95,
+        "target_DNa02_hz": 0.5112
+      },
+      "right_stim": {
+        "receptors_hz": 10908.91,
+        "hop1_hz": 8684.15,
+        "hop2_hz": 44286.84,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 2735.58,
+      "hop2_diff_hz": 22396.89,
+      "dna02_mirror_diff_hz": 0.5112
+    },
+    {
+      "step": 26,
+      "time_ms": 26,
+      "left_stim": {
+        "receptors_hz": 14225.24,
+        "hop1_hz": 12203.1,
+        "hop2_hz": 23851.2,
+        "target_DNa02_hz": 0.8625
+      },
+      "right_stim": {
+        "receptors_hz": 11308.55,
+        "hop1_hz": 9180.77,
+        "hop2_hz": 47243.95,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 3022.33,
+      "hop2_diff_hz": 23392.75,
+      "dna02_mirror_diff_hz": 0.8625
+    },
+    {
+      "step": 27,
+      "time_ms": 27,
+      "left_stim": {
+        "receptors_hz": 14614.6,
+        "hop1_hz": 12956.71,
+        "hop2_hz": 25914.23,
+        "target_DNa02_hz": 1.3078
+      },
+      "right_stim": {
+        "receptors_hz": 11672.91,
+        "hop1_hz": 9654.39,
+        "hop2_hz": 50250.23,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 3302.32,
+      "hop2_diff_hz": 24336,
+      "dna02_mirror_diff_hz": 1.3078
+    },
+    {
+      "step": 28,
+      "time_ms": 28,
+      "left_stim": {
+        "receptors_hz": 14964.55,
+        "hop1_hz": 13678.59,
+        "hop2_hz": 28077.31,
+        "target_DNa02_hz": 1.8437
+      },
+      "right_stim": {
+        "receptors_hz": 12005.24,
+        "hop1_hz": 10105.17,
+        "hop2_hz": 53304.75,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 3573.42,
+      "hop2_diff_hz": 25227.44,
+      "dna02_mirror_diff_hz": 1.8437
+    },
+    {
+      "step": 29,
+      "time_ms": 29,
+      "left_stim": {
+        "receptors_hz": 15276.6,
+        "hop1_hz": 14367.37,
+        "hop2_hz": 30334.71,
+        "target_DNa02_hz": 2.4643
+      },
+      "right_stim": {
+        "receptors_hz": 12307.02,
+        "hop1_hz": 10532.66,
+        "hop2_hz": 56404.67,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 3834.71,
+      "hop2_diff_hz": 26069.96,
+      "dna02_mirror_diff_hz": 2.4643
+    },
+    {
+      "step": 30,
+      "time_ms": 30,
+      "left_stim": {
+        "receptors_hz": 15553.23,
+        "hop1_hz": 15021.28,
+        "hop2_hz": 32679.57,
+        "target_DNa02_hz": 3.1596
+      },
+      "right_stim": {
+        "receptors_hz": 12581.12,
+        "hop1_hz": 10938.06,
+        "hop2_hz": 59548.32,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 4083.22,
+      "hop2_diff_hz": 26868.75,
+      "dna02_mirror_diff_hz": 3.1596
+    },
+    {
+      "step": 31,
+      "time_ms": 31,
+      "left_stim": {
+        "receptors_hz": 15798.7,
+        "hop1_hz": 15641.64,
+        "hop2_hz": 35111.62,
+        "target_DNa02_hz": 3.9178
+      },
+      "right_stim": {
+        "receptors_hz": 12829.93,
+        "hop1_hz": 11321.21,
+        "hop2_hz": 62734.36,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 4320.43,
+      "hop2_diff_hz": 27622.74,
+      "dna02_mirror_diff_hz": 3.9178
+    },
+    {
+      "step": 32,
+      "time_ms": 32,
+      "left_stim": {
+        "receptors_hz": 16017.02,
+        "hop1_hz": 16230.4,
+        "hop2_hz": 37630.62,
+        "target_DNa02_hz": 4.7249
+      },
+      "right_stim": {
+        "receptors_hz": 13055.87,
+        "hop1_hz": 11682.94,
+        "hop2_hz": 65958.6,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 4547.46,
+      "hop2_diff_hz": 28327.98,
+      "dna02_mirror_diff_hz": 4.7249
+    },
+    {
+      "step": 33,
+      "time_ms": 33,
+      "left_stim": {
+        "receptors_hz": 16210.32,
+        "hop1_hz": 16787.31,
+        "hop2_hz": 40227.46,
+        "target_DNa02_hz": 5.5662
+      },
+      "right_stim": {
+        "receptors_hz": 13260.4,
+        "hop1_hz": 12023.34,
+        "hop2_hz": 69215.52,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 4763.97,
+      "hop2_diff_hz": 28988.06,
+      "dna02_mirror_diff_hz": 5.5662
+    },
+    {
+      "step": 34,
+      "time_ms": 34,
+      "left_stim": {
+        "receptors_hz": 16380.44,
+        "hop1_hz": 17313.06,
+        "hop2_hz": 42898.51,
+        "target_DNa02_hz": 6.425
+      },
+      "right_stim": {
+        "receptors_hz": 13444.47,
+        "hop1_hz": 12341.96,
+        "hop2_hz": 72497.26,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 4971.1,
+      "hop2_diff_hz": 29598.75,
+      "dna02_mirror_diff_hz": 6.425
+    },
+    {
+      "step": 35,
+      "time_ms": 35,
+      "left_stim": {
+        "receptors_hz": 16528.83,
+        "hop1_hz": 17808.77,
+        "hop2_hz": 45640.17,
+        "target_DNa02_hz": 7.2861
+      },
+      "right_stim": {
+        "receptors_hz": 13609.44,
+        "hop1_hz": 12638.44,
+        "hop2_hz": 75796.46,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 5170.33,
+      "hop2_diff_hz": 30156.29,
+      "dna02_mirror_diff_hz": 7.2861
+    },
+    {
+      "step": 36,
+      "time_ms": 36,
+      "left_stim": {
+        "receptors_hz": 16656.72,
+        "hop1_hz": 18275.37,
+        "hop2_hz": 48450.28,
+        "target_DNa02_hz": 8.135
+      },
+      "right_stim": {
+        "receptors_hz": 13756.2,
+        "hop1_hz": 12912.93,
+        "hop2_hz": 79103.41,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 5362.44,
+      "hop2_diff_hz": 30653.13,
+      "dna02_mirror_diff_hz": 8.135
+    },
+    {
+      "step": 37,
+      "time_ms": 37,
+      "left_stim": {
+        "receptors_hz": 16765.88,
+        "hop1_hz": 18712.77,
+        "hop2_hz": 51330.16,
+        "target_DNa02_hz": 8.9577
+      },
+      "right_stim": {
+        "receptors_hz": 13885.71,
+        "hop1_hz": 13165.7,
+        "hop2_hz": 82404.86,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 5547.07,
+      "hop2_diff_hz": 31074.7,
+      "dna02_mirror_diff_hz": 8.9577
+    },
+    {
+      "step": 38,
+      "time_ms": 38,
+      "left_stim": {
+        "receptors_hz": 16858.61,
+        "hop1_hz": 19122.62,
+        "hop2_hz": 54281.09,
+        "target_DNa02_hz": 9.741
+      },
+      "right_stim": {
+        "receptors_hz": 14000.43,
+        "hop1_hz": 13398.42,
+        "hop2_hz": 85688.63,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 5724.2,
+      "hop2_diff_hz": 31407.54,
+      "dna02_mirror_diff_hz": 9.741
+    },
+    {
+      "step": 39,
+      "time_ms": 39,
+      "left_stim": {
+        "receptors_hz": 16936.58,
+        "hop1_hz": 19506.04,
+        "hop2_hz": 57304.35,
+        "target_DNa02_hz": 10.4702
+      },
+      "right_stim": {
+        "receptors_hz": 14103.15,
+        "hop1_hz": 13613.21,
+        "hop2_hz": 88944.03,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 5892.83,
+      "hop2_diff_hz": 31639.68,
+      "dna02_mirror_diff_hz": 10.4702
+    },
+    {
+      "step": 40,
+      "time_ms": 40,
+      "left_stim": {
+        "receptors_hz": 17001.13,
+        "hop1_hz": 19862.95,
+        "hop2_hz": 60398.82,
+        "target_DNa02_hz": 11.1293
+      },
+      "right_stim": {
+        "receptors_hz": 14194.96,
+        "hop1_hz": 13810.34,
+        "hop2_hz": 92157.15,
+        "target_DNa02_hz": 0
+      },
+      "hop1_diff_hz": 6052.61,
+      "hop2_diff_hz": 31758.33,
+      "dna02_mirror_diff_hz": 11.1293
+    }
+  ]
+}
