@@ -1,0 +1,680 @@
+{
+  "schema": "sensory.lateralization.v1",
+  "timestamp": "2026-09-19T00:48:19.264Z",
+  "seed": 7000,
+  "sweeps": [
+    {
+      "label": "L=180 / R=0",
+      "leftHz": 180,
+      "rightHz": 0
+    },
+    {
+      "label": "L=180 / R=30",
+      "leftHz": 180,
+      "rightHz": 30
+    },
+    {
+      "label": "L=180 / R=90",
+      "leftHz": 180,
+      "rightHz": 90
+    },
+    {
+      "label": "L=180 / R=180",
+      "leftHz": 180,
+      "rightHz": 180
+    },
+    {
+      "label": "L=90 / R=180",
+      "leftHz": 90,
+      "rightHz": 180
+    },
+    {
+      "label": "L=30 / R=180",
+      "leftHz": 30,
+      "rightHz": 180
+    },
+    {
+      "label": "L=0 / R=180",
+      "leftHz": 0,
+      "rightHz": 180
+    }
+  ],
+  "populations": [
+    "tactile T1",
+    "JO wind/gravity",
+    "thermosensory",
+    "taste T1",
+    "photoreceptors"
+  ],
+  "results": {
+    "intact": {
+      "tactile T1": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0.813,
+          "turn_right_hz": 0.016,
+          "steering_diff_hz": 0.797,
+          "peak_diff_hz": 6.681,
+          "dominant_winner": "halt",
+          "forward_hz": 0.071,
+          "backward_hz": 0.065,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=30",
+          "left_hz": 180,
+          "right_hz": 30,
+          "turn_left_hz": 0.794,
+          "turn_right_hz": 0.018,
+          "steering_diff_hz": 0.776,
+          "peak_diff_hz": 7.507,
+          "dominant_winner": "halt",
+          "forward_hz": 0.067,
+          "backward_hz": 0.065,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=90",
+          "left_hz": 180,
+          "right_hz": 90,
+          "turn_left_hz": 0.78,
+          "turn_right_hz": 0.018,
+          "steering_diff_hz": 0.762,
+          "peak_diff_hz": 8.702,
+          "dominant_winner": "halt",
+          "forward_hz": 0.064,
+          "backward_hz": 0.073,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0.765,
+          "turn_right_hz": 0.014,
+          "steering_diff_hz": 0.751,
+          "peak_diff_hz": 9.861,
+          "dominant_winner": "halt",
+          "forward_hz": 0.069,
+          "backward_hz": 0.091,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=90 / R=180",
+          "left_hz": 90,
+          "right_hz": 180,
+          "turn_left_hz": 0.174,
+          "turn_right_hz": 0.017,
+          "steering_diff_hz": 0.157,
+          "peak_diff_hz": 3.098,
+          "dominant_winner": "halt",
+          "forward_hz": 0.063,
+          "backward_hz": 0.026,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=30 / R=180",
+          "left_hz": 30,
+          "right_hz": 180,
+          "turn_left_hz": 0.026,
+          "turn_right_hz": 0.006,
+          "steering_diff_hz": 0.02,
+          "peak_diff_hz": 2.678,
+          "dominant_winner": "halt",
+          "forward_hz": 0.015,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.001,
+          "steering_diff_hz": -0.001,
+          "peak_diff_hz": 2.466,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        }
+      ],
+      "JO wind/gravity": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0.259,
+          "backward_hz": 0.006,
+          "escape_hz": 0.897
+        },
+        {
+          "label": "L=180 / R=30",
+          "left_hz": 180,
+          "right_hz": 30,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0.262,
+          "backward_hz": 0.011,
+          "escape_hz": 0.857
+        },
+        {
+          "label": "L=180 / R=90",
+          "left_hz": 180,
+          "right_hz": 90,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0.292,
+          "backward_hz": 0.047,
+          "escape_hz": 0.717
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.065,
+          "steering_diff_hz": -0.065,
+          "peak_diff_hz": -0.168,
+          "dominant_winner": "halt",
+          "forward_hz": 0.341,
+          "backward_hz": 0.095,
+          "escape_hz": 0.582
+        },
+        {
+          "label": "L=90 / R=180",
+          "left_hz": 90,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.267,
+          "steering_diff_hz": -0.267,
+          "peak_diff_hz": -0.8,
+          "dominant_winner": "halt",
+          "forward_hz": 0.055,
+          "backward_hz": 0.005,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=30 / R=180",
+          "left_hz": 30,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.413,
+          "steering_diff_hz": -0.413,
+          "peak_diff_hz": -1.655,
+          "dominant_winner": "halt",
+          "forward_hz": 0.023,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.359,
+          "steering_diff_hz": -0.359,
+          "peak_diff_hz": -1.499,
+          "dominant_winner": "halt",
+          "forward_hz": 0.016,
+          "backward_hz": 0,
+          "escape_hz": 0
+        }
+      ],
+      "thermosensory": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0.5,
+          "turn_right_hz": 0.664,
+          "steering_diff_hz": -0.164,
+          "peak_diff_hz": 1.747,
+          "dominant_winner": "halt",
+          "forward_hz": 0.404,
+          "backward_hz": 0.08,
+          "escape_hz": 0.17
+        },
+        {
+          "label": "L=180 / R=30",
+          "left_hz": 180,
+          "right_hz": 30,
+          "turn_left_hz": 0.813,
+          "turn_right_hz": 0.963,
+          "steering_diff_hz": -0.15,
+          "peak_diff_hz": 9.13,
+          "dominant_winner": "halt",
+          "forward_hz": 0.439,
+          "backward_hz": 0.19,
+          "escape_hz": 0.217
+        },
+        {
+          "label": "L=180 / R=90",
+          "left_hz": 180,
+          "right_hz": 90,
+          "turn_left_hz": 1.182,
+          "turn_right_hz": 1.323,
+          "steering_diff_hz": -0.141,
+          "peak_diff_hz": 12.559,
+          "dominant_winner": "halt",
+          "forward_hz": 0.492,
+          "backward_hz": 0.262,
+          "escape_hz": 0.27
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 1.169,
+          "turn_right_hz": 1.611,
+          "steering_diff_hz": -0.442,
+          "peak_diff_hz": 12.663,
+          "dominant_winner": "halt",
+          "forward_hz": 0.527,
+          "backward_hz": 0.213,
+          "escape_hz": 0.299
+        },
+        {
+          "label": "L=90 / R=180",
+          "left_hz": 90,
+          "right_hz": 180,
+          "turn_left_hz": 1.122,
+          "turn_right_hz": 1.319,
+          "steering_diff_hz": -0.197,
+          "peak_diff_hz": 15.473,
+          "dominant_winner": "halt",
+          "forward_hz": 0.493,
+          "backward_hz": 0.178,
+          "escape_hz": 0.298
+        },
+        {
+          "label": "L=30 / R=180",
+          "left_hz": 30,
+          "right_hz": 180,
+          "turn_left_hz": 1.041,
+          "turn_right_hz": 1.126,
+          "steering_diff_hz": -0.085,
+          "peak_diff_hz": 16.696,
+          "dominant_winner": "halt",
+          "forward_hz": 0.469,
+          "backward_hz": 0.144,
+          "escape_hz": 0.291
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0.843,
+          "turn_right_hz": 1.086,
+          "steering_diff_hz": -0.243,
+          "peak_diff_hz": 16.009,
+          "dominant_winner": "halt",
+          "forward_hz": 0.452,
+          "backward_hz": 0.032,
+          "escape_hz": 0.286
+        }
+      ],
+      "taste T1": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0.006,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0.006,
+          "peak_diff_hz": 0.067,
+          "dominant_winner": "halt",
+          "forward_hz": 0.041,
+          "backward_hz": 0.364,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=30",
+          "left_hz": 180,
+          "right_hz": 30,
+          "turn_left_hz": 0.033,
+          "turn_right_hz": 0.097,
+          "steering_diff_hz": -0.064,
+          "peak_diff_hz": 0.684,
+          "dominant_winner": "halt",
+          "forward_hz": 0.112,
+          "backward_hz": 1.396,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=90",
+          "left_hz": 180,
+          "right_hz": 90,
+          "turn_left_hz": 0.011,
+          "turn_right_hz": 0.101,
+          "steering_diff_hz": -0.09,
+          "peak_diff_hz": 0.158,
+          "dominant_winner": "halt",
+          "forward_hz": 0.123,
+          "backward_hz": 1.539,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.093,
+          "steering_diff_hz": -0.093,
+          "peak_diff_hz": -0.286,
+          "dominant_winner": "halt",
+          "forward_hz": 0.124,
+          "backward_hz": 1.608,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=90 / R=180",
+          "left_hz": 90,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.09,
+          "steering_diff_hz": -0.09,
+          "peak_diff_hz": -0.28,
+          "dominant_winner": "halt",
+          "forward_hz": 0.116,
+          "backward_hz": 1.602,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=30 / R=180",
+          "left_hz": 30,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0.093,
+          "steering_diff_hz": -0.093,
+          "peak_diff_hz": -0.306,
+          "dominant_winner": "halt",
+          "forward_hz": 0.108,
+          "backward_hz": 1.528,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0.014,
+          "turn_right_hz": 0.062,
+          "steering_diff_hz": -0.048,
+          "peak_diff_hz": -0.126,
+          "dominant_winner": "halt",
+          "forward_hz": 0.062,
+          "backward_hz": 0.623,
+          "escape_hz": 0
+        }
+      ],
+      "photoreceptors": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=30",
+          "left_hz": 180,
+          "right_hz": 30,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=90",
+          "left_hz": 180,
+          "right_hz": 90,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=90 / R=180",
+          "left_hz": 90,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=30 / R=180",
+          "left_hz": 30,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt",
+          "forward_hz": 0,
+          "backward_hz": 0,
+          "escape_hz": 0
+        }
+      ]
+    },
+    "shuffled": {
+      "tactile T1": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0.117,
+          "turn_right_hz": 0.349,
+          "steering_diff_hz": -0.232,
+          "peak_diff_hz": 17.431,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0.328,
+          "turn_right_hz": 0.908,
+          "steering_diff_hz": -0.58,
+          "peak_diff_hz": 19.947,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0.035,
+          "turn_right_hz": 0.292,
+          "steering_diff_hz": -0.257,
+          "peak_diff_hz": 13.169,
+          "dominant_winner": "halt"
+        }
+      ],
+      "JO wind/gravity": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 2.257,
+          "turn_right_hz": 2.4,
+          "steering_diff_hz": -0.143,
+          "peak_diff_hz": 18.349,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 3.302,
+          "turn_right_hz": 2.404,
+          "steering_diff_hz": 0.898,
+          "peak_diff_hz": 23.276,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0.934,
+          "turn_right_hz": 0.411,
+          "steering_diff_hz": 0.523,
+          "peak_diff_hz": 27.514,
+          "dominant_winner": "halt"
+        }
+      ],
+      "thermosensory": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0.216,
+          "turn_right_hz": 0.451,
+          "steering_diff_hz": -0.235,
+          "peak_diff_hz": 12.378,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0.765,
+          "turn_right_hz": 1.054,
+          "steering_diff_hz": -0.289,
+          "peak_diff_hz": 20.193,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0.451,
+          "turn_right_hz": 0.556,
+          "steering_diff_hz": -0.105,
+          "peak_diff_hz": 22.212,
+          "dominant_winner": "halt"
+        }
+      ],
+      "taste T1": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 1.29,
+          "turn_right_hz": 0.791,
+          "steering_diff_hz": 0.499,
+          "peak_diff_hz": 26.006,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 1.874,
+          "turn_right_hz": 1.569,
+          "steering_diff_hz": 0.305,
+          "peak_diff_hz": 23.456,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0.492,
+          "turn_right_hz": 0.727,
+          "steering_diff_hz": -0.235,
+          "peak_diff_hz": 19.651,
+          "dominant_winner": "halt"
+        }
+      ],
+      "photoreceptors": [
+        {
+          "label": "L=180 / R=0",
+          "left_hz": 180,
+          "right_hz": 0,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=180 / R=180",
+          "left_hz": 180,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt"
+        },
+        {
+          "label": "L=0 / R=180",
+          "left_hz": 0,
+          "right_hz": 180,
+          "turn_left_hz": 0,
+          "turn_right_hz": 0,
+          "steering_diff_hz": 0,
+          "peak_diff_hz": 0,
+          "dominant_winner": "halt"
+        }
+      ]
+    }
+  }
+}

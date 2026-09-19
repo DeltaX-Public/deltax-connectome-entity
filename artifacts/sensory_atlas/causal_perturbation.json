@@ -1,0 +1,40 @@
+{
+  "schema": "sensory.causal_perturbation.v1",
+  "timestamp": "2026-09-19T00:49:30.970Z",
+  "seed": 7000,
+  "stimulus": "tactile T1 left (180 Hz)",
+  "branches": {
+    "Branch_A_Intact": {
+      "description": "Intact connectome under Left Tactile stimulation (180 Hz)",
+      "turn_left_hz": 0.813,
+      "turn_right_hz": 0.016,
+      "steering_bias_hz": 0.797,
+      "peak_left_hz": 8.212,
+      "dominant_winner": "halt"
+    },
+    "Branch_B_Silenced_Steering": {
+      "description": "Left steering DNs silenced (DNa02, DNa01, DNp09 side 1)",
+      "turn_left_hz": 0,
+      "turn_right_hz": 0.016,
+      "steering_bias_hz": -0.016,
+      "peak_left_hz": 0,
+      "dominant_winner": "halt"
+    },
+    "Branch_C_Sham_Silencing": {
+      "description": "Sham silencing: Unrelated grooming DNs silenced",
+      "turn_left_hz": 0.813,
+      "turn_right_hz": 0.016,
+      "steering_bias_hz": 0.797,
+      "peak_left_hz": 8.212,
+      "dominant_winner": "halt"
+    },
+    "Branch_D_Opposite_Sensory": {
+      "description": "Opposite-side Right Tactile stimulation (180 Hz)",
+      "turn_left_hz": 0,
+      "turn_right_hz": 0.001,
+      "steering_bias_hz": -0.001,
+      "peak_right_hz": 2.284,
+      "dominant_winner": "halt"
+    }
+  }
+}

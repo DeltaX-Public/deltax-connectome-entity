@@ -1,0 +1,4857 @@
+{
+  "schema": "sensory.reachability.v1",
+  "timestamp": "2026-09-19T00:46:54.344Z",
+  "connectome": {
+    "N": 165122,
+    "E": 10511038
+  },
+  "max_bfs_depth": 6,
+  "sensory_populations_analyzed": 34,
+  "dn_target_populations": [
+    "forward",
+    "backward",
+    "turn_left",
+    "turn_right",
+    "groom",
+    "escape",
+    "takeoff"
+  ],
+  "reachability": {
+    "tactile T1 left": {
+      "sensor_name": "tactile T1 left",
+      "sensor_neuron_count": 151,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 9,
+            "3": 7
+          },
+          "estimated_paths_sum": 9579,
+          "early_synaptic_weight": 5004,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 45,
+            "inhibitory_synapses": 4368,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.873
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 67,
+          "early_synaptic_weight": 107,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 18,
+            "inhibitory_synapses": 89,
+            "excitatory_fraction": 0.168,
+            "inhibitory_fraction": 0.832
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 44,
+          "early_synaptic_weight": 826,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 812,
+            "excitatory_fraction": 0.008,
+            "inhibitory_fraction": 0.983
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 2500,
+          "early_synaptic_weight": 1178,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 19,
+            "inhibitory_synapses": 982,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.834
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 38
+          },
+          "estimated_paths_sum": 13513,
+          "early_synaptic_weight": 1477,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 1454,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.984
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 16724,
+          "early_synaptic_weight": 12848,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 94,
+            "inhibitory_synapses": 11881,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.925
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 86,
+          "early_synaptic_weight": 34,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 34,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        }
+      }
+    },
+    "tactile T1 right": {
+      "sensor_name": "tactile T1 right",
+      "sensor_neuron_count": 115,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 7,
+            "3": 9
+          },
+          "estimated_paths_sum": 15720,
+          "early_synaptic_weight": 14521,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 61,
+            "inhibitory_synapses": 12030,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.828
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 50,
+          "early_synaptic_weight": 162,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 158,
+            "excitatory_fraction": 0.025,
+            "inhibitory_fraction": 0.975
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 2171,
+          "early_synaptic_weight": 1967,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 12,
+            "inhibitory_synapses": 1775,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.902
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 4051,
+          "early_synaptic_weight": 1853,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 1780,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.961
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 38,
+            "4": 1
+          },
+          "estimated_paths_sum": 22784,
+          "early_synaptic_weight": 1767,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 13,
+            "inhibitory_synapses": 1645,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.931
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 16327,
+          "early_synaptic_weight": 10884,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 94,
+            "inhibitory_synapses": 10377,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.953
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 3
+          },
+          "estimated_paths_sum": 22415,
+          "early_synaptic_weight": 5444,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 14,
+            "inhibitory_synapses": 5280,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.97
+          }
+        }
+      }
+    },
+    "tactile T2 left": {
+      "sensor_name": "tactile T2 left",
+      "sensor_neuron_count": 378,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 11,
+            "3": 5
+          },
+          "estimated_paths_sum": 25270,
+          "early_synaptic_weight": 6980,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 64,
+            "inhibitory_synapses": 4884,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.7
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 323,
+          "early_synaptic_weight": 319,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 18,
+            "inhibitory_synapses": 182,
+            "excitatory_fraction": 0.056,
+            "inhibitory_fraction": 0.571
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 75,
+          "early_synaptic_weight": 544,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 478,
+            "excitatory_fraction": 0.013,
+            "inhibitory_fraction": 0.879
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 50,
+          "early_synaptic_weight": 238,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 16,
+            "inhibitory_synapses": 58,
+            "excitatory_fraction": 0.067,
+            "inhibitory_fraction": 0.244
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 8,
+            "3": 31
+          },
+          "estimated_paths_sum": 34490,
+          "early_synaptic_weight": 3034,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 2941,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.969
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 1
+          },
+          "estimated_paths_sum": 42215,
+          "early_synaptic_weight": 7677,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 45,
+            "inhibitory_synapses": 7552,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.984
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 206,
+          "early_synaptic_weight": 127,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 124,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.976
+          }
+        }
+      }
+    },
+    "tactile T2 right": {
+      "sensor_name": "tactile T2 right",
+      "sensor_neuron_count": 428,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 11,
+            "3": 5
+          },
+          "estimated_paths_sum": 26617,
+          "early_synaptic_weight": 5507,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 50,
+            "inhibitory_synapses": 3918,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.711
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 568,
+          "early_synaptic_weight": 395,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 276,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.699
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 13,
+          "early_synaptic_weight": 111,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 8,
+            "inhibitory_synapses": 14,
+            "excitatory_fraction": 0.072,
+            "inhibitory_fraction": 0.126
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 116,
+          "early_synaptic_weight": 671,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 11,
+            "inhibitory_synapses": 533,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.794
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 7,
+            "3": 32
+          },
+          "estimated_paths_sum": 45845,
+          "early_synaptic_weight": 2807,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 2597,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.925
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 178,
+          "early_synaptic_weight": 66,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 66,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 1
+          },
+          "estimated_paths_sum": 41472,
+          "early_synaptic_weight": 2976,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 2817,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.947
+          }
+        }
+      }
+    },
+    "tactile T3 left": {
+      "sensor_name": "tactile T3 left",
+      "sensor_neuron_count": 394,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 9,
+            "3": 7
+          },
+          "estimated_paths_sum": 26585,
+          "early_synaptic_weight": 5584,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 63,
+            "inhibitory_synapses": 4822,
+            "excitatory_fraction": 0.011,
+            "inhibitory_fraction": 0.864
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 1
+          },
+          "estimated_paths_sum": 15910,
+          "early_synaptic_weight": 2527,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 49,
+            "inhibitory_synapses": 2213,
+            "excitatory_fraction": 0.019,
+            "inhibitory_fraction": 0.876
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 13,
+          "early_synaptic_weight": 72,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 65,
+            "excitatory_fraction": 0.097,
+            "inhibitory_fraction": 0.903
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 10077,
+          "early_synaptic_weight": 1260,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 22,
+            "inhibitory_synapses": 1138,
+            "excitatory_fraction": 0.017,
+            "inhibitory_fraction": 0.903
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 6,
+            "3": 33
+          },
+          "estimated_paths_sum": 18564,
+          "early_synaptic_weight": 1308,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 1144,
+            "excitatory_fraction": 0.005,
+            "inhibitory_fraction": 0.875
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 2,
+          "early_synaptic_weight": 9,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 9,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 49442,
+          "early_synaptic_weight": 3676,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 22,
+            "inhibitory_synapses": 3477,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.946
+          }
+        }
+      }
+    },
+    "tactile T3 right": {
+      "sensor_name": "tactile T3 right",
+      "sensor_neuron_count": 411,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 10,
+            "3": 6
+          },
+          "estimated_paths_sum": 26748,
+          "early_synaptic_weight": 4261,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 41,
+            "inhibitory_synapses": 4109,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.964
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 148,
+          "early_synaptic_weight": 68,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 61,
+            "excitatory_fraction": 0.103,
+            "inhibitory_fraction": 0.897
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 11303,
+          "early_synaptic_weight": 1734,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 12,
+            "inhibitory_synapses": 1660,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.957
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 49,
+          "early_synaptic_weight": 55,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 8,
+            "inhibitory_synapses": 47,
+            "excitatory_fraction": 0.145,
+            "inhibitory_fraction": 0.855
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4,
+            "3": 35
+          },
+          "estimated_paths_sum": 25767,
+          "early_synaptic_weight": 1742,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 1660,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.953
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 1
+          },
+          "estimated_paths_sum": 28831,
+          "early_synaptic_weight": 7673,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 52,
+            "inhibitory_synapses": 7114,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.927
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 49646,
+          "early_synaptic_weight": 3962,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 3756,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.948
+          }
+        }
+      }
+    },
+    "chordotonal T1 left": {
+      "sensor_name": "chordotonal T1 left",
+      "sensor_neuron_count": 23,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 9,
+            "3": 7
+          },
+          "estimated_paths_sum": 1633,
+          "early_synaptic_weight": 6542,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 13,
+            "inhibitory_synapses": 6065,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.927
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 1099,
+          "early_synaptic_weight": 3312,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 20,
+            "inhibitory_synapses": 2902,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.876
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 5,
+          "early_synaptic_weight": 64,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 61,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.953
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 650,
+          "early_synaptic_weight": 2084,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 13,
+            "inhibitory_synapses": 1844,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.885
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 37
+          },
+          "estimated_paths_sum": 2715,
+          "early_synaptic_weight": 4012,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 11,
+            "inhibitory_synapses": 3738,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.932
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 40,
+          "early_synaptic_weight": 824,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 58,
+            "inhibitory_synapses": 750,
+            "excitatory_fraction": 0.07,
+            "inhibitory_fraction": 0.91
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 59,
+          "early_synaptic_weight": 722,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 717,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.993
+          }
+        }
+      }
+    },
+    "chordotonal T1 right": {
+      "sensor_name": "chordotonal T1 right",
+      "sensor_neuron_count": 13,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 8,
+            "3": 8
+          },
+          "estimated_paths_sum": 2509,
+          "early_synaptic_weight": 16779,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 163,
+            "inhibitory_synapses": 14487,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.863
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 530,
+          "early_synaptic_weight": 2749,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 25,
+            "inhibitory_synapses": 2372,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.863
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 463,
+          "early_synaptic_weight": 2094,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 10,
+            "inhibitory_synapses": 1930,
+            "excitatory_fraction": 0.005,
+            "inhibitory_fraction": 0.922
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 876,
+          "early_synaptic_weight": 2554,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 2280,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.893
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 39
+          },
+          "estimated_paths_sum": 1882,
+          "early_synaptic_weight": 2650,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 2452,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.925
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 24,
+          "early_synaptic_weight": 752,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 728,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.968
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 1
+          },
+          "estimated_paths_sum": 723,
+          "early_synaptic_weight": 2365,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 37,
+            "inhibitory_synapses": 2280,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.964
+          }
+        }
+      }
+    },
+    "taste T1 left": {
+      "sensor_name": "taste T1 left",
+      "sensor_neuron_count": 149,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 10,
+            "3": 6
+          },
+          "estimated_paths_sum": 6167,
+          "early_synaptic_weight": 6343,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 4854,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.765
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 100,
+          "early_synaptic_weight": 222,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 222,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 21,
+          "early_synaptic_weight": 793,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 793,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 38,
+          "early_synaptic_weight": 756,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 741,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.98
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 37
+          },
+          "estimated_paths_sum": 5104,
+          "early_synaptic_weight": 1151,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 1023,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.889
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 121,
+          "early_synaptic_weight": 17,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 14,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.824
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 81,
+          "early_synaptic_weight": 25,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 22,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.88
+          }
+        }
+      }
+    },
+    "taste T1 right": {
+      "sensor_name": "taste T1 right",
+      "sensor_neuron_count": 151,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 9,
+            "3": 7
+          },
+          "estimated_paths_sum": 13307,
+          "early_synaptic_weight": 8497,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 29,
+            "inhibitory_synapses": 7407,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.872
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 122,
+          "early_synaptic_weight": 239,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 239,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 8037,
+          "early_synaptic_weight": 4106,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 10,
+            "inhibitory_synapses": 3760,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.916
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 58,
+          "early_synaptic_weight": 757,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 741,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.979
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 38,
+            "4": 1
+          },
+          "estimated_paths_sum": 17729,
+          "early_synaptic_weight": 1416,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 13,
+            "inhibitory_synapses": 1256,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.887
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 104,
+          "early_synaptic_weight": 24,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 21,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.875
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 1
+          },
+          "estimated_paths_sum": 7563,
+          "early_synaptic_weight": 936,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 13,
+            "inhibitory_synapses": 879,
+            "excitatory_fraction": 0.014,
+            "inhibitory_fraction": 0.939
+          }
+        }
+      }
+    },
+    "labellar taste left": {
+      "sensor_name": "labellar taste left",
+      "sensor_neuron_count": 112,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 8,
+            "3": 8
+          },
+          "estimated_paths_sum": 6619,
+          "early_synaptic_weight": 12566,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 197,
+            "inhibitory_synapses": 11291,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.899
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 11713,
+          "early_synaptic_weight": 5518,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 73,
+            "inhibitory_synapses": 4525,
+            "excitatory_fraction": 0.013,
+            "inhibitory_fraction": 0.82
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 3683,
+          "early_synaptic_weight": 5544,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 84,
+            "inhibitory_synapses": 5058,
+            "excitatory_fraction": 0.015,
+            "inhibitory_fraction": 0.912
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 2526,
+          "early_synaptic_weight": 5958,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 82,
+            "inhibitory_synapses": 5208,
+            "excitatory_fraction": 0.014,
+            "inhibitory_fraction": 0.874
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 37,
+            "4": 2
+          },
+          "estimated_paths_sum": 12839,
+          "early_synaptic_weight": 1796,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 44,
+            "inhibitory_synapses": 1636,
+            "excitatory_fraction": 0.024,
+            "inhibitory_fraction": 0.911
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 2508,
+          "early_synaptic_weight": 7961,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 119,
+            "inhibitory_synapses": 6879,
+            "excitatory_fraction": 0.015,
+            "inhibitory_fraction": 0.864
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 3916,
+          "early_synaptic_weight": 4525,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 4155,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.918
+          }
+        }
+      }
+    },
+    "labellar taste right": {
+      "sensor_name": "labellar taste right",
+      "sensor_neuron_count": 111,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 9,
+            "3": 7
+          },
+          "estimated_paths_sum": 2500,
+          "early_synaptic_weight": 4174,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 29,
+            "inhibitory_synapses": 3951,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.947
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 6861,
+          "early_synaptic_weight": 3147,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 21,
+            "inhibitory_synapses": 2749,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.874
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 1921,
+          "early_synaptic_weight": 2112,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 1946,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.921
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 74,
+          "early_synaptic_weight": 76,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 65,
+            "excitatory_fraction": 0.039,
+            "inhibitory_fraction": 0.855
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 32,
+            "4": 6
+          },
+          "estimated_paths_sum": 44321,
+          "early_synaptic_weight": 550,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 518,
+            "excitatory_fraction": 0.005,
+            "inhibitory_fraction": 0.942
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 1
+          },
+          "estimated_paths_sum": 1786,
+          "early_synaptic_weight": 4184,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 62,
+            "inhibitory_synapses": 3757,
+            "excitatory_fraction": 0.015,
+            "inhibitory_fraction": 0.898
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 1119,
+          "early_synaptic_weight": 1736,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 28,
+            "inhibitory_synapses": 1628,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.938
+          }
+        }
+      }
+    },
+    "thermosensory left": {
+      "sensor_name": "thermosensory left",
+      "sensor_neuron_count": 12,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 16
+          },
+          "estimated_paths_sum": 3778,
+          "early_synaptic_weight": 23332,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 156,
+            "inhibitory_synapses": 20741,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.889
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 490,
+          "early_synaptic_weight": 1982,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 1858,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.937
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 836,
+          "early_synaptic_weight": 5794,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 5475,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.945
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 566,
+          "early_synaptic_weight": 3024,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 12,
+            "inhibitory_synapses": 2803,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.927
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 38
+          },
+          "estimated_paths_sum": 1675,
+          "early_synaptic_weight": 2061,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 195,
+            "inhibitory_synapses": 1827,
+            "excitatory_fraction": 0.095,
+            "inhibitory_fraction": 0.886
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 1
+          },
+          "estimated_paths_sum": 224,
+          "early_synaptic_weight": 2906,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 2891,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.995
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 566,
+          "early_synaptic_weight": 1899,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 28,
+            "inhibitory_synapses": 1868,
+            "excitatory_fraction": 0.015,
+            "inhibitory_fraction": 0.984
+          }
+        }
+      }
+    },
+    "thermosensory right": {
+      "sensor_name": "thermosensory right",
+      "sensor_neuron_count": 13,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4,
+            "3": 12
+          },
+          "estimated_paths_sum": 5402,
+          "early_synaptic_weight": 30603,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 396,
+            "inhibitory_synapses": 25220,
+            "excitatory_fraction": 0.013,
+            "inhibitory_fraction": 0.824
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 706,
+          "early_synaptic_weight": 3022,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 27,
+            "inhibitory_synapses": 2598,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.86
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 298,
+          "early_synaptic_weight": 1453,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 1403,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.966
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 2
+          },
+          "estimated_paths_sum": 1035,
+          "early_synaptic_weight": 5390,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 37,
+            "inhibitory_synapses": 4349,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.807
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 38
+          },
+          "estimated_paths_sum": 1603,
+          "early_synaptic_weight": 1946,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 195,
+            "inhibitory_synapses": 1705,
+            "excitatory_fraction": 0.1,
+            "inhibitory_fraction": 0.876
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 753,
+          "early_synaptic_weight": 6772,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 5879,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.868
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 2315,
+          "early_synaptic_weight": 3970,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 53,
+            "inhibitory_synapses": 3795,
+            "excitatory_fraction": 0.013,
+            "inhibitory_fraction": 0.956
+          }
+        }
+      }
+    },
+    "hygrosensory left": {
+      "sensor_name": "hygrosensory left",
+      "sensor_neuron_count": 29,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4,
+            "3": 12
+          },
+          "estimated_paths_sum": 4071,
+          "early_synaptic_weight": 13210,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 46,
+            "inhibitory_synapses": 11781,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.892
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 532,
+          "early_synaptic_weight": 1922,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 1662,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.865
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 1281,
+          "early_synaptic_weight": 5326,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 4810,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.903
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 929,
+          "early_synaptic_weight": 3854,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 13,
+            "inhibitory_synapses": 3413,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.886
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4,
+            "3": 35
+          },
+          "estimated_paths_sum": 3121,
+          "early_synaptic_weight": 2458,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 178,
+            "inhibitory_synapses": 2171,
+            "excitatory_fraction": 0.072,
+            "inhibitory_fraction": 0.883
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 1074,
+          "early_synaptic_weight": 7893,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 5,
+            "inhibitory_synapses": 7474,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.947
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 3
+          },
+          "estimated_paths_sum": 2362,
+          "early_synaptic_weight": 3600,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 73,
+            "inhibitory_synapses": 3407,
+            "excitatory_fraction": 0.02,
+            "inhibitory_fraction": 0.946
+          }
+        }
+      }
+    },
+    "hygrosensory right": {
+      "sensor_name": "hygrosensory right",
+      "sensor_neuron_count": 36,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 5,
+            "3": 11
+          },
+          "estimated_paths_sum": 5953,
+          "early_synaptic_weight": 18002,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 69,
+            "inhibitory_synapses": 15973,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.887
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 1540,
+          "early_synaptic_weight": 3367,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 2976,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.884
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 1550,
+          "early_synaptic_weight": 5918,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 12,
+            "inhibitory_synapses": 4996,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.844
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 2348,
+          "early_synaptic_weight": 7446,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 24,
+            "inhibitory_synapses": 6513,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.875
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 36
+          },
+          "estimated_paths_sum": 5257,
+          "early_synaptic_weight": 2915,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 192,
+            "inhibitory_synapses": 2571,
+            "excitatory_fraction": 0.066,
+            "inhibitory_fraction": 0.882
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 1560,
+          "early_synaptic_weight": 9365,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 9050,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.966
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 1021,
+          "early_synaptic_weight": 1895,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 70,
+            "inhibitory_synapses": 1779,
+            "excitatory_fraction": 0.037,
+            "inhibitory_fraction": 0.939
+          }
+        }
+      }
+    },
+    "JO wind/gravity left": {
+      "sensor_name": "JO wind/gravity left",
+      "sensor_neuron_count": 228,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 16
+          },
+          "estimated_paths_sum": 2229,
+          "early_synaptic_weight": 5311,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 79,
+            "inhibitory_synapses": 4636,
+            "excitatory_fraction": 0.015,
+            "inhibitory_fraction": 0.873
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 125,
+          "early_synaptic_weight": 45,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 42,
+            "excitatory_fraction": 0.067,
+            "inhibitory_fraction": 0.933
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 351,
+          "early_synaptic_weight": 1251,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 1243,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.994
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 182,
+          "early_synaptic_weight": 598,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 589,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.985
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 21,
+            "2": 18
+          },
+          "estimated_paths_sum": 2739,
+          "early_synaptic_weight": 3422,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 74,
+            "inhibitory_synapses": 3081,
+            "excitatory_fraction": 0.022,
+            "inhibitory_fraction": 0.9
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 1310,
+          "early_synaptic_weight": 4280,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 4280,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 1990,
+          "early_synaptic_weight": 4020,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 4003,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.996
+          }
+        }
+      }
+    },
+    "JO wind/gravity right": {
+      "sensor_name": "JO wind/gravity right",
+      "sensor_neuron_count": 247,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 16
+          },
+          "estimated_paths_sum": 1024,
+          "early_synaptic_weight": 4428,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 73,
+            "inhibitory_synapses": 3479,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.786
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 65,
+          "early_synaptic_weight": 98,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 80,
+            "excitatory_fraction": 0.031,
+            "inhibitory_fraction": 0.816
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 37,
+          "early_synaptic_weight": 303,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 303,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 188,
+          "early_synaptic_weight": 1353,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 1173,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.867
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 19,
+            "2": 19,
+            "3": 1
+          },
+          "estimated_paths_sum": 3516,
+          "early_synaptic_weight": 2009,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 1740,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.866
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 1,
+            "2": 1
+          },
+          "estimated_paths_sum": 118,
+          "early_synaptic_weight": 674,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 674,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 943,
+          "early_synaptic_weight": 2791,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 2704,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.969
+          }
+        }
+      }
+    },
+    "JO auditory left": {
+      "sensor_name": "JO auditory left",
+      "sensor_neuron_count": 62,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 15,
+            "3": 1
+          },
+          "estimated_paths_sum": 1217,
+          "early_synaptic_weight": 3373,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 3103,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.92
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 18,
+          "early_synaptic_weight": 161,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 161,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 40,
+          "early_synaptic_weight": 259,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 259,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 61,
+          "early_synaptic_weight": 677,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 677,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 33,
+            "3": 6
+          },
+          "estimated_paths_sum": 4047,
+          "early_synaptic_weight": 2291,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 72,
+            "inhibitory_synapses": 1989,
+            "excitatory_fraction": 0.031,
+            "inhibitory_fraction": 0.868
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 1,
+            "2": 1
+          },
+          "estimated_paths_sum": 266,
+          "early_synaptic_weight": 2346,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 2342,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.998
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 1,
+            "2": 3
+          },
+          "estimated_paths_sum": 525,
+          "early_synaptic_weight": 2309,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 2273,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.984
+          }
+        }
+      }
+    },
+    "JO auditory right": {
+      "sensor_name": "JO auditory right",
+      "sensor_neuron_count": 52,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4,
+            "3": 12
+          },
+          "estimated_paths_sum": 4427,
+          "early_synaptic_weight": 33158,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 285,
+            "inhibitory_synapses": 28141,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.849
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 835,
+          "early_synaptic_weight": 3783,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 40,
+            "inhibitory_synapses": 2882,
+            "excitatory_fraction": 0.011,
+            "inhibitory_fraction": 0.762
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 2
+          },
+          "estimated_paths_sum": 686,
+          "early_synaptic_weight": 4961,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 15,
+            "inhibitory_synapses": 4513,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.91
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 2
+          },
+          "estimated_paths_sum": 1133,
+          "early_synaptic_weight": 7269,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 41,
+            "inhibitory_synapses": 6170,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.849
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 10,
+            "3": 29
+          },
+          "estimated_paths_sum": 1812,
+          "early_synaptic_weight": 3274,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 2934,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.896
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 1,
+            "2": 1
+          },
+          "estimated_paths_sum": 18,
+          "early_synaptic_weight": 585,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 585,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 86,
+          "early_synaptic_weight": 1808,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 1808,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        }
+      }
+    },
+    "wing/notum bristles left": {
+      "sensor_name": "wing/notum bristles left",
+      "sensor_neuron_count": 329,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 14,
+            "3": 2
+          },
+          "estimated_paths_sum": 64146,
+          "early_synaptic_weight": 19585,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 139,
+            "inhibitory_synapses": 17366,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.887
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 972,
+          "early_synaptic_weight": 311,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 308,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.99
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 448,
+          "early_synaptic_weight": 522,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 522,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 1
+          },
+          "estimated_paths_sum": 43564,
+          "early_synaptic_weight": 15590,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 44,
+            "inhibitory_synapses": 13713,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.88
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 6,
+            "3": 33
+          },
+          "estimated_paths_sum": 84384,
+          "early_synaptic_weight": 5223,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 29,
+            "inhibitory_synapses": 4427,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.848
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 402,
+          "early_synaptic_weight": 418,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 58,
+            "inhibitory_synapses": 360,
+            "excitatory_fraction": 0.139,
+            "inhibitory_fraction": 0.861
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 857,
+          "early_synaptic_weight": 365,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 337,
+            "excitatory_fraction": 0.047,
+            "inhibitory_fraction": 0.923
+          }
+        }
+      }
+    },
+    "wing/notum bristles right": {
+      "sensor_name": "wing/notum bristles right",
+      "sensor_neuron_count": 326,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 15,
+            "3": 1
+          },
+          "estimated_paths_sum": 23035,
+          "early_synaptic_weight": 5791,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 104,
+            "inhibitory_synapses": 4375,
+            "excitatory_fraction": 0.018,
+            "inhibitory_fraction": 0.755
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 974,
+          "early_synaptic_weight": 385,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 268,
+            "excitatory_fraction": 0.016,
+            "inhibitory_fraction": 0.696
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 167,
+          "early_synaptic_weight": 317,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 258,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.814
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 176,
+          "early_synaptic_weight": 767,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 9,
+            "inhibitory_synapses": 631,
+            "excitatory_fraction": 0.012,
+            "inhibitory_fraction": 0.823
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 7,
+            "3": 32
+          },
+          "estimated_paths_sum": 72082,
+          "early_synaptic_weight": 4705,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 29,
+            "inhibitory_synapses": 4154,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.883
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 303,
+          "early_synaptic_weight": 148,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 36,
+            "inhibitory_synapses": 108,
+            "excitatory_fraction": 0.243,
+            "inhibitory_fraction": 0.73
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 1076,
+          "early_synaptic_weight": 237,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 209,
+            "excitatory_fraction": 0.072,
+            "inhibitory_fraction": 0.882
+          }
+        }
+      }
+    },
+    "haltere left": {
+      "sensor_name": "haltere left",
+      "sensor_neuron_count": 197,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 16
+          },
+          "estimated_paths_sum": 1460,
+          "early_synaptic_weight": 6513,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 51,
+            "inhibitory_synapses": 3831,
+            "excitatory_fraction": 0.008,
+            "inhibitory_fraction": 0.588
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 30,
+          "early_synaptic_weight": 580,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 374,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.645
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 249,
+          "early_synaptic_weight": 1353,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 1102,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.814
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 171,
+          "early_synaptic_weight": 625,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 446,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.714
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 2,
+            "2": 35,
+            "3": 2
+          },
+          "estimated_paths_sum": 2573,
+          "early_synaptic_weight": 1584,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 9,
+            "inhibitory_synapses": 1332,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.841
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 22,
+          "early_synaptic_weight": 392,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 378,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.964
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 1
+          },
+          "estimated_paths_sum": 4098,
+          "early_synaptic_weight": 2326,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 33,
+            "inhibitory_synapses": 2240,
+            "excitatory_fraction": 0.014,
+            "inhibitory_fraction": 0.963
+          }
+        }
+      }
+    },
+    "haltere right": {
+      "sensor_name": "haltere right",
+      "sensor_neuron_count": 199,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 16
+          },
+          "estimated_paths_sum": 1265,
+          "early_synaptic_weight": 6112,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 38,
+            "inhibitory_synapses": 3575,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.585
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 40,
+          "early_synaptic_weight": 579,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 373,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.644
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 179,
+          "early_synaptic_weight": 548,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 389,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.71
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3
+          },
+          "estimated_paths_sum": 229,
+          "early_synaptic_weight": 1050,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 873,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.831
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 1,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "1": 2,
+            "2": 36,
+            "3": 1
+          },
+          "estimated_paths_sum": 2679,
+          "early_synaptic_weight": 1528,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 9,
+            "inhibitory_synapses": 1222,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.8
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2
+          },
+          "estimated_paths_sum": 23,
+          "early_synaptic_weight": 384,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 370,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.964
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 4
+          },
+          "estimated_paths_sum": 95,
+          "early_synaptic_weight": 424,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 418,
+            "excitatory_fraction": 0.014,
+            "inhibitory_fraction": 0.986
+          }
+        }
+      }
+    },
+    "ORN_DA2 left": {
+      "sensor_name": "ORN_DA2 left",
+      "sensor_neuron_count": 28,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 13,
+            "4": 3
+          },
+          "estimated_paths_sum": 92948,
+          "early_synaptic_weight": 10116,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 15,
+            "inhibitory_synapses": 8437,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.834
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 142,
+          "early_synaptic_weight": 640,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 506,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.791
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2,
+            "4": 1
+          },
+          "estimated_paths_sum": 66368,
+          "early_synaptic_weight": 4780,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 4183,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.875
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 100,
+          "early_synaptic_weight": 828,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 718,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.867
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 21,
+            "4": 18
+          },
+          "estimated_paths_sum": 77118,
+          "early_synaptic_weight": 2463,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 201,
+            "inhibitory_synapses": 2084,
+            "excitatory_fraction": 0.082,
+            "inhibitory_fraction": 0.846
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 11,
+          "early_synaptic_weight": 183,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 183,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 808,
+          "early_synaptic_weight": 375,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 375,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        }
+      }
+    },
+    "ORN_DA2 right": {
+      "sensor_name": "ORN_DA2 right",
+      "sensor_neuron_count": 27,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 14,
+            "4": 2
+          },
+          "estimated_paths_sum": 26269,
+          "early_synaptic_weight": 6450,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 12,
+            "inhibitory_synapses": 5198,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.806
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 176,
+          "early_synaptic_weight": 622,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 488,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.785
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 46,
+          "early_synaptic_weight": 100,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 100,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 121,
+          "early_synaptic_weight": 755,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 645,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.854
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 26,
+            "4": 13
+          },
+          "estimated_paths_sum": 50373,
+          "early_synaptic_weight": 3815,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 207,
+            "inhibitory_synapses": 3148,
+            "excitatory_fraction": 0.054,
+            "inhibitory_fraction": 0.825
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 30,
+          "early_synaptic_weight": 577,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 577,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 715,
+          "early_synaptic_weight": 387,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 387,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        }
+      }
+    },
+    "ORN_V left": {
+      "sensor_name": "ORN_V left",
+      "sensor_neuron_count": 16,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 15,
+            "4": 1
+          },
+          "estimated_paths_sum": 10156,
+          "early_synaptic_weight": 5338,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 18,
+            "inhibitory_synapses": 4845,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.908
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 107,
+          "early_synaptic_weight": 140,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 140,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 284,
+          "early_synaptic_weight": 702,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 694,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.989
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 85,
+          "early_synaptic_weight": 586,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 586,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 16,
+            "4": 22
+          },
+          "estimated_paths_sum": 78185,
+          "early_synaptic_weight": 92,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 69,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.75
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 50,
+          "early_synaptic_weight": 232,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 232,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 3
+          },
+          "estimated_paths_sum": 308,
+          "early_synaptic_weight": 503,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 25,
+            "inhibitory_synapses": 478,
+            "excitatory_fraction": 0.05,
+            "inhibitory_fraction": 0.95
+          }
+        }
+      }
+    },
+    "ORN_V right": {
+      "sensor_name": "ORN_V right",
+      "sensor_neuron_count": 39,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 16
+          },
+          "estimated_paths_sum": 3625,
+          "early_synaptic_weight": 3098,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 77,
+            "inhibitory_synapses": 2723,
+            "excitatory_fraction": 0.025,
+            "inhibitory_fraction": 0.879
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 428,
+          "early_synaptic_weight": 274,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 219,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.799
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 180,
+          "early_synaptic_weight": 383,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 283,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.739
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 714,
+          "early_synaptic_weight": 1015,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 942,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.928
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 37,
+            "4": 2
+          },
+          "estimated_paths_sum": 9344,
+          "early_synaptic_weight": 962,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 195,
+            "inhibitory_synapses": 673,
+            "excitatory_fraction": 0.203,
+            "inhibitory_fraction": 0.7
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 139,
+          "early_synaptic_weight": 398,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 398,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 294,
+          "early_synaptic_weight": 270,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 36,
+            "inhibitory_synapses": 231,
+            "excitatory_fraction": 0.133,
+            "inhibitory_fraction": 0.856
+          }
+        }
+      }
+    },
+    "ORN_DM1 left": {
+      "sensor_name": "ORN_DM1 left",
+      "sensor_neuron_count": 35,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 16
+          },
+          "estimated_paths_sum": 4062,
+          "early_synaptic_weight": 3937,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 33,
+            "inhibitory_synapses": 3217,
+            "excitatory_fraction": 0.008,
+            "inhibitory_fraction": 0.817
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 489,
+          "early_synaptic_weight": 857,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 673,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.785
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 726,
+          "early_synaptic_weight": 1522,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 1277,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.839
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 555,
+          "early_synaptic_weight": 813,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 738,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.908
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 21,
+            "4": 18
+          },
+          "estimated_paths_sum": 114281,
+          "early_synaptic_weight": 3086,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 137,
+            "inhibitory_synapses": 2672,
+            "excitatory_fraction": 0.044,
+            "inhibitory_fraction": 0.866
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 171,
+          "early_synaptic_weight": 669,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 669,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 1
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 1654,
+          "early_synaptic_weight": 599,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 590,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.985
+          }
+        }
+      }
+    },
+    "ORN_DM1 right": {
+      "sensor_name": "ORN_DM1 right",
+      "sensor_neuron_count": 39,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 16
+          },
+          "estimated_paths_sum": 4562,
+          "early_synaptic_weight": 3489,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 77,
+            "inhibitory_synapses": 2701,
+            "excitatory_fraction": 0.022,
+            "inhibitory_fraction": 0.774
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 521,
+          "early_synaptic_weight": 825,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 774,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.938
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 597,
+          "early_synaptic_weight": 867,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 775,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.894
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 696,
+          "early_synaptic_weight": 813,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 739,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.909
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 20,
+            "4": 19
+          },
+          "estimated_paths_sum": 164781,
+          "early_synaptic_weight": 4326,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 140,
+            "inhibitory_synapses": 3901,
+            "excitatory_fraction": 0.032,
+            "inhibitory_fraction": 0.902
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 204,
+          "early_synaptic_weight": 543,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 5,
+            "inhibitory_synapses": 538,
+            "excitatory_fraction": 0.009,
+            "inhibitory_fraction": 0.991
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 2048,
+          "early_synaptic_weight": 817,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 797,
+            "excitatory_fraction": 0.021,
+            "inhibitory_fraction": 0.976
+          }
+        }
+      }
+    },
+    "ORN_DA1 left": {
+      "sensor_name": "ORN_DA1 left",
+      "sensor_neuron_count": 99,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 3,
+            "3": 13
+          },
+          "estimated_paths_sum": 22554,
+          "early_synaptic_weight": 23725,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 169,
+            "inhibitory_synapses": 19454,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.82
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 7926,
+          "early_synaptic_weight": 2900,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 31,
+            "inhibitory_synapses": 2459,
+            "excitatory_fraction": 0.011,
+            "inhibitory_fraction": 0.848
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 6341,
+          "early_synaptic_weight": 6110,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 19,
+            "inhibitory_synapses": 5352,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.876
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 7020,
+          "early_synaptic_weight": 6587,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 65,
+            "inhibitory_synapses": 5472,
+            "excitatory_fraction": 0.01,
+            "inhibitory_fraction": 0.831
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 36,
+            "4": 3
+          },
+          "estimated_paths_sum": 54577,
+          "early_synaptic_weight": 2515,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 83,
+            "inhibitory_synapses": 2228,
+            "excitatory_fraction": 0.033,
+            "inhibitory_fraction": 0.886
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 2753,
+          "early_synaptic_weight": 4196,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 5,
+            "inhibitory_synapses": 4187,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.998
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 2
+          },
+          "estimated_paths_sum": 2496,
+          "early_synaptic_weight": 999,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 3,
+            "inhibitory_synapses": 988,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.989
+          }
+        }
+      }
+    },
+    "ORN_DA1 right": {
+      "sensor_name": "ORN_DA1 right",
+      "sensor_neuron_count": 153,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 2,
+            "3": 14
+          },
+          "estimated_paths_sum": 51486,
+          "early_synaptic_weight": 21197,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 110,
+            "inhibitory_synapses": 17439,
+            "excitatory_fraction": 0.005,
+            "inhibitory_fraction": 0.823
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 18437,
+          "early_synaptic_weight": 2435,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 1969,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.809
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 10467,
+          "early_synaptic_weight": 5702,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 8,
+            "inhibitory_synapses": 5075,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.89
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 18497,
+          "early_synaptic_weight": 5647,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 4529,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.802
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 34,
+            "4": 5
+          },
+          "estimated_paths_sum": 181136,
+          "early_synaptic_weight": 2946,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 2675,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.908
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 5305,
+          "early_synaptic_weight": 3366,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 5,
+            "inhibitory_synapses": 3357,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.997
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 3
+          },
+          "estimated_paths_sum": 9642,
+          "early_synaptic_weight": 1655,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 6,
+            "inhibitory_synapses": 1641,
+            "excitatory_fraction": 0.004,
+            "inhibitory_fraction": 0.992
+          }
+        }
+      }
+    },
+    "photoreceptors left": {
+      "sensor_name": "photoreceptors left",
+      "sensor_neuron_count": 1733,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 16
+          },
+          "estimated_paths_sum": 12511,
+          "early_synaptic_weight": 14506,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 23,
+            "inhibitory_synapses": 11514,
+            "excitatory_fraction": 0.002,
+            "inhibitory_fraction": 0.794
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 777,
+          "early_synaptic_weight": 887,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 664,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.749
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 3570,
+          "early_synaptic_weight": 4529,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 3388,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.748
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 2013,
+          "early_synaptic_weight": 2503,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 7,
+            "inhibitory_synapses": 2310,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.923
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 18,
+            "4": 21
+          },
+          "estimated_paths_sum": 139864,
+          "early_synaptic_weight": 5889,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 170,
+            "inhibitory_synapses": 5050,
+            "excitatory_fraction": 0.029,
+            "inhibitory_fraction": 0.858
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 3961,
+          "early_synaptic_weight": 8077,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 5,
+            "inhibitory_synapses": 8052,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.997
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 5043,
+          "early_synaptic_weight": 10420,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 61,
+            "inhibitory_synapses": 10348,
+            "excitatory_fraction": 0.006,
+            "inhibitory_fraction": 0.993
+          }
+        }
+      }
+    },
+    "photoreceptors right": {
+      "sensor_name": "photoreceptors right",
+      "sensor_neuron_count": 2374,
+      "dn_reachability": {
+        "forward": {
+          "dn_role": "forward",
+          "dn_total_neurons": 16,
+          "dn_reachable_neurons": 16,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 15
+          },
+          "estimated_paths_sum": 14813,
+          "early_synaptic_weight": 13543,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 11264,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.832
+          }
+        },
+        "backward": {
+          "dn_role": "backward",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 1416,
+          "early_synaptic_weight": 1028,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 828,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.805
+          }
+        },
+        "turn_left": {
+          "dn_role": "turn_left",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 3
+          },
+          "estimated_paths_sum": 2126,
+          "early_synaptic_weight": 2271,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 0,
+            "inhibitory_synapses": 2223,
+            "excitatory_fraction": 0,
+            "inhibitory_fraction": 0.979
+          }
+        },
+        "turn_right": {
+          "dn_role": "turn_right",
+          "dn_total_neurons": 3,
+          "dn_reachable_neurons": 3,
+          "fraction_reachable": 1,
+          "min_hop_distance": 2,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "2": 1,
+            "3": 2
+          },
+          "estimated_paths_sum": 3241,
+          "early_synaptic_weight": 2732,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 4,
+            "inhibitory_synapses": 2074,
+            "excitatory_fraction": 0.001,
+            "inhibitory_fraction": 0.759
+          }
+        },
+        "groom": {
+          "dn_role": "groom",
+          "dn_total_neurons": 39,
+          "dn_reachable_neurons": 39,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 27,
+            "4": 12
+          },
+          "estimated_paths_sum": 70653,
+          "early_synaptic_weight": 3673,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 95,
+            "inhibitory_synapses": 3020,
+            "excitatory_fraction": 0.026,
+            "inhibitory_fraction": 0.822
+          }
+        },
+        "escape": {
+          "dn_role": "escape",
+          "dn_total_neurons": 2,
+          "dn_reachable_neurons": 2,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 2
+          },
+          "estimated_paths_sum": 5066,
+          "early_synaptic_weight": 6696,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 17,
+            "inhibitory_synapses": 6664,
+            "excitatory_fraction": 0.003,
+            "inhibitory_fraction": 0.995
+          }
+        },
+        "takeoff": {
+          "dn_role": "takeoff",
+          "dn_total_neurons": 4,
+          "dn_reachable_neurons": 4,
+          "fraction_reachable": 1,
+          "min_hop_distance": 3,
+          "has_directed_route": true,
+          "hops_distribution": {
+            "3": 4
+          },
+          "estimated_paths_sum": 6361,
+          "early_synaptic_weight": 8226,
+          "neurotransmitter_profile": {
+            "excitatory_synapses": 61,
+            "inhibitory_synapses": 8156,
+            "excitatory_fraction": 0.007,
+            "inhibitory_fraction": 0.991
+          }
+        }
+      }
+    }
+  }
+}

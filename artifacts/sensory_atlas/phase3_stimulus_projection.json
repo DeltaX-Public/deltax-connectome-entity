@@ -1,0 +1,190 @@
+{
+  "schema": "sensory.phase3_projection.v1",
+  "timestamp": "2026-09-19T00:48:31.802Z",
+  "seed": 7000,
+  "findings": {
+    "input_symmetry_status": "100% ROTATIONALLY SYMMETRIC ACROSS ALL ENCOUNTER STAGES",
+    "steering_information_present": false,
+    "halt_attractor_status": "CONFIRMED — HALT DOMINATES (100%) IN APPROACH AND ENCOUNTER",
+    "root_cause": "Phase III sensory transduction provides zero lateralized differential, exciting bilateral aversive and mechanosensory channels equally, collapsing candidate field into HALT."
+  },
+  "projections": [
+    {
+      "state": "STATE_A_PRE_ENCOUNTER",
+      "observation": {
+        "visual_field": {
+          "nearest_obstacle_distance": 3.5,
+          "corridor": "central_corridor"
+        },
+        "collision": {
+          "blocked": false
+        },
+        "gradients": {
+          "hazard": false,
+          "energy": 50,
+          "food_signal": 0.2
+        },
+        "body": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      "channel_drives_hz": {
+        "tactile T1 left": 0,
+        "tactile T1 right": 0,
+        "JO wind/gravity left": 0,
+        "JO wind/gravity right": 0,
+        "thermosensory left": 0,
+        "thermosensory right": 0,
+        "taste T1 left": 56.4,
+        "taste T1 right": 56.4,
+        "labellar taste left": 50.76,
+        "labellar taste right": 50.76
+      },
+      "total_active_sensor_neurons": 4630,
+      "total_left_energy": 14088.720000000001,
+      "total_right_energy": 14150.759999999998,
+      "input_drive_asymmetry_pct": 0.22,
+      "is_mathematically_symmetric": false,
+      "measured_dn_rates": {
+        "turn_left": 0,
+        "turn_right": 0.085,
+        "forward": 0.116,
+        "backward": 0.662,
+        "escape": 0,
+        "groom": 0.001
+      },
+      "candidate_strengths": {
+        "locomotion_forward": 0.05,
+        "halt": 0.998,
+        "turn_left": 0.05,
+        "turn_right": 0.05,
+        "giant_fiber_escape": 0.05,
+        "groom": 0.05,
+        "safe_noop": 0.01
+      },
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "steering_bias_hz": -0.085,
+      "candidate_entropy": 1.2484
+    },
+    {
+      "state": "STATE_B_APPROACH",
+      "observation": {
+        "visual_field": {
+          "nearest_obstacle_distance": 1.2,
+          "corridor": "central_corridor"
+        },
+        "collision": {
+          "blocked": false
+        },
+        "gradients": {
+          "hazard": false,
+          "energy": 48,
+          "food_signal": 0.4
+        },
+        "body": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      "channel_drives_hz": {
+        "tactile T1 left": 56.72,
+        "tactile T1 right": 56.72,
+        "JO wind/gravity left": 70.9,
+        "JO wind/gravity right": 70.9,
+        "thermosensory left": 0,
+        "thermosensory right": 0,
+        "taste T1 left": 97,
+        "taste T1 right": 97,
+        "labellar taste left": 87.3,
+        "labellar taste right": 87.3
+      },
+      "total_active_sensor_neurons": 5371,
+      "total_left_energy": 48960.52,
+      "total_right_energy": 48372.40000000001,
+      "input_drive_asymmetry_pct": 0.6,
+      "is_mathematically_symmetric": false,
+      "measured_dn_rates": {
+        "turn_left": 0.303,
+        "turn_right": 0.117,
+        "forward": 0.16,
+        "backward": 0.933,
+        "escape": 0,
+        "groom": 1.821
+      },
+      "candidate_strengths": {
+        "locomotion_forward": 0.05,
+        "halt": 0.995,
+        "turn_left": 0.05,
+        "turn_right": 0.05,
+        "giant_fiber_escape": 0.05,
+        "groom": 0.054,
+        "safe_noop": 0.01
+      },
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "steering_bias_hz": 0.187,
+      "candidate_entropy": 1.258
+    },
+    {
+      "state": "STATE_C_ENCOUNTER",
+      "observation": {
+        "visual_field": {
+          "nearest_obstacle_distance": 0,
+          "corridor": "central_corridor"
+        },
+        "collision": {
+          "blocked": true
+        },
+        "gradients": {
+          "hazard": true,
+          "energy": 45,
+          "food_signal": 0.5
+        },
+        "body": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      "channel_drives_hz": {
+        "tactile T1 left": 160,
+        "tactile T1 right": 160,
+        "JO wind/gravity left": 140,
+        "JO wind/gravity right": 140,
+        "thermosensory left": 180,
+        "thermosensory right": 180,
+        "taste T1 left": 150,
+        "taste T1 right": 150,
+        "labellar taste left": 98.31,
+        "labellar taste right": 98.31
+      },
+      "total_active_sensor_neurons": 5396,
+      "total_left_energy": 91600.72,
+      "total_right_energy": 88882.41,
+      "input_drive_asymmetry_pct": 1.51,
+      "is_mathematically_symmetric": false,
+      "measured_dn_rates": {
+        "turn_left": 2.004,
+        "turn_right": 0.871,
+        "forward": 0.396,
+        "backward": 2.366,
+        "escape": 0.289,
+        "groom": 1.817
+      },
+      "candidate_strengths": {
+        "locomotion_forward": 0.05,
+        "halt": 0.982,
+        "turn_left": 0.074,
+        "turn_right": 0.05,
+        "giant_fiber_escape": 0.05,
+        "groom": 0.054,
+        "safe_noop": 0.01
+      },
+      "dominant_winner": "halt",
+      "dominant_winner_pct": 100,
+      "steering_bias_hz": 1.132,
+      "candidate_entropy": 1.402
+    }
+  ]
+}
