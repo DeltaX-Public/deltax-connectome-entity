@@ -5,7 +5,7 @@
   "diagnostic_seed_range": "20300..20349",
   "findings_summary": {
     "auditory_escape_dnp70_dependency": "DNp70 silencing has virtually zero effect on acoustic escape because JO auditory afferents project directly to DNp01 via 21 1-hop synapses (674 weight).",
-    "tactile_escape_dnp70_dependency": "Under natural tactile drive, DNp01 is silent across all conditions. Under intermediate stimulation, silencing DNp70-Left (541) eliminates the majority of DNp01 recruitment, silencing DNp70-Right (1048) eliminates the remainder, and silencing both reduces DNp01 rescue to exactly 0.00 Hz (100% causal necessity).",
+    "tactile_escape_dnp70_dependency": "Under natural tactile drive, DNp01 is silent across all conditions. Under intermediate stimulation, silencing DNp70-Left (541) eliminates the majority of DNp01 recruitment, silencing DNp70-Right (1048) eliminates the remainder, and silencing both reduces DNp01 rescue to exactly 0.00 Hz, demonstrating that DNp70 is causally necessary as a group for the experimentally rescued tactile-escape pathway under the tested DNp70-boost intervention.",
     "matched_sham_specificity": "Silencing matched non-pathway descending neurons produces zero reduction in escape rescue, demonstrating high anatomical and causal specificity."
   },
   "experiments": {

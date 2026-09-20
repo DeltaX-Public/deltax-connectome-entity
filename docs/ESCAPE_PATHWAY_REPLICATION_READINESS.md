@@ -174,10 +174,11 @@ Single-neuron necessity testing can be misleading in redundant networks. We exec
 | *Rescued Net Input Current* | $+299.36$ | $+91.40$ | $+140.90$ | **$-70.52$** | $+299.36$ |
 
 ### Causal Necessity Deductions
-1. **100% Causal Necessity for Tactile Escape**: Dual silencing of DNp70 completely eliminates rescued DNp01 firing ($2.24\text{ Hz} \to 0.00\text{ Hz}$, Candidate strength $0.075 \to 0.000$, Net current $+299.36 \to -70.52$).
+1. **Causal Necessity for the Rescued Route**: DNp70 is causally necessary as a group for the experimentally rescued tactile-escape pathway under the tested DNp70-boost intervention (dual silencing completely eliminates rescued DNp01 firing: $2.24\text{ Hz} \to 0.00\text{ Hz}$, Candidate strength $0.075 \to 0.000$, Net current $+299.36 \to -70.52$).
+   - **Auditory Escape Independence**: Auditory escape does not require DNp70 ($20.19\text{ Hz}$ intact vs $20.19\text{ Hz}$ silenced).
+   - **Intervention Scope**: DNp70 necessity was demonstrated specifically for the rescued tactile route; this does not establish DNp70 as uniquely necessary for all possible tactile escape recruitment mechanisms.
 2. **Partial Asymmetric Redundancy**: Silencing 541 alone reduces recruitment by $70.4\%$ ($2.24 \to 0.66\text{ Hz}$), while silencing 1048 alone reduces recruitment by $51.6\%$ ($2.24 \to 1.09\text{ Hz}$). Both participate, but Left (541) provides majority drive under left tactile stimulation.
 3. **Complete Pathway Specificity**: Matched sham silencing produces **$0.0\%$ change** in recruitment, proving the effect is anatomically localized to DNp70.
-4. **Auditory Independence**: DNp70 silencing produces zero change in acoustic escape ($20.19\text{ Hz} \to 20.19\text{ Hz}$), confirming that auditory drive bypasses DNp70 via direct monosynaptic projections.
 
 ---
 
@@ -293,9 +294,10 @@ Under natural tactile drive ($180.0\text{ Hz}$) across all 50 diagnostic seeds:
 | **DNp01-Left** | 6 | `DNp01` (Left) | **$-100.19 \pm 80.44$**| $151.82 \pm 12.60$| **$-0.67 \pm 0.54$** | $0.00 \pm 0.00$ | **NET_INHIBITED** |
 | **DNp01-Right**| 0 | `DNp01` (Right)| **$-33.13 \pm 23.60$** | $151.43 \pm 11.67$| **$-0.22 \pm 0.16$** | $0.00 \pm 0.00$ | **NET_INHIBITED** |
 
-### Applicability of Lane 1 Subthreshold Learning Principle
-1. **DNp70 Sits Exactly in the Target Zone**: Intermediate DNp70 receives net-positive synaptic input hovering right around threshold ($I/\theta \approx 0.80\text{--}1.15$), firing only marginally ($0.08\text{--}0.26\text{ Hz}$). This is an **ideal substrate for local subthreshold learning**, identical to the AN03A008 $\to$ DNa02 premise in right steering.
-2. **DNp01 is Protected by Threshold and Inhibition**: DNp01 has a massive threshold ($\theta \approx 152$) and negative input under tactile drive. It cannot bootstrap itself from tactile afferents directly, but once DNp70 fires via Stage 1 plasticity, the 1416 synapses deliver $+300$ to $+380$ input, crossing threshold easily.
+### Suitability for Testing Subthreshold Learning Rule
+1. **Mechanistically Suitable Subthreshold State**: Intermediate DNp70 receives net-positive synaptic input hovering right around threshold ($I/\theta \approx 0.80\text{--}1.15$), firing only marginally ($0.08\text{--}0.26\text{ Hz}$). Therefore, the pathway is mechanistically suitable for testing the same local subthreshold-bootstrap rule.
+2. **Empirical Boundary**: No plasticity has yet been run on this pathway. Readiness is supported by: (a) positive local pre-threshold state, (b) downstream viability, (c) intervention-supported recruitment, (d) existing-edge target manifests, (e) matched sham, and (f) N=50 diagnostic replication.
+3. **DNp01 is Protected by Threshold and Inhibition**: DNp01 has a massive threshold ($\theta \approx 152$) and negative input under tactile drive. It cannot bootstrap itself from tactile afferents directly, but once DNp70 fires via Stage 1 plasticity, the 1416 synapses deliver $+300$ to $+380$ input, crossing threshold easily.
 
 ---
 
@@ -342,7 +344,7 @@ According to Section 18 of the experiment protocol, an independent plasticity re
 |---|---|---|
 | **1. Structural Reality** | **PASS** | `tactile T1 left -> DNp70 -> DNp01` exists in connectome across 10 genuine graph edges (1,434 cumulative weight). |
 | **2. Downstream DNp01 Viability** | **PASS** | DNp01 fires at $20.19\text{ Hz}$ under auditory drive and $3.47\text{ Hz}$ under DNp70 drive, generating CandidateBridge proposals ($s \in [0.075, 0.666]$). Formally audited as UNEMBODIED in rover chassis. |
-| **3. DNp70 Causal Efficacy** | **PASS** | Dual silencing of DNp70 abolishes rescued escape ($2.24\text{ Hz} \to 0.00\text{ Hz}$, $100\%$ necessity); sham silencing has $0.0\%$ effect. |
+| **3. DNp70 Causal Efficacy** | **PASS** | DNp70 is causally necessary as a group for the experimentally rescued tactile-escape pathway under the tested DNp70-boost intervention ($2.24\text{ Hz} \to 0.00\text{ Hz}$); sham silencing has $0.0\%$ effect. |
 | **4. Failure Mechanism Localized** | **PASS** | Earliest divergence pinpointed to Stage 1 at $t=10\text{ ms}$; primary bottleneck classified as insufficient excitatory convergence combined with polysynaptic inhibition. |
 | **5. Measurable Subthreshold State**| **PASS** | Intermediate DNp70 exhibits positive subthreshold excitation ($I/\theta = 1.15$ Left, $0.80$ Right), ready for bootstrap learning. |
 | **6. Policy-Neutral Target Defined**| **PASS** | `ESCAPE_A`, `ESCAPE_B`, `ESCAPE_C` defined strictly on existing edges without structural rewiring. |
