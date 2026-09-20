@@ -1,0 +1,177 @@
+{
+  "schema": "latent_repertoire.bilateral_validation.v1",
+  "timestamp": "2026-09-20T01:07:34.787Z",
+  "seed_range": "20200..20299",
+  "sample_size_N": 100,
+  "stim_intensity_hz": 180,
+  "cases": [
+    {
+      "case_id": "tactile_t1_steering",
+      "label": "Tactile T1 -> Steering (Turn Left vs Turn Right)",
+      "left_sensor": "tactile T1 left",
+      "right_sensor": "tactile T1 right",
+      "left_motor": "turn_left",
+      "right_motor": "turn_right",
+      "sample_size_N": 100,
+      "seed_range": "20200..20299",
+      "structural_metrics": {
+        "weight_left": 826,
+        "weight_right": 751,
+        "structural_asymmetry_index": 0.0476
+      },
+      "dynamical_metrics": {
+        "mean_left_rate_hz": 0.0445,
+        "mean_right_rate_hz": 0,
+        "mean_difference_hz": 0.0445,
+        "difference_std_error": 0.0025,
+        "ci_95_percent": [
+          0.0396,
+          0.0494
+        ],
+        "dynamical_asymmetry_index": 1,
+        "fraction_seeds_preserving_direction": 1
+      },
+      "asymmetry_classification": "PURE_DYNAMICAL_ASYMMETRY_EMERGENT_FROM_SYMMETRIC_WIRING"
+    },
+    {
+      "case_id": "jo_auditory_escape",
+      "label": "JO Auditory -> Giant Fiber Escape (DNp01)",
+      "left_sensor": "JO auditory left",
+      "right_sensor": "JO auditory right",
+      "left_motor": "escape",
+      "right_motor": "escape",
+      "sample_size_N": 100,
+      "seed_range": "20200..20299",
+      "structural_metrics": {
+        "weight_left": 674,
+        "weight_right": 23,
+        "structural_asymmetry_index": 0.934
+      },
+      "dynamical_metrics": {
+        "mean_left_rate_hz": 10.4061,
+        "mean_right_rate_hz": 0,
+        "mean_difference_hz": 10.4061,
+        "difference_std_error": 0.1351,
+        "ci_95_percent": [
+          10.1414,
+          10.6708
+        ],
+        "dynamical_asymmetry_index": 1,
+        "fraction_seeds_preserving_direction": 1
+      },
+      "asymmetry_classification": "STRUCTURALLY_CONSTRAINED_DYNAMICAL_ASYMMETRY"
+    },
+    {
+      "case_id": "jo_wind_steering",
+      "label": "JO Wind/Gravity -> Steering (Turn Left vs Turn Right)",
+      "left_sensor": "JO wind/gravity left",
+      "right_sensor": "JO wind/gravity right",
+      "left_motor": "turn_left",
+      "right_motor": "turn_right",
+      "sample_size_N": 100,
+      "seed_range": "20200..20299",
+      "structural_metrics": {
+        "weight_left": 1251,
+        "weight_right": 1353,
+        "structural_asymmetry_index": 0.0392
+      },
+      "dynamical_metrics": {
+        "mean_left_rate_hz": 0.0065,
+        "mean_right_rate_hz": 0.0135,
+        "mean_difference_hz": -0.007,
+        "difference_std_error": 0.0013,
+        "ci_95_percent": [
+          -0.0096,
+          -0.0044
+        ],
+        "dynamical_asymmetry_index": 0.3506,
+        "fraction_seeds_preserving_direction": 0.76
+      },
+      "asymmetry_classification": "SYMMETRIC"
+    },
+    {
+      "case_id": "tactile_t1_escape",
+      "label": "Tactile T1 -> Giant Fiber Escape (DNp01)",
+      "left_sensor": "tactile T1 left",
+      "right_sensor": "tactile T1 right",
+      "left_motor": "escape",
+      "right_motor": "escape",
+      "sample_size_N": 100,
+      "seed_range": "20200..20299",
+      "structural_metrics": {
+        "weight_left": 12848,
+        "weight_right": 10884,
+        "structural_asymmetry_index": 0.0828
+      },
+      "dynamical_metrics": {
+        "mean_left_rate_hz": 0,
+        "mean_right_rate_hz": 0,
+        "mean_difference_hz": 0,
+        "difference_std_error": 0,
+        "ci_95_percent": [
+          0,
+          0
+        ],
+        "dynamical_asymmetry_index": 0,
+        "fraction_seeds_preserving_direction": 0
+      },
+      "asymmetry_classification": "SYMMETRIC"
+    },
+    {
+      "case_id": "tactile_t1_groom",
+      "label": "Tactile T1 -> Anterior Grooming (DNg07, DNg08)",
+      "left_sensor": "tactile T1 left",
+      "right_sensor": "tactile T1 right",
+      "left_motor": "groom",
+      "right_motor": "groom",
+      "sample_size_N": 100,
+      "seed_range": "20200..20299",
+      "structural_metrics": {
+        "weight_left": 3,
+        "weight_right": 1372,
+        "structural_asymmetry_index": 0.9956
+      },
+      "dynamical_metrics": {
+        "mean_left_rate_hz": 0,
+        "mean_right_rate_hz": 0,
+        "mean_difference_hz": 0,
+        "difference_std_error": 0,
+        "ci_95_percent": [
+          0,
+          0
+        ],
+        "dynamical_asymmetry_index": 0,
+        "fraction_seeds_preserving_direction": 0
+      },
+      "asymmetry_classification": "STRUCTURAL_ASYMMETRY_WITHOUT_FUNCTIONAL_EFFECT"
+    },
+    {
+      "case_id": "thermo_steering",
+      "label": "Thermosensory -> Steering (Turn Left vs Turn Right)",
+      "left_sensor": "thermosensory left",
+      "right_sensor": "thermosensory right",
+      "left_motor": "turn_left",
+      "right_motor": "turn_right",
+      "sample_size_N": 100,
+      "seed_range": "20200..20299",
+      "structural_metrics": {
+        "weight_left": 5794,
+        "weight_right": 3,
+        "structural_asymmetry_index": 0.999
+      },
+      "dynamical_metrics": {
+        "mean_left_rate_hz": 0.0185,
+        "mean_right_rate_hz": 0.0299,
+        "mean_difference_hz": -0.0114,
+        "difference_std_error": 0.0024,
+        "ci_95_percent": [
+          -0.0161,
+          -0.0067
+        ],
+        "dynamical_asymmetry_index": 0.236,
+        "fraction_seeds_preserving_direction": 0.68
+      },
+      "asymmetry_classification": "SYMMETRIC"
+    }
+  ]
+}

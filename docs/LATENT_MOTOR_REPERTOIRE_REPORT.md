@@ -5,7 +5,8 @@
 **Branch**: `research/latent-motor-repertoire`  
 **Base Commit**: `3897690` (`origin/main`)  
 **Status**: COMPLETE (Stopped strictly prior to plasticity implementation)  
-**Diagnostic Seeds**: `20000..20049` ($N=50$)  
+**Allocated Diagnostic Namespace**: `20000..20049` ($N=50$ reserved)  
+**Empirical Sample Sizes**: Matrix $N=10$ (`20000..20009`), Rescue $N=5$ (`20000..20004`), Bottlenecks $N=3$ (`20000..20002`), Direct $N=1$ (`20000`) (Audited in `seed_usage_audit.json`)  
 **Date**: September 2026  
 
 ---

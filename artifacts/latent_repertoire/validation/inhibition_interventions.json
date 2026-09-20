@@ -1,0 +1,831 @@
+{
+  "schema": "latent_repertoire.inhibition_interventions.v1",
+  "timestamp": "2026-09-20T01:02:16.501Z",
+  "pathways": [
+    {
+      "pathway_id": "tactile_t1_l_to_turn_l",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "turn_left",
+      "panel_role": "ROBUST_POSITIVE_CONTROL",
+      "target_dn_indices": [
+        130496,
+        406,
+        725
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 492,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "PS049",
+          "index": 19174
+        },
+        {
+          "weight": 427,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LT51",
+          "index": 1612
+        },
+        {
+          "weight": 387,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LAL124",
+          "index": 479
+        },
+        {
+          "weight": 334,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "PVLP020",
+          "index": 2910
+        },
+        {
+          "weight": 320,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "AOTU019",
+          "index": 3
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": 126.5996,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.477,
+        "candidate_strength": 0.2513,
+        "whole_network_hz": 24624.04
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": 126.5996,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.477,
+        "candidate_strength": 0.2513,
+        "whole_network_hz": 24624.04
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": 126.5996,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.477,
+        "candidate_strength": 0.2513,
+        "whole_network_hz": 24624.04
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": 126.5996,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.477,
+        "candidate_strength": 0.2513,
+        "whole_network_hz": 24624.04
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": false
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_turn_r",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "turn_right",
+      "panel_role": "FUNCTIONALLY_LATENT_REFERENCE",
+      "target_dn_indices": [
+        332,
+        704,
+        1087
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 528,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "PS049",
+          "index": 17903
+        },
+        {
+          "weight": 430,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LT51",
+          "index": 1558
+        },
+        {
+          "weight": 366,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LAL124",
+          "index": 128998
+        },
+        {
+          "weight": 325,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "AOTU019",
+          "index": 57
+        },
+        {
+          "weight": 325,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "DNge123",
+          "index": 1698
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": 14.5813,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": 14.5813,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": 14.5813,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": 14.5813,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": false
+    },
+    {
+      "pathway_id": "jo_aud_l_to_escape",
+      "sensory_channel": "JO auditory left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "ROBUST_POSITIVE_CONTROL",
+      "target_dn_indices": [
+        6
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 414,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "PVLP010",
+          "index": 61
+        },
+        {
+          "weight": 258,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG300",
+          "index": 242
+        },
+        {
+          "weight": 208,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD073",
+          "index": 1115
+        },
+        {
+          "weight": 199,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD073",
+          "index": 3065
+        },
+        {
+          "weight": 188,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "LHAD1g1",
+          "index": 133
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": 2573.5133,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 31.0911,
+        "candidate_strength": 0.5182,
+        "whole_network_hz": 23017.21
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": 2576.3123,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 31.0931,
+        "candidate_strength": 0.5182,
+        "whole_network_hz": 23017.44
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": 2626.5337,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 31.386,
+        "candidate_strength": 0.5229,
+        "whole_network_hz": 23087.72
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": 2573.5133,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 31.0911,
+        "candidate_strength": 0.5182,
+        "whole_network_hz": 23017.21
+      },
+      "direct_inhibitory_effect_hz": 0.2949,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": false
+    },
+    {
+      "pathway_id": "jo_aud_r_to_escape",
+      "sensory_channel": "JO auditory right",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "BILATERAL_ASYMMETRY_PAIR",
+      "target_dn_indices": [
+        0
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 297,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "PVLP010",
+          "index": 133789
+        },
+        {
+          "weight": 213,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG300",
+          "index": 132309
+        },
+        {
+          "weight": 181,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD091",
+          "index": 1465
+        },
+        {
+          "weight": 179,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD109",
+          "index": 1295
+        },
+        {
+          "weight": 161,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "LHAD1g1",
+          "index": 275
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": 27.2523,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 5022.75
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": 27.2523,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 5022.75
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": 65.4536,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 5018.16
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": 27.2523,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 5022.75
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": false
+    },
+    {
+      "pathway_id": "tactile_t1_l_to_escape",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "target_dn_indices": [
+        6
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 414,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "PVLP010",
+          "index": 61
+        },
+        {
+          "weight": 258,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG300",
+          "index": 242
+        },
+        {
+          "weight": 208,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD073",
+          "index": 1115
+        },
+        {
+          "weight": 199,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD073",
+          "index": 3065
+        },
+        {
+          "weight": 188,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "LHAD1g1",
+          "index": 133
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": -73.935,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.04
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": -48.6093,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.64
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": -41.6099,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24628.4
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": -73.935,
+        "mean_theta": 144.7662,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.04
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": true
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_escape",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "target_dn_indices": [
+        0
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 297,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "PVLP010",
+          "index": 133789
+        },
+        {
+          "weight": 213,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG300",
+          "index": 132309
+        },
+        {
+          "weight": 181,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD091",
+          "index": 1465
+        },
+        {
+          "weight": 179,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD109",
+          "index": 1295
+        },
+        {
+          "weight": 161,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "LHAD1g1",
+          "index": 275
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": -14.5762,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": -14.5762,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": -14.5762,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": -14.5762,
+        "mean_theta": 156.9748,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": true
+    },
+    {
+      "pathway_id": "tactile_t1_l_to_groom",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "front_leg_groom",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "target_dn_indices": [
+        13988,
+        14094,
+        14825,
+        14861,
+        14911,
+        15466,
+        16242,
+        19256,
+        8709,
+        12709,
+        13015,
+        13731,
+        14617,
+        14660,
+        15382,
+        15447,
+        16705,
+        16913,
+        19220,
+        123685
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 417,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "AN06B090",
+          "index": 127927
+        },
+        {
+          "weight": 198,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD110",
+          "index": 125061
+        },
+        {
+          "weight": 164,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG144",
+          "index": 432
+        },
+        {
+          "weight": 121,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "CB3320",
+          "index": 12671
+        },
+        {
+          "weight": 108,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD110",
+          "index": 2589
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": -0.1201,
+        "mean_theta": 6.9722,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.04
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": -0.1201,
+        "mean_theta": 6.9722,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.04
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": -0.1201,
+        "mean_theta": 6.9722,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.04
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": -0.1201,
+        "mean_theta": 6.9722,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 24624.04
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": true
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_groom",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "front_leg_groom",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "target_dn_indices": [
+        13979,
+        14982,
+        15734,
+        17081,
+        17579,
+        25124,
+        121508,
+        122188,
+        9544,
+        9822,
+        13814,
+        13975,
+        14325,
+        14978,
+        15191,
+        15983,
+        17658,
+        17672,
+        126645
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 327,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "AN06B090",
+          "index": 7811
+        },
+        {
+          "weight": 175,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG144",
+          "index": 129680
+        },
+        {
+          "weight": 108,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "SAD110",
+          "index": 1419
+        },
+        {
+          "weight": 102,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "GNG302",
+          "index": 771
+        },
+        {
+          "weight": 96,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "AMMC008",
+          "index": 17258
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": -0.0003,
+        "mean_theta": 7.1304,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": -0.0003,
+        "mean_theta": 7.1304,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": -0.0003,
+        "mean_theta": 7.1304,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": -0.0003,
+        "mean_theta": 7.1304,
+        "mean_evoked_hz": 0,
+        "candidate_strength": 0,
+        "whole_network_hz": 14702.12
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": true
+    },
+    {
+      "pathway_id": "jo_wind_l_to_turn_l",
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "turn_left",
+      "panel_role": "WEAKLY_EXPRESSED_PATHWAY",
+      "target_dn_indices": [
+        130496,
+        406,
+        725
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 492,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "PS049",
+          "index": 19174
+        },
+        {
+          "weight": 427,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LT51",
+          "index": 1612
+        },
+        {
+          "weight": 387,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LAL124",
+          "index": 479
+        },
+        {
+          "weight": 334,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "PVLP020",
+          "index": 2910
+        },
+        {
+          "weight": 320,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "AOTU019",
+          "index": 3
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": -39.1578,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.0003,
+        "candidate_strength": 0.0003,
+        "whole_network_hz": 64757.95
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": -39.1578,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.0003,
+        "candidate_strength": 0.0003,
+        "whole_network_hz": 64757.95
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": -38.9869,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.0004,
+        "candidate_strength": 0.0004,
+        "whole_network_hz": 64758.55
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": -39.1577,
+        "mean_theta": 102.7622,
+        "mean_evoked_hz": 0.0003,
+        "candidate_strength": 0.0003,
+        "whole_network_hz": 64755.37
+      },
+      "direct_inhibitory_effect_hz": 0.0001,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": true
+    },
+    {
+      "pathway_id": "jo_wind_r_to_turn_r",
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "turn_right",
+      "panel_role": "WEAKLY_EXPRESSED_PATHWAY",
+      "target_dn_indices": [
+        332,
+        704,
+        1087
+      ],
+      "top_inhibitory_inputs": [
+        {
+          "weight": 528,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "PS049",
+          "index": 17903
+        },
+        {
+          "weight": 430,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LT51",
+          "index": 1558
+        },
+        {
+          "weight": 366,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "LAL124",
+          "index": 128998
+        },
+        {
+          "weight": 325,
+          "nt_code": 2,
+          "nt_sign": -1,
+          "type": "AOTU019",
+          "index": 57
+        },
+        {
+          "weight": 325,
+          "nt_code": 3,
+          "nt_sign": -1,
+          "type": "DNge123",
+          "index": 1698
+        }
+      ],
+      "intact_condition_A": {
+        "mean_inp": 74.9525,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0.1454,
+        "candidate_strength": 0.1128,
+        "whole_network_hz": 40705.98
+      },
+      "silence_single_inhibitory_condition_B": {
+        "mean_inp": 74.9525,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0.1454,
+        "candidate_strength": 0.1128,
+        "whole_network_hz": 40705.98
+      },
+      "silence_group_inhibitory_condition_C": {
+        "mean_inp": 74.9525,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0.1454,
+        "candidate_strength": 0.1128,
+        "whole_network_hz": 40705.98
+      },
+      "sham_silencing_condition_D": {
+        "mean_inp": 74.9525,
+        "mean_theta": 98.4608,
+        "mean_evoked_hz": 0.1454,
+        "candidate_strength": 0.1128,
+        "whole_network_hz": 40705.13
+      },
+      "direct_inhibitory_effect_hz": 0,
+      "sham_effect_hz": 0,
+      "direct_inhibition_rescues_motor_program": false,
+      "polysynaptic_inhibition_present": false
+    }
+  ]
+}

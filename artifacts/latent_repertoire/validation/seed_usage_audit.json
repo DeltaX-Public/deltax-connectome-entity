@@ -1,0 +1,51 @@
+{
+  "schema": "latent_repertoire.seed_usage_audit.v1",
+  "timestamp": "2026-09-20T01:00:20.000Z",
+  "audit_summary": "Reconciliation of diagnostic seed usage across all Latent Motor Repertoire Atlas artifacts. Explains the discrepancy between the allocated development namespace (20000..20049, N=50) and empirical per-script execution batches.",
+  "allocated_seed_namespace": "20000..20049 (N=50 reserved diagnostic development range)",
+  "artifacts": {
+    "sensory_motor_matrix.json": {
+      "execution_type": "dynamic_simulation",
+      "real_N": 10,
+      "exact_seeds": [20000, 20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009],
+      "rationale": "Swept 20 sensory channels x 9 motor populations (180 conditions) for 30 ticks each; batched across 10 representative seeds within the 20000-series namespace."
+    },
+    "structural_reachability.json": {
+      "execution_type": "deterministic_graph_traversal",
+      "real_N": 1,
+      "exact_seeds": "N/A (deterministic CSR BFS)",
+      "rationale": "Full 3-hop directed BFS on the static 10.5M edge fly-brain connectome graph. Deterministic and invariant to pseudorandom seeds."
+    },
+    "classification.json": {
+      "execution_type": "analytical_synthesis",
+      "real_N": "Derived from upstream artifacts",
+      "exact_seeds": "N/A (synthesized from sensory_motor_matrix N=10, reachability, and direct viability)",
+      "rationale": "Cross-artifact classification combining functional matrix (N=10), structural reachability, and direct output viability."
+    },
+    "bilateral_symmetry.json": {
+      "execution_type": "analytical_synthesis",
+      "real_N": 10,
+      "exact_seeds": "Derived from sensory_motor_matrix.json (seeds 20000..20009)",
+      "rationale": "Computes bilateral asymmetry index |L-R|/(L+R) from sensory_motor_matrix.json (N=10) and structural_reachability.json."
+    },
+    "dynamics_bottlenecks.json": {
+      "execution_type": "dynamic_biophysical_sampling",
+      "real_N": 3,
+      "exact_seeds": [20000, 20001, 20002],
+      "rationale": "High-frequency biophysical sampling (inp, theta, a, tau, rmax, A, u) during steady-state sensory drive across 15 top mismatches."
+    },
+    "direct_output_viability.json": {
+      "execution_type": "downstream_readout_evaluation",
+      "real_N": 1,
+      "exact_seeds": [20000],
+      "rationale": "Directly forced descending neuron firing rates across 3 test rates (5, 15, 30 Hz) to test CandidateBridge response; deterministic readout given fixed DN rates."
+    },
+    "intermediate_rescue.json": {
+      "execution_type": "dynamic_intervention_sweep",
+      "real_N": 5,
+      "exact_seeds": [20000, 20001, 20002, 20003, 20004],
+      "rationale": "Evaluated 5 target pathways x 3 intermediate candidates x 5 stimulation rates (5, 10, 20, 30, 40 Hz) across 5 seeds for 40 ticks each."
+    }
+  },
+  "reconciliation_conclusion": "The 20000..20049 (N=50) namespace was formally allocated and reserved in the research plan to prevent any collision with Lane 1 (18000/19000-series). Specific diagnostic tasks executed subsets of that reserved range (N=10 for sensory-motor matrix, N=5 for rescue, N=3 for bottleneck sampling, N=1 for direct readout). The Phase 3 validation phase will freeze a dedicated high-confidence panel and validate it over an expanded fresh namespace: 20200..20299 (N=100)."
+}

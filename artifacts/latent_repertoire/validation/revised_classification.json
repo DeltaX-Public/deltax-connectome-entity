@@ -1,0 +1,2251 @@
+{
+  "schema": "latent_repertoire.revised_classification.v2",
+  "timestamp": "2026-09-20T01:07:49.914Z",
+  "revised_counts": {
+    "ROBUSTLY_EXPRESSED": 22,
+    "WEAKLY_EXPRESSED": 35,
+    "FUNCTIONALLY_LATENT": 11,
+    "TRANSDUCTION_LIMITED": 18,
+    "READOUT_LIMITED": 36,
+    "STRUCTURALLY_UNSUPPORTED": 20,
+    "UNRESOLVED": 58
+  },
+  "high_confidence_panel_classifications": [
+    {
+      "pathway_id": "tactile_t1_l_to_turn_l",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "turn_left",
+      "panel_role": "ROBUST_POSITIVE_CONTROL",
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Evokes robust physiological descending firing (0.9587 Hz) and CandidateBridge activation (0.2789).",
+      "causal_bottleneck_tags": [
+        "ROBUSTLY_EXPRESSED"
+      ]
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_turn_r",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "turn_right",
+      "panel_role": "FUNCTIONALLY_LATENT_REFERENCE",
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Structurally present (751 weight, 2 hops) and downstream viable, but silent under natural sensory drive (0.0005 Hz). Rescued to active recruitment by targeted physiological intermediate stimulation.",
+      "causal_bottleneck_tags": [
+        "INSUFFICIENT_EXCITATORY_CONVERGENCE",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ]
+    },
+    {
+      "pathway_id": "jo_aud_l_to_escape",
+      "sensory_channel": "JO auditory left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "ROBUST_POSITIVE_CONTROL",
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Evokes robust physiological descending firing (15.3268 Hz) and CandidateBridge activation (0.5109).",
+      "causal_bottleneck_tags": [
+        "ROBUSTLY_EXPRESSED"
+      ]
+    },
+    {
+      "pathway_id": "jo_aud_r_to_escape",
+      "sensory_channel": "JO auditory right",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "BILATERAL_ASYMMETRY_PAIR",
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Structurally present homologue of acoustic escape; downstream viable; natural drive fails due to high intrinsic threshold, but physiological drive evokes firing.",
+      "causal_bottleneck_tags": [
+        "HIGH_INTRINSIC_THRESHOLD"
+      ]
+    },
+    {
+      "pathway_id": "tactile_t1_l_to_escape",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Downstream viability confirmed, but causal intermediate rescue was incomplete or unverified.",
+      "causal_bottleneck_tags": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ]
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_escape",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Downstream viability confirmed, but causal intermediate rescue was incomplete or unverified.",
+      "causal_bottleneck_tags": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ]
+    },
+    {
+      "pathway_id": "tactile_t1_l_to_groom",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "front_leg_groom",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Downstream grooming readout is viable, but single-intermediate stimulation produced marginal activation (<0.05 Hz), suggesting multi-sensory or distributed thoracic convergence is required.",
+      "causal_bottleneck_tags": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION"
+      ]
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_groom",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "front_leg_groom",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Downstream grooming readout is viable, but single-intermediate stimulation produced marginal activation (<0.05 Hz), suggesting multi-sensory or distributed thoracic convergence is required.",
+      "causal_bottleneck_tags": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION"
+      ]
+    },
+    {
+      "pathway_id": "jo_wind_l_to_turn_l",
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "turn_left",
+      "panel_role": "WEAKLY_EXPRESSED_PATHWAY",
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Elicits measurable but sub-threshold descending activity (0.082 Hz); fails to drive sustained full-strength candidate actions.",
+      "causal_bottleneck_tags": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION",
+        "INSUFFICIENT_EXCITATORY_CONVERGENCE",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ]
+    },
+    {
+      "pathway_id": "jo_wind_r_to_turn_r",
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "turn_right",
+      "panel_role": "WEAKLY_EXPRESSED_PATHWAY",
+      "revised_classification": "UNRESOLVED",
+      "rationale": "",
+      "causal_bottleneck_tags": [
+        "INSUFFICIENT_EXCITATORY_CONVERGENCE",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ]
+    },
+    {
+      "pathway_id": "visual_l_to_takeoff",
+      "sensory_channel": "visual left",
+      "motor_program": "looming_takeoff",
+      "panel_role": "TRANSDUCTION_LIMITED",
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Sensory stimulus model represents uncalibrated flat photoreceptor arrays lacking motion-opponent (T4/T5) or looming expansion (LC4/LPLC2) feature extraction. Excluded from primary connectome motor silence claims.",
+      "causal_bottleneck_tags": []
+    },
+    {
+      "pathway_id": "visual_l_to_escape",
+      "sensory_channel": "visual left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "TRANSDUCTION_LIMITED",
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Sensory stimulus model represents uncalibrated flat photoreceptor arrays lacking motion-opponent (T4/T5) or looming expansion (LC4/LPLC2) feature extraction. Excluded from primary connectome motor silence claims.",
+      "causal_bottleneck_tags": []
+    }
+  ],
+  "full_pathway_classifications": [
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 1042,
+      "mean_evoked_hz": 0.1236,
+      "candidate_strength": 0.0377,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.12 Hz, candidate strength = 0.038)."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 107,
+      "mean_evoked_hz": 0.0993,
+      "candidate_strength": 0.0282,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.10 Hz, candidate strength = 0.028)."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 826,
+      "mean_evoked_hz": 0.9587,
+      "candidate_strength": 0.2789,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.96 Hz, candidate strength = 0.279)."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 17,
+      "mean_evoked_hz": 0.0204,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (17 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 3,
+      "cumulative_weight": 12848,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (12848 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 34,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 3,
+      "cumulative_weight": 7033,
+      "mean_evoked_hz": 0.016,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 16,
+      "mean_evoked_hz": 0.1129,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 1561,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 162,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 780,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 751,
+      "mean_evoked_hz": 0.0005,
+      "candidate_strength": 0.0003,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (751 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 3,
+      "cumulative_weight": 10884,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (10884 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 30,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 3,
+      "cumulative_weight": 1372,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 3,
+      "cumulative_weight": 6827,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 25,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 2014,
+      "mean_evoked_hz": 0.9988,
+      "candidate_strength": 0.2381,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 1.00 Hz, candidate strength = 0.238)."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 319,
+      "mean_evoked_hz": 0.3433,
+      "candidate_strength": 0.0931,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.34 Hz, candidate strength = 0.093)."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 544,
+      "mean_evoked_hz": 1.3451,
+      "candidate_strength": 0.3427,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 1.35 Hz, candidate strength = 0.343)."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 238,
+      "mean_evoked_hz": 0.4873,
+      "candidate_strength": 0,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.49 Hz, candidate strength = 0.000)."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 27,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (27 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 127,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 80,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 13,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 52,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T2 left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 2052,
+      "mean_evoked_hz": 0.825,
+      "candidate_strength": 0.2043,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.82 Hz, candidate strength = 0.204)."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 395,
+      "mean_evoked_hz": 0.6858,
+      "candidate_strength": 0.1732,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.69 Hz, candidate strength = 0.173)."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 111,
+      "mean_evoked_hz": 0.4608,
+      "candidate_strength": 0.0037,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.46 Hz, candidate strength = 0.004)."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 671,
+      "mean_evoked_hz": 0.939,
+      "candidate_strength": 0.2254,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.94 Hz, candidate strength = 0.225)."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 66,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (66 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 127,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 108,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 13,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 62,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T2 right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 661,
+      "mean_evoked_hz": 1.6197,
+      "candidate_strength": 0.3157,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 1.62 Hz, candidate strength = 0.316)."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 48,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 72,
+      "mean_evoked_hz": 2.0455,
+      "candidate_strength": 0.456,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 2.05 Hz, candidate strength = 0.456)."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 135,
+      "mean_evoked_hz": 0.3801,
+      "candidate_strength": 0,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.38 Hz, candidate strength = 0.000)."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 9,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0.0001,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (9 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 17,
+      "mean_evoked_hz": 0.0015,
+      "candidate_strength": 0.0001,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 29,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 29,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T3 left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 356,
+      "mean_evoked_hz": 1.4255,
+      "candidate_strength": 0.2939,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 1.43 Hz, candidate strength = 0.294)."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 68,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 93,
+      "mean_evoked_hz": 0.2178,
+      "candidate_strength": 0,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.22 Hz, candidate strength = 0.000)."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 55,
+      "mean_evoked_hz": 2.0265,
+      "candidate_strength": 0.4558,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 2.03 Hz, candidate strength = 0.456)."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 10,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (10 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 33,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 15,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 129,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 27,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "tactile T3 right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 5311,
+      "mean_evoked_hz": 0.2356,
+      "candidate_strength": 0.0685,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.24 Hz, candidate strength = 0.069)."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 45,
+      "mean_evoked_hz": 0.0002,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 1251,
+      "mean_evoked_hz": 0.0118,
+      "candidate_strength": 0.0076,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 598,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 4280,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0.0234,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 4020,
+      "mean_evoked_hz": 0.7005,
+      "candidate_strength": 0.0234,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.70 Hz, candidate strength = 0.023)."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 1,
+      "cumulative_weight": 2095,
+      "mean_evoked_hz": 4.9301,
+      "candidate_strength": 0.2457,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 4.93 Hz, candidate strength = 0.246)."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 172,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 190,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 4428,
+      "mean_evoked_hz": 0.0238,
+      "candidate_strength": 0.0078,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (4428 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 98,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 303,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 1353,
+      "mean_evoked_hz": 0.3271,
+      "candidate_strength": 0.151,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.33 Hz, candidate strength = 0.151)."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 1,
+      "cumulative_weight": 4,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 2791,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 1,
+      "cumulative_weight": 859,
+      "mean_evoked_hz": 1.951,
+      "candidate_strength": 0.0936,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 1.95 Hz, candidate strength = 0.094)."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 179,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 208,
+      "mean_evoked_hz": 0.0001,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 2716,
+      "mean_evoked_hz": 0.6287,
+      "candidate_strength": 0.1432,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.63 Hz, candidate strength = 0.143)."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 161,
+      "mean_evoked_hz": 0.0852,
+      "candidate_strength": 0.0242,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.09 Hz, candidate strength = 0.024)."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 259,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 677,
+      "mean_evoked_hz": 0.7614,
+      "candidate_strength": 0.2478,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.76 Hz, candidate strength = 0.248)."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 1,
+      "cumulative_weight": 674,
+      "mean_evoked_hz": 15.3268,
+      "candidate_strength": 0.4808,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 15.33 Hz, candidate strength = 0.481)."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 1,
+      "cumulative_weight": 50,
+      "mean_evoked_hz": 6.5155,
+      "candidate_strength": 0.4808,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 6.52 Hz, candidate strength = 0.481)."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 1006,
+      "mean_evoked_hz": 0.0047,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 24,
+      "mean_evoked_hz": 1.3167,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 298,
+      "mean_evoked_hz": 0.6384,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO auditory left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 111,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 3,
+      "cumulative_weight": 3783,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 69,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 14,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 1,
+      "cumulative_weight": 23,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (23 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 1808,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 67,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 36,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "JO auditory right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 3,
+      "cumulative_weight": 23332,
+      "mean_evoked_hz": 0.4042,
+      "candidate_strength": 0.1135,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.40 Hz, candidate strength = 0.114)."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 3,
+      "cumulative_weight": 1982,
+      "mean_evoked_hz": 0.2475,
+      "candidate_strength": 0.0675,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.25 Hz, candidate strength = 0.068)."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 3,
+      "cumulative_weight": 5794,
+      "mean_evoked_hz": 0.5633,
+      "candidate_strength": 0.0404,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.56 Hz, candidate strength = 0.040)."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 3,
+      "cumulative_weight": 3024,
+      "mean_evoked_hz": 0.8143,
+      "candidate_strength": 0.1337,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.81 Hz, candidate strength = 0.134)."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 258,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0.0087,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 68,
+      "mean_evoked_hz": 0.2596,
+      "candidate_strength": 0.0087,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.26 Hz, candidate strength = 0.009)."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0.0086,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 3,
+      "cumulative_weight": 2228,
+      "mean_evoked_hz": 3.9372,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 3,
+      "cumulative_weight": 3401,
+      "mean_evoked_hz": 1.4091,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "thermosensory left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 242,
+      "mean_evoked_hz": 0.4511,
+      "candidate_strength": 0.1246,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.45 Hz, candidate strength = 0.125)."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 13,
+      "mean_evoked_hz": 0.1738,
+      "candidate_strength": 0.0466,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.17 Hz, candidate strength = 0.047)."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 232,
+      "mean_evoked_hz": 0.7937,
+      "candidate_strength": 0.0526,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.79 Hz, candidate strength = 0.053)."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0.989,
+      "candidate_strength": 0.1158,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.99 Hz, candidate strength = 0.116)."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 3,
+      "cumulative_weight": 6772,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0.0147,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 3,
+      "cumulative_weight": 3970,
+      "mean_evoked_hz": 0.4408,
+      "candidate_strength": 0.0147,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.44 Hz, candidate strength = 0.015)."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 5,
+      "mean_evoked_hz": 0.0193,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 1.9349,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 3,
+      "cumulative_weight": 5251,
+      "mean_evoked_hz": 0.6767,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "thermosensory right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 1719,
+      "mean_evoked_hz": 0.034,
+      "candidate_strength": 0.011,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 222,
+      "mean_evoked_hz": 0.3996,
+      "candidate_strength": 0.1087,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.40 Hz, candidate strength = 0.109)."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 793,
+      "mean_evoked_hz": 0.2349,
+      "candidate_strength": 0.1101,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.23 Hz, candidate strength = 0.110)."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 756,
+      "mean_evoked_hz": 0.011,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 17,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 25,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 8,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 15,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 434,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "taste T1 left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 1534,
+      "mean_evoked_hz": 0.0873,
+      "candidate_strength": 0.0274,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.09 Hz, candidate strength = 0.027)."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 239,
+      "mean_evoked_hz": 0.5516,
+      "candidate_strength": 0.1396,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 0.55 Hz, candidate strength = 0.140)."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 747,
+      "mean_evoked_hz": 0.0886,
+      "candidate_strength": 0.0082,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.09 Hz, candidate strength = 0.008)."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 757,
+      "mean_evoked_hz": 0.129,
+      "candidate_strength": 0.0335,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.13 Hz, candidate strength = 0.034)."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 24,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 33,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 3,
+      "cumulative_weight": 1005,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 3,
+      "cumulative_weight": 10007,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 378,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "taste T1 right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 3,
+      "cumulative_weight": 14506,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 3,
+      "cumulative_weight": 887,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 3,
+      "cumulative_weight": 4529,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 3,
+      "cumulative_weight": 2503,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 3,
+      "cumulative_weight": 8077,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 3,
+      "cumulative_weight": 10420,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 3,
+      "cumulative_weight": 194,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 3,
+      "cumulative_weight": 341,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 3,
+      "cumulative_weight": 270,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 3,
+      "cumulative_weight": 1028,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 3,
+      "cumulative_weight": 2271,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 3,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 3,
+      "cumulative_weight": 6696,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 3,
+      "cumulative_weight": 8226,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 3,
+      "cumulative_weight": 451,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 3,
+      "cumulative_weight": 429,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 3,
+      "cumulative_weight": 487,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "TRANSDUCTION_LIMITED",
+      "rationale": "Photoreceptor array lacking motion-opponent optical flow or looming feature detection."
+    },
+    {
+      "sensory_channel": "visual right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 2575,
+      "mean_evoked_hz": 3.2703,
+      "candidate_strength": 0.4789,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 3.27 Hz, candidate strength = 0.479)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 311,
+      "mean_evoked_hz": 0.2822,
+      "candidate_strength": 0.0735,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.28 Hz, candidate strength = 0.073)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 522,
+      "mean_evoked_hz": 4.822,
+      "candidate_strength": 0.4803,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 4.82 Hz, candidate strength = 0.480)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 682,
+      "mean_evoked_hz": 3.0617,
+      "candidate_strength": 0.0262,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 3.06 Hz, candidate strength = 0.026)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 418,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 365,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 26,
+      "mean_evoked_hz": 0.1587,
+      "candidate_strength": 0.0005,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.16 Hz, candidate strength = 0.001)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 9,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 209,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "wing/notum bristles left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 3521,
+      "mean_evoked_hz": 3.49,
+      "candidate_strength": 0.4773,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 3.49 Hz, candidate strength = 0.477)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 385,
+      "mean_evoked_hz": 0.054,
+      "candidate_strength": 0.0157,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.05 Hz, candidate strength = 0.016)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 317,
+      "mean_evoked_hz": 2.9398,
+      "candidate_strength": 0.0886,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 2.94 Hz, candidate strength = 0.089)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 767,
+      "mean_evoked_hz": 3.153,
+      "candidate_strength": 0.2051,
+      "revised_classification": "ROBUSTLY_EXPRESSED",
+      "rationale": "Natural drive recruits motor program (rate = 3.15 Hz, candidate strength = 0.205)."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 148,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 237,
+      "mean_evoked_hz": 0.0003,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 2,
+      "cumulative_weight": 30,
+      "mean_evoked_hz": 0.0155,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 17,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 193,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "wing/notum bristles right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 6513,
+      "mean_evoked_hz": 0.0761,
+      "candidate_strength": 0.024,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.08 Hz, candidate strength = 0.024)."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 580,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 1353,
+      "mean_evoked_hz": 0.0589,
+      "candidate_strength": 0.0034,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.06 Hz, candidate strength = 0.003)."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 625,
+      "mean_evoked_hz": 0.2244,
+      "candidate_strength": 0.0912,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.22 Hz, candidate strength = 0.091)."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 392,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 317,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 1,
+      "cumulative_weight": 6,
+      "mean_evoked_hz": 0.0692,
+      "candidate_strength": 0,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.07 Hz, candidate strength = 0.000)."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 961,
+      "mean_evoked_hz": 0.0113,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 170,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "haltere left",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "locomotion_forward",
+      "motor_id": "forward",
+      "min_hops": 2,
+      "cumulative_weight": 6112,
+      "mean_evoked_hz": 0.0437,
+      "candidate_strength": 0.0141,
+      "revised_classification": "FUNCTIONALLY_LATENT",
+      "rationale": "Downstream viable; anatomically connected (6112 weight); natural drive silent due to polysynaptic inhibition or high threshold; rescued by intermediate drive."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "locomotion_backward",
+      "motor_id": "backward",
+      "min_hops": 2,
+      "cumulative_weight": 579,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "turn_left",
+      "motor_id": "turn_left",
+      "min_hops": 2,
+      "cumulative_weight": 548,
+      "mean_evoked_hz": 0.2561,
+      "candidate_strength": 0.1223,
+      "revised_classification": "WEAKLY_EXPRESSED",
+      "rationale": "Sub-threshold activation (rate = 0.26 Hz, candidate strength = 0.122)."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "turn_right",
+      "motor_id": "turn_right",
+      "min_hops": 2,
+      "cumulative_weight": 1050,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "giant_fiber_escape",
+      "motor_id": "escape",
+      "min_hops": 2,
+      "cumulative_weight": 384,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "looming_takeoff",
+      "motor_id": "takeoff",
+      "min_hops": 2,
+      "cumulative_weight": 424,
+      "mean_evoked_hz": 0,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "front_leg_groom",
+      "motor_id": "groom",
+      "min_hops": 1,
+      "cumulative_weight": 16,
+      "mean_evoked_hz": 0.0047,
+      "candidate_strength": 0,
+      "revised_classification": "UNRESOLVED",
+      "rationale": "Silent under natural drive; insufficient causal intervention evidence to confirm physiological intermediate un-gating."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "courtship_pIP10",
+      "motor_id": "courtP",
+      "min_hops": 2,
+      "cumulative_weight": 438,
+      "mean_evoked_hz": 0.053,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "courtship_pursuit_DNp13",
+      "motor_id": "courtDN",
+      "min_hops": 2,
+      "cumulative_weight": 161,
+      "mean_evoked_hz": 0.0309,
+      "candidate_strength": 0,
+      "revised_classification": "READOUT_LIMITED",
+      "rationale": "Descending neurons exist and receive input, but CandidateBridge lacks action mapping."
+    },
+    {
+      "sensory_channel": "haltere right",
+      "motor_program": "quiescent_halt",
+      "revised_classification": "STRUCTURALLY_UNSUPPORTED",
+      "rationale": "Quiescent halt represents derived postural balance; no direct descending neurons."
+    }
+  ]
+}
