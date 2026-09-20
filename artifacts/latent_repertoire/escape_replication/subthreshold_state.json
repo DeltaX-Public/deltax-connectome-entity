@@ -1,0 +1,141 @@
+{
+  "schema": "latent_repertoire.escape_subthreshold_state.v1",
+  "timestamp": "2026-09-20T01:44:50.541Z",
+  "diagnostic_seed_count": 50,
+  "stimulus": "tactile T1 left (180.0 Hz step drive)",
+  "neurons": {
+    "dnp70_left_541": {
+      "neuron_index": 541,
+      "type": "DNp70",
+      "side": "Left",
+      "index": 541,
+      "body_id": "10580",
+      "rate_hz": {
+        "mean": 0.2595,
+        "std": 0.5252,
+        "min": 0,
+        "max": 3.8527
+      },
+      "inp": {
+        "mean": 63.0887,
+        "std": 46.8688,
+        "min": 1.297,
+        "max": 219.0294
+      },
+      "theta": {
+        "mean": 55.3802,
+        "std": 4.845,
+        "min": 46.8589,
+        "max": 68.0202
+      },
+      "inp_over_theta": {
+        "mean": 1.1527,
+        "std": 0.8719,
+        "min": 0.023,
+        "max": 4.2457
+      },
+      "subthreshold_classification": "ACTIVE_FIRING"
+    },
+    "dnp70_right_1048": {
+      "neuron_index": 1048,
+      "type": "DNp70",
+      "side": "Right",
+      "index": 1048,
+      "body_id": "11133",
+      "rate_hz": {
+        "mean": 0.0795,
+        "std": 0.2111,
+        "min": 0,
+        "max": 1.843
+      },
+      "inp": {
+        "mean": 42.3847,
+        "std": 29.3967,
+        "min": 3.1379,
+        "max": 126.4536
+      },
+      "theta": {
+        "mean": 53.2307,
+        "std": 3.9543,
+        "min": 42.9904,
+        "max": 61.0665
+      },
+      "inp_over_theta": {
+        "mean": 0.8045,
+        "std": 0.5691,
+        "min": 0.0556,
+        "max": 2.5218
+      },
+      "subthreshold_classification": "ACTIVE_FIRING"
+    },
+    "dnp01_left_6": {
+      "neuron_index": 6,
+      "type": "DNp01",
+      "side": "Left",
+      "index": 6,
+      "body_id": "10010",
+      "rate_hz": {
+        "mean": 0,
+        "std": 0,
+        "min": 0,
+        "max": 0
+      },
+      "inp": {
+        "mean": -100.1945,
+        "std": 80.4432,
+        "min": -355.1206,
+        "max": -6.0998
+      },
+      "theta": {
+        "mean": 151.8177,
+        "std": 12.5978,
+        "min": 121.4552,
+        "max": 185.8568
+      },
+      "inp_over_theta": {
+        "mean": -0.665,
+        "std": 0.5382,
+        "min": -2.3026,
+        "max": -0.0369
+      },
+      "subthreshold_classification": "NET_INHIBITED"
+    },
+    "dnp01_right_0": {
+      "neuron_index": 0,
+      "type": "DNp01",
+      "side": "Right",
+      "index": 0,
+      "body_id": "10001",
+      "rate_hz": {
+        "mean": 0,
+        "std": 0,
+        "min": 0,
+        "max": 0
+      },
+      "inp": {
+        "mean": -33.1338,
+        "std": 23.6036,
+        "min": -100.068,
+        "max": -2.8562
+      },
+      "theta": {
+        "mean": 151.4263,
+        "std": 11.6709,
+        "min": 124.4821,
+        "max": 174.5203
+      },
+      "inp_over_theta": {
+        "mean": -0.2196,
+        "std": 0.1571,
+        "min": -0.7077,
+        "max": -0.0201
+      },
+      "subthreshold_classification": "NET_INHIBITED"
+    }
+  },
+  "mechanistic_analysis": {
+    "dnp70_subthreshold_status": "Evaluates whether DNp70 receives positive subthreshold current or is dominated by inhibition.",
+    "dnp01_subthreshold_status": "Evaluates whether DNp01 receives positive subthreshold current or is dominated by net-negative current.",
+    "subthreshold_bootstrap_applicability": "If intermediate DNp70 possesses positive subthreshold input or can be recruited by local potentiation of sensory interneurons, Lane 1's local subthreshold learning rule is mechanistically viable. If net input is deeply negative, inhibitory disinhibition or premotor potentiation is required."
+  }
+}

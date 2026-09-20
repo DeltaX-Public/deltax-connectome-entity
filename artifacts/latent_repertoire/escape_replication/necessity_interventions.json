@@ -1,0 +1,376 @@
+{
+  "schema": "latent_repertoire.escape_necessity_interventions.v1",
+  "timestamp": "2026-09-20T01:48:49.394Z",
+  "diagnostic_seed_count": 50,
+  "diagnostic_seed_range": "20300..20349",
+  "findings_summary": {
+    "auditory_escape_dnp70_dependency": "DNp70 silencing has virtually zero effect on acoustic escape because JO auditory afferents project directly to DNp01 via 21 1-hop synapses (674 weight).",
+    "tactile_escape_dnp70_dependency": "Under natural tactile drive, DNp01 is silent across all conditions. Under intermediate stimulation, silencing DNp70-Left (541) eliminates the majority of DNp01 recruitment, silencing DNp70-Right (1048) eliminates the remainder, and silencing both reduces DNp01 rescue to exactly 0.00 Hz (100% causal necessity).",
+    "matched_sham_specificity": "Silencing matched non-pathway descending neurons produces zero reduction in escape rescue, demonstrating high anatomical and causal specificity."
+  },
+  "experiments": {
+    "expressed_auditory": {
+      "sensory_pathway": "JO Auditory Left -> DNp01 (Naturally Expressed)",
+      "boost_dnp70_hz": 0,
+      "conditions": {
+        "A_intact": {
+          "condition_id": "A_intact",
+          "condition_label": "Intact",
+          "silenced_neurons": [],
+          "dnp01_firing_hz": {
+            "mean": 20.1855,
+            "std": 2.0503
+          },
+          "dnp01_net_input_current": {
+            "mean": 1086.6425,
+            "std": 145.1975
+          },
+          "escape_candidate_strength": {
+            "mean": 0.6655,
+            "std": 0.0586
+          },
+          "mean_active_network_neurons": {
+            "mean": 3959.4,
+            "std": 192.6885
+          }
+        },
+        "B_silence_541": {
+          "condition_id": "B_silence_541",
+          "condition_label": "DNp70-Left (541) Silenced",
+          "silenced_neurons": [
+            541
+          ],
+          "dnp01_firing_hz": {
+            "mean": 20.1855,
+            "std": 2.0503
+          },
+          "dnp01_net_input_current": {
+            "mean": 1086.6417,
+            "std": 145.197
+          },
+          "escape_candidate_strength": {
+            "mean": 0.6655,
+            "std": 0.0586
+          },
+          "mean_active_network_neurons": {
+            "mean": 3959.3945,
+            "std": 192.6684
+          }
+        },
+        "C_silence_1048": {
+          "condition_id": "C_silence_1048",
+          "condition_label": "DNp70-Right (1048) Silenced",
+          "silenced_neurons": [
+            1048
+          ],
+          "dnp01_firing_hz": {
+            "mean": 20.1855,
+            "std": 2.0503
+          },
+          "dnp01_net_input_current": {
+            "mean": 1086.5845,
+            "std": 145.1596
+          },
+          "escape_candidate_strength": {
+            "mean": 0.6655,
+            "std": 0.0586
+          },
+          "mean_active_network_neurons": {
+            "mean": 3959.3818,
+            "std": 192.6216
+          }
+        },
+        "D_silence_both": {
+          "condition_id": "D_silence_both",
+          "condition_label": "Both DNp70 (541 & 1048) Silenced",
+          "silenced_neurons": [
+            541,
+            1048
+          ],
+          "dnp01_firing_hz": {
+            "mean": 20.1855,
+            "std": 2.0503
+          },
+          "dnp01_net_input_current": {
+            "mean": 1086.5838,
+            "std": 145.1592
+          },
+          "escape_candidate_strength": {
+            "mean": 0.6655,
+            "std": 0.0586
+          },
+          "mean_active_network_neurons": {
+            "mean": 3959.3782,
+            "std": 192.6082
+          }
+        },
+        "E_sham_silenced": {
+          "condition_id": "E_sham_silenced",
+          "condition_label": "Matched Sham (2 DNs) Silenced",
+          "silenced_neurons": [
+            406,
+            704
+          ],
+          "dnp01_firing_hz": {
+            "mean": 20.1856,
+            "std": 2.0503
+          },
+          "dnp01_net_input_current": {
+            "mean": 1086.6465,
+            "std": 145.1979
+          },
+          "escape_candidate_strength": {
+            "mean": 0.6655,
+            "std": 0.0586
+          },
+          "mean_active_network_neurons": {
+            "mean": 3958.0673,
+            "std": 192.5598
+          }
+        }
+      }
+    },
+    "latent_tactile_natural": {
+      "sensory_pathway": "Tactile T1 Left -> DNp70 -> DNp01 (Natural Latent Drive)",
+      "boost_dnp70_hz": 0,
+      "conditions": {
+        "A_intact": {
+          "condition_id": "A_intact",
+          "condition_label": "Intact",
+          "silenced_neurons": [],
+          "dnp01_firing_hz": {
+            "mean": 0,
+            "std": 0
+          },
+          "dnp01_net_input_current": {
+            "mean": -66.6642,
+            "std": 8.468
+          },
+          "escape_candidate_strength": {
+            "mean": 0,
+            "std": 0
+          },
+          "mean_active_network_neurons": {
+            "mean": 2422.9255,
+            "std": 103.3146
+          }
+        },
+        "B_silence_541": {
+          "condition_id": "B_silence_541",
+          "condition_label": "DNp70-Left (541) Silenced",
+          "silenced_neurons": [
+            541
+          ],
+          "dnp01_firing_hz": {
+            "mean": 0,
+            "std": 0
+          },
+          "dnp01_net_input_current": {
+            "mean": -69.7735,
+            "std": 8.0562
+          },
+          "escape_candidate_strength": {
+            "mean": 0,
+            "std": 0
+          },
+          "mean_active_network_neurons": {
+            "mean": 2422.3491,
+            "std": 103.123
+          }
+        },
+        "C_silence_1048": {
+          "condition_id": "C_silence_1048",
+          "condition_label": "DNp70-Right (1048) Silenced",
+          "silenced_neurons": [
+            1048
+          ],
+          "dnp01_firing_hz": {
+            "mean": 0,
+            "std": 0
+          },
+          "dnp01_net_input_current": {
+            "mean": -67.4179,
+            "std": 8.3283
+          },
+          "escape_candidate_strength": {
+            "mean": 0,
+            "std": 0
+          },
+          "mean_active_network_neurons": {
+            "mean": 2422.5982,
+            "std": 103.1436
+          }
+        },
+        "D_silence_both": {
+          "condition_id": "D_silence_both",
+          "condition_label": "Both DNp70 (541 & 1048) Silenced",
+          "silenced_neurons": [
+            541,
+            1048
+          ],
+          "dnp01_firing_hz": {
+            "mean": 0,
+            "std": 0
+          },
+          "dnp01_net_input_current": {
+            "mean": -70.5162,
+            "std": 8.1504
+          },
+          "escape_candidate_strength": {
+            "mean": 0,
+            "std": 0
+          },
+          "mean_active_network_neurons": {
+            "mean": 2422.0236,
+            "std": 102.9533
+          }
+        },
+        "E_sham_silenced": {
+          "condition_id": "E_sham_silenced",
+          "condition_label": "Matched Sham (2 DNs) Silenced",
+          "silenced_neurons": [
+            406,
+            704
+          ],
+          "dnp01_firing_hz": {
+            "mean": 0,
+            "std": 0
+          },
+          "dnp01_net_input_current": {
+            "mean": -66.6642,
+            "std": 8.468
+          },
+          "escape_candidate_strength": {
+            "mean": 0,
+            "std": 0
+          },
+          "mean_active_network_neurons": {
+            "mean": 2422.8891,
+            "std": 103.2846
+          }
+        }
+      }
+    },
+    "latent_tactile_intermediate_rescue": {
+      "sensory_pathway": "Tactile T1 Left -> DNp70 (25 Hz Boost) -> DNp01 (Rescued)",
+      "boost_dnp70_hz": 25,
+      "conditions": {
+        "A_intact": {
+          "condition_id": "A_intact",
+          "condition_label": "Intact",
+          "silenced_neurons": [],
+          "dnp01_firing_hz": {
+            "mean": 2.2445,
+            "std": 0.3531
+          },
+          "dnp01_net_input_current": {
+            "mean": 299.3609,
+            "std": 24.2437
+          },
+          "escape_candidate_strength": {
+            "mean": 0.0748,
+            "std": 0.0118
+          },
+          "mean_active_network_neurons": {
+            "mean": 2547.2273,
+            "std": 105.3302
+          }
+        },
+        "B_silence_541": {
+          "condition_id": "B_silence_541",
+          "condition_label": "DNp70-Left (541) Silenced",
+          "silenced_neurons": [
+            541
+          ],
+          "dnp01_firing_hz": {
+            "mean": 0.6641,
+            "std": 0.199
+          },
+          "dnp01_net_input_current": {
+            "mean": 91.3996,
+            "std": 15.1087
+          },
+          "escape_candidate_strength": {
+            "mean": 0.0221,
+            "std": 0.0066
+          },
+          "mean_active_network_neurons": {
+            "mean": 2479.7527,
+            "std": 104.9166
+          }
+        },
+        "C_silence_1048": {
+          "condition_id": "C_silence_1048",
+          "condition_label": "DNp70-Right (1048) Silenced",
+          "silenced_neurons": [
+            1048
+          ],
+          "dnp01_firing_hz": {
+            "mean": 1.0866,
+            "std": 0.2691
+          },
+          "dnp01_net_input_current": {
+            "mean": 140.9038,
+            "std": 19.9733
+          },
+          "escape_candidate_strength": {
+            "mean": 0.0362,
+            "std": 0.009
+          },
+          "mean_active_network_neurons": {
+            "mean": 2479.9473,
+            "std": 103.1652
+          }
+        },
+        "D_silence_both": {
+          "condition_id": "D_silence_both",
+          "condition_label": "Both DNp70 (541 & 1048) Silenced",
+          "silenced_neurons": [
+            541,
+            1048
+          ],
+          "dnp01_firing_hz": {
+            "mean": 0,
+            "std": 0
+          },
+          "dnp01_net_input_current": {
+            "mean": -70.5162,
+            "std": 8.1504
+          },
+          "escape_candidate_strength": {
+            "mean": 0,
+            "std": 0
+          },
+          "mean_active_network_neurons": {
+            "mean": 2422.0236,
+            "std": 102.9533
+          }
+        },
+        "E_sham_silenced": {
+          "condition_id": "E_sham_silenced",
+          "condition_label": "Matched Sham (2 DNs) Silenced",
+          "silenced_neurons": [
+            406,
+            704
+          ],
+          "dnp01_firing_hz": {
+            "mean": 2.2445,
+            "std": 0.3531
+          },
+          "dnp01_net_input_current": {
+            "mean": 299.3609,
+            "std": 24.2437
+          },
+          "escape_candidate_strength": {
+            "mean": 0.0748,
+            "std": 0.0118
+          },
+          "mean_active_network_neurons": {
+            "mean": 2547.1891,
+            "std": 105.3007
+          }
+        }
+      }
+    }
+  }
+}

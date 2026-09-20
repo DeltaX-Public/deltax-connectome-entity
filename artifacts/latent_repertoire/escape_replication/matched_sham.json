@@ -1,0 +1,104 @@
+{
+  "schema": "latent_repertoire.matched_sham_control.v1",
+  "timestamp": "2026-09-20T01:47:25.413Z",
+  "rationale": "Serves as an exact structural, physical, and dynamical control for future plasticity experiments on ESCAPE_B. Matched for edge count (4), cumulative synaptic weight (~1416), graph depth (premotor descending to downstream), cholinergic excitatory transmitter, and bilateral representation, but completely uncoupled from the giant fiber escape circuit.",
+  "matching_criteria": {
+    "edge_count": {
+      "target": 4,
+      "sham": 4,
+      "matched": true
+    },
+    "cumulative_synaptic_weight": {
+      "target": 1416,
+      "sham": 1416,
+      "discrepancy": 0,
+      "tolerance": "< 5%"
+    },
+    "graph_depth": {
+      "target": "DN to downstream target",
+      "sham": "DN to downstream target",
+      "matched": true
+    },
+    "neurotransmitter": {
+      "target": "ACh (excitatory)",
+      "sham": "ACh (excitatory)",
+      "matched": true
+    },
+    "bilateral_symmetry": {
+      "target": "2 Left edges + 2 Right edges",
+      "sham": "2 Left edges + 2 Right edges",
+      "matched": true
+    },
+    "uncoupled_from_escape": {
+      "target": true,
+      "sham": true,
+      "matched": true
+    }
+  },
+  "edges": [
+    {
+      "edge_index": 1,
+      "edge_id": "SHAM_EDGE_1",
+      "source_index": 36,
+      "source_type": "DNg100",
+      "source_body_id": "10045",
+      "source_side": "Left",
+      "target_index": 46,
+      "target_type": "DNg100",
+      "target_body_id": "10056",
+      "target_side": "Right",
+      "synapse_count_S_ij": 119,
+      "baseline_weight": 119,
+      "neurotransmitter": "ACh",
+      "nt_sign": 1
+    },
+    {
+      "edge_index": 2,
+      "edge_id": "SHAM_EDGE_2",
+      "source_index": 36,
+      "source_type": "DNg100",
+      "source_body_id": "10045",
+      "source_side": "Left",
+      "target_index": 2613,
+      "target_type": "DNg44",
+      "target_body_id": "12794",
+      "target_side": "Right",
+      "synapse_count_S_ij": 44,
+      "baseline_weight": 44,
+      "neurotransmitter": "ACh",
+      "nt_sign": 1
+    },
+    {
+      "edge_index": 3,
+      "edge_id": "SHAM_EDGE_3",
+      "source_index": 2325,
+      "source_type": "DNge125",
+      "source_body_id": "12485",
+      "source_side": "Right",
+      "target_index": 143773,
+      "target_type": "MNnm13",
+      "target_body_id": "801319",
+      "target_side": "Left",
+      "synapse_count_S_ij": 530,
+      "baseline_weight": 530,
+      "neurotransmitter": "ACh",
+      "nt_sign": 1
+    },
+    {
+      "edge_index": 4,
+      "edge_id": "SHAM_EDGE_4",
+      "source_index": 3220,
+      "source_type": "DNg33",
+      "source_body_id": "13442",
+      "source_side": "Right",
+      "target_index": 3106,
+      "target_type": "DNg33",
+      "target_body_id": "13317",
+      "target_side": "Left",
+      "synapse_count_S_ij": 723,
+      "baseline_weight": 723,
+      "neurotransmitter": "ACh",
+      "nt_sign": 1
+    }
+  ]
+}

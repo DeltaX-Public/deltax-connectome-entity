@@ -1,0 +1,178 @@
+{
+  "schema": "latent_repertoire.expressed_vs_latent_comparison.v1",
+  "timestamp": "2026-09-20T01:51:33.177Z",
+  "diagnostic_seed_count": 50,
+  "diagnostic_seed_range": "20300..20349",
+  "comparative_summary": {
+    "excitatory_drive_disparity": "The naturally expressed auditory pathway drives DNp01 with massive monosynaptic excitatory input from 21 primary afferent edges. In contrast, natural tactile drive provides virtually zero direct excitation to DNp01 and weak subthreshold excitation to DNp70.",
+    "inhibitory_opposition": "Under tactile stimulation, DNp01 receives strong polysynaptic inhibition, pushing net input deeply negative. In the auditory pathway, monosynaptic excitation completely overwhelms local feedforward inhibition.",
+    "what_the_latent_path_must_learn": "To recruit DNp01, the latent pathway must either: (A) potentiate tactile-to-DNp70 transmission so DNp70 fires at >= 20 Hz, or (B) potentiate DNp70-to-DNp01 synapses (currently 1416 total weight) to overcome the negative inhibitory barrier, or (C) reduce polysynaptic inhibitory drive."
+  },
+  "profiles": {
+    "expressed_auditory": {
+      "pathway_label": "JO Auditory Left -> DNp01 (Naturally Expressed)",
+      "sensory_afferent_activity_hz": {
+        "mean": 82.0855,
+        "std": 1.068
+      },
+      "intermediate_dnp70_activity_hz": {
+        "mean": 0.0031,
+        "std": 0.0214
+      },
+      "dnp01_firing_rate_hz": {
+        "mean": 20.1855,
+        "std": 2.0503
+      },
+      "dnp01_net_excitatory_input": {
+        "mean": 3004.3721,
+        "std": 157.0353
+      },
+      "dnp01_net_inhibitory_input_magnitude": {
+        "mean": -1924.0813,
+        "std": 71.9408
+      },
+      "dnp01_net_total_input_current": {
+        "mean": 1086.6425,
+        "std": 145.1975
+      },
+      "dnp01_threshold_theta": {
+        "mean": 151.622,
+        "std": 8.0703
+      },
+      "dnp01_inp_over_theta_ratio": {
+        "mean": 7.1966,
+        "std": 1.0945
+      },
+      "dnp01_gain_a": {
+        "mean": 1,
+        "std": 0
+      },
+      "dnp01_adaptation_state": {
+        "mean": 0.5385,
+        "std": 0.0574
+      },
+      "dnp01_depression_factor_u": {
+        "mean": 1,
+        "std": 0
+      },
+      "onset_latency_ms": {
+        "mean": 20,
+        "std": 0
+      },
+      "escape_candidate_strength": {
+        "mean": 0.6655,
+        "std": 0.0586
+      }
+    },
+    "latent_tactile_natural": {
+      "pathway_label": "Tactile T1 Left -> DNp70 -> DNp01 (Natural Latent Drive)",
+      "sensory_afferent_activity_hz": {
+        "mean": 93.2167,
+        "std": 0.7467
+      },
+      "intermediate_dnp70_activity_hz": {
+        "mean": 0.1695,
+        "std": 0.1482
+      },
+      "dnp01_firing_rate_hz": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_net_excitatory_input": {
+        "mean": 47.7465,
+        "std": 12.8829
+      },
+      "dnp01_net_inhibitory_input_magnitude": {
+        "mean": -114.9139,
+        "std": 12.819
+      },
+      "dnp01_net_total_input_current": {
+        "mean": -66.6642,
+        "std": 8.468
+      },
+      "dnp01_threshold_theta": {
+        "mean": 151.622,
+        "std": 8.0703
+      },
+      "dnp01_inp_over_theta_ratio": {
+        "mean": -0.4408,
+        "std": 0.0586
+      },
+      "dnp01_gain_a": {
+        "mean": 1,
+        "std": 0
+      },
+      "dnp01_adaptation_state": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_depression_factor_u": {
+        "mean": 1,
+        "std": 0
+      },
+      "onset_latency_ms": {
+        "mean": -1,
+        "std": 0
+      },
+      "escape_candidate_strength": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "latent_tactile_rescued_matched": {
+      "pathway_label": "Tactile T1 Left + DNp70 Boost (25 Hz) -> DNp01 (Rescued)",
+      "sensory_afferent_activity_hz": {
+        "mean": 93.2168,
+        "std": 0.7467
+      },
+      "intermediate_dnp70_activity_hz": {
+        "mean": 11.4596,
+        "std": 0.5424
+      },
+      "dnp01_firing_rate_hz": {
+        "mean": 2.2445,
+        "std": 0.3531
+      },
+      "dnp01_net_excitatory_input": {
+        "mean": 472.6348,
+        "std": 29.5263
+      },
+      "dnp01_net_inhibitory_input_magnitude": {
+        "mean": -174.004,
+        "std": 13.4828
+      },
+      "dnp01_net_total_input_current": {
+        "mean": 299.3609,
+        "std": 24.2437
+      },
+      "dnp01_threshold_theta": {
+        "mean": 151.622,
+        "std": 8.0703
+      },
+      "dnp01_inp_over_theta_ratio": {
+        "mean": 1.9794,
+        "std": 0.1849
+      },
+      "dnp01_gain_a": {
+        "mean": 1,
+        "std": 0
+      },
+      "dnp01_adaptation_state": {
+        "mean": 0.0453,
+        "std": 0.0081
+      },
+      "dnp01_depression_factor_u": {
+        "mean": 1,
+        "std": 0
+      },
+      "onset_latency_ms": {
+        "mean": 72.6,
+        "std": 6.2642
+      },
+      "escape_candidate_strength": {
+        "mean": 0.0748,
+        "std": 0.0118
+      }
+    }
+  }
+}

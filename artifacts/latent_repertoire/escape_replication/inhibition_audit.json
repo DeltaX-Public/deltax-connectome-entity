@@ -1,0 +1,179 @@
+{
+  "schema": "latent_repertoire.escape_inhibition_audit.v1",
+  "timestamp": "2026-09-20T01:52:18.697Z",
+  "diagnostic_seed_count": 50,
+  "diagnostic_seed_range": "20300..20349",
+  "top_inhibitory_elements_identified": [
+    {
+      "idx": 61,
+      "weight": 414,
+      "type": "PVLP010"
+    },
+    {
+      "idx": 1295,
+      "weight": 360,
+      "type": "SAD109"
+    },
+    {
+      "idx": 1465,
+      "weight": 348,
+      "type": "SAD091"
+    },
+    {
+      "idx": 292,
+      "weight": 324,
+      "type": "SAD073"
+    },
+    {
+      "idx": 3065,
+      "weight": 324,
+      "type": "SAD073"
+    },
+    {
+      "idx": 133789,
+      "weight": 297,
+      "type": "PVLP010"
+    },
+    {
+      "idx": 1115,
+      "weight": 289,
+      "type": "SAD073"
+    },
+    {
+      "idx": 738,
+      "weight": 272,
+      "type": "AN12B001"
+    },
+    {
+      "idx": 1266,
+      "weight": 272,
+      "type": "CL367"
+    },
+    {
+      "idx": 1710,
+      "weight": 265,
+      "type": "CL367"
+    }
+  ],
+  "conditions": {
+    "A_intact": {
+      "condition_id": "A_intact",
+      "condition_label": "Intact Tactile Drive",
+      "silenced_neurons": [],
+      "dnp70_firing_rate": {
+        "mean": 0.1695,
+        "std": 0.1482
+      },
+      "dnp70_net_input": {
+        "mean": 52.7367,
+        "std": 15.4232
+      },
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_net_input": {
+        "mean": -66.6642,
+        "std": 8.468
+      },
+      "escape_candidate_strength": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "B_top_single_inh_removed": {
+      "condition_id": "B_top_single_inh_removed",
+      "condition_label": "Top Inhibitory Neuron Removed (61)",
+      "silenced_neurons": [
+        61
+      ],
+      "dnp70_firing_rate": {
+        "mean": 0.1834,
+        "std": 0.1537
+      },
+      "dnp70_net_input": {
+        "mean": 54.4337,
+        "std": 15.7755
+      },
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_net_input": {
+        "mean": -51.0373,
+        "std": 9.2687
+      },
+      "escape_candidate_strength": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "C_top_ensemble_inh_removed": {
+      "condition_id": "C_top_ensemble_inh_removed",
+      "condition_label": "Top 5 Inhibitory Ensemble Removed (61, 1295, 1465, 292, 3065)",
+      "silenced_neurons": [
+        61,
+        1295,
+        1465,
+        292,
+        3065
+      ],
+      "dnp70_firing_rate": {
+        "mean": 0.1835,
+        "std": 0.1538
+      },
+      "dnp70_net_input": {
+        "mean": 54.4653,
+        "std": 15.7788
+      },
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_net_input": {
+        "mean": -50.8825,
+        "std": 9.2265
+      },
+      "escape_candidate_strength": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "D_matched_sham_removed": {
+      "condition_id": "D_matched_sham_removed",
+      "condition_label": "Matched Sham 5 Neurons Removed (100, 101, 102, 103, 104)",
+      "silenced_neurons": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "dnp70_firing_rate": {
+        "mean": 0.1896,
+        "std": 0.1599
+      },
+      "dnp70_net_input": {
+        "mean": 55.2714,
+        "std": 16.346
+      },
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_net_input": {
+        "mean": -67.3182,
+        "std": 8.5361
+      },
+      "escape_candidate_strength": {
+        "mean": 0,
+        "std": 0
+      }
+    }
+  },
+  "causal_classification": {
+    "finding": "Removing the top inhibitory intermediaries relieves a portion of the net negative current entering DNp01, but DNp01 firing does NOT spontaneously recover (remains 0.00 Hz).",
+    "primary_bottleneck": "INSUFFICIENT_EXCITATORY_CONVERGENCE_COMBINED_WITH_POLYSYNAPTIC_INHIBITION",
+    "interpretation": "DNp01 cannot fire without strong active excitatory drive. Because tactile afferents provide 0 direct input to DNp01 and recruit DNp70 only sub-threshold (~0.26 Hz), removing inhibition reduces the negative barrier but leaves insufficient excitation to cross DNp01's firing threshold (theta ~ 151). Therefore, plasticity must potentiate excitatory transmission (sensory->DNp70 or DNp70->DNp01) rather than relying solely on disinhibition."
+  }
+}
