@@ -1,0 +1,3902 @@
+{
+  "schema": "latent_repertoire.bilateral_symmetry.v1",
+  "timestamp": "2026-09-20T00:53:26.317Z",
+  "total_bilateral_pairs_audited": 90,
+  "marked_asymmetries_count": 54,
+  "top_asymmetries": [
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 677,
+        "right_cumulative_weight": 14,
+        "structural_asymmetry_index": 0.9595
+      },
+      "functional": {
+        "left_mean_hz": 0.7614,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.2478,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 2,
+        "left_cumulative_weight": 50,
+        "right_cumulative_weight": 1808,
+        "structural_asymmetry_index": 0.9462
+      },
+      "functional": {
+        "left_mean_hz": 6.5155,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.4808,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 1,
+        "left_cumulative_weight": 674,
+        "right_cumulative_weight": 23,
+        "structural_asymmetry_index": 0.934
+      },
+      "functional": {
+        "left_mean_hz": 15.3268,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.4808,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 2716,
+        "right_cumulative_weight": 111,
+        "structural_asymmetry_index": 0.9215
+      },
+      "functional": {
+        "left_mean_hz": 0.6287,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.1432,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 161,
+        "right_cumulative_weight": 3783,
+        "structural_asymmetry_index": 0.9184
+      },
+      "functional": {
+        "left_mean_hz": 0.0852,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0242,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 17,
+        "right_cumulative_weight": 751,
+        "structural_asymmetry_index": 0.9557
+      },
+      "functional": {
+        "left_mean_hz": 0.0204,
+        "right_mean_hz": 0.0005,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.0003,
+        "functional_asymmetry_index": 0.9522
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1006,
+        "right_cumulative_weight": 67,
+        "structural_asymmetry_index": 0.8751
+      },
+      "functional": {
+        "left_mean_hz": 0.0047,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 298,
+        "right_cumulative_weight": 36,
+        "structural_asymmetry_index": 0.7844
+      },
+      "functional": {
+        "left_mean_hz": 0.6384,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 24,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.7778
+      },
+      "functional": {
+        "left_mean_hz": 1.3167,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1251,
+        "right_cumulative_weight": 303,
+        "structural_asymmetry_index": 0.61
+      },
+      "functional": {
+        "left_mean_hz": 0.0118,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0076,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 598,
+        "right_cumulative_weight": 1353,
+        "structural_asymmetry_index": 0.387
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.3271,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.151,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 45,
+        "right_cumulative_weight": 98,
+        "structural_asymmetry_index": 0.3706
+      },
+      "functional": {
+        "left_mean_hz": 0.0002,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 2228,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.9973
+      },
+      "functional": {
+        "left_mean_hz": 3.9372,
+        "right_mean_hz": 1.9349,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.341
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 1,
+        "left_cumulative_weight": 6,
+        "right_cumulative_weight": 16,
+        "structural_asymmetry_index": 0.4545
+      },
+      "functional": {
+        "left_mean_hz": 0.0692,
+        "right_mean_hz": 0.0047,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.8728
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 17,
+        "right_cumulative_weight": 33,
+        "structural_asymmetry_index": 0.32
+      },
+      "functional": {
+        "left_mean_hz": 0.0015,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0001,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 625,
+        "right_cumulative_weight": 1050,
+        "structural_asymmetry_index": 0.2537
+      },
+      "functional": {
+        "left_mean_hz": 0.2244,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0912,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 68,
+        "right_cumulative_weight": 3970,
+        "structural_asymmetry_index": 0.9663
+      },
+      "functional": {
+        "left_mean_hz": 0.2596,
+        "right_mean_hz": 0.4408,
+        "left_candidate_strength": 0.0087,
+        "right_candidate_strength": 0.0147,
+        "functional_asymmetry_index": 0.2587
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 16,
+        "right_cumulative_weight": 25,
+        "structural_asymmetry_index": 0.2195
+      },
+      "functional": {
+        "left_mean_hz": 0.1129,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 365,
+        "right_cumulative_weight": 237,
+        "structural_asymmetry_index": 0.2126
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.0003,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 107,
+        "right_cumulative_weight": 162,
+        "structural_asymmetry_index": 0.2045
+      },
+      "functional": {
+        "left_mean_hz": 0.0993,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0282,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1042,
+        "right_cumulative_weight": 1561,
+        "structural_asymmetry_index": 0.1994
+      },
+      "functional": {
+        "left_mean_hz": 0.1236,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0377,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 4020,
+        "right_cumulative_weight": 2791,
+        "structural_asymmetry_index": 0.1804
+      },
+      "functional": {
+        "left_mean_hz": 0.7005,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0234,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 1982,
+        "right_cumulative_weight": 13,
+        "structural_asymmetry_index": 0.987
+      },
+      "functional": {
+        "left_mean_hz": 0.2475,
+        "right_mean_hz": 0.1738,
+        "left_candidate_strength": 0.0675,
+        "right_candidate_strength": 0.0466,
+        "functional_asymmetry_index": 0.1749
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 544,
+        "right_cumulative_weight": 111,
+        "structural_asymmetry_index": 0.6611
+      },
+      "functional": {
+        "left_mean_hz": 1.3451,
+        "right_mean_hz": 0.4608,
+        "left_candidate_strength": 0.3427,
+        "right_candidate_strength": 0.0037,
+        "functional_asymmetry_index": 0.4897
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 135,
+        "right_cumulative_weight": 55,
+        "structural_asymmetry_index": 0.4211
+      },
+      "functional": {
+        "left_mean_hz": 0.3801,
+        "right_mean_hz": 2.0265,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.4558,
+        "functional_asymmetry_index": 0.6841
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 3024,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.998
+      },
+      "functional": {
+        "left_mean_hz": 0.8143,
+        "right_mean_hz": 0.989,
+        "left_candidate_strength": 0.1337,
+        "right_candidate_strength": 0.1158,
+        "functional_asymmetry_index": 0.0969
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 5794,
+        "right_cumulative_weight": 232,
+        "structural_asymmetry_index": 0.923
+      },
+      "functional": {
+        "left_mean_hz": 0.5633,
+        "right_mean_hz": 0.7937,
+        "left_candidate_strength": 0.0404,
+        "right_candidate_strength": 0.0526,
+        "functional_asymmetry_index": 0.1698
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1353,
+        "right_cumulative_weight": 548,
+        "structural_asymmetry_index": 0.4235
+      },
+      "functional": {
+        "left_mean_hz": 0.0589,
+        "right_mean_hz": 0.2561,
+        "left_candidate_strength": 0.0034,
+        "right_candidate_strength": 0.1223,
+        "functional_asymmetry_index": 0.626
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 190,
+        "right_cumulative_weight": 208,
+        "structural_asymmetry_index": 0.0452
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.0001,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 23332,
+        "right_cumulative_weight": 242,
+        "structural_asymmetry_index": 0.9795
+      },
+      "functional": {
+        "left_mean_hz": 0.4042,
+        "right_mean_hz": 0.4511,
+        "left_candidate_strength": 0.1135,
+        "right_candidate_strength": 0.1246,
+        "functional_asymmetry_index": 0.0548
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 826,
+        "right_cumulative_weight": 780,
+        "structural_asymmetry_index": 0.0286
+      },
+      "functional": {
+        "left_mean_hz": 0.9587,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.2789,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 170,
+        "right_cumulative_weight": 161,
+        "structural_asymmetry_index": 0.0272
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.0309,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 961,
+        "right_cumulative_weight": 438,
+        "structural_asymmetry_index": 0.3738
+      },
+      "functional": {
+        "left_mean_hz": 0.0113,
+        "right_mean_hz": 0.053,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.6485
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 7033,
+        "right_cumulative_weight": 6827,
+        "structural_asymmetry_index": 0.0149
+      },
+      "functional": {
+        "left_mean_hz": 0.016,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 14506,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.9996
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 1,
+        "left_cumulative_weight": 4280,
+        "right_cumulative_weight": 4,
+        "structural_asymmetry_index": 0.9981
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0234,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 2503,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.9976
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 15,
+        "right_cumulative_weight": 10007,
+        "structural_asymmetry_index": 0.997
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 3,
+        "right_cumulative_weight": 1372,
+        "structural_asymmetry_index": 0.9956
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 8,
+        "right_cumulative_weight": 1005,
+        "structural_asymmetry_index": 0.9842
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 3,
+        "right_cumulative_weight": 129,
+        "structural_asymmetry_index": 0.9545
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 72,
+        "right_cumulative_weight": 93,
+        "structural_asymmetry_index": 0.1273
+      },
+      "functional": {
+        "left_mean_hz": 2.0455,
+        "right_mean_hz": 0.2178,
+        "left_candidate_strength": 0.456,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.8075
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 258,
+        "right_cumulative_weight": 6772,
+        "structural_asymmetry_index": 0.9266
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0087,
+        "right_candidate_strength": 0.0147,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 5311,
+        "right_cumulative_weight": 4428,
+        "structural_asymmetry_index": 0.0907
+      },
+      "functional": {
+        "left_mean_hz": 0.2356,
+        "right_mean_hz": 0.0238,
+        "left_candidate_strength": 0.0685,
+        "right_candidate_strength": 0.0078,
+        "functional_asymmetry_index": 0.8165
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 26,
+        "right_cumulative_weight": 30,
+        "structural_asymmetry_index": 0.0714
+      },
+      "functional": {
+        "left_mean_hz": 0.1587,
+        "right_mean_hz": 0.0155,
+        "left_candidate_strength": 0.0005,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.822
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 1,
+        "left_cumulative_weight": 2095,
+        "right_cumulative_weight": 859,
+        "structural_asymmetry_index": 0.4184
+      },
+      "functional": {
+        "left_mean_hz": 4.9301,
+        "right_mean_hz": 1.951,
+        "left_candidate_strength": 0.2457,
+        "right_candidate_strength": 0.0936,
+        "functional_asymmetry_index": 0.4329
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 756,
+        "right_cumulative_weight": 757,
+        "structural_asymmetry_index": 0.0007
+      },
+      "functional": {
+        "left_mean_hz": 0.011,
+        "right_mean_hz": 0.129,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.0335,
+        "functional_asymmetry_index": 0.8429
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 238,
+        "right_cumulative_weight": 671,
+        "structural_asymmetry_index": 0.4763
+      },
+      "functional": {
+        "left_mean_hz": 0.4873,
+        "right_mean_hz": 0.939,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.2254,
+        "functional_asymmetry_index": 0.3167
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 311,
+        "right_cumulative_weight": 385,
+        "structural_asymmetry_index": 0.1063
+      },
+      "functional": {
+        "left_mean_hz": 0.2822,
+        "right_mean_hz": 0.054,
+        "left_candidate_strength": 0.0735,
+        "right_candidate_strength": 0.0157,
+        "functional_asymmetry_index": 0.6788
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 259,
+        "right_cumulative_weight": 69,
+        "structural_asymmetry_index": 0.5793
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1719,
+        "right_cumulative_weight": 1534,
+        "structural_asymmetry_index": 0.0569
+      },
+      "functional": {
+        "left_mean_hz": 0.034,
+        "right_mean_hz": 0.0873,
+        "left_candidate_strength": 0.011,
+        "right_candidate_strength": 0.0274,
+        "functional_asymmetry_index": 0.4394
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 793,
+        "right_cumulative_weight": 747,
+        "structural_asymmetry_index": 0.0299
+      },
+      "functional": {
+        "left_mean_hz": 0.2349,
+        "right_mean_hz": 0.0886,
+        "left_candidate_strength": 0.1101,
+        "right_candidate_strength": 0.0082,
+        "functional_asymmetry_index": 0.4522
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 418,
+        "right_cumulative_weight": 148,
+        "structural_asymmetry_index": 0.477
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 27,
+        "right_cumulative_weight": 66,
+        "structural_asymmetry_index": 0.4194
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    }
+  ],
+  "bilateral_pairs_detail": [
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1042,
+        "right_cumulative_weight": 1561,
+        "structural_asymmetry_index": 0.1994
+      },
+      "functional": {
+        "left_mean_hz": 0.1236,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0377,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 107,
+        "right_cumulative_weight": 162,
+        "structural_asymmetry_index": 0.2045
+      },
+      "functional": {
+        "left_mean_hz": 0.0993,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0282,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 826,
+        "right_cumulative_weight": 780,
+        "structural_asymmetry_index": 0.0286
+      },
+      "functional": {
+        "left_mean_hz": 0.9587,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.2789,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 17,
+        "right_cumulative_weight": 751,
+        "structural_asymmetry_index": 0.9557
+      },
+      "functional": {
+        "left_mean_hz": 0.0204,
+        "right_mean_hz": 0.0005,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.0003,
+        "functional_asymmetry_index": 0.9522
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 12848,
+        "right_cumulative_weight": 10884,
+        "structural_asymmetry_index": 0.0828
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 34,
+        "right_cumulative_weight": 30,
+        "structural_asymmetry_index": 0.0625
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 3,
+        "right_cumulative_weight": 1372,
+        "structural_asymmetry_index": 0.9956
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 7033,
+        "right_cumulative_weight": 6827,
+        "structural_asymmetry_index": 0.0149
+      },
+      "functional": {
+        "left_mean_hz": 0.016,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T1",
+      "sensory_label": "Tactile T1",
+      "left_channel": "tactile T1 left",
+      "right_channel": "tactile T1 right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 16,
+        "right_cumulative_weight": 25,
+        "structural_asymmetry_index": 0.2195
+      },
+      "functional": {
+        "left_mean_hz": 0.1129,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 2014,
+        "right_cumulative_weight": 2052,
+        "structural_asymmetry_index": 0.0093
+      },
+      "functional": {
+        "left_mean_hz": 0.9988,
+        "right_mean_hz": 0.825,
+        "left_candidate_strength": 0.2381,
+        "right_candidate_strength": 0.2043,
+        "functional_asymmetry_index": 0.0953
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 319,
+        "right_cumulative_weight": 395,
+        "structural_asymmetry_index": 0.1064
+      },
+      "functional": {
+        "left_mean_hz": 0.3433,
+        "right_mean_hz": 0.6858,
+        "left_candidate_strength": 0.0931,
+        "right_candidate_strength": 0.1732,
+        "functional_asymmetry_index": 0.3328
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 544,
+        "right_cumulative_weight": 111,
+        "structural_asymmetry_index": 0.6611
+      },
+      "functional": {
+        "left_mean_hz": 1.3451,
+        "right_mean_hz": 0.4608,
+        "left_candidate_strength": 0.3427,
+        "right_candidate_strength": 0.0037,
+        "functional_asymmetry_index": 0.4897
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 238,
+        "right_cumulative_weight": 671,
+        "structural_asymmetry_index": 0.4763
+      },
+      "functional": {
+        "left_mean_hz": 0.4873,
+        "right_mean_hz": 0.939,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.2254,
+        "functional_asymmetry_index": 0.3167
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 27,
+        "right_cumulative_weight": 66,
+        "structural_asymmetry_index": 0.4194
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 127,
+        "right_cumulative_weight": 127,
+        "structural_asymmetry_index": 0
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 80,
+        "right_cumulative_weight": 108,
+        "structural_asymmetry_index": 0.1489
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 13,
+        "right_cumulative_weight": 13,
+        "structural_asymmetry_index": 0
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T2",
+      "sensory_label": "Tactile T2",
+      "left_channel": "tactile T2 left",
+      "right_channel": "tactile T2 right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 52,
+        "right_cumulative_weight": 62,
+        "structural_asymmetry_index": 0.0877
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 661,
+        "right_cumulative_weight": 356,
+        "structural_asymmetry_index": 0.2999
+      },
+      "functional": {
+        "left_mean_hz": 1.6197,
+        "right_mean_hz": 1.4255,
+        "left_candidate_strength": 0.3157,
+        "right_candidate_strength": 0.2939,
+        "functional_asymmetry_index": 0.0638
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 48,
+        "right_cumulative_weight": 68,
+        "structural_asymmetry_index": 0.1724
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 72,
+        "right_cumulative_weight": 93,
+        "structural_asymmetry_index": 0.1273
+      },
+      "functional": {
+        "left_mean_hz": 2.0455,
+        "right_mean_hz": 0.2178,
+        "left_candidate_strength": 0.456,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.8075
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 135,
+        "right_cumulative_weight": 55,
+        "structural_asymmetry_index": 0.4211
+      },
+      "functional": {
+        "left_mean_hz": 0.3801,
+        "right_mean_hz": 2.0265,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.4558,
+        "functional_asymmetry_index": 0.6841
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 9,
+        "right_cumulative_weight": 10,
+        "structural_asymmetry_index": 0.0526
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0001,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 17,
+        "right_cumulative_weight": 33,
+        "structural_asymmetry_index": 0.32
+      },
+      "functional": {
+        "left_mean_hz": 0.0015,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0001,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 29,
+        "right_cumulative_weight": 15,
+        "structural_asymmetry_index": 0.3182
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 3,
+        "right_cumulative_weight": 129,
+        "structural_asymmetry_index": 0.9545
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "tactile_T3",
+      "sensory_label": "Tactile T3",
+      "left_channel": "tactile T3 left",
+      "right_channel": "tactile T3 right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 29,
+        "right_cumulative_weight": 27,
+        "structural_asymmetry_index": 0.0357
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 5311,
+        "right_cumulative_weight": 4428,
+        "structural_asymmetry_index": 0.0907
+      },
+      "functional": {
+        "left_mean_hz": 0.2356,
+        "right_mean_hz": 0.0238,
+        "left_candidate_strength": 0.0685,
+        "right_candidate_strength": 0.0078,
+        "functional_asymmetry_index": 0.8165
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 45,
+        "right_cumulative_weight": 98,
+        "structural_asymmetry_index": 0.3706
+      },
+      "functional": {
+        "left_mean_hz": 0.0002,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1251,
+        "right_cumulative_weight": 303,
+        "structural_asymmetry_index": 0.61
+      },
+      "functional": {
+        "left_mean_hz": 0.0118,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0076,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 598,
+        "right_cumulative_weight": 1353,
+        "structural_asymmetry_index": 0.387
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.3271,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.151,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 1,
+        "left_cumulative_weight": 4280,
+        "right_cumulative_weight": 4,
+        "structural_asymmetry_index": 0.9981
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0234,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 4020,
+        "right_cumulative_weight": 2791,
+        "structural_asymmetry_index": 0.1804
+      },
+      "functional": {
+        "left_mean_hz": 0.7005,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0234,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 1,
+        "left_cumulative_weight": 2095,
+        "right_cumulative_weight": 859,
+        "structural_asymmetry_index": 0.4184
+      },
+      "functional": {
+        "left_mean_hz": 4.9301,
+        "right_mean_hz": 1.951,
+        "left_candidate_strength": 0.2457,
+        "right_candidate_strength": 0.0936,
+        "functional_asymmetry_index": 0.4329
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 172,
+        "right_cumulative_weight": 179,
+        "structural_asymmetry_index": 0.0199
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "jo_wind",
+      "sensory_label": "Johnston's Organ Wind/Gravity",
+      "left_channel": "JO wind/gravity left",
+      "right_channel": "JO wind/gravity right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 190,
+        "right_cumulative_weight": 208,
+        "structural_asymmetry_index": 0.0452
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.0001,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 2716,
+        "right_cumulative_weight": 111,
+        "structural_asymmetry_index": 0.9215
+      },
+      "functional": {
+        "left_mean_hz": 0.6287,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.1432,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 161,
+        "right_cumulative_weight": 3783,
+        "structural_asymmetry_index": 0.9184
+      },
+      "functional": {
+        "left_mean_hz": 0.0852,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0242,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 259,
+        "right_cumulative_weight": 69,
+        "structural_asymmetry_index": 0.5793
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 677,
+        "right_cumulative_weight": 14,
+        "structural_asymmetry_index": 0.9595
+      },
+      "functional": {
+        "left_mean_hz": 0.7614,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.2478,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 1,
+        "left_cumulative_weight": 674,
+        "right_cumulative_weight": 23,
+        "structural_asymmetry_index": 0.934
+      },
+      "functional": {
+        "left_mean_hz": 15.3268,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.4808,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 2,
+        "left_cumulative_weight": 50,
+        "right_cumulative_weight": 1808,
+        "structural_asymmetry_index": 0.9462
+      },
+      "functional": {
+        "left_mean_hz": 6.5155,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.4808,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1006,
+        "right_cumulative_weight": 67,
+        "structural_asymmetry_index": 0.8751
+      },
+      "functional": {
+        "left_mean_hz": 0.0047,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 24,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.7778
+      },
+      "functional": {
+        "left_mean_hz": 1.3167,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "jo_auditory",
+      "sensory_label": "Johnston's Organ Auditory",
+      "left_channel": "JO auditory left",
+      "right_channel": "JO auditory right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 298,
+        "right_cumulative_weight": 36,
+        "structural_asymmetry_index": 0.7844
+      },
+      "functional": {
+        "left_mean_hz": 0.6384,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 23332,
+        "right_cumulative_weight": 242,
+        "structural_asymmetry_index": 0.9795
+      },
+      "functional": {
+        "left_mean_hz": 0.4042,
+        "right_mean_hz": 0.4511,
+        "left_candidate_strength": 0.1135,
+        "right_candidate_strength": 0.1246,
+        "functional_asymmetry_index": 0.0548
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 1982,
+        "right_cumulative_weight": 13,
+        "structural_asymmetry_index": 0.987
+      },
+      "functional": {
+        "left_mean_hz": 0.2475,
+        "right_mean_hz": 0.1738,
+        "left_candidate_strength": 0.0675,
+        "right_candidate_strength": 0.0466,
+        "functional_asymmetry_index": 0.1749
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 5794,
+        "right_cumulative_weight": 232,
+        "structural_asymmetry_index": 0.923
+      },
+      "functional": {
+        "left_mean_hz": 0.5633,
+        "right_mean_hz": 0.7937,
+        "left_candidate_strength": 0.0404,
+        "right_candidate_strength": 0.0526,
+        "functional_asymmetry_index": 0.1698
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 3024,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.998
+      },
+      "functional": {
+        "left_mean_hz": 0.8143,
+        "right_mean_hz": 0.989,
+        "left_candidate_strength": 0.1337,
+        "right_candidate_strength": 0.1158,
+        "functional_asymmetry_index": 0.0969
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 258,
+        "right_cumulative_weight": 6772,
+        "structural_asymmetry_index": 0.9266
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0087,
+        "right_candidate_strength": 0.0147,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 68,
+        "right_cumulative_weight": 3970,
+        "structural_asymmetry_index": 0.9663
+      },
+      "functional": {
+        "left_mean_hz": 0.2596,
+        "right_mean_hz": 0.4408,
+        "left_candidate_strength": 0.0087,
+        "right_candidate_strength": 0.0147,
+        "functional_asymmetry_index": 0.2587
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 3,
+        "right_cumulative_weight": 5,
+        "structural_asymmetry_index": 0.25
+      },
+      "functional": {
+        "left_mean_hz": 0.0086,
+        "right_mean_hz": 0.0193,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.3835
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 2228,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.9973
+      },
+      "functional": {
+        "left_mean_hz": 3.9372,
+        "right_mean_hz": 1.9349,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.341
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "thermo",
+      "sensory_label": "Thermosensory",
+      "left_channel": "thermosensory left",
+      "right_channel": "thermosensory right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 3401,
+        "right_cumulative_weight": 5251,
+        "structural_asymmetry_index": 0.2138
+      },
+      "functional": {
+        "left_mean_hz": 1.4091,
+        "right_mean_hz": 0.6767,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.3511
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1719,
+        "right_cumulative_weight": 1534,
+        "structural_asymmetry_index": 0.0569
+      },
+      "functional": {
+        "left_mean_hz": 0.034,
+        "right_mean_hz": 0.0873,
+        "left_candidate_strength": 0.011,
+        "right_candidate_strength": 0.0274,
+        "functional_asymmetry_index": 0.4394
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 222,
+        "right_cumulative_weight": 239,
+        "structural_asymmetry_index": 0.0369
+      },
+      "functional": {
+        "left_mean_hz": 0.3996,
+        "right_mean_hz": 0.5516,
+        "left_candidate_strength": 0.1087,
+        "right_candidate_strength": 0.1396,
+        "functional_asymmetry_index": 0.1598
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 793,
+        "right_cumulative_weight": 747,
+        "structural_asymmetry_index": 0.0299
+      },
+      "functional": {
+        "left_mean_hz": 0.2349,
+        "right_mean_hz": 0.0886,
+        "left_candidate_strength": 0.1101,
+        "right_candidate_strength": 0.0082,
+        "functional_asymmetry_index": 0.4522
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 756,
+        "right_cumulative_weight": 757,
+        "structural_asymmetry_index": 0.0007
+      },
+      "functional": {
+        "left_mean_hz": 0.011,
+        "right_mean_hz": 0.129,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0.0335,
+        "functional_asymmetry_index": 0.8429
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 17,
+        "right_cumulative_weight": 24,
+        "structural_asymmetry_index": 0.1707
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 25,
+        "right_cumulative_weight": 33,
+        "structural_asymmetry_index": 0.1379
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 8,
+        "right_cumulative_weight": 1005,
+        "structural_asymmetry_index": 0.9842
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 3,
+        "left_cumulative_weight": 15,
+        "right_cumulative_weight": 10007,
+        "structural_asymmetry_index": 0.997
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "taste_T1",
+      "sensory_label": "Taste T1",
+      "left_channel": "taste T1 left",
+      "right_channel": "taste T1 right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 434,
+        "right_cumulative_weight": 378,
+        "structural_asymmetry_index": 0.069
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 14506,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.9996
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 887,
+        "right_cumulative_weight": 1028,
+        "structural_asymmetry_index": 0.0736
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 4529,
+        "right_cumulative_weight": 2271,
+        "structural_asymmetry_index": 0.3321
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 2,
+        "left_cumulative_weight": 2503,
+        "right_cumulative_weight": 3,
+        "structural_asymmetry_index": 0.9976
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 8077,
+        "right_cumulative_weight": 6696,
+        "structural_asymmetry_index": 0.0935
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 10420,
+        "right_cumulative_weight": 8226,
+        "structural_asymmetry_index": 0.1177
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 194,
+        "right_cumulative_weight": 451,
+        "structural_asymmetry_index": 0.3984
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 341,
+        "right_cumulative_weight": 429,
+        "structural_asymmetry_index": 0.1143
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "visual",
+      "sensory_label": "Visual Eye",
+      "left_channel": "visual left",
+      "right_channel": "visual right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 3,
+        "right_hops": 3,
+        "left_cumulative_weight": 270,
+        "right_cumulative_weight": 487,
+        "structural_asymmetry_index": 0.2867
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 2575,
+        "right_cumulative_weight": 3521,
+        "structural_asymmetry_index": 0.1552
+      },
+      "functional": {
+        "left_mean_hz": 3.2703,
+        "right_mean_hz": 3.49,
+        "left_candidate_strength": 0.4789,
+        "right_candidate_strength": 0.4773,
+        "functional_asymmetry_index": 0.0325
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 311,
+        "right_cumulative_weight": 385,
+        "structural_asymmetry_index": 0.1063
+      },
+      "functional": {
+        "left_mean_hz": 0.2822,
+        "right_mean_hz": 0.054,
+        "left_candidate_strength": 0.0735,
+        "right_candidate_strength": 0.0157,
+        "functional_asymmetry_index": 0.6788
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 522,
+        "right_cumulative_weight": 317,
+        "structural_asymmetry_index": 0.2443
+      },
+      "functional": {
+        "left_mean_hz": 4.822,
+        "right_mean_hz": 2.9398,
+        "left_candidate_strength": 0.4803,
+        "right_candidate_strength": 0.0886,
+        "functional_asymmetry_index": 0.2425
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 682,
+        "right_cumulative_weight": 767,
+        "structural_asymmetry_index": 0.0587
+      },
+      "functional": {
+        "left_mean_hz": 3.0617,
+        "right_mean_hz": 3.153,
+        "left_candidate_strength": 0.0262,
+        "right_candidate_strength": 0.2051,
+        "functional_asymmetry_index": 0.0147
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 418,
+        "right_cumulative_weight": 148,
+        "structural_asymmetry_index": 0.477
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 365,
+        "right_cumulative_weight": 237,
+        "structural_asymmetry_index": 0.2126
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.0003,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 26,
+        "right_cumulative_weight": 30,
+        "structural_asymmetry_index": 0.0714
+      },
+      "functional": {
+        "left_mean_hz": 0.1587,
+        "right_mean_hz": 0.0155,
+        "left_candidate_strength": 0.0005,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.822
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 9,
+        "right_cumulative_weight": 17,
+        "structural_asymmetry_index": 0.3077
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "wing_bristles",
+      "sensory_label": "Wing/Notum Bristles",
+      "left_channel": "wing/notum bristles left",
+      "right_channel": "wing/notum bristles right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 209,
+        "right_cumulative_weight": 193,
+        "structural_asymmetry_index": 0.0398
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 6513,
+        "right_cumulative_weight": 6112,
+        "structural_asymmetry_index": 0.0318
+      },
+      "functional": {
+        "left_mean_hz": 0.0761,
+        "right_mean_hz": 0.0437,
+        "left_candidate_strength": 0.024,
+        "right_candidate_strength": 0.0141,
+        "functional_asymmetry_index": 0.2705
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 580,
+        "right_cumulative_weight": 579,
+        "structural_asymmetry_index": 0.0009
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 1353,
+        "right_cumulative_weight": 548,
+        "structural_asymmetry_index": 0.4235
+      },
+      "functional": {
+        "left_mean_hz": 0.0589,
+        "right_mean_hz": 0.2561,
+        "left_candidate_strength": 0.0034,
+        "right_candidate_strength": 0.1223,
+        "functional_asymmetry_index": 0.626
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 625,
+        "right_cumulative_weight": 1050,
+        "structural_asymmetry_index": 0.2537
+      },
+      "functional": {
+        "left_mean_hz": 0.2244,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0.0912,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 392,
+        "right_cumulative_weight": 384,
+        "structural_asymmetry_index": 0.0103
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 317,
+        "right_cumulative_weight": 424,
+        "structural_asymmetry_index": 0.1444
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0
+      },
+      "is_marked_asymmetry": false
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "structural": {
+        "left_hops": 1,
+        "right_hops": 1,
+        "left_cumulative_weight": 6,
+        "right_cumulative_weight": 16,
+        "structural_asymmetry_index": 0.4545
+      },
+      "functional": {
+        "left_mean_hz": 0.0692,
+        "right_mean_hz": 0.0047,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.8728
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 961,
+        "right_cumulative_weight": 438,
+        "structural_asymmetry_index": 0.3738
+      },
+      "functional": {
+        "left_mean_hz": 0.0113,
+        "right_mean_hz": 0.053,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 0.6485
+      },
+      "is_marked_asymmetry": true
+    },
+    {
+      "sensory_group": "haltere",
+      "sensory_label": "Haltere Mechanosensory",
+      "left_channel": "haltere left",
+      "right_channel": "haltere right",
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "structural": {
+        "left_hops": 2,
+        "right_hops": 2,
+        "left_cumulative_weight": 170,
+        "right_cumulative_weight": 161,
+        "structural_asymmetry_index": 0.0272
+      },
+      "functional": {
+        "left_mean_hz": 0,
+        "right_mean_hz": 0.0309,
+        "left_candidate_strength": 0,
+        "right_candidate_strength": 0,
+        "functional_asymmetry_index": 1
+      },
+      "is_marked_asymmetry": true
+    }
+  ],
+  "modality_convergence": [
+    {
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 11,
+      "recruiting_modalities": [
+        {
+          "channel": "wing/notum bristles right",
+          "mean_evoked_hz": 3.49,
+          "candidate_strength": 0.4773
+        },
+        {
+          "channel": "wing/notum bristles left",
+          "mean_evoked_hz": 3.2703,
+          "candidate_strength": 0.4789
+        },
+        {
+          "channel": "tactile T3 left",
+          "mean_evoked_hz": 1.6197,
+          "candidate_strength": 0.3157
+        },
+        {
+          "channel": "tactile T3 right",
+          "mean_evoked_hz": 1.4255,
+          "candidate_strength": 0.2939
+        },
+        {
+          "channel": "tactile T2 left",
+          "mean_evoked_hz": 0.9988,
+          "candidate_strength": 0.2381
+        },
+        {
+          "channel": "tactile T2 right",
+          "mean_evoked_hz": 0.825,
+          "candidate_strength": 0.2043
+        },
+        {
+          "channel": "JO auditory left",
+          "mean_evoked_hz": 0.6287,
+          "candidate_strength": 0.1432
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 0.4511,
+          "candidate_strength": 0.1246
+        },
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 0.4042,
+          "candidate_strength": 0.1135
+        },
+        {
+          "channel": "JO wind/gravity left",
+          "mean_evoked_hz": 0.2356,
+          "candidate_strength": 0.0685
+        },
+        {
+          "channel": "tactile T1 left",
+          "mean_evoked_hz": 0.1236,
+          "candidate_strength": 0.0377
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "taste T1 right",
+          "cumulative_weight": 1534,
+          "min_hops": 2
+        },
+        {
+          "channel": "haltere left",
+          "cumulative_weight": 6513,
+          "min_hops": 2
+        },
+        {
+          "channel": "haltere right",
+          "cumulative_weight": 6112,
+          "min_hops": 2
+        },
+        {
+          "channel": "taste T1 left",
+          "cumulative_weight": 1719,
+          "min_hops": 2
+        },
+        {
+          "channel": "JO wind/gravity right",
+          "cumulative_weight": 4428,
+          "min_hops": 2
+        },
+        {
+          "channel": "tactile T1 right",
+          "cumulative_weight": 1561,
+          "min_hops": 2
+        },
+        {
+          "channel": "visual left",
+          "cumulative_weight": 14506,
+          "min_hops": 3
+        }
+      ],
+      "recruitment_breadth": "BROAD_MULTI_MODAL"
+    },
+    {
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 7,
+      "recruiting_modalities": [
+        {
+          "channel": "tactile T2 right",
+          "mean_evoked_hz": 0.6858,
+          "candidate_strength": 0.1732
+        },
+        {
+          "channel": "taste T1 right",
+          "mean_evoked_hz": 0.5516,
+          "candidate_strength": 0.1396
+        },
+        {
+          "channel": "taste T1 left",
+          "mean_evoked_hz": 0.3996,
+          "candidate_strength": 0.1087
+        },
+        {
+          "channel": "tactile T2 left",
+          "mean_evoked_hz": 0.3433,
+          "candidate_strength": 0.0931
+        },
+        {
+          "channel": "wing/notum bristles left",
+          "mean_evoked_hz": 0.2822,
+          "candidate_strength": 0.0735
+        },
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 0.2475,
+          "candidate_strength": 0.0675
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 0.1738,
+          "candidate_strength": 0.0466
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "JO auditory right",
+          "cumulative_weight": 3783,
+          "min_hops": 3
+        },
+        {
+          "channel": "visual left",
+          "cumulative_weight": 887,
+          "min_hops": 3
+        },
+        {
+          "channel": "visual right",
+          "cumulative_weight": 1028,
+          "min_hops": 3
+        },
+        {
+          "channel": "haltere left",
+          "cumulative_weight": 580,
+          "min_hops": 2
+        },
+        {
+          "channel": "haltere right",
+          "cumulative_weight": 579,
+          "min_hops": 2
+        }
+      ],
+      "recruitment_breadth": "BROAD_MULTI_MODAL"
+    },
+    {
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 11,
+      "recruiting_modalities": [
+        {
+          "channel": "wing/notum bristles left",
+          "mean_evoked_hz": 4.822,
+          "candidate_strength": 0.4803
+        },
+        {
+          "channel": "wing/notum bristles right",
+          "mean_evoked_hz": 2.9398,
+          "candidate_strength": 0.0886
+        },
+        {
+          "channel": "tactile T3 left",
+          "mean_evoked_hz": 2.0455,
+          "candidate_strength": 0.456
+        },
+        {
+          "channel": "tactile T2 left",
+          "mean_evoked_hz": 1.3451,
+          "candidate_strength": 0.3427
+        },
+        {
+          "channel": "tactile T1 left",
+          "mean_evoked_hz": 0.9587,
+          "candidate_strength": 0.2789
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 0.7937,
+          "candidate_strength": 0.0526
+        },
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 0.5633,
+          "candidate_strength": 0.0404
+        },
+        {
+          "channel": "tactile T2 right",
+          "mean_evoked_hz": 0.4608,
+          "candidate_strength": 0.0037
+        },
+        {
+          "channel": "haltere right",
+          "mean_evoked_hz": 0.2561,
+          "candidate_strength": 0.1223
+        },
+        {
+          "channel": "taste T1 left",
+          "mean_evoked_hz": 0.2349,
+          "candidate_strength": 0.1101
+        },
+        {
+          "channel": "tactile T3 right",
+          "mean_evoked_hz": 0.2178,
+          "candidate_strength": 0
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "taste T1 right",
+          "cumulative_weight": 747,
+          "min_hops": 2
+        },
+        {
+          "channel": "haltere left",
+          "cumulative_weight": 1353,
+          "min_hops": 2
+        },
+        {
+          "channel": "JO wind/gravity left",
+          "cumulative_weight": 1251,
+          "min_hops": 2
+        },
+        {
+          "channel": "tactile T1 right",
+          "cumulative_weight": 780,
+          "min_hops": 2
+        },
+        {
+          "channel": "visual left",
+          "cumulative_weight": 4529,
+          "min_hops": 3
+        },
+        {
+          "channel": "visual right",
+          "cumulative_weight": 2271,
+          "min_hops": 3
+        }
+      ],
+      "recruitment_breadth": "BROAD_MULTI_MODAL"
+    },
+    {
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 12,
+      "recruiting_modalities": [
+        {
+          "channel": "wing/notum bristles right",
+          "mean_evoked_hz": 3.153,
+          "candidate_strength": 0.2051
+        },
+        {
+          "channel": "wing/notum bristles left",
+          "mean_evoked_hz": 3.0617,
+          "candidate_strength": 0.0262
+        },
+        {
+          "channel": "tactile T3 right",
+          "mean_evoked_hz": 2.0265,
+          "candidate_strength": 0.4558
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 0.989,
+          "candidate_strength": 0.1158
+        },
+        {
+          "channel": "tactile T2 right",
+          "mean_evoked_hz": 0.939,
+          "candidate_strength": 0.2254
+        },
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 0.8143,
+          "candidate_strength": 0.1337
+        },
+        {
+          "channel": "JO auditory left",
+          "mean_evoked_hz": 0.7614,
+          "candidate_strength": 0.2478
+        },
+        {
+          "channel": "tactile T2 left",
+          "mean_evoked_hz": 0.4873,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "tactile T3 left",
+          "mean_evoked_hz": 0.3801,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "JO wind/gravity right",
+          "mean_evoked_hz": 0.3271,
+          "candidate_strength": 0.151
+        },
+        {
+          "channel": "haltere left",
+          "mean_evoked_hz": 0.2244,
+          "candidate_strength": 0.0912
+        },
+        {
+          "channel": "taste T1 right",
+          "mean_evoked_hz": 0.129,
+          "candidate_strength": 0.0335
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "taste T1 left",
+          "cumulative_weight": 756,
+          "min_hops": 2
+        },
+        {
+          "channel": "tactile T1 right",
+          "cumulative_weight": 751,
+          "min_hops": 2
+        },
+        {
+          "channel": "JO wind/gravity left",
+          "cumulative_weight": 598,
+          "min_hops": 2
+        },
+        {
+          "channel": "visual left",
+          "cumulative_weight": 2503,
+          "min_hops": 3
+        },
+        {
+          "channel": "haltere right",
+          "cumulative_weight": 1050,
+          "min_hops": 2
+        }
+      ],
+      "recruitment_breadth": "BROAD_MULTI_MODAL"
+    },
+    {
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 1,
+      "recruiting_modalities": [
+        {
+          "channel": "JO auditory left",
+          "mean_evoked_hz": 15.3268,
+          "candidate_strength": 0.4808
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "tactile T1 left",
+          "cumulative_weight": 12848,
+          "min_hops": 3
+        },
+        {
+          "channel": "tactile T1 right",
+          "cumulative_weight": 10884,
+          "min_hops": 3
+        },
+        {
+          "channel": "JO wind/gravity left",
+          "cumulative_weight": 4280,
+          "min_hops": 2
+        },
+        {
+          "channel": "thermosensory right",
+          "cumulative_weight": 6772,
+          "min_hops": 3
+        },
+        {
+          "channel": "visual left",
+          "cumulative_weight": 8077,
+          "min_hops": 3
+        },
+        {
+          "channel": "visual right",
+          "cumulative_weight": 6696,
+          "min_hops": 3
+        }
+      ],
+      "recruitment_breadth": "NARROW_MODALITY_SPECIFIC"
+    },
+    {
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 4,
+      "recruiting_modalities": [
+        {
+          "channel": "JO auditory left",
+          "mean_evoked_hz": 6.5155,
+          "candidate_strength": 0.4808
+        },
+        {
+          "channel": "JO wind/gravity left",
+          "mean_evoked_hz": 0.7005,
+          "candidate_strength": 0.0234
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 0.4408,
+          "candidate_strength": 0.0147
+        },
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 0.2596,
+          "candidate_strength": 0.0087
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "JO wind/gravity right",
+          "cumulative_weight": 2791,
+          "min_hops": 2
+        },
+        {
+          "channel": "JO auditory right",
+          "cumulative_weight": 1808,
+          "min_hops": 2
+        },
+        {
+          "channel": "visual left",
+          "cumulative_weight": 10420,
+          "min_hops": 3
+        },
+        {
+          "channel": "visual right",
+          "cumulative_weight": 8226,
+          "min_hops": 3
+        }
+      ],
+      "recruitment_breadth": "BROAD_MULTI_MODAL"
+    },
+    {
+      "motor_program": "groom",
+      "motor_label": "Anterior Grooming (DNg07, DNg08)",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 3,
+      "recruiting_modalities": [
+        {
+          "channel": "JO wind/gravity left",
+          "mean_evoked_hz": 4.9301,
+          "candidate_strength": 0.2457
+        },
+        {
+          "channel": "JO wind/gravity right",
+          "mean_evoked_hz": 1.951,
+          "candidate_strength": 0.0936
+        },
+        {
+          "channel": "wing/notum bristles left",
+          "mean_evoked_hz": 0.1587,
+          "candidate_strength": 0.0005
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "JO auditory left",
+          "cumulative_weight": 1006,
+          "min_hops": 2
+        },
+        {
+          "channel": "tactile T1 right",
+          "cumulative_weight": 1372,
+          "min_hops": 3
+        },
+        {
+          "channel": "taste T1 right",
+          "cumulative_weight": 1005,
+          "min_hops": 3
+        }
+      ],
+      "recruitment_breadth": "NARROW_MODALITY_SPECIFIC"
+    },
+    {
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 3,
+      "recruiting_modalities": [
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 3.9372,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 1.9349,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "JO auditory left",
+          "mean_evoked_hz": 1.3167,
+          "candidate_strength": 0
+        }
+      ],
+      "silent_connected_modalities": [
+        {
+          "channel": "tactile T1 left",
+          "cumulative_weight": 7033,
+          "min_hops": 3
+        },
+        {
+          "channel": "haltere left",
+          "cumulative_weight": 961,
+          "min_hops": 2
+        },
+        {
+          "channel": "tactile T1 right",
+          "cumulative_weight": 6827,
+          "min_hops": 3
+        },
+        {
+          "channel": "taste T1 right",
+          "cumulative_weight": 10007,
+          "min_hops": 3
+        }
+      ],
+      "recruitment_breadth": "NARROW_MODALITY_SPECIFIC"
+    },
+    {
+      "motor_program": "courtDN",
+      "motor_label": "Courtship Pursuit (DNp13)",
+      "total_channels_tested": 20,
+      "recruited_channel_count": 4,
+      "recruiting_modalities": [
+        {
+          "channel": "thermosensory left",
+          "mean_evoked_hz": 1.4091,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "thermosensory right",
+          "mean_evoked_hz": 0.6767,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "JO auditory left",
+          "mean_evoked_hz": 0.6384,
+          "candidate_strength": 0
+        },
+        {
+          "channel": "tactile T1 left",
+          "mean_evoked_hz": 0.1129,
+          "candidate_strength": 0
+        }
+      ],
+      "silent_connected_modalities": [],
+      "recruitment_breadth": "BROAD_MULTI_MODAL"
+    }
+  ]
+}

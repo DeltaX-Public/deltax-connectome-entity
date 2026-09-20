@@ -1,0 +1,317 @@
+{
+  "schema": "latent_repertoire.dynamics_bottlenecks.v1",
+  "timestamp": "2026-09-20T00:51:41.879Z",
+  "seeds_used": [
+    20000,
+    20001,
+    20002
+  ],
+  "stim_intensity_hz": 180,
+  "total_audited": 15,
+  "bottleneck_distribution": {
+    "NET_INHIBITORY_OPPOSITION": 14,
+    "SUB_THRESHOLD_SEVERE": 1
+  },
+  "audited_pathways": [
+    {
+      "sensory_modality": "visual left",
+      "motor_program": "forward",
+      "motor_label": "Forward Locomotion",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 14506,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 90.347,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0.1444,
+        "mean_tau_ms": 19.97,
+        "mean_rmax_hz": 199.17,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (90.347)."
+    },
+    {
+      "sensory_modality": "tactile T1 left",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 12848,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -71.7289,
+        "mean_firing_threshold_theta": 152.0547,
+        "input_to_threshold_ratio": -0.482,
+        "mean_gain_a": 0.048,
+        "mean_tau_ms": 20.08,
+        "mean_rmax_hz": 198.31,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-71.729), completely failing to counteract baseline threshold (152.055)."
+    },
+    {
+      "sensory_modality": "tactile T1 right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 10884,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -14.3326,
+        "mean_firing_threshold_theta": 159.3208,
+        "input_to_threshold_ratio": -0.0912,
+        "mean_gain_a": 0.0535,
+        "mean_tau_ms": 19.59,
+        "mean_rmax_hz": 207.71,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-14.333), completely failing to counteract baseline threshold (159.321)."
+    },
+    {
+      "sensory_modality": "visual left",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 10420,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 127.8604,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0.0611,
+        "mean_tau_ms": 19.92,
+        "mean_rmax_hz": 195.04,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (127.860)."
+    },
+    {
+      "sensory_modality": "taste T1 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 10007,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 16.7421,
+        "mean_firing_threshold_theta": 62.1545,
+        "input_to_threshold_ratio": 0.2692,
+        "mean_gain_a": 0.1305,
+        "mean_tau_ms": 20.49,
+        "mean_rmax_hz": 187.03,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "SUB_THRESHOLD_SEVERE",
+      "explanation": "Synaptic input (16.742) reaches less than 50% of firing threshold (62.154), ratio = 0.269."
+    },
+    {
+      "sensory_modality": "visual right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 8226,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 120.3672,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0.0756,
+        "mean_tau_ms": 20.07,
+        "mean_rmax_hz": 204.54,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (120.367)."
+    },
+    {
+      "sensory_modality": "visual left",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 8077,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 152.0547,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0.048,
+        "mean_tau_ms": 20.08,
+        "mean_rmax_hz": 198.31,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (152.055)."
+    },
+    {
+      "sensory_modality": "tactile T1 right",
+      "motor_program": "courtP",
+      "motor_label": "Courtship Song (pIP10)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 6827,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -0.3859,
+        "mean_firing_threshold_theta": 62.1545,
+        "input_to_threshold_ratio": -0.0062,
+        "mean_gain_a": 0.1305,
+        "mean_tau_ms": 20.49,
+        "mean_rmax_hz": 187.03,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-0.386), completely failing to counteract baseline threshold (62.154)."
+    },
+    {
+      "sensory_modality": "thermosensory right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 6772,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -228.1079,
+        "mean_firing_threshold_theta": 159.3208,
+        "input_to_threshold_ratio": -1.4309,
+        "mean_gain_a": 0.0535,
+        "mean_tau_ms": 19.59,
+        "mean_rmax_hz": 207.71,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-228.108), completely failing to counteract baseline threshold (159.321)."
+    },
+    {
+      "sensory_modality": "visual right",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 6696,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 159.3208,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0.0535,
+        "mean_tau_ms": 19.59,
+        "mean_rmax_hz": 207.71,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (159.321)."
+    },
+    {
+      "sensory_modality": "visual left",
+      "motor_program": "turn_left",
+      "motor_label": "Turn Left Steering",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 4529,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 0,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0,
+        "mean_tau_ms": 0,
+        "mean_rmax_hz": 0,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 0
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (0.000)."
+    },
+    {
+      "sensory_modality": "JO wind/gravity left",
+      "motor_program": "escape",
+      "motor_label": "Giant Fiber Escape (DNp01)",
+      "structural_min_hops": 2,
+      "cumulative_structural_weight": 4280,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -618.6077,
+        "mean_firing_threshold_theta": 152.0547,
+        "input_to_threshold_ratio": -4.1664,
+        "mean_gain_a": 0.048,
+        "mean_tau_ms": 20.08,
+        "mean_rmax_hz": 198.31,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-618.608), completely failing to counteract baseline threshold (152.055)."
+    },
+    {
+      "sensory_modality": "JO auditory right",
+      "motor_program": "backward",
+      "motor_label": "Backward Locomotion (MDN)",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 3783,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -0.0043,
+        "mean_firing_threshold_theta": 44.3385,
+        "input_to_threshold_ratio": -0.0001,
+        "mean_gain_a": 0.1736,
+        "mean_tau_ms": 21.11,
+        "mean_rmax_hz": 198.68,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-0.004), completely failing to counteract baseline threshold (44.339)."
+    },
+    {
+      "sensory_modality": "JO wind/gravity right",
+      "motor_program": "takeoff",
+      "motor_label": "Looming Takeoff (DNp02, DNp04)",
+      "structural_min_hops": 2,
+      "cumulative_structural_weight": 2791,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": -97.5164,
+        "mean_firing_threshold_theta": 120.3672,
+        "input_to_threshold_ratio": -0.5842,
+        "mean_gain_a": 0.0756,
+        "mean_tau_ms": 20.07,
+        "mean_rmax_hz": 204.54,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 1
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (-97.516), completely failing to counteract baseline threshold (120.367)."
+    },
+    {
+      "sensory_modality": "visual left",
+      "motor_program": "turn_right",
+      "motor_label": "Turn Right Steering",
+      "structural_min_hops": 3,
+      "cumulative_structural_weight": 2503,
+      "mean_evoked_rate_hz": 0,
+      "dynamical_metrics": {
+        "mean_synaptic_input_current": 0,
+        "mean_firing_threshold_theta": 0,
+        "input_to_threshold_ratio": 0,
+        "mean_gain_a": 0,
+        "mean_tau_ms": 0,
+        "mean_rmax_hz": 0,
+        "mean_adaptation_A": 0,
+        "mean_depression_u": 0
+      },
+      "primary_bottleneck_class": "NET_INHIBITORY_OPPOSITION",
+      "explanation": "Synaptic input is zero or net negative (0.000), completely failing to counteract baseline threshold (0.000)."
+    }
+  ]
+}

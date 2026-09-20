@@ -1,0 +1,1308 @@
+{
+  "schema": "latent_repertoire.structural_reachability.v1",
+  "timestamp": "2026-09-20T00:48:35.442Z",
+  "total_sensory_channels": 20,
+  "total_motor_programs": 9,
+  "matrix": {
+    "tactile T1 left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 1042
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 107
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 826
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 17
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 12848
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 34
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 3
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 7033
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 16
+      }
+    },
+    "tactile T1 right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 1561
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 162
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 780
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 751
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 10884
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 30
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 38,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 1372
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 6827
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 25
+      }
+    },
+    "tactile T2 left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 2014
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 319
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 544
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 238
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 27
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 127
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 80
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 13
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 52
+      }
+    },
+    "tactile T2 right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 2052
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 395
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 111
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 671
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 66
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 127
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 108
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 13
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 62
+      }
+    },
+    "tactile T3 left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 661
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 48
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 72
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 135
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 9
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 17
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 29
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 3
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 29
+      }
+    },
+    "tactile T3 right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 356
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 68
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 93
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 55
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 10
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 33
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 15
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 129
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 27
+      }
+    },
+    "JO wind/gravity left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 5311
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 45
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 1251
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 598
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 4280
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 4020
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 2095
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 172
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 190
+      }
+    },
+    "JO wind/gravity right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 4428
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 98
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 303
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 1353
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 4
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 2791
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 859
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 179
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 208
+      }
+    },
+    "JO auditory left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 2716
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 161
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 259
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 677
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 674
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 50
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 1006
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 24
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 298
+      }
+    },
+    "JO auditory right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 111
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 3783
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 69
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 14
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 23
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 1808
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 67
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 3
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 36
+      }
+    },
+    "thermosensory left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 23332
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 1982
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 5794
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 3024
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 258
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 68
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 3
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 2228
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 3401
+      }
+    },
+    "thermosensory right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 242
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 13
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 232
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 3
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 6772
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 3970
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 5
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 3
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 5251
+      }
+    },
+    "taste T1 left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 1719
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 222
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 793
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 756
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 17
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 25
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 8
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 15
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 434
+      }
+    },
+    "taste T1 right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 1534
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 239
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 747
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 757
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 24
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 33
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 38,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 1005
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 10007
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 378
+      }
+    },
+    "visual left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 14506
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 887
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 4529
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 2503
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 8077
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 10420
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 18,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 194
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 341
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 270
+      }
+    },
+    "visual right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 3
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 1028
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 2271
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 3
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 6696
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 8226
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 27,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 451
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 429
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 3,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 487
+      }
+    },
+    "wing/notum bristles left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 2575
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 311
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 522
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 682
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 418
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 365
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 26
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 9
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 209
+      }
+    },
+    "wing/notum bristles right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 3521
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 385
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 317
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 767
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 148
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 237
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 30
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 17
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 193
+      }
+    },
+    "haltere left": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 6513
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 580
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 1353
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 625
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 392
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 317
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 6
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 961
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 170
+      }
+    },
+    "haltere right": {
+      "forward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 16,
+        "total_targets": 16,
+        "cumulative_incoming_weight": 6112
+      },
+      "backward": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 579
+      },
+      "turn_left": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 548
+      },
+      "turn_right": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 3,
+        "total_targets": 3,
+        "cumulative_incoming_weight": 1050
+      },
+      "escape": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 384
+      },
+      "takeoff": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 4,
+        "total_targets": 4,
+        "cumulative_incoming_weight": 424
+      },
+      "groom": {
+        "reachable": true,
+        "min_hops": 1,
+        "target_hits": 39,
+        "total_targets": 39,
+        "cumulative_incoming_weight": 16
+      },
+      "courtP": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 438
+      },
+      "courtDN": {
+        "reachable": true,
+        "min_hops": 2,
+        "target_hits": 2,
+        "total_targets": 2,
+        "cumulative_incoming_weight": 161
+      }
+    }
+  }
+}

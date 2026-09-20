@@ -1,0 +1,953 @@
+{
+  "schema": "latent_repertoire.motor_population_inventory.v1",
+  "timestamp": "2026-09-20T00:46:50.527Z",
+  "total_motor_programs": 10,
+  "programs": [
+    {
+      "motor_program": "locomotion_forward",
+      "description": "Forward walking translation drive",
+      "candidate_bridge_action": "locomotion_forward",
+      "actuator_action": "forward",
+      "is_executable_in_rover": true,
+      "embodiment_status": "FULLY_EMBODIED",
+      "literature_provenance": "Cande et al. 2018 (eLife 7:e34275); Bidaye et al. 2014/2020",
+      "total_neurons": 16,
+      "neurons": [
+        {
+          "neuron_index": 36,
+          "body_id": "10045",
+          "type_label": "DNg100",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 46,
+          "body_id": "10056",
+          "type_label": "DNg100",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 3548,
+          "body_id": "13805",
+          "type_label": "DNg97",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 121193,
+          "body_id": "230783",
+          "type_label": "DNg97",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 725,
+          "body_id": "10783",
+          "type_label": "DNp09",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 1087,
+          "body_id": "11177",
+          "type_label": "DNp09",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 2620,
+          "body_id": "12801",
+          "type_label": "DNa05",
+          "role_weight": 0.2,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 1708,
+          "body_id": "11830",
+          "type_label": "DNa05",
+          "role_weight": 0.2,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 9057,
+          "body_id": "19960",
+          "type_label": "DNa07",
+          "role_weight": 0.2,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 6570,
+          "body_id": "17179",
+          "type_label": "DNa07",
+          "role_weight": 0.2,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 523,
+          "body_id": "10562",
+          "type_label": "DNp26",
+          "role_weight": 0.2,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 126404,
+          "body_id": "515575",
+          "type_label": "DNp26",
+          "role_weight": 0.2,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 406,
+          "body_id": "10442",
+          "type_label": "DNa01",
+          "role_weight": 0.1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 704,
+          "body_id": "10760",
+          "type_label": "DNa01",
+          "role_weight": 0.1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 130496,
+          "body_id": "523769",
+          "type_label": "DNa02",
+          "role_weight": 0.1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 332,
+          "body_id": "10360",
+          "type_label": "DNa02",
+          "role_weight": 0.1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "locomotion_backward",
+      "description": "Backward walking / aversive withdrawal drive (MDN)",
+      "candidate_bridge_action": "locomotion_backward",
+      "actuator_action": "backward",
+      "is_executable_in_rover": true,
+      "embodiment_status": "FULLY_EMBODIED",
+      "literature_provenance": "Bidaye et al. 2014 (Science 344:97-101) - Moonwalker Descending Neurons (MDN)",
+      "total_neurons": 4,
+      "neurons": [
+        {
+          "neuron_index": 1196,
+          "body_id": "11288",
+          "type_label": "MDN",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 2194,
+          "body_id": "12348",
+          "type_label": "MDN",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 706,
+          "body_id": "10763",
+          "type_label": "MDN",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 1240,
+          "body_id": "11332",
+          "type_label": "MDN",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "turn_left",
+      "description": "Counter-clockwise / leftward steering torque",
+      "candidate_bridge_action": "turn_left",
+      "actuator_action": "left",
+      "is_executable_in_rover": true,
+      "embodiment_status": "FULLY_EMBODIED",
+      "literature_provenance": "Rayshubskiy et al. 2020 (eLife 9:e62377); Namiki et al. 2018 - Ipsilateral DNa02/DNa01/DNp09 steering",
+      "total_neurons": 3,
+      "neurons": [
+        {
+          "neuron_index": 130496,
+          "body_id": "523769",
+          "type_label": "DNa02",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 406,
+          "body_id": "10442",
+          "type_label": "DNa01",
+          "role_weight": 0.6,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 725,
+          "body_id": "10783",
+          "type_label": "DNp09",
+          "role_weight": 0.5,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "turn_right",
+      "description": "Clockwise / rightward steering torque",
+      "candidate_bridge_action": "turn_right",
+      "actuator_action": "right",
+      "is_executable_in_rover": true,
+      "embodiment_status": "FULLY_EMBODIED",
+      "literature_provenance": "Rayshubskiy et al. 2020; Namiki et al. 2018 - Contralateral DNa02/DNa01/DNp09 steering",
+      "total_neurons": 3,
+      "neurons": [
+        {
+          "neuron_index": 332,
+          "body_id": "10360",
+          "type_label": "DNa02",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 704,
+          "body_id": "10760",
+          "type_label": "DNa01",
+          "role_weight": 0.6,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 1087,
+          "body_id": "11177",
+          "type_label": "DNp09",
+          "role_weight": 0.5,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "giant_fiber_escape",
+      "description": "Ballistic escape jump via Giant Fibre (DNp01)",
+      "candidate_bridge_action": "giant_fiber_escape",
+      "actuator_action": null,
+      "is_executable_in_rover": false,
+      "embodiment_status": "UNEMBODIED",
+      "literature_provenance": "von Reyn et al. 2014 (Nature Neurosci 17:1341-1348) - Giant Fibre (DNp01/GF) ballistic jump",
+      "total_neurons": 2,
+      "neurons": [
+        {
+          "neuron_index": 6,
+          "body_id": "10010",
+          "type_label": "DNp01",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "superclass": "cb_sensory",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 0,
+          "body_id": "10001",
+          "type_label": "DNp01",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "superclass": "ENS",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "looming_takeoff",
+      "description": "Non-GF visual looming evasion / takeoff (DNp02, DNp04)",
+      "candidate_bridge_action": "giant_fiber_escape",
+      "actuator_action": null,
+      "is_executable_in_rover": false,
+      "embodiment_status": "UNEMBODIED",
+      "literature_provenance": "Namiki et al. 2018 (eLife 7:e34272); von Reyn et al. 2014 - Looming-sensitive non-GF escape DNs (DNp02, DNp04)",
+      "total_neurons": 4,
+      "neurons": [
+        {
+          "neuron_index": 178,
+          "body_id": "10197",
+          "type_label": "DNp02",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 103,
+          "body_id": "10117",
+          "type_label": "DNp02",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 133740,
+          "body_id": "531898",
+          "type_label": "DNp04",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 1052,
+          "body_id": "11137",
+          "type_label": "DNp04",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "front_leg_groom",
+      "description": "Head and anterior grooming sweeps (DNg07, DNg08)",
+      "candidate_bridge_action": "groom",
+      "actuator_action": null,
+      "is_executable_in_rover": false,
+      "embodiment_status": "UNEMBODIED",
+      "literature_provenance": "Seeds et al. 2014 (eLife 3:e02951); Hampel et al. 2015 - Anterior grooming command DNs (DNg07, DNg08)",
+      "total_neurons": 39,
+      "neurons": [
+        {
+          "neuron_index": 13988,
+          "body_id": "25474",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 14094,
+          "body_id": "25589",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 14825,
+          "body_id": "26413",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 14861,
+          "body_id": "26452",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 14911,
+          "body_id": "26512",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 15466,
+          "body_id": "27143",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 16242,
+          "body_id": "28000",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 19256,
+          "body_id": "31421",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 13979,
+          "body_id": "25465",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 14982,
+          "body_id": "26591",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 15734,
+          "body_id": "27437",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 17081,
+          "body_id": "28949",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 17579,
+          "body_id": "29509",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 25124,
+          "body_id": "38064",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 121508,
+          "body_id": "238699",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 122188,
+          "body_id": "261604",
+          "type_label": "DNg07",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 8709,
+          "body_id": "19573",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 12709,
+          "body_id": "24038",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 13015,
+          "body_id": "24374",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 13731,
+          "body_id": "25188",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 14617,
+          "body_id": "26182",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 14660,
+          "body_id": "26232",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 15382,
+          "body_id": "27041",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 15447,
+          "body_id": "27118",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 16705,
+          "body_id": "28519",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 16913,
+          "body_id": "28756",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 19220,
+          "body_id": "31381",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 123685,
+          "body_id": "411306",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 9544,
+          "body_id": "20515",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 9822,
+          "body_id": "20821",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 13814,
+          "body_id": "25283",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 13975,
+          "body_id": "25461",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 14325,
+          "body_id": "25848",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 14978,
+          "body_id": "26587",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 15191,
+          "body_id": "26824",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 15983,
+          "body_id": "27715",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 17658,
+          "body_id": "29594",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 17672,
+          "body_id": "29609",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        },
+        {
+          "neuron_index": 126645,
+          "body_id": "515978",
+          "type_label": "DNg08",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 2,
+          "nt_sign": -1,
+          "nt_name": "GABA (inhibitory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "courtship_pIP10",
+      "description": "P1->VNC courtship interneuron drive (pIP10)",
+      "candidate_bridge_action": "unmapped_courtP",
+      "actuator_action": null,
+      "is_executable_in_rover": false,
+      "embodiment_status": "UNEMBODIED",
+      "literature_provenance": "Deutsch et al. 2020 (Curr Biol 30:2119-2131) - P1->VNC courtship song interneuron (pIP10 / fru+)",
+      "total_neurons": 2,
+      "neurons": [
+        {
+          "neuron_index": 130616,
+          "body_id": "523998",
+          "type_label": "pIP10",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 1032,
+          "body_id": "11116",
+          "type_label": "pIP10",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "courtship_pursuit_DNp13",
+      "description": "Courtship pursuit descending drive (DNp13)",
+      "candidate_bridge_action": "unmapped_courtDN",
+      "actuator_action": null,
+      "is_executable_in_rover": false,
+      "embodiment_status": "UNEMBODIED",
+      "literature_provenance": "Sten et al. 2021; Deutsch et al. 2020 - Courtship pursuit descending neuron (DNp13)",
+      "total_neurons": 2,
+      "neurons": [
+        {
+          "neuron_index": 422,
+          "body_id": "10458",
+          "type_label": "DNp13",
+          "role_weight": 1,
+          "side": 1,
+          "side_label": "Left",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        },
+        {
+          "neuron_index": 359,
+          "body_id": "10388",
+          "type_label": "DNp13",
+          "role_weight": 1,
+          "side": 2,
+          "side_label": "Right",
+          "nt_code": 1,
+          "nt_sign": 1,
+          "nt_name": "acetylcholine (excitatory)"
+        }
+      ]
+    },
+    {
+      "motor_program": "quiescent_halt",
+      "description": "Standing posture / braking when translation and steering are inactive",
+      "candidate_bridge_action": "halt",
+      "actuator_action": "stop",
+      "is_executable_in_rover": true,
+      "embodiment_status": "FULLY_EMBODIED",
+      "literature_provenance": "Bidaye et al. 2014/2020; derived neural quiescent standing posture",
+      "total_neurons": 0,
+      "neurons": []
+    }
+  ]
+}
