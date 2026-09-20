@@ -1,0 +1,111 @@
+{
+  "protocol_id": "PHASE_IV_D_3_DOSE_RESPONSE_COHORT",
+  "version": "1.0.0",
+  "status": "PROTOCOL_FROZEN",
+  "source_commit_sha": "dfcd423c07c61b97397cdadb607ee42d31586ade",
+  "frozen_at": "2026-09-19T17:35:00.000Z",
+  "governance": {
+    "anti_p_hacking": "All parameters, target manifests, seed ranges, dosage intervals, and evaluation criteria are frozen prior to cohort execution. Parameter escalation and post-hoc pruning are strictly prohibited.",
+    "policy_leakage_prohibition": "Zero access to neuron labels, turn_right, routes, goal coordinates, or environment IDs in plasticity updates or consequence signals."
+  },
+  "seed_cohort": {
+    "cohort_type": "DEVELOPMENT_ONLY",
+    "seed_range": "18200..18299",
+    "seed_count": 100,
+    "held_out_preserved_seed_range": "19000..19099",
+    "held_out_status": "STRICTLY_FROZEN_UNTOUCHED"
+  },
+  "hyperparameters": {
+    "eta": 0.15,
+    "lambda_e": 0.05,
+    "gamma": 0.0005,
+    "update_rate_limit": 5.0,
+    "stimulus_intensity_hz": 180.0,
+    "contact_ticks_per_cycle": 3,
+    "clearance_ticks_per_cycle": 2,
+    "iti_ticks_per_cycle": 5,
+    "ticks_per_cycle": 10,
+    "substeps_per_tick": 10
+  },
+  "target_manifest_hashes": {
+    "target_a_afferent_only.json": "6a9223a2e0cab2e233b90abaf1bfa924a22cfd0e4b9ada7d04aeb137967f176b",
+    "target_d_matched_sham.json": "0c7b4753ea81fcd444b01218e5164119d4dbaedfd10f624bebe59cf6ee9edb6d"
+  },
+  "primary_target_locus": "TARGET_A_AFFERENT_ONLY (Tactile T1 right mechanoreceptors -> right AN03A008, 8 edges, 41 base synapses)",
+  "sham_control_locus": "TARGET_D_MATCHED_SHAM (Tactile T1 right mechanoreceptors -> AMMC interneuron 4306, 11 edges, 185 base synapses)",
+  "conditions": [
+    {
+      "id": "R0",
+      "label": "Baseline (No Plasticity)",
+      "rule": "PLASTICITY_NONE",
+      "manifest_key": null,
+      "induction_cycles": 0,
+      "reinforce": false
+    },
+    {
+      "id": "R1",
+      "label": "10 Cycles Dose",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "induction_cycles": 10,
+      "reinforce": true
+    },
+    {
+      "id": "R2",
+      "label": "30 Cycles Dose",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "induction_cycles": 30,
+      "reinforce": true
+    },
+    {
+      "id": "R3",
+      "label": "60 Cycles Dose",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "induction_cycles": 60,
+      "reinforce": true
+    },
+    {
+      "id": "R4",
+      "label": "120 Cycles Dose",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "induction_cycles": 120,
+      "reinforce": true
+    },
+    {
+      "id": "R5",
+      "label": "Old-Rule Long-Exposure Control",
+      "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "induction_cycles": 120,
+      "reinforce": true
+    },
+    {
+      "id": "R6",
+      "label": "No-Reinforcement Control",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "induction_cycles": 120,
+      "reinforce": false
+    },
+    {
+      "id": "R7",
+      "label": "Matched Sham Long-Exposure Control",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_D",
+      "induction_cycles": 120,
+      "reinforce": true
+    }
+  ],
+  "telemetry_checkpoints": [0, 5, 10, 20, 30, 45, 60, 90, 120],
+  "outcome_criteria": {
+    "neural_recruitment": "Post-induction right DNa02 evoked firing rate > 0.05 Hz (or diff > 0.05 Hz)",
+    "executable_motor_candidate": "Post-induction turn_right activation strength under READOUT_C > 0.05",
+    "sham_safety": "R7 right DNa02 evoked rate < 0.05 Hz",
+    "reinforcement_dependency": "R6 right DNa02 evoked rate diff < 0.01 Hz and budget == 0",
+    "left_steering_preservation": "Left tactile DNa02 retention within 100% +- 5%",
+    "whole_network_stability": "Whole network firing rate divergence <= 10%"
+  }
+}

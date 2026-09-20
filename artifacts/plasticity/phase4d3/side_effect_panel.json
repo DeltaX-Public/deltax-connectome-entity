@@ -1,0 +1,50 @@
+{
+  "dose_10": {
+    "dose_cycles": 10,
+    "left_tactile_dna02_mean": 1.4417,
+    "left_tactile_retention_pct": 100.0,
+    "left_steering_preserved_within_5pct": true,
+    "jo_auditory_right_mean": 0.0,
+    "thermosensory_right_mean": 2.1456,
+    "whole_network_rate_mean": 0.0815,
+    "whole_network_divergence_pct": 0.33,
+    "modality_contamination_detected": false,
+    "runaway_excitation_detected": false
+  },
+  "dose_30": {
+    "dose_cycles": 30,
+    "left_tactile_dna02_mean": 1.4417,
+    "left_tactile_retention_pct": 100.0,
+    "left_steering_preserved_within_5pct": true,
+    "jo_auditory_right_mean": 0.0,
+    "thermosensory_right_mean": 2.1456,
+    "whole_network_rate_mean": 0.0815,
+    "whole_network_divergence_pct": 0.4,
+    "modality_contamination_detected": false,
+    "runaway_excitation_detected": false
+  },
+  "dose_60": {
+    "dose_cycles": 60,
+    "left_tactile_dna02_mean": 1.4417,
+    "left_tactile_retention_pct": 100.0,
+    "left_steering_preserved_within_5pct": true,
+    "jo_auditory_right_mean": 0.0,
+    "thermosensory_right_mean": 2.1456,
+    "whole_network_rate_mean": 0.0816,
+    "whole_network_divergence_pct": 0.45,
+    "modality_contamination_detected": false,
+    "runaway_excitation_detected": false
+  },
+  "dose_120": {
+    "dose_cycles": 120,
+    "left_tactile_dna02_mean": 1.4417,
+    "left_tactile_retention_pct": 100.0,
+    "left_steering_preserved_within_5pct": true,
+    "jo_auditory_right_mean": 0.0,
+    "thermosensory_right_mean": 2.1456,
+    "whole_network_rate_mean": 0.0816,
+    "whole_network_divergence_pct": 0.46,
+    "modality_contamination_detected": false,
+    "runaway_excitation_detected": false
+  }
+}

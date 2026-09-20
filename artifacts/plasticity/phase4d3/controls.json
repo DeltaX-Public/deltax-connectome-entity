@@ -1,0 +1,35 @@
+{
+  "R0_baseline": {
+    "label": "Baseline (0 cycles)",
+    "mean_dna02": 0.0019,
+    "recruits_pct": 0,
+    "mean_budget": 0
+  },
+  "R4_target_a_subthreshold_120": {
+    "label": "Target A Subthreshold (120 cycles)",
+    "mean_dna02": 0.556,
+    "recruits_pct": 71,
+    "mean_budget": 32.4019
+  },
+  "R5_old_rule_120": {
+    "label": "Old Rule Control (120 cycles)",
+    "mean_dna02": 0.0266,
+    "recruits_pct": 3,
+    "mean_budget": 2.4078,
+    "remains_deadlocked": false
+  },
+  "R6_no_reinforcement_120": {
+    "label": "No-Reinforcement Control (120 cycles, gt=0)",
+    "mean_dna02": 0.0019,
+    "recruits_pct": 0,
+    "mean_budget": 0,
+    "consequence_dependent": true
+  },
+  "R7_matched_sham_120": {
+    "label": "Matched Sham Control (Target D, 120 cycles)",
+    "mean_dna02": 0.0019,
+    "recruits_pct": 0,
+    "mean_budget": 94.4364,
+    "steering_specific": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "target_a_doses": [
+    {
+      "dose": 10,
+      "mean_budget_used": 23.2738,
+      "max_budget_used": 55.4144,
+      "fraction_budget_exhausted": 0,
+      "fraction_seeds_touching_edge_clamp": 0.46,
+      "mean_alpha": 1.6926,
+      "max_alpha": 2.5,
+      "is_saturation_dependent": false
+    },
+    {
+      "dose": 30,
+      "mean_budget_used": 28.0244,
+      "max_budget_used": 60,
+      "fraction_budget_exhausted": 1,
+      "fraction_seeds_touching_edge_clamp": 0.35,
+      "mean_alpha": 1.7758,
+      "max_alpha": 2.5,
+      "is_saturation_dependent": false
+    },
+    {
+      "dose": 60,
+      "mean_budget_used": 31.3688,
+      "max_budget_used": 60,
+      "fraction_budget_exhausted": 1,
+      "fraction_seeds_touching_edge_clamp": 0.51,
+      "mean_alpha": 1.8269,
+      "max_alpha": 2.5,
+      "is_saturation_dependent": false
+    },
+    {
+      "dose": 120,
+      "mean_budget_used": 32.4019,
+      "max_budget_used": 60,
+      "fraction_budget_exhausted": 1,
+      "fraction_seeds_touching_edge_clamp": 0.54,
+      "mean_alpha": 1.8312,
+      "max_alpha": 2.5,
+      "is_saturation_dependent": false
+    }
+  ],
+  "sham_120": {
+    "mean_budget_used": 94.4364,
+    "fraction_seeds_touching_edge_clamp": 1
+  }
+}

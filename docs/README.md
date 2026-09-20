@@ -13,6 +13,7 @@ This directory contains the canonical research reports, experimental pre-registr
 | **Phase IV-D.1B Mechanism Audit** | [`PHASE_4D1B_NULL_MECHANISM_AUDIT.md`](PHASE_4D1B_NULL_MECHANISM_AUDIT.md) | Analytical and subthreshold audit |
 | **Phase IV-D.2 Bootstrap Plan** | [`PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md) | Subthreshold plasticity protocol freeze |
 | **Phase IV-D.2 Bootstrap Results** | [`PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md) | Development cohort empirical results |
+| **Phase IV-D.3 Dose Response** | [`PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](PHASE_4D3_DOSE_RESPONSE_RESULTS.md) | Kinetics, dose response & heterogeneity results |
 
 ## Scientific Publication Deliverables
 
