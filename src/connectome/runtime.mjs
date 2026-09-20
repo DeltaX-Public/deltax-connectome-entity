@@ -67,6 +67,8 @@ export class ConnectomeRuntime {
           indices: this.data.indices,
           baseSynapseCounts: this.data.weights.slice(),
           netWeights: this.net.weights,
+          netInp: this.net.inp,
+          netTheta: this.net.theta,
           config: opts.plasticity.config || opts.plasticity,
           eligibleEdgeMask: opts.plasticity.eligibleEdgeMask,
         })
@@ -151,7 +153,7 @@ export class ConnectomeRuntime {
 
     // Update eligibility traces if plasticity is active
     if (this.plasticity && this.plasticity.config.enabled) {
-      this.plasticity.updateEligibility(this.net.r);
+      this.plasticity.updateEligibility(this.net.r, this.net.inp, this.net.theta);
     }
 
     return {

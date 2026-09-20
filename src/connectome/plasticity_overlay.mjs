@@ -25,8 +25,46 @@ export const PLASTICITY_RULES = Object.freeze({
   LOCAL_HEBBIAN: "LOCAL_HEBBIAN",
   ANTI_HEBBIAN: "ANTI_HEBBIAN",
   ELIGIBILITY_MODULATED_HEBBIAN: "ELIGIBILITY_MODULATED_HEBBIAN",
+  SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN: "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
   RATE_STDP_APPROXIMATION: "RATE_STDP_APPROXIMATION",
 });
+
+/**
+ * Compute bounded model-local normalized pre-threshold synaptic input factor psi_i(t).
+ *
+ * orientation:
+ *   j = presynaptic neuron
+ *   i = postsynaptic neuron
+ *
+ * local postsynaptic bootstrap state:
+ *   x_i(t) = max(0, inp_i(t) / theta_i)
+ *
+ * bounded local postsynaptic factor:
+ *   psi_i(t) = clamp(tanh(x_i(t)) + r_i(t) / 100, 0, 1)
+ *
+ * Safety requirements:
+ *   - 0 <= psi <= 1
+ *   - No NaN, No Infinity
+ *   - theta <= 0 fails closed (returns 0.0)
+ *
+ * @param {number} inp Postsynaptic model-local pre-threshold synaptic input (net.inp[i])
+ * @param {number} theta Postsynaptic intrinsic firing threshold (net.theta[i])
+ * @param {number} r Postsynaptic firing rate (net.r[i])
+ * @returns {number} Bounded factor in [0, 1]
+ */
+export function computeSubthresholdPostsynapticFactor(inp, theta, r) {
+  if (typeof theta !== "number" || theta <= 0 || !Number.isFinite(theta)) {
+    return 0.0;
+  }
+  const validInp = (typeof inp === "number" && Number.isFinite(inp)) ? inp : 0.0;
+  const x = Math.max(0.0, validInp / theta);
+
+  const validR = (typeof r === "number" && Number.isFinite(r)) ? Math.max(0.0, r) : 0.0;
+  const rNorm = validR / 100.0;
+
+  const rawPsi = Math.tanh(x) + rNorm;
+  return Math.min(1.0, Math.max(0.0, rawPsi));
+}
 
 export const DEFAULT_PLASTICITY_CONFIG = Object.freeze({
   enabled: false,
@@ -61,6 +99,8 @@ export class PlasticityOverlay {
    * @param {TypedArray} [params.baseSynapseCounts] Measured connectome base anatomical synapse counts (S_ij)
    * @param {TypedArray} [params.baseWeights] Alias for baseSynapseCounts (length E)
    * @param {TypedArray} [params.netWeights] Active weights array used in RateNetwork propagation (Float32Array)
+   * @param {TypedArray} [params.netInp] Model-local synaptic input array from RateNetwork (Float32Array)
+   * @param {TypedArray} [params.netTheta] Intrinsic threshold array from RateNetwork (Float32Array)
    * @param {Object} [params.config] Plasticity configuration and safety bounds
    * @param {Set<number>|Uint8Array|Array<number>} [params.eligibleEdgeMask] Eligible edge index set
    */
@@ -72,6 +112,8 @@ export class PlasticityOverlay {
     baseSynapseCounts = null,
     baseWeights = null,
     netWeights = null,
+    netInp = null,
+    netTheta = null,
     config = {},
     eligibleEdgeMask = null,
   }) {
@@ -99,6 +141,10 @@ export class PlasticityOverlay {
     // Optional reference to RateNetwork active weights array for in-place propagation syncing
     this.netWeights = netWeights;
     this.initialActiveWeights = netWeights ? netWeights.slice() : null;
+
+    // Optional reference to RateNetwork input and threshold vectors for subthreshold bootstrap plasticity
+    this.netInp = netInp;
+    this.netTheta = netTheta;
 
     // Record initial base weights checksum to guarantee immutability
     this.baseChecksum = this._computeBaseChecksum();
@@ -316,14 +362,20 @@ export class PlasticityOverlay {
    * e_ij(t) = e_ij(t-1) * (1 - traceDecay) + local_activity(t)
    *
    * @param {Float32Array|Array<number>} currentRates Firing rates of all N neurons
+   * @param {Float32Array|Array<number>} [currentInp] Model-local synaptic inputs of all N neurons
+   * @param {Float32Array|Array<number>} [currentTheta] Intrinsic thresholds of all N neurons
    */
-  updateEligibility(currentRates) {
+  updateEligibility(currentRates, currentInp = null, currentTheta = null) {
     if (!this.config.enabled || !this.eligibleEdgeMask || this.eligibleEdgeMask.size === 0) {
       return;
     }
 
     const { traceDecay, rule } = this.config;
     const isSTDP = rule === PLASTICITY_RULES.RATE_STDP_APPROXIMATION;
+    const isSubthreshold = rule === PLASTICITY_RULES.SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN;
+
+    const inpVector = currentInp || this.netInp;
+    const thetaVector = currentTheta || this.netTheta;
 
     for (const edgeIdx of this.eligibleEdgeMask) {
       // Find source neuron for this edge
@@ -343,6 +395,13 @@ export class PlasticityOverlay {
         const dPost = rPost - prevPost;
         // Standard rate-STDP: Pre active while Post rises -> potentiation; Post active while Pre rises -> depression
         coincidence = ((rPre * dPost) - (rPost * dPre)) / 10000.0;
+      } else if (isSubthreshold) {
+        // Model-local normalized pre-threshold synaptic input: x_i(t) = max(0, inp_i(t) / theta_i)
+        // psi_i(t) = clamp(tanh(x_i(t)) + r_i(t) / 100, 0, 1)
+        const inpPost = inpVector ? (inpVector[target] || 0.0) : 0.0;
+        const thetaPost = thetaVector ? (thetaVector[target] || 0.0) : 0.0;
+        const psi = computeSubthresholdPostsynapticFactor(inpPost, thetaPost, rPost);
+        coincidence = (rPre / 100.0) * psi;
       } else {
         // Standard rate coincidence
         coincidence = (rPre / 100.0) * (rPost / 100.0);
@@ -434,6 +493,7 @@ export class PlasticityOverlay {
           proposedChange = -learningRate * eligibility - passiveDecay * deltaWBefore;
           break;
         case PLASTICITY_RULES.ELIGIBILITY_MODULATED_HEBBIAN:
+        case PLASTICITY_RULES.SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN:
         case PLASTICITY_RULES.RATE_STDP_APPROXIMATION:
           // Gated by scalar modulatory signal g_t
           proposedChange = learningRate * g_t * eligibility - passiveDecay * deltaWBefore;

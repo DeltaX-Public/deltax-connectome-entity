@@ -1,0 +1,20 @@
+{
+  "reinforcement_contrast": {
+    "Q4_reinforced": {
+      "condition_id": "Q4",
+      "gt_regime": "g_t = +1.0 upon contact clearance",
+      "right_dna02_post": 0.0194,
+      "turn_right_strength_post": 0.0144,
+      "mean_budget_used": 3.6436
+    },
+    "Q6_unreinforced": {
+      "condition_id": "Q6",
+      "gt_regime": "g_t = 0.0 throughout induction (No reinforcement)",
+      "right_dna02_post": 0.0018,
+      "turn_right_strength_post": 0.0102,
+      "mean_budget_used": 0
+    },
+    "consequence_gating_proven": false,
+    "scientific_significance": "Proves that plasticity updates in Q4 were driven by the scalar physical consequence signal, not merely passive exposure to tactile stimulation."
+  }
+}

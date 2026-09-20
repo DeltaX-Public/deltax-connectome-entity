@@ -1,0 +1,108 @@
+{
+  "protocol_id": "PHASE_IV_D_2_SUBTHRESHOLD_BOOTSTRAP_COHORT",
+  "version": "1.0.0",
+  "status": "PROTOCOL_FROZEN",
+  "source_commit_sha": "2275ac31bb5d19a10356f8a01b15b029a273342b",
+  "frozen_at": "2026-09-19T18:45:00.000Z",
+  "governance": {
+    "anti_p_hacking": "All parameters, target manifests, seed ranges, and evaluation criteria are frozen prior to cohort execution. Parameter escalation is strictly prohibited.",
+    "policy_leakage_prohibition": "Zero access to neuron labels, turn_right, routes, goal coordinates, or environment IDs in plasticity updates or consequence signals."
+  },
+  "seed_cohort": {
+    "cohort_type": "DEVELOPMENT_ONLY",
+    "seed_range": "18100..18149",
+    "seed_count": 50,
+    "held_out_preserved_seed_range": "19000..19099",
+    "held_out_status": "STRICTLY_FROZEN_UNTOUCHED"
+  },
+  "hyperparameters": {
+    "eta": 0.15,
+    "lambda_e": 0.05,
+    "gamma": 0.0005,
+    "update_rate_limit": 5.0,
+    "stimulus_intensity_hz": 180.0,
+    "induction_cycles": 30,
+    "contact_ticks_per_cycle": 3,
+    "clearance_ticks_per_cycle": 2,
+    "iti_ticks_per_cycle": 5,
+    "ticks_per_cycle": 10,
+    "substeps_per_tick": 10,
+    "total_induction_ticks": 300,
+    "total_induction_ms": 3000
+  },
+  "equations": {
+    "postsynaptic_subthreshold_drive": "psi_i(t) = clamp(tanh(max(0, inp_i(t) / theta_i)) + r_i(t) / 100.0, 0.0, 1.0)",
+    "eligibility_trace": "e_ij(t) = e_ij(t-1) * (1.0 - lambda_e) + (r_j(t) / 100.0) * psi_i(t)",
+    "modulatory_update": "delta_W_ij(t) = eta * g_t * e_ij(t) - gamma * delta_W_ij(t-1)",
+    "efficacy_mapping": "W_effective_ij(t) = S_ij * alpha_ij(t) where S_ij is immutable measured anatomical synapse count",
+    "consequence_signal": "contact > 0 -> g_t = 0.0 (HOLD); contact cleared -> g_t = +1.0 (REINFORCE); ITI -> 0.0"
+  },
+  "conditions": [
+    {
+      "id": "Q0",
+      "label": "Fixed Baseline",
+      "rule": "PLASTICITY_NONE",
+      "manifest_key": null,
+      "gt_mode": "ZERO"
+    },
+    {
+      "id": "Q1",
+      "label": "Old Rule Control",
+      "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_C",
+      "gt_mode": "CLEARANCE_REINFORCE"
+    },
+    {
+      "id": "Q2",
+      "label": "Subthreshold Afferent",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_A",
+      "gt_mode": "CLEARANCE_REINFORCE"
+    },
+    {
+      "id": "Q3",
+      "label": "Subthreshold Projection",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_B",
+      "gt_mode": "CLEARANCE_REINFORCE"
+    },
+    {
+      "id": "Q4",
+      "label": "Subthreshold Balanced Two-Stage",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_C",
+      "gt_mode": "CLEARANCE_REINFORCE"
+    },
+    {
+      "id": "Q5",
+      "label": "Subthreshold Matched Sham",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_D",
+      "gt_mode": "CLEARANCE_REINFORCE"
+    },
+    {
+      "id": "Q6",
+      "label": "Balanced No-Reinforcement Control",
+      "rule": "SUBTHRESHOLD_ELIGIBILITY_MODULATED_HEBBIAN",
+      "manifest_key": "TARGET_C",
+      "gt_mode": "ALWAYS_ZERO"
+    }
+  ],
+  "target_manifest_hashes": {
+    "target_a_afferent_only.json": "6a9223a2e0cab2e233b90abaf1bfa924a22cfd0e4b9ada7d04aeb137967f176b",
+    "target_b_projection_only.json": "d3e8e1400e589b25cd7c89d5a453036960714d34e148627a53cc42ed3c0c7bdf",
+    "target_c_balanced_two_stage.json": "4a61ae85d8ef8efe725010ba3515d190e4ec6a5c64c2fb82fb7e0037e1116574",
+    "target_d_matched_sham.json": "0c7b4753ea81fcd444b01218e5164119d4dbaedfd10f624bebe59cf6ee9edb6d"
+  },
+  "success_criteria": {
+    "criterion_1_dna02_increase": "Mean right DNa02 post-induction evoked rate exceeds baseline by a statistically significant paired effect",
+    "criterion_2_exec_strength": "turn_right activation strength under Readout C exceeds >0.05 in a substantial fraction of seeds",
+    "criterion_3_exceeds_old_rule": "Q4 materially outperforms Q1 old-rule control",
+    "criterion_4_sham_negative": "Q5 matched sham produces <0.05 Hz right DNa02 recruitment",
+    "criterion_5_reinforcement_required": "Q6 no-reinforcement control does not reproduce the learned effect",
+    "criterion_6_alpha_reset": "Resetting alpha -> 1.0 abolishes the acquired right-steering response",
+    "criterion_7_left_preserved": "Existing left tactile steering recruitment is preserved within +-5%",
+    "criterion_8_off_target_safe": "Whole-brain firing rate divergence outside target pathways remains within +-10%",
+    "criterion_9_non_saturation": "Learning does not require 100% saturation of all target bounds"
+  }
+}

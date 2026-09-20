@@ -1,0 +1,26 @@
+{
+  "comparison": {
+    "Q2_afferent_only": {
+      "locus": "Receptors -> AN03A008 (8 edges, 41 base synapses)",
+      "right_dna02_diff": 0.0176,
+      "turn_right_strength_post": 0.0144,
+      "recruited_pct": 8,
+      "mean_budget": 3.6433
+    },
+    "Q3_projection_only": {
+      "locus": "AN03A008 -> DNa02 (1 edge, 717 base synapses)",
+      "right_dna02_diff": 0,
+      "turn_right_strength_post": 0.0102,
+      "recruited_pct": 0,
+      "mean_budget": 0.0003
+    },
+    "Q4_balanced_two_stage": {
+      "locus": "Receptors -> AN03A008 -> DNa02 (9 edges, 758 base synapses)",
+      "right_dna02_diff": 0.0176,
+      "turn_right_strength_post": 0.0144,
+      "recruited_pct": 8,
+      "mean_budget": 3.6436
+    },
+    "interpretation": "Comparison demonstrates whether upstream afferent potentiation, downstream premotor amplification, or balanced distributed adaptation provides the most effective and stable recruitment of right steering."
+  }
+}
