@@ -2,15 +2,31 @@
 
 **Document:** `docs/PHASE_4D_EXPERIMENT_PLAN_DRAFT.md`  
 **Phase:** IV-D Connectome Plasticity & Bilateral Generalization  
-**Status:** **DRAFT ONLY — WAITING FOR STEERING-ASYMMETRY CAUSAL RESULT**  
-**Classification:** **UNSEALED PLANNING DRAFT — NON-EXECUTABLE**
+**Status:** **HISTORICAL DRAFT — SUPERSEDED**  
+**Classification:** **UNSEALED PLANNING DRAFT — NON-EXECUTABLE (PROVENANCE ONLY)**
+
+---
+
+> [!IMPORTANT]
+> **HISTORICAL DRAFT — SUPERSEDED**
+>
+> This document predates the Lane B causal-localization results and is retained
+> for provenance. The governing subsequent documents are:
+>
+> - [`PHASE_4D_FIRST_LEARNING_EXPERIMENT.md`](PHASE_4D_FIRST_LEARNING_EXPERIMENT.md)
+> - [`PHASE_4D1_FIRST_LEARNING_RESULTS.md`](PHASE_4D1_FIRST_LEARNING_RESULTS.md)
+> - [`PHASE_4D1B_NULL_MECHANISM_AUDIT.md`](PHASE_4D1B_NULL_MECHANISM_AUDIT.md)
+> - [`PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md)
+> - [`PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md)
+>
+> Do not use this draft as the active experimental protocol.
 
 ---
 
 ## 1. Status Notice & Governed Lane Boundary
 
-> [!IMPORTANT]
-> **STATUS: WAITING FOR STEERING-ASYMMETRY CAUSAL RESULT**  
+> [!NOTE]
+> **HISTORICAL STATUS AT AUTHORING TIME:**  
 > In accordance with project governance and parallel research lane partitioning, **Lane A (Primary Architecture) does NOT preregister or execute the following items until Lane B (Steering Asymmetry Lane) delivers its causal findings**:
 > - Specific target neural populations or synaptic pathways
 > - Numerical learning rate ($\eta$)
@@ -33,7 +49,7 @@
 
 ## 3. Preregistration Workflow (Upon Receipt of Lane B Evidence)
 
-When Lane B publishes its causal findings and schema-compliant manifest (`artifacts/plasticity/target_manifest.json`):
+When Lane B publishes its causal findings and schema-compliant manifests (`artifacts/plasticity/target_a_afferent_only.json`, `artifacts/plasticity/target_b_projection_only.json`, `artifacts/plasticity/target_c_balanced_two_stage.json`, `artifacts/plasticity/target_d_matched_sham.json`):
 
 1. **Manifest Intake & Integrity Validation:**  
    Validate manifest against `artifacts/plasticity/target_manifest.schema.json` using `validateTargetManifest()`.
