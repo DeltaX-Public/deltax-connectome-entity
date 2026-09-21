@@ -32,7 +32,7 @@ All experimental code and battery harnesses are subject to strict causal integri
 
 ## 3. Strict Repository & Confidentiality Boundary
 
-1. **No Proprietary Runtime In Git:** The sovereign DeltaX Python runtime (`deltax-python-runtime`) is strictly private. Public repositories contain only open adapters, contracts, schemas, and public test harnesses.
+1. **No Proprietary Runtime In Git:** The sovereign DeltaX Python runtime (`deltax-python-runtime`) is strictly private. Public repositories contain only public/source-available adapters, contracts, schemas, and public test harnesses.
 2. **No Absolute Private Paths:** Commit messages, tests, and documentation must never contain absolute paths referencing private local directories or developer machines.
 3. **No Secrets or Credentials:** Never commit tokens, API keys, private keys, or passwords. Secret scanning and push protection are strictly enforced by GitHub.
 
@@ -75,3 +75,11 @@ if violations > 0: sys.exit(1)
 print("Leak scan clean.")
 '
 ```
+
+---
+
+## 5. Licensing of Contributions
+
+DeltaX-owned material in this repository is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). By submitting a pull request or contributing to DeltaX-owned material in this repository, you agree that your contributions are licensed under the PolyForm Noncommercial License 1.0.0.
+
+Upstream code under `upstream/fly-brain/` and third-party datasets or dependencies retain their respective licenses (e.g. MIT, CC-BY 4.0, Apache-2.0). See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for detailed repository boundaries and [docs/LICENSE_HISTORY.md](docs/LICENSE_HISTORY.md) for historical version treatment.

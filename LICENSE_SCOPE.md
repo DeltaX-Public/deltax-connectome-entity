@@ -13,6 +13,11 @@ Academic inspection, noncommercial reproduction, modification, and academic publ
 **Commercial Inquiries:**
 `hello@deltaxevaluate.com`
 
+**Required Notice (PolyForm Noncommercial 1.0.0):**
+```text
+Required Notice: Copyright (c) 2026 Dominick Francisco Noval
+```
+
 ---
 
 ## Upstream fly-brain
