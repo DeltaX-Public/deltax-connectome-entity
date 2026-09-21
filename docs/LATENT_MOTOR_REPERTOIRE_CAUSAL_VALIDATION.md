@@ -1,12 +1,15 @@
 # Latent Motor Repertoire: Causal Validation & Claim Boundary Calibration
 
-**Lane**: Parallel Research Lane B (Diagnostic and Comparative)  
-**Repository**: `DeltaX-Public/deltax-connectome-entity`  
-**Branch**: `research/latent-motor-repertoire`  
-**Base Commit**: `3897690` (`origin/main`)  
-**Validation HEAD**: (To be committed)  
-**Date**: September 2026  
-**Governing Boundaries**: Zero plasticity implemented, zero weights altered, Lane 1 (`18000/19000-series`) strictly untouched.  
+> [!NOTE] Historical Document — Completed Research Lane B
+> This causal validation concluded Parallel Research Lane B and was merged into `main` via PR #21 (commit `c1341b0`). Evaluated on diagnostic seeds `20000..20049` and validated on bilateral seeds `20200..20299`. Lane 1 development seeds `18000..18299` and reserved Phase IV-D held-out seeds `19000..19099` remained strictly untouched.
+
+**Lane**: Parallel Research Lane B (Diagnostic and Comparative)
+**Repository**: `DeltaX-Public/deltax-connectome-entity`
+**Branch**: `research/latent-motor-repertoire` (Merged: PR #21, commit `c1341b0`)
+**Base Commit**: `3897690` (`origin/main`)
+**Status**: COMPLETE (Merged into main via PR #21)
+**Date**: September 2026
+**Governing Boundaries**: Zero plasticity implemented, zero weights altered, Lane 1 development (`18000..18299`) and Phase IV-D held-out (`19000..19099`) strictly untouched.
 
 ---
 
@@ -42,7 +45,7 @@ To prevent unjustified claims of "latency," the framework enforces four distinct
 4. **Dynamical Recruitment & Viability**: The target descending population is downstream-viable and can be causally un-gated by physiological intermediate recruitment.
 
 ### Reclassification of Visual / Looming Pathways
-Visual pathways into escape (`DNp01`) and takeoff (`DNp02`/`DNp04`) possess massive synaptic connectivity (8,000–10,000 synaptic weights). However, the bodymap visual array represents **flat, uncalibrated photoreceptors without optical flow, T4/T5 directional selectivity, or lobula columnar (LC4/LPLC2) expansion feature extraction.**  
+Visual pathways into escape (`DNp01`) and takeoff (`DNp02`/`DNp04`) possess massive synaptic connectivity (8,000–10,000 synaptic weights). However, the bodymap visual array represents **flat, uncalibrated photoreceptors without optical flow, T4/T5 directional selectivity, or lobula columnar (LC4/LPLC2) expansion feature extraction.**
 Treating visual looming silence as "connectome motor latency" is an artifact of stimulus inadequacy. Consequently, all visual pathways are reclassified as **`TRANSDUCTION_LIMITED`** and quarantined from general connectome motor silence claims.
 
 ---

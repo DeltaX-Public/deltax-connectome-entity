@@ -1,13 +1,17 @@
 # Latent Motor Repertoire Atlas: Scientific Report
 
-**Lane**: Parallel Research Lane B (Diagnostic and Comparative)  
-**Repository**: `DeltaX-Public/deltax-connectome-entity`  
-**Branch**: `research/latent-motor-repertoire`  
-**Base Commit**: `3897690` (`origin/main`)  
-**Status**: COMPLETE (Stopped strictly prior to plasticity implementation)  
-**Allocated Diagnostic Namespace**: `20000..20049` ($N=50$ reserved)  
-**Empirical Sample Sizes**: Matrix $N=10$ (`20000..20009`), Rescue $N=5$ (`20000..20004`), Bottlenecks $N=3$ (`20000..20002`), Direct $N=1$ (`20000`) (Audited in `seed_usage_audit.json`)  
-**Date**: September 2026  
+> [!NOTE] Historical Document — Completed Research Lane B
+> This report documents Parallel Research Lane B's whole-CNS connectome latent motor repertoire atlas, completed and merged into `main` via PR #21 (commit `c1341b0`). Evaluated on diagnostic seeds `20000..20049` and validated across $N=100$ bilateral seeds `20200..20299`. Escape replication namespace `20400..20499` remains reserved.
+
+**Lane**: Parallel Research Lane B (Diagnostic and Comparative)
+**Repository**: `DeltaX-Public/deltax-connectome-entity`
+**Branch**: `research/latent-motor-repertoire` (Merged: PR #21, commit `c1341b0`)
+**Base Commit**: `3897690` (`origin/main`)
+**Status**: COMPLETE (Merged into main via PR #21)
+**Allocated Diagnostic Namespace**: `20000..20049` ($N=50$ reserved)
+**Validation Namespace**: `20200..20299` ($N=100$ bilateral validation)
+**Empirical Sample Sizes**: Matrix $N=10$ (`20000..20009`), Rescue $N=5$ (`20000..20004`), Bottlenecks $N=3$ (`20000..20002`), Direct $N=1$ (`20000`) (Audited in `seed_usage_audit.json`)
+**Date**: September 2026
 
 ---
 
@@ -115,7 +119,7 @@ Program: courtDN         | Neurons:  2 | Viable: FALSE | Class: UNEMBODIED_NO_RE
 ```
 
 ### Key Finding
-Every single motor population for which CandidateBridge specifies a candidate action (7 out of 7 programs) responds with correct candidate proposals and proportional activation strengths ($s > 0.35$ at 15 Hz, $s > 0.85$ at 30 Hz).  
+Every single motor population for which CandidateBridge specifies a candidate action (7 out of 7 programs) responds with correct candidate proposals and proportional activation strengths ($s > 0.35$ at 15 Hz, $s > 0.85$ at 30 Hz).
 **Downstream readout is completely healthy across all embodied and unembodied candidates.** Silence in the latent repertoire is 100% attributable to **upstream recruitment failure within the recurrent connectome graph**.
 
 *Artifact Reference*: `artifacts/latent_repertoire/direct_output_viability.json`

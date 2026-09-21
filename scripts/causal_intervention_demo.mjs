@@ -5,8 +5,12 @@ import { BrokenWorld } from '../src/worlds/broken_world/world.mjs';
 import { createNeurocontrol } from '../src/neurocontrol/index.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = path.join(ROOT, 'artifacts', 'interventions');
-const CHECKPOINTS = path.join(ROOT, 'artifacts', 'checkpoints');
+const OUT = process.env.INTERVENTION_OUT_DIR
+  ? path.resolve(process.env.INTERVENTION_OUT_DIR)
+  : path.join(ROOT, 'artifacts', 'interventions');
+const CHECKPOINTS = process.env.CHECKPOINT_OUT_DIR
+  ? path.resolve(process.env.CHECKPOINT_OUT_DIR)
+  : path.join(ROOT, 'artifacts', 'checkpoints');
 const clone = (x) => JSON.parse(JSON.stringify(x));
 const writeJson = (file, value) => { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n'); };
 const seed = Number(process.env.SEED ?? 8);

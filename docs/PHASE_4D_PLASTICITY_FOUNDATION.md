@@ -1,9 +1,16 @@
 # Phase IV-D: Connectome Plasticity Foundation & Causal Methodology
 
-**Document:** `docs/PHASE_4D_PLASTICITY_FOUNDATION.md`  
-**Phase:** IV-D Connectome Plasticity Foundation  
-**Branch:** `phase4d-plasticity-foundation`  
-**Status:** Infrastructure & Causal Methodology Complete — **WAITING FOR LANE B EVIDENCE**  
+> [!NOTE]
+> **HISTORICAL SPECIFICATION RECORD — RESEARCH MILESTONE MERGED**
+> This document specifies the foundational, bounded synaptic plasticity infrastructure developed in Phase IV-D.
+> - **Lane B Evidence Status:** Lane B causal mapping was fully completed and merged via PR #19 (`04e5340`) and PR #21 (`c1341b0`), delivering the four canonical target manifests (`target_a_afferent_only.json`, `target_b_projection_only.json`, `target_c_balanced_two_stage.json`, `target_d_matched_sham.json`).
+> - **Plasticity Milestone Merged:** The plasticity foundation and development experiments (Phase IV-D.1 through D.3) were formally merged into `main` via PR #20 (`5fa548e`).
+> - **Held-Out Preservation:** Phase IV-D held-out evaluation seeds `19000..19099` remain strictly sealed and unconsumed.
+
+**Document:** `docs/PHASE_4D_PLASTICITY_FOUNDATION.md`
+**Phase:** IV-D Connectome Plasticity Foundation
+**Branch:** `phase4d-plasticity-foundation` (Merged into `main` in PR #20, commit `5fa548e`)
+**Status:** **MERGED HISTORICAL SPECIFICATION**
 **Classification:** **GOVERNED INFRASTRUCTURE SPECIFICATION**
 
 ---

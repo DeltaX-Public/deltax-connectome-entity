@@ -1,11 +1,14 @@
 # Phase IV-D.3: Learning Curve, Dose Response, and Responder Heterogeneity Results
 
-**Repository:** `DeltaX-Public/deltax-connectome-entity`  
-**Branch:** `phase4d-plasticity-foundation`  
-**Draft PR:** [#20](https://github.com/DeltaX-Public/deltax-connectome-entity/pull/20)  
-**Cohort:** Fresh Development Seeds `18200..18299` ($N=100$)  
-**Held-Out Seeds:** `19000..19099` ($N=100$) strictly preserved and unconsumed  
-**Execution Date:** September 19, 2026  
+> [!NOTE] Historical Document — Development Dose-Response Results
+> This report documents the Phase IV-D.3 dose-response study on development seeds `18200..18299` ($N=100$). It establishes the recommended frozen 30-cycle protocol for any future Phase IV-D held-out confirmation. Merged via PR #20 (commit `5fa548e`). Reserved Phase IV-D held-out seeds `19000..19099` remain unconsumed and frozen under the research pause.
+
+**Repository:** `DeltaX-Public/deltax-connectome-entity`
+**Branch:** `phase4d-plasticity-foundation`
+**Merged PR:** [#20](https://github.com/DeltaX-Public/deltax-connectome-entity/pull/20) (commit `5fa548e`)
+**Cohort:** Fresh Development Seeds `18200..18299` ($N=100$)
+**Held-Out Seeds:** `19000..19099` ($N=100$) strictly preserved and unconsumed
+**Execution Date:** September 19, 2026
 
 ---
 
@@ -144,7 +147,7 @@ Comparing prospective baseline features of responders ($N=71$ at 120 cycles) vs 
 | 10. `AN03A008_theta` | 47.4937 | 47.6407 | -0.1469 | -0.0391 | Uncorrelated with learnability. |
 
 ### Mechanistic Interpretation
-The limiting constraint is **downstream bottleneck gating**. In the connectome, `tactile T1 right` mechanoreceptors synapse onto `AN03A008` (Target A). When Target A potentiates, AN03A008 firing rate increases from $\approx 2.15\text{ Hz} \to 7.33\text{ Hz}$. AN03A008 then drives right DNa02 across the unpotentiated AN03A008 $\to$ DNa02 synapse. 
+The limiting constraint is **downstream bottleneck gating**. In the connectome, `tactile T1 right` mechanoreceptors synapse onto `AN03A008` (Target A). When Target A potentiates, AN03A008 firing rate increases from $\approx 2.15\text{ Hz} \to 7.33\text{ Hz}$. AN03A008 then drives right DNa02 across the unpotentiated AN03A008 $\to$ DNa02 synapse.
 
 Because DNa02 has a high firing threshold ($\theta \approx 150$), it requires approximately $50\text{--}60$ units of summed dendritic input to fire. In seeds where baseline input is already $\approx 50.0$ ($\text{inp}/\theta \approx 0.334$), the extra drive from potentiated AN03A008 pushes DNa02 past threshold. In seeds where baseline input is $\approx 44.8$ ($\text{inp}/\theta \approx 0.295$), even maximal AN03A008 firing leaves DNa02 subthreshold ($r = 0.0000\text{ Hz}$).
 
@@ -213,7 +216,7 @@ Across all doses (10, 30, 60, 120 cycles):
 ## 11. Recommendation for Held-Out Evaluation
 
 ### Recommended Protocol: Fixed Dose of 30 Cycles
-- **Rationale:** 
+- **Rationale:**
   - 30 cycles captures **98.7% of all achievable responder seeds** ($77/78$).
   - Achieves robust neural recruitment ($76.0\%$) and executable motor candidate recruitment ($61.0\%$).
   - Mean budget ($28.02$) is well within safety bounds.

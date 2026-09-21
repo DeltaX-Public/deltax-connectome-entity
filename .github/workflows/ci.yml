@@ -32,6 +32,7 @@ jobs:
           echo "=== RUNNING PUBLIC CI (DELTAX_LOCAL_RUNTIME_CMD unset) ==="
           echo "Note: Private runtime tests requiring deltax-python-runtime are safely skipped in public CI."
           node --test test/*.test.mjs
+          git diff --exit-code
 
       - name: Validate Artifact and Data JSON Schemas
         run: |

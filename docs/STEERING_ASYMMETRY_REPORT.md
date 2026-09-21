@@ -1,5 +1,8 @@
 # Research Lane B: Steering Asymmetry & Motor-Circuit Causal Mapping Report
 
+> [!NOTE] Historical Document — Completed Research Lane B
+> This causal mapping report concluded Research Lane B and was merged into `main` via PR #19 (commit `04e5340`). It localized the mechanosensory steering asymmetry to a 2-hop anatomical bottleneck into right DNa02 (`AN03A008`, idx `2937`), delivering the plasticity target manifests utilized in Phase IV-D (`artifacts/plasticity/target_*.json`). Evaluated on diagnostic cohorts `16000..16099` and `17000..17099`.
+
 ## Executive Summary
 
 Phase IV-C Development V2 exposed a critical substrate limitation during a mirrored-fork obstacle avoidance test:
