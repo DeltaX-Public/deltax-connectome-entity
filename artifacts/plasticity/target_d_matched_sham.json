@@ -1,0 +1,108 @@
+{
+  "manifest_id": "TARGET_D_MATCHED_SHAM",
+  "schema_version": "1.0.0",
+  "status": "CAUSAL_TARGET_FROZEN",
+  "source_evidence_artifact": "artifacts/steering_asymmetry/plasticity_target_candidate.json",
+  "rationale": "Structurally matched negative control target centered on ascending neuron 4306 (AN06B025). Receives incoming afferents and projects downstream (579 base synapses), structurally analogous to AN03A008, but has zero downstream connectivity to right DNa02 (idx 332). Serves as an uncoupled sham control to verify that behavioral recovery is not an artifact of generic non-specific potentiation.",
+  "eligible_populations": [
+    {
+      "population_name": "matched_afferents_to_4306",
+      "role": "sham_sensory_afferents",
+      "neuron_indices": [
+        45,
+        146,
+        945,
+        2495,
+        3997,
+        4590,
+        5129,
+        7827
+      ]
+    },
+    {
+      "population_name": "AN06B025_sham_intermediate",
+      "role": "sham_ascending_intermediate",
+      "neuron_indices": [
+        4306
+      ]
+    },
+    {
+      "population_name": "sham_downstream_target",
+      "role": "sham_downstream",
+      "neuron_indices": [
+        126142
+      ]
+    }
+  ],
+  "eligible_edges": [
+    {
+      "source": 45,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 4.5,
+      "notes": "Sham afferent (base weight 3)"
+    },
+    {
+      "source": 146,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 15.0,
+      "notes": "Sham afferent (base weight 10)"
+    },
+    {
+      "source": 945,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 16.5,
+      "notes": "Sham afferent (base weight 11)"
+    },
+    {
+      "source": 2495,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 13.5,
+      "notes": "Sham afferent (base weight 9)"
+    },
+    {
+      "source": 3997,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 4.5,
+      "notes": "Sham afferent (base weight 3)"
+    },
+    {
+      "source": 4590,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 4.5,
+      "notes": "Sham afferent (base weight 3)"
+    },
+    {
+      "source": 5129,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 22.5,
+      "notes": "Sham afferent (base weight 15)"
+    },
+    {
+      "source": 7827,
+      "target": 4306,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 219.0,
+      "notes": "Sham afferent (base weight 146)"
+    },
+    {
+      "source": 4306,
+      "target": 126142,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 289.5,
+      "notes": "Sham projection (base weight 579, up to +50% efficacy)"
+    }
+  ],
+  "safety_bounds": {
+    "max_total_budget": 420.0,
+    "max_edge_delta": 289.5,
+    "max_percentage_change": 1.5
+  },
+  "created_at": "2026-09-19T16:30:00.000Z"
+}

@@ -16,6 +16,7 @@ const UPSTREAM = path.resolve(ROOT, "upstream", "fly-brain");
 const { loadAll } = await import(path.join(UPSTREAM, "scripts", "lib_node.mjs"));
 const { RateNetwork, RATE_DEFAULTS } = await import(path.join(UPSTREAM, "src", "ratenet.js"));
 const { DN_ROLES } = await import(path.join(UPSTREAM, "src", "sim", "motor.js"));
+import { PlasticityOverlay } from "./plasticity_overlay.mjs";
 
 export class ConnectomeRuntime {
   constructor(opts = {}) {
@@ -51,6 +52,27 @@ export class ConnectomeRuntime {
       this.size,
       { seed: this.seed, ...opts.rateParams }
     );
+
+    // If plasticity is enabled, ensure this.net.weights is a Float32Array so fractional efficacy multipliers are preserved
+    if (opts.plasticity && !(this.net.weights instanceof Float32Array)) {
+      this.net.weights = new Float32Array(this.net.weights);
+    }
+
+    // Optional Phase IV-D Plasticity Overlay (default: null / disabled)
+    this.plasticity = opts.plasticity
+      ? new PlasticityOverlay({
+          N: this.N,
+          E: this.E,
+          indptr: this.data.indptr,
+          indices: this.data.indices,
+          baseSynapseCounts: this.data.weights.slice(),
+          netWeights: this.net.weights,
+          netInp: this.net.inp,
+          netTheta: this.net.theta,
+          config: opts.plasticity.config || opts.plasticity,
+          eligibleEdgeMask: opts.plasticity.eligibleEdgeMask,
+        })
+      : null;
 
     // Map DN populations by role
     this.dnPopulations = this._buildDNMap();
@@ -129,6 +151,11 @@ export class ConnectomeRuntime {
       activeTotal += this.net.step();
     }
 
+    // Update eligibility traces if plasticity is active
+    if (this.plasticity && this.plasticity.config.enabled) {
+      this.plasticity.updateEligibility(this.net.r, this.net.inp, this.net.theta);
+    }
+
     return {
       tick: Math.round(this.net.t / this.substepsPerTick),
       sim_time_ms: this.net.t,
@@ -149,13 +176,13 @@ export class ConnectomeRuntime {
       }
 
       let sum = 0;
+      let maxRate = 0;
       let weightedSum = 0;
       let weightSum = 0;
-      let maxRate = 0;
-
       const neuronDetails = [];
+
       for (const n of neurons) {
-        const rate = this.net.r[n.index] || 0;
+        const rate = this.net.r[n.index];
         sum += rate;
         weightedSum += rate * n.weight;
         weightSum += n.weight;
@@ -192,10 +219,12 @@ export class ConnectomeRuntime {
    */
   silence(targets) {
     let indices = [];
-    if (typeof targets === "string") {
+    if (typeof targets === "number") {
+      indices = [targets];
+    } else if (typeof targets === "string") {
       indices = this.data.byType(targets, 0);
     } else if (Array.isArray(targets)) {
-      indices = targets.flatMap((t) => (typeof t === "string" ? this.data.byType(t, 0) : [t]));
+      indices = targets.flatMap((t) => (typeof t === "number" ? [t] : typeof t === "string" ? this.data.byType(t, 0) : []));
     }
 
     for (const i of indices) {
@@ -222,10 +251,12 @@ export class ConnectomeRuntime {
    */
   excite(targets, rateHz = 100) {
     let indices = [];
-    if (typeof targets === "string") {
+    if (typeof targets === "number") {
+      indices = [targets];
+    } else if (typeof targets === "string") {
       indices = this.data.byType(targets, 0);
     } else if (Array.isArray(targets)) {
-      indices = targets.flatMap((t) => (typeof t === "string" ? this.data.byType(t, 0) : [t]));
+      indices = targets.flatMap((t) => (typeof t === "number" ? [t] : typeof t === "string" ? this.data.byType(t, 0) : []));
     }
 
     for (const i of indices) {
@@ -251,6 +282,7 @@ export class ConnectomeRuntime {
       out: Array.from(this.net.out),
       silenced: Array.from(this.silencedNeurons),
       excited: Array.from(this.excitedNeurons.entries()),
+      plasticity: this.plasticity ? this.plasticity.snapshot() : null,
     };
   }
 
@@ -283,6 +315,57 @@ export class ConnectomeRuntime {
         this.excitedNeurons.set(i, hz);
       }
     }
+
+    if (snap.plasticity && this.plasticity) {
+      this.plasticity.restore(snap.plasticity);
+    }
+
     return true;
+  }
+
+  /**
+   * Causal Counterfactual Branching for Plasticity (Phase IV-D).
+   * Supports branches:
+   *   BRANCH_A_LEARNED_INTACT: Full restore including ΔW and eligibility.
+   *   BRANCH_B_DELTA_W_RESET: Resets ΔW to zero, testing behavior without weight modifications.
+   *   BRANCH_C_ELIGIBILITY_RESET_ONLY: Retains ΔW but clears eligibility traces.
+   *   BRANCH_D_EXECUTIVE_RESET_DELTA_W_RETAINED: Restores connectome with ΔW intact, flags executive reset.
+   *   BRANCH_E_SHAM_RESET: Restores connectome with eligibility traces zeroed as a sham control.
+   *
+   * @param {string} branchType
+   * @param {Object} snap Snapshot object
+   */
+  createCounterfactualBranch(branchType, snap) {
+    this.restore(snap);
+    if (!this.plasticity) {
+      return { branch: branchType, deltaW_active: false };
+    }
+
+    switch (branchType) {
+      case "BRANCH_A_LEARNED_INTACT":
+        // Full restore intact
+        break;
+      case "BRANCH_B_DELTA_W_RESET":
+        this.plasticity.reset();
+        break;
+      case "BRANCH_C_ELIGIBILITY_RESET_ONLY":
+        this.plasticity.resetEligibilityOnly();
+        break;
+      case "BRANCH_D_EXECUTIVE_RESET_DELTA_W_RETAINED":
+        // Connectome has ΔW intact
+        break;
+      case "BRANCH_E_SHAM_RESET":
+        this.plasticity.resetEligibilityOnly();
+        break;
+      default:
+        throw new Error(`Unknown counterfactual branch type: ${branchType}`);
+    }
+
+    return {
+      branch: branchType,
+      deltaW_count: this.plasticity.deltaW.size,
+      global_budget_used: this.plasticity.getGlobalBudgetUsed(),
+      hash: this.plasticity.getHash(),
+    };
   }
 }

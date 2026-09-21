@@ -1,0 +1,3122 @@
+[
+  {
+    "seed": 18000,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "sham_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18001,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18002,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18003,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18004,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18005,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18006,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    }
+  },
+  {
+    "seed": 18007,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18008,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    }
+  },
+  {
+    "seed": 18009,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18010,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18011,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    }
+  },
+  {
+    "seed": 18012,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    }
+  },
+  {
+    "seed": 18013,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18014,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18015,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18016,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18017,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18018,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18019,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    }
+  },
+  {
+    "seed": 18020,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18021,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18022,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18023,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18024,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18025,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18026,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18027,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18028,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18029,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18030,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18031,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18032,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18033,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18034,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18035,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18036,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18037,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18038,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18039,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18040,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18041,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18042,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18043,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18044,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18045,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18046,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18047,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18048,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18049,
+    "condition_id": "P1",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18000,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "sham_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18001,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18002,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18003,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18004,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18005,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18006,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    }
+  },
+  {
+    "seed": 18007,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18008,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    }
+  },
+  {
+    "seed": 18009,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18010,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18011,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    }
+  },
+  {
+    "seed": 18012,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    }
+  },
+  {
+    "seed": 18013,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18014,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18015,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18016,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18017,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18018,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18019,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    }
+  },
+  {
+    "seed": 18020,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18021,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18022,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18023,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18024,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18025,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18026,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18027,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18028,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18029,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18030,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18031,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18032,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18033,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18034,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18035,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18036,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18037,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18038,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18039,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18040,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18041,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18042,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18043,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18044,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18045,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18046,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18047,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18048,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18049,
+    "condition_id": "P2",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18000,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "sham_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18001,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18002,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18003,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18004,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18005,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18006,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    }
+  },
+  {
+    "seed": 18007,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18008,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    }
+  },
+  {
+    "seed": 18009,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18010,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18011,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    }
+  },
+  {
+    "seed": 18012,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    }
+  },
+  {
+    "seed": 18013,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18014,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18015,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18016,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18017,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18018,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18019,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    }
+  },
+  {
+    "seed": 18020,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18021,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18022,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18023,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18024,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18025,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18026,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18027,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18028,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18029,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18030,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18031,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18032,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18033,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18034,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18035,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18036,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18037,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18038,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18039,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18040,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18041,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18042,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18043,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18044,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18045,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18046,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18047,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18048,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18049,
+    "condition_id": "P3",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18000,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "sham_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18001,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18002,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18003,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18004,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18005,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18006,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    }
+  },
+  {
+    "seed": 18007,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18008,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    }
+  },
+  {
+    "seed": 18009,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18010,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18011,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    }
+  },
+  {
+    "seed": 18012,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    }
+  },
+  {
+    "seed": 18013,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18014,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18015,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18016,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18017,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18018,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18019,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    }
+  },
+  {
+    "seed": 18020,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18021,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18022,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18023,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18024,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18025,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18026,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18027,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18028,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18029,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18030,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18031,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18032,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18033,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18034,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18035,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18036,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18037,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18038,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18039,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18040,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18041,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18042,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18043,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18044,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18045,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18046,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18047,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18048,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18049,
+    "condition_id": "P4",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18000,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    },
+    "sham_reset": {
+      "right_dna02": 0.007,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18001,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18002,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18003,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18004,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.003,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18005,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18006,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    }
+  },
+  {
+    "seed": 18007,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.002,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18008,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.006,
+      "turn_right_strength": 0.0107
+    }
+  },
+  {
+    "seed": 18009,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18010,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18011,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0009,
+      "turn_right_strength": 0.0099
+    }
+  },
+  {
+    "seed": 18012,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0271,
+      "turn_right_strength": 0.0166
+    }
+  },
+  {
+    "seed": 18013,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18014,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0053,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18015,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18016,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18017,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18018,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18019,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0096,
+      "turn_right_strength": 0.0118
+    }
+  },
+  {
+    "seed": 18020,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0027,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18021,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18022,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0052,
+      "turn_right_strength": 0.0108
+    }
+  },
+  {
+    "seed": 18023,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18024,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18025,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18026,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18027,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18028,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0031,
+      "turn_right_strength": 0.0101
+    }
+  },
+  {
+    "seed": 18029,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18030,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18031,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0038,
+      "turn_right_strength": 0.0104
+    }
+  },
+  {
+    "seed": 18032,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18033,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18034,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    }
+  },
+  {
+    "seed": 18035,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18036,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18037,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18038,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18039,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18040,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18041,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18042,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18043,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18044,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    }
+  },
+  {
+    "seed": 18045,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0014,
+      "turn_right_strength": 0.0096
+    }
+  },
+  {
+    "seed": 18046,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "efficacy_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    }
+  },
+  {
+    "seed": 18047,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18048,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  },
+  {
+    "seed": 18049,
+    "condition_id": "P5",
+    "learned_intact": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "efficacy_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "sham_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    }
+  }
+]

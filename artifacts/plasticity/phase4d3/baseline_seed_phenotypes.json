@@ -1,0 +1,4002 @@
+[
+  {
+    "seed": 18200,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.2947,
+      "std_rate": 25.7022,
+      "min_rate": 9.2143,
+      "max_rate": 176.2049
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.825,
+      "inp": 100.0842,
+      "theta": 57.2451,
+      "inp_over_theta": 1.7483,
+      "psi": 0.8095,
+      "gain_a": 0.1533,
+      "tau": 21.46,
+      "rmax": 213.6866,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.244,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 41.8686,
+      "theta": 141.0162,
+      "inp_over_theta": 0.2969,
+      "psi": 0.2537,
+      "gain_a": 0.0465,
+      "tau": 18.7536,
+      "rmax": 187.6441,
+      "size_scale": 20,
+      "adaptation_A": 0.0772,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0805
+  },
+  {
+    "seed": 18201,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.1834,
+      "std_rate": 27.0633,
+      "min_rate": 7.3815,
+      "max_rate": 184.9164
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.7952,
+      "inp": 105.8726,
+      "theta": 45.74,
+      "inp_over_theta": 2.3147,
+      "psi": 0.8488,
+      "gain_a": 0.1719,
+      "tau": 20.7703,
+      "rmax": 188.1729,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.8423,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0111,
+      "inp": 62.8241,
+      "theta": 148.9717,
+      "inp_over_theta": 0.4217,
+      "psi": 0.3292,
+      "gain_a": 0.0413,
+      "tau": 20.3229,
+      "rmax": 194.2301,
+      "size_scale": 20,
+      "adaptation_A": 0.2996,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0123,
+    "baseline_whole_net_rate": 0.0846
+  },
+  {
+    "seed": 18202,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.8293,
+      "std_rate": 26.5422,
+      "min_rate": 13.8055,
+      "max_rate": 177.4864
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.498,
+      "inp": 86.7772,
+      "theta": 55.4292,
+      "inp_over_theta": 1.5656,
+      "psi": 0.7896,
+      "gain_a": 0.1445,
+      "tau": 17.6751,
+      "rmax": 195.2023,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1267,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 34.8427,
+      "theta": 141.3302,
+      "inp_over_theta": 0.2465,
+      "psi": 0.2175,
+      "gain_a": 0.0487,
+      "tau": 20.6349,
+      "rmax": 192.9916,
+      "size_scale": 20,
+      "adaptation_A": 0.043,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0813
+  },
+  {
+    "seed": 18203,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8955,
+      "std_rate": 23.8561,
+      "min_rate": 12.4768,
+      "max_rate": 172.0872
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2591,
+      "inp": 94.9377,
+      "theta": 41.133,
+      "inp_over_theta": 2.3081,
+      "psi": 0.8524,
+      "gain_a": 0.1721,
+      "tau": 23.7645,
+      "rmax": 197.6573,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5446,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0003,
+      "inp": 50.9941,
+      "theta": 152.6873,
+      "inp_over_theta": 0.334,
+      "psi": 0.2815,
+      "gain_a": 0.0517,
+      "tau": 23.4703,
+      "rmax": 194.8926,
+      "size_scale": 20,
+      "adaptation_A": 0.1509,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0805
+  },
+  {
+    "seed": 18204,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.0662,
+      "std_rate": 23.4293,
+      "min_rate": 8.1239,
+      "max_rate": 161.667
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.6273,
+      "inp": 100.7837,
+      "theta": 43.2689,
+      "inp_over_theta": 2.3292,
+      "psi": 0.864,
+      "gain_a": 0.1365,
+      "tau": 16.5249,
+      "rmax": 192.4713,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4695,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 58.9065,
+      "theta": 179.7486,
+      "inp_over_theta": 0.3277,
+      "psi": 0.2812,
+      "gain_a": 0.0506,
+      "tau": 20.5775,
+      "rmax": 201.9456,
+      "size_scale": 20,
+      "adaptation_A": 0.029,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.083
+  },
+  {
+    "seed": 18205,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.0172,
+      "std_rate": 27.8274,
+      "min_rate": 11.5362,
+      "max_rate": 188.7946
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0161,
+      "inp": 94.4877,
+      "theta": 52.404,
+      "inp_over_theta": 1.8031,
+      "psi": 0.8108,
+      "gain_a": 0.1764,
+      "tau": 21.216,
+      "rmax": 198.7933,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4631,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 45.4472,
+      "theta": 165.1741,
+      "inp_over_theta": 0.2751,
+      "psi": 0.2388,
+      "gain_a": 0.0541,
+      "tau": 18.7517,
+      "rmax": 193.3644,
+      "size_scale": 20,
+      "adaptation_A": 0.1335,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0821
+  },
+  {
+    "seed": 18206,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.0229,
+      "std_rate": 26.9494,
+      "min_rate": 7.943,
+      "max_rate": 179.8929
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8464,
+      "inp": 90.2059,
+      "theta": 49.141,
+      "inp_over_theta": 1.8357,
+      "psi": 0.8153,
+      "gain_a": 0.1682,
+      "tau": 21.6884,
+      "rmax": 199.0757,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3321,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 42.0524,
+      "theta": 154.4733,
+      "inp_over_theta": 0.2722,
+      "psi": 0.2371,
+      "gain_a": 0.0523,
+      "tau": 20.598,
+      "rmax": 192.2319,
+      "size_scale": 20,
+      "adaptation_A": 0.1468,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0803
+  },
+  {
+    "seed": 18207,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.7503,
+      "std_rate": 27.2626,
+      "min_rate": 11.3751,
+      "max_rate": 196.1787
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8301,
+      "inp": 92.1064,
+      "theta": 53.5312,
+      "inp_over_theta": 1.7206,
+      "psi": 0.8134,
+      "gain_a": 0.1685,
+      "tau": 20.9587,
+      "rmax": 207.1987,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2641,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 41.3667,
+      "theta": 150.3547,
+      "inp_over_theta": 0.2751,
+      "psi": 0.2395,
+      "gain_a": 0.0467,
+      "tau": 20.4493,
+      "rmax": 197.5056,
+      "size_scale": 20,
+      "adaptation_A": 0.0444,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.079
+  },
+  {
+    "seed": 18208,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.6806,
+      "std_rate": 28.5336,
+      "min_rate": 14.0952,
+      "max_rate": 173.3535
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0207,
+      "inp": 94.4135,
+      "theta": 50.809,
+      "inp_over_theta": 1.8582,
+      "psi": 0.8182,
+      "gain_a": 0.1634,
+      "tau": 20.2074,
+      "rmax": 210.076,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4232,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0043,
+      "inp": 46.0415,
+      "theta": 125.5464,
+      "inp_over_theta": 0.3667,
+      "psi": 0.295,
+      "gain_a": 0.0518,
+      "tau": 20.8796,
+      "rmax": 195.1594,
+      "size_scale": 20,
+      "adaptation_A": 0.1895,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0106,
+    "baseline_whole_net_rate": 0.0809
+  },
+  {
+    "seed": 18209,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.4789,
+      "std_rate": 29.1946,
+      "min_rate": 9.8169,
+      "max_rate": 185.9109
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.354,
+      "inp": 88.8055,
+      "theta": 43.8293,
+      "inp_over_theta": 2.0262,
+      "psi": 0.833,
+      "gain_a": 0.171,
+      "tau": 18.4335,
+      "rmax": 197.5818,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5354,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0005,
+      "inp": 53.7356,
+      "theta": 160.9785,
+      "inp_over_theta": 0.3338,
+      "psi": 0.2798,
+      "gain_a": 0.0448,
+      "tau": 18.5825,
+      "rmax": 199.5099,
+      "size_scale": 20,
+      "adaptation_A": 0.1225,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0807
+  },
+  {
+    "seed": 18210,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 37.8526,
+      "std_rate": 23.9627,
+      "min_rate": 11.8353,
+      "max_rate": 177.5664
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.3729,
+      "inp": 96.3236,
+      "theta": 49.3543,
+      "inp_over_theta": 1.9517,
+      "psi": 0.8184,
+      "gain_a": 0.1058,
+      "tau": 20.3651,
+      "rmax": 207.2296,
+      "size_scale": 6.3741,
+      "adaptation_A": 0.9724,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 31.1884,
+      "theta": 166.2785,
+      "inp_over_theta": 0.1876,
+      "psi": 0.1748,
+      "gain_a": 0.043,
+      "tau": 20.5164,
+      "rmax": 209.131,
+      "size_scale": 20,
+      "adaptation_A": 0,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0802
+  },
+  {
+    "seed": 18211,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.8527,
+      "std_rate": 28.4238,
+      "min_rate": 12.6279,
+      "max_rate": 181.5022
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8967,
+      "inp": 99.6416,
+      "theta": 48.2523,
+      "inp_over_theta": 2.065,
+      "psi": 0.8394,
+      "gain_a": 0.1301,
+      "tau": 20.1065,
+      "rmax": 198.744,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2098,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 43.4515,
+      "theta": 164.0641,
+      "inp_over_theta": 0.2648,
+      "psi": 0.2353,
+      "gain_a": 0.0466,
+      "tau": 17.861,
+      "rmax": 203.2071,
+      "size_scale": 20,
+      "adaptation_A": 0.0474,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0824
+  },
+  {
+    "seed": 18212,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 41.6581,
+      "std_rate": 28.9454,
+      "min_rate": 13.3797,
+      "max_rate": 174.5439
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.6671,
+      "inp": 85.4774,
+      "theta": 47.2015,
+      "inp_over_theta": 1.8109,
+      "psi": 0.8096,
+      "gain_a": 0.1571,
+      "tau": 20.4827,
+      "rmax": 195.9989,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2592,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 37.1408,
+      "theta": 144.6229,
+      "inp_over_theta": 0.2568,
+      "psi": 0.2259,
+      "gain_a": 0.0548,
+      "tau": 19.4968,
+      "rmax": 201.6805,
+      "size_scale": 20,
+      "adaptation_A": 0.0663,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0791
+  },
+  {
+    "seed": 18213,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8067,
+      "std_rate": 26.3606,
+      "min_rate": 10.8257,
+      "max_rate": 180.2009
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.3878,
+      "inp": 95.2484,
+      "theta": 44.6126,
+      "inp_over_theta": 2.135,
+      "psi": 0.8424,
+      "gain_a": 0.1642,
+      "tau": 19.6742,
+      "rmax": 195.8271,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.54,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0001,
+      "inp": 53.4278,
+      "theta": 165.7512,
+      "inp_over_theta": 0.3223,
+      "psi": 0.2732,
+      "gain_a": 0.0526,
+      "tau": 17.3972,
+      "rmax": 187.1356,
+      "size_scale": 20,
+      "adaptation_A": 0.2789,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0096,
+    "baseline_whole_net_rate": 0.0804
+  },
+  {
+    "seed": 18214,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.2618,
+      "std_rate": 26.3173,
+      "min_rate": 11.5953,
+      "max_rate": 164.8058
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.113,
+      "inp": 90.8191,
+      "theta": 43.0662,
+      "inp_over_theta": 2.1088,
+      "psi": 0.8443,
+      "gain_a": 0.1742,
+      "tau": 23.1231,
+      "rmax": 184.1175,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3843,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 46.7321,
+      "theta": 167.5815,
+      "inp_over_theta": 0.2789,
+      "psi": 0.2451,
+      "gain_a": 0.0503,
+      "tau": 19.8298,
+      "rmax": 211.8401,
+      "size_scale": 20,
+      "adaptation_A": 0.073,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0788
+  },
+  {
+    "seed": 18215,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.6809,
+      "std_rate": 27.1176,
+      "min_rate": 14.7403,
+      "max_rate": 184.0674
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0926,
+      "inp": 96.8294,
+      "theta": 38.2608,
+      "inp_over_theta": 2.5308,
+      "psi": 0.8614,
+      "gain_a": 0.1264,
+      "tau": 19.7989,
+      "rmax": 205.1724,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3742,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 46.6021,
+      "theta": 146.2391,
+      "inp_over_theta": 0.3187,
+      "psi": 0.2735,
+      "gain_a": 0.0526,
+      "tau": 25.7995,
+      "rmax": 196.3774,
+      "size_scale": 20,
+      "adaptation_A": 0.0886,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.082
+  },
+  {
+    "seed": 18216,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.714,
+      "std_rate": 26.2129,
+      "min_rate": 11.4108,
+      "max_rate": 185.7377
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1596,
+      "inp": 91.4564,
+      "theta": 50.305,
+      "inp_over_theta": 1.818,
+      "psi": 0.8151,
+      "gain_a": 0.1832,
+      "tau": 20.0743,
+      "rmax": 205.74,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.532,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0013,
+      "inp": 50.5344,
+      "theta": 149.5492,
+      "inp_over_theta": 0.3379,
+      "psi": 0.2783,
+      "gain_a": 0.05,
+      "tau": 24.7177,
+      "rmax": 195.2938,
+      "size_scale": 20,
+      "adaptation_A": 0.1231,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0096,
+    "baseline_whole_net_rate": 0.0823
+  },
+  {
+    "seed": 18217,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.0296,
+      "std_rate": 25.4605,
+      "min_rate": 14.2676,
+      "max_rate": 179.4595
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.7908,
+      "inp": 100.2357,
+      "theta": 43.1164,
+      "inp_over_theta": 2.3248,
+      "psi": 0.8561,
+      "gain_a": 0.1534,
+      "tau": 16.9867,
+      "rmax": 186.9437,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.738,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0011,
+      "inp": 61.9022,
+      "theta": 176.3011,
+      "inp_over_theta": 0.3511,
+      "psi": 0.293,
+      "gain_a": 0.0554,
+      "tau": 23.0506,
+      "rmax": 195.4398,
+      "size_scale": 20,
+      "adaptation_A": 0.2177,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0792
+  },
+  {
+    "seed": 18218,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.3505,
+      "std_rate": 25.4555,
+      "min_rate": 11.7073,
+      "max_rate": 167.2313
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.278,
+      "inp": 99.8774,
+      "theta": 49.2271,
+      "inp_over_theta": 2.0289,
+      "psi": 0.8305,
+      "gain_a": 0.1566,
+      "tau": 19.2443,
+      "rmax": 199.1658,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6094,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0046,
+      "inp": 51.7927,
+      "theta": 143.9489,
+      "inp_over_theta": 0.3598,
+      "psi": 0.292,
+      "gain_a": 0.056,
+      "tau": 18.582,
+      "rmax": 214.8942,
+      "size_scale": 20,
+      "adaptation_A": 0.3601,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0106,
+    "baseline_whole_net_rate": 0.0816
+  },
+  {
+    "seed": 18219,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8299,
+      "std_rate": 25.4088,
+      "min_rate": 10.0257,
+      "max_rate": 167.8311
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.7307,
+      "inp": 95.2578,
+      "theta": 52.5611,
+      "inp_over_theta": 1.8123,
+      "psi": 0.8197,
+      "gain_a": 0.16,
+      "tau": 23.3795,
+      "rmax": 210.7299,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2301,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 40.257,
+      "theta": 132.508,
+      "inp_over_theta": 0.3038,
+      "psi": 0.2579,
+      "gain_a": 0.0588,
+      "tau": 21.5016,
+      "rmax": 194.4461,
+      "size_scale": 20,
+      "adaptation_A": 0.2028,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.081
+  },
+  {
+    "seed": 18220,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.6224,
+      "std_rate": 28.5918,
+      "min_rate": 9.8417,
+      "max_rate": 196.8769
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.9115,
+      "inp": 93.7091,
+      "theta": 48.1319,
+      "inp_over_theta": 1.9469,
+      "psi": 0.8202,
+      "gain_a": 0.1438,
+      "tau": 19.0226,
+      "rmax": 199.1065,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3665,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0004,
+      "inp": 44.4425,
+      "theta": 140.2085,
+      "inp_over_theta": 0.317,
+      "psi": 0.266,
+      "gain_a": 0.0449,
+      "tau": 22.9806,
+      "rmax": 209.443,
+      "size_scale": 20,
+      "adaptation_A": 0.1758,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0799
+  },
+  {
+    "seed": 18221,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.6183,
+      "std_rate": 25.9881,
+      "min_rate": 11.7501,
+      "max_rate": 161.7871
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.4379,
+      "inp": 86.4516,
+      "theta": 54.9958,
+      "inp_over_theta": 1.572,
+      "psi": 0.7865,
+      "gain_a": 0.1538,
+      "tau": 20.433,
+      "rmax": 198.0099,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.068,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 34.3825,
+      "theta": 162.0498,
+      "inp_over_theta": 0.2122,
+      "psi": 0.1926,
+      "gain_a": 0.0449,
+      "tau": 18.868,
+      "rmax": 187.0869,
+      "size_scale": 20,
+      "adaptation_A": 0.0074,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0801
+  },
+  {
+    "seed": 18222,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.4159,
+      "std_rate": 28.0655,
+      "min_rate": 11.1775,
+      "max_rate": 177.8107
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5626,
+      "inp": 105.8507,
+      "theta": 47.2703,
+      "inp_over_theta": 2.2393,
+      "psi": 0.8481,
+      "gain_a": 0.1402,
+      "tau": 17.645,
+      "rmax": 195.1436,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5794,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0136,
+      "inp": 57.3746,
+      "theta": 133.4816,
+      "inp_over_theta": 0.4298,
+      "psi": 0.3333,
+      "gain_a": 0.0547,
+      "tau": 22.2523,
+      "rmax": 205.3754,
+      "size_scale": 20,
+      "adaptation_A": 0.3091,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.013,
+    "baseline_whole_net_rate": 0.0804
+  },
+  {
+    "seed": 18223,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.4369,
+      "std_rate": 25.9825,
+      "min_rate": 12.3787,
+      "max_rate": 170.7059
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.3833,
+      "inp": 91.087,
+      "theta": 47.7374,
+      "inp_over_theta": 1.9081,
+      "psi": 0.8209,
+      "gain_a": 0.1245,
+      "tau": 22.575,
+      "rmax": 193.6428,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.0155,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 33.1036,
+      "theta": 148.8785,
+      "inp_over_theta": 0.2224,
+      "psi": 0.202,
+      "gain_a": 0.0405,
+      "tau": 21.6107,
+      "rmax": 208.4364,
+      "size_scale": 20,
+      "adaptation_A": 0.007,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0817
+  },
+  {
+    "seed": 18224,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9044,
+      "std_rate": 25.9408,
+      "min_rate": 8.8593,
+      "max_rate": 179.9882
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5055,
+      "inp": 91.7379,
+      "theta": 42.7455,
+      "inp_over_theta": 2.1461,
+      "psi": 0.8521,
+      "gain_a": 0.1626,
+      "tau": 17.9834,
+      "rmax": 192.5922,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5001,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0034,
+      "inp": 56.067,
+      "theta": 147.085,
+      "inp_over_theta": 0.3812,
+      "psi": 0.3111,
+      "gain_a": 0.0484,
+      "tau": 19.8264,
+      "rmax": 199.8841,
+      "size_scale": 20,
+      "adaptation_A": 0.1611,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0102,
+    "baseline_whole_net_rate": 0.0817
+  },
+  {
+    "seed": 18225,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.102,
+      "std_rate": 27.5782,
+      "min_rate": 12.8913,
+      "max_rate": 171.7649
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.8239,
+      "inp": 106.1782,
+      "theta": 48.1297,
+      "inp_over_theta": 2.2061,
+      "psi": 0.8394,
+      "gain_a": 0.1685,
+      "tau": 18.8126,
+      "rmax": 195.345,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.9627,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0075,
+      "inp": 61.4235,
+      "theta": 164.1186,
+      "inp_over_theta": 0.3743,
+      "psi": 0.302,
+      "gain_a": 0.0559,
+      "tau": 16.7014,
+      "rmax": 207.9344,
+      "size_scale": 20,
+      "adaptation_A": 0.242,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0116,
+    "baseline_whole_net_rate": 0.0829
+  },
+  {
+    "seed": 18226,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.6257,
+      "std_rate": 28.6979,
+      "min_rate": 12.8851,
+      "max_rate": 183.2398
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8561,
+      "inp": 91.3945,
+      "theta": 50.8571,
+      "inp_over_theta": 1.7971,
+      "psi": 0.8178,
+      "gain_a": 0.1777,
+      "tau": 23.0177,
+      "rmax": 194.873,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3003,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 41.284,
+      "theta": 150.9715,
+      "inp_over_theta": 0.2735,
+      "psi": 0.2388,
+      "gain_a": 0.0518,
+      "tau": 19.4301,
+      "rmax": 186.6912,
+      "size_scale": 20,
+      "adaptation_A": 0.0758,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0796
+  },
+  {
+    "seed": 18227,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.6643,
+      "std_rate": 24.583,
+      "min_rate": 10.3987,
+      "max_rate": 166.5219
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5398,
+      "inp": 96.5944,
+      "theta": 47.4302,
+      "inp_over_theta": 2.0366,
+      "psi": 0.8349,
+      "gain_a": 0.1736,
+      "tau": 19.0959,
+      "rmax": 194.0242,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6152,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0034,
+      "inp": 55.9641,
+      "theta": 152.5598,
+      "inp_over_theta": 0.3668,
+      "psi": 0.2992,
+      "gain_a": 0.0519,
+      "tau": 21.112,
+      "rmax": 197.9238,
+      "size_scale": 20,
+      "adaptation_A": 0.191,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0102,
+    "baseline_whole_net_rate": 0.0817
+  },
+  {
+    "seed": 18228,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.5537,
+      "std_rate": 25.3133,
+      "min_rate": 8.6117,
+      "max_rate": 170.4244
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.179,
+      "inp": 87.9724,
+      "theta": 45.0075,
+      "inp_over_theta": 1.9546,
+      "psi": 0.8313,
+      "gain_a": 0.1634,
+      "tau": 17.9281,
+      "rmax": 200.065,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4462,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0008,
+      "inp": 48.0732,
+      "theta": 143.1022,
+      "inp_over_theta": 0.3359,
+      "psi": 0.2802,
+      "gain_a": 0.0456,
+      "tau": 19.3783,
+      "rmax": 196.1628,
+      "size_scale": 20,
+      "adaptation_A": 0.1251,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0793
+  },
+  {
+    "seed": 18229,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.9889,
+      "std_rate": 25.494,
+      "min_rate": 11.0707,
+      "max_rate": 164.9584
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1786,
+      "inp": 99.3735,
+      "theta": 45.077,
+      "inp_over_theta": 2.2045,
+      "psi": 0.841,
+      "gain_a": 0.1342,
+      "tau": 18.7188,
+      "rmax": 194.5928,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4008,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0039,
+      "inp": 48.9072,
+      "theta": 130.6416,
+      "inp_over_theta": 0.3744,
+      "psi": 0.3031,
+      "gain_a": 0.0471,
+      "tau": 19.058,
+      "rmax": 199.6458,
+      "size_scale": 20,
+      "adaptation_A": 0.213,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0104,
+    "baseline_whole_net_rate": 0.0817
+  },
+  {
+    "seed": 18230,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.065,
+      "std_rate": 27.3507,
+      "min_rate": 13.4061,
+      "max_rate": 183.3273
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4129,
+      "inp": 98.44,
+      "theta": 43.116,
+      "inp_over_theta": 2.2831,
+      "psi": 0.8548,
+      "gain_a": 0.1712,
+      "tau": 22.9553,
+      "rmax": 204.2198,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5453,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0017,
+      "inp": 52.9519,
+      "theta": 147.7725,
+      "inp_over_theta": 0.3583,
+      "psi": 0.2965,
+      "gain_a": 0.0546,
+      "tau": 19.7857,
+      "rmax": 209.1255,
+      "size_scale": 20,
+      "adaptation_A": 0.1688,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0809
+  },
+  {
+    "seed": 18231,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8422,
+      "std_rate": 24.8044,
+      "min_rate": 11.3949,
+      "max_rate": 156.3832
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.3432,
+      "inp": 108.6128,
+      "theta": 51.6814,
+      "inp_over_theta": 2.1016,
+      "psi": 0.8378,
+      "gain_a": 0.1577,
+      "tau": 21.8798,
+      "rmax": 209.4121,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5976,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0012,
+      "inp": 53.158,
+      "theta": 156.2025,
+      "inp_over_theta": 0.3403,
+      "psi": 0.2818,
+      "gain_a": 0.041,
+      "tau": 20.5811,
+      "rmax": 190.2278,
+      "size_scale": 20,
+      "adaptation_A": 0.1934,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0806
+  },
+  {
+    "seed": 18232,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.8847,
+      "std_rate": 27.7763,
+      "min_rate": 10.8484,
+      "max_rate": 185.3596
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1988,
+      "inp": 97.3887,
+      "theta": 53.5267,
+      "inp_over_theta": 1.8194,
+      "psi": 0.8137,
+      "gain_a": 0.1589,
+      "tau": 18.1981,
+      "rmax": 190.7975,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4371,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.001,
+      "inp": 48.86,
+      "theta": 143.8453,
+      "inp_over_theta": 0.3397,
+      "psi": 0.2806,
+      "gain_a": 0.047,
+      "tau": 22.9972,
+      "rmax": 218.9654,
+      "size_scale": 20,
+      "adaptation_A": 0.1162,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0099,
+    "baseline_whole_net_rate": 0.0816
+  },
+  {
+    "seed": 18233,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.3883,
+      "std_rate": 26.3619,
+      "min_rate": 14.6049,
+      "max_rate": 184.8616
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2356,
+      "inp": 95.584,
+      "theta": 53.073,
+      "inp_over_theta": 1.801,
+      "psi": 0.8133,
+      "gain_a": 0.1651,
+      "tau": 17.8331,
+      "rmax": 171.3246,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4646,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0084,
+      "inp": 50.6387,
+      "theta": 131.1686,
+      "inp_over_theta": 0.3861,
+      "psi": 0.3055,
+      "gain_a": 0.0512,
+      "tau": 19.2949,
+      "rmax": 204.3441,
+      "size_scale": 20,
+      "adaptation_A": 0.2026,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0114,
+    "baseline_whole_net_rate": 0.084
+  },
+  {
+    "seed": 18234,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.3022,
+      "std_rate": 25.0854,
+      "min_rate": 12.915,
+      "max_rate": 170.2946
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.5524,
+      "inp": 90.9594,
+      "theta": 45.3138,
+      "inp_over_theta": 2.0073,
+      "psi": 0.8286,
+      "gain_a": 0.1201,
+      "tau": 19.9323,
+      "rmax": 206.6217,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.0587,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 36.0866,
+      "theta": 126.283,
+      "inp_over_theta": 0.2858,
+      "psi": 0.2475,
+      "gain_a": 0.0543,
+      "tau": 19.49,
+      "rmax": 200.6338,
+      "size_scale": 20,
+      "adaptation_A": 0.1034,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0805
+  },
+  {
+    "seed": 18235,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.2989,
+      "std_rate": 25.7993,
+      "min_rate": 8.5475,
+      "max_rate": 179.9375
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.7184,
+      "inp": 100.2357,
+      "theta": 49.998,
+      "inp_over_theta": 2.0048,
+      "psi": 0.8304,
+      "gain_a": 0.1683,
+      "tau": 16.9568,
+      "rmax": 208.7787,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7695,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0076,
+      "inp": 60.8078,
+      "theta": 160.1895,
+      "inp_over_theta": 0.3796,
+      "psi": 0.3044,
+      "gain_a": 0.0532,
+      "tau": 17.5779,
+      "rmax": 195.2032,
+      "size_scale": 20,
+      "adaptation_A": 0.2587,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0112,
+    "baseline_whole_net_rate": 0.0826
+  },
+  {
+    "seed": 18236,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8899,
+      "std_rate": 25.4351,
+      "min_rate": 9.0776,
+      "max_rate": 174.1018
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4649,
+      "inp": 97.9639,
+      "theta": 43.5579,
+      "inp_over_theta": 2.2491,
+      "psi": 0.8526,
+      "gain_a": 0.1557,
+      "tau": 19.0659,
+      "rmax": 195.4039,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5833,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0049,
+      "inp": 54.3169,
+      "theta": 140.2563,
+      "inp_over_theta": 0.3873,
+      "psi": 0.3121,
+      "gain_a": 0.0524,
+      "tau": 21.5743,
+      "rmax": 195.9406,
+      "size_scale": 20,
+      "adaptation_A": 0.2612,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0107,
+    "baseline_whole_net_rate": 0.082
+  },
+  {
+    "seed": 18237,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.0496,
+      "std_rate": 25.1816,
+      "min_rate": 13.021,
+      "max_rate": 167.7898
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.3565,
+      "inp": 95.0778,
+      "theta": 46.431,
+      "inp_over_theta": 2.0477,
+      "psi": 0.8283,
+      "gain_a": 0.1763,
+      "tau": 20.4327,
+      "rmax": 195.5936,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6766,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0013,
+      "inp": 51.9074,
+      "theta": 153.0885,
+      "inp_over_theta": 0.3391,
+      "psi": 0.2805,
+      "gain_a": 0.0481,
+      "tau": 19.653,
+      "rmax": 216.7983,
+      "size_scale": 20,
+      "adaptation_A": 0.2636,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0813
+  },
+  {
+    "seed": 18238,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8416,
+      "std_rate": 25.7121,
+      "min_rate": 8.7,
+      "max_rate": 177.0314
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5077,
+      "inp": 95.4995,
+      "theta": 45.4154,
+      "inp_over_theta": 2.1028,
+      "psi": 0.8347,
+      "gain_a": 0.1721,
+      "tau": 19.115,
+      "rmax": 209.8569,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6721,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0046,
+      "inp": 55.5998,
+      "theta": 148.5352,
+      "inp_over_theta": 0.3743,
+      "psi": 0.3018,
+      "gain_a": 0.0457,
+      "tau": 20.0257,
+      "rmax": 189.4926,
+      "size_scale": 20,
+      "adaptation_A": 0.1639,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0107,
+    "baseline_whole_net_rate": 0.0808
+  },
+  {
+    "seed": 18239,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.1373,
+      "std_rate": 27.2497,
+      "min_rate": 8.7462,
+      "max_rate": 181.7639
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0641,
+      "inp": 99.2215,
+      "theta": 46.5809,
+      "inp_over_theta": 2.1301,
+      "psi": 0.8485,
+      "gain_a": 0.1445,
+      "tau": 21.3635,
+      "rmax": 199.8268,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3528,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 46.4239,
+      "theta": 157.4798,
+      "inp_over_theta": 0.2948,
+      "psi": 0.2568,
+      "gain_a": 0.0557,
+      "tau": 17.014,
+      "rmax": 189.7208,
+      "size_scale": 20,
+      "adaptation_A": 0.0975,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0818
+  },
+  {
+    "seed": 18240,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9789,
+      "std_rate": 26.16,
+      "min_rate": 14.0737,
+      "max_rate": 187.6795
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4543,
+      "inp": 102.5765,
+      "theta": 51.3516,
+      "inp_over_theta": 1.9975,
+      "psi": 0.8336,
+      "gain_a": 0.172,
+      "tau": 20.3041,
+      "rmax": 202.8365,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.676,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0058,
+      "inp": 54.5585,
+      "theta": 144.4411,
+      "inp_over_theta": 0.3777,
+      "psi": 0.3034,
+      "gain_a": 0.0546,
+      "tau": 20.3283,
+      "rmax": 204.7649,
+      "size_scale": 20,
+      "adaptation_A": 0.2853,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.011,
+    "baseline_whole_net_rate": 0.0814
+  },
+  {
+    "seed": 18241,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9362,
+      "std_rate": 27.6579,
+      "min_rate": 11.9967,
+      "max_rate": 196.085
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8718,
+      "inp": 94.8858,
+      "theta": 49.7377,
+      "inp_over_theta": 1.9077,
+      "psi": 0.8159,
+      "gain_a": 0.1492,
+      "tau": 20.1038,
+      "rmax": 219.9692,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3981,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 42.9579,
+      "theta": 142.1285,
+      "inp_over_theta": 0.3022,
+      "psi": 0.2562,
+      "gain_a": 0.0498,
+      "tau": 20.275,
+      "rmax": 202.3602,
+      "size_scale": 20,
+      "adaptation_A": 0.1568,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0818
+  },
+  {
+    "seed": 18242,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.0891,
+      "std_rate": 25.0284,
+      "min_rate": 9.8276,
+      "max_rate": 171.8445
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1583,
+      "inp": 89.7197,
+      "theta": 43.256,
+      "inp_over_theta": 2.0742,
+      "psi": 0.8371,
+      "gain_a": 0.162,
+      "tau": 19.6203,
+      "rmax": 192.1534,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.434,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 49.1909,
+      "theta": 168.0331,
+      "inp_over_theta": 0.2927,
+      "psi": 0.253,
+      "gain_a": 0.0498,
+      "tau": 19.6229,
+      "rmax": 189.8346,
+      "size_scale": 20,
+      "adaptation_A": 0.147,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0801
+  },
+  {
+    "seed": 18243,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.6549,
+      "std_rate": 26.5162,
+      "min_rate": 12.5968,
+      "max_rate": 167.0303
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8534,
+      "inp": 97.9382,
+      "theta": 45.3981,
+      "inp_over_theta": 2.1573,
+      "psi": 0.8435,
+      "gain_a": 0.1424,
+      "tau": 23.1985,
+      "rmax": 192.6663,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3264,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 43.6063,
+      "theta": 153.4101,
+      "inp_over_theta": 0.2842,
+      "psi": 0.2477,
+      "gain_a": 0.0489,
+      "tau": 19.0517,
+      "rmax": 189.2563,
+      "size_scale": 20,
+      "adaptation_A": 0.112,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0828
+  },
+  {
+    "seed": 18244,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.0507,
+      "std_rate": 24.5519,
+      "min_rate": 9.148,
+      "max_rate": 181.0313
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2664,
+      "inp": 95.3787,
+      "theta": 42.8743,
+      "inp_over_theta": 2.2246,
+      "psi": 0.8465,
+      "gain_a": 0.148,
+      "tau": 18.9771,
+      "rmax": 210.2543,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4802,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0008,
+      "inp": 51.2047,
+      "theta": 148.3349,
+      "inp_over_theta": 0.3452,
+      "psi": 0.2876,
+      "gain_a": 0.0436,
+      "tau": 20.7698,
+      "rmax": 201.0915,
+      "size_scale": 20,
+      "adaptation_A": 0.1075,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0808
+  },
+  {
+    "seed": 18245,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 37.8916,
+      "std_rate": 23.4143,
+      "min_rate": 10.6173,
+      "max_rate": 178.8364
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1383,
+      "inp": 99.4212,
+      "theta": 50.7036,
+      "inp_over_theta": 1.9608,
+      "psi": 0.8308,
+      "gain_a": 0.1473,
+      "tau": 19.2162,
+      "rmax": 189.4316,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3692,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0003,
+      "inp": 48.9112,
+      "theta": 148.316,
+      "inp_over_theta": 0.3298,
+      "psi": 0.2771,
+      "gain_a": 0.0383,
+      "tau": 20.0786,
+      "rmax": 192.6947,
+      "size_scale": 20,
+      "adaptation_A": 0.0587,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0809
+  },
+  {
+    "seed": 18246,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.9695,
+      "std_rate": 29.673,
+      "min_rate": 11.4931,
+      "max_rate": 192.5465
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5828,
+      "inp": 102.4896,
+      "theta": 47.8177,
+      "inp_over_theta": 2.1433,
+      "psi": 0.853,
+      "gain_a": 0.1719,
+      "tau": 21.3843,
+      "rmax": 203.7318,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5396,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0067,
+      "inp": 56.4608,
+      "theta": 141.7768,
+      "inp_over_theta": 0.3982,
+      "psi": 0.3199,
+      "gain_a": 0.053,
+      "tau": 19.8566,
+      "rmax": 219.1269,
+      "size_scale": 20,
+      "adaptation_A": 0.1827,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0109,
+    "baseline_whole_net_rate": 0.0804
+  },
+  {
+    "seed": 18247,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 36.8986,
+      "std_rate": 22.1459,
+      "min_rate": 10.127,
+      "max_rate": 164.6442
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.3735,
+      "inp": 107.0118,
+      "theta": 47.8278,
+      "inp_over_theta": 2.2374,
+      "psi": 0.8588,
+      "gain_a": 0.1518,
+      "tau": 22.6103,
+      "rmax": 204.5718,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4262,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0002,
+      "inp": 54.0327,
+      "theta": 156.9666,
+      "inp_over_theta": 0.3442,
+      "psi": 0.2903,
+      "gain_a": 0.0413,
+      "tau": 21.3919,
+      "rmax": 204.4022,
+      "size_scale": 20,
+      "adaptation_A": 0.0695,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0096,
+    "baseline_whole_net_rate": 0.0833
+  },
+  {
+    "seed": 18248,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.2608,
+      "std_rate": 27.9328,
+      "min_rate": 10.6807,
+      "max_rate": 192.3959
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.3701,
+      "inp": 97.1409,
+      "theta": 49.8449,
+      "inp_over_theta": 1.9489,
+      "psi": 0.8351,
+      "gain_a": 0.167,
+      "tau": 18.8399,
+      "rmax": 192.9152,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5224,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0008,
+      "inp": 52.425,
+      "theta": 153.1622,
+      "inp_over_theta": 0.3423,
+      "psi": 0.2848,
+      "gain_a": 0.0444,
+      "tau": 23.3839,
+      "rmax": 205.5385,
+      "size_scale": 20,
+      "adaptation_A": 0.1321,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0796
+  },
+  {
+    "seed": 18249,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.3552,
+      "std_rate": 22.7568,
+      "min_rate": 10.6611,
+      "max_rate": 174.1945
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.9397,
+      "inp": 96.2277,
+      "theta": 48.7058,
+      "inp_over_theta": 1.9757,
+      "psi": 0.8281,
+      "gain_a": 0.1475,
+      "tau": 20.2197,
+      "rmax": 199.7513,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3931,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0017,
+      "inp": 44.5873,
+      "theta": 128.667,
+      "inp_over_theta": 0.3465,
+      "psi": 0.2836,
+      "gain_a": 0.0375,
+      "tau": 20.7283,
+      "rmax": 197.2307,
+      "size_scale": 20,
+      "adaptation_A": 0.1397,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0809
+  },
+  {
+    "seed": 18250,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.0049,
+      "std_rate": 23.6367,
+      "min_rate": 10.2153,
+      "max_rate": 172.8346
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.6172,
+      "inp": 93.5002,
+      "theta": 47.9269,
+      "inp_over_theta": 1.9509,
+      "psi": 0.8216,
+      "gain_a": 0.1349,
+      "tau": 22.0869,
+      "rmax": 183.5674,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.157,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 38.6042,
+      "theta": 171.1608,
+      "inp_over_theta": 0.2255,
+      "psi": 0.2047,
+      "gain_a": 0.0553,
+      "tau": 23.353,
+      "rmax": 200.6609,
+      "size_scale": 20,
+      "adaptation_A": 0.0471,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0823
+  },
+  {
+    "seed": 18251,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.1828,
+      "std_rate": 24.1286,
+      "min_rate": 11.2898,
+      "max_rate": 171.0345
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5726,
+      "inp": 103.4146,
+      "theta": 49.2023,
+      "inp_over_theta": 2.1018,
+      "psi": 0.8317,
+      "gain_a": 0.1581,
+      "tau": 18.05,
+      "rmax": 211.8969,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7622,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0046,
+      "inp": 57.5785,
+      "theta": 156.5256,
+      "inp_over_theta": 0.3679,
+      "psi": 0.298,
+      "gain_a": 0.0501,
+      "tau": 19.558,
+      "rmax": 171.6521,
+      "size_scale": 20,
+      "adaptation_A": 0.2248,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0107,
+    "baseline_whole_net_rate": 0.0823
+  },
+  {
+    "seed": 18252,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.1542,
+      "std_rate": 23.6244,
+      "min_rate": 11.6439,
+      "max_rate": 177.6456
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1907,
+      "inp": 99.951,
+      "theta": 48.5229,
+      "inp_over_theta": 2.0599,
+      "psi": 0.8408,
+      "gain_a": 0.1531,
+      "tau": 21.0071,
+      "rmax": 197.9024,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3806,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0029,
+      "inp": 49.6478,
+      "theta": 136.1389,
+      "inp_over_theta": 0.3647,
+      "psi": 0.2985,
+      "gain_a": 0.0513,
+      "tau": 19.1728,
+      "rmax": 198.1031,
+      "size_scale": 20,
+      "adaptation_A": 0.1475,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0101,
+    "baseline_whole_net_rate": 0.0808
+  },
+  {
+    "seed": 18253,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.5971,
+      "std_rate": 27.6974,
+      "min_rate": 12.3344,
+      "max_rate": 175.7435
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2845,
+      "inp": 98.4278,
+      "theta": 48.254,
+      "inp_over_theta": 2.0398,
+      "psi": 0.8303,
+      "gain_a": 0.158,
+      "tau": 19.4598,
+      "rmax": 204.1197,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5304,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0024,
+      "inp": 51.927,
+      "theta": 149.2346,
+      "inp_over_theta": 0.348,
+      "psi": 0.2862,
+      "gain_a": 0.048,
+      "tau": 16.3894,
+      "rmax": 203.5247,
+      "size_scale": 20,
+      "adaptation_A": 0.2588,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0816
+  },
+  {
+    "seed": 18254,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.1311,
+      "std_rate": 27.4783,
+      "min_rate": 10.0398,
+      "max_rate": 175.9104
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2569,
+      "inp": 94.5684,
+      "theta": 51.1721,
+      "inp_over_theta": 1.848,
+      "psi": 0.8219,
+      "gain_a": 0.1659,
+      "tau": 18.1676,
+      "rmax": 204.1136,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4247,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0006,
+      "inp": 49.8344,
+      "theta": 151.5475,
+      "inp_over_theta": 0.3288,
+      "psi": 0.2749,
+      "gain_a": 0.047,
+      "tau": 19.8335,
+      "rmax": 213.1524,
+      "size_scale": 20,
+      "adaptation_A": 0.1162,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0788
+  },
+  {
+    "seed": 18255,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.216,
+      "std_rate": 23.1191,
+      "min_rate": 12.1262,
+      "max_rate": 173.5367
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.6426,
+      "inp": 104.1872,
+      "theta": 44.8215,
+      "inp_over_theta": 2.3245,
+      "psi": 0.8529,
+      "gain_a": 0.1436,
+      "tau": 17.8381,
+      "rmax": 195.1569,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6233,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0036,
+      "inp": 58.3658,
+      "theta": 155.214,
+      "inp_over_theta": 0.376,
+      "psi": 0.3075,
+      "gain_a": 0.0498,
+      "tau": 18.8299,
+      "rmax": 188.5619,
+      "size_scale": 20,
+      "adaptation_A": 0.1618,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0103,
+    "baseline_whole_net_rate": 0.0834
+  },
+  {
+    "seed": 18256,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9576,
+      "std_rate": 27.7408,
+      "min_rate": 7.6341,
+      "max_rate": 177.3575
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1078,
+      "inp": 90.2381,
+      "theta": 46.2715,
+      "inp_over_theta": 1.9502,
+      "psi": 0.8295,
+      "gain_a": 0.1583,
+      "tau": 18.6551,
+      "rmax": 193.9998,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3937,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0004,
+      "inp": 47.4837,
+      "theta": 143.7674,
+      "inp_over_theta": 0.3303,
+      "psi": 0.2769,
+      "gain_a": 0.0488,
+      "tau": 22.8332,
+      "rmax": 212.9935,
+      "size_scale": 20,
+      "adaptation_A": 0.1042,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0806
+  },
+  {
+    "seed": 18257,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.3837,
+      "std_rate": 27.877,
+      "min_rate": 12.2327,
+      "max_rate": 179.2309
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0346,
+      "inp": 96.0024,
+      "theta": 48.9981,
+      "inp_over_theta": 1.9593,
+      "psi": 0.8325,
+      "gain_a": 0.1616,
+      "tau": 21.7049,
+      "rmax": 210.0492,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3941,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 45.9886,
+      "theta": 149.3247,
+      "inp_over_theta": 0.308,
+      "psi": 0.2628,
+      "gain_a": 0.0473,
+      "tau": 18.3484,
+      "rmax": 207.4242,
+      "size_scale": 20,
+      "adaptation_A": 0.1677,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0808
+  },
+  {
+    "seed": 18258,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.077,
+      "std_rate": 26.3141,
+      "min_rate": 13.1052,
+      "max_rate": 169.6373
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5099,
+      "inp": 99.5305,
+      "theta": 42.9242,
+      "inp_over_theta": 2.3188,
+      "psi": 0.8599,
+      "gain_a": 0.1565,
+      "tau": 20.0214,
+      "rmax": 194.2794,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5635,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0003,
+      "inp": 54.9806,
+      "theta": 162.5977,
+      "inp_over_theta": 0.3381,
+      "psi": 0.286,
+      "gain_a": 0.0575,
+      "tau": 20.0962,
+      "rmax": 199.0819,
+      "size_scale": 20,
+      "adaptation_A": 0.1213,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0806
+  },
+  {
+    "seed": 18259,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.4159,
+      "std_rate": 25.9843,
+      "min_rate": 12.9006,
+      "max_rate": 186.3496
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.863,
+      "inp": 101.077,
+      "theta": 51.5733,
+      "inp_over_theta": 1.9599,
+      "psi": 0.8277,
+      "gain_a": 0.1331,
+      "tau": 20.2412,
+      "rmax": 190.9068,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2236,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0002,
+      "inp": 42.7238,
+      "theta": 133.3546,
+      "inp_over_theta": 0.3204,
+      "psi": 0.2704,
+      "gain_a": 0.0473,
+      "tau": 18.0951,
+      "rmax": 203.3363,
+      "size_scale": 20,
+      "adaptation_A": 0.1228,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0096,
+    "baseline_whole_net_rate": 0.0807
+  },
+  {
+    "seed": 18260,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.0636,
+      "std_rate": 26.5168,
+      "min_rate": 13.2288,
+      "max_rate": 184.8282
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1152,
+      "inp": 100.1939,
+      "theta": 53.5797,
+      "inp_over_theta": 1.87,
+      "psi": 0.8165,
+      "gain_a": 0.1568,
+      "tau": 19.4172,
+      "rmax": 182.2447,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.484,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 47.324,
+      "theta": 167.5782,
+      "inp_over_theta": 0.2824,
+      "psi": 0.2442,
+      "gain_a": 0.049,
+      "tau": 18.8615,
+      "rmax": 209.362,
+      "size_scale": 20,
+      "adaptation_A": 0.0759,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0813
+  },
+  {
+    "seed": 18261,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.0487,
+      "std_rate": 25.4591,
+      "min_rate": 10.3958,
+      "max_rate": 184.104
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.9645,
+      "inp": 91.7704,
+      "theta": 49.3686,
+      "inp_over_theta": 1.8589,
+      "psi": 0.8218,
+      "gain_a": 0.1542,
+      "tau": 18.9268,
+      "rmax": 195.5162,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3335,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0007,
+      "inp": 44.6806,
+      "theta": 135.6189,
+      "inp_over_theta": 0.3295,
+      "psi": 0.2749,
+      "gain_a": 0.0495,
+      "tau": 20.1154,
+      "rmax": 203.9562,
+      "size_scale": 20,
+      "adaptation_A": 0.1164,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0815
+  },
+  {
+    "seed": 18262,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.0899,
+      "std_rate": 28.1511,
+      "min_rate": 8.1702,
+      "max_rate": 197.1383
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1166,
+      "inp": 98.9439,
+      "theta": 53.1718,
+      "inp_over_theta": 1.8608,
+      "psi": 0.8242,
+      "gain_a": 0.1432,
+      "tau": 17.6634,
+      "rmax": 219.2568,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3307,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0007,
+      "inp": 47.6425,
+      "theta": 143.3068,
+      "inp_over_theta": 0.3325,
+      "psi": 0.2779,
+      "gain_a": 0.0491,
+      "tau": 17.8935,
+      "rmax": 198.0165,
+      "size_scale": 20,
+      "adaptation_A": 0.1459,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.082
+  },
+  {
+    "seed": 18263,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9155,
+      "std_rate": 27.4097,
+      "min_rate": 11.0867,
+      "max_rate": 191.5358
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2826,
+      "inp": 97.2135,
+      "theta": 44.8356,
+      "inp_over_theta": 2.1682,
+      "psi": 0.8453,
+      "gain_a": 0.1571,
+      "tau": 20.8072,
+      "rmax": 206.3214,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4586,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0016,
+      "inp": 50.8589,
+      "theta": 142.4703,
+      "inp_over_theta": 0.357,
+      "psi": 0.2946,
+      "gain_a": 0.0454,
+      "tau": 20.2076,
+      "rmax": 186.4366,
+      "size_scale": 20,
+      "adaptation_A": 0.1019,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.082
+  },
+  {
+    "seed": 18264,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9923,
+      "std_rate": 27.3898,
+      "min_rate": 11.8984,
+      "max_rate": 176.4613
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.757,
+      "inp": 97.3028,
+      "theta": 50.0124,
+      "inp_over_theta": 1.9456,
+      "psi": 0.8348,
+      "gain_a": 0.1295,
+      "tau": 19.9254,
+      "rmax": 210.9345,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1721,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 40.1725,
+      "theta": 163.0854,
+      "inp_over_theta": 0.2463,
+      "psi": 0.2214,
+      "gain_a": 0.0503,
+      "tau": 22.8812,
+      "rmax": 197.8071,
+      "size_scale": 20,
+      "adaptation_A": 0.0488,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0814
+  },
+  {
+    "seed": 18265,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.0206,
+      "std_rate": 25.372,
+      "min_rate": 12.0524,
+      "max_rate": 160.0043
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.9486,
+      "inp": 95.315,
+      "theta": 45.3034,
+      "inp_over_theta": 2.1039,
+      "psi": 0.838,
+      "gain_a": 0.1452,
+      "tau": 21.1636,
+      "rmax": 194.1847,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3335,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0001,
+      "inp": 43.4406,
+      "theta": 136.301,
+      "inp_over_theta": 0.3187,
+      "psi": 0.27,
+      "gain_a": 0.0483,
+      "tau": 21.4324,
+      "rmax": 209.1623,
+      "size_scale": 20,
+      "adaptation_A": 0.1112,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0096,
+    "baseline_whole_net_rate": 0.0821
+  },
+  {
+    "seed": 18266,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.6236,
+      "std_rate": 24.6654,
+      "min_rate": 6.9209,
+      "max_rate": 164.4062
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1904,
+      "inp": 93.5194,
+      "theta": 49.0066,
+      "inp_over_theta": 1.9083,
+      "psi": 0.8208,
+      "gain_a": 0.1612,
+      "tau": 18.4343,
+      "rmax": 195.3538,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4926,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0008,
+      "inp": 49.0734,
+      "theta": 148.3186,
+      "inp_over_theta": 0.3309,
+      "psi": 0.2759,
+      "gain_a": 0.0514,
+      "tau": 20.2338,
+      "rmax": 210.5527,
+      "size_scale": 20,
+      "adaptation_A": 0.0912,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0839
+  },
+  {
+    "seed": 18267,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.5385,
+      "std_rate": 27.1372,
+      "min_rate": 10.8777,
+      "max_rate": 187.8983
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1905,
+      "inp": 90.5741,
+      "theta": 45.5148,
+      "inp_over_theta": 1.99,
+      "psi": 0.8317,
+      "gain_a": 0.1521,
+      "tau": 17.2652,
+      "rmax": 222.2981,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4053,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0005,
+      "inp": 48.8443,
+      "theta": 147.8677,
+      "inp_over_theta": 0.3303,
+      "psi": 0.2771,
+      "gain_a": 0.0522,
+      "tau": 19.1551,
+      "rmax": 200.46,
+      "size_scale": 20,
+      "adaptation_A": 0.1217,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.08
+  },
+  {
+    "seed": 18268,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8696,
+      "std_rate": 25.5804,
+      "min_rate": 10.6248,
+      "max_rate": 174.2327
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.7447,
+      "inp": 97.4907,
+      "theta": 44.4364,
+      "inp_over_theta": 2.1939,
+      "psi": 0.8461,
+      "gain_a": 0.1739,
+      "tau": 18.9153,
+      "rmax": 203.0585,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7051,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0034,
+      "inp": 60.3261,
+      "theta": 164.1127,
+      "inp_over_theta": 0.3676,
+      "psi": 0.3018,
+      "gain_a": 0.0552,
+      "tau": 18.7125,
+      "rmax": 199.5757,
+      "size_scale": 20,
+      "adaptation_A": 0.2887,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0103,
+    "baseline_whole_net_rate": 0.0797
+  },
+  {
+    "seed": 18269,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.9373,
+      "std_rate": 26.0974,
+      "min_rate": 9.2611,
+      "max_rate": 182.9788
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8104,
+      "inp": 87.5474,
+      "theta": 43.3182,
+      "inp_over_theta": 2.021,
+      "psi": 0.8394,
+      "gain_a": 0.1517,
+      "tau": 21.8704,
+      "rmax": 194.2686,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1727,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 40.2226,
+      "theta": 144.3193,
+      "inp_over_theta": 0.2787,
+      "psi": 0.2449,
+      "gain_a": 0.0455,
+      "tau": 20.5684,
+      "rmax": 200.5654,
+      "size_scale": 20,
+      "adaptation_A": 0.0856,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0782
+  },
+  {
+    "seed": 18270,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.7835,
+      "std_rate": 25.7848,
+      "min_rate": 12.8695,
+      "max_rate": 193.6016
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.6333,
+      "inp": 89.3277,
+      "theta": 51.5054,
+      "inp_over_theta": 1.7343,
+      "psi": 0.7993,
+      "gain_a": 0.1604,
+      "tau": 21.0167,
+      "rmax": 194.4576,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3311,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 37.5161,
+      "theta": 139.7823,
+      "inp_over_theta": 0.2684,
+      "psi": 0.2327,
+      "gain_a": 0.0505,
+      "tau": 19.2984,
+      "rmax": 197.0767,
+      "size_scale": 20,
+      "adaptation_A": 0.0837,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0825
+  },
+  {
+    "seed": 18271,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.6226,
+      "std_rate": 26.1776,
+      "min_rate": 8.9278,
+      "max_rate": 173.7632
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.806,
+      "inp": 89.7089,
+      "theta": 38.3468,
+      "inp_over_theta": 2.3394,
+      "psi": 0.8546,
+      "gain_a": 0.1314,
+      "tau": 21.4923,
+      "rmax": 206.388,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1694,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 40.8721,
+      "theta": 146.0471,
+      "inp_over_theta": 0.2799,
+      "psi": 0.2468,
+      "gain_a": 0.0495,
+      "tau": 21.1904,
+      "rmax": 185.0486,
+      "size_scale": 20,
+      "adaptation_A": 0.0248,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.08
+  },
+  {
+    "seed": 18272,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.1894,
+      "std_rate": 23.2125,
+      "min_rate": 8.1924,
+      "max_rate": 169.7688
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 3.0007,
+      "inp": 97.6137,
+      "theta": 41.7337,
+      "inp_over_theta": 2.339,
+      "psi": 0.856,
+      "gain_a": 0.1775,
+      "tau": 18.5459,
+      "rmax": 210.0549,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7873,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0109,
+      "inp": 64.8887,
+      "theta": 152.5599,
+      "inp_over_theta": 0.4253,
+      "psi": 0.3343,
+      "gain_a": 0.0453,
+      "tau": 21.2524,
+      "rmax": 201.8705,
+      "size_scale": 20,
+      "adaptation_A": 0.2376,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0122,
+    "baseline_whole_net_rate": 0.0796
+  },
+  {
+    "seed": 18273,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.7257,
+      "std_rate": 30.5385,
+      "min_rate": 11.927,
+      "max_rate": 199.1414
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.772,
+      "inp": 90.5558,
+      "theta": 45.1361,
+      "inp_over_theta": 2.0063,
+      "psi": 0.834,
+      "gain_a": 0.1274,
+      "tau": 18.3067,
+      "rmax": 176.9034,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1451,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 40.2655,
+      "theta": 146.8653,
+      "inp_over_theta": 0.2742,
+      "psi": 0.2411,
+      "gain_a": 0.0493,
+      "tau": 19.4855,
+      "rmax": 191.5348,
+      "size_scale": 20,
+      "adaptation_A": 0.0606,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0797
+  },
+  {
+    "seed": 18274,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.5491,
+      "std_rate": 25.1206,
+      "min_rate": 13.5495,
+      "max_rate": 174.7246
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1582,
+      "inp": 100.2998,
+      "theta": 52.8835,
+      "inp_over_theta": 1.8966,
+      "psi": 0.8289,
+      "gain_a": 0.1709,
+      "tau": 21.8225,
+      "rmax": 191.8073,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4623,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 48.2697,
+      "theta": 156.5386,
+      "inp_over_theta": 0.3084,
+      "psi": 0.2626,
+      "gain_a": 0.0512,
+      "tau": 23.5623,
+      "rmax": 199.0065,
+      "size_scale": 20,
+      "adaptation_A": 0.1141,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0819
+  },
+  {
+    "seed": 18275,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.3243,
+      "std_rate": 29.4898,
+      "min_rate": 10.2519,
+      "max_rate": 190.4729
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0227,
+      "inp": 97.7943,
+      "theta": 45.3694,
+      "inp_over_theta": 2.1555,
+      "psi": 0.8326,
+      "gain_a": 0.1499,
+      "tau": 21.9596,
+      "rmax": 203.9243,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4646,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 46.4313,
+      "theta": 155.5864,
+      "inp_over_theta": 0.2984,
+      "psi": 0.2557,
+      "gain_a": 0.0508,
+      "tau": 23.0326,
+      "rmax": 208.5299,
+      "size_scale": 20,
+      "adaptation_A": 0.2118,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0831
+  },
+  {
+    "seed": 18276,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.541,
+      "std_rate": 28.0594,
+      "min_rate": 10.2227,
+      "max_rate": 181.6705
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4431,
+      "inp": 92.0269,
+      "theta": 48.374,
+      "inp_over_theta": 1.9024,
+      "psi": 0.8203,
+      "gain_a": 0.1769,
+      "tau": 17.6861,
+      "rmax": 192.0258,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6355,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0136,
+      "inp": 55.2945,
+      "theta": 129.931,
+      "inp_over_theta": 0.4256,
+      "psi": 0.3256,
+      "gain_a": 0.0439,
+      "tau": 22.033,
+      "rmax": 203.6899,
+      "size_scale": 20,
+      "adaptation_A": 0.1925,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0126,
+    "baseline_whole_net_rate": 0.0838
+  },
+  {
+    "seed": 18277,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 38.8054,
+      "std_rate": 25.5865,
+      "min_rate": 10.387,
+      "max_rate": 188.4491
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.3988,
+      "inp": 101.0202,
+      "theta": 49.3601,
+      "inp_over_theta": 2.0466,
+      "psi": 0.8304,
+      "gain_a": 0.1506,
+      "tau": 17.5369,
+      "rmax": 198.0697,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6288,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0011,
+      "inp": 53.2126,
+      "theta": 156.5404,
+      "inp_over_theta": 0.3399,
+      "psi": 0.2822,
+      "gain_a": 0.0444,
+      "tau": 16.7618,
+      "rmax": 208.4474,
+      "size_scale": 20,
+      "adaptation_A": 0.146,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0848
+  },
+  {
+    "seed": 18278,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.4799,
+      "std_rate": 28.0438,
+      "min_rate": 12.8494,
+      "max_rate": 181.8997
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.4263,
+      "inp": 84.3879,
+      "theta": 48.1957,
+      "inp_over_theta": 1.7509,
+      "psi": 0.8089,
+      "gain_a": 0.1365,
+      "tau": 20.2044,
+      "rmax": 197.5795,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.0239,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 33.546,
+      "theta": 163.6827,
+      "inp_over_theta": 0.2049,
+      "psi": 0.1885,
+      "gain_a": 0.048,
+      "tau": 22.8876,
+      "rmax": 191.8227,
+      "size_scale": 20,
+      "adaptation_A": 0,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0814
+  },
+  {
+    "seed": 18279,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.1155,
+      "std_rate": 26.1618,
+      "min_rate": 9.3116,
+      "max_rate": 165.7879
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8258,
+      "inp": 91.1068,
+      "theta": 47.3812,
+      "inp_over_theta": 1.9228,
+      "psi": 0.8219,
+      "gain_a": 0.1561,
+      "tau": 21.3189,
+      "rmax": 196.2193,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.345,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 41.1085,
+      "theta": 147.0546,
+      "inp_over_theta": 0.2795,
+      "psi": 0.2424,
+      "gain_a": 0.0542,
+      "tau": 19.0567,
+      "rmax": 203.6653,
+      "size_scale": 20,
+      "adaptation_A": 0.176,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0806
+  },
+  {
+    "seed": 18280,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.2493,
+      "std_rate": 26.3682,
+      "min_rate": 12.012,
+      "max_rate": 182.7686
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1158,
+      "inp": 92.6529,
+      "theta": 42.3868,
+      "inp_over_theta": 2.1859,
+      "psi": 0.8457,
+      "gain_a": 0.1594,
+      "tau": 21.4299,
+      "rmax": 212.6343,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4334,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 47.1062,
+      "theta": 170.2916,
+      "inp_over_theta": 0.2766,
+      "psi": 0.2433,
+      "gain_a": 0.0452,
+      "tau": 23.3417,
+      "rmax": 197.2314,
+      "size_scale": 20,
+      "adaptation_A": 0.0659,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0806
+  },
+  {
+    "seed": 18281,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.8734,
+      "std_rate": 28.176,
+      "min_rate": 10.7632,
+      "max_rate": 192.2737
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.6174,
+      "inp": 93.8194,
+      "theta": 51.76,
+      "inp_over_theta": 1.8126,
+      "psi": 0.8159,
+      "gain_a": 0.1504,
+      "tau": 22.764,
+      "rmax": 202.355,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1988,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 37.1544,
+      "theta": 162.962,
+      "inp_over_theta": 0.228,
+      "psi": 0.2057,
+      "gain_a": 0.0424,
+      "tau": 20.903,
+      "rmax": 199.8337,
+      "size_scale": 20,
+      "adaptation_A": 0.0778,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0822
+  },
+  {
+    "seed": 18282,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.7219,
+      "std_rate": 25.6672,
+      "min_rate": 13.3756,
+      "max_rate": 184.2325
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8466,
+      "inp": 91.6611,
+      "theta": 51.4088,
+      "inp_over_theta": 1.783,
+      "psi": 0.8081,
+      "gain_a": 0.164,
+      "tau": 20.0238,
+      "rmax": 215.2111,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4166,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 42.273,
+      "theta": 153.3772,
+      "inp_over_theta": 0.2756,
+      "psi": 0.2381,
+      "gain_a": 0.0429,
+      "tau": 18.7067,
+      "rmax": 194.9266,
+      "size_scale": 20,
+      "adaptation_A": 0.1302,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0814
+  },
+  {
+    "seed": 18283,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.7807,
+      "std_rate": 27.3559,
+      "min_rate": 10.8156,
+      "max_rate": 177.1469
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2716,
+      "inp": 100.1574,
+      "theta": 42.7321,
+      "inp_over_theta": 2.3438,
+      "psi": 0.8595,
+      "gain_a": 0.1439,
+      "tau": 20.6352,
+      "rmax": 212.3148,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4397,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0005,
+      "inp": 50.1293,
+      "theta": 147.7253,
+      "inp_over_theta": 0.3393,
+      "psi": 0.2857,
+      "gain_a": 0.0464,
+      "tau": 16.8019,
+      "rmax": 198.131,
+      "size_scale": 20,
+      "adaptation_A": 0.2392,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0804
+  },
+  {
+    "seed": 18284,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.211,
+      "std_rate": 25.8122,
+      "min_rate": 11.1696,
+      "max_rate": 162.5627
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.7085,
+      "inp": 94.6764,
+      "theta": 48.2927,
+      "inp_over_theta": 1.9605,
+      "psi": 0.8318,
+      "gain_a": 0.1342,
+      "tau": 21.2287,
+      "rmax": 225.494,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.1549,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 38.7121,
+      "theta": 161.3864,
+      "inp_over_theta": 0.2399,
+      "psi": 0.2163,
+      "gain_a": 0.051,
+      "tau": 23.1962,
+      "rmax": 201.4322,
+      "size_scale": 20,
+      "adaptation_A": 0.0544,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0808
+  },
+  {
+    "seed": 18285,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.4239,
+      "std_rate": 28.1973,
+      "min_rate": 12.4225,
+      "max_rate": 183.3339
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.9787,
+      "inp": 95.8556,
+      "theta": 41.5584,
+      "inp_over_theta": 2.3065,
+      "psi": 0.8601,
+      "gain_a": 0.1591,
+      "tau": 15.5664,
+      "rmax": 201.5833,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7226,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0081,
+      "inp": 64.25,
+      "theta": 157.5763,
+      "inp_over_theta": 0.4077,
+      "psi": 0.3268,
+      "gain_a": 0.0558,
+      "tau": 21.8462,
+      "rmax": 196.4724,
+      "size_scale": 20,
+      "adaptation_A": 0.2757,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0113,
+    "baseline_whole_net_rate": 0.0793
+  },
+  {
+    "seed": 18286,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.7394,
+      "std_rate": 24.2045,
+      "min_rate": 10.375,
+      "max_rate": 164.7979
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8705,
+      "inp": 93.287,
+      "theta": 48.9313,
+      "inp_over_theta": 1.9065,
+      "psi": 0.8241,
+      "gain_a": 0.1393,
+      "tau": 18.4499,
+      "rmax": 194.1456,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2743,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 42.3939,
+      "theta": 155.0678,
+      "inp_over_theta": 0.2734,
+      "psi": 0.239,
+      "gain_a": 0.0408,
+      "tau": 21.9955,
+      "rmax": 190.5872,
+      "size_scale": 20,
+      "adaptation_A": 0.0838,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0803
+  },
+  {
+    "seed": 18287,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.5779,
+      "std_rate": 24.7453,
+      "min_rate": 12.2915,
+      "max_rate": 176.0298
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4387,
+      "inp": 106.7992,
+      "theta": 44.549,
+      "inp_over_theta": 2.3973,
+      "psi": 0.8609,
+      "gain_a": 0.1636,
+      "tau": 24.4524,
+      "rmax": 207.302,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5925,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0045,
+      "inp": 55.1008,
+      "theta": 144.6857,
+      "inp_over_theta": 0.3808,
+      "psi": 0.3093,
+      "gain_a": 0.0526,
+      "tau": 20.1372,
+      "rmax": 206.6256,
+      "size_scale": 20,
+      "adaptation_A": 0.2627,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0106,
+    "baseline_whole_net_rate": 0.0812
+  },
+  {
+    "seed": 18288,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.1328,
+      "std_rate": 26.7137,
+      "min_rate": 14.1075,
+      "max_rate": 173.3142
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0609,
+      "inp": 94.5629,
+      "theta": 50.5057,
+      "inp_over_theta": 1.8723,
+      "psi": 0.8155,
+      "gain_a": 0.1612,
+      "tau": 19.0347,
+      "rmax": 205.3902,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5022,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 47.4261,
+      "theta": 155.5948,
+      "inp_over_theta": 0.3048,
+      "psi": 0.258,
+      "gain_a": 0.0556,
+      "tau": 23.069,
+      "rmax": 213.0157,
+      "size_scale": 20,
+      "adaptation_A": 0.1625,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0805
+  },
+  {
+    "seed": 18289,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.6623,
+      "std_rate": 27.9752,
+      "min_rate": 11.6043,
+      "max_rate": 182.7409
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4904,
+      "inp": 93.916,
+      "theta": 43.439,
+      "inp_over_theta": 2.162,
+      "psi": 0.8432,
+      "gain_a": 0.1768,
+      "tau": 20.4403,
+      "rmax": 196.4952,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.6108,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0051,
+      "inp": 55.2821,
+      "theta": 145.8349,
+      "inp_over_theta": 0.3791,
+      "psi": 0.3059,
+      "gain_a": 0.0527,
+      "tau": 20.3912,
+      "rmax": 194.2141,
+      "size_scale": 20,
+      "adaptation_A": 0.285,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0108,
+    "baseline_whole_net_rate": 0.0804
+  },
+  {
+    "seed": 18290,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.4934,
+      "std_rate": 28.1472,
+      "min_rate": 10.7694,
+      "max_rate": 190.2809
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0549,
+      "inp": 90.7441,
+      "theta": 50.9262,
+      "inp_over_theta": 1.7819,
+      "psi": 0.8146,
+      "gain_a": 0.1681,
+      "tau": 18.5439,
+      "rmax": 204.9828,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4101,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0003,
+      "inp": 45.1116,
+      "theta": 141.9135,
+      "inp_over_theta": 0.3179,
+      "psi": 0.2669,
+      "gain_a": 0.0404,
+      "tau": 22.9699,
+      "rmax": 189.1823,
+      "size_scale": 20,
+      "adaptation_A": 0.0799,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0785
+  },
+  {
+    "seed": 18291,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.9524,
+      "std_rate": 27.6073,
+      "min_rate": 10.0479,
+      "max_rate": 185.9613
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.4974,
+      "inp": 98.1864,
+      "theta": 45.5629,
+      "inp_over_theta": 2.155,
+      "psi": 0.8405,
+      "gain_a": 0.1719,
+      "tau": 20.2112,
+      "rmax": 211.287,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7085,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0047,
+      "inp": 56.0324,
+      "theta": 151.6372,
+      "inp_over_theta": 0.3695,
+      "psi": 0.2986,
+      "gain_a": 0.0503,
+      "tau": 20.8497,
+      "rmax": 217.3506,
+      "size_scale": 20,
+      "adaptation_A": 0.2733,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0107,
+    "baseline_whole_net_rate": 0.0824
+  },
+  {
+    "seed": 18292,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.8903,
+      "std_rate": 26.1718,
+      "min_rate": 11.0106,
+      "max_rate": 168.4198
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.0218,
+      "inp": 95.7435,
+      "theta": 44.0766,
+      "inp_over_theta": 2.1722,
+      "psi": 0.8429,
+      "gain_a": 0.1426,
+      "tau": 20.8257,
+      "rmax": 191.8596,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.3329,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 46.5481,
+      "theta": 146.637,
+      "inp_over_theta": 0.3174,
+      "psi": 0.2693,
+      "gain_a": 0.0544,
+      "tau": 20.9638,
+      "rmax": 188.5975,
+      "size_scale": 20,
+      "adaptation_A": 0.2093,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0096,
+    "baseline_whole_net_rate": 0.0814
+  },
+  {
+    "seed": 18293,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.281,
+      "std_rate": 27.6681,
+      "min_rate": 12.425,
+      "max_rate": 186.9487
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2366,
+      "inp": 101.7692,
+      "theta": 48.5166,
+      "inp_over_theta": 2.0976,
+      "psi": 0.837,
+      "gain_a": 0.1461,
+      "tau": 19.7098,
+      "rmax": 207.2039,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.47,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0065,
+      "inp": 49.3961,
+      "theta": 124.5898,
+      "inp_over_theta": 0.3965,
+      "psi": 0.3145,
+      "gain_a": 0.0444,
+      "tau": 20.6124,
+      "rmax": 200.0224,
+      "size_scale": 20,
+      "adaptation_A": 0.2115,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0108,
+    "baseline_whole_net_rate": 0.0814
+  },
+  {
+    "seed": 18294,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.239,
+      "std_rate": 25.1501,
+      "min_rate": 11.1664,
+      "max_rate": 178.915
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.1965,
+      "inp": 101.7011,
+      "theta": 45.5066,
+      "inp_over_theta": 2.2349,
+      "psi": 0.851,
+      "gain_a": 0.1575,
+      "tau": 23.4811,
+      "rmax": 207.9491,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4521,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0003,
+      "inp": 49.5177,
+      "theta": 148.0705,
+      "inp_over_theta": 0.3344,
+      "psi": 0.2815,
+      "gain_a": 0.0473,
+      "tau": 23.9945,
+      "rmax": 201.538,
+      "size_scale": 20,
+      "adaptation_A": 0.1538,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0827
+  },
+  {
+    "seed": 18295,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 41.0063,
+      "std_rate": 30.4413,
+      "min_rate": 10.6943,
+      "max_rate": 191.5037
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.5135,
+      "inp": 98.1017,
+      "theta": 50.009,
+      "inp_over_theta": 1.9617,
+      "psi": 0.8326,
+      "gain_a": 0.1627,
+      "tau": 17.2949,
+      "rmax": 198.5796,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5886,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0019,
+      "inp": 55.5323,
+      "theta": 157.5502,
+      "inp_over_theta": 0.3525,
+      "psi": 0.2908,
+      "gain_a": 0.0485,
+      "tau": 18.6562,
+      "rmax": 195.2619,
+      "size_scale": 20,
+      "adaptation_A": 0.1764,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0802
+  },
+  {
+    "seed": 18296,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.3312,
+      "std_rate": 26.2255,
+      "min_rate": 11.242,
+      "max_rate": 178.8735
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 1.8271,
+      "inp": 95.1072,
+      "theta": 45.4384,
+      "inp_over_theta": 2.0931,
+      "psi": 0.8367,
+      "gain_a": 0.1482,
+      "tau": 23.541,
+      "rmax": 185.2925,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.2487,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 43.5461,
+      "theta": 163.8885,
+      "inp_over_theta": 0.2657,
+      "psi": 0.2353,
+      "gain_a": 0.0383,
+      "tau": 21.0789,
+      "rmax": 191.8489,
+      "size_scale": 20,
+      "adaptation_A": 0.0281,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.0825
+  },
+  {
+    "seed": 18297,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.8239,
+      "std_rate": 28.1145,
+      "min_rate": 9.8117,
+      "max_rate": 176.7399
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.2302,
+      "inp": 100.4575,
+      "theta": 48.5678,
+      "inp_over_theta": 2.0684,
+      "psi": 0.838,
+      "gain_a": 0.1462,
+      "tau": 19.138,
+      "rmax": 186.3368,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.4264,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0016,
+      "inp": 49.6542,
+      "theta": 140.7498,
+      "inp_over_theta": 0.3528,
+      "psi": 0.2908,
+      "gain_a": 0.05,
+      "tau": 21.6761,
+      "rmax": 186.7987,
+      "size_scale": 20,
+      "adaptation_A": 0.2048,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0097,
+    "baseline_whole_net_rate": 0.0808
+  },
+  {
+    "seed": 18298,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 39.2707,
+      "std_rate": 26.2089,
+      "min_rate": 10.4202,
+      "max_rate": 171.6428
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.895,
+      "inp": 99.9855,
+      "theta": 40.7241,
+      "inp_over_theta": 2.4552,
+      "psi": 0.8644,
+      "gain_a": 0.1708,
+      "tau": 19.8787,
+      "rmax": 207.2346,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.7866,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0.0008,
+      "inp": 64.8814,
+      "theta": 184.2112,
+      "inp_over_theta": 0.3522,
+      "psi": 0.2955,
+      "gain_a": 0.0537,
+      "tau": 21.7939,
+      "rmax": 184.0521,
+      "size_scale": 20,
+      "adaptation_A": 0.1411,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.0098,
+    "baseline_whole_net_rate": 0.0818
+  },
+  {
+    "seed": 18299,
+    "tactile_receptors": {
+      "count": 115,
+      "mean_rate": 40.1003,
+      "std_rate": 26.3374,
+      "min_rate": 12.122,
+      "max_rate": 164.1264
+    },
+    "an03a008": {
+      "index": 2937,
+      "evoked_rate": 2.312,
+      "inp": 99.4871,
+      "theta": 50.1609,
+      "inp_over_theta": 1.9834,
+      "psi": 0.8323,
+      "gain_a": 0.1784,
+      "tau": 22.1904,
+      "rmax": 205.6643,
+      "size_scale": 6.3741,
+      "adaptation_A": 1.5794,
+      "depression_u": 1
+    },
+    "dna02": {
+      "index": 332,
+      "evoked_rate": 0,
+      "inp": 50.8432,
+      "theta": 166.0636,
+      "inp_over_theta": 0.3062,
+      "psi": 0.2622,
+      "gain_a": 0.0458,
+      "tau": 20.6818,
+      "rmax": 199.8187,
+      "size_scale": 20,
+      "adaptation_A": 0.1683,
+      "depression_u": 1
+    },
+    "baseline_turn_right_strength": 0.01,
+    "baseline_whole_net_rate": 0.082
+  }
+]

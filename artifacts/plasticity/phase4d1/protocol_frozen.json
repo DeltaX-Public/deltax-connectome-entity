@@ -1,0 +1,107 @@
+{
+  "schema": "deltax.plasticity.protocol_frozen.v1",
+  "timestamp": "2026-09-19T17:00:00.000Z",
+  "phase": "IV-D.1 First Substrate Learning Experiment",
+  "author": "Primary Plasticity Lane (Lane A)",
+  "status": "FROZEN_PRE_RUN",
+  "cohort": {
+    "type": "DEVELOPMENT",
+    "seed_range": [18000, 18049],
+    "N": 50,
+    "held_out_preserved": true
+  },
+  "conditions": [
+    {
+      "condition_id": "P0",
+      "label": "Fixed Baseline",
+      "rule": "PLASTICITY_NONE",
+      "target_manifest": null,
+      "modulatory_gating": "NONE",
+      "scientific_role": "Negative control for neural rate drift without weight changes"
+    },
+    {
+      "condition_id": "P1",
+      "label": "Ungated Local Control",
+      "rule": "LOCAL_HEBBIAN",
+      "target_manifest": "TARGET_C_BALANCED_TWO_STAGE",
+      "modulatory_gating": "NONE_UNGATED",
+      "scientific_role": "Associative co-activity without consequence feedback"
+    },
+    {
+      "condition_id": "P2",
+      "label": "Afferent Gated",
+      "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+      "target_manifest": "TARGET_A_AFFERENT_ONLY",
+      "modulatory_gating": "SCALAR_G_T",
+      "scientific_role": "Adapting sensory convergence alone"
+    },
+    {
+      "condition_id": "P3",
+      "label": "Projection Gated",
+      "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+      "target_manifest": "TARGET_B_PROJECTION_ONLY",
+      "modulatory_gating": "SCALAR_G_T",
+      "scientific_role": "Adapting premotor projection efficacy alone"
+    },
+    {
+      "condition_id": "P4",
+      "label": "Balanced Two-Stage Gated",
+      "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+      "target_manifest": "TARGET_C_BALANCED_TWO_STAGE",
+      "modulatory_gating": "SCALAR_G_T",
+      "scientific_role": "Balanced adaptation across both afferent and premotor stages"
+    },
+    {
+      "condition_id": "P5",
+      "label": "Matched Sham Control",
+      "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+      "target_manifest": "TARGET_D_MATCHED_SHAM",
+      "modulatory_gating": "SCALAR_G_T",
+      "scientific_role": "Structurally matched negative control uncoupled from DNa02"
+    }
+  ],
+  "frozen_parameters": {
+    "learning_rate_eta": 0.15,
+    "eligibility_trace_decay_lambda_e": 0.05,
+    "passive_efficacy_decay_gamma": 0.0005,
+    "per_step_update_rate_limit": 5.0,
+    "global_modification_budget": 420.0,
+    "induction_cycles": 30,
+    "cycle_schedule": {
+      "onset_ticks": 3,
+      "clearance_ticks": 2,
+      "iti_ticks": 5,
+      "total_ticks_per_cycle": 10,
+      "ms_per_tick": 10
+    },
+    "tactile_stimulation": {
+      "population": "tactile T1 right",
+      "sensor_count": 115,
+      "frequency_hz": 180.0
+    },
+    "evaluation_probe": {
+      "total_steps": 60,
+      "substeps_per_tick": 1,
+      "stimulus_active_window": [11, 35],
+      "stimulus_frequency_hz": 180.0
+    },
+    "consequence_signal": {
+      "formula": "g_t = 0.0 (HOLD) during onset contact; g_t = +1.0 (REINFORCE) upon contact clearance/reduction; 0.0 during ITI",
+      "progress_term": "EXCLUDED (strictly zeroed / omitted)",
+      "goal_coordinates_used": false,
+      "directional_labels_used": false,
+      "maze_geometry_used": false,
+      "mirror_symmetry": true
+    },
+    "reset_semantics": "alpha -> 1.0 exact; net.weights restored to initialActiveWeights; baseSynapseCounts S_ij immutable"
+  },
+  "pre_registered_success_criteria": {
+    "criterion_1": "Right DNa02 evoked rate increases materially above pre-induction level (> 0.10 Hz)",
+    "criterion_2": "turn_right candidate strength crosses executable threshold (> 0.05)",
+    "criterion_3": "Effect replicates across >= 50% of development seeds (>= 25/50)",
+    "criterion_4": "Matched sham (P5) produces zero right-steering recruitment",
+    "criterion_5": "Off-target whole-network rate divergence remains within +10% bound",
+    "criterion_6": "Existing left tactile steering is not catastrophically degraded",
+    "criterion_7": "Causal reset (Branch B) removes acquired response, proving synaptic causality"
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "P0": {
+    "condition_id": "P0",
+    "label": "Fixed Baseline",
+    "rule": "PLASTICITY_NONE",
+    "manifest": null,
+    "N": 50,
+    "right_dna02": {
+      "pre_mean": 0.002,
+      "post_mean": 0.002,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.0003,
+      "recruits_count": 0,
+      "recruits_pct": 0
+    },
+    "turn_right_strength": {
+      "pre_mean": 0.0102,
+      "post_mean": 0.0102,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.01,
+      "crosses_exec_threshold_count": 0,
+      "crosses_exec_threshold_pct": 0
+    },
+    "right_an03a008": {
+      "pre_mean": 2.1384,
+      "post_mean": 2.1384,
+      "diff_mean": 0
+    },
+    "off_target_network": {
+      "mean_divergence_pct": 0,
+      "within_safety_bound": true
+    },
+    "left_steering_preservation": {
+      "left_dna02_pre_mean": 1.4341,
+      "left_dna02_post_mean": 1.4341,
+      "preserved": true
+    },
+    "budget_and_saturation": {
+      "mean_budget_used": 0,
+      "seeds_with_saturation": 0
+    },
+    "preregistered_verdict": {
+      "criterion_1_dna02_increase": false,
+      "criterion_2_exec_strength": false,
+      "criterion_3_replication_rate": false,
+      "criterion_4_sham_negative": true,
+      "criterion_5_off_target_safe": true,
+      "criterion_6_left_preserved": true
+    }
+  },
+  "P1": {
+    "condition_id": "P1",
+    "label": "Ungated Local Control",
+    "rule": "LOCAL_HEBBIAN",
+    "manifest": "TARGET_C",
+    "N": 50,
+    "right_dna02": {
+      "pre_mean": 0.002,
+      "post_mean": 0.002,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.0003,
+      "recruits_count": 0,
+      "recruits_pct": 0
+    },
+    "turn_right_strength": {
+      "pre_mean": 0.0102,
+      "post_mean": 0.0102,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.01,
+      "crosses_exec_threshold_count": 0,
+      "crosses_exec_threshold_pct": 0
+    },
+    "right_an03a008": {
+      "pre_mean": 2.1384,
+      "post_mean": 2.1384,
+      "diff_mean": 0
+    },
+    "off_target_network": {
+      "mean_divergence_pct": 0,
+      "within_safety_bound": true
+    },
+    "left_steering_preservation": {
+      "left_dna02_pre_mean": 1.4341,
+      "left_dna02_post_mean": 1.4341,
+      "preserved": true
+    },
+    "budget_and_saturation": {
+      "mean_budget_used": 0.0014,
+      "seeds_with_saturation": 0
+    },
+    "preregistered_verdict": {
+      "criterion_1_dna02_increase": false,
+      "criterion_2_exec_strength": false,
+      "criterion_3_replication_rate": false,
+      "criterion_4_sham_negative": true,
+      "criterion_5_off_target_safe": true,
+      "criterion_6_left_preserved": true
+    }
+  },
+  "P2": {
+    "condition_id": "P2",
+    "label": "Afferent Gated",
+    "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+    "manifest": "TARGET_A",
+    "N": 50,
+    "right_dna02": {
+      "pre_mean": 0.002,
+      "post_mean": 0.002,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.0003,
+      "recruits_count": 0,
+      "recruits_pct": 0
+    },
+    "turn_right_strength": {
+      "pre_mean": 0.0102,
+      "post_mean": 0.0102,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.01,
+      "crosses_exec_threshold_count": 0,
+      "crosses_exec_threshold_pct": 0
+    },
+    "right_an03a008": {
+      "pre_mean": 2.1384,
+      "post_mean": 2.1384,
+      "diff_mean": 0
+    },
+    "off_target_network": {
+      "mean_divergence_pct": 0,
+      "within_safety_bound": true
+    },
+    "left_steering_preservation": {
+      "left_dna02_pre_mean": 1.4341,
+      "left_dna02_post_mean": 1.4341,
+      "preserved": true
+    },
+    "budget_and_saturation": {
+      "mean_budget_used": 0.0005,
+      "seeds_with_saturation": 0
+    },
+    "preregistered_verdict": {
+      "criterion_1_dna02_increase": false,
+      "criterion_2_exec_strength": false,
+      "criterion_3_replication_rate": false,
+      "criterion_4_sham_negative": true,
+      "criterion_5_off_target_safe": true,
+      "criterion_6_left_preserved": true
+    }
+  },
+  "P3": {
+    "condition_id": "P3",
+    "label": "Projection Gated",
+    "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+    "manifest": "TARGET_B",
+    "N": 50,
+    "right_dna02": {
+      "pre_mean": 0.002,
+      "post_mean": 0.002,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.0003,
+      "recruits_count": 0,
+      "recruits_pct": 0
+    },
+    "turn_right_strength": {
+      "pre_mean": 0.0102,
+      "post_mean": 0.0102,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.01,
+      "crosses_exec_threshold_count": 0,
+      "crosses_exec_threshold_pct": 0
+    },
+    "right_an03a008": {
+      "pre_mean": 2.1384,
+      "post_mean": 2.1384,
+      "diff_mean": 0
+    },
+    "off_target_network": {
+      "mean_divergence_pct": 0,
+      "within_safety_bound": true
+    },
+    "left_steering_preservation": {
+      "left_dna02_pre_mean": 1.4341,
+      "left_dna02_post_mean": 1.4341,
+      "preserved": true
+    },
+    "budget_and_saturation": {
+      "mean_budget_used": 0,
+      "seeds_with_saturation": 0
+    },
+    "preregistered_verdict": {
+      "criterion_1_dna02_increase": false,
+      "criterion_2_exec_strength": false,
+      "criterion_3_replication_rate": false,
+      "criterion_4_sham_negative": true,
+      "criterion_5_off_target_safe": true,
+      "criterion_6_left_preserved": true
+    }
+  },
+  "P4": {
+    "condition_id": "P4",
+    "label": "Balanced Two-Stage Gated",
+    "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+    "manifest": "TARGET_C",
+    "N": 50,
+    "right_dna02": {
+      "pre_mean": 0.002,
+      "post_mean": 0.002,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.0003,
+      "recruits_count": 0,
+      "recruits_pct": 0
+    },
+    "turn_right_strength": {
+      "pre_mean": 0.0102,
+      "post_mean": 0.0102,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.01,
+      "crosses_exec_threshold_count": 0,
+      "crosses_exec_threshold_pct": 0
+    },
+    "right_an03a008": {
+      "pre_mean": 2.1384,
+      "post_mean": 2.1384,
+      "diff_mean": 0
+    },
+    "off_target_network": {
+      "mean_divergence_pct": 0,
+      "within_safety_bound": true
+    },
+    "left_steering_preservation": {
+      "left_dna02_pre_mean": 1.4341,
+      "left_dna02_post_mean": 1.4341,
+      "preserved": true
+    },
+    "budget_and_saturation": {
+      "mean_budget_used": 0.0005,
+      "seeds_with_saturation": 0
+    },
+    "preregistered_verdict": {
+      "criterion_1_dna02_increase": false,
+      "criterion_2_exec_strength": false,
+      "criterion_3_replication_rate": false,
+      "criterion_4_sham_negative": true,
+      "criterion_5_off_target_safe": true,
+      "criterion_6_left_preserved": true
+    }
+  },
+  "P5": {
+    "condition_id": "P5",
+    "label": "Matched Sham Control",
+    "rule": "ELIGIBILITY_MODULATED_HEBBIAN",
+    "manifest": "TARGET_D",
+    "N": 50,
+    "right_dna02": {
+      "pre_mean": 0.002,
+      "post_mean": 0.002,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.0003,
+      "recruits_count": 0,
+      "recruits_pct": 0
+    },
+    "turn_right_strength": {
+      "pre_mean": 0.0102,
+      "post_mean": 0.0102,
+      "diff_mean": 0,
+      "diff_std": 0,
+      "median": 0.01,
+      "crosses_exec_threshold_count": 0,
+      "crosses_exec_threshold_pct": 0
+    },
+    "right_an03a008": {
+      "pre_mean": 2.1384,
+      "post_mean": 2.1384,
+      "diff_mean": 0
+    },
+    "off_target_network": {
+      "mean_divergence_pct": 0,
+      "within_safety_bound": true
+    },
+    "left_steering_preservation": {
+      "left_dna02_pre_mean": 1.4341,
+      "left_dna02_post_mean": 1.4341,
+      "preserved": true
+    },
+    "budget_and_saturation": {
+      "mean_budget_used": 64.353,
+      "seeds_with_saturation": 45
+    },
+    "preregistered_verdict": {
+      "criterion_1_dna02_increase": false,
+      "criterion_2_exec_strength": false,
+      "criterion_3_replication_rate": false,
+      "criterion_4_sham_negative": true,
+      "criterion_5_off_target_safe": true,
+      "criterion_6_left_preserved": true
+    }
+  }
+}

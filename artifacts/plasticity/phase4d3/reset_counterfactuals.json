@@ -1,0 +1,5942 @@
+[
+  {
+    "seed": 18201,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.1173,
+      "turn_right_strength": 0.2248
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0111,
+      "turn_right_strength": 0.0123
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1173,
+      "turn_right_strength": 0.2248
+    },
+    "sham_reset": {
+      "right_dna02": 1.1173,
+      "turn_right_strength": 0.2248
+    }
+  },
+  {
+    "seed": 18201,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.3378,
+      "turn_right_strength": 0.2533
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0111,
+      "turn_right_strength": 0.0123
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3378,
+      "turn_right_strength": 0.2533
+    },
+    "sham_reset": {
+      "right_dna02": 1.3378,
+      "turn_right_strength": 0.2533
+    }
+  },
+  {
+    "seed": 18201,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.3367,
+      "turn_right_strength": 0.2532
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0111,
+      "turn_right_strength": 0.0123
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3367,
+      "turn_right_strength": 0.2532
+    },
+    "sham_reset": {
+      "right_dna02": 1.3367,
+      "turn_right_strength": 0.2532
+    }
+  },
+  {
+    "seed": 18201,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.3363,
+      "turn_right_strength": 0.2532
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0111,
+      "turn_right_strength": 0.0123
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3363,
+      "turn_right_strength": 0.2532
+    },
+    "sham_reset": {
+      "right_dna02": 1.3363,
+      "turn_right_strength": 0.2532
+    }
+  },
+  {
+    "seed": 18203,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.1304,
+      "turn_right_strength": 0.0442
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1304,
+      "turn_right_strength": 0.0442
+    },
+    "sham_reset": {
+      "right_dna02": 0.1304,
+      "turn_right_strength": 0.0442
+    }
+  },
+  {
+    "seed": 18203,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.4893,
+      "turn_right_strength": 0.1234
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4893,
+      "turn_right_strength": 0.1234
+    },
+    "sham_reset": {
+      "right_dna02": 0.4893,
+      "turn_right_strength": 0.1234
+    }
+  },
+  {
+    "seed": 18203,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.7054,
+      "turn_right_strength": 0.1624
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7054,
+      "turn_right_strength": 0.1624
+    },
+    "sham_reset": {
+      "right_dna02": 0.7054,
+      "turn_right_strength": 0.1624
+    }
+  },
+  {
+    "seed": 18204,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.3448,
+      "turn_right_strength": 0.0938
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3448,
+      "turn_right_strength": 0.0938
+    },
+    "sham_reset": {
+      "right_dna02": 0.3448,
+      "turn_right_strength": 0.0938
+    }
+  },
+  {
+    "seed": 18204,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.5587,
+      "turn_right_strength": 0.1355
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5587,
+      "turn_right_strength": 0.1355
+    },
+    "sham_reset": {
+      "right_dna02": 0.5587,
+      "turn_right_strength": 0.1355
+    }
+  },
+  {
+    "seed": 18204,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.5933,
+      "turn_right_strength": 0.1419
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5933,
+      "turn_right_strength": 0.1419
+    },
+    "sham_reset": {
+      "right_dna02": 0.5933,
+      "turn_right_strength": 0.1419
+    }
+  },
+  {
+    "seed": 18204,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5987,
+      "turn_right_strength": 0.1429
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5987,
+      "turn_right_strength": 0.1429
+    },
+    "sham_reset": {
+      "right_dna02": 0.5987,
+      "turn_right_strength": 0.1429
+    }
+  },
+  {
+    "seed": 18205,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.068,
+      "turn_right_strength": 0.028
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.068,
+      "turn_right_strength": 0.028
+    },
+    "sham_reset": {
+      "right_dna02": 0.068,
+      "turn_right_strength": 0.028
+    }
+  },
+  {
+    "seed": 18205,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0658,
+      "turn_right_strength": 0.0273
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0658,
+      "turn_right_strength": 0.0273
+    },
+    "sham_reset": {
+      "right_dna02": 0.0658,
+      "turn_right_strength": 0.0273
+    }
+  },
+  {
+    "seed": 18206,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2832,
+      "turn_right_strength": 0.0801
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2832,
+      "turn_right_strength": 0.0801
+    },
+    "sham_reset": {
+      "right_dna02": 0.2832,
+      "turn_right_strength": 0.0801
+    }
+  },
+  {
+    "seed": 18206,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.508,
+      "turn_right_strength": 0.126
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.508,
+      "turn_right_strength": 0.126
+    },
+    "sham_reset": {
+      "right_dna02": 0.508,
+      "turn_right_strength": 0.126
+    }
+  },
+  {
+    "seed": 18206,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7166,
+      "turn_right_strength": 0.1625
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7166,
+      "turn_right_strength": 0.1625
+    },
+    "sham_reset": {
+      "right_dna02": 0.7166,
+      "turn_right_strength": 0.1625
+    }
+  },
+  {
+    "seed": 18206,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.7787,
+      "turn_right_strength": 0.172
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7787,
+      "turn_right_strength": 0.172
+    },
+    "sham_reset": {
+      "right_dna02": 0.7787,
+      "turn_right_strength": 0.172
+    }
+  },
+  {
+    "seed": 18207,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.6693,
+      "turn_right_strength": 0.1558
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6693,
+      "turn_right_strength": 0.1558
+    },
+    "sham_reset": {
+      "right_dna02": 0.6693,
+      "turn_right_strength": 0.1558
+    }
+  },
+  {
+    "seed": 18207,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8355,
+      "turn_right_strength": 0.1832
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8355,
+      "turn_right_strength": 0.1832
+    },
+    "sham_reset": {
+      "right_dna02": 0.8355,
+      "turn_right_strength": 0.1832
+    }
+  },
+  {
+    "seed": 18207,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.1071,
+      "turn_right_strength": 0.2223
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1071,
+      "turn_right_strength": 0.2223
+    },
+    "sham_reset": {
+      "right_dna02": 1.1071,
+      "turn_right_strength": 0.2223
+    }
+  },
+  {
+    "seed": 18207,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0848,
+      "turn_right_strength": 0.2194
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0848,
+      "turn_right_strength": 0.2194
+    },
+    "sham_reset": {
+      "right_dna02": 1.0848,
+      "turn_right_strength": 0.2194
+    }
+  },
+  {
+    "seed": 18208,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.2108,
+      "turn_right_strength": 0.2354
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0043,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2108,
+      "turn_right_strength": 0.2354
+    },
+    "sham_reset": {
+      "right_dna02": 1.2108,
+      "turn_right_strength": 0.2354
+    }
+  },
+  {
+    "seed": 18208,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.3765,
+      "turn_right_strength": 0.256
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0043,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3765,
+      "turn_right_strength": 0.256
+    },
+    "sham_reset": {
+      "right_dna02": 1.3765,
+      "turn_right_strength": 0.256
+    }
+  },
+  {
+    "seed": 18208,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.3758,
+      "turn_right_strength": 0.256
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0043,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3758,
+      "turn_right_strength": 0.256
+    },
+    "sham_reset": {
+      "right_dna02": 1.3758,
+      "turn_right_strength": 0.256
+    }
+  },
+  {
+    "seed": 18208,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.3749,
+      "turn_right_strength": 0.256
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0043,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3749,
+      "turn_right_strength": 0.256
+    },
+    "sham_reset": {
+      "right_dna02": 1.3749,
+      "turn_right_strength": 0.256
+    }
+  },
+  {
+    "seed": 18209,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.9149,
+      "turn_right_strength": 0.1944
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9149,
+      "turn_right_strength": 0.1944
+    },
+    "sham_reset": {
+      "right_dna02": 0.9149,
+      "turn_right_strength": 0.1944
+    }
+  },
+  {
+    "seed": 18209,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.9498,
+      "turn_right_strength": 0.1994
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9498,
+      "turn_right_strength": 0.1994
+    },
+    "sham_reset": {
+      "right_dna02": 0.9498,
+      "turn_right_strength": 0.1994
+    }
+  },
+  {
+    "seed": 18209,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.9326,
+      "turn_right_strength": 0.1969
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9326,
+      "turn_right_strength": 0.1969
+    },
+    "sham_reset": {
+      "right_dna02": 0.9326,
+      "turn_right_strength": 0.1969
+    }
+  },
+  {
+    "seed": 18209,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.9016,
+      "turn_right_strength": 0.1924
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9016,
+      "turn_right_strength": 0.1924
+    },
+    "sham_reset": {
+      "right_dna02": 0.9016,
+      "turn_right_strength": 0.1924
+    }
+  },
+  {
+    "seed": 18210,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1325,
+      "turn_right_strength": 0.0444
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1325,
+      "turn_right_strength": 0.0444
+    },
+    "sham_reset": {
+      "right_dna02": 0.1325,
+      "turn_right_strength": 0.0444
+    }
+  },
+  {
+    "seed": 18210,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2205,
+      "turn_right_strength": 0.0662
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2205,
+      "turn_right_strength": 0.0662
+    },
+    "sham_reset": {
+      "right_dna02": 0.2205,
+      "turn_right_strength": 0.0662
+    }
+  },
+  {
+    "seed": 18210,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.2555,
+      "turn_right_strength": 0.0746
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2555,
+      "turn_right_strength": 0.0746
+    },
+    "sham_reset": {
+      "right_dna02": 0.2555,
+      "turn_right_strength": 0.0746
+    }
+  },
+  {
+    "seed": 18210,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.2167,
+      "turn_right_strength": 0.0653
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2167,
+      "turn_right_strength": 0.0653
+    },
+    "sham_reset": {
+      "right_dna02": 0.2167,
+      "turn_right_strength": 0.0653
+    }
+  },
+  {
+    "seed": 18211,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2946,
+      "turn_right_strength": 0.0829
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2946,
+      "turn_right_strength": 0.0829
+    },
+    "sham_reset": {
+      "right_dna02": 0.2946,
+      "turn_right_strength": 0.0829
+    }
+  },
+  {
+    "seed": 18211,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.3484,
+      "turn_right_strength": 0.0946
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3484,
+      "turn_right_strength": 0.0946
+    },
+    "sham_reset": {
+      "right_dna02": 0.3484,
+      "turn_right_strength": 0.0946
+    }
+  },
+  {
+    "seed": 18211,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.6782,
+      "turn_right_strength": 0.157
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6782,
+      "turn_right_strength": 0.157
+    },
+    "sham_reset": {
+      "right_dna02": 0.6782,
+      "turn_right_strength": 0.157
+    }
+  },
+  {
+    "seed": 18211,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6633,
+      "turn_right_strength": 0.1544
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6633,
+      "turn_right_strength": 0.1544
+    },
+    "sham_reset": {
+      "right_dna02": 0.6633,
+      "turn_right_strength": 0.1544
+    }
+  },
+  {
+    "seed": 18212,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.0556,
+      "turn_right_strength": 0.0245
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0556,
+      "turn_right_strength": 0.0245
+    },
+    "sham_reset": {
+      "right_dna02": 0.0556,
+      "turn_right_strength": 0.0245
+    }
+  },
+  {
+    "seed": 18212,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.053,
+      "turn_right_strength": 0.0238
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.053,
+      "turn_right_strength": 0.0238
+    },
+    "sham_reset": {
+      "right_dna02": 0.053,
+      "turn_right_strength": 0.0238
+    }
+  },
+  {
+    "seed": 18213,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.679,
+      "turn_right_strength": 0.1544
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.679,
+      "turn_right_strength": 0.1544
+    },
+    "sham_reset": {
+      "right_dna02": 0.679,
+      "turn_right_strength": 0.1544
+    }
+  },
+  {
+    "seed": 18213,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8576,
+      "turn_right_strength": 0.1822
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8576,
+      "turn_right_strength": 0.1822
+    },
+    "sham_reset": {
+      "right_dna02": 0.8576,
+      "turn_right_strength": 0.1822
+    }
+  },
+  {
+    "seed": 18213,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.8769,
+      "turn_right_strength": 0.1846
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8769,
+      "turn_right_strength": 0.1846
+    },
+    "sham_reset": {
+      "right_dna02": 0.8769,
+      "turn_right_strength": 0.1846
+    }
+  },
+  {
+    "seed": 18213,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.9812,
+      "turn_right_strength": 0.1996
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9812,
+      "turn_right_strength": 0.1996
+    },
+    "sham_reset": {
+      "right_dna02": 0.9812,
+      "turn_right_strength": 0.1996
+    }
+  },
+  {
+    "seed": 18217,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.3116,
+      "turn_right_strength": 0.0864
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3116,
+      "turn_right_strength": 0.0864
+    },
+    "sham_reset": {
+      "right_dna02": 0.3116,
+      "turn_right_strength": 0.0864
+    }
+  },
+  {
+    "seed": 18217,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.5577,
+      "turn_right_strength": 0.1348
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5577,
+      "turn_right_strength": 0.1348
+    },
+    "sham_reset": {
+      "right_dna02": 0.5577,
+      "turn_right_strength": 0.1348
+    }
+  },
+  {
+    "seed": 18217,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.5504,
+      "turn_right_strength": 0.1334
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5504,
+      "turn_right_strength": 0.1334
+    },
+    "sham_reset": {
+      "right_dna02": 0.5504,
+      "turn_right_strength": 0.1334
+    }
+  },
+  {
+    "seed": 18217,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5611,
+      "turn_right_strength": 0.1354
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5611,
+      "turn_right_strength": 0.1354
+    },
+    "sham_reset": {
+      "right_dna02": 0.5611,
+      "turn_right_strength": 0.1354
+    }
+  },
+  {
+    "seed": 18218,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.0769,
+      "turn_right_strength": 0.03
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0769,
+      "turn_right_strength": 0.03
+    },
+    "sham_reset": {
+      "right_dna02": 0.0769,
+      "turn_right_strength": 0.03
+    }
+  },
+  {
+    "seed": 18218,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0748,
+      "turn_right_strength": 0.0294
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0748,
+      "turn_right_strength": 0.0294
+    },
+    "sham_reset": {
+      "right_dna02": 0.0748,
+      "turn_right_strength": 0.0294
+    }
+  },
+  {
+    "seed": 18218,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.0985,
+      "turn_right_strength": 0.0358
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0985,
+      "turn_right_strength": 0.0358
+    },
+    "sham_reset": {
+      "right_dna02": 0.0985,
+      "turn_right_strength": 0.0358
+    }
+  },
+  {
+    "seed": 18218,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6431,
+      "turn_right_strength": 0.1483
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6431,
+      "turn_right_strength": 0.1483
+    },
+    "sham_reset": {
+      "right_dna02": 0.6431,
+      "turn_right_strength": 0.1483
+    }
+  },
+  {
+    "seed": 18220,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2281,
+      "turn_right_strength": 0.0682
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2281,
+      "turn_right_strength": 0.0682
+    },
+    "sham_reset": {
+      "right_dna02": 0.2281,
+      "turn_right_strength": 0.0682
+    }
+  },
+  {
+    "seed": 18220,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.5166,
+      "turn_right_strength": 0.1298
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5166,
+      "turn_right_strength": 0.1298
+    },
+    "sham_reset": {
+      "right_dna02": 0.5166,
+      "turn_right_strength": 0.1298
+    }
+  },
+  {
+    "seed": 18220,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.6367,
+      "turn_right_strength": 0.1521
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6367,
+      "turn_right_strength": 0.1521
+    },
+    "sham_reset": {
+      "right_dna02": 0.6367,
+      "turn_right_strength": 0.1521
+    }
+  },
+  {
+    "seed": 18220,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6367,
+      "turn_right_strength": 0.1521
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6367,
+      "turn_right_strength": 0.1521
+    },
+    "sham_reset": {
+      "right_dna02": 0.6367,
+      "turn_right_strength": 0.1521
+    }
+  },
+  {
+    "seed": 18222,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.292,
+      "turn_right_strength": 0.0825
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.013
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.292,
+      "turn_right_strength": 0.0825
+    },
+    "sham_reset": {
+      "right_dna02": 0.292,
+      "turn_right_strength": 0.0825
+    }
+  },
+  {
+    "seed": 18222,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2832,
+      "turn_right_strength": 0.0806
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.013
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2832,
+      "turn_right_strength": 0.0806
+    },
+    "sham_reset": {
+      "right_dna02": 0.2832,
+      "turn_right_strength": 0.0806
+    }
+  },
+  {
+    "seed": 18222,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.2691,
+      "turn_right_strength": 0.0774
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.013
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2691,
+      "turn_right_strength": 0.0774
+    },
+    "sham_reset": {
+      "right_dna02": 0.2691,
+      "turn_right_strength": 0.0774
+    }
+  },
+  {
+    "seed": 18222,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.1686,
+      "turn_right_strength": 0.0536
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.013
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1686,
+      "turn_right_strength": 0.0536
+    },
+    "sham_reset": {
+      "right_dna02": 0.1686,
+      "turn_right_strength": 0.0536
+    }
+  },
+  {
+    "seed": 18224,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5058,
+      "turn_right_strength": 0.1265
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5058,
+      "turn_right_strength": 0.1265
+    },
+    "sham_reset": {
+      "right_dna02": 0.5058,
+      "turn_right_strength": 0.1265
+    }
+  },
+  {
+    "seed": 18224,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.4877,
+      "turn_right_strength": 0.123
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4877,
+      "turn_right_strength": 0.123
+    },
+    "sham_reset": {
+      "right_dna02": 0.4877,
+      "turn_right_strength": 0.123
+    }
+  },
+  {
+    "seed": 18224,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7068,
+      "turn_right_strength": 0.1624
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7068,
+      "turn_right_strength": 0.1624
+    },
+    "sham_reset": {
+      "right_dna02": 0.7068,
+      "turn_right_strength": 0.1624
+    }
+  },
+  {
+    "seed": 18224,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.8822,
+      "turn_right_strength": 0.1906
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8822,
+      "turn_right_strength": 0.1906
+    },
+    "sham_reset": {
+      "right_dna02": 0.8822,
+      "turn_right_strength": 0.1906
+    }
+  },
+  {
+    "seed": 18225,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5031,
+      "turn_right_strength": 0.1222
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0075,
+      "turn_right_strength": 0.0116
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5031,
+      "turn_right_strength": 0.1222
+    },
+    "sham_reset": {
+      "right_dna02": 0.5031,
+      "turn_right_strength": 0.1222
+    }
+  },
+  {
+    "seed": 18225,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.4862,
+      "turn_right_strength": 0.1192
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0075,
+      "turn_right_strength": 0.0116
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4862,
+      "turn_right_strength": 0.1192
+    },
+    "sham_reset": {
+      "right_dna02": 0.4862,
+      "turn_right_strength": 0.1192
+    }
+  },
+  {
+    "seed": 18225,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.459,
+      "turn_right_strength": 0.1142
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0075,
+      "turn_right_strength": 0.0116
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.459,
+      "turn_right_strength": 0.1142
+    },
+    "sham_reset": {
+      "right_dna02": 0.459,
+      "turn_right_strength": 0.1142
+    }
+  },
+  {
+    "seed": 18225,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.3162,
+      "turn_right_strength": 0.0861
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0075,
+      "turn_right_strength": 0.0116
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3162,
+      "turn_right_strength": 0.0861
+    },
+    "sham_reset": {
+      "right_dna02": 0.3162,
+      "turn_right_strength": 0.0861
+    }
+  },
+  {
+    "seed": 18226,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.9565,
+      "turn_right_strength": 0.1987
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9565,
+      "turn_right_strength": 0.1987
+    },
+    "sham_reset": {
+      "right_dna02": 0.9565,
+      "turn_right_strength": 0.1987
+    }
+  },
+  {
+    "seed": 18226,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.1708,
+      "turn_right_strength": 0.2272
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1708,
+      "turn_right_strength": 0.2272
+    },
+    "sham_reset": {
+      "right_dna02": 1.1708,
+      "turn_right_strength": 0.2272
+    }
+  },
+  {
+    "seed": 18226,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.1705,
+      "turn_right_strength": 0.2272
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1705,
+      "turn_right_strength": 0.2272
+    },
+    "sham_reset": {
+      "right_dna02": 1.1705,
+      "turn_right_strength": 0.2272
+    }
+  },
+  {
+    "seed": 18226,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.1692,
+      "turn_right_strength": 0.2271
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1692,
+      "turn_right_strength": 0.2271
+    },
+    "sham_reset": {
+      "right_dna02": 1.1692,
+      "turn_right_strength": 0.2271
+    }
+  },
+  {
+    "seed": 18227,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5715,
+      "turn_right_strength": 0.1377
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5715,
+      "turn_right_strength": 0.1377
+    },
+    "sham_reset": {
+      "right_dna02": 0.5715,
+      "turn_right_strength": 0.1377
+    }
+  },
+  {
+    "seed": 18227,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8246,
+      "turn_right_strength": 0.1799
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8246,
+      "turn_right_strength": 0.1799
+    },
+    "sham_reset": {
+      "right_dna02": 0.8246,
+      "turn_right_strength": 0.1799
+    }
+  },
+  {
+    "seed": 18227,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.9464,
+      "turn_right_strength": 0.1981
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9464,
+      "turn_right_strength": 0.1981
+    },
+    "sham_reset": {
+      "right_dna02": 0.9464,
+      "turn_right_strength": 0.1981
+    }
+  },
+  {
+    "seed": 18227,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.1363,
+      "turn_right_strength": 0.2239
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0102
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1363,
+      "turn_right_strength": 0.2239
+    },
+    "sham_reset": {
+      "right_dna02": 1.1363,
+      "turn_right_strength": 0.2239
+    }
+  },
+  {
+    "seed": 18228,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.1468,
+      "turn_right_strength": 0.2287
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1468,
+      "turn_right_strength": 0.2287
+    },
+    "sham_reset": {
+      "right_dna02": 1.1468,
+      "turn_right_strength": 0.2287
+    }
+  },
+  {
+    "seed": 18228,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.4388,
+      "turn_right_strength": 0.265
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.4388,
+      "turn_right_strength": 0.265
+    },
+    "sham_reset": {
+      "right_dna02": 1.4388,
+      "turn_right_strength": 0.265
+    }
+  },
+  {
+    "seed": 18228,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.4392,
+      "turn_right_strength": 0.265
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.4392,
+      "turn_right_strength": 0.265
+    },
+    "sham_reset": {
+      "right_dna02": 1.4392,
+      "turn_right_strength": 0.265
+    }
+  },
+  {
+    "seed": 18228,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.4409,
+      "turn_right_strength": 0.2654
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.4409,
+      "turn_right_strength": 0.2654
+    },
+    "sham_reset": {
+      "right_dna02": 1.4409,
+      "turn_right_strength": 0.2654
+    }
+  },
+  {
+    "seed": 18229,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.9801,
+      "turn_right_strength": 0.2059
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0039,
+      "turn_right_strength": 0.0104
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9801,
+      "turn_right_strength": 0.2059
+    },
+    "sham_reset": {
+      "right_dna02": 0.9801,
+      "turn_right_strength": 0.2059
+    }
+  },
+  {
+    "seed": 18229,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.0994,
+      "turn_right_strength": 0.2226
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0039,
+      "turn_right_strength": 0.0104
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0994,
+      "turn_right_strength": 0.2226
+    },
+    "sham_reset": {
+      "right_dna02": 1.0994,
+      "turn_right_strength": 0.2226
+    }
+  },
+  {
+    "seed": 18229,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.0959,
+      "turn_right_strength": 0.2221
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0039,
+      "turn_right_strength": 0.0104
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0959,
+      "turn_right_strength": 0.2221
+    },
+    "sham_reset": {
+      "right_dna02": 1.0959,
+      "turn_right_strength": 0.2221
+    }
+  },
+  {
+    "seed": 18229,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0843,
+      "turn_right_strength": 0.2206
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0039,
+      "turn_right_strength": 0.0104
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0843,
+      "turn_right_strength": 0.2206
+    },
+    "sham_reset": {
+      "right_dna02": 1.0843,
+      "turn_right_strength": 0.2206
+    }
+  },
+  {
+    "seed": 18231,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.3592,
+      "turn_right_strength": 0.0972
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3592,
+      "turn_right_strength": 0.0972
+    },
+    "sham_reset": {
+      "right_dna02": 0.3592,
+      "turn_right_strength": 0.0972
+    }
+  },
+  {
+    "seed": 18231,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.5608,
+      "turn_right_strength": 0.1373
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5608,
+      "turn_right_strength": 0.1373
+    },
+    "sham_reset": {
+      "right_dna02": 0.5608,
+      "turn_right_strength": 0.1373
+    }
+  },
+  {
+    "seed": 18231,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7047,
+      "turn_right_strength": 0.1629
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7047,
+      "turn_right_strength": 0.1629
+    },
+    "sham_reset": {
+      "right_dna02": 0.7047,
+      "turn_right_strength": 0.1629
+    }
+  },
+  {
+    "seed": 18231,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6989,
+      "turn_right_strength": 0.1618
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0012,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6989,
+      "turn_right_strength": 0.1618
+    },
+    "sham_reset": {
+      "right_dna02": 0.6989,
+      "turn_right_strength": 0.1618
+    }
+  },
+  {
+    "seed": 18232,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.4179,
+      "turn_right_strength": 0.1094
+    },
+    "alpha_reset": {
+      "right_dna02": 0.001,
+      "turn_right_strength": 0.0099
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4179,
+      "turn_right_strength": 0.1094
+    },
+    "sham_reset": {
+      "right_dna02": 0.4179,
+      "turn_right_strength": 0.1094
+    }
+  },
+  {
+    "seed": 18232,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.4093,
+      "turn_right_strength": 0.108
+    },
+    "alpha_reset": {
+      "right_dna02": 0.001,
+      "turn_right_strength": 0.0099
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4093,
+      "turn_right_strength": 0.108
+    },
+    "sham_reset": {
+      "right_dna02": 0.4093,
+      "turn_right_strength": 0.108
+    }
+  },
+  {
+    "seed": 18232,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.6847,
+      "turn_right_strength": 0.1596
+    },
+    "alpha_reset": {
+      "right_dna02": 0.001,
+      "turn_right_strength": 0.0099
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6847,
+      "turn_right_strength": 0.1596
+    },
+    "sham_reset": {
+      "right_dna02": 0.6847,
+      "turn_right_strength": 0.1596
+    }
+  },
+  {
+    "seed": 18232,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.667,
+      "turn_right_strength": 0.1564
+    },
+    "alpha_reset": {
+      "right_dna02": 0.001,
+      "turn_right_strength": 0.0099
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.667,
+      "turn_right_strength": 0.1564
+    },
+    "sham_reset": {
+      "right_dna02": 0.667,
+      "turn_right_strength": 0.1564
+    }
+  },
+  {
+    "seed": 18234,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.314,
+      "turn_right_strength": 0.0875
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.314,
+      "turn_right_strength": 0.0875
+    },
+    "sham_reset": {
+      "right_dna02": 0.314,
+      "turn_right_strength": 0.0875
+    }
+  },
+  {
+    "seed": 18234,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.302,
+      "turn_right_strength": 0.0848
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.302,
+      "turn_right_strength": 0.0848
+    },
+    "sham_reset": {
+      "right_dna02": 0.302,
+      "turn_right_strength": 0.0848
+    }
+  },
+  {
+    "seed": 18234,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.2302,
+      "turn_right_strength": 0.0682
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2302,
+      "turn_right_strength": 0.0682
+    },
+    "sham_reset": {
+      "right_dna02": 0.2302,
+      "turn_right_strength": 0.0682
+    }
+  },
+  {
+    "seed": 18234,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.2021,
+      "turn_right_strength": 0.0619
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2021,
+      "turn_right_strength": 0.0619
+    },
+    "sham_reset": {
+      "right_dna02": 0.2021,
+      "turn_right_strength": 0.0619
+    }
+  },
+  {
+    "seed": 18235,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.1708,
+      "turn_right_strength": 0.2236
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0076,
+      "turn_right_strength": 0.0112
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1708,
+      "turn_right_strength": 0.2236
+    },
+    "sham_reset": {
+      "right_dna02": 1.1708,
+      "turn_right_strength": 0.2236
+    }
+  },
+  {
+    "seed": 18235,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.5504,
+      "turn_right_strength": 0.2662
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0076,
+      "turn_right_strength": 0.0112
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.5504,
+      "turn_right_strength": 0.2662
+    },
+    "sham_reset": {
+      "right_dna02": 1.5504,
+      "turn_right_strength": 0.2662
+    }
+  },
+  {
+    "seed": 18235,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.5836,
+      "turn_right_strength": 0.2696
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0076,
+      "turn_right_strength": 0.0112
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.5836,
+      "turn_right_strength": 0.2696
+    },
+    "sham_reset": {
+      "right_dna02": 1.5836,
+      "turn_right_strength": 0.2696
+    }
+  },
+  {
+    "seed": 18235,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.5761,
+      "turn_right_strength": 0.2689
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0076,
+      "turn_right_strength": 0.0112
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.5761,
+      "turn_right_strength": 0.2689
+    },
+    "sham_reset": {
+      "right_dna02": 1.5761,
+      "turn_right_strength": 0.2689
+    }
+  },
+  {
+    "seed": 18236,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.9082,
+      "turn_right_strength": 0.194
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0049,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9082,
+      "turn_right_strength": 0.194
+    },
+    "sham_reset": {
+      "right_dna02": 0.9082,
+      "turn_right_strength": 0.194
+    }
+  },
+  {
+    "seed": 18236,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.3545,
+      "turn_right_strength": 0.2534
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0049,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3545,
+      "turn_right_strength": 0.2534
+    },
+    "sham_reset": {
+      "right_dna02": 1.3545,
+      "turn_right_strength": 0.2534
+    }
+  },
+  {
+    "seed": 18236,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.3491,
+      "turn_right_strength": 0.2527
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0049,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3491,
+      "turn_right_strength": 0.2527
+    },
+    "sham_reset": {
+      "right_dna02": 1.3491,
+      "turn_right_strength": 0.2527
+    }
+  },
+  {
+    "seed": 18236,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.1827,
+      "turn_right_strength": 0.2323
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0049,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1827,
+      "turn_right_strength": 0.2323
+    },
+    "sham_reset": {
+      "right_dna02": 1.1827,
+      "turn_right_strength": 0.2323
+    }
+  },
+  {
+    "seed": 18237,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.9886,
+      "turn_right_strength": 0.2036
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9886,
+      "turn_right_strength": 0.2036
+    },
+    "sham_reset": {
+      "right_dna02": 0.9886,
+      "turn_right_strength": 0.2036
+    }
+  },
+  {
+    "seed": 18237,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.0264,
+      "turn_right_strength": 0.2086
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0264,
+      "turn_right_strength": 0.2086
+    },
+    "sham_reset": {
+      "right_dna02": 1.0264,
+      "turn_right_strength": 0.2086
+    }
+  },
+  {
+    "seed": 18237,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.9936,
+      "turn_right_strength": 0.204
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9936,
+      "turn_right_strength": 0.204
+    },
+    "sham_reset": {
+      "right_dna02": 0.9936,
+      "turn_right_strength": 0.204
+    }
+  },
+  {
+    "seed": 18237,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.9191,
+      "turn_right_strength": 0.1938
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0013,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9191,
+      "turn_right_strength": 0.1938
+    },
+    "sham_reset": {
+      "right_dna02": 0.9191,
+      "turn_right_strength": 0.1938
+    }
+  },
+  {
+    "seed": 18238,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5589,
+      "turn_right_strength": 0.1361
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5589,
+      "turn_right_strength": 0.1361
+    },
+    "sham_reset": {
+      "right_dna02": 0.5589,
+      "turn_right_strength": 0.1361
+    }
+  },
+  {
+    "seed": 18238,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8607,
+      "turn_right_strength": 0.1865
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8607,
+      "turn_right_strength": 0.1865
+    },
+    "sham_reset": {
+      "right_dna02": 0.8607,
+      "turn_right_strength": 0.1865
+    }
+  },
+  {
+    "seed": 18238,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.0917,
+      "turn_right_strength": 0.2194
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0917,
+      "turn_right_strength": 0.2194
+    },
+    "sham_reset": {
+      "right_dna02": 1.0917,
+      "turn_right_strength": 0.2194
+    }
+  },
+  {
+    "seed": 18238,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0862,
+      "turn_right_strength": 0.2187
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0862,
+      "turn_right_strength": 0.2187
+    },
+    "sham_reset": {
+      "right_dna02": 1.0862,
+      "turn_right_strength": 0.2187
+    }
+  },
+  {
+    "seed": 18239,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1124,
+      "turn_right_strength": 0.0396
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1124,
+      "turn_right_strength": 0.0396
+    },
+    "sham_reset": {
+      "right_dna02": 0.1124,
+      "turn_right_strength": 0.0396
+    }
+  },
+  {
+    "seed": 18239,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.108,
+      "turn_right_strength": 0.0384
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.108,
+      "turn_right_strength": 0.0384
+    },
+    "sham_reset": {
+      "right_dna02": 0.108,
+      "turn_right_strength": 0.0384
+    }
+  },
+  {
+    "seed": 18239,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.101,
+      "turn_right_strength": 0.0366
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.101,
+      "turn_right_strength": 0.0366
+    },
+    "sham_reset": {
+      "right_dna02": 0.101,
+      "turn_right_strength": 0.0366
+    }
+  },
+  {
+    "seed": 18240,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.2969,
+      "turn_right_strength": 0.2426
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2969,
+      "turn_right_strength": 0.2426
+    },
+    "sham_reset": {
+      "right_dna02": 1.2969,
+      "turn_right_strength": 0.2426
+    }
+  },
+  {
+    "seed": 18240,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.6499,
+      "turn_right_strength": 0.2814
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.6499,
+      "turn_right_strength": 0.2814
+    },
+    "sham_reset": {
+      "right_dna02": 1.6499,
+      "turn_right_strength": 0.2814
+    }
+  },
+  {
+    "seed": 18240,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.6538,
+      "turn_right_strength": 0.2817
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.6538,
+      "turn_right_strength": 0.2817
+    },
+    "sham_reset": {
+      "right_dna02": 1.6538,
+      "turn_right_strength": 0.2817
+    }
+  },
+  {
+    "seed": 18240,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.6309,
+      "turn_right_strength": 0.2794
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0058,
+      "turn_right_strength": 0.011
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.6309,
+      "turn_right_strength": 0.2794
+    },
+    "sham_reset": {
+      "right_dna02": 1.6309,
+      "turn_right_strength": 0.2794
+    }
+  },
+  {
+    "seed": 18241,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2047,
+      "turn_right_strength": 0.0624
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2047,
+      "turn_right_strength": 0.0624
+    },
+    "sham_reset": {
+      "right_dna02": 0.2047,
+      "turn_right_strength": 0.0624
+    }
+  },
+  {
+    "seed": 18241,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.1403,
+      "turn_right_strength": 0.0466
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1403,
+      "turn_right_strength": 0.0466
+    },
+    "sham_reset": {
+      "right_dna02": 0.1403,
+      "turn_right_strength": 0.0466
+    }
+  },
+  {
+    "seed": 18241,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.0897,
+      "turn_right_strength": 0.0336
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0897,
+      "turn_right_strength": 0.0336
+    },
+    "sham_reset": {
+      "right_dna02": 0.0897,
+      "turn_right_strength": 0.0336
+    }
+  },
+  {
+    "seed": 18241,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.0789,
+      "turn_right_strength": 0.0307
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0789,
+      "turn_right_strength": 0.0307
+    },
+    "sham_reset": {
+      "right_dna02": 0.0789,
+      "turn_right_strength": 0.0307
+    }
+  },
+  {
+    "seed": 18242,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1039,
+      "turn_right_strength": 0.0374
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1039,
+      "turn_right_strength": 0.0374
+    },
+    "sham_reset": {
+      "right_dna02": 0.1039,
+      "turn_right_strength": 0.0374
+    }
+  },
+  {
+    "seed": 18242,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.4473,
+      "turn_right_strength": 0.114
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4473,
+      "turn_right_strength": 0.114
+    },
+    "sham_reset": {
+      "right_dna02": 0.4473,
+      "turn_right_strength": 0.114
+    }
+  },
+  {
+    "seed": 18242,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.5124,
+      "turn_right_strength": 0.1265
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5124,
+      "turn_right_strength": 0.1265
+    },
+    "sham_reset": {
+      "right_dna02": 0.5124,
+      "turn_right_strength": 0.1265
+    }
+  },
+  {
+    "seed": 18242,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.4137,
+      "turn_right_strength": 0.1073
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4137,
+      "turn_right_strength": 0.1073
+    },
+    "sham_reset": {
+      "right_dna02": 0.4137,
+      "turn_right_strength": 0.1073
+    }
+  },
+  {
+    "seed": 18244,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.0872,
+      "turn_right_strength": 0.0327
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0872,
+      "turn_right_strength": 0.0327
+    },
+    "sham_reset": {
+      "right_dna02": 0.0872,
+      "turn_right_strength": 0.0327
+    }
+  },
+  {
+    "seed": 18244,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0841,
+      "turn_right_strength": 0.0318
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0841,
+      "turn_right_strength": 0.0318
+    },
+    "sham_reset": {
+      "right_dna02": 0.0841,
+      "turn_right_strength": 0.0318
+    }
+  },
+  {
+    "seed": 18244,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.0792,
+      "turn_right_strength": 0.0309
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0792,
+      "turn_right_strength": 0.0309
+    },
+    "sham_reset": {
+      "right_dna02": 0.0792,
+      "turn_right_strength": 0.0309
+    }
+  },
+  {
+    "seed": 18245,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2124,
+      "turn_right_strength": 0.0645
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2124,
+      "turn_right_strength": 0.0645
+    },
+    "sham_reset": {
+      "right_dna02": 0.2124,
+      "turn_right_strength": 0.0645
+    }
+  },
+  {
+    "seed": 18245,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2044,
+      "turn_right_strength": 0.0626
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2044,
+      "turn_right_strength": 0.0626
+    },
+    "sham_reset": {
+      "right_dna02": 0.2044,
+      "turn_right_strength": 0.0626
+    }
+  },
+  {
+    "seed": 18245,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.4138,
+      "turn_right_strength": 0.1094
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4138,
+      "turn_right_strength": 0.1094
+    },
+    "sham_reset": {
+      "right_dna02": 0.4138,
+      "turn_right_strength": 0.1094
+    }
+  },
+  {
+    "seed": 18245,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.4073,
+      "turn_right_strength": 0.108
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4073,
+      "turn_right_strength": 0.108
+    },
+    "sham_reset": {
+      "right_dna02": 0.4073,
+      "turn_right_strength": 0.108
+    }
+  },
+  {
+    "seed": 18246,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2353,
+      "turn_right_strength": 0.0696
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0067,
+      "turn_right_strength": 0.0109
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2353,
+      "turn_right_strength": 0.0696
+    },
+    "sham_reset": {
+      "right_dna02": 0.2353,
+      "turn_right_strength": 0.0696
+    }
+  },
+  {
+    "seed": 18246,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2312,
+      "turn_right_strength": 0.0687
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0067,
+      "turn_right_strength": 0.0109
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2312,
+      "turn_right_strength": 0.0687
+    },
+    "sham_reset": {
+      "right_dna02": 0.2312,
+      "turn_right_strength": 0.0687
+    }
+  },
+  {
+    "seed": 18246,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.2213,
+      "turn_right_strength": 0.0663
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0067,
+      "turn_right_strength": 0.0109
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2213,
+      "turn_right_strength": 0.0663
+    },
+    "sham_reset": {
+      "right_dna02": 0.2213,
+      "turn_right_strength": 0.0663
+    }
+  },
+  {
+    "seed": 18246,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.0911,
+      "turn_right_strength": 0.034
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0067,
+      "turn_right_strength": 0.0109
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0911,
+      "turn_right_strength": 0.034
+    },
+    "sham_reset": {
+      "right_dna02": 0.0911,
+      "turn_right_strength": 0.034
+    }
+  },
+  {
+    "seed": 18247,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.4955,
+      "turn_right_strength": 0.1258
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4955,
+      "turn_right_strength": 0.1258
+    },
+    "sham_reset": {
+      "right_dna02": 0.4955,
+      "turn_right_strength": 0.1258
+    }
+  },
+  {
+    "seed": 18247,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.4947,
+      "turn_right_strength": 0.1256
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4947,
+      "turn_right_strength": 0.1256
+    },
+    "sham_reset": {
+      "right_dna02": 0.4947,
+      "turn_right_strength": 0.1256
+    }
+  },
+  {
+    "seed": 18247,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.4811,
+      "turn_right_strength": 0.1229
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4811,
+      "turn_right_strength": 0.1229
+    },
+    "sham_reset": {
+      "right_dna02": 0.4811,
+      "turn_right_strength": 0.1229
+    }
+  },
+  {
+    "seed": 18247,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.4095,
+      "turn_right_strength": 0.1083
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4095,
+      "turn_right_strength": 0.1083
+    },
+    "sham_reset": {
+      "right_dna02": 0.4095,
+      "turn_right_strength": 0.1083
+    }
+  },
+  {
+    "seed": 18248,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0863,
+      "turn_right_strength": 0.0325
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0863,
+      "turn_right_strength": 0.0325
+    },
+    "sham_reset": {
+      "right_dna02": 0.0863,
+      "turn_right_strength": 0.0325
+    }
+  },
+  {
+    "seed": 18248,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.8447,
+      "turn_right_strength": 0.1865
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8447,
+      "turn_right_strength": 0.1865
+    },
+    "sham_reset": {
+      "right_dna02": 0.8447,
+      "turn_right_strength": 0.1865
+    }
+  },
+  {
+    "seed": 18248,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0468,
+      "turn_right_strength": 0.2163
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0468,
+      "turn_right_strength": 0.2163
+    },
+    "sham_reset": {
+      "right_dna02": 1.0468,
+      "turn_right_strength": 0.2163
+    }
+  },
+  {
+    "seed": 18249,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.3687,
+      "turn_right_strength": 0.1001
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0017,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3687,
+      "turn_right_strength": 0.1001
+    },
+    "sham_reset": {
+      "right_dna02": 0.3687,
+      "turn_right_strength": 0.1001
+    }
+  },
+  {
+    "seed": 18249,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.3566,
+      "turn_right_strength": 0.0976
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0017,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3566,
+      "turn_right_strength": 0.0976
+    },
+    "sham_reset": {
+      "right_dna02": 0.3566,
+      "turn_right_strength": 0.0976
+    }
+  },
+  {
+    "seed": 18249,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.3317,
+      "turn_right_strength": 0.092
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0017,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3317,
+      "turn_right_strength": 0.092
+    },
+    "sham_reset": {
+      "right_dna02": 0.3317,
+      "turn_right_strength": 0.092
+    }
+  },
+  {
+    "seed": 18249,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.2288,
+      "turn_right_strength": 0.0687
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0017,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2288,
+      "turn_right_strength": 0.0687
+    },
+    "sham_reset": {
+      "right_dna02": 0.2288,
+      "turn_right_strength": 0.0687
+    }
+  },
+  {
+    "seed": 18250,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1178,
+      "turn_right_strength": 0.0408
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1178,
+      "turn_right_strength": 0.0408
+    },
+    "sham_reset": {
+      "right_dna02": 0.1178,
+      "turn_right_strength": 0.0408
+    }
+  },
+  {
+    "seed": 18250,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2637,
+      "turn_right_strength": 0.0758
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2637,
+      "turn_right_strength": 0.0758
+    },
+    "sham_reset": {
+      "right_dna02": 0.2637,
+      "turn_right_strength": 0.0758
+    }
+  },
+  {
+    "seed": 18250,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.414,
+      "turn_right_strength": 0.108
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.414,
+      "turn_right_strength": 0.108
+    },
+    "sham_reset": {
+      "right_dna02": 0.414,
+      "turn_right_strength": 0.108
+    }
+  },
+  {
+    "seed": 18250,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.413,
+      "turn_right_strength": 0.1078
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.413,
+      "turn_right_strength": 0.1078
+    },
+    "sham_reset": {
+      "right_dna02": 0.413,
+      "turn_right_strength": 0.1078
+    }
+  },
+  {
+    "seed": 18251,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.2793,
+      "turn_right_strength": 0.2406
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2793,
+      "turn_right_strength": 0.2406
+    },
+    "sham_reset": {
+      "right_dna02": 1.2793,
+      "turn_right_strength": 0.2406
+    }
+  },
+  {
+    "seed": 18251,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.4397,
+      "turn_right_strength": 0.2586
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.4397,
+      "turn_right_strength": 0.2586
+    },
+    "sham_reset": {
+      "right_dna02": 1.4397,
+      "turn_right_strength": 0.2586
+    }
+  },
+  {
+    "seed": 18251,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.4387,
+      "turn_right_strength": 0.2585
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.4387,
+      "turn_right_strength": 0.2585
+    },
+    "sham_reset": {
+      "right_dna02": 1.4387,
+      "turn_right_strength": 0.2585
+    }
+  },
+  {
+    "seed": 18251,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.4359,
+      "turn_right_strength": 0.2582
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0046,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.4359,
+      "turn_right_strength": 0.2582
+    },
+    "sham_reset": {
+      "right_dna02": 1.4359,
+      "turn_right_strength": 0.2582
+    }
+  },
+  {
+    "seed": 18252,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.8204,
+      "turn_right_strength": 0.1798
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0029,
+      "turn_right_strength": 0.0101
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8204,
+      "turn_right_strength": 0.1798
+    },
+    "sham_reset": {
+      "right_dna02": 0.8204,
+      "turn_right_strength": 0.1798
+    }
+  },
+  {
+    "seed": 18252,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.7889,
+      "turn_right_strength": 0.1749
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0029,
+      "turn_right_strength": 0.0101
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7889,
+      "turn_right_strength": 0.1749
+    },
+    "sham_reset": {
+      "right_dna02": 0.7889,
+      "turn_right_strength": 0.1749
+    }
+  },
+  {
+    "seed": 18252,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7301,
+      "turn_right_strength": 0.1652
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0029,
+      "turn_right_strength": 0.0101
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7301,
+      "turn_right_strength": 0.1652
+    },
+    "sham_reset": {
+      "right_dna02": 0.7301,
+      "turn_right_strength": 0.1652
+    }
+  },
+  {
+    "seed": 18252,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6307,
+      "turn_right_strength": 0.1487
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0029,
+      "turn_right_strength": 0.0101
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6307,
+      "turn_right_strength": 0.1487
+    },
+    "sham_reset": {
+      "right_dna02": 0.6307,
+      "turn_right_strength": 0.1487
+    }
+  },
+  {
+    "seed": 18253,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.697,
+      "turn_right_strength": 0.1582
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0024,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.697,
+      "turn_right_strength": 0.1582
+    },
+    "sham_reset": {
+      "right_dna02": 0.697,
+      "turn_right_strength": 0.1582
+    }
+  },
+  {
+    "seed": 18253,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8899,
+      "turn_right_strength": 0.188
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0024,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8899,
+      "turn_right_strength": 0.188
+    },
+    "sham_reset": {
+      "right_dna02": 0.8899,
+      "turn_right_strength": 0.188
+    }
+  },
+  {
+    "seed": 18253,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.2019,
+      "turn_right_strength": 0.2297
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0024,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2019,
+      "turn_right_strength": 0.2297
+    },
+    "sham_reset": {
+      "right_dna02": 1.2019,
+      "turn_right_strength": 0.2297
+    }
+  },
+  {
+    "seed": 18253,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.292,
+      "turn_right_strength": 0.2408
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0024,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.292,
+      "turn_right_strength": 0.2408
+    },
+    "sham_reset": {
+      "right_dna02": 1.292,
+      "turn_right_strength": 0.2408
+    }
+  },
+  {
+    "seed": 18254,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.6431,
+      "turn_right_strength": 0.1513
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6431,
+      "turn_right_strength": 0.1513
+    },
+    "sham_reset": {
+      "right_dna02": 0.6431,
+      "turn_right_strength": 0.1513
+    }
+  },
+  {
+    "seed": 18254,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.6542,
+      "turn_right_strength": 0.1532
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6542,
+      "turn_right_strength": 0.1532
+    },
+    "sham_reset": {
+      "right_dna02": 0.6542,
+      "turn_right_strength": 0.1532
+    }
+  },
+  {
+    "seed": 18254,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.8996,
+      "turn_right_strength": 0.1924
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8996,
+      "turn_right_strength": 0.1924
+    },
+    "sham_reset": {
+      "right_dna02": 0.8996,
+      "turn_right_strength": 0.1924
+    }
+  },
+  {
+    "seed": 18254,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0377,
+      "turn_right_strength": 0.2123
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0006,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0377,
+      "turn_right_strength": 0.2123
+    },
+    "sham_reset": {
+      "right_dna02": 1.0377,
+      "turn_right_strength": 0.2123
+    }
+  },
+  {
+    "seed": 18255,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.075,
+      "turn_right_strength": 0.0296
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.075,
+      "turn_right_strength": 0.0296
+    },
+    "sham_reset": {
+      "right_dna02": 0.075,
+      "turn_right_strength": 0.0296
+    }
+  },
+  {
+    "seed": 18255,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0729,
+      "turn_right_strength": 0.029
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0729,
+      "turn_right_strength": 0.029
+    },
+    "sham_reset": {
+      "right_dna02": 0.0729,
+      "turn_right_strength": 0.029
+    }
+  },
+  {
+    "seed": 18255,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.0696,
+      "turn_right_strength": 0.0281
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0036,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0696,
+      "turn_right_strength": 0.0281
+    },
+    "sham_reset": {
+      "right_dna02": 0.0696,
+      "turn_right_strength": 0.0281
+    }
+  },
+  {
+    "seed": 18256,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.0287,
+      "turn_right_strength": 0.213
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0287,
+      "turn_right_strength": 0.213
+    },
+    "sham_reset": {
+      "right_dna02": 1.0287,
+      "turn_right_strength": 0.213
+    }
+  },
+  {
+    "seed": 18256,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.2149,
+      "turn_right_strength": 0.2379
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2149,
+      "turn_right_strength": 0.2379
+    },
+    "sham_reset": {
+      "right_dna02": 1.2149,
+      "turn_right_strength": 0.2379
+    }
+  },
+  {
+    "seed": 18256,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.2162,
+      "turn_right_strength": 0.238
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2162,
+      "turn_right_strength": 0.238
+    },
+    "sham_reset": {
+      "right_dna02": 1.2162,
+      "turn_right_strength": 0.238
+    }
+  },
+  {
+    "seed": 18256,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.2176,
+      "turn_right_strength": 0.2383
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0004,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2176,
+      "turn_right_strength": 0.2383
+    },
+    "sham_reset": {
+      "right_dna02": 1.2176,
+      "turn_right_strength": 0.2383
+    }
+  },
+  {
+    "seed": 18257,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1394,
+      "turn_right_strength": 0.0464
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1394,
+      "turn_right_strength": 0.0464
+    },
+    "sham_reset": {
+      "right_dna02": 0.1394,
+      "turn_right_strength": 0.0464
+    }
+  },
+  {
+    "seed": 18257,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.1346,
+      "turn_right_strength": 0.0452
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1346,
+      "turn_right_strength": 0.0452
+    },
+    "sham_reset": {
+      "right_dna02": 0.1346,
+      "turn_right_strength": 0.0452
+    }
+  },
+  {
+    "seed": 18257,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.1268,
+      "turn_right_strength": 0.0431
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1268,
+      "turn_right_strength": 0.0431
+    },
+    "sham_reset": {
+      "right_dna02": 0.1268,
+      "turn_right_strength": 0.0431
+    }
+  },
+  {
+    "seed": 18258,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.0505,
+      "turn_right_strength": 0.023
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0505,
+      "turn_right_strength": 0.023
+    },
+    "sham_reset": {
+      "right_dna02": 0.0505,
+      "turn_right_strength": 0.023
+    }
+  },
+  {
+    "seed": 18258,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.5335,
+      "turn_right_strength": 0.1302
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5335,
+      "turn_right_strength": 0.1302
+    },
+    "sham_reset": {
+      "right_dna02": 0.5335,
+      "turn_right_strength": 0.1302
+    }
+  },
+  {
+    "seed": 18258,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0197,
+      "turn_right_strength": 0.2069
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0197,
+      "turn_right_strength": 0.2069
+    },
+    "sham_reset": {
+      "right_dna02": 1.0197,
+      "turn_right_strength": 0.2069
+    }
+  },
+  {
+    "seed": 18259,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.8188,
+      "turn_right_strength": 0.181
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8188,
+      "turn_right_strength": 0.181
+    },
+    "sham_reset": {
+      "right_dna02": 0.8188,
+      "turn_right_strength": 0.181
+    }
+  },
+  {
+    "seed": 18259,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.99,
+      "turn_right_strength": 0.2066
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.99,
+      "turn_right_strength": 0.2066
+    },
+    "sham_reset": {
+      "right_dna02": 0.99,
+      "turn_right_strength": 0.2066
+    }
+  },
+  {
+    "seed": 18259,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.9926,
+      "turn_right_strength": 0.2071
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9926,
+      "turn_right_strength": 0.2071
+    },
+    "sham_reset": {
+      "right_dna02": 0.9926,
+      "turn_right_strength": 0.2071
+    }
+  },
+  {
+    "seed": 18259,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.9882,
+      "turn_right_strength": 0.2064
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0002,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9882,
+      "turn_right_strength": 0.2064
+    },
+    "sham_reset": {
+      "right_dna02": 0.9882,
+      "turn_right_strength": 0.2064
+    }
+  },
+  {
+    "seed": 18260,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1242,
+      "turn_right_strength": 0.0423
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1242,
+      "turn_right_strength": 0.0423
+    },
+    "sham_reset": {
+      "right_dna02": 0.1242,
+      "turn_right_strength": 0.0423
+    }
+  },
+  {
+    "seed": 18260,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.1186,
+      "turn_right_strength": 0.0408
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1186,
+      "turn_right_strength": 0.0408
+    },
+    "sham_reset": {
+      "right_dna02": 0.1186,
+      "turn_right_strength": 0.0408
+    }
+  },
+  {
+    "seed": 18260,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.1102,
+      "turn_right_strength": 0.039
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1102,
+      "turn_right_strength": 0.039
+    },
+    "sham_reset": {
+      "right_dna02": 0.1102,
+      "turn_right_strength": 0.039
+    }
+  },
+  {
+    "seed": 18260,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.0971,
+      "turn_right_strength": 0.0355
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0971,
+      "turn_right_strength": 0.0355
+    },
+    "sham_reset": {
+      "right_dna02": 0.0971,
+      "turn_right_strength": 0.0355
+    }
+  },
+  {
+    "seed": 18261,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.7913,
+      "turn_right_strength": 0.1763
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7913,
+      "turn_right_strength": 0.1763
+    },
+    "sham_reset": {
+      "right_dna02": 0.7913,
+      "turn_right_strength": 0.1763
+    }
+  },
+  {
+    "seed": 18261,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.2788,
+      "turn_right_strength": 0.2443
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2788,
+      "turn_right_strength": 0.2443
+    },
+    "sham_reset": {
+      "right_dna02": 1.2788,
+      "turn_right_strength": 0.2443
+    }
+  },
+  {
+    "seed": 18261,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.28,
+      "turn_right_strength": 0.2447
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.28,
+      "turn_right_strength": 0.2447
+    },
+    "sham_reset": {
+      "right_dna02": 1.28,
+      "turn_right_strength": 0.2447
+    }
+  },
+  {
+    "seed": 18261,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.2821,
+      "turn_right_strength": 0.2448
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2821,
+      "turn_right_strength": 0.2448
+    },
+    "sham_reset": {
+      "right_dna02": 1.2821,
+      "turn_right_strength": 0.2448
+    }
+  },
+  {
+    "seed": 18262,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.6682,
+      "turn_right_strength": 0.1548
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6682,
+      "turn_right_strength": 0.1548
+    },
+    "sham_reset": {
+      "right_dna02": 0.6682,
+      "turn_right_strength": 0.1548
+    }
+  },
+  {
+    "seed": 18262,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.708,
+      "turn_right_strength": 0.1614
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.708,
+      "turn_right_strength": 0.1614
+    },
+    "sham_reset": {
+      "right_dna02": 0.708,
+      "turn_right_strength": 0.1614
+    }
+  },
+  {
+    "seed": 18262,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.8495,
+      "turn_right_strength": 0.1837
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8495,
+      "turn_right_strength": 0.1837
+    },
+    "sham_reset": {
+      "right_dna02": 0.8495,
+      "turn_right_strength": 0.1837
+    }
+  },
+  {
+    "seed": 18262,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.8735,
+      "turn_right_strength": 0.1875
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0007,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8735,
+      "turn_right_strength": 0.1875
+    },
+    "sham_reset": {
+      "right_dna02": 0.8735,
+      "turn_right_strength": 0.1875
+    }
+  },
+  {
+    "seed": 18264,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5581,
+      "turn_right_strength": 0.137
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5581,
+      "turn_right_strength": 0.137
+    },
+    "sham_reset": {
+      "right_dna02": 0.5581,
+      "turn_right_strength": 0.137
+    }
+  },
+  {
+    "seed": 18264,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.7284,
+      "turn_right_strength": 0.1669
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7284,
+      "turn_right_strength": 0.1669
+    },
+    "sham_reset": {
+      "right_dna02": 0.7284,
+      "turn_right_strength": 0.1669
+    }
+  },
+  {
+    "seed": 18264,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7314,
+      "turn_right_strength": 0.1675
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7314,
+      "turn_right_strength": 0.1675
+    },
+    "sham_reset": {
+      "right_dna02": 0.7314,
+      "turn_right_strength": 0.1675
+    }
+  },
+  {
+    "seed": 18264,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.7302,
+      "turn_right_strength": 0.1672
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7302,
+      "turn_right_strength": 0.1672
+    },
+    "sham_reset": {
+      "right_dna02": 0.7302,
+      "turn_right_strength": 0.1672
+    }
+  },
+  {
+    "seed": 18265,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.058,
+      "turn_right_strength": 0.0249
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.058,
+      "turn_right_strength": 0.0249
+    },
+    "sham_reset": {
+      "right_dna02": 0.058,
+      "turn_right_strength": 0.0249
+    }
+  },
+  {
+    "seed": 18265,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.056,
+      "turn_right_strength": 0.0243
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.056,
+      "turn_right_strength": 0.0243
+    },
+    "sham_reset": {
+      "right_dna02": 0.056,
+      "turn_right_strength": 0.0243
+    }
+  },
+  {
+    "seed": 18265,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.354,
+      "turn_right_strength": 0.0965
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.354,
+      "turn_right_strength": 0.0965
+    },
+    "sham_reset": {
+      "right_dna02": 0.354,
+      "turn_right_strength": 0.0965
+    }
+  },
+  {
+    "seed": 18265,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5913,
+      "turn_right_strength": 0.1432
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0001,
+      "turn_right_strength": 0.0096
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5913,
+      "turn_right_strength": 0.1432
+    },
+    "sham_reset": {
+      "right_dna02": 0.5913,
+      "turn_right_strength": 0.1432
+    }
+  },
+  {
+    "seed": 18266,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.103,
+      "turn_right_strength": 0.0368
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.103,
+      "turn_right_strength": 0.0368
+    },
+    "sham_reset": {
+      "right_dna02": 0.103,
+      "turn_right_strength": 0.0368
+    }
+  },
+  {
+    "seed": 18266,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0997,
+      "turn_right_strength": 0.0363
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0008,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0997,
+      "turn_right_strength": 0.0363
+    },
+    "sham_reset": {
+      "right_dna02": 0.0997,
+      "turn_right_strength": 0.0363
+    }
+  },
+  {
+    "seed": 18268,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.078,
+      "turn_right_strength": 0.0303
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.078,
+      "turn_right_strength": 0.0303
+    },
+    "sham_reset": {
+      "right_dna02": 0.078,
+      "turn_right_strength": 0.0303
+    }
+  },
+  {
+    "seed": 18268,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.0755,
+      "turn_right_strength": 0.0296
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0755,
+      "turn_right_strength": 0.0296
+    },
+    "sham_reset": {
+      "right_dna02": 0.0755,
+      "turn_right_strength": 0.0296
+    }
+  },
+  {
+    "seed": 18268,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.0718,
+      "turn_right_strength": 0.029
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0718,
+      "turn_right_strength": 0.029
+    },
+    "sham_reset": {
+      "right_dna02": 0.0718,
+      "turn_right_strength": 0.029
+    }
+  },
+  {
+    "seed": 18268,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.0664,
+      "turn_right_strength": 0.0275
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0034,
+      "turn_right_strength": 0.0103
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0664,
+      "turn_right_strength": 0.0275
+    },
+    "sham_reset": {
+      "right_dna02": 0.0664,
+      "turn_right_strength": 0.0275
+    }
+  },
+  {
+    "seed": 18269,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1832,
+      "turn_right_strength": 0.0575
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1832,
+      "turn_right_strength": 0.0575
+    },
+    "sham_reset": {
+      "right_dna02": 0.1832,
+      "turn_right_strength": 0.0575
+    }
+  },
+  {
+    "seed": 18269,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.3145,
+      "turn_right_strength": 0.0879
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3145,
+      "turn_right_strength": 0.0879
+    },
+    "sham_reset": {
+      "right_dna02": 0.3145,
+      "turn_right_strength": 0.0879
+    }
+  },
+  {
+    "seed": 18269,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.3975,
+      "turn_right_strength": 0.1059
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3975,
+      "turn_right_strength": 0.1059
+    },
+    "sham_reset": {
+      "right_dna02": 0.3975,
+      "turn_right_strength": 0.1059
+    }
+  },
+  {
+    "seed": 18269,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.3954,
+      "turn_right_strength": 0.1054
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3954,
+      "turn_right_strength": 0.1054
+    },
+    "sham_reset": {
+      "right_dna02": 0.3954,
+      "turn_right_strength": 0.1054
+    }
+  },
+  {
+    "seed": 18271,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.4558,
+      "turn_right_strength": 0.1174
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4558,
+      "turn_right_strength": 0.1174
+    },
+    "sham_reset": {
+      "right_dna02": 0.4558,
+      "turn_right_strength": 0.1174
+    }
+  },
+  {
+    "seed": 18271,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.6145,
+      "turn_right_strength": 0.1472
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6145,
+      "turn_right_strength": 0.1472
+    },
+    "sham_reset": {
+      "right_dna02": 0.6145,
+      "turn_right_strength": 0.1472
+    }
+  },
+  {
+    "seed": 18271,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7552,
+      "turn_right_strength": 0.1717
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7552,
+      "turn_right_strength": 0.1717
+    },
+    "sham_reset": {
+      "right_dna02": 0.7552,
+      "turn_right_strength": 0.1717
+    }
+  },
+  {
+    "seed": 18271,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.7562,
+      "turn_right_strength": 0.1719
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7562,
+      "turn_right_strength": 0.1719
+    },
+    "sham_reset": {
+      "right_dna02": 0.7562,
+      "turn_right_strength": 0.1719
+    }
+  },
+  {
+    "seed": 18272,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.4599,
+      "turn_right_strength": 0.1176
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0109,
+      "turn_right_strength": 0.0122
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4599,
+      "turn_right_strength": 0.1176
+    },
+    "sham_reset": {
+      "right_dna02": 0.4599,
+      "turn_right_strength": 0.1176
+    }
+  },
+  {
+    "seed": 18272,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.4451,
+      "turn_right_strength": 0.1146
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0109,
+      "turn_right_strength": 0.0122
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4451,
+      "turn_right_strength": 0.1146
+    },
+    "sham_reset": {
+      "right_dna02": 0.4451,
+      "turn_right_strength": 0.1146
+    }
+  },
+  {
+    "seed": 18272,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.4217,
+      "turn_right_strength": 0.1103
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0109,
+      "turn_right_strength": 0.0122
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4217,
+      "turn_right_strength": 0.1103
+    },
+    "sham_reset": {
+      "right_dna02": 0.4217,
+      "turn_right_strength": 0.1103
+    }
+  },
+  {
+    "seed": 18272,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.2997,
+      "turn_right_strength": 0.0845
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0109,
+      "turn_right_strength": 0.0122
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2997,
+      "turn_right_strength": 0.0845
+    },
+    "sham_reset": {
+      "right_dna02": 0.2997,
+      "turn_right_strength": 0.0845
+    }
+  },
+  {
+    "seed": 18274,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.6745,
+      "turn_right_strength": 0.1565
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6745,
+      "turn_right_strength": 0.1565
+    },
+    "sham_reset": {
+      "right_dna02": 0.6745,
+      "turn_right_strength": 0.1565
+    }
+  },
+  {
+    "seed": 18274,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8993,
+      "turn_right_strength": 0.1925
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8993,
+      "turn_right_strength": 0.1925
+    },
+    "sham_reset": {
+      "right_dna02": 0.8993,
+      "turn_right_strength": 0.1925
+    }
+  },
+  {
+    "seed": 18274,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.0546,
+      "turn_right_strength": 0.2151
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0546,
+      "turn_right_strength": 0.2151
+    },
+    "sham_reset": {
+      "right_dna02": 1.0546,
+      "turn_right_strength": 0.2151
+    }
+  },
+  {
+    "seed": 18274,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0344,
+      "turn_right_strength": 0.2123
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0344,
+      "turn_right_strength": 0.2123
+    },
+    "sham_reset": {
+      "right_dna02": 1.0344,
+      "turn_right_strength": 0.2123
+    }
+  },
+  {
+    "seed": 18275,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.4168,
+      "turn_right_strength": 0.109
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4168,
+      "turn_right_strength": 0.109
+    },
+    "sham_reset": {
+      "right_dna02": 0.4168,
+      "turn_right_strength": 0.109
+    }
+  },
+  {
+    "seed": 18275,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.679,
+      "turn_right_strength": 0.1573
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.679,
+      "turn_right_strength": 0.1573
+    },
+    "sham_reset": {
+      "right_dna02": 0.679,
+      "turn_right_strength": 0.1573
+    }
+  },
+  {
+    "seed": 18275,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.8699,
+      "turn_right_strength": 0.1881
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8699,
+      "turn_right_strength": 0.1881
+    },
+    "sham_reset": {
+      "right_dna02": 0.8699,
+      "turn_right_strength": 0.1881
+    }
+  },
+  {
+    "seed": 18275,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.8733,
+      "turn_right_strength": 0.1883
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8733,
+      "turn_right_strength": 0.1883
+    },
+    "sham_reset": {
+      "right_dna02": 0.8733,
+      "turn_right_strength": 0.1883
+    }
+  },
+  {
+    "seed": 18276,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5423,
+      "turn_right_strength": 0.1346
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.0126
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5423,
+      "turn_right_strength": 0.1346
+    },
+    "sham_reset": {
+      "right_dna02": 0.5423,
+      "turn_right_strength": 0.1346
+    }
+  },
+  {
+    "seed": 18276,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.5513,
+      "turn_right_strength": 0.1359
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.0126
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5513,
+      "turn_right_strength": 0.1359
+    },
+    "sham_reset": {
+      "right_dna02": 0.5513,
+      "turn_right_strength": 0.1359
+    }
+  },
+  {
+    "seed": 18276,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.6424,
+      "turn_right_strength": 0.1528
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.0126
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6424,
+      "turn_right_strength": 0.1528
+    },
+    "sham_reset": {
+      "right_dna02": 0.6424,
+      "turn_right_strength": 0.1528
+    }
+  },
+  {
+    "seed": 18276,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5533,
+      "turn_right_strength": 0.1362
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0136,
+      "turn_right_strength": 0.0126
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5533,
+      "turn_right_strength": 0.1362
+    },
+    "sham_reset": {
+      "right_dna02": 0.5533,
+      "turn_right_strength": 0.1362
+    }
+  },
+  {
+    "seed": 18277,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.7229,
+      "turn_right_strength": 0.1636
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7229,
+      "turn_right_strength": 0.1636
+    },
+    "sham_reset": {
+      "right_dna02": 0.7229,
+      "turn_right_strength": 0.1636
+    }
+  },
+  {
+    "seed": 18277,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.1252,
+      "turn_right_strength": 0.2221
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1252,
+      "turn_right_strength": 0.2221
+    },
+    "sham_reset": {
+      "right_dna02": 1.1252,
+      "turn_right_strength": 0.2221
+    }
+  },
+  {
+    "seed": 18277,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.1138,
+      "turn_right_strength": 0.2206
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1138,
+      "turn_right_strength": 0.2206
+    },
+    "sham_reset": {
+      "right_dna02": 1.1138,
+      "turn_right_strength": 0.2206
+    }
+  },
+  {
+    "seed": 18277,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.0936,
+      "turn_right_strength": 0.2179
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0011,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0936,
+      "turn_right_strength": 0.2179
+    },
+    "sham_reset": {
+      "right_dna02": 1.0936,
+      "turn_right_strength": 0.2179
+    }
+  },
+  {
+    "seed": 18279,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.292,
+      "turn_right_strength": 0.0818
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.292,
+      "turn_right_strength": 0.0818
+    },
+    "sham_reset": {
+      "right_dna02": 0.292,
+      "turn_right_strength": 0.0818
+    }
+  },
+  {
+    "seed": 18279,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2895,
+      "turn_right_strength": 0.0812
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2895,
+      "turn_right_strength": 0.0812
+    },
+    "sham_reset": {
+      "right_dna02": 0.2895,
+      "turn_right_strength": 0.0812
+    }
+  },
+  {
+    "seed": 18279,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.2784,
+      "turn_right_strength": 0.0788
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2784,
+      "turn_right_strength": 0.0788
+    },
+    "sham_reset": {
+      "right_dna02": 0.2784,
+      "turn_right_strength": 0.0788
+    }
+  },
+  {
+    "seed": 18279,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.2814,
+      "turn_right_strength": 0.0794
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2814,
+      "turn_right_strength": 0.0794
+    },
+    "sham_reset": {
+      "right_dna02": 0.2814,
+      "turn_right_strength": 0.0794
+    }
+  },
+  {
+    "seed": 18282,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1858,
+      "turn_right_strength": 0.0578
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1858,
+      "turn_right_strength": 0.0578
+    },
+    "sham_reset": {
+      "right_dna02": 0.1858,
+      "turn_right_strength": 0.0578
+    }
+  },
+  {
+    "seed": 18282,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.1198,
+      "turn_right_strength": 0.0414
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1198,
+      "turn_right_strength": 0.0414
+    },
+    "sham_reset": {
+      "right_dna02": 0.1198,
+      "turn_right_strength": 0.0414
+    }
+  },
+  {
+    "seed": 18282,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.0709,
+      "turn_right_strength": 0.0284
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0709,
+      "turn_right_strength": 0.0284
+    },
+    "sham_reset": {
+      "right_dna02": 0.0709,
+      "turn_right_strength": 0.0284
+    }
+  },
+  {
+    "seed": 18282,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.0602,
+      "turn_right_strength": 0.0255
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.0602,
+      "turn_right_strength": 0.0255
+    },
+    "sham_reset": {
+      "right_dna02": 0.0602,
+      "turn_right_strength": 0.0255
+    }
+  },
+  {
+    "seed": 18283,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.1875,
+      "turn_right_strength": 0.058
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.1875,
+      "turn_right_strength": 0.058
+    },
+    "sham_reset": {
+      "right_dna02": 0.1875,
+      "turn_right_strength": 0.058
+    }
+  },
+  {
+    "seed": 18283,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2095,
+      "turn_right_strength": 0.0634
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2095,
+      "turn_right_strength": 0.0634
+    },
+    "sham_reset": {
+      "right_dna02": 0.2095,
+      "turn_right_strength": 0.0634
+    }
+  },
+  {
+    "seed": 18283,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.2321,
+      "turn_right_strength": 0.0688
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2321,
+      "turn_right_strength": 0.0688
+    },
+    "sham_reset": {
+      "right_dna02": 0.2321,
+      "turn_right_strength": 0.0688
+    }
+  },
+  {
+    "seed": 18283,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.474,
+      "turn_right_strength": 0.12
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0005,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.474,
+      "turn_right_strength": 0.12
+    },
+    "sham_reset": {
+      "right_dna02": 0.474,
+      "turn_right_strength": 0.12
+    }
+  },
+  {
+    "seed": 18284,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5654,
+      "turn_right_strength": 0.1381
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5654,
+      "turn_right_strength": 0.1381
+    },
+    "sham_reset": {
+      "right_dna02": 0.5654,
+      "turn_right_strength": 0.1381
+    }
+  },
+  {
+    "seed": 18284,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.6917,
+      "turn_right_strength": 0.1605
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6917,
+      "turn_right_strength": 0.1605
+    },
+    "sham_reset": {
+      "right_dna02": 0.6917,
+      "turn_right_strength": 0.1605
+    }
+  },
+  {
+    "seed": 18284,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.6921,
+      "turn_right_strength": 0.1605
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6921,
+      "turn_right_strength": 0.1605
+    },
+    "sham_reset": {
+      "right_dna02": 0.6921,
+      "turn_right_strength": 0.1605
+    }
+  },
+  {
+    "seed": 18284,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6935,
+      "turn_right_strength": 0.1609
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6935,
+      "turn_right_strength": 0.1609
+    },
+    "sham_reset": {
+      "right_dna02": 0.6935,
+      "turn_right_strength": 0.1609
+    }
+  },
+  {
+    "seed": 18285,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.2695,
+      "turn_right_strength": 0.2407
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0081,
+      "turn_right_strength": 0.0113
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2695,
+      "turn_right_strength": 0.2407
+    },
+    "sham_reset": {
+      "right_dna02": 1.2695,
+      "turn_right_strength": 0.2407
+    }
+  },
+  {
+    "seed": 18285,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.8592,
+      "turn_right_strength": 0.3028
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0081,
+      "turn_right_strength": 0.0113
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.8592,
+      "turn_right_strength": 0.3028
+    },
+    "sham_reset": {
+      "right_dna02": 1.8592,
+      "turn_right_strength": 0.3028
+    }
+  },
+  {
+    "seed": 18285,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.9557,
+      "turn_right_strength": 0.3119
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0081,
+      "turn_right_strength": 0.0113
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.9557,
+      "turn_right_strength": 0.3119
+    },
+    "sham_reset": {
+      "right_dna02": 1.9557,
+      "turn_right_strength": 0.3119
+    }
+  },
+  {
+    "seed": 18285,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.8878,
+      "turn_right_strength": 0.3057
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0081,
+      "turn_right_strength": 0.0113
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.8878,
+      "turn_right_strength": 0.3057
+    },
+    "sham_reset": {
+      "right_dna02": 1.8878,
+      "turn_right_strength": 0.3057
+    }
+  },
+  {
+    "seed": 18287,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.1422,
+      "turn_right_strength": 0.2248
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0045,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1422,
+      "turn_right_strength": 0.2248
+    },
+    "sham_reset": {
+      "right_dna02": 1.1422,
+      "turn_right_strength": 0.2248
+    }
+  },
+  {
+    "seed": 18287,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.255,
+      "turn_right_strength": 0.239
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0045,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.255,
+      "turn_right_strength": 0.239
+    },
+    "sham_reset": {
+      "right_dna02": 1.255,
+      "turn_right_strength": 0.239
+    }
+  },
+  {
+    "seed": 18287,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.2552,
+      "turn_right_strength": 0.239
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0045,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2552,
+      "turn_right_strength": 0.239
+    },
+    "sham_reset": {
+      "right_dna02": 1.2552,
+      "turn_right_strength": 0.239
+    }
+  },
+  {
+    "seed": 18287,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.2544,
+      "turn_right_strength": 0.239
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0045,
+      "turn_right_strength": 0.0106
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.2544,
+      "turn_right_strength": 0.239
+    },
+    "sham_reset": {
+      "right_dna02": 1.2544,
+      "turn_right_strength": 0.239
+    }
+  },
+  {
+    "seed": 18288,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5794,
+      "turn_right_strength": 0.1387
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5794,
+      "turn_right_strength": 0.1387
+    },
+    "sham_reset": {
+      "right_dna02": 0.5794,
+      "turn_right_strength": 0.1387
+    }
+  },
+  {
+    "seed": 18288,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.8973,
+      "turn_right_strength": 0.1903
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8973,
+      "turn_right_strength": 0.1903
+    },
+    "sham_reset": {
+      "right_dna02": 0.8973,
+      "turn_right_strength": 0.1903
+    }
+  },
+  {
+    "seed": 18288,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.1283,
+      "turn_right_strength": 0.2219
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1283,
+      "turn_right_strength": 0.2219
+    },
+    "sham_reset": {
+      "right_dna02": 1.1283,
+      "turn_right_strength": 0.2219
+    }
+  },
+  {
+    "seed": 18288,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.1132,
+      "turn_right_strength": 0.2198
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.1132,
+      "turn_right_strength": 0.2198
+    },
+    "sham_reset": {
+      "right_dna02": 1.1132,
+      "turn_right_strength": 0.2198
+    }
+  },
+  {
+    "seed": 18289,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.5578,
+      "turn_right_strength": 0.1352
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0051,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5578,
+      "turn_right_strength": 0.1352
+    },
+    "sham_reset": {
+      "right_dna02": 0.5578,
+      "turn_right_strength": 0.1352
+    }
+  },
+  {
+    "seed": 18289,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.6664,
+      "turn_right_strength": 0.1544
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0051,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6664,
+      "turn_right_strength": 0.1544
+    },
+    "sham_reset": {
+      "right_dna02": 0.6664,
+      "turn_right_strength": 0.1544
+    }
+  },
+  {
+    "seed": 18289,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.8515,
+      "turn_right_strength": 0.1841
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0051,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8515,
+      "turn_right_strength": 0.1841
+    },
+    "sham_reset": {
+      "right_dna02": 0.8515,
+      "turn_right_strength": 0.1841
+    }
+  },
+  {
+    "seed": 18289,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.9064,
+      "turn_right_strength": 0.1923
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0051,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.9064,
+      "turn_right_strength": 0.1923
+    },
+    "sham_reset": {
+      "right_dna02": 0.9064,
+      "turn_right_strength": 0.1923
+    }
+  },
+  {
+    "seed": 18290,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.7195,
+      "turn_right_strength": 0.1675
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7195,
+      "turn_right_strength": 0.1675
+    },
+    "sham_reset": {
+      "right_dna02": 0.7195,
+      "turn_right_strength": 0.1675
+    }
+  },
+  {
+    "seed": 18290,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.6913,
+      "turn_right_strength": 0.1625
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6913,
+      "turn_right_strength": 0.1625
+    },
+    "sham_reset": {
+      "right_dna02": 0.6913,
+      "turn_right_strength": 0.1625
+    }
+  },
+  {
+    "seed": 18290,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.6382,
+      "turn_right_strength": 0.1534
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6382,
+      "turn_right_strength": 0.1534
+    },
+    "sham_reset": {
+      "right_dna02": 0.6382,
+      "turn_right_strength": 0.1534
+    }
+  },
+  {
+    "seed": 18290,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5488,
+      "turn_right_strength": 0.1366
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5488,
+      "turn_right_strength": 0.1366
+    },
+    "sham_reset": {
+      "right_dna02": 0.5488,
+      "turn_right_strength": 0.1366
+    }
+  },
+  {
+    "seed": 18291,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 1.0207,
+      "turn_right_strength": 0.208
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0047,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.0207,
+      "turn_right_strength": 0.208
+    },
+    "sham_reset": {
+      "right_dna02": 1.0207,
+      "turn_right_strength": 0.208
+    }
+  },
+  {
+    "seed": 18291,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 1.3957,
+      "turn_right_strength": 0.2551
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0047,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3957,
+      "turn_right_strength": 0.2551
+    },
+    "sham_reset": {
+      "right_dna02": 1.3957,
+      "turn_right_strength": 0.2551
+    }
+  },
+  {
+    "seed": 18291,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 1.3954,
+      "turn_right_strength": 0.2551
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0047,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3954,
+      "turn_right_strength": 0.2551
+    },
+    "sham_reset": {
+      "right_dna02": 1.3954,
+      "turn_right_strength": 0.2551
+    }
+  },
+  {
+    "seed": 18291,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 1.3945,
+      "turn_right_strength": 0.255
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0047,
+      "turn_right_strength": 0.0107
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 1.3945,
+      "turn_right_strength": 0.255
+    },
+    "sham_reset": {
+      "right_dna02": 1.3945,
+      "turn_right_strength": 0.255
+    }
+  },
+  {
+    "seed": 18293,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.4364,
+      "turn_right_strength": 0.1139
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0065,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4364,
+      "turn_right_strength": 0.1139
+    },
+    "sham_reset": {
+      "right_dna02": 0.4364,
+      "turn_right_strength": 0.1139
+    }
+  },
+  {
+    "seed": 18293,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.607,
+      "turn_right_strength": 0.1467
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0065,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.607,
+      "turn_right_strength": 0.1467
+    },
+    "sham_reset": {
+      "right_dna02": 0.607,
+      "turn_right_strength": 0.1467
+    }
+  },
+  {
+    "seed": 18293,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.5963,
+      "turn_right_strength": 0.1447
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0065,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5963,
+      "turn_right_strength": 0.1447
+    },
+    "sham_reset": {
+      "right_dna02": 0.5963,
+      "turn_right_strength": 0.1447
+    }
+  },
+  {
+    "seed": 18293,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5773,
+      "turn_right_strength": 0.1411
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0065,
+      "turn_right_strength": 0.0108
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5773,
+      "turn_right_strength": 0.1411
+    },
+    "sham_reset": {
+      "right_dna02": 0.5773,
+      "turn_right_strength": 0.1411
+    }
+  },
+  {
+    "seed": 18294,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.132,
+      "turn_right_strength": 0.0444
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.132,
+      "turn_right_strength": 0.0444
+    },
+    "sham_reset": {
+      "right_dna02": 0.132,
+      "turn_right_strength": 0.0444
+    }
+  },
+  {
+    "seed": 18294,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.2324,
+      "turn_right_strength": 0.0692
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2324,
+      "turn_right_strength": 0.0692
+    },
+    "sham_reset": {
+      "right_dna02": 0.2324,
+      "turn_right_strength": 0.0692
+    }
+  },
+  {
+    "seed": 18294,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.4459,
+      "turn_right_strength": 0.1157
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.4459,
+      "turn_right_strength": 0.1157
+    },
+    "sham_reset": {
+      "right_dna02": 0.4459,
+      "turn_right_strength": 0.1157
+    }
+  },
+  {
+    "seed": 18294,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5863,
+      "turn_right_strength": 0.1425
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0003,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5863,
+      "turn_right_strength": 0.1425
+    },
+    "sham_reset": {
+      "right_dna02": 0.5863,
+      "turn_right_strength": 0.1425
+    }
+  },
+  {
+    "seed": 18295,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.8121,
+      "turn_right_strength": 0.1774
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0019,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.8121,
+      "turn_right_strength": 0.1774
+    },
+    "sham_reset": {
+      "right_dna02": 0.8121,
+      "turn_right_strength": 0.1774
+    }
+  },
+  {
+    "seed": 18295,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.78,
+      "turn_right_strength": 0.1724
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0019,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.78,
+      "turn_right_strength": 0.1724
+    },
+    "sham_reset": {
+      "right_dna02": 0.78,
+      "turn_right_strength": 0.1724
+    }
+  },
+  {
+    "seed": 18295,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.7254,
+      "turn_right_strength": 0.164
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0019,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.7254,
+      "turn_right_strength": 0.164
+    },
+    "sham_reset": {
+      "right_dna02": 0.7254,
+      "turn_right_strength": 0.164
+    }
+  },
+  {
+    "seed": 18295,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.6332,
+      "turn_right_strength": 0.1485
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0019,
+      "turn_right_strength": 0.0098
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.6332,
+      "turn_right_strength": 0.1485
+    },
+    "sham_reset": {
+      "right_dna02": 0.6332,
+      "turn_right_strength": 0.1485
+    }
+  },
+  {
+    "seed": 18297,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.097,
+      "turn_right_strength": 0.0353
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0016,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.097,
+      "turn_right_strength": 0.0353
+    },
+    "sham_reset": {
+      "right_dna02": 0.097,
+      "turn_right_strength": 0.0353
+    }
+  },
+  {
+    "seed": 18297,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.3754,
+      "turn_right_strength": 0.1006
+    },
+    "alpha_reset": {
+      "right_dna02": 0.0016,
+      "turn_right_strength": 0.0097
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3754,
+      "turn_right_strength": 0.1006
+    },
+    "sham_reset": {
+      "right_dna02": 0.3754,
+      "turn_right_strength": 0.1006
+    }
+  },
+  {
+    "seed": 18299,
+    "dose": 10,
+    "learned_intact": {
+      "right_dna02": 0.2251,
+      "turn_right_strength": 0.067
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.2251,
+      "turn_right_strength": 0.067
+    },
+    "sham_reset": {
+      "right_dna02": 0.2251,
+      "turn_right_strength": 0.067
+    }
+  },
+  {
+    "seed": 18299,
+    "dose": 30,
+    "learned_intact": {
+      "right_dna02": 0.24,
+      "turn_right_strength": 0.0704
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.24,
+      "turn_right_strength": 0.0704
+    },
+    "sham_reset": {
+      "right_dna02": 0.24,
+      "turn_right_strength": 0.0704
+    }
+  },
+  {
+    "seed": 18299,
+    "dose": 60,
+    "learned_intact": {
+      "right_dna02": 0.3145,
+      "turn_right_strength": 0.0874
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.3145,
+      "turn_right_strength": 0.0874
+    },
+    "sham_reset": {
+      "right_dna02": 0.3145,
+      "turn_right_strength": 0.0874
+    }
+  },
+  {
+    "seed": 18299,
+    "dose": 120,
+    "learned_intact": {
+      "right_dna02": 0.5851,
+      "turn_right_strength": 0.1409
+    },
+    "alpha_reset": {
+      "right_dna02": 0,
+      "turn_right_strength": 0.01
+    },
+    "eligibility_reset_only": {
+      "right_dna02": 0.5851,
+      "turn_right_strength": 0.1409
+    },
+    "sham_reset": {
+      "right_dna02": 0.5851,
+      "turn_right_strength": 0.1409
+    }
+  }
+]

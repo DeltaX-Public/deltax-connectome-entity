@@ -1,0 +1,79 @@
+{
+  "Q0": {
+    "condition_id": "Q0",
+    "label": "Fixed Baseline",
+    "mean_budget_used": 0,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1,
+    "median_alpha": 1,
+    "max_alpha": 1,
+    "saturated_seeds_count": 0,
+    "is_saturation_dependent": false
+  },
+  "Q1": {
+    "condition_id": "Q1",
+    "label": "Old Rule Control",
+    "mean_budget_used": 0.0027,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1.0012,
+    "median_alpha": 1.0003,
+    "max_alpha": 1.0061,
+    "saturated_seeds_count": 0,
+    "is_saturation_dependent": false
+  },
+  "Q2": {
+    "condition_id": "Q2",
+    "label": "Subthreshold Afferent",
+    "mean_budget_used": 3.6433,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1.107,
+    "median_alpha": 1.0357,
+    "max_alpha": 2.5,
+    "saturated_seeds_count": 1,
+    "is_saturation_dependent": false
+  },
+  "Q3": {
+    "condition_id": "Q3",
+    "label": "Subthreshold Projection",
+    "mean_budget_used": 0.0003,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1,
+    "median_alpha": 1,
+    "max_alpha": 1,
+    "saturated_seeds_count": 0,
+    "is_saturation_dependent": true
+  },
+  "Q4": {
+    "condition_id": "Q4",
+    "label": "Subthreshold Balanced Two-Stage",
+    "mean_budget_used": 3.6436,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1.1065,
+    "median_alpha": 1.0353,
+    "max_alpha": 2.5,
+    "saturated_seeds_count": 1,
+    "is_saturation_dependent": false
+  },
+  "Q5": {
+    "condition_id": "Q5",
+    "label": "Subthreshold Matched Sham",
+    "mean_budget_used": 71.1811,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1.8467,
+    "median_alpha": 2.1479,
+    "max_alpha": 2.5,
+    "saturated_seeds_count": 50,
+    "is_saturation_dependent": false
+  },
+  "Q6": {
+    "condition_id": "Q6",
+    "label": "Balanced No-Reinforcement Control",
+    "mean_budget_used": 0,
+    "fraction_seeds_touching_global_budget": 0,
+    "mean_alpha": 1,
+    "median_alpha": 1,
+    "max_alpha": 1,
+    "saturated_seeds_count": 0,
+    "is_saturation_dependent": false
+  }
+}

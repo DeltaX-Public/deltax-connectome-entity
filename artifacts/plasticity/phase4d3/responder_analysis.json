@@ -1,0 +1,128 @@
+{
+  "total_seeds": 100,
+  "responder_count": 71,
+  "responder_pct": 71,
+  "nonresponder_count": 29,
+  "nonresponder_pct": 29,
+  "predictive_factors_ranked": [
+    {
+      "variable": "DNa02_inp_over_theta",
+      "responder_mean": 0.3344,
+      "responder_std": 0.0481,
+      "nonresponder_mean": 0.2959,
+      "nonresponder_std": 0.0478,
+      "diff": 0.0385,
+      "cohens_d": 0.8017
+    },
+    {
+      "variable": "DNa02_inp",
+      "responder_mean": 50.0142,
+      "responder_std": 7.0356,
+      "nonresponder_mean": 44.8905,
+      "nonresponder_std": 7.3168,
+      "diff": 5.1237,
+      "cohens_d": 0.7199
+    },
+    {
+      "variable": "AN03A008_inp",
+      "responder_mean": 97.09,
+      "responder_std": 4.8625,
+      "nonresponder_mean": 93.8501,
+      "nonresponder_std": 4.6184,
+      "diff": 3.2399,
+      "cohens_d": 0.6758
+    },
+    {
+      "variable": "AN03A008_psi",
+      "responder_mean": 0.8351,
+      "responder_std": 0.0138,
+      "nonresponder_mean": 0.8286,
+      "nonresponder_std": 0.0204,
+      "diff": 0.0065,
+      "cohens_d": 0.4049
+    },
+    {
+      "variable": "AN03A008_inp_over_theta",
+      "responder_mean": 2.0535,
+      "responder_std": 0.1645,
+      "nonresponder_mean": 1.9911,
+      "nonresponder_std": 0.2414,
+      "diff": 0.0625,
+      "cohens_d": 0.3293
+    },
+    {
+      "variable": "baseline_whole_net_rate",
+      "responder_mean": 0.0811,
+      "responder_std": 0.0013,
+      "nonresponder_mean": 0.0814,
+      "nonresponder_std": 0.0013,
+      "diff": -0.0003,
+      "cohens_d": -0.2666
+    },
+    {
+      "variable": "AN03A008_gain_a",
+      "responder_mean": 0.1567,
+      "responder_std": 0.0151,
+      "nonresponder_mean": 0.1529,
+      "nonresponder_std": 0.0146,
+      "diff": 0.0037,
+      "cohens_d": 0.249
+    },
+    {
+      "variable": "tactile_receptors_mean_rate",
+      "responder_mean": 39.5413,
+      "responder_std": 0.7956,
+      "nonresponder_mean": 39.6779,
+      "nonresponder_std": 0.6322,
+      "diff": -0.1366,
+      "cohens_d": -0.1815
+    },
+    {
+      "variable": "DNa02_theta",
+      "responder_mean": 150.1807,
+      "responder_std": 11.9781,
+      "nonresponder_mean": 152.1965,
+      "nonresponder_std": 11.5283,
+      "diff": -2.0159,
+      "cohens_d": -0.1701
+    },
+    {
+      "variable": "AN03A008_theta",
+      "responder_mean": 47.4937,
+      "responder_std": 3.3846,
+      "nonresponder_mean": 47.6407,
+      "nonresponder_std": 4.5719,
+      "diff": -0.1469,
+      "cohens_d": -0.0391
+    },
+    {
+      "variable": "DNa02_gain_a",
+      "responder_mean": 0.049,
+      "responder_std": 0.0045,
+      "nonresponder_mean": 0.0491,
+      "nonresponder_std": 0.0049,
+      "diff": -0.0001,
+      "cohens_d": -0.0225
+    },
+    {
+      "variable": "AN03A008_size_scale",
+      "responder_mean": 6.3741,
+      "responder_std": 0,
+      "nonresponder_mean": 6.3741,
+      "nonresponder_std": 0,
+      "diff": 0,
+      "cohens_d": 0
+    },
+    {
+      "variable": "DNa02_size_scale",
+      "responder_mean": 20,
+      "responder_std": 0,
+      "nonresponder_mean": 20,
+      "nonresponder_std": 0,
+      "diff": 0,
+      "cohens_d": 0
+    }
+  ],
+  "top_predictor": "DNa02_inp_over_theta",
+  "scientific_interpretation": "Baseline heterogeneity is strongest along DNa02_inp_over_theta (Cohen's d = 0.8017)."
+}

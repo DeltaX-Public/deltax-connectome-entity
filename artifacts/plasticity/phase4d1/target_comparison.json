@@ -1,0 +1,28 @@
+{
+  "overview": {
+    "target_a_afferent_only": {
+      "condition": "P2",
+      "mean_dna02_diff": 0,
+      "mean_turn_right_post": 0.0102,
+      "success_count": 0
+    },
+    "target_b_projection_only": {
+      "condition": "P3",
+      "mean_dna02_diff": 0,
+      "mean_turn_right_post": 0.0102,
+      "success_count": 0
+    },
+    "target_c_balanced_two_stage": {
+      "condition": "P4",
+      "mean_dna02_diff": 0,
+      "mean_turn_right_post": 0.0102,
+      "success_count": 0
+    },
+    "target_d_matched_sham": {
+      "condition": "P5",
+      "mean_dna02_diff": 0,
+      "mean_turn_right_post": 0.0102,
+      "success_count": 0
+    }
+  }
+}

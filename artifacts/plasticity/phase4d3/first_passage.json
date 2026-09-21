@@ -1,0 +1,622 @@
+{
+  "seeds": [
+    {
+      "seed": 18200,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18201,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18202,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18203,
+      "first_passage_dna02": 27,
+      "first_passage_turn_right": 34,
+      "first_saturation_cycle": 35
+    },
+    {
+      "seed": 18204,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 5,
+      "first_saturation_cycle": 23
+    },
+    {
+      "seed": 18205,
+      "first_passage_dna02": 6,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18206,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 12
+    },
+    {
+      "seed": 18207,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18208,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18209,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18210,
+      "first_passage_dna02": 5,
+      "first_passage_turn_right": 16,
+      "first_saturation_cycle": 6
+    },
+    {
+      "seed": 18211,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18212,
+      "first_passage_dna02": 5,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18213,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18214,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18215,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18216,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18217,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 6,
+      "first_saturation_cycle": 18
+    },
+    {
+      "seed": 18218,
+      "first_passage_dna02": 5,
+      "first_passage_turn_right": 74,
+      "first_saturation_cycle": 112
+    },
+    {
+      "seed": 18219,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18220,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 6,
+      "first_saturation_cycle": 21
+    },
+    {
+      "seed": 18221,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18222,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18223,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18224,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 6
+    },
+    {
+      "seed": 18225,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18226,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18227,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 5
+    },
+    {
+      "seed": 18228,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 5
+    },
+    {
+      "seed": 18229,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18230,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18231,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 5
+    },
+    {
+      "seed": 18232,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 10
+    },
+    {
+      "seed": 18233,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18234,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 6
+    },
+    {
+      "seed": 18235,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18236,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18237,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18238,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 5
+    },
+    {
+      "seed": 18239,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18240,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 6
+    },
+    {
+      "seed": 18241,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 6,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18242,
+      "first_passage_dna02": 4,
+      "first_passage_turn_right": 23,
+      "first_saturation_cycle": 27
+    },
+    {
+      "seed": 18243,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18244,
+      "first_passage_dna02": 5,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18245,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 49
+    },
+    {
+      "seed": 18246,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 6,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18247,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18248,
+      "first_passage_dna02": 27,
+      "first_passage_turn_right": 32,
+      "first_saturation_cycle": 36
+    },
+    {
+      "seed": 18249,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 9
+    },
+    {
+      "seed": 18250,
+      "first_passage_dna02": 4,
+      "first_passage_turn_right": 23,
+      "first_saturation_cycle": 25
+    },
+    {
+      "seed": 18251,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18252,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18253,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18254,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18255,
+      "first_passage_dna02": 4,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18256,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18257,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18258,
+      "first_passage_dna02": 8,
+      "first_passage_turn_right": 50,
+      "first_saturation_cycle": 58
+    },
+    {
+      "seed": 18259,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18260,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18261,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18262,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18263,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18264,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18265,
+      "first_passage_dna02": 6,
+      "first_passage_turn_right": 45,
+      "first_saturation_cycle": 45
+    },
+    {
+      "seed": 18266,
+      "first_passage_dna02": 5,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18267,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18268,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18269,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 5,
+      "first_saturation_cycle": 28
+    },
+    {
+      "seed": 18270,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18271,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18272,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18273,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18274,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18275,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18276,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 5
+    },
+    {
+      "seed": 18277,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18278,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18279,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18280,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18281,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18282,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 6,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18283,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 63
+    },
+    {
+      "seed": 18284,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18285,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18286,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18287,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 4
+    },
+    {
+      "seed": 18288,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18289,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 3,
+      "first_saturation_cycle": 7
+    },
+    {
+      "seed": 18290,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18291,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18292,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18293,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18294,
+      "first_passage_dna02": 6,
+      "first_passage_turn_right": 23,
+      "first_saturation_cycle": 25
+    },
+    {
+      "seed": 18295,
+      "first_passage_dna02": 2,
+      "first_passage_turn_right": 2,
+      "first_saturation_cycle": 3
+    },
+    {
+      "seed": 18296,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18297,
+      "first_passage_dna02": 60,
+      "first_passage_turn_right": 63,
+      "first_saturation_cycle": 104
+    },
+    {
+      "seed": 18298,
+      "first_passage_dna02": null,
+      "first_passage_turn_right": null,
+      "first_saturation_cycle": null
+    },
+    {
+      "seed": 18299,
+      "first_passage_dna02": 3,
+      "first_passage_turn_right": 4,
+      "first_saturation_cycle": 49
+    }
+  ],
+  "summary": {
+    "dna02_recruited_seeds_count": 78,
+    "dna02_recruited_seeds_pct": 78,
+    "dna02_median_first_passage_cycle": 2,
+    "dna02_min_first_passage_cycle": 2,
+    "dna02_max_first_passage_cycle": 60,
+    "turn_right_crossing_seeds_count": 69,
+    "turn_right_crossing_seeds_pct": 69,
+    "turn_right_median_first_passage_cycle": 3,
+    "turn_right_min_first_passage_cycle": 2,
+    "turn_right_max_first_passage_cycle": 74,
+    "cumulative_recruitment_by_cycle": {
+      "cycle_10": 75,
+      "cycle_30": 77,
+      "cycle_60": 78,
+      "cycle_120": 78
+    }
+  }
+}

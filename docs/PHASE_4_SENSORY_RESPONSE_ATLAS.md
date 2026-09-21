@@ -49,7 +49,7 @@ The biological bodymap (`upstream/fly-brain/public/data/bodymap.json`) provides 
 
 ## 2. Graph Reachability Matrix
 
-Multi-source Breadth-First Search (BFS) was computed from 34 sensory populations across the full directed connectome graph ($N=165,122$, $E=10,511,038$) to all descending motor command neuron (DN) roles up to depth 6 ([`artifacts/sensory_atlas/reachability.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/reachability.json)):
+Multi-source Breadth-First Search (BFS) was computed from 34 sensory populations across the full directed connectome graph ($N=165,122$, $E=10,511,038$) to all descending motor command neuron (DN) roles up to depth 6 ([`artifacts/sensory_atlas/reachability.json`](../artifacts/sensory_atlas/reachability.json)):
 
 | Sensory Population | Turn Left DNs | Turn Right DNs | Forward Walking DNs | Backward MDN | Giant Fiber Escape | Head Grooming DNs |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -68,7 +68,7 @@ Multi-source Breadth-First Search (BFS) was computed from 34 sensory populations
 
 ## 3. Dose-Response Dynamics (0..200 Hz)
 
-Deterministic intensity sweeps evaluated in [`artifacts/sensory_atlas/dose_response.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/dose_response.json):
+Deterministic intensity sweeps evaluated in [`artifacts/sensory_atlas/dose_response.json`](../artifacts/sensory_atlas/dose_response.json):
 - `tactile T1`: Monotonic increase in descending drive ($0.029$ Hz at 25 Hz up to $0.911$ Hz at 200 Hz). Onset latency shortens monotonically from 23 ms to 15 ms.
 - `thermosensory`: Highly excitable with rapid 12 ms onset latency; drives bilateral turning DNs above 1.1–1.7 Hz.
 - `wing/notum bristles`: Highest gain of all mechanosensory channels; 8 ms latency, driving locomotor DNs above 4.5 Hz.
@@ -79,7 +79,7 @@ Deterministic intensity sweeps evaluated in [`artifacts/sensory_atlas/dose_respo
 
 ## 4. Lateralized Response & Biological Asymmetry
 
-Testing the Laterality Matrix ($L=180/R=0 \to L=180/R=180 \to L=0/R=180$) in [`artifacts/sensory_atlas/lateralization.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/lateralization.json):
+Testing the Laterality Matrix ($L=180/R=0 \to L=180/R=180 \to L=0/R=180$) in [`artifacts/sensory_atlas/lateralization.json`](../artifacts/sensory_atlas/lateralization.json):
 
 | Population & Condition | L=180 / R=0 (Left Only) | L=180 / R=30 (Strong Left) | L=180 / R=180 (Symmetric) | L=30 / R=180 (Strong Right) | L=0 / R=180 (Right Only) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -95,7 +95,7 @@ The connectome response is **not mirror symmetric**. Left T1 stimulation produce
 
 ## 5. Aversive / Noxious Stimulation Findings
 
-Tested in [`artifacts/sensory_atlas/aversive_characterization.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/aversive_characterization.json):
+Tested in [`artifacts/sensory_atlas/aversive_characterization.json`](../artifacts/sensory_atlas/aversive_characterization.json):
 - Multimodal hazard stimulation (thermo + bitter taste + tactile) drives Moonwalker Descending Neurons (`MDN`) up to **4.161 Hz**.
 - Bitter taste selectively excites backward crawling (`MDN` at 1.61 Hz) while forward locomotion drops to 0.12 Hz.
 - Because backward locomotion suppresses forward walking, the candidate normalization bridge assigns `halt` a strength of **0.97** and `turn_left` a strength of **0.146**. Consequently, under symmetric aversive drive, `halt` is the dominant candidate across tested seeds.
@@ -104,7 +104,7 @@ Tested in [`artifacts/sensory_atlas/aversive_characterization.json`](file:///Use
 
 ## 6. Representative Phase III Stimulus Reconstruction
 
-Replaying reconstructed representative Phase III environmental observations through the direct sensory atlas ([`artifacts/sensory_atlas/phase3_stimulus_projection.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/phase3_stimulus_projection.json)):
+Replaying reconstructed representative Phase III environmental observations through the direct sensory atlas ([`artifacts/sensory_atlas/phase3_stimulus_projection.json`](../artifacts/sensory_atlas/phase3_stimulus_projection.json)):
 
 | Reconstructed Phase III State | Active Sensors | Input Asymmetry | Measured DN Readouts | Candidate Strengths | Dominant Winner | Steering Bias |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -118,7 +118,7 @@ Replaying reconstructed representative Phase III environmental observations thro
 
 ## 7. Controlled Input Entropy Findings
 
-Comparing equal-energy stimulation (100 Hz mean across 266 tactile T1 neurons) in [`artifacts/sensory_atlas/entropy_experiment.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/entropy_experiment.json):
+Comparing equal-energy stimulation (100 Hz mean across 266 tactile T1 neurons) in [`artifacts/sensory_atlas/entropy_experiment.json`](../artifacts/sensory_atlas/entropy_experiment.json):
 
 | Stimulus Pattern | Candidate Entropy | Network Entropy | Mean Steering Bias (L - R) | Onset Latency | Winner Reliability across Seeds |
 | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -133,7 +133,7 @@ Comparing equal-energy stimulation (100 Hz mean across 266 tactile T1 neurons) i
 
 ## 8. Causal Neural Perturbation Results
 
-Stimulus: `tactile T1 left` (180 Hz) $\to$ Left steering DNs (`turn_left`) in [`artifacts/sensory_atlas/causal_perturbation.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/causal_perturbation.json):
+Stimulus: `tactile T1 left` (180 Hz) $\to$ Left steering DNs (`turn_left`) in [`artifacts/sensory_atlas/causal_perturbation.json`](../artifacts/sensory_atlas/causal_perturbation.json):
 
 | Causal Branch | Experimental Perturbation | Measured Turn Left DN | Measured Turn Right DN | Net Steering Bias |
 | :--- | :--- | :---: | :---: | :---: |
@@ -146,7 +146,7 @@ Stimulus: `tactile T1 left` (180 Hz) $\to$ Left steering DNs (`turn_left`) in [`
 
 ## 9. Robustness Cohort Summary ($N = 100$, Seeds `8000..8099`)
 
-Sample statistics from the full 100-seed robustness cohort in [`artifacts/sensory_atlas/latest-response-atlas.json`](file:///Users/dominicknoval/Projects/tmp/deltax-connectome-entity/artifacts/sensory_atlas/latest-response-atlas.json):
+Sample statistics from the full 100-seed robustness cohort in [`artifacts/sensory_atlas/latest-response-atlas.json`](../artifacts/sensory_atlas/latest-response-atlas.json):
 
 | Sensory Channel | Forward Locomotion | Backward Locomotion | Turn Left Steering | Turn Right Steering | Dominant Candidate | Winner Reliability | Onset Latency |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

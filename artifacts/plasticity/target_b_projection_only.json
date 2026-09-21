@@ -1,0 +1,38 @@
+{
+  "manifest_id": "TARGET_B_PROJECTION_ONLY",
+  "schema_version": "1.0.0",
+  "status": "CAUSAL_TARGET_FROZEN",
+  "source_evidence_artifact": "artifacts/steering_asymmetry/plasticity_target_candidate.json",
+  "rationale": "Ascending premotor projection from right AN03A008 (idx 2937) to right DNa02 (idx 332). Single massive cholinergic connection (base weight 717). Potentiating this projection amplifies residual intermediate activity directly into the right steering command without modifying receptor afferents.",
+  "eligible_populations": [
+    {
+      "population_name": "AN03A008_right",
+      "role": "ascending_intermediate",
+      "neuron_indices": [
+        2937
+      ]
+    },
+    {
+      "population_name": "DNa02_right",
+      "role": "descending_steering_actuator",
+      "neuron_indices": [
+        332
+      ]
+    }
+  ],
+  "eligible_edges": [
+    {
+      "source": 2937,
+      "target": 332,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 358.5,
+      "notes": "Ascending premotor projection into right DNa02 (base weight 717, up to +50% efficacy)"
+    }
+  ],
+  "safety_bounds": {
+    "max_total_budget": 360.0,
+    "max_edge_delta": 358.5,
+    "max_percentage_change": 0.5
+  },
+  "created_at": "2026-09-19T16:30:00.000Z"
+}

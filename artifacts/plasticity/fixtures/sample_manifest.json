@@ -1,0 +1,46 @@
+{
+  "manifest_id": "FIXTURE_SYNTHETIC_TRIAD_V1",
+  "schema_version": "1.0.0",
+  "status": "PENDING_LANE_B_EVIDENCE",
+  "source_evidence_artifact": "artifacts/steering_asymmetry/lane_b_synthetic_baseline.json",
+  "rationale": "Fixture demonstration manifest for unit testing on a synthetic feedforward triad (A -> B -> C) without biological pathway selection.",
+  "eligible_populations": [
+    {
+      "population_name": "Synthetic_Afferent",
+      "role": "sensory_input",
+      "neuron_indices": [0]
+    },
+    {
+      "population_name": "Synthetic_Interneuron",
+      "role": "relay",
+      "neuron_indices": [1]
+    },
+    {
+      "population_name": "Synthetic_Descending",
+      "role": "motor_output",
+      "neuron_indices": [2]
+    }
+  ],
+  "eligible_edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "allowed_direction": "BIDIRECTIONAL",
+      "max_delta_w": 2.0,
+      "notes": "Afferent to relay connection"
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "allowed_direction": "POTENTIATION_ONLY",
+      "max_delta_w": 3.0,
+      "notes": "Relay to motor connection"
+    }
+  ],
+  "safety_bounds": {
+    "max_total_budget": 10.0,
+    "max_edge_delta": 3.0,
+    "max_percentage_change": 1.0
+  },
+  "created_at": "2026-09-19T09:00:00Z"
+}

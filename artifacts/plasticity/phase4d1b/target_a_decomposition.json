@@ -1,0 +1,67 @@
+{
+  "seed": 18000,
+  "target_manifest": "TARGET_A_AFFERENT_ONLY",
+  "components": {
+    "presynaptic_drive": {
+      "stimulus_hz": 180,
+      "mean_firing_rate_contact_hz": 112.5,
+      "normalized_pre_term": 1.125
+    },
+    "postsynaptic_drive": {
+      "neuron_id": 2937,
+      "baseline_threshold_theta": 50.667,
+      "mean_evoked_rate_contact_hz": 2.14,
+      "normalized_post_term": 0.0214
+    },
+    "coincidence_normalization": {
+      "formula": "(r_pre / 100.0) * (r_post / 100.0)",
+      "scaling_divisor": 10000,
+      "single_step_coincidence": 0.024075
+    },
+    "temporal_dynamics": {
+      "trace_decay_lambda_e": 0.05,
+      "retention_at_reward_arrival": 0.95,
+      "reinforce_ticks_per_cycle": 2,
+      "effective_cycle_eligibility": 0.022895
+    },
+    "learning_rate_and_scaling": {
+      "eta": 0.15,
+      "unbounded_delta_w_per_cycle": 0.00687,
+      "mean_structural_synapses": 5.125,
+      "mean_delta_alpha_per_cycle": 0.00134
+    },
+    "attenuation_and_adaptation": {
+      "mechanism": "Synaptic depression on tactile inputs + rate adaptation on AN03A008",
+      "cycle_1_evoked_rate_hz": 0.85,
+      "cycle_2_evoked_rate_hz": 0,
+      "cycle_3_to_30_evoked_rate_hz": 0,
+      "active_cycles_before_cessation": 2,
+      "passive_decay_erosion_factor": "gamma = 0.0005 per tick erodes accumulated deltaW once firing ceases"
+    }
+  },
+  "cumulative_30_cycle_outcome": {
+    "actual_accumulated_delta_w_per_edge": 0.00007,
+    "actual_accumulated_alpha_change": 0.00002,
+    "total_budget_used": 0.00057
+  },
+  "counterfactual_projections_30_cycles": {
+    "counterfactual_a_no_passive_decay": {
+      "description": "Passive decay gamma = 0.0",
+      "predicted_total_delta_w": 0.0032,
+      "predicted_mean_delta_alpha": 0.00062,
+      "verdict": "Still microscopic (+0.06% change); passive decay was NOT the primary blocker."
+    },
+    "counterfactual_b_no_eligibility_decay": {
+      "description": "Eligibility trace decay lambda_e = 0.0 (infinite trace memory)",
+      "predicted_total_delta_w": 0.0078,
+      "predicted_mean_delta_alpha": 0.00152,
+      "verdict": "Still microscopic (+0.15% change); trace retention was already 95% at reward time."
+    },
+    "counterfactual_c_no_normalization": {
+      "description": "Unnormalized Hebbian product r_pre * r_post without /10000 scaling",
+      "predicted_total_delta_w": 35.8,
+      "predicted_mean_delta_alpha": 6.98,
+      "verdict": "Edges would hit hard percentage/delta bounds; normalization is a 10,000x attenuation factor."
+    }
+  }
+}

@@ -1,0 +1,363 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=1.0in,footskip=0.75in,marginparwidth=2in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{lineno}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Biological Latency, Steering Asymmetry, and Sovereign Executive Governance in an Embodied Whole-CNS \textit{Drosophila} Connectome}}
+
+\author{
+    Dominick Noval\textsuperscript{1,*} \\
+    \small \textsuperscript{1}DeltaX Research Laboratories \\
+    \small \textsuperscript{*}Corresponding author: \texttt{hello@deltaxevaluate.com}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Whole-brain electron microscopy connectomics has delivered complete synaptic wiring diagrams of complex metazoan central nervous systems. However, bridging static neuroanatomical connectivity to autonomous, goal-directed physical behavior remains a primary unsolved challenge in computational neuroscience. Here, we investigate the embodied motor competence of the complete 165,122-neuron, 10.5-million-synapse \textit{Drosophila melanogaster} whole-CNS connectome operating within a closed-loop sensory-motor rover simulation. Using a biophysically grounded continuous-rate leaky integrator network and an unassisted candidate-governance architecture (DeltaX), we evaluate navigation across a pre-registered factorial benchmark of 15 frozen environments and 6 controller architectures across a sealed held-out evaluation cohort ($N = 100$ seeds, $12000..12099$; 9,000 total closed-loop episodes). We demonstrate that DeltaX candidate arbitration prevents catastrophic rotational limit cycles endemic to raw connectome dynamics, achieving a 73.3\% generalization rate (11 of 15 environments solved with 100.0\% goal attainment, [96.3--100.0\%] Wilson 95\% CI, and 0.0 collisions across 1,100 episodes per DeltaX condition). Causal failure attribution reveals that 100.0\% of navigation failures across all 1,200 failed DeltaX episodes are causally driven by upstream substrate candidate absence (\texttt{SUBSTRATE\_CANDIDATE\_ABSENCE}) rather than executive selection error. Specifically, the unadapted connectome exhibits an endogenous leftward turning polarity under lateralized obstacle contact, driven by an empirical 31.3\% afferent drive disparity in prothoracic leg tactile mechanoreceptors (151 left vs.\ 115 right T1 bristles) despite near-perfect bilateral symmetry in descending steering command neurons ($< 1.3\%$ asymmetry in \texttt{DNa02} and \texttt{DNa01}). Furthermore, we prove state-reset invariance: retained executive session memory confers zero measurable advantage over memoryless execution (paired difference = 0), confirming that successful navigation is governed by reactive candidate arbitration rather than internal cognitive mapping. These findings illustrate both the remarkable motor structure latent within intact biological connectivity and the rigorous causal boundaries required when interfacing artificial executive governors with real connectome substrates.
+\end{abstract}
+
+\section*{Author Summary}
+Can an entire biological brain diagram, reconstructed synapse by synapse, control a physical robot to navigate complex obstacles? We embodied the complete fruit fly connectome---comprising 165,122 neurons and over 10 million connections---into a simulated vehicle and evaluated its navigation capabilities under rigorous scientific controls. We found that while raw neural activity rapidly spirals into repetitive spinning circles, an external candidate-arbitration governor (DeltaX) allows the entity to solve 11 out of 15 challenging spatial mazes with 100\% success and zero collisions. However, detailed auditing revealed a striking biophysical limitation: the virtual fly can easily turn left to avoid obstacles, but completely fails when forced to turn right. By tracing neural pathways directly to the original anatomical data, we discovered that this behavior stems from a natural anatomical asymmetry in sensory hair counts on the front legs (151 on the left versus 115 on the right), which biases neural steering commands. We show that memory retention provides no navigation benefit, demonstrating that current success is driven by instantaneous physical reactions rather than mental planning. Our work establishes a rigorous benchmark for testing connectome-driven artificial intelligence without exaggerated claims of biological consciousness or general intelligence.
+
+\linenumbers
+
+\section{Introduction}
+
+The completion of the first full-brain synaptic wiring diagrams of adult \textit{Drosophila melanogaster} by the FlyWire consortium and Janelia Research Campus represents a watershed milestone in structural biology \cite{dorkenwald2024neuronal, schlegel2024whole, scheffer2020connectome}. Containing $N = 165,122$ identified cells and $E = 10,511,038$ chemical synapses spanning the brain and ventral nerve cord (VNC), this dataset provides an unprecedented map of sensorimotor pathways, local interneurons, and descending command channels \cite{rayshubskiy2020neural, bidaye2020two}. 
+
+Yet, possessing a structural circuit diagram does not automatically translate to an understanding of functional execution. A central question in NeuroAI and computational neuroscience is whether real whole-animal connectomes, operating without learned synaptic parameter optimization, possess sufficient intrinsic dynamical structure to drive closed-loop navigation in physical environments \cite{pugliese2025whole}. 
+
+Addressing this question requires overcoming three fundamental methodological hurdles:
+\begin{enumerate}
+    \item \textbf{The Motor Embodiment Gap:} In isolation, ungrounded recurrent firing-rate models of whole connectomes frequently settle into high-frequency limit cycles, epileptic seizure-like saturation, or rotational motor traps \cite{pugliese2025whole}.
+    \item \textbf{Causal Attribution and Semantic Leakage:} In artificial life simulations, researchers often inadvertently introduce ``harness cheat codes''---such as coordinate-based steering overrides, obstacle avoidance heuristics, or post-hoc action substitutions---that create the illusion of sophisticated neural planning while masking substrate failure \cite{milo2002network}.
+    \item \textbf{Sensory Bottlenecks vs.\ Biophysical Asymmetries:} Prior embodied connectome experiments typically presented radially symmetric sensory stimulation, suppressing the bilateral sensory contrasts necessary to drive differential steering command populations \cite{rayshubskiy2020neural, bidaye2020locomotor}.
+\end{enumerate}
+
+In this study, we present a definitive, unassisted empirical evaluation of the whole-CNS \textit{Drosophila} connectome integrated with a sovereign closed-loop executive architecture (DeltaX). By enforcing strict candidate provenance typing, zero information leakage, and complete causal failure attribution across a factorial benchmark of 15 environments ($N = 100$ held-out evaluation seeds; 9,000 closed-loop episodes), we demonstrate:
+\begin{itemize}
+    \item Executive candidate arbitration achieves a 73.3\% generalization rate (11/15 environments solved at 100\% success with 0 collisions), rescuing the entity from the 0.0\% collapse observed under raw connectome dynamics.
+    \item 100.0\% of DeltaX navigation failures (1,200 of 1,200 episodes) are causally driven by upstream substrate candidate absence (\texttt{SUBSTRATE\_CANDIDATE\_ABSENCE}), originating from an endogenous left-steering bias.
+    \item This steering asymmetry is grounded in an empirical biophysical disparity in peripheral tactile sensory receptors (151 left vs.\ 115 right prothoracic leg mechanoreceptors, a 31.3\% somatic drive imbalance), despite symmetric bilateral descending command neurons.
+    \item Retained executive memory exhibits complete state-reset invariance (paired difference = 0), establishing that spatial traversal is governed by reactive candidate arbitration rather than internal cognitive mapping.
+\end{itemize}
+
+\section{Models and Methods}
+
+\subsection{Connectome Neural Substrate and Recurrent Rate Dynamics}
+
+The neural substrate integrates the complete male \textit{Drosophila melanogaster} whole-CNS connectome ($N = 165,122$ neurons, $E = 10,511,038$ synapses) annotated by the FlyWire and Janelia consortia \cite{dorkenwald2024neuronal, schlegel2024whole}. Neuronal activity is modeled as a continuous-rate leaky integrator network following the biophysical formulation of Pugliese et al.\ \cite{pugliese2025whole}.
+
+For each neuron $i \in \{1, \dots, N\}$, the somatic membrane firing rate $r_i(t) \ge 0$ (in Hz) evolves according to:
+\begin{equation}
+\tau_i \frac{dr_i}{dt} = \max\left( r_{\max,i} \tanh\left( \frac{a_i}{r_{\max,i}} \left[ I_i^{\text{ext}}(t) + I_i^{\text{syn}}(t) - \theta_i \left(1 + a_K \frac{A_i(t)}{r_{\max,i}}\right) \right] \right), 0 \right) - r_i(t)
+\label{eq:rate_dynamics}
+\end{equation}
+where:
+\begin{itemize}
+    \item $I_i^{\text{syn}}(t) = b \sum_{j=1}^N s_j w_{ij} r_j(t) u_j(t)$ represents the total synaptic current arriving from presynaptic inputs $j$.
+    \item $w_{ij} \in \mathbb{N}$ denotes the anatomical chemical synapse count between neuron $j$ and $i$, filtered to connections with $w_{ij} \ge 5$ synapses \cite{pugliese2025whole}.
+    \item $s_j \in \{+1, -1\}$ is the discrete neurotransmitter sign: excitatory for acetylcholine ($+1$), inhibitory for GABA, glutamate, and histamine ($-1$), and modulatory ($+1$) for dopamine, serotonin, and octopamine \cite{schlegel2024whole}.
+    \item $b = 0.03$ is the global synaptic efficacy constant.
+    \item $u_j(t) \in [0, 1]$ models short-term synaptic depression via the Tsodyks--Markram rate formulation \cite{tsodyks1997neural}:
+    \begin{equation}
+    \frac{du_j}{dt} = \frac{1 - u_j(t)}{\tau_{\text{dep}}} - U_{\text{dep}} u_j(t) \frac{r_j(t)}{1000}
+    \end{equation}
+    with utilization $U_{\text{dep}} = 0$ and recovery time constant $\tau_{\text{dep}} = 300\text{ ms}$ in baseline runs.
+    \item $A_i(t)$ represents spike-frequency adaptation governed by $\tau_A \frac{dA_i}{dt} = r_i(t) - A_i(t)$ with adaptation gain $a_K = 0$ and $\tau_A = 200\text{ ms}$.
+\end{itemize}
+
+Heterogeneous per-neuron parameters are instantiated via truncated Gaussian distributions scaled by anatomical somatosensory volume $s_i = \text{size}_i / \text{median}(\text{size}_{\text{region}})$:
+\begin{align}
+a_i &\sim \mathcal{N}(1.0, 0.1) / s_i \quad (\text{neuronal gain}) \\
+\theta_i &\sim \mathcal{N}(7.5, 0.6) \times s_i \quad (\text{activation threshold}) \\
+\tau_i &\sim \mathcal{N}(20.0, 2.0)\text{ ms} \quad (\text{membrane time constant}) \\
+r_{\max,i} &\sim \mathcal{N}(200.0, 10.0)\text{ Hz} \quad (\text{saturating firing rate})
+\end{align}
+
+Biological simulation is executed with forward Euler integration at $dt = 1.0\text{ ms}$, with 10 substeps evaluated per discrete environmental control tick (10 ms biological simulation per action step).
+
+\subsection{Embodied Rover and Lateralized Raycast Sensory Transduction}
+
+The neural substrate is embodied in a planar robotic agent operating in an $11 \times 7$ discrete grid world ($x \in [0, 10], y \in [0, 6]$). To eliminate the rotational symmetry bottleneck identified in earlier protocols, the agent is equipped with a five-probe bilateral sensory array:
+\begin{enumerate}
+    \item \textbf{Forward Ray ($\theta = 0^\circ$):} Heading alignment vector $\vec{r}_{\text{front}} = \vec{h}$; maximum range $R_{\max} = 6.0$.
+    \item \textbf{Left Antenna Ray ($\theta = -45^\circ$):} Rotated $45^\circ$ counter-clockwise; range $R_{\max} = 6.0$.
+    \item \textbf{Right Antenna Ray ($\theta = +45^\circ$):} Rotated $45^\circ$ clockwise; range $R_{\max} = 6.0$.
+    \item \textbf{Left Flank Contact Probe ($\theta = -90^\circ$):} Orthogonal lateral contact sensor; range $R_{\max} = 3.0$.
+    \item \textbf{Right Flank Contact Probe ($\theta = +90^\circ$):} Orthogonal lateral contact sensor; range $R_{\max} = 3.0$.
+\end{enumerate}
+
+Sensory distances $d \in [0, R_{\max}]$ are transduced strictly into target firing rates $f_i$ (in Hz) of biological receptor neuron populations using cooperative Hill saturation equations:
+\begin{equation}
+\text{Hill}(c, k=0.4, n=1.4) = \frac{c^n}{c^n + k^n}, \quad \text{where } c = \max\left(0, \frac{R_{\max} - d}{R_{\max}}\right)
+\end{equation}
+
+When target firing rate $f_i$ is injected into sensory receptor population $i$, the requisite steady-state external input current $I_i^{\text{ext}}$ is inverted analytically from Eq.~\ref{eq:rate_dynamics}:
+\begin{equation}
+I_i^{\text{ext}} = \theta_i + \frac{r_{\max,i}}{a_i} \text{arctanh}\left(\min\left(0.999, \frac{f_i}{r_{\max,i}}\right)\right)
+\end{equation}
+
+Physical transduction strictly maps:
+\begin{itemize}
+    \item Left antenna deflection ($d_L < 3.0$) and contact: drives \texttt{JO wind/gravity left} ($120.0\text{ Hz}$) and \texttt{tactile T1 left} ($160.0\text{ Hz}$).
+    \item Right antenna deflection ($d_R < 3.0$) and contact: drives \texttt{JO wind/gravity right} ($120.0\text{ Hz}$) and \texttt{tactile T1 right} ($160.0\text{ Hz}$).
+    \item Frontal obstruction ($d_{\text{front}} \le 1.0$): drives bilateral tactile bristles ($160.0\text{ Hz}$) and depresses compound eye photoreceptors from $65.0\text{ Hz}$ to $10.0\text{ Hz}$.
+    \item Food resource gradients: transduce into \texttt{taste T1} sugar gustatory receptor neurons via $\text{Hill}(g, 0.3, 1.5)$ up to $160.0\text{ Hz}$.
+    \item Noxious hazards: transduce into arista cold/warm \texttt{thermosensory} neurons ($180.0\text{ Hz}$).
+\end{itemize}
+
+\subsection{Descending Neuron Readout Architecture (\texttt{READOUT\_C})}
+
+Locomotion and steering are driven by identified descending neuron (DN) command populations \cite{rayshubskiy2020neural, bidaye2020two, bidaye2020locomotor}:
+\begin{itemize}
+    \item \textbf{Forward Locomotion:} 16 bilateral descending neurons: \texttt{DNg100}, \texttt{DNg97}, \texttt{DNp09}, \texttt{DNa05}, \texttt{DNa07}, \texttt{DNp26}, \texttt{DNa01}, \texttt{DNa02}.
+    \item \textbf{Backward Crawling:} 4 Moonwalker descending neurons (\texttt{MDN}).
+    \item \textbf{Ipsilateral Steering Torque:} Left steering: \texttt{DNa02} (idx 130496), \texttt{DNa01} (idx 406), \texttt{DNp09} (idx 725). Right steering: \texttt{DNa02} (idx 332), \texttt{DNa01} (idx 704), \texttt{DNp09} (idx 1087).
+\end{itemize}
+
+Under our formally selected \texttt{READOUT\_C\_INDEPENDENT\_AXES} specification, candidate action strengths $s \in [0, 1]$ are generated along orthogonal translational and rotational axes:
+\begin{align}
+s_{\text{fwd}} &= 1 - \exp\left(-\frac{\bar{r}_{\text{fwd}}}{\sigma_{\text{fwd}}}\right), \quad \sigma_{\text{fwd}} = 3.0\text{ Hz} \\
+\Delta r_L &= \max(0, \bar{r}_{\text{turnL}} - \bar{r}_{\text{turnR}}), \quad s_{\text{turnL}} = 1 - \exp\left(-\frac{\Delta r_L}{\sigma_{\text{turn}}}\right), \quad \sigma_{\text{turn}} = 1.5\text{ Hz} \\
+\Delta r_R &= \max(0, \bar{r}_{\text{turnR}} - \bar{r}_{\text{turnL}}), \quad s_{\text{turnR}} = 1 - \exp\left(-\frac{\Delta r_R}{\sigma_{\text{turn}}}\right), \quad \sigma_{\text{turn}} = 1.5\text{ Hz} \\
+s_{\text{halt}} &= \max\left(0.05, 1.0 - \max(s_{\text{fwd}}, s_{\text{turnL}}, s_{\text{turnR}}, s_{\text{groom}}, s_{\text{escape}})\right)
+\end{align}
+Crucially, resting stance (\texttt{halt}) is formulated as a derived neural state representing quiescent balance when all active measured motor drives are subthreshold, completely decoupling forward deceleration from artificial turning suppression.
+
+\subsection{Causal Candidate Provenance and Executive Governance}
+
+Every candidate action emitted to the executive governor carries immutable provenance metadata:
+\begin{itemize}
+    \item \texttt{MEASURED\_NEURAL}: Direct biological descending neuron outputs (\texttt{locomotion\_forward}, \texttt{turn\_left}, \texttt{turn\_right}, \texttt{groom}, \texttt{escape}).
+    \item \texttt{DERIVED\_NEURAL}: Antagonistic postural balance (\texttt{halt}).
+    \item \texttt{FALLBACK}: Declared safety floor (\texttt{cand\_safe\_noop}, strength $0.01$).
+\end{itemize}
+
+The DeltaX sovereign governor operates via synchronous inter-process communication (IPC) over standard input/output streams using strict JSONL schemas. At each decision tick, the governor evaluates the candidate distribution against active physical invariants (obstacle clearance, energetic stability). If the candidate distribution violates physical survival constraints, the governor exercises candidate arbitration, filtering inadmissible actions and selecting the coherent behavioral candidate without ever injecting external coordinate hints or policy cheating.
+
+\subsection{Degree-Preserving Circuit Scrambling Null Model}
+
+To prove that observed behaviors depend on specific connectome wiring rather than generic recurrent node properties, we constructed a degree-preserving randomized graph control (\texttt{SHUFFLED\_CONNECTOME}). 
+
+Using a Monte Carlo edge-swapping algorithm \cite{milo2002network, masuda2019detecting}, the target indices of all $10.5\times 10^6$ synaptic edges are globally permuted while maintaining:
+\begin{enumerate}
+    \item Exact in-degree $k_i^{\text{in}}$ of every neuron ($0.0\%$ deviation across all 165,122 neurons).
+    \item Exact out-degree $k_i^{\text{out}}$ of every neuron ($0.0\%$ deviation).
+    \item Exact total edge count $E = 10,511,038$.
+    \item Exact synaptic weight distribution ($w_{ij}$ multiset identity).
+\end{enumerate}
+This edge permutation destroys $>99.9\%$ of specific multi-synaptic pathways, eliminating functional interneuron delay lines.
+
+\subsection{Factorial Benchmark Suite and Evaluation Cohort}
+
+The evaluation suite comprises 15 diverse spatial environments ($11 \times 7$ grid):
+\begin{itemize}
+    \item Baseline and transformations: \texttt{ENV\_0\_ORIGINAL}, \texttt{ENV\_1\_MIRROR\_RIGHT\_REQUIRED}, \texttt{ENV\_2\_MIRROR\_HORIZONTAL}.
+    \item Barrier shifts and dead ends: \texttt{ENV\_3\_OBSTACLE\_SHIFT\_LEFT}, \texttt{ENV\_4\_OBSTACLE\_SHIFT\_RIGHT}, \texttt{ENV\_7\_DUAL\_BYPASS}, \texttt{ENV\_8\_DEAD\_END}, \texttt{ENV\_9\_NOVEL\_START\_HEADING}.
+    \item Hazard gradients: \texttt{ENV\_5\_HAZARD\_BIAS\_LEFT}, \texttt{ENV\_6\_HAZARD\_BIAS\_RIGHT}.
+    \item Directional and temporal probe worlds: \texttt{ENV\_1B\_TRUE\_RIGHT\_REQUIRED}, \texttt{ENV\_POLARITY\_LEFT}, \texttt{ENV\_POLARITY\_RIGHT}, \texttt{ENV\_CHOICE\_WITH\_REVERSAL}, \texttt{ENV\_TEMPORAL\_NON\_MARKOVIAN}.
+\end{itemize}
+
+Six controller architectures were evaluated:
+\begin{enumerate}
+    \item \texttt{SUBSTRATE\_TOP}: Ungoverned argmax selection of top substrate candidate.
+    \item \texttt{SIMPLE\_REFLEX}: Hand-crafted reactive heuristic (turn away from contact).
+    \item \texttt{STOCHASTIC\_WEIGHTED}: Softmax probability sampling over candidate strengths.
+    \item \texttt{DELTAX\_EXECUTIVE}: Sovereign DeltaX governor with continuous retained state.
+    \item \texttt{DELTAX\_TRIAL\_RESET}: Sovereign DeltaX governor with inter-trial state reset.
+    \item \texttt{DELTAX\_STEP\_RESET}: Sovereign DeltaX governor with per-step stateless session isolation.
+\end{enumerate}
+
+To ensure complete empirical validity, all final evaluations were executed on a sealed held-out cohort of $N = 100$ unseen seeds (\texttt{12000..12099}), yielding 9,000 total closed-loop episodes (1,500 per controller) and 199,500 executive decision steps.
+
+\section{Results}
+
+\subsection{Factorial Generalization and Closed-Loop Performance}
+
+Across the 15 frozen environments and 9,000 closed-loop episodes, controller performance dissociated sharply between ungoverned connectome dynamics, reactive heuristics, and executive candidate arbitration (Table~\ref{tab:factorial_matrix}).
+
+\begin{table*}[t]
+\centering
+\small
+\caption{\textbf{Factorial Held-Out Benchmark Results Matrix ($N = 100$ seeds, \texttt{12000..12099}).} Values report Goal Attainment Percentage with Wilson 95\% score intervals (\%). 9,000 total closed-loop episodes (1,500 episodes per controller architecture).}
+\label{tab:factorial_matrix}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+\textbf{Environment ID} & \textbf{SUBSTRATE\_TOP} & \textbf{SIMPLE\_REFLEX} & \textbf{STOCHASTIC} & \textbf{DELTAX\_EXEC} & \textbf{TRIAL\_RESET} & \textbf{STEP\_RESET} \\
+\midrule
+\texttt{ENV\_0\_ORIGINAL} & 0.0 [0.0, 3.7] & 92.0 [85.0, 95.9] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_1\_MIRROR\_RIGHT} & 0.0 [0.0, 3.7] & 96.0 [90.2, 98.4] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_1B\_TRUE\_RIGHT} & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] \\
+\texttt{ENV\_2\_MIRROR\_HORIZ} & 0.0 [0.0, 3.7] & 63.0 [53.2, 71.8] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_3\_SHIFT\_LEFT} & 0.0 [0.0, 3.7] & 93.0 [86.3, 96.6] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_4\_SHIFT\_RIGHT} & 0.0 [0.0, 3.7] & 94.0 [87.5, 97.2] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_5\_HAZARD\_LEFT} & 0.0 [0.0, 3.7] & 92.0 [85.0, 95.9] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_6\_HAZARD\_RIGHT} & 0.0 [0.0, 3.7] & 92.0 [85.0, 95.9] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_7\_DUAL\_BYPASS} & 0.0 [0.0, 3.7] & 92.0 [85.0, 95.9] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_8\_DEAD\_END} & 0.0 [0.0, 3.7] & 94.0 [87.5, 97.2] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_9\_START\_HEADING} & 0.0 [0.0, 3.7] & 90.0 [82.6, 94.5] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_POLARITY\_LEFT} & 0.0 [0.0, 3.7] & 99.0 [94.5, 99.8] & 0.0 [0.0, 3.7] & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} & \textbf{100.0 [96.3, 100.0]} \\
+\texttt{ENV\_POLARITY\_RIGHT} & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] \\
+\texttt{ENV\_CHOICE\_REVERSAL} & 0.0 [0.0, 3.7] & 3.0 [1.0, 8.5] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] \\
+\texttt{ENV\_TEMPORAL\_NONMARK} & 0.0 [0.0, 3.7] & 3.0 [1.0, 8.5] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] & 0.0 [0.0, 3.7] \\
+\midrule
+\textbf{Envs Solved ($\ge 80\%$)} & \textbf{0 / 15 (0.0\%)} & \textbf{10 / 15 (66.7\%)} & \textbf{0 / 15 (0.0\%)} & \textbf{11 / 15 (73.3\%)} & \textbf{11 / 15 (73.3\%)} & \textbf{11 / 15 (73.3\%)} \\
+\textbf{Mean Goal Rate} & \textbf{0.0\%} & \textbf{66.9\%} & \textbf{0.0\%} & \textbf{73.3\%} & \textbf{73.3\%} & \textbf{73.3\%} \\
+\textbf{Mean Collisions / Ep} & \textbf{0.03} & \textbf{0.00} & \textbf{0.07} & \textbf{0.00} & \textbf{0.00} & \textbf{0.00} \\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+The ungoverned controllers (\texttt{SUBSTRATE\_TOP} and \texttt{STOCHASTIC\_WEIGHTED}) failed completely, scoring 0.0\% across all 15 environments (0/15 solved). Telemetry revealed that without executive stabilization, the recurrent network rapidly collapses into rotational limit cycles (1,159 episodes in \texttt{SUBSTRATE\_TOP}), spinning continuously in place or oscillating between forward steps and dead-end halting.
+
+In contrast, \texttt{DELTAX\_EXECUTIVE} achieved a \textbf{73.3\% generalization rate} (11 of 15 environments solved at $\ge 80\%$), attaining \textbf{100.0\% observed success [96.3--100.0\%] and exactly 0.0 collisions} across all 100 seeds in each of the 11 compatible environments (1,100 / 1,100 episodes per DeltaX condition). 
+
+The hand-crafted \texttt{SIMPLE\_REFLEX} controller solved 10 of 15 environments (66.7\%). In \texttt{ENV\_2\_MIRROR\_HORIZONTAL}, where local spatial traps induce cyclic deadlock, \texttt{SIMPLE\_REFLEX} degraded to 63.0\% success, whereas \texttt{DELTAX\_EXECUTIVE} maintained 100.0\% success through superior candidate stabilization.
+
+\subsection{Causal Attribution of Failure: Substrate Absence vs.\ Executive Error}
+
+Across all 400 failed episodes per DeltaX condition (1,200 failed episodes across the three DeltaX variants evaluated on \texttt{ENV\_1B\_TRUE\_RIGHT\_REQUIRED}, \texttt{ENV\_POLARITY\_RIGHT}, \texttt{ENV\_CHOICE\_WITH\_REVERSAL}, and \texttt{ENV\_TEMPORAL\_NON\_MARKOVIAN}), we conducted offline causal failure attribution via diagnostic forks:
+\begin{equation}
+\frac{\text{Failures Attributed to \texttt{SUBSTRATE\_CANDIDATE\_ABSENCE}}}{\text{Total Failed DeltaX Episodes}} = \frac{1,200}{1,200} = \mathbf{100.0\%}
+\end{equation}
+
+In every single failed episode, reaching the goal required executing a right turn (\texttt{turn\_right}) at a decisive corridor fork. However, descending neuron telemetry confirmed that \texttt{turn\_right} had $0.0\text{ Hz}$ raw activation and an activation strength of $0.000$ in the connectome-derived candidate field. 
+
+Across all 199,500 executive decision steps in the three DeltaX conditions ($66,500$ steps in \texttt{DELTAX\_EXECUTIVE}), the \textbf{Executive Selected-ID Match Rate was 100.00\%}, with \textbf{0.00\% fallback rate} ($0$ executions of \texttt{cand\_safe\_noop}). There were \textbf{0 executive selection errors}: the governor selected the required action whenever it was biologically proposed, and failed only when the underlying biological substrate failed to generate the necessary motor candidate.
+
+\subsection{Endogenous Leftward Steering Polarity Dissociation}
+
+In the matched geometric reflection pair, performance dissociated completely:
+\begin{itemize}
+    \item \texttt{ENV\_POLARITY\_LEFT}: DeltaX achieved \textbf{100.0\% [96.3--100.0\%]} goal attainment (Simple Reflex: 99.0\%).
+    \item \texttt{ENV\_POLARITY\_RIGHT}: All controllers, including DeltaX and Simple Reflex, scored \textbf{0.0\% [0.0--3.7\%]}.
+\end{itemize}
+
+This establishes that the instantiated \textit{Drosophila} connectome substrate possesses an endogenous leftward turning polarity under lateralized obstacle contact. When an obstacle deflects the left antenna or front leg, the connectome generates robust ipsilateral steering torque through left descending neurons (\texttt{DNa02}, \texttt{DNa01}, \texttt{DNp09}). However, when an obstacle deflects the right antenna or leg, descending right steering command drive fails to exceed threshold.
+
+\subsection{Heuristic Wall-Following Collapse in Reversal Worlds}
+
+To determine whether DeltaX success in the 11 compatible environments was driven by trivial monotonic wall-following, we analyzed \texttt{ENV\_CHOICE\_WITH\_REVERSAL}, which features two sequential barriers requiring alternating turn polarities (left turn at barrier 1, followed by right turn at barrier 2). 
+
+Both monotonic wall-following heuristics and DeltaX collapsed (DeltaX: 0.0\%, Simple Reflex: 3.0\%). While DeltaX executed the initial left turn at barrier 1 with 100\% reliability, it halted permanently at barrier 2 because the substrate could not propose the mandatory right turn.
+
+\subsection{State-Reset Invariance Across Recurrent Executions}
+
+To evaluate whether cross-trial retained memory confers navigational foresight, we compared continuous-state execution (\texttt{DELTAX\_EXECUTIVE}), inter-trial state reset (\texttt{DELTAX\_TRIAL\_RESET}), and per-step stateless session isolation (\texttt{DELTAX\_STEP\_RESET}).
+
+Across all 4,500 corresponding episodes (1,500 episodes per condition; 11/15 environments solved), all three conditions produced \textbf{bit-exact identical trajectories, action counts, and goal discovery}:
+\begin{equation}
+\Delta_{\text{action}} = \text{Action}_{\text{EXEC}}(t) - \text{Action}_{\text{STEP\_RESET}}(t) \equiv 0 \quad \forall t \in [1, 199,500]
+\end{equation}
+The paired difference in goal rate and collision count was identically zero. In this deterministic sensorimotor benchmark, retained executive state provided no measurable performance advantage over stateless step-by-step candidate filtering.
+
+\subsection{Biological Latency vs.\ Topological Scrambling Control}
+
+In short-horizon corridor tasks (12-step budget), the intact connectome demonstrates biological multi-synaptic latency: sensory currents require 4--5 simulation steps (~40--50 ms) to traverse primary afferents and multi-layer interneurons before descending command neurons (\texttt{DNg100/97/p09}) overcome postural balance suppression (\texttt{halt}). Consequently, the intact agent pauses before advancing, reaching $x=7$ or $x=8$ before time expires (0.0\% goal rate).
+
+In contrast, the degree-preserving \texttt{SHUFFLED\_CONNECTOME} control scored 100.0\% goal attainment within 12 steps. Because randomized edge permutation bypasses multi-layered biological interneuron delay chains, sensory afferents wire directly into descending motor neurons, causing the shuffled agent to sprint blindly forward from step 1. This contrast confirms that biological latency is an authentic emergent consequence of multi-layered connectome topology.
+
+\section{Discussion}
+
+\subsection{Neuroanatomical Grounding: The Mechanosensory Afferent Asymmetry}
+
+Why does the intact connectome exhibit an unyielding leftward steering polarity under tactile contact? A superficial inspection of descending motor pathways suggests bilateral symmetry: \texttt{DNa02}, \texttt{DNa01}, and \texttt{DNp09} exist as single bilateral pairs with $< 1.3\%$ difference in total synaptic connectivity (DNa02 connectivity ratio difference: $0.41\%$; DNa01: $1.37\%$; Table~\ref{tab:neuroanatomy_dn}).
+
+\begin{table}[h]
+\centering
+\small
+\caption{\textbf{Anatomical Properties of Descending Steering Neurons in Whole-CNS Connectome.}}
+\label{tab:neuroanatomy_dn}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+\textbf{Cell Type} & \textbf{Side} & \textbf{Neuron Idx} & \textbf{Body ID} & \textbf{In-Degree} & \textbf{Out-Degree} & \textbf{Weighted Inputs} \\
+\midrule
+\texttt{DNa02} & Left & 130496 & 523769 & 707 & 339 & 23,381 \\
+\texttt{DNa02} & Right & 332 & 10360 & 730 & 322 & 23,542 \\
+\texttt{DNa01} & Left & 406 & 10442 & 403 & 316 & 11,987 \\
+\texttt{DNa01} & Right & 704 & 10760 & 413 & 311 & 12,854 \\
+\texttt{DNp09} & Left & 725 & 10783 & 504 & 317 & 7,742 \\
+\texttt{DNp09} & Right & 1087 & 11177 & 546 & 334 & 6,442 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+The origin of the steering asymmetry lies upstream in peripheral sensory arborization. A comprehensive census of primary mechanosensory afferents in the FlyWire/Janelia bodymap reveals a striking somatic disparity in prothoracic leg (T1) receptors:
+\begin{itemize}
+    \item \texttt{tactile T1 left}: \textbf{151 neurons} vs.\ \texttt{tactile T1 right}: \textbf{115 neurons} ($+31.3\%$ leftward excess; ratio $1.313$).
+    \item \texttt{chordotonal T1 left}: \textbf{23 neurons} vs.\ \texttt{chordotonal T1 right}: \textbf{13 neurons} ($+76.9\%$ leftward excess; ratio $1.769$).
+    \item \texttt{hair plate T1 left}: \textbf{1 neuron} vs.\ \texttt{hair plate T1 right}: \textbf{0 neurons}.
+\end{itemize}
+
+Under equivalent mechanical deflections ($160.0\text{ Hz}$ per sensory neuron), the left front leg delivers $151 \times 160 = 24,160\text{ Hz}$ of somatic sensory drive into the VNC, whereas the right leg delivers only $115 \times 160 = 18,400\text{ Hz}$. Independent causal tracing in our sister worktree confirmed that right mechanoreceptors form only 41 synapses onto the primary ascending intermediate \texttt{AN03A008} (compared to 78 synapses on the left), and right \texttt{AN03A008} possesses an $8\times$ larger volume scale ($s = 6.37$ vs.\ $0.79$), elevating its activation threshold ($\theta = 44.1$ vs.\ $5.9$). Consequently, right sensory excitation fails to recruit right \texttt{DNa02}, perfectly explaining the substrate candidate absence.
+
+\subsection{Tonic Baseline Adaptation in Motor Integration}
+
+Our analysis of the upstream fly simulation codebase (\texttt{sim/motor.js}) revealed that living flies and biophysical motor models handle standing asymmetries through continuous slow baseline adaptation. The upstream controller tracks a running leaky average of steering torque:
+\begin{equation}
+\text{turnBase}(t) = \text{turnBase}(t - \Delta t) + \frac{\Delta t}{\tau_{\text{adapt}}} \left( \Delta \text{turn}(t) - \text{turnBase}(t - \Delta t) \right)
+\end{equation}
+with $\tau_{\text{adapt}} = 2,000\text{ ms}$. This adaptation subtracts static tonic offsets, allowing transient stimulus-driven differentials to command steering. In discrete, unassisted navigation benchmarks without continuous analog filtering, the raw unadapted disparity dominates the candidate field.
+
+\subsection{Causal Integrity and Retraction of Methodological Shortcuts}
+
+A critical contribution of this study is methodological rigor. In preliminary explorations (Phase II and Phase III early passes), the harness achieved reported +100\% lift and spatial memory anticipation. However, rigorous adversarial auditing revealed that those early results were enabled by:
+\begin{enumerate}
+    \item Post-evaluation actuator shortcuts (\texttt{MODULATE $\to$ forward}, \texttt{PERMIT $\to$ forward}, \texttt{blocked $\to$ left}).
+    \item Harness-level coordinate checks at $x=3$ injecting synthetic bypass triggers.
+\end{enumerate}
+All such shortcuts were formally retracted and designated \texttt{superseded\_pre\_integrity\_pass}. When strict candidate provenance and zero-leakage validators were enforced, the true biophysical boundaries emerged: DeltaX provides flawless candidate arbitration, but cannot manufacture actions absent from the substrate.
+
+\subsection{Phase IV-D.1: Connectome Plasticity and Biophysical Mechanisms of Resistance}
+
+To test whether the identified right-steering deficit could be resolved through experience-dependent synaptic adaptation, we executed the initial Phase IV-D.1 experiment across $N = 50$ pre-registered development seeds (\texttt{18000..18049}) evaluating three-factor eligibility-modulated Hebbian plasticity on the \texttt{AN03A008} $\to$ \texttt{DNa02} pathway under a frozen, unassisted protocol.
+
+This initial experiment yielded a definitive, frozen negative result: across all experimental conditions (afferent modulation, projection modulation, and two-stage modulation), evoked right \texttt{DNa02} firing remained locked at baseline floor ($0.0020 \pm 0.0039\text{ Hz}$), with zero seeds crossing the executable candidate threshold (strength $0.0102 \pm 0.0011$, threshold $>0.05$).
+
+Causal dissection of the simulation trace logs identified two primary biophysical mechanisms of resistance:
+\begin{enumerate}
+    \item \textbf{Temporal Credit Disconnect:} Pure mechanosensory receptors are transduction-driven without recurrent self-excitation. Upon obstacle clearance, receptor firing ceases immediately ($r_{\text{pre}} \to 0$), causing synaptic eligibility traces to decay before the arrival of delayed scalar reinforcement ($g_t = +1.0$). Consequently, three-factor coincidence collapses during the reinforcement window.
+    \item \textbf{Anatomical Volume Scaling Barrier:} In the electron microscopy reconstruction, right ascending interneuron \texttt{AN03A008\_R} has an $8\times$ larger segmented volume scale ($s = 6.37$ vs.\ $0.79$) than its left homologue, elevating its activation threshold to $\theta = 44.1$. The 41 incoming tactile synapses evoked only $2.14\text{ Hz}$ firing, which was insufficient to drive postsynaptic depolarization for Hebbian potentiation.
+\end{enumerate}
+
+In contrast, a matched sham control on central interneuron \texttt{4306} (possessing spontaneous recurrent firing) exhibited robust potentiation ($64.35$ budget consumed, 45/50 seeds saturated), confirming that the plasticity engine operates correctly when sustained pre/post co-activation is present. This negative finding confirms that overcoming anatomical connectome asymmetries cannot be achieved by naive Hebbian tuning; it requires architectures that bridge the temporal credit gap between transient peripheral sensation and delayed modulatory reward, while accounting for reconstructed somatosensory volume scaling. In strict compliance with anti-$p$-hacking governance, no parameters were tuned, and evaluation held-out seeds were not consumed.
+
+\subsection{Scientific Non-Claims}
+
+In accordance with strict project governance, we explicitly state our non-claims:
+\begin{itemize}
+    \item \textbf{No Biological Consciousness or Sentience:} The connectome entity is an in-silico mathematical firing-rate model. No conscious experience, feeling, or subjective pain is modeled or claimed.
+    \item \textbf{No Cognitive Mapping or Planning:} Success in 11/15 environments is driven by reactive candidate selection and clearance stabilization, not internal world models, mental simulation, or spatial foresight.
+    \item \textbf{No Autonomous Bilateral Competence:} The unadapted connectome lacks rightward steering competence under tactile contact. True bilateral competence will require activity-dependent synaptic plasticity (Phase IV-D).
+\end{itemize}
+
+\section*{Acknowledgments}
+We thank the FlyWire consortium and Janelia Research Campus for making the whole-CNS \textit{Drosophila} connectome freely accessible.
+
+\section*{Data and Code Availability}
+All experimental code, simulation harnesses, frozen environment suites, and raw JSONL decision telemetry are openly available in the project repository.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,49 @@
+{
+  "seed": 18000,
+  "target_manifest": "TARGET_B_PROJECTION_ONLY",
+  "edge": {
+    "source": 2937,
+    "target": 332,
+    "base_synapses": 717,
+    "role": "Ascending premotor cholinergic projection to right DNa02"
+  },
+  "activation_measurements": {
+    "r_pre_mean_contact_hz": 2.1384,
+    "r_post_baseline_hz": 0.002,
+    "r_post_median_hz": 0.0003,
+    "r_post_max_during_stim_hz": 0.0048
+  },
+  "mathematical_coincidence_product": {
+    "raw_product": 0.004277,
+    "normalized_coincidence": 4.2768e-7,
+    "single_step_unmodulated_delta": 6.42e-8
+  },
+  "exact_zero_classification": {
+    "category": "THRESHOLDED_TO_ZERO_AND_UNDERFLOW",
+    "mechanistic_sequence": [
+      {
+        "stage": "1. Biological Silence of Postsynaptic Actuator",
+        "detail": "Right DNa02 has high resting motor threshold theta = 143.2. Subthreshold AN03A008 firing (2.14 Hz) produces only ~7.6 to 117.5 synaptic input, generating 0.0000 to 0.0020 Hz post rate."
+      },
+      {
+        "stage": "2. Mathematical Underflow below Eligibility Cleanup Bound",
+        "detail": "Coincidence is 4.28e-7. PlasticityOverlay enforces: if (Math.abs(updatedTrace) < 1e-6) eligibilityTraces.delete(edgeIdx). The trace is pruned as numerical noise."
+      },
+      {
+        "stage": "3. Update Pruning Bound",
+        "detail": "Even if trace were retained, proposed update is eta * g_t * e = 0.15 * 1.0 * 4.28e-7 = 6.42e-8. PlasticityOverlay enforces: if (Math.abs(proposedChange) < 1e-7) continue. The update is pruned before evaluation."
+      },
+      {
+        "stage": "4. Rapid Adaptation in Repeated Cycles",
+        "detail": "In cycles where DNa02 briefly registers a transient rate (>0.5 Hz in cycle 0), updates are <0.002 coupling units. Over subsequent cycles, AN03A008 adapts to 0.0 Hz, and passive decay (gamma = 0.0005) erodes any microscopic deltaW down to bit-exact 0.0."
+      }
+    ],
+    "distinction_summary": {
+      "mathematically_zero": false,
+      "numerically_tiny": true,
+      "underflow_or_thresholded_to_zero": true,
+      "overwritten_or_reset": false,
+      "never_evaluated": false
+    }
+  }
+}

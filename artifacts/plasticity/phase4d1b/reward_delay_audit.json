@@ -1,0 +1,230 @@
+{
+  "seed": 18000,
+  "frozen_trace_decay_lambda_e": 0.05,
+  "theoretical_one_tick_retention_ratio": 0.95,
+  "cycle_evaluations": [
+    {
+      "cycle": 0,
+      "contact_end_tick": 2,
+      "reward_first_tick": 3,
+      "edges": [
+        {
+          "edge_index": 9810580,
+          "source": 149560,
+          "target": 2937,
+          "e_contact_end": 0.00008500312,
+          "e_reward": 0.00008075297,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10043060,
+          "source": 154130,
+          "target": 2937,
+          "e_contact_end": 0.0001043513,
+          "e_reward": 0.00009913376,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10068413,
+          "source": 154675,
+          "target": 2937,
+          "e_contact_end": 0.00009304871,
+          "e_reward": 0.00008839628,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10070724,
+          "source": 154731,
+          "target": 2937,
+          "e_contact_end": 0.0001872296,
+          "e_reward": 0.0001778681,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10074108,
+          "source": 154816,
+          "target": 2937,
+          "e_contact_end": 0.0001011033,
+          "e_reward": 0.00009604817,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10089608,
+          "source": 155200,
+          "target": 2937,
+          "e_contact_end": 0.00006016909,
+          "e_reward": 0.00005716064,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10147782,
+          "source": 156889,
+          "target": 2937,
+          "e_contact_end": 0.00009980011,
+          "e_reward": 0.00009481011,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10285249,
+          "source": 159953,
+          "target": 2937,
+          "e_contact_end": 0.0001017663,
+          "e_reward": 0.000096678,
+          "retention_ratio": 0.95
+        }
+      ]
+    },
+    {
+      "cycle": 1,
+      "contact_end_tick": 12,
+      "reward_first_tick": 13,
+      "edges": [
+        {
+          "edge_index": 9810580,
+          "source": 149560,
+          "target": 2937,
+          "e_contact_end": 0.00005089451,
+          "e_reward": 0.00004834978,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10043060,
+          "source": 154130,
+          "target": 2937,
+          "e_contact_end": 0.00006247899,
+          "e_reward": 0.00005935504,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10068413,
+          "source": 154675,
+          "target": 2937,
+          "e_contact_end": 0.0000557117,
+          "e_reward": 0.00005292612,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10070724,
+          "source": 154731,
+          "target": 2937,
+          "e_contact_end": 0.0001121013,
+          "e_reward": 0.0001064962,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10074108,
+          "source": 154816,
+          "target": 2937,
+          "e_contact_end": 0.0000605343,
+          "e_reward": 0.00005750759,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10089608,
+          "source": 155200,
+          "target": 2937,
+          "e_contact_end": 0.00003602546,
+          "e_reward": 0.00003422419,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10147782,
+          "source": 156889,
+          "target": 2937,
+          "e_contact_end": 0.00005975401,
+          "e_reward": 0.00005676631,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10285249,
+          "source": 159953,
+          "target": 2937,
+          "e_contact_end": 0.00006093125,
+          "e_reward": 0.00005788469,
+          "retention_ratio": 0.95
+        }
+      ]
+    },
+    {
+      "cycle": 2,
+      "contact_end_tick": 22,
+      "reward_first_tick": 23,
+      "edges": [
+        {
+          "edge_index": 9810580,
+          "source": 149560,
+          "target": 2937,
+          "e_contact_end": 0.00003047242,
+          "e_reward": 0.0000289488,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10043060,
+          "source": 154130,
+          "target": 2937,
+          "e_contact_end": 0.00003740848,
+          "e_reward": 0.00003553806,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10068413,
+          "source": 154675,
+          "target": 2937,
+          "e_contact_end": 0.00003335665,
+          "e_reward": 0.00003168882,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10070724,
+          "source": 154731,
+          "target": 2937,
+          "e_contact_end": 0.00006711918,
+          "e_reward": 0.00006376322,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10074108,
+          "source": 154816,
+          "target": 2937,
+          "e_contact_end": 0.00003624412,
+          "e_reward": 0.00003443192,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10089608,
+          "source": 155200,
+          "target": 2937,
+          "e_contact_end": 0.00002156977,
+          "e_reward": 0.00002049128,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10147782,
+          "source": 156889,
+          "target": 2937,
+          "e_contact_end": 0.00003577693,
+          "e_reward": 0.00003398809,
+          "retention_ratio": 0.95
+        },
+        {
+          "edge_index": 10285249,
+          "source": 159953,
+          "target": 2937,
+          "e_contact_end": 0.00003648179,
+          "e_reward": 0.0000346577,
+          "retention_ratio": 0.95
+        }
+      ]
+    }
+  ],
+  "mean_reward_to_contact_end_ratio": 0.95,
+  "limiting_term_attribution": {
+    "is_temporal_delay_primary_limiting_factor": false,
+    "retention_at_reward_percent": 95,
+    "actual_limiting_terms": [
+      "Subthreshold postsynaptic intermediate activity (AN03A008 evoked rate only ~2.14 Hz initial, adapting to 0 Hz)",
+      "Double rate normalization factor ((r_pre/100) * (r_post/100) = 1/10000 multiplier)",
+      "Synaptic depression and spike-frequency adaptation abolishing coincidence after cycle 1"
+    ]
+  }
+}

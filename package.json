@@ -18,7 +18,9 @@
     "connectome:causal": "node scripts/causal_neural_intervention.mjs",
     "pilot:changed-world": "node scripts/changed_world_pilot.mjs",
     "battery:phase3": "node scripts/phase3_battery.mjs",
-    "replay:causal": "node scripts/causal_replay.mjs"
+    "replay:causal": "node scripts/causal_replay.mjs",
+    "experiment:phase4d1": "node scripts/run_phase4d1_experiment.mjs",
+    "experiment:phase4d2": "node scripts/run_phase4d2_experiment.mjs"
   },
   "engines": {
     "node": ">=20"
