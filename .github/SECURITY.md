@@ -15,7 +15,7 @@ Only the current `main` branch of `DeltaX-Public/deltax-connectome-entity` recei
 
 This repository is a **public research entity and reproducibility harness**. 
 
-1. **Public Scope:** Contains public connectome datasets, embodied gridworld environments, open adapters, verification tests, and reproducibility artifacts.
+1. **Public Scope:** Contains public connectome datasets, embodied gridworld environments, source-available adapters, verification tests, and reproducibility artifacts.
 2. **Private Scope:** The sovereign, proprietary DeltaX Python runtime (`deltax-python-runtime`) and associated Canonical specifications are **strictly private and local**. They are never committed, mirrored, published, or referenced via private filesystem paths in this repository.
 3. **Zero Secrets in Git:** No API keys, credentials, tokens, cookies, or private cryptographic keys belong in this repository or in commit histories. Automated secret scanning and push protection are active across the entire organization.
 

@@ -71,3 +71,15 @@ python3 -m http.server 4173
 - [ARCHITECTURE.md](ARCHITECTURE.md) — Architecture and ownership diagram
 - [CLAIMS.md](CLAIMS.md) — Empirical claim boundaries and non-biological notice
 - [LIMITATIONS.md](LIMITATIONS.md) — Known limitations
+- [LICENSE_SCOPE.md](LICENSE_SCOPE.md) — Repository license boundaries and third-party terms
+- [docs/LICENSE_HISTORY.md](docs/LICENSE_HISTORY.md) — License transition history and prior version grants
+
+---
+
+## License
+
+- **DeltaX-Owned Material:** Source-available for noncommercial research under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+- **Noncommercial Research & Reproduction:** Academic inspection, educational experimentation, reproduction, modification, and academic publication use are permitted subject to the license conditions.
+- **Commercial Use:** Commercial use, commercial deployment, or proprietary commercial incorporation requires a separate written license agreement from the copyright holder (Dominick Francisco Noval). Inquiries: `hello@deltaxevaluate.com`.
+- **Upstream & Third-Party Code:** The upstream connectome simulation tree under `upstream/fly-brain/` retains its original [MIT License](upstream/fly-brain/LICENSE) (Copyright (c) 2026 lulzx). Third-party datasets and dependencies retain their respective licenses (e.g., CC-BY 4.0 for Janelia connectome graph data, Apache-2.0 for `flybody`).
+- **Granular Scope:** See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for precise repository boundaries and [docs/LICENSE_HISTORY.md](docs/LICENSE_HISTORY.md) for historical version treatment.

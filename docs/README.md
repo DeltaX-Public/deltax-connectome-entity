@@ -32,3 +32,9 @@ Earlier unsealed drafts and pre-repair audits are preserved for chronological an
 - [`PHASE_4D_FIRST_LEARNING_EXPERIMENT.md`](PHASE_4D_FIRST_LEARNING_EXPERIMENT.md) — *Pre-registration protocol for Phase IV-D.1*
 - [`PHASE_4C_DEVELOPMENT_AUDIT.md`](PHASE_4C_DEVELOPMENT_AUDIT.md) — *Development V1 audit (superseded by Dev V2 post-repair)*
 - [`PHASE_3_EXPERIMENT_PLAN.md`](PHASE_3_EXPERIMENT_PLAN.md) — *Original Phase 3 plan (superseded by post-audit V2 plan)*
+
+## Repository Governance & Licensing
+
+- [`LICENSE_HISTORY.md`](LICENSE_HISTORY.md) — License transition history and prior version grants
+- [`../LICENSE_SCOPE.md`](../LICENSE_SCOPE.md) — Repository license boundaries and third-party terms
+- [`../LICENSE`](../LICENSE) — Root PolyForm Noncommercial License 1.0.0
