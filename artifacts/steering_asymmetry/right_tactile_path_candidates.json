@@ -1,0 +1,98 @@
+{
+  "schema": "steering_asymmetry.right_tactile_path_candidates.v1",
+  "timestamp": "2026-09-19T16:16:15.802Z",
+  "total_right_2hop_intermediates": 2,
+  "ranking_metric": "structural_coupling_score = receptor_weight * m_to_dna02_weight * nt_sign; functional_drive = stimulated_rate * m_to_dna02_weight * nt_sign",
+  "candidates": [
+    {
+      "index": 2937,
+      "body_id": "13137",
+      "cell_type": "AN03A008",
+      "side": 2,
+      "nt_code": 1,
+      "nt_sign": 1,
+      "receptor_to_m_weight": 41,
+      "convergent_tactile_inputs": 8,
+      "m_to_dna02_weight": 717,
+      "receptors": [
+        {
+          "receptor_idx": 149560,
+          "weight": 13
+        },
+        {
+          "receptor_idx": 154130,
+          "weight": 3
+        },
+        {
+          "receptor_idx": 154675,
+          "weight": 4
+        },
+        {
+          "receptor_idx": 154731,
+          "weight": 3
+        },
+        {
+          "receptor_idx": 154816,
+          "weight": 4
+        },
+        {
+          "receptor_idx": 155200,
+          "weight": 4
+        },
+        {
+          "receptor_idx": 156889,
+          "weight": 3
+        },
+        {
+          "receptor_idx": 159953,
+          "weight": 7
+        }
+      ],
+      "baseline_rate_hz": 0,
+      "stimulated_rate_hz": 4.984,
+      "rate_delta_hz": 4.984,
+      "structural_coupling_score": 29397,
+      "functional_dna02_drive_estimate": 3573.528,
+      "left_comparator": {
+        "index": 3305,
+        "cell_type": "AN03A008",
+        "receptor_to_m_weight": 78,
+        "convergent_tactile_inputs": 13,
+        "m_to_dna02_weight": 741,
+        "stimulated_rate_hz": 24.916,
+        "functional_drive": 18462.756
+      }
+    },
+    {
+      "index": 3348,
+      "body_id": "13585",
+      "cell_type": "DNg34",
+      "side": 2,
+      "nt_code": 0,
+      "nt_sign": 1,
+      "receptor_to_m_weight": 6,
+      "convergent_tactile_inputs": 1,
+      "m_to_dna02_weight": 4,
+      "receptors": [
+        {
+          "receptor_idx": 160742,
+          "weight": 6
+        }
+      ],
+      "baseline_rate_hz": 0,
+      "stimulated_rate_hz": 0,
+      "rate_delta_hz": 0,
+      "structural_coupling_score": 24,
+      "functional_dna02_drive_estimate": 0,
+      "left_comparator": {
+        "index": 273,
+        "cell_type": "DNg34",
+        "receptor_to_m_weight": 14,
+        "convergent_tactile_inputs": 3,
+        "m_to_dna02_weight": 4,
+        "stimulated_rate_hz": 0,
+        "functional_drive": 0
+      }
+    }
+  ]
+}

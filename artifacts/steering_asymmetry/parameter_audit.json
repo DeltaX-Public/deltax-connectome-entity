@@ -1,0 +1,322 @@
+{
+  "schema": "steering_asymmetry.parameter_audit.v1",
+  "timestamp": "2026-09-19T09:19:41.820Z",
+  "dn_parameters": {
+    "DNa02": {
+      "left": {
+        "index": 130496,
+        "gain_a": 0.0507,
+        "threshold_theta": 135.9485,
+        "tau_ms": 23.34,
+        "rmax_hz": 222.18,
+        "size_scale": 20
+      },
+      "right": {
+        "index": 332,
+        "gain_a": 0.0558,
+        "threshold_theta": 156.3767,
+        "tau_ms": 21.39,
+        "rmax_hz": 201.54,
+        "size_scale": 20
+      }
+    },
+    "DNa01": {
+      "left": {
+        "index": 406,
+        "gain_a": 0.0864,
+        "threshold_theta": 86.5077,
+        "tau_ms": 21.44,
+        "rmax_hz": 178.39,
+        "size_scale": 11.6297
+      },
+      "right": {
+        "index": 704,
+        "gain_a": 0.0926,
+        "threshold_theta": 90.0328,
+        "tau_ms": 21.53,
+        "rmax_hz": 204.39,
+        "size_scale": 11.8003
+      }
+    },
+    "DNp09": {
+      "left": {
+        "index": 725,
+        "gain_a": 0.1317,
+        "threshold_theta": 60.1414,
+        "tau_ms": 19.57,
+        "rmax_hz": 198.52,
+        "size_scale": 7.8459
+      },
+      "right": {
+        "index": 1087,
+        "gain_a": 0.1363,
+        "threshold_theta": 57.1059,
+        "tau_ms": 17.58,
+        "rmax_hz": 208.73,
+        "size_scale": 6.9922
+      }
+    }
+  },
+  "sensory_parameters": {
+    "tactile T1": {
+      "left": {
+        "count": 151,
+        "mean_gain": 12.4621,
+        "mean_threshold": 0.7323,
+        "mean_tau": 20.04,
+        "mean_rmax": 201.33,
+        "mean_size_scale": 0.0978
+      },
+      "right": {
+        "count": 115,
+        "mean_gain": 11.4952,
+        "mean_threshold": 0.8199,
+        "mean_tau": 20.05,
+        "mean_rmax": 199.61,
+        "mean_size_scale": 0.1099
+      }
+    }
+  },
+  "counterfactual_trials": [
+    {
+      "seed": 15000,
+      "intact_left": {
+        "turn_left": 0.8726,
+        "turn_right": 0.0026,
+        "forward": 0.0982
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0.0006,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0035,
+        "forward": 0.0001
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15001,
+      "intact_left": {
+        "turn_left": 0.8247,
+        "turn_right": 0.0708,
+        "forward": 0.138
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0005,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15002,
+      "intact_left": {
+        "turn_left": 0.7632,
+        "turn_right": 0.0344,
+        "forward": 0.138
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0.0048,
+        "forward": 0.0001
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0046,
+        "forward": 0.0001
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15003,
+      "intact_left": {
+        "turn_left": 0.6322,
+        "turn_right": 0.0215,
+        "forward": 0.1426
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15004,
+      "intact_left": {
+        "turn_left": 0.9196,
+        "turn_right": 0.0541,
+        "forward": 0.1302
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0.0041,
+        "forward": 0.0001
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0018,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15005,
+      "intact_left": {
+        "turn_left": 0.8285,
+        "turn_right": 0.0566,
+        "forward": 0.1286
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0008,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15006,
+      "intact_left": {
+        "turn_left": 1.2253,
+        "turn_right": 0.0111,
+        "forward": 0.104
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0014,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15007,
+      "intact_left": {
+        "turn_left": 0.9465,
+        "turn_right": 0.0489,
+        "forward": 0.084
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0.0026,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0105,
+        "forward": 0.0003
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0001,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15008,
+      "intact_left": {
+        "turn_left": 0.837,
+        "turn_right": 0.0318,
+        "forward": 0.1029
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0.0004,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    },
+    {
+      "seed": 15009,
+      "intact_left": {
+        "turn_left": 0.8162,
+        "turn_right": 0.0441,
+        "forward": 0.1462
+      },
+      "intact_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      "cf_dn_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      "cf_dn_and_sensory_matched_right": {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    }
+  ],
+  "aggregate_comparison": {
+    "intact_left_stim_turn_left": 0.8666,
+    "intact_right_stim_turn_right": 0.0013,
+    "cf_dn_matched_turn_right": 0.0024,
+    "cf_dn_and_sensory_matched_turn_right": 0
+  },
+  "conclusion": {
+    "dynamical_parameters_explain_asymmetry": false,
+    "summary": "Parameter matching did NOT restore right steering. Right steering remains absent even when DN and sensory dynamical parameters are equalized. The bottleneck lies in the intermediate connectome graph topology or recurrent inhibition."
+  }
+}

@@ -1,0 +1,1253 @@
+{
+  "schema": "steering_asymmetry.edge_counterfactuals.v1",
+  "timestamp": "2026-09-19T16:17:33.594Z",
+  "pathway": "tactile T1 right -> AN03A008 (idx 2937) -> right DNa02 (idx 332)",
+  "original_weights": {
+    "receptor_to_an03a008": 20,
+    "an03a008_to_dna02": 717
+  },
+  "sweeps": [
+    {
+      "condition_id": "COND_BASELINE",
+      "label": "Baseline Intact (No modification)",
+      "mean_right_dna02_rate": 0.0026,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0008,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0012,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0003,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0101,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0032
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0086,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0027
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0005,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0002
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0056,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_A_REC_SCALE_1.2",
+      "label": "Scale Receptor->AN03A008 by 1.2x",
+      "mean_right_dna02_rate": 0.0098,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.003,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0095,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.003
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0054,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0239,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0073
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0288,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0087
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0046,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0014
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.0011,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0207,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0064
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0016,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0005
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0026,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0008
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_A_REC_SCALE_1.5",
+      "label": "Scale Receptor->AN03A008 by 1.5x",
+      "mean_right_dna02_rate": 0.041,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0122,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0485,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0145
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.037,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0112
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0672,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.02
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.0061,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0019
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0957,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0276
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0276,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0084
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.0201,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0062
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0725,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0214
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0138,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0043
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0212,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0065
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_A_REC_SCALE_1.9",
+      "label": "Scale Receptor->AN03A008 by 1.9x",
+      "mean_right_dna02_rate": 0.0963,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0274,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.1152,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0328
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.1011,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0291
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.1303,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0372
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.0272,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0083
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.1965,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.053
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0712,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0209
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.0676,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0198
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.1523,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0426
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0412,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0124
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0599,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0177
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_A_REC_SCALE_2.5",
+      "label": "Scale Receptor->AN03A008 by 2.5x",
+      "mean_right_dna02_rate": 0.2622,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0678,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.3157,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0807
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.2958,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0764
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.2952,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0776
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.115,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.033
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.4716,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1117
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.2124,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.057
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.2275,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0607
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.3718,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0936
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.1299,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0369
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.1869,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0509
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_A_REC_SCALE_3",
+      "label": "Scale Receptor->AN03A008 by 3x",
+      "mean_right_dna02_rate": 0.4133,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.1,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.4933,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1169
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.4757,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1136
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.4371,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1086
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.204,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0557
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.7092,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1537
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.3446,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0869
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.3808,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0945
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.561,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1311
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.2179,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0592
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.3098,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0794
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_B_DN_SCALE_1.2",
+      "label": "Scale AN03A008->DNa02 by 1.2x",
+      "mean_right_dna02_rate": 0.014,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0043,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0139,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0043
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0079,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0025
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0294,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.009
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.0002,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0389,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0117
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0093,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0029
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.0022,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0007
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0289,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0088
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0037,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0012
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0057,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0018
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_B_DN_SCALE_1.5",
+      "label": "Scale AN03A008->DNa02 by 1.5x",
+      "mean_right_dna02_rate": 0.0523,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0153,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0575,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.017
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0411,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0124
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0748,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.022
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.009,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0028
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.1187,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0334
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0467,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0139
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.0241,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0074
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0917,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0264
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0239,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0073
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0355,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0107
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_B_DN_SCALE_2",
+      "label": "Scale AN03A008->DNa02 by 2x",
+      "mean_right_dna02_rate": 0.1585,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0427,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.1762,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0476
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.1431,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0395
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.1753,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.048
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.0523,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0155
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.3085,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0768
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.1611,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0439
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.1045,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0297
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.2443,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0638
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0899,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.026
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.1296,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0361
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_B_DN_SCALE_2.5",
+      "label": "Scale AN03A008->DNa02 by 2.5x",
+      "mean_right_dna02_rate": 0.3001,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0741,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.333,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.082
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.2832,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0715
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.2971,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0759
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.1212,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0341
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.5453,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1204
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.3201,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0793
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.2232,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0584
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.4358,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.103
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.1826,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0496
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.2595,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0664
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_B_DN_SCALE_3",
+      "label": "Scale AN03A008->DNa02 by 3x",
+      "mean_right_dna02_rate": 0.4631,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.1049,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.5127,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1152
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.4443,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1028
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.4316,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1029
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.2082,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0553
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.8065,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.159
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.5043,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1137
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.3659,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0882
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.6488,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1394
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.2937,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0747
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.4149,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0974
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_C_BOTH_1.5_1.5",
+      "label": "Scale Rec->AN by 1.5x AND AN->DNa02 by 1.5x",
+      "mean_right_dna02_rate": 0.2194,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0574,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.2554,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0666
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.225,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0595
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.2404,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0642
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.0862,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.025
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.4072,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0977
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.2001,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0536
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.1708,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0466
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.3233,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0819
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.1169,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0333
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.1688,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0461
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_C_BOTH_1.9_1.5",
+      "label": "Scale Rec->AN by 1.9x AND AN->DNa02 by 1.5x",
+      "mean_right_dna02_rate": 0.3785,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0916,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.4387,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1047
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.4116,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0995
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.3867,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0966
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.1754,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0482
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.6604,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1427
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.3455,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0859
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.3295,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0826
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.5283,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1228
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.2106,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0569
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.2986,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0759
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_C_BOTH_2_2",
+      "label": "Scale Rec->AN by 2x AND AN->DNa02 by 2x",
+      "mean_right_dna02_rate": 0.8292,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.1664,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.9539,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1858
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.908,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1797
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.7606,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.163
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.4474,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1072
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 1.3519,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2308
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.8034,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1645
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.7722,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1599
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 1.0929,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2073
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.4991,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1175
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.7021,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.1488
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_C_BOTH_2.5_2",
+      "label": "Scale Rec->AN by 2.5x AND AN->DNa02 by 2x",
+      "mean_right_dna02_rate": 1.3457,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.2314,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 1.5536,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2553
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 1.5087,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2507
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 1.1974,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2248
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.7882,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.166
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 2.1079,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2995
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 1.2956,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2281
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 1.3219,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2311
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 1.7029,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.2746
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.8258,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.173
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 1.1555,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.211
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_D_SHAM_2X",
+      "label": "Sham: Scale unrelated DNg07 edges by 2.0x",
+      "mean_right_dna02_rate": 0.0026,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0008,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.0012,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0004
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.0003,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0001
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.0101,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0032
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.0086,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0027
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0005,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0002
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.0056,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0017
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0
+        }
+      ]
+    },
+    {
+      "condition_id": "COND_E_MIRROR_LEFT",
+      "label": "Mirror exact Left weights (Rec->AN: 78 syn, AN->DNa02: 741 syn)",
+      "mean_right_dna02_rate": 0.1114,
+      "mean_left_dna02_rate": 0,
+      "mean_turn_right_strength": 0.0314,
+      "trials": [
+        {
+          "seed": 15000,
+          "right_dna02_rate": 0.1331,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0375
+        },
+        {
+          "seed": 15001,
+          "right_dna02_rate": 0.1175,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0334
+        },
+        {
+          "seed": 15002,
+          "right_dna02_rate": 0.1453,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0411
+        },
+        {
+          "seed": 15003,
+          "right_dna02_rate": 0.0344,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0104
+        },
+        {
+          "seed": 15004,
+          "right_dna02_rate": 0.2231,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0593
+        },
+        {
+          "seed": 15005,
+          "right_dna02_rate": 0.0852,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0247
+        },
+        {
+          "seed": 15006,
+          "right_dna02_rate": 0.0812,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0237
+        },
+        {
+          "seed": 15007,
+          "right_dna02_rate": 0.1741,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0481
+        },
+        {
+          "seed": 15008,
+          "right_dna02_rate": 0.0486,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0146
+        },
+        {
+          "seed": 15009,
+          "right_dna02_rate": 0.0712,
+          "left_dna02_rate": 0,
+          "turn_right_strength": 0.0208
+        }
+      ]
+    }
+  ],
+  "minimal_counterfactual_restoring_response": {
+    "condition_id": "COND_A_REC_SCALE_2.5",
+    "label": "Scale Receptor->AN03A008 by 2.5x",
+    "mean_right_dna02_rate": 0.2622,
+    "mean_left_dna02_rate": 0,
+    "mean_turn_right_strength": 0.0678,
+    "trials": [
+      {
+        "seed": 15000,
+        "right_dna02_rate": 0.3157,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0807
+      },
+      {
+        "seed": 15001,
+        "right_dna02_rate": 0.2958,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0764
+      },
+      {
+        "seed": 15002,
+        "right_dna02_rate": 0.2952,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0776
+      },
+      {
+        "seed": 15003,
+        "right_dna02_rate": 0.115,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.033
+      },
+      {
+        "seed": 15004,
+        "right_dna02_rate": 0.4716,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.1117
+      },
+      {
+        "seed": 15005,
+        "right_dna02_rate": 0.2124,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.057
+      },
+      {
+        "seed": 15006,
+        "right_dna02_rate": 0.2275,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0607
+      },
+      {
+        "seed": 15007,
+        "right_dna02_rate": 0.3718,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0936
+      },
+      {
+        "seed": 15008,
+        "right_dna02_rate": 0.1299,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0369
+      },
+      {
+        "seed": 15009,
+        "right_dna02_rate": 0.1869,
+        "left_dna02_rate": 0,
+        "turn_right_strength": 0.0509
+      }
+    ]
+  }
+}

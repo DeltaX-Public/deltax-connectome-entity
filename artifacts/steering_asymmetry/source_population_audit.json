@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "schema": "steering_asymmetry.source_population_audit.v1",
+    "timestamp": "2026-09-19T08:41:51.085Z"
+  },
+  "data": {
+    "DNa02": {
+      "left": {
+        "neuron_count": 1,
+        "indices": [
+          130496
+        ],
+        "body_ids": [
+          "523769"
+        ],
+        "mean_in_degree": 707,
+        "mean_out_degree": 339,
+        "total_weighted_incoming": 23381,
+        "total_weighted_outgoing": 6957,
+        "nt_composition": {
+          "1": 1
+        },
+        "excitatory_count": 1,
+        "inhibitory_count": 0,
+        "cross_hemisphere_inputs": {
+          "0": 22,
+          "1": 15685,
+          "2": 7599,
+          "3": 75
+        }
+      },
+      "right": {
+        "neuron_count": 1,
+        "indices": [
+          332
+        ],
+        "body_ids": [
+          "10360"
+        ],
+        "mean_in_degree": 730,
+        "mean_out_degree": 322,
+        "total_weighted_incoming": 23542,
+        "total_weighted_outgoing": 6671,
+        "nt_composition": {
+          "1": 1
+        },
+        "excitatory_count": 1,
+        "inhibitory_count": 0,
+        "cross_hemisphere_inputs": {
+          "0": 10,
+          "1": 7625,
+          "2": 15851,
+          "3": 56
+        }
+      },
+      "symmetry": {
+        "count_difference_ratio": 0,
+        "connectivity_difference_ratio": 0.004120245236996506,
+        "classification": "APPROXIMATELY BILATERAL"
+      }
+    },
+    "DNa01": {
+      "left": {
+        "neuron_count": 1,
+        "indices": [
+          406
+        ],
+        "body_ids": [
+          "10442"
+        ],
+        "mean_in_degree": 403,
+        "mean_out_degree": 316,
+        "total_weighted_incoming": 11987,
+        "total_weighted_outgoing": 5807,
+        "nt_composition": {
+          "1": 1
+        },
+        "excitatory_count": 1,
+        "inhibitory_count": 0,
+        "cross_hemisphere_inputs": {
+          "0": 3,
+          "1": 6672,
+          "2": 5190,
+          "3": 122
+        }
+      },
+      "right": {
+        "neuron_count": 1,
+        "indices": [
+          704
+        ],
+        "body_ids": [
+          "10760"
+        ],
+        "mean_in_degree": 413,
+        "mean_out_degree": 311,
+        "total_weighted_incoming": 12854,
+        "total_weighted_outgoing": 5187,
+        "nt_composition": {
+          "1": 1
+        },
+        "excitatory_count": 1,
+        "inhibitory_count": 0,
+        "cross_hemisphere_inputs": {
+          "0": 0,
+          "1": 5760,
+          "2": 7018,
+          "3": 76
+        }
+      },
+      "symmetry": {
+        "count_difference_ratio": 0,
+        "connectivity_difference_ratio": 0.013691037082201651,
+        "classification": "APPROXIMATELY BILATERAL"
+      }
+    },
+    "DNp09": {
+      "left": {
+        "neuron_count": 1,
+        "indices": [
+          725
+        ],
+        "body_ids": [
+          "10783"
+        ],
+        "mean_in_degree": 504,
+        "mean_out_degree": 317,
+        "total_weighted_incoming": 7742,
+        "total_weighted_outgoing": 4812,
+        "nt_composition": {
+          "1": 1
+        },
+        "excitatory_count": 1,
+        "inhibitory_count": 0,
+        "cross_hemisphere_inputs": {
+          "0": 0,
+          "1": 6250,
+          "2": 1473,
+          "3": 19
+        }
+      },
+      "right": {
+        "neuron_count": 1,
+        "indices": [
+          1087
+        ],
+        "body_ids": [
+          "11177"
+        ],
+        "mean_in_degree": 546,
+        "mean_out_degree": 334,
+        "total_weighted_incoming": 6442,
+        "total_weighted_outgoing": 3835,
+        "nt_composition": {
+          "1": 1
+        },
+        "excitatory_count": 1,
+        "inhibitory_count": 0,
+        "cross_hemisphere_inputs": {
+          "0": 0,
+          "1": 1294,
+          "2": 5113,
+          "3": 35
+        }
+      },
+      "symmetry": {
+        "count_difference_ratio": 0,
+        "connectivity_difference_ratio": 0.18137645371992991,
+        "classification": "APPROXIMATELY BILATERAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "_schema": "steering_asymmetry.dn_readout_symmetry.v1",
+  "results": [
+    {
+      "mode": "A_Current",
+      "intensity": 0.1,
+      "state_A": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "state_B": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "A_Current",
+      "intensity": 0.25,
+      "state_A": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "state_B": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "A_Current",
+      "intensity": 0.5,
+      "state_A": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "state_B": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "A_Current",
+      "intensity": 1,
+      "state_A": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "state_B": {
+        "turn_left": 0.05,
+        "turn_right": 0.05
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "A_Current",
+      "intensity": 2,
+      "state_A": {
+        "turn_left": 0.095,
+        "turn_right": 0.05
+      },
+      "state_B": {
+        "turn_left": 0.05,
+        "turn_right": 0.095
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "A_Current",
+      "intensity": 5,
+      "state_A": {
+        "turn_left": 0.221,
+        "turn_right": 0.05
+      },
+      "state_B": {
+        "turn_left": 0.05,
+        "turn_right": 0.221
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "B_Upstream",
+      "intensity": 0.1,
+      "state_A": {
+        "turn_left": 0.01,
+        "turn_right": 0.01
+      },
+      "state_B": {
+        "turn_left": 0.01,
+        "turn_right": 0.01
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "B_Upstream",
+      "intensity": 0.25,
+      "state_A": {
+        "turn_left": 0.017,
+        "turn_right": 0.01
+      },
+      "state_B": {
+        "turn_left": 0.01,
+        "turn_right": 0.017
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "B_Upstream",
+      "intensity": 0.5,
+      "state_A": {
+        "turn_left": 0.033,
+        "turn_right": 0.01
+      },
+      "state_B": {
+        "turn_left": 0.01,
+        "turn_right": 0.033
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "B_Upstream",
+      "intensity": 1,
+      "state_A": {
+        "turn_left": 0.067,
+        "turn_right": 0.01
+      },
+      "state_B": {
+        "turn_left": 0.01,
+        "turn_right": 0.067
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "B_Upstream",
+      "intensity": 2,
+      "state_A": {
+        "turn_left": 0.133,
+        "turn_right": 0.01
+      },
+      "state_B": {
+        "turn_left": 0.01,
+        "turn_right": 0.133
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "B_Upstream",
+      "intensity": 5,
+      "state_A": {
+        "turn_left": 0.333,
+        "turn_right": 0.01
+      },
+      "state_B": {
+        "turn_left": 0.01,
+        "turn_right": 0.333
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "C_IndependentAxes",
+      "intensity": 0.1,
+      "state_A": {
+        "turn_left": 0.064,
+        "turn_right": 0
+      },
+      "state_B": {
+        "turn_left": 0,
+        "turn_right": 0.064
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "C_IndependentAxes",
+      "intensity": 0.25,
+      "state_A": {
+        "turn_left": 0.154,
+        "turn_right": 0
+      },
+      "state_B": {
+        "turn_left": 0,
+        "turn_right": 0.154
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "C_IndependentAxes",
+      "intensity": 0.5,
+      "state_A": {
+        "turn_left": 0.283,
+        "turn_right": 0
+      },
+      "state_B": {
+        "turn_left": 0,
+        "turn_right": 0.283
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "C_IndependentAxes",
+      "intensity": 1,
+      "state_A": {
+        "turn_left": 0.487,
+        "turn_right": 0
+      },
+      "state_B": {
+        "turn_left": 0,
+        "turn_right": 0.487
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "C_IndependentAxes",
+      "intensity": 2,
+      "state_A": {
+        "turn_left": 0.736,
+        "turn_right": 0
+      },
+      "state_B": {
+        "turn_left": 0,
+        "turn_right": 0.736
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    },
+    {
+      "mode": "C_IndependentAxes",
+      "intensity": 5,
+      "state_A": {
+        "turn_left": 0.964,
+        "turn_right": 0
+      },
+      "state_B": {
+        "turn_left": 0,
+        "turn_right": 0.964
+      },
+      "symmetry_error": 0,
+      "is_mirror_symmetric": true
+    }
+  ]
+}

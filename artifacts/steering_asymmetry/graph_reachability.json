@@ -1,0 +1,760 @@
+{
+  "schema": "steering_asymmetry.graph_reachability.v1",
+  "timestamp": "2026-09-19T09:17:06.866Z",
+  "populations": {
+    "tactile T1": {
+      "left_receptors": {
+        "name": "tactile T1 left",
+        "count": 151,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 3
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23367,
+              "DNa01": 11987,
+              "DNp09": 7681
+            },
+            "right": {
+              "DNa02": 23407,
+              "DNa01": 12854,
+              "DNp09": 6399
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 151,
+              "excitatory": 151,
+              "inhibitory": 0,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 570,
+              "excitatory": 313,
+              "inhibitory": 257,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 387,
+                "right": 167,
+                "midline": 4
+              }
+            },
+            {
+              "depth": 2,
+              "count": 14916,
+              "excitatory": 9337,
+              "inhibitory": 5579,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 6600,
+                "right": 5006,
+                "midline": 245
+              }
+            },
+            {
+              "depth": 3,
+              "count": 57695,
+              "excitatory": 35702,
+              "inhibitory": 21993,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 26980,
+                "right": 24972,
+                "midline": 143
+              }
+            },
+            {
+              "depth": 4,
+              "count": 82247,
+              "excitatory": 58843,
+              "inhibitory": 23404,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 37952,
+                "right": 42199,
+                "midline": 0
+              }
+            }
+          ]
+        }
+      },
+      "right_receptors": {
+        "name": "tactile T1 right",
+        "count": 115,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 3
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 3
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23336,
+              "DNa01": 11987,
+              "DNp09": 7609
+            },
+            "right": {
+              "DNa02": 23490,
+              "DNa01": 12854,
+              "DNp09": 6153
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 115,
+              "excitatory": 115,
+              "inhibitory": 0,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 353,
+              "excitatory": 193,
+              "inhibitory": 160,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 98,
+                "right": 240,
+                "midline": 3
+              }
+            },
+            {
+              "depth": 2,
+              "count": 11971,
+              "excitatory": 7442,
+              "inhibitory": 4529,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 4167,
+                "right": 5381,
+                "midline": 202
+              }
+            },
+            {
+              "depth": 3,
+              "count": 51207,
+              "excitatory": 31582,
+              "inhibitory": 19625,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 20254,
+                "right": 24643,
+                "midline": 187
+              }
+            },
+            {
+              "depth": 4,
+              "count": 87103,
+              "excitatory": 62832,
+              "inhibitory": 24271,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 42901,
+                "right": 41768,
+                "midline": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    "JO wind/gravity": {
+      "left_receptors": {
+        "name": "JO wind/gravity left",
+        "count": 228,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23381,
+              "DNa01": 11987,
+              "DNp09": 7742
+            },
+            "right": {
+              "DNa02": 23539,
+              "DNa01": 12854,
+              "DNp09": 6442
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 228,
+              "excitatory": 228,
+              "inhibitory": 0,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 1038,
+              "excitatory": 451,
+              "inhibitory": 587,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 830,
+                "right": 178,
+                "midline": 12
+              }
+            },
+            {
+              "depth": 2,
+              "count": 29174,
+              "excitatory": 16170,
+              "inhibitory": 13004,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 15818,
+                "right": 11794,
+                "midline": 293
+              }
+            },
+            {
+              "depth": 3,
+              "count": 117026,
+              "excitatory": 82577,
+              "inhibitory": 34449,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 54497,
+                "right": 53847,
+                "midline": 87
+              }
+            },
+            {
+              "depth": 4,
+              "count": 14623,
+              "excitatory": 6901,
+              "inhibitory": 7722,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 2878,
+                "right": 8378,
+                "midline": 0
+              }
+            }
+          ]
+        }
+      },
+      "right_receptors": {
+        "name": "JO wind/gravity right",
+        "count": 247,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23381,
+              "DNa01": 11987,
+              "DNp09": 7742
+            },
+            "right": {
+              "DNa02": 23542,
+              "DNa01": 12854,
+              "DNp09": 6442
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 247,
+              "excitatory": 247,
+              "inhibitory": 0,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 754,
+              "excitatory": 302,
+              "inhibitory": 452,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 138,
+                "right": 604,
+                "midline": 5
+              }
+            },
+            {
+              "depth": 2,
+              "count": 22084,
+              "excitatory": 12030,
+              "inhibitory": 10054,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 11398,
+                "right": 8711,
+                "midline": 261
+              }
+            },
+            {
+              "depth": 3,
+              "count": 121165,
+              "excitatory": 85197,
+              "inhibitory": 35968,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 58445,
+                "right": 54622,
+                "midline": 126
+              }
+            },
+            {
+              "depth": 4,
+              "count": 17674,
+              "excitatory": 8637,
+              "inhibitory": 9037,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 4035,
+                "right": 10249,
+                "midline": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    "thermosensory": {
+      "left_receptors": {
+        "name": "thermosensory left",
+        "count": 12,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 3,
+              "DNa01": 3,
+              "DNp09": 3
+            },
+            "right": {
+              "DNa02": 3,
+              "DNa01": 3,
+              "DNp09": 3
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23332,
+              "DNa01": 11983,
+              "DNp09": 7545
+            },
+            "right": {
+              "DNa02": 23423,
+              "DNa01": 12851,
+              "DNp09": 6162
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 12,
+              "excitatory": 12,
+              "inhibitory": 0,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 207,
+              "excitatory": 152,
+              "inhibitory": 55,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 175,
+                "right": 28,
+                "midline": 3
+              }
+            },
+            {
+              "depth": 2,
+              "count": 9526,
+              "excitatory": 6795,
+              "inhibitory": 2731,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 4647,
+                "right": 2737,
+                "midline": 47
+              }
+            },
+            {
+              "depth": 3,
+              "count": 75387,
+              "excitatory": 49135,
+              "inhibitory": 26252,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 42098,
+                "right": 29020,
+                "midline": 337
+              }
+            },
+            {
+              "depth": 4,
+              "count": 72802,
+              "excitatory": 49849,
+              "inhibitory": 22953,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 26734,
+                "right": 40916,
+                "midline": 5
+              }
+            }
+          ]
+        }
+      },
+      "right_receptors": {
+        "name": "thermosensory right",
+        "count": 13,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 3
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 3,
+              "DNp09": 3
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23334,
+              "DNa01": 11987,
+              "DNp09": 7630
+            },
+            "right": {
+              "DNa02": 23532,
+              "DNa01": 12854,
+              "DNp09": 6358
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 13,
+              "excitatory": 13,
+              "inhibitory": 0,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 202,
+              "excitatory": 141,
+              "inhibitory": 61,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 29,
+                "right": 167,
+                "midline": 3
+              }
+            },
+            {
+              "depth": 2,
+              "count": 11415,
+              "excitatory": 7840,
+              "inhibitory": 3575,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 3482,
+                "right": 5529,
+                "midline": 48
+              }
+            },
+            {
+              "depth": 3,
+              "count": 78838,
+              "excitatory": 48718,
+              "inhibitory": 30120,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 35907,
+                "right": 37613,
+                "midline": 337
+              }
+            },
+            {
+              "depth": 4,
+              "count": 67703,
+              "excitatory": 48963,
+              "inhibitory": 18740,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 33403,
+                "right": 30336,
+                "midline": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    "taste T1": {
+      "left_receptors": {
+        "name": "taste T1 left",
+        "count": 149,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23374,
+              "DNa01": 11987,
+              "DNp09": 7687
+            },
+            "right": {
+              "DNa02": 23517,
+              "DNa01": 12854,
+              "DNp09": 6299
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 149,
+              "excitatory": 142,
+              "inhibitory": 7,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 448,
+              "excitatory": 276,
+              "inhibitory": 172,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 237,
+                "right": 161,
+                "midline": 8
+              }
+            },
+            {
+              "depth": 2,
+              "count": 19339,
+              "excitatory": 11979,
+              "inhibitory": 7360,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 9214,
+                "right": 7619,
+                "midline": 262
+              }
+            },
+            {
+              "depth": 3,
+              "count": 67353,
+              "excitatory": 42149,
+              "inhibitory": 25204,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 29271,
+                "right": 30547,
+                "midline": 122
+              }
+            },
+            {
+              "depth": 4,
+              "count": 72106,
+              "excitatory": 51595,
+              "inhibitory": 20511,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 34905,
+                "right": 35753,
+                "midline": 0
+              }
+            }
+          ]
+        }
+      },
+      "right_receptors": {
+        "name": "taste T1 right",
+        "count": 151,
+        "reachability": {
+          "target_hits": {
+            "left": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 3
+            },
+            "right": {
+              "DNa02": 2,
+              "DNa01": 2,
+              "DNp09": 2
+            }
+          },
+          "target_edge_weights": {
+            "left": {
+              "DNa02": 23269,
+              "DNa01": 11987,
+              "DNp09": 7680
+            },
+            "right": {
+              "DNa02": 23466,
+              "DNa01": 12854,
+              "DNp09": 6412
+            }
+          },
+          "hop_stats": [
+            {
+              "depth": 0,
+              "count": 151,
+              "excitatory": 142,
+              "inhibitory": 9,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 0,
+                "right": 0,
+                "midline": 0
+              }
+            },
+            {
+              "depth": 1,
+              "count": 419,
+              "excitatory": 250,
+              "inhibitory": 169,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 151,
+                "right": 215,
+                "midline": 7
+              }
+            },
+            {
+              "depth": 2,
+              "count": 17806,
+              "excitatory": 11271,
+              "inhibitory": 6535,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 6556,
+                "right": 8464,
+                "midline": 242
+              }
+            },
+            {
+              "depth": 3,
+              "count": 62210,
+              "excitatory": 38812,
+              "inhibitory": 23398,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 27626,
+                "right": 27492,
+                "midline": 143
+              }
+            },
+            {
+              "depth": 4,
+              "count": 76777,
+              "excitatory": 55269,
+              "inhibitory": 21508,
+              "unknown_nt": 0,
+              "hemisphere": {
+                "left": 38571,
+                "right": 36912,
+                "midline": 0
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "summary": {
+    "right_steering_structurally_reachable": true,
+    "classification": "STRUCTURALLY PRESENT BUT DYNAMICALLY SILENT",
+    "min_hops_from_receptors": {
+      "left_receptors_to_left_DNa02": 2,
+      "right_receptors_to_right_DNa02": 2,
+      "left_receptors_to_left_DNp09": 2,
+      "right_receptors_to_right_DNp09": 3
+    }
+  }
+}

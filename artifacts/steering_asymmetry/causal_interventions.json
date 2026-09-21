@@ -1,0 +1,373 @@
+{
+  "schema": "steering_asymmetry.causal_interventions.v1",
+  "timestamp": "2026-09-19T09:19:59.088Z",
+  "intensity_hz": 180,
+  "seeds": [
+    15000,
+    15001,
+    15002,
+    15003,
+    15004,
+    15005,
+    15006,
+    15007,
+    15008,
+    15009
+  ],
+  "branch_summaries": {
+    "BRANCH_A_INTACT": {
+      "mean_turn_left": 0,
+      "mean_turn_right": 0.0013,
+      "mean_forward": 0,
+      "differential_right_over_left": 0.0013
+    },
+    "BRANCH_B_SILENCE_LEFT_DN": {
+      "mean_turn_left": 0,
+      "mean_turn_right": 0.0013,
+      "mean_forward": 0,
+      "differential_right_over_left": 0.0013
+    },
+    "BRANCH_C_SHAM_SILENCING": {
+      "mean_turn_left": 0,
+      "mean_turn_right": 0.0013,
+      "mean_forward": 0,
+      "differential_right_over_left": 0.0013
+    },
+    "BRANCH_D_BOOST_RIGHT_DN": {
+      "mean_turn_left": 0,
+      "mean_turn_right": 15.3502,
+      "mean_forward": 0.4265,
+      "differential_right_over_left": 15.3502
+    },
+    "BRANCH_E_EQUALIZE_RECEPTOR_ENERGY": {
+      "mean_turn_left": 0,
+      "mean_turn_right": 0.0066,
+      "mean_forward": 0.0002,
+      "differential_right_over_left": 0.0066
+    },
+    "BRANCH_F_RECEPTOR_SWAP": {
+      "mean_turn_left": 0.8666,
+      "mean_turn_right": 0.0376,
+      "mean_forward": 0.1213,
+      "differential_right_over_left": -0.829
+    }
+  },
+  "best_intervention": {
+    "branch": "BRANCH_D_BOOST_RIGHT_DN",
+    "net_right_steering_gain_hz": 15.3502
+  },
+  "raw_trials": {
+    "BRANCH_A_INTACT": [
+      {
+        "turn_left": 0,
+        "turn_right": 0.0006,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0048,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0041,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0026,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    ],
+    "BRANCH_B_SILENCE_LEFT_DN": [
+      {
+        "turn_left": 0,
+        "turn_right": 0.0006,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0048,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0041,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0026,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    ],
+    "BRANCH_C_SHAM_SILENCING": [
+      {
+        "turn_left": 0,
+        "turn_right": 0.0006,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0048,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0041,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0002,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0026,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      }
+    ],
+    "BRANCH_D_BOOST_RIGHT_DN": [
+      {
+        "turn_left": 0,
+        "turn_right": 14.8264,
+        "forward": 0.4104
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 14.86,
+        "forward": 0.4106
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 15.2009,
+        "forward": 0.4201
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 15.6706,
+        "forward": 0.4332
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 16.2894,
+        "forward": 0.4584
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 15.2646,
+        "forward": 0.4239
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 15.2316,
+        "forward": 0.4263
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 16.217,
+        "forward": 0.4535
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 14.8353,
+        "forward": 0.4104
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 15.106,
+        "forward": 0.4181
+      }
+    ],
+    "BRANCH_E_EQUALIZE_RECEPTOR_ENERGY": [
+      {
+        "turn_left": 0,
+        "turn_right": 0.0062,
+        "forward": 0.0002
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0049,
+        "forward": 0.0001
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.016,
+        "forward": 0.0004
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0153,
+        "forward": 0.0004
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0054,
+        "forward": 0.0002
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0006,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0136,
+        "forward": 0.0004
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.001,
+        "forward": 0
+      },
+      {
+        "turn_left": 0,
+        "turn_right": 0.0032,
+        "forward": 0.0001
+      }
+    ],
+    "BRANCH_F_RECEPTOR_SWAP": [
+      {
+        "turn_left": 0.8726,
+        "turn_right": 0.0026,
+        "forward": 0.0982
+      },
+      {
+        "turn_left": 0.8247,
+        "turn_right": 0.0708,
+        "forward": 0.138
+      },
+      {
+        "turn_left": 0.7632,
+        "turn_right": 0.0344,
+        "forward": 0.138
+      },
+      {
+        "turn_left": 0.6322,
+        "turn_right": 0.0215,
+        "forward": 0.1426
+      },
+      {
+        "turn_left": 0.9196,
+        "turn_right": 0.0541,
+        "forward": 0.1302
+      },
+      {
+        "turn_left": 0.8285,
+        "turn_right": 0.0566,
+        "forward": 0.1286
+      },
+      {
+        "turn_left": 1.2253,
+        "turn_right": 0.0111,
+        "forward": 0.104
+      },
+      {
+        "turn_left": 0.9465,
+        "turn_right": 0.0489,
+        "forward": 0.084
+      },
+      {
+        "turn_left": 0.837,
+        "turn_right": 0.0318,
+        "forward": 0.1029
+      },
+      {
+        "turn_left": 0.8162,
+        "turn_right": 0.0441,
+        "forward": 0.1462
+      }
+    ]
+  }
+}

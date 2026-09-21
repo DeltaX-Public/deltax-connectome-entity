@@ -1,0 +1,1276 @@
+{
+  "schema": "steering_asymmetry.functional_propagation_trace.v1",
+  "timestamp": "2026-09-19T16:18:19.924Z",
+  "seed": 15000,
+  "pathway": {
+    "left": "tactile T1 left -> AN03A008 (idx 2693) -> left DNa02 (idx 130496)",
+    "right": "tactile T1 right -> AN03A008 (idx 2937) -> right DNa02 (idx 332)"
+  },
+  "first_causal_divergence": {
+    "step": 23,
+    "latency_ms": 13,
+    "component": "Intermediate AN03A008 activation"
+  },
+  "trace": [
+    {
+      "step": 1,
+      "time_ms": 1,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 2,
+      "time_ms": 2,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 3,
+      "time_ms": 3,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 4,
+      "time_ms": 4,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 5,
+      "time_ms": 5,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 6,
+      "time_ms": 6,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 7,
+      "time_ms": 7,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 8,
+      "time_ms": 8,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 9,
+      "time_ms": 9,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 10,
+      "time_ms": 10,
+      "phase": "BASELINE",
+      "left_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 0,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 11,
+      "time_ms": 11,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 9.09,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 9.07,
+        "an03a008_hz": 0,
+        "an03a008_inp": 5.3349,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 12,
+      "time_ms": 12,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 17.73,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 17.72,
+        "an03a008_hz": 0,
+        "an03a008_inp": 11.1107,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 13,
+      "time_ms": 13,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 25.93,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "right_path": {
+        "receptors_hz": 25.94,
+        "an03a008_hz": 0,
+        "an03a008_inp": 17.497,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 14,
+      "time_ms": 14,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 33.7,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 1.1203
+      },
+      "right_path": {
+        "receptors_hz": 33.76,
+        "an03a008_hz": 0,
+        "an03a008_inp": 24.4177,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 15,
+      "time_ms": 15,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 41.05,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 6.7537
+      },
+      "right_path": {
+        "receptors_hz": 41.18,
+        "an03a008_hz": 0,
+        "an03a008_inp": 31.8079,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 16,
+      "time_ms": 16,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 47.98,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 17.057
+      },
+      "right_path": {
+        "receptors_hz": 48.2,
+        "an03a008_hz": 0,
+        "an03a008_inp": 39.5719,
+        "dna02_hz": 0,
+        "dna02_inp": 0
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 17,
+      "time_ms": 17,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 54.5,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 32.0949
+      },
+      "right_path": {
+        "receptors_hz": 54.85,
+        "an03a008_hz": 0,
+        "an03a008_inp": 47.5888,
+        "dna02_hz": 0,
+        "dna02_inp": -0.0043
+      },
+      "an03a008_divergence_hz": 0,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 18,
+      "time_ms": 18,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 60.6,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 51.8383
+      },
+      "right_path": {
+        "receptors_hz": 61.12,
+        "an03a008_hz": 0.0318,
+        "an03a008_inp": 55.7704,
+        "dna02_hz": 0,
+        "dna02_inp": 0.652
+      },
+      "an03a008_divergence_hz": -0.0318,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 19,
+      "time_ms": 19,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 66.28,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 76.1845
+      },
+      "right_path": {
+        "receptors_hz": 67.03,
+        "an03a008_hz": 0.136,
+        "an03a008_inp": 64.0683,
+        "dna02_hz": 0,
+        "dna02_inp": 2.8454
+      },
+      "an03a008_divergence_hz": -0.136,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 20,
+      "time_ms": 20,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 71.54,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 104.8933
+      },
+      "right_path": {
+        "receptors_hz": 72.58,
+        "an03a008_hz": 0.3101,
+        "an03a008_inp": 72.4134,
+        "dna02_hz": 0,
+        "dna02_inp": 6.5259
+      },
+      "an03a008_divergence_hz": -0.3101,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 21,
+      "time_ms": 21,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 76.35,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0,
+        "dna02_inp": 137.6132
+      },
+      "right_path": {
+        "receptors_hz": 77.78,
+        "an03a008_hz": 0.5509,
+        "an03a008_inp": 80.741,
+        "dna02_hz": 0,
+        "dna02_inp": 11.6976
+      },
+      "an03a008_divergence_hz": -0.5509,
+      "dna02_divergence_hz": 0
+    },
+    {
+      "step": 22,
+      "time_ms": 22,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 80.71,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0.0036,
+        "dna02_inp": 174.2505
+      },
+      "right_path": {
+        "receptors_hz": 82.64,
+        "an03a008_hz": 0.8552,
+        "an03a008_inp": 88.9562,
+        "dna02_hz": 0,
+        "dna02_inp": 18.3584
+      },
+      "an03a008_divergence_hz": -0.8552,
+      "dna02_divergence_hz": 0.0036
+    },
+    {
+      "step": 23,
+      "time_ms": 23,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 84.62,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0.0866,
+        "dna02_inp": 214.7103
+      },
+      "right_path": {
+        "receptors_hz": 87.14,
+        "an03a008_hz": 1.2186,
+        "an03a008_inp": 96.9866,
+        "dna02_hz": 0,
+        "dna02_inp": 26.5031
+      },
+      "an03a008_divergence_hz": -1.2186,
+      "dna02_divergence_hz": 0.0866
+    },
+    {
+      "step": 24,
+      "time_ms": 24,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 88.15,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0.2539,
+        "dna02_inp": 259.4799
+      },
+      "right_path": {
+        "receptors_hz": 91.3,
+        "an03a008_hz": 1.6366,
+        "an03a008_inp": 104.7617,
+        "dna02_hz": 0,
+        "dna02_inp": 36.0293
+      },
+      "an03a008_divergence_hz": -1.6366,
+      "dna02_divergence_hz": 0.2539
+    },
+    {
+      "step": 25,
+      "time_ms": 25,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 91.33,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0.5112,
+        "dna02_inp": 307.9215
+      },
+      "right_path": {
+        "receptors_hz": 95.13,
+        "an03a008_hz": 2.1041,
+        "an03a008_inp": 112.199,
+        "dna02_hz": 0,
+        "dna02_inp": 46.8271
+      },
+      "an03a008_divergence_hz": -2.1041,
+      "dna02_divergence_hz": 0.5112
+    },
+    {
+      "step": 26,
+      "time_ms": 26,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 94.21,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 0.8625,
+        "dna02_inp": 358.2367
+      },
+      "right_path": {
+        "receptors_hz": 98.63,
+        "an03a008_hz": 2.6157,
+        "an03a008_inp": 119.2396,
+        "dna02_hz": 0,
+        "dna02_inp": 58.7344
+      },
+      "an03a008_divergence_hz": -2.6157,
+      "dna02_divergence_hz": 0.8625
+    },
+    {
+      "step": 27,
+      "time_ms": 27,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 96.79,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 1.3078,
+        "dna02_inp": 408.9321
+      },
+      "right_path": {
+        "receptors_hz": 101.82,
+        "an03a008_hz": 3.1655,
+        "an03a008_inp": 125.8311,
+        "dna02_hz": 0,
+        "dna02_inp": 71.5216
+      },
+      "an03a008_divergence_hz": -3.1655,
+      "dna02_divergence_hz": 1.3078
+    },
+    {
+      "step": 28,
+      "time_ms": 28,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 99.1,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 1.8437,
+        "dna02_inp": 458.6872
+      },
+      "right_path": {
+        "receptors_hz": 104.73,
+        "an03a008_hz": 3.7475,
+        "an03a008_inp": 131.9089,
+        "dna02_hz": 0,
+        "dna02_inp": 84.9746
+      },
+      "an03a008_divergence_hz": -3.7475,
+      "dna02_divergence_hz": 1.8437
+    },
+    {
+      "step": 29,
+      "time_ms": 29,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 101.17,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 2.4643,
+        "dna02_inp": 505.6808
+      },
+      "right_path": {
+        "receptors_hz": 107.38,
+        "an03a008_hz": 4.3556,
+        "an03a008_inp": 137.4485,
+        "dna02_hz": 0,
+        "dna02_inp": 98.8948
+      },
+      "an03a008_divergence_hz": -4.3556,
+      "dna02_divergence_hz": 2.4643
+    },
+    {
+      "step": 30,
+      "time_ms": 30,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 103,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 3.1596,
+        "dna02_inp": 548.6774
+      },
+      "right_path": {
+        "receptors_hz": 109.78,
+        "an03a008_hz": 4.9835,
+        "an03a008_inp": 142.4246,
+        "dna02_hz": 0,
+        "dna02_inp": 113.0714
+      },
+      "an03a008_divergence_hz": -4.9835,
+      "dna02_divergence_hz": 3.1596
+    },
+    {
+      "step": 31,
+      "time_ms": 31,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 104.63,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 3.9178,
+        "dna02_inp": 586.5674
+      },
+      "right_path": {
+        "receptors_hz": 111.96,
+        "an03a008_hz": 5.6252,
+        "an03a008_inp": 146.8266,
+        "dna02_hz": 0,
+        "dna02_inp": 127.2873
+      },
+      "an03a008_divergence_hz": -5.6252,
+      "dna02_divergence_hz": 3.9178
+    },
+    {
+      "step": 32,
+      "time_ms": 32,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 106.07,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 4.7249,
+        "dna02_inp": 618.5454
+      },
+      "right_path": {
+        "receptors_hz": 113.94,
+        "an03a008_hz": 6.2749,
+        "an03a008_inp": 150.6484,
+        "dna02_hz": 0,
+        "dna02_inp": 141.3024
+      },
+      "an03a008_divergence_hz": -6.2749,
+      "dna02_divergence_hz": 4.7249
+    },
+    {
+      "step": 33,
+      "time_ms": 33,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 107.35,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 5.5662,
+        "dna02_inp": 643.5381
+      },
+      "right_path": {
+        "receptors_hz": 115.73,
+        "an03a008_hz": 6.9269,
+        "an03a008_inp": 153.889,
+        "dna02_hz": 0,
+        "dna02_inp": 154.9501
+      },
+      "an03a008_divergence_hz": -6.9269,
+      "dna02_divergence_hz": 5.5662
+    },
+    {
+      "step": 34,
+      "time_ms": 34,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 108.48,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 6.425,
+        "dna02_inp": 661.8137
+      },
+      "right_path": {
+        "receptors_hz": 117.33,
+        "an03a008_hz": 7.5759,
+        "an03a008_inp": 156.5547,
+        "dna02_hz": 0,
+        "dna02_inp": 168.122
+      },
+      "an03a008_divergence_hz": -7.5759,
+      "dna02_divergence_hz": 6.425
+    },
+    {
+      "step": 35,
+      "time_ms": 35,
+      "phase": "STIMULUS",
+      "left_path": {
+        "receptors_hz": 109.46,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 7.2861,
+        "dna02_inp": 673.3254
+      },
+      "right_path": {
+        "receptors_hz": 118.77,
+        "an03a008_hz": 8.2168,
+        "an03a008_inp": 158.6579,
+        "dna02_hz": 0.0306,
+        "dna02_inp": 180.6448
+      },
+      "an03a008_divergence_hz": -8.2168,
+      "dna02_divergence_hz": 7.2555
+    },
+    {
+      "step": 36,
+      "time_ms": 36,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 103.97,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 8.135,
+        "dna02_inp": 678.0963
+      },
+      "right_path": {
+        "receptors_hz": 113.43,
+        "an03a008_hz": 8.8451,
+        "an03a008_inp": 156.1046,
+        "dna02_hz": 0.0925,
+        "dna02_inp": 192.5784
+      },
+      "an03a008_divergence_hz": -8.8451,
+      "dna02_divergence_hz": 8.0425
+    },
+    {
+      "step": 37,
+      "time_ms": 37,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 98.73,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 8.9577,
+        "dna02_inp": 673.6427
+      },
+      "right_path": {
+        "receptors_hz": 108.35,
+        "an03a008_hz": 9.4197,
+        "an03a008_inp": 153.6098,
+        "dna02_hz": 0.1826,
+        "dna02_inp": 203.2112
+      },
+      "an03a008_divergence_hz": -9.4197,
+      "dna02_divergence_hz": 8.7751
+    },
+    {
+      "step": 38,
+      "time_ms": 38,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 93.75,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 9.7356,
+        "dna02_inp": 659.0878
+      },
+      "right_path": {
+        "receptors_hz": 103.52,
+        "an03a008_hz": 9.9438,
+        "an03a008_inp": 151.1478,
+        "dna02_hz": 0.2962,
+        "dna02_inp": 212.5799
+      },
+      "an03a008_divergence_hz": -9.9438,
+      "dna02_divergence_hz": 9.4394
+    },
+    {
+      "step": 39,
+      "time_ms": 39,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 89.02,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 10.449,
+        "dna02_inp": 633.6249
+      },
+      "right_path": {
+        "receptors_hz": 98.91,
+        "an03a008_hz": 10.4201,
+        "an03a008_inp": 148.6995,
+        "dna02_hz": 0.429,
+        "dna02_inp": 220.9383
+      },
+      "an03a008_divergence_hz": -10.4201,
+      "dna02_divergence_hz": 10.02
+    },
+    {
+      "step": 40,
+      "time_ms": 40,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 84.53,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 11.0774,
+        "dna02_inp": 597.6104
+      },
+      "right_path": {
+        "receptors_hz": 94.53,
+        "an03a008_hz": 10.8511,
+        "an03a008_inp": 146.2508,
+        "dna02_hz": 0.5773,
+        "dna02_inp": 228.3549
+      },
+      "an03a008_divergence_hz": -10.8511,
+      "dna02_divergence_hz": 10.5001
+    },
+    {
+      "step": 41,
+      "time_ms": 41,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 80.27,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 11.6015,
+        "dna02_inp": 551.3079
+      },
+      "right_path": {
+        "receptors_hz": 90.34,
+        "an03a008_hz": 11.2391,
+        "an03a008_inp": 143.7892,
+        "dna02_hz": 0.738,
+        "dna02_inp": 234.7798
+      },
+      "an03a008_divergence_hz": -11.2391,
+      "dna02_divergence_hz": 10.8635
+    },
+    {
+      "step": 42,
+      "time_ms": 42,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 76.22,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 12.0037,
+        "dna02_inp": 495.3312
+      },
+      "right_path": {
+        "receptors_hz": 86.35,
+        "an03a008_hz": 11.5859,
+        "an03a008_inp": 141.3025,
+        "dna02_hz": 0.908,
+        "dna02_inp": 240.1664
+      },
+      "an03a008_divergence_hz": -11.5859,
+      "dna02_divergence_hz": 11.0957
+    },
+    {
+      "step": 43,
+      "time_ms": 43,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 72.38,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 12.268,
+        "dna02_inp": 434.804
+      },
+      "right_path": {
+        "receptors_hz": 82.55,
+        "an03a008_hz": 11.8934,
+        "an03a008_inp": 138.7569,
+        "dna02_hz": 1.0841,
+        "dna02_inp": 244.2967
+      },
+      "an03a008_divergence_hz": -11.8934,
+      "dna02_divergence_hz": 11.1839
+    },
+    {
+      "step": 44,
+      "time_ms": 44,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 68.74,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 12.3904,
+        "dna02_inp": 369.7531
+      },
+      "right_path": {
+        "receptors_hz": 78.92,
+        "an03a008_hz": 12.163,
+        "an03a008_inp": 136.1256,
+        "dna02_hz": 1.2627,
+        "dna02_inp": 247.2755
+      },
+      "an03a008_divergence_hz": -12.163,
+      "dna02_divergence_hz": 11.1277
+    },
+    {
+      "step": 45,
+      "time_ms": 45,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 65.28,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 12.3667,
+        "dna02_inp": 300.3528
+      },
+      "right_path": {
+        "receptors_hz": 75.45,
+        "an03a008_hz": 12.3957,
+        "an03a008_inp": 133.4043,
+        "dna02_hz": 1.4407,
+        "dna02_inp": 249.2249
+      },
+      "an03a008_divergence_hz": -12.3957,
+      "dna02_divergence_hz": 10.926
+    },
+    {
+      "step": 46,
+      "time_ms": 46,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 61.99,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 12.1937,
+        "dna02_inp": 227.0835
+      },
+      "right_path": {
+        "receptors_hz": 72.14,
+        "an03a008_hz": 12.5926,
+        "an03a008_inp": 130.5904,
+        "dna02_hz": 1.6155,
+        "dna02_inp": 250.1628
+      },
+      "an03a008_divergence_hz": -12.5926,
+      "dna02_divergence_hz": 10.5782
+    },
+    {
+      "step": 47,
+      "time_ms": 47,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 58.88,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 11.8692,
+        "dna02_inp": 152.0188
+      },
+      "right_path": {
+        "receptors_hz": 68.98,
+        "an03a008_hz": 12.7546,
+        "an03a008_inp": 127.6814,
+        "dna02_hz": 1.7846,
+        "dna02_inp": 250.0428
+      },
+      "an03a008_divergence_hz": -12.7546,
+      "dna02_divergence_hz": 10.0846
+    },
+    {
+      "step": 48,
+      "time_ms": 48,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 55.92,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 11.3956,
+        "dna02_inp": 77.9558
+      },
+      "right_path": {
+        "receptors_hz": 65.98,
+        "an03a008_hz": 12.8825,
+        "an03a008_inp": 124.6793,
+        "dna02_hz": 1.9454,
+        "dna02_inp": 248.7713
+      },
+      "an03a008_divergence_hz": -12.8825,
+      "dna02_divergence_hz": 9.4502
+    },
+    {
+      "step": 49,
+      "time_ms": 49,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 53.11,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 10.9074,
+        "dna02_inp": 6.2456
+      },
+      "right_path": {
+        "receptors_hz": 63.13,
+        "an03a008_hz": 12.9771,
+        "an03a008_inp": 121.5882,
+        "dna02_hz": 2.0954,
+        "dna02_inp": 246.7513
+      },
+      "an03a008_divergence_hz": -12.9771,
+      "dna02_divergence_hz": 8.812
+    },
+    {
+      "step": 50,
+      "time_ms": 50,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 50.45,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 10.4401,
+        "dna02_inp": -63.628
+      },
+      "right_path": {
+        "receptors_hz": 60.41,
+        "an03a008_hz": 13.0394,
+        "an03a008_inp": 118.4372,
+        "dna02_hz": 2.2331,
+        "dna02_inp": 244.2237
+      },
+      "an03a008_divergence_hz": -13.0394,
+      "dna02_divergence_hz": 8.207
+    },
+    {
+      "step": 51,
+      "time_ms": 51,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 47.92,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 9.9928,
+        "dna02_inp": -132.6212
+      },
+      "right_path": {
+        "receptors_hz": 57.82,
+        "an03a008_hz": 13.0702,
+        "an03a008_inp": 115.2719,
+        "dna02_hz": 2.3578,
+        "dna02_inp": 241.1942
+      },
+      "an03a008_divergence_hz": -13.0702,
+      "dna02_divergence_hz": 7.635
+    },
+    {
+      "step": 52,
+      "time_ms": 52,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 45.52,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 9.5647,
+        "dna02_inp": -200.4618
+      },
+      "right_path": {
+        "receptors_hz": 55.37,
+        "an03a008_hz": 13.071,
+        "an03a008_inp": 112.0615,
+        "dna02_hz": 2.4688,
+        "dna02_inp": 237.0246
+      },
+      "an03a008_divergence_hz": -13.071,
+      "dna02_divergence_hz": 7.0959
+    },
+    {
+      "step": 53,
+      "time_ms": 53,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 43.24,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 9.1549,
+        "dna02_inp": -268.565
+      },
+      "right_path": {
+        "receptors_hz": 53.03,
+        "an03a008_hz": 13.0429,
+        "an03a008_inp": 108.7427,
+        "dna02_hz": 2.5638,
+        "dna02_inp": 230.9962
+      },
+      "an03a008_divergence_hz": -13.0429,
+      "dna02_divergence_hz": 6.5911
+    },
+    {
+      "step": 54,
+      "time_ms": 54,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 41.07,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 8.7627,
+        "dna02_inp": -338.591
+      },
+      "right_path": {
+        "receptors_hz": 50.81,
+        "an03a008_hz": 12.9863,
+        "an03a008_inp": 105.2573,
+        "dna02_hz": 2.6385,
+        "dna02_inp": 222.5306
+      },
+      "an03a008_divergence_hz": -12.9863,
+      "dna02_divergence_hz": 6.1242
+    },
+    {
+      "step": 55,
+      "time_ms": 55,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 39.02,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0,
+        "dna02_hz": 8.3873,
+        "dna02_inp": -412.6521
+      },
+      "right_path": {
+        "receptors_hz": 48.7,
+        "an03a008_hz": 12.9011,
+        "an03a008_inp": 101.6106,
+        "dna02_hz": 2.6877,
+        "dna02_inp": 211.1665
+      },
+      "an03a008_divergence_hz": -12.9011,
+      "dna02_divergence_hz": 5.6996
+    },
+    {
+      "step": 56,
+      "time_ms": 56,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 37.07,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0.2111,
+        "dna02_hz": 8.028,
+        "dna02_inp": -491.7602
+      },
+      "right_path": {
+        "receptors_hz": 46.69,
+        "an03a008_hz": 12.7872,
+        "an03a008_inp": 97.8572,
+        "dna02_hz": 2.705,
+        "dna02_inp": 195.4562
+      },
+      "an03a008_divergence_hz": -12.7872,
+      "dna02_divergence_hz": 5.323
+    },
+    {
+      "step": 57,
+      "time_ms": 57,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 35.21,
+        "an03a008_hz": 0,
+        "an03a008_inp": 0.7308,
+        "dna02_hz": 7.684,
+        "dna02_inp": -575.7803
+      },
+      "right_path": {
+        "receptors_hz": 44.79,
+        "an03a008_hz": 12.6451,
+        "an03a008_inp": 94.0169,
+        "dna02_hz": 2.6805,
+        "dna02_inp": 175.028
+      },
+      "an03a008_divergence_hz": -12.6451,
+      "dna02_divergence_hz": 5.0035
+    },
+    {
+      "step": 58,
+      "time_ms": 58,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 33.46,
+        "an03a008_hz": 0,
+        "an03a008_inp": 1.6061,
+        "dna02_hz": 7.3548,
+        "dna02_inp": -664.4125
+      },
+      "right_path": {
+        "receptors_hz": 42.98,
+        "an03a008_hz": 12.4753,
+        "an03a008_inp": 90.1316,
+        "dna02_hz": 2.6038,
+        "dna02_inp": 150.1085
+      },
+      "an03a008_divergence_hz": -12.4753,
+      "dna02_divergence_hz": 4.751
+    },
+    {
+      "step": 59,
+      "time_ms": 59,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 31.79,
+        "an03a008_hz": 0,
+        "an03a008_inp": 2.6099,
+        "dna02_hz": 7.0398,
+        "dna02_inp": -757.397
+      },
+      "right_path": {
+        "receptors_hz": 41.26,
+        "an03a008_hz": 12.2788,
+        "an03a008_inp": 86.1646,
+        "dna02_hz": 2.4821,
+        "dna02_inp": 121.3787
+      },
+      "an03a008_divergence_hz": -12.2788,
+      "dna02_divergence_hz": 4.5577
+    },
+    {
+      "step": 60,
+      "time_ms": 60,
+      "phase": "POST",
+      "left_path": {
+        "receptors_hz": 30.2,
+        "an03a008_hz": 0,
+        "an03a008_inp": 3.0055,
+        "dna02_hz": 6.7382,
+        "dna02_inp": -854.6264
+      },
+      "right_path": {
+        "receptors_hz": 39.64,
+        "an03a008_hz": 12.0562,
+        "an03a008_inp": 82.1094,
+        "dna02_hz": 2.3661,
+        "dna02_inp": 89.4811
+      },
+      "an03a008_divergence_hz": -12.0562,
+      "dna02_divergence_hz": 4.3721
+    }
+  ]
+}

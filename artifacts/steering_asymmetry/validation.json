@@ -1,0 +1,1530 @@
+{
+  "schema": "steering_asymmetry.validation.v1",
+  "timestamp": "2026-09-19T09:20:21.394Z",
+  "cohort": {
+    "n_seeds": 100,
+    "seed_range": [
+      16000,
+      16099
+    ],
+    "intensity_hz": 180
+  },
+  "hypothesis": {
+    "statement": "Tactile mechanosensory stimulation produces a persistent, substrate-level left-steering descending drive while homologous right stimulation fails to produce equivalent right-steering descending drive, persisting across random seed variations.",
+    "replicated": true
+  },
+  "metrics": {
+    "effect_direction": "LEFT_STEERING_DOMINANT",
+    "mean_turn_left_under_left_stim": 0.8805,
+    "std_turn_left_under_left_stim": 0.2063,
+    "mean_turn_right_under_right_stim": 0.0018,
+    "std_turn_right_under_right_stim": 0.0032,
+    "asymmetry_magnitude_mean": 0.8787,
+    "asymmetry_magnitude_std": 0.2061,
+    "mean_response_latency_ms": 14.2,
+    "fraction_seeds_reproducing_asymmetry": 1,
+    "fraction_seeds_zero_right_turn": 0.95
+  },
+  "per_seed_records": [
+    {
+      "seed": 16000,
+      "left_stim": {
+        "mean_turn_left": 0.8822,
+        "mean_turn_right": 0.0084,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8822,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16001,
+      "left_stim": {
+        "mean_turn_left": 0.6608,
+        "mean_turn_right": 0.0463,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0009,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.6599,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16002,
+      "left_stim": {
+        "mean_turn_left": 1.117,
+        "mean_turn_right": 0.0163,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.002,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.115,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16003,
+      "left_stim": {
+        "mean_turn_left": 0.8799,
+        "mean_turn_right": 0.0278,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8799,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16004,
+      "left_stim": {
+        "mean_turn_left": 0.7396,
+        "mean_turn_right": 0.0181,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7396,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16005,
+      "left_stim": {
+        "mean_turn_left": 0.7012,
+        "mean_turn_right": 0.0436,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.004,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.6972,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16006,
+      "left_stim": {
+        "mean_turn_left": 0.9066,
+        "mean_turn_right": 0.0017,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9066,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16007,
+      "left_stim": {
+        "mean_turn_left": 0.966,
+        "mean_turn_right": 0.0321,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.966,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16008,
+      "left_stim": {
+        "mean_turn_left": 1.0681,
+        "mean_turn_right": 0.0163,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0681,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16009,
+      "left_stim": {
+        "mean_turn_left": 0.6738,
+        "mean_turn_right": 0.0235,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0025,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.6713,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16010,
+      "left_stim": {
+        "mean_turn_left": 0.7481,
+        "mean_turn_right": 0.0165,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0036,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.7445,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16011,
+      "left_stim": {
+        "mean_turn_left": 0.7124,
+        "mean_turn_right": 0.0176,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0021,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7103,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16012,
+      "left_stim": {
+        "mean_turn_left": 0.4447,
+        "mean_turn_right": 0.0114,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0017,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.443,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16013,
+      "left_stim": {
+        "mean_turn_left": 1.1672,
+        "mean_turn_right": 0.0149,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0007,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1665,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16014,
+      "left_stim": {
+        "mean_turn_left": 0.8036,
+        "mean_turn_right": 0.0203,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0016,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.802,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16015,
+      "left_stim": {
+        "mean_turn_left": 1.1208,
+        "mean_turn_right": 0.0463,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.002,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1188,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16016,
+      "left_stim": {
+        "mean_turn_left": 0.866,
+        "mean_turn_right": 0.0188,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0005,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8655,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16017,
+      "left_stim": {
+        "mean_turn_left": 1.4023,
+        "mean_turn_right": 0.0065,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.4023,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16018,
+      "left_stim": {
+        "mean_turn_left": 0.9651,
+        "mean_turn_right": 0.0068,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9651,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16019,
+      "left_stim": {
+        "mean_turn_left": 0.9125,
+        "mean_turn_right": 0.0197,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0002,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9123,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16020,
+      "left_stim": {
+        "mean_turn_left": 0.7023,
+        "mean_turn_right": 0.0293,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7023,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16021,
+      "left_stim": {
+        "mean_turn_left": 0.8782,
+        "mean_turn_right": 0.0563,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8782,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16022,
+      "left_stim": {
+        "mean_turn_left": 0.9911,
+        "mean_turn_right": 0.0518,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0001,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.991,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16023,
+      "left_stim": {
+        "mean_turn_left": 0.7718,
+        "mean_turn_right": 0.0332,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0039,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.7679,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16024,
+      "left_stim": {
+        "mean_turn_left": 1.0407,
+        "mean_turn_right": 0.0295,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0407,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16025,
+      "left_stim": {
+        "mean_turn_left": 1.0842,
+        "mean_turn_right": 0.051,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0114,
+        "onset_latency_ms": 24
+      },
+      "asymmetry_magnitude": 1.0728,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16026,
+      "left_stim": {
+        "mean_turn_left": 1.1123,
+        "mean_turn_right": 0.0286,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1123,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16027,
+      "left_stim": {
+        "mean_turn_left": 0.9972,
+        "mean_turn_right": 0.0201,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9972,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16028,
+      "left_stim": {
+        "mean_turn_left": 0.7905,
+        "mean_turn_right": 0.0382,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0039,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.7866,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16029,
+      "left_stim": {
+        "mean_turn_left": 0.7669,
+        "mean_turn_right": 0.0211,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0001,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7668,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16030,
+      "left_stim": {
+        "mean_turn_left": 0.9456,
+        "mean_turn_right": 0.0403,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9456,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16031,
+      "left_stim": {
+        "mean_turn_left": 0.9028,
+        "mean_turn_right": 0.0274,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0144,
+        "onset_latency_ms": 23
+      },
+      "asymmetry_magnitude": 0.8884,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16032,
+      "left_stim": {
+        "mean_turn_left": 1.0864,
+        "mean_turn_right": 0.0233,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.001,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0854,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16033,
+      "left_stim": {
+        "mean_turn_left": 0.7401,
+        "mean_turn_right": 0.0278,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0001,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.74,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16034,
+      "left_stim": {
+        "mean_turn_left": 0.6377,
+        "mean_turn_right": 0.0183,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0017,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.636,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16035,
+      "left_stim": {
+        "mean_turn_left": 0.6414,
+        "mean_turn_right": 0.0304,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0018,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.6396,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16036,
+      "left_stim": {
+        "mean_turn_left": 0.9923,
+        "mean_turn_right": 0.0281,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0007,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9916,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16037,
+      "left_stim": {
+        "mean_turn_left": 1.1588,
+        "mean_turn_right": 0.0118,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1588,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16038,
+      "left_stim": {
+        "mean_turn_left": 1.1835,
+        "mean_turn_right": 0.0045,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0061,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 1.1774,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16039,
+      "left_stim": {
+        "mean_turn_left": 1.3265,
+        "mean_turn_right": 0.0273,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.3265,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16040,
+      "left_stim": {
+        "mean_turn_left": 0.7706,
+        "mean_turn_right": 0.0044,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0011,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7695,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16041,
+      "left_stim": {
+        "mean_turn_left": 1.1486,
+        "mean_turn_right": 0.0103,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0009,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1477,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16042,
+      "left_stim": {
+        "mean_turn_left": 0.9328,
+        "mean_turn_right": 0.0058,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0144,
+        "onset_latency_ms": 23
+      },
+      "asymmetry_magnitude": 0.9184,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16043,
+      "left_stim": {
+        "mean_turn_left": 0.4954,
+        "mean_turn_right": 0.0002,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.4954,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16044,
+      "left_stim": {
+        "mean_turn_left": 1.1577,
+        "mean_turn_right": 0.0034,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1577,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16045,
+      "left_stim": {
+        "mean_turn_left": 0.8071,
+        "mean_turn_right": 0.0096,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8071,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16046,
+      "left_stim": {
+        "mean_turn_left": 0.8966,
+        "mean_turn_right": 0.055,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0026,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.894,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16047,
+      "left_stim": {
+        "mean_turn_left": 0.9153,
+        "mean_turn_right": 0.0298,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0008,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9145,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16048,
+      "left_stim": {
+        "mean_turn_left": 0.7204,
+        "mean_turn_right": 0.0181,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0004,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.72,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16049,
+      "left_stim": {
+        "mean_turn_left": 0.8205,
+        "mean_turn_right": 0.014,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0006,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8199,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16050,
+      "left_stim": {
+        "mean_turn_left": 0.4977,
+        "mean_turn_right": 0.0204,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.4977,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16051,
+      "left_stim": {
+        "mean_turn_left": 0.9445,
+        "mean_turn_right": 0.0516,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9445,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16052,
+      "left_stim": {
+        "mean_turn_left": 0.6205,
+        "mean_turn_right": 0.0377,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.6205,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16053,
+      "left_stim": {
+        "mean_turn_left": 1.1034,
+        "mean_turn_right": 0.0084,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1034,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16054,
+      "left_stim": {
+        "mean_turn_left": 0.6963,
+        "mean_turn_right": 0.0188,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.006,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.6903,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16055,
+      "left_stim": {
+        "mean_turn_left": 0.7071,
+        "mean_turn_right": 0.0058,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7071,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16056,
+      "left_stim": {
+        "mean_turn_left": 0.8731,
+        "mean_turn_right": 0.0113,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8731,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16057,
+      "left_stim": {
+        "mean_turn_left": 1.0527,
+        "mean_turn_right": 0.0157,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0527,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16058,
+      "left_stim": {
+        "mean_turn_left": 1.0169,
+        "mean_turn_right": 0.0094,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0169,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16059,
+      "left_stim": {
+        "mean_turn_left": 1.179,
+        "mean_turn_right": 0.0134,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0002,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1788,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16060,
+      "left_stim": {
+        "mean_turn_left": 0.7354,
+        "mean_turn_right": 0.0234,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0015,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7339,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16061,
+      "left_stim": {
+        "mean_turn_left": 1.2708,
+        "mean_turn_right": 0.005,
+        "onset_latency_ms": 12
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.2708,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16062,
+      "left_stim": {
+        "mean_turn_left": 0.8977,
+        "mean_turn_right": 0.0147,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.014,
+        "onset_latency_ms": 23
+      },
+      "asymmetry_magnitude": 0.8837,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16063,
+      "left_stim": {
+        "mean_turn_left": 1.1007,
+        "mean_turn_right": 0.0128,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.1007,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16064,
+      "left_stim": {
+        "mean_turn_left": 0.9273,
+        "mean_turn_right": 0.086,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9273,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16065,
+      "left_stim": {
+        "mean_turn_left": 0.7998,
+        "mean_turn_right": 0.032,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0041,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.7957,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16066,
+      "left_stim": {
+        "mean_turn_left": 0.5362,
+        "mean_turn_right": 0.0094,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0008,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.5354,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16067,
+      "left_stim": {
+        "mean_turn_left": 0.7532,
+        "mean_turn_right": 0.0336,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0002,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.753,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16068,
+      "left_stim": {
+        "mean_turn_left": 0.7393,
+        "mean_turn_right": 0.0143,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0018,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7375,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16069,
+      "left_stim": {
+        "mean_turn_left": 1.0962,
+        "mean_turn_right": 0.0184,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0143,
+        "onset_latency_ms": 23
+      },
+      "asymmetry_magnitude": 1.0819,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16070,
+      "left_stim": {
+        "mean_turn_left": 0.7656,
+        "mean_turn_right": 0.0324,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0035,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.7621,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16071,
+      "left_stim": {
+        "mean_turn_left": 1.3187,
+        "mean_turn_right": 0.0161,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0015,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.3172,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16072,
+      "left_stim": {
+        "mean_turn_left": 0.7592,
+        "mean_turn_right": 0.0141,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0034,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.7558,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16073,
+      "left_stim": {
+        "mean_turn_left": 1.0357,
+        "mean_turn_right": 0.0208,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0357,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16074,
+      "left_stim": {
+        "mean_turn_left": 0.8028,
+        "mean_turn_right": 0.0182,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8028,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16075,
+      "left_stim": {
+        "mean_turn_left": 1.2663,
+        "mean_turn_right": 0.025,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.2663,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16076,
+      "left_stim": {
+        "mean_turn_left": 0.7256,
+        "mean_turn_right": 0.0204,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7256,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16077,
+      "left_stim": {
+        "mean_turn_left": 0.8244,
+        "mean_turn_right": 0.0414,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0048,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.8196,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16078,
+      "left_stim": {
+        "mean_turn_left": 0.9162,
+        "mean_turn_right": 0.0285,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0049,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.9113,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16079,
+      "left_stim": {
+        "mean_turn_left": 0.5624,
+        "mean_turn_right": 0.0158,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.5624,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16080,
+      "left_stim": {
+        "mean_turn_left": 0.9197,
+        "mean_turn_right": 0.0686,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9197,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16081,
+      "left_stim": {
+        "mean_turn_left": 0.6994,
+        "mean_turn_right": 0.011,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0052,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.6942,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16082,
+      "left_stim": {
+        "mean_turn_left": 0.5639,
+        "mean_turn_right": 0.002,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.5639,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16083,
+      "left_stim": {
+        "mean_turn_left": 0.5232,
+        "mean_turn_right": 0.0189,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0006,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.5226,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16084,
+      "left_stim": {
+        "mean_turn_left": 0.4572,
+        "mean_turn_right": 0.0037,
+        "onset_latency_ms": 16
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0003,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.4569,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16085,
+      "left_stim": {
+        "mean_turn_left": 1.2459,
+        "mean_turn_right": 0.0266,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0072,
+        "onset_latency_ms": 24
+      },
+      "asymmetry_magnitude": 1.2387,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16086,
+      "left_stim": {
+        "mean_turn_left": 0.6618,
+        "mean_turn_right": 0.0488,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0018,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.66,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16087,
+      "left_stim": {
+        "mean_turn_left": 0.8962,
+        "mean_turn_right": 0.0094,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0045,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.8917,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16088,
+      "left_stim": {
+        "mean_turn_left": 0.8039,
+        "mean_turn_right": 0.0092,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0019,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.802,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16089,
+      "left_stim": {
+        "mean_turn_left": 0.8685,
+        "mean_turn_right": 0.0234,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0015,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.867,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16090,
+      "left_stim": {
+        "mean_turn_left": 0.6774,
+        "mean_turn_right": 0.0101,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.6774,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16091,
+      "left_stim": {
+        "mean_turn_left": 1.0258,
+        "mean_turn_right": 0.0196,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0258,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16092,
+      "left_stim": {
+        "mean_turn_left": 1.0266,
+        "mean_turn_right": 0.0416,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0266,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16093,
+      "left_stim": {
+        "mean_turn_left": 0.9584,
+        "mean_turn_right": 0.0242,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.0029,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9555,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16094,
+      "left_stim": {
+        "mean_turn_left": 1.0026,
+        "mean_turn_right": 0.0129,
+        "onset_latency_ms": 13
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 1.0026,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16095,
+      "left_stim": {
+        "mean_turn_left": 0.8211,
+        "mean_turn_right": 0.0536,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0.004,
+        "onset_latency_ms": 25
+      },
+      "asymmetry_magnitude": 0.8171,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16096,
+      "left_stim": {
+        "mean_turn_left": 0.8034,
+        "mean_turn_right": 0.0194,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.8034,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16097,
+      "left_stim": {
+        "mean_turn_left": 0.9546,
+        "mean_turn_right": 0.0228,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.9546,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16098,
+      "left_stim": {
+        "mean_turn_left": 0.7836,
+        "mean_turn_right": 0.0123,
+        "onset_latency_ms": 14
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.7836,
+      "is_left_dominant": true
+    },
+    {
+      "seed": 16099,
+      "left_stim": {
+        "mean_turn_left": 0.679,
+        "mean_turn_right": 0.0144,
+        "onset_latency_ms": 15
+      },
+      "right_stim": {
+        "mean_turn_left": 0,
+        "mean_turn_right": 0,
+        "onset_latency_ms": -1
+      },
+      "asymmetry_magnitude": 0.679,
+      "is_left_dominant": true
+    }
+  ]
+}

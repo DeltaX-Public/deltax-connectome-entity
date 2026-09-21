@@ -1,0 +1,95 @@
+{
+  "schema": "steering_asymmetry.plasticity_target_candidate.v1",
+  "timestamp": "2026-09-19T16:19:00.000Z",
+  "author": "Research Lane B (Steering Asymmetry Causal Mapping)",
+  "status": "CANDIDATE_FOR_PRIMARY_PLASTICITY_LANE",
+  "summary": "Smallest experimentally verified causal bottleneck explaining the failure of right tactile input to recruit right DNa02. Identified via sufficiency sweeps, edge counterfactuals, active inhibition testing, RateNetwork parameter counterfactuals, and N=100 validation.",
+  "minimal_causal_bottleneck": [
+    "WEAK_RECEPTOR_TO_INTERMEDIATE_COUPLING",
+    "DYNAMICAL_THRESHOLD_AMPLIFICATION"
+  ],
+  "eligible_target_elements": {
+    "intermediate_population": {
+      "cell_type": "AN03A008",
+      "right_index": 2937,
+      "body_id": "18029",
+      "side": 2,
+      "super_class": "ascending",
+      "neurotransmitter": "acetylcholine (excitatory, +1)",
+      "justification_for_inclusion": "Proven functionally sufficient at physiological firing rates (5 to 40 Hz) to drive Right DNa02 (0.33 to 4.30 Hz) and generate turn_right candidate strength (up to 0.527) without off-target network explosion (off-target activity 4,330 to 4,850 Hz, vs intact baseline 4,293 Hz). In the intact connectome, its activation under tactile stimulation is subthreshold (4.98 Hz vs 24.92 Hz on the left homologue) due to receiving only 41 synapses from 8 receptors (vs 78 synapses from 15 receptors on the left) and an 8x larger segmented volume size scale (6.37 vs 0.79) that elevates its firing threshold (44.1 vs 5.9).",
+      "neighboring_elements_excluded": [
+        {
+          "element": "DNg34 (idx 3348)",
+          "reason_for_exclusion": "Secondary 2-hop intermediate with negligible synaptic weights (6 in, 4 out) that fails to fire (0 Hz) under tactile stimulation and cannot drive DNa02."
+        },
+        {
+          "element": "Direct inhibitory inputs to DNa02 (PS049, AOTU019, PS059, LAL046)",
+          "reason_for_exclusion": "Complete 100% elimination (weight=0) of all direct inhibitory synapses to right DNa02 and AN03A008 failed to restore right DNa02 firing (remained 0.0076 Hz). Active inhibition is causally ruled out."
+        },
+        {
+          "element": "Contralateral Left DNa02 (idx 130496)",
+          "reason_for_exclusion": "Silencing Left DNa02 produced 0.0013 Hz right turn, proving the failure is not mediated by contralateral DN cross-inhibition."
+        }
+      ]
+    },
+    "eligible_edge_sets": [
+      {
+        "edge_group_id": "EDGE_GROUP_1_RECEPTOR_TO_AN03A008",
+        "description": "Feedforward afferent synapses from tactile T1 right receptors into right AN03A008 (idx 2937)",
+        "source_indices": [
+          14838, 14840, 14841, 14843, 14844, 14845, 14846, 14847
+        ],
+        "target_index": 2937,
+        "current_total_weight": 41,
+        "edge_count": 8,
+        "permitted_update_direction": "POTENTIATION_ONLY",
+        "proposed_bounded_modification_range": {
+          "min_multiplier": 1.5,
+          "recommended_multiplier": 1.9,
+          "max_multiplier": 2.5,
+          "target_total_weight_range": [62, 102]
+        },
+        "causal_evidence": "Scaling this edge group by 1.9x (mirroring the Left receptor afferent weight of 78 synapses) or 2.5x rescues right DNa02 activation (0.262 Hz) under 180 Hz tactile stimulation (artifacts/steering_asymmetry/edge_counterfactuals.json)."
+      },
+      {
+        "edge_group_id": "EDGE_GROUP_2_AN03A008_TO_RIGHT_DNA02",
+        "description": "Ascending premotor projection synapse from right AN03A008 (idx 2937) into right DNa02 (idx 332)",
+        "source_index": 2937,
+        "target_index": 332,
+        "current_total_weight": 717,
+        "edge_count": 1,
+        "permitted_update_direction": "POTENTIATION_ONLY",
+        "proposed_bounded_modification_range": {
+          "min_multiplier": 1.2,
+          "recommended_multiplier": 1.5,
+          "max_multiplier": 2.0,
+          "target_total_weight_range": [860, 1434]
+        },
+        "causal_evidence": "Scaling this edge by 1.5x in combination with 1.5x afferent boost produces 0.219 Hz right DNa02 firing; scaling by 2.0x produces 0.158 Hz right DNa02 firing (artifacts/steering_asymmetry/edge_counterfactuals.json)."
+      }
+    ]
+  },
+  "validation_effect_size": {
+    "cohort_seeds": "17000..17099 (N=100)",
+    "intact_right_dna02_rate": "0.0046 +/- 0.0089 Hz",
+    "rescued_right_dna02_rate": "1.6779 +/- 0.4223 Hz",
+    "rescued_turn_right_strength": "0.3087 +/- 0.0493",
+    "rescue_replication_rate": "100.0% (100/100 seeds)",
+    "off_target_activity_impact": "Negligible (+5.9% total network activity relative to intact baseline)"
+  },
+  "confidence_and_limitations": {
+    "confidence_level": "HIGH",
+    "strengths": [
+      "Exact 1:1 cellular homologue matching against the successful Left pathway.",
+      "Necessity and sufficiency verified across multiple modalities and physiological rates.",
+      "Active inhibition directly tested and ruled out.",
+      "Counterfactual edge scaling verified within physiological bounds.",
+      "Replicated across 100 fresh, unobserved seeds (17000..17099)."
+    ],
+    "limitations": [
+      "Does not prescribe a specific continuous learning rule (e.g. Hebbian vs Three-Factor vs eligibility traces); rule selection is owned by the primary plasticity lane.",
+      "Assumes tactile T1 mechanosensory stimulation is the primary obstacle-avoidance modality in the target environment.",
+      "Plasticity must remain bounded: over-potentiating AN03A008 beyond 2.5x could cause tonic right-turning bias in the absence of tactile contact."
+    ]
+  }
+}
