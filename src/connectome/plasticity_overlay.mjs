@@ -77,9 +77,9 @@ export const DEFAULT_PLASTICITY_CONFIG = Object.freeze({
   learningRate: 0.01,
   passiveDecay: 0.0,
   traceDecay: 0.05,
-  maxAbsoluteDeltaW: 500.0,
+  maxAbsoluteDeltaW: 5.0,
   maxPercentageDeviation: 1.0, // 100% max change relative to base weight
-  totalGlobalBudget: 1000.0,    // Total sum of |ΔW| across network
+  totalGlobalBudget: 100.0,    // Total sum of |ΔW| across network
   updateRateLimit: 0.5,        // Max change per edge per update step
   updateFrequency: 1,          // Interval of steps between updates
   effectiveEdgePolicy: EFFECTIVE_EDGE_POLICIES.MODEL_A_RETAINED_ONLY,
@@ -335,12 +335,22 @@ export class PlasticityOverlay {
    * @param {number} alpha Dimensionless efficacy multiplier (e.g. 1.5 = +50% efficacy)
    */
   setEfficacyMultiplier(edgeIndex, alpha) {
-    if (edgeIndex < 0 || edgeIndex >= this.E) return false;
+    if (!this.config.enabled || this.config.rule === PLASTICITY_RULES.PLASTICITY_NONE) {
+      return false;
+    }
+    if (!Number.isInteger(edgeIndex) || edgeIndex < 0 || edgeIndex >= this.E) return false;
     if (typeof alpha !== "number" || !Number.isFinite(alpha) || alpha < 0) return false;
 
     // Mask enforcement: ineligible edges cannot be modified
-    if (this.eligibleEdgeMask && !this.eligibleEdgeMask.has(edgeIndex)) {
+    if (!this.eligibleEdgeMask || this.eligibleEdgeMask.size === 0 || !this.eligibleEdgeMask.has(edgeIndex)) {
       return false;
+    }
+
+    // Model A: efficacy changes on retained connections only
+    if (this.effectiveEdgePolicy === EFFECTIVE_EDGE_POLICIES.MODEL_A_RETAINED_ONLY) {
+      if (this.initialActiveWeights && this.initialActiveWeights[edgeIndex] === 0) {
+        return false;
+      }
     }
 
     const baseW = this.baseSynapseCounts[edgeIndex];
@@ -422,15 +432,58 @@ export class PlasticityOverlay {
   }
 
   /**
-   * Current total global modification budget used: sum(|ΔW_k|).
+   * Stored efficacy budget: total sum of |ΔW_k| across all modified edges in deltaW.
    * @returns {number}
    */
-  getGlobalBudgetUsed() {
+  getStoredEfficacyBudget() {
     let total = 0;
     for (const delta of this.deltaW.values()) {
       total += Math.abs(delta);
     }
     return total;
+  }
+
+  /**
+   * Active coupling budget: total sum of actual changes in active synaptic weight in the network.
+   * sum_k |W_active[k] - W_initialActive[k]|
+   * @returns {number}
+   */
+  getActiveCouplingBudget() {
+    if (!this.netWeights || !this.initialActiveWeights) {
+      return this.getStoredEfficacyBudget();
+    }
+    let total = 0;
+    for (const edgeIdx of this.deltaW.keys()) {
+      const activeW = this.netWeights[edgeIdx];
+      const initW = this.initialActiveWeights[edgeIdx];
+      total += Math.abs(activeW - initW);
+    }
+    return total;
+  }
+
+  /**
+   * Anatomically present edge activation: count of edges where initial active weight was 0
+   * (e.g. filtered out by minSyn) but current active weight is > 0.
+   * In Model A, this is strictly 0. In Model B, this counts revived edges.
+   * @returns {number}
+   */
+  getActivatedEdgeCount() {
+    if (!this.netWeights || !this.initialActiveWeights) return 0;
+    let count = 0;
+    for (const edgeIdx of this.deltaW.keys()) {
+      if (this.initialActiveWeights[edgeIdx] === 0 && this.netWeights[edgeIdx] > 0) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  /**
+   * Current total global modification budget used: sum(|ΔW_k|).
+   * @returns {number}
+   */
+  getGlobalBudgetUsed() {
+    return this.getStoredEfficacyBudget();
   }
 
   /**
@@ -551,6 +604,13 @@ export class PlasticityOverlay {
     let currentGlobalBudget = this.getGlobalBudgetUsed();
 
     for (const edgeIdx of this.eligibleEdgeMask) {
+      // Model A: efficacy changes on retained connections only
+      if (this.effectiveEdgePolicy === EFFECTIVE_EDGE_POLICIES.MODEL_A_RETAINED_ONLY) {
+        if (this.initialActiveWeights && this.initialActiveWeights[edgeIdx] === 0) {
+          continue;
+        }
+      }
+
       const source = this._findSourceNeuron(edgeIdx);
       const target = this.indices[edgeIdx];
       const baseW = this.baseWeights[edgeIdx];
@@ -748,7 +808,70 @@ export class PlasticityOverlay {
       throw new Error("Invalid snapshot schema: deltaW and eligibilityTraces must be arrays.");
     }
 
-    // Revert current modifications in netWeights
+    // 1. Pre-validate EVERYTHING before mutating live state
+    const validatedDeltas = [];
+    for (const entry of snap.deltaW) {
+      if (!Array.isArray(entry) || entry.length < 2) {
+        throw new Error(`Invalid snapshot deltaW entry: ${JSON.stringify(entry)}`);
+      }
+      const edgeIdx = Number(entry[0]);
+      const deltaVal = Number(entry[1]);
+      if (!Number.isInteger(edgeIdx) || edgeIdx < 0 || edgeIdx >= this.E) {
+        throw new Error(`Invalid edge index in snapshot deltaW: ${entry[0]}`);
+      }
+      if (!Number.isFinite(deltaVal)) {
+        throw new Error(`Invalid deltaW value in snapshot: ${entry[1]}`);
+      }
+      validatedDeltas.push([edgeIdx, deltaVal]);
+    }
+
+    const validatedTraces = [];
+    for (const entry of snap.eligibilityTraces) {
+      if (!Array.isArray(entry) || entry.length < 2) {
+        throw new Error(`Invalid snapshot eligibility trace entry: ${JSON.stringify(entry)}`);
+      }
+      const edgeIdx = Number(entry[0]);
+      const traceVal = Number(entry[1]);
+      if (!Number.isInteger(edgeIdx) || edgeIdx < 0 || edgeIdx >= this.E) {
+        throw new Error(`Invalid edge index in snapshot eligibility trace: ${entry[0]}`);
+      }
+      if (!Number.isFinite(traceVal)) {
+        throw new Error(`Invalid trace value in snapshot: ${entry[1]}`);
+      }
+      validatedTraces.push([edgeIdx, traceVal]);
+    }
+
+    let validatedAlphas = null;
+    if (snap.alpha) {
+      if (!Array.isArray(snap.alpha)) {
+        throw new Error("Invalid snapshot alpha: must be an array.");
+      }
+      validatedAlphas = [];
+      for (const entry of snap.alpha) {
+        if (!Array.isArray(entry) || entry.length < 2) {
+          throw new Error(`Invalid snapshot alpha entry: ${JSON.stringify(entry)}`);
+        }
+        const edgeIdx = Number(entry[0]);
+        const alphaVal = Number(entry[1]);
+        if (!Number.isInteger(edgeIdx) || edgeIdx < 0 || edgeIdx >= this.E || !Number.isFinite(alphaVal)) {
+          throw new Error(`Invalid alpha entry in snapshot: ${JSON.stringify(entry)}`);
+        }
+        validatedAlphas.push([edgeIdx, alphaVal]);
+      }
+    }
+
+    // 2. Pre-validation passed. Restore policy & configuration FIRST
+    if (snap.config) {
+      this.config = { ...this.config, ...snap.config };
+      if (this.config.effectiveEdgePolicy) {
+        this.effectiveEdgePolicy = this.config.effectiveEdgePolicy;
+      }
+    }
+    if (snap.eligibleEdgeMask) {
+      this.eligibleEdgeMask = new Set(snap.eligibleEdgeMask);
+    }
+
+    // 3. Revert current modifications in netWeights
     if (this.netWeights) {
       for (const edgeIdx of this.deltaW.keys()) {
         this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : this.baseSynapseCounts[edgeIdx];
@@ -759,12 +882,9 @@ export class PlasticityOverlay {
     }
     this.deltaW.clear();
     this.alpha.clear();
-    for (const [k, v] of snap.deltaW) {
-      const edgeIdx = Number(k);
-      const deltaVal = Number(v);
-      if (!Number.isFinite(edgeIdx) || edgeIdx < 0 || edgeIdx >= this.E || !Number.isFinite(deltaVal)) {
-        throw new Error(`Invalid snapshot deltaW entry: [${k}, ${v}]`);
-      }
+
+    // 4. Apply validated deltaW and alpha, reconstructing active weights under restored policy
+    for (const [edgeIdx, deltaVal] of validatedDeltas) {
       this.deltaW.set(edgeIdx, deltaVal);
       const baseW = this.baseSynapseCounts[edgeIdx];
       const alphaVal = baseW > 0 ? (baseW + deltaVal) / baseW : 1.0;
@@ -773,26 +893,15 @@ export class PlasticityOverlay {
         this.netWeights[edgeIdx] = this._computeActiveWeight(edgeIdx, baseW, deltaVal);
       }
     }
-    if (snap.alpha && Array.isArray(snap.alpha)) {
-      for (const [k, v] of snap.alpha) {
-        this.alpha.set(Number(k), Number(v));
+    if (validatedAlphas) {
+      for (const [edgeIdx, alphaVal] of validatedAlphas) {
+        this.alpha.set(edgeIdx, alphaVal);
       }
     }
 
     this.eligibilityTraces.clear();
-    for (const [k, v] of snap.eligibilityTraces) {
-      this.eligibilityTraces.set(Number(k), Number(v));
-    }
-
-    if (snap.eligibleEdgeMask) {
-      this.eligibleEdgeMask = new Set(snap.eligibleEdgeMask);
-    }
-
-    if (snap.config) {
-      this.config = { ...this.config, ...snap.config };
-      if (this.config.effectiveEdgePolicy) {
-        this.effectiveEdgePolicy = this.config.effectiveEdgePolicy;
-      }
+    for (const [edgeIdx, traceVal] of validatedTraces) {
+      this.eligibilityTraces.set(edgeIdx, traceVal);
     }
 
     this.stepCount = snap.step || 0;

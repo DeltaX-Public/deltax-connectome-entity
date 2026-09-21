@@ -1,0 +1,349 @@
+{
+  "timestamp": "2026-09-21T06:04:24.426Z",
+  "target": "TARGET_A_AFFERENT_ONLY",
+  "induction_cycles": 30,
+  "stim_intensity_hz": 180,
+  "probe_specification": {
+    "probe_type": "FRESH_EVOKED",
+    "intensity_hz": 180,
+    "duration_steps": 60,
+    "stim_window": [
+      11,
+      35
+    ],
+    "clone_mechanism": "ConnectomeRuntime.cloneForProbe(disablePlasticity: true)",
+    "floating_point_active_weights": "Float32Array",
+    "telemetry_schema": "assertValidCandidate(action_class, activation_strength)"
+  },
+  "seeds": [
+    18100,
+    18101,
+    18102
+  ],
+  "comparisons": [
+    {
+      "seed": 18100,
+      "pinned_historical_d2": {
+        "source": "PINNED_HISTORICAL_EXECUTION",
+        "artifact": "artifacts/plasticity/phase4d2/post_induction.json",
+        "condition_id": "Q2",
+        "seed": 18100,
+        "right_dna02_rate": 0.001,
+        "turn_right_strength": 0.0099,
+        "turn_left_strength": 0.01,
+        "total_budget_used": 4.7634,
+        "recruited": false
+      },
+      "phase4d3_cohort_note": "Phase IV-D.3 used seeds 18200..18299. No pinned historical D.3 execution exists for seed 18100",
+      "reconstructed_schedule_d2": {
+        "source": "RECONSTRUCTED_SCHEDULE_CONTROL",
+        "schedule": "LEGACY_D2_SCHEDULE",
+        "seed": 18100,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0,
+        "turn_left_strength": 1,
+        "stored_efficacy_budget": 0.000011212024400962904,
+        "active_coupling_budget": 0.000001430511474609375,
+        "revived_edge_count": 0,
+        "recruited": false
+      },
+      "reconstructed_schedule_d3": {
+        "source": "RECONSTRUCTED_SCHEDULE_CONTROL",
+        "schedule": "LEGACY_D3_SCHEDULE",
+        "seed": 18100,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0,
+        "turn_left_strength": 1,
+        "stored_efficacy_budget": 58.96587227363344,
+        "active_coupling_budget": 79.96587228775024,
+        "revived_edge_count": 6,
+        "recruited": false
+      },
+      "repaired_model_a_retained_only": {
+        "source": "REPAIRED_UNIFIED_HARNESS",
+        "policy": "MODEL_A_RETAINED_ONLY",
+        "seed": 18100,
+        "stored_efficacy_budget": 24.8747,
+        "active_coupling_budget": 24.8747,
+        "revived_edge_count": 0,
+        "pre_dna02": 0,
+        "post_dna02": 0.0206,
+        "dna02_delta": 0.0206,
+        "pre_turn_right": 0,
+        "post_turn_right": 0.0063,
+        "post_turn_left": 0,
+        "post_forward": 0.0001,
+        "post_backward": 0,
+        "post_halt": 0.1159,
+        "post_reset_dna02": 0,
+        "recruited": false,
+        "crossed_turn_right": false,
+        "reset_abolished": true,
+        "active_weights_hash": "55a158b4e171deada6f3cfa46d6a3542a171a3d73fa04dec0239117540d63f7f"
+      },
+      "repaired_model_b_explicit_revival": {
+        "source": "REPAIRED_UNIFIED_HARNESS",
+        "policy": "MODEL_B_EXPLICIT_REVIVAL",
+        "seed": 18100,
+        "stored_efficacy_budget": 58.9659,
+        "active_coupling_budget": 79.9659,
+        "revived_edge_count": 6,
+        "pre_dna02": 0,
+        "post_dna02": 0.9488,
+        "dna02_delta": 0.9488,
+        "pre_turn_right": 0,
+        "post_turn_right": 0.1932,
+        "post_turn_left": 0,
+        "post_forward": 0.0041,
+        "post_backward": 0,
+        "post_halt": 0.0756,
+        "post_reset_dna02": 0,
+        "recruited": true,
+        "crossed_turn_right": true,
+        "reset_abolished": true,
+        "active_weights_hash": "599dc711b1f005c7e99ab2bfdecf68c6293c841f34a4c2fb8a54449e0300cb51"
+      },
+      "matched_controls": {
+        "q0_baseline": {
+          "control_id": "Q0_BASELINE_NONE",
+          "seed": 18100,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "recruited": false
+        },
+        "q1_old_rule": {
+          "control_id": "Q1_OLD_RULE_TARGET_C",
+          "seed": 18100,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "stored_efficacy_budget": 1.9289670362402715,
+          "recruited": false
+        },
+        "q6_no_modulation": {
+          "control_id": "Q6_NO_MODULATION_TARGET_A",
+          "seed": 18100,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "stored_efficacy_budget": 0,
+          "recruited": false
+        }
+      }
+    },
+    {
+      "seed": 18101,
+      "pinned_historical_d2": {
+        "source": "PINNED_HISTORICAL_EXECUTION",
+        "artifact": "artifacts/plasticity/phase4d2/post_induction.json",
+        "condition_id": "Q2",
+        "seed": 18101,
+        "right_dna02_rate": 0.078,
+        "turn_right_strength": 0.0302,
+        "turn_left_strength": 0.01,
+        "total_budget_used": 6.5169,
+        "recruited": true
+      },
+      "phase4d3_cohort_note": "Phase IV-D.3 used seeds 18200..18299. No pinned historical D.3 execution exists for seed 18101",
+      "reconstructed_schedule_d2": {
+        "source": "RECONSTRUCTED_SCHEDULE_CONTROL",
+        "schedule": "LEGACY_D2_SCHEDULE",
+        "seed": 18101,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0,
+        "turn_left_strength": 1,
+        "stored_efficacy_budget": 0.000011848005280798164,
+        "active_coupling_budget": 0.0000019073486328125,
+        "revived_edge_count": 0,
+        "recruited": false
+      },
+      "reconstructed_schedule_d3": {
+        "source": "RECONSTRUCTED_SCHEDULE_CONTROL",
+        "schedule": "LEGACY_D3_SCHEDULE",
+        "seed": 18101,
+        "right_dna02_rate": 5.5956,
+        "turn_right_strength": 0,
+        "turn_left_strength": 0.959,
+        "stored_efficacy_budget": 55.35084486096883,
+        "active_coupling_budget": 76.35084438323975,
+        "revived_edge_count": 6,
+        "recruited": true
+      },
+      "repaired_model_a_retained_only": {
+        "source": "REPAIRED_UNIFIED_HARNESS",
+        "policy": "MODEL_A_RETAINED_ONLY",
+        "seed": 18101,
+        "stored_efficacy_budget": 24.8583,
+        "active_coupling_budget": 24.8583,
+        "revived_edge_count": 0,
+        "pre_dna02": 0,
+        "post_dna02": 0.0583,
+        "dna02_delta": 0.0583,
+        "pre_turn_right": 0,
+        "post_turn_right": 0.0175,
+        "post_turn_left": 0,
+        "post_forward": 0.0002,
+        "post_backward": 0,
+        "post_halt": 0.11,
+        "post_reset_dna02": 0,
+        "recruited": true,
+        "crossed_turn_right": false,
+        "reset_abolished": true,
+        "active_weights_hash": "7a28818b393bbbad88f58d356627e64df6f534deee57a7d9d95c342e54ca24b1"
+      },
+      "repaired_model_b_explicit_revival": {
+        "source": "REPAIRED_UNIFIED_HARNESS",
+        "policy": "MODEL_B_EXPLICIT_REVIVAL",
+        "seed": 18101,
+        "stored_efficacy_budget": 55.3508,
+        "active_coupling_budget": 76.3508,
+        "revived_edge_count": 6,
+        "pre_dna02": 0,
+        "post_dna02": 0.8106,
+        "dna02_delta": 0.8106,
+        "pre_turn_right": 0,
+        "post_turn_right": 0.1792,
+        "post_turn_left": 0,
+        "post_forward": 0.0036,
+        "post_backward": 0,
+        "post_halt": 0.0741,
+        "post_reset_dna02": 0,
+        "recruited": true,
+        "crossed_turn_right": true,
+        "reset_abolished": true,
+        "active_weights_hash": "53bf4811a68c618bb6571c9fc23a397bedcc05e85130c778c1864045dd94a749"
+      },
+      "matched_controls": {
+        "q0_baseline": {
+          "control_id": "Q0_BASELINE_NONE",
+          "seed": 18101,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "recruited": false
+        },
+        "q1_old_rule": {
+          "control_id": "Q1_OLD_RULE_TARGET_C",
+          "seed": 18101,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "stored_efficacy_budget": 2.3840086454928966,
+          "recruited": false
+        },
+        "q6_no_modulation": {
+          "control_id": "Q6_NO_MODULATION_TARGET_A",
+          "seed": 18101,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "stored_efficacy_budget": 0,
+          "recruited": false
+        }
+      }
+    },
+    {
+      "seed": 18102,
+      "pinned_historical_d2": {
+        "source": "PINNED_HISTORICAL_EXECUTION",
+        "artifact": "artifacts/plasticity/phase4d2/post_induction.json",
+        "condition_id": "Q2",
+        "seed": 18102,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0.01,
+        "turn_left_strength": 0.01,
+        "total_budget_used": 0.4723,
+        "recruited": false
+      },
+      "phase4d3_cohort_note": "Phase IV-D.3 used seeds 18200..18299. No pinned historical D.3 execution exists for seed 18102",
+      "reconstructed_schedule_d2": {
+        "source": "RECONSTRUCTED_SCHEDULE_CONTROL",
+        "schedule": "LEGACY_D2_SCHEDULE",
+        "seed": 18102,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0,
+        "turn_left_strength": 0.9992,
+        "stored_efficacy_budget": 0.000009023085110959396,
+        "active_coupling_budget": 4.76837158203125e-7,
+        "revived_edge_count": 0,
+        "recruited": false
+      },
+      "reconstructed_schedule_d3": {
+        "source": "RECONSTRUCTED_SCHEDULE_CONTROL",
+        "schedule": "LEGACY_D3_SCHEDULE",
+        "seed": 18102,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0,
+        "turn_left_strength": 1,
+        "stored_efficacy_budget": 49.81438110228467,
+        "active_coupling_budget": 70.81438207626343,
+        "revived_edge_count": 6,
+        "recruited": false
+      },
+      "repaired_model_a_retained_only": {
+        "source": "REPAIRED_UNIFIED_HARNESS",
+        "policy": "MODEL_A_RETAINED_ONLY",
+        "seed": 18102,
+        "stored_efficacy_budget": 24.8567,
+        "active_coupling_budget": 24.8567,
+        "revived_edge_count": 0,
+        "pre_dna02": 0,
+        "post_dna02": 0.0185,
+        "dna02_delta": 0.0185,
+        "pre_turn_right": 0,
+        "post_turn_right": 0.0057,
+        "post_turn_left": 0,
+        "post_forward": 0.0001,
+        "post_backward": 0,
+        "post_halt": 0.1162,
+        "post_reset_dna02": 0,
+        "recruited": false,
+        "crossed_turn_right": false,
+        "reset_abolished": true,
+        "active_weights_hash": "e20407c4b5b183a304a859eb3de57ca52abeb8dad8a9e8d43f8ec49e02fa5749"
+      },
+      "repaired_model_b_explicit_revival": {
+        "source": "REPAIRED_UNIFIED_HARNESS",
+        "policy": "MODEL_B_EXPLICIT_REVIVAL",
+        "seed": 18102,
+        "stored_efficacy_budget": 49.8144,
+        "active_coupling_budget": 70.8144,
+        "revived_edge_count": 6,
+        "pre_dna02": 0,
+        "post_dna02": 0.64,
+        "dna02_delta": 0.64,
+        "pre_turn_right": 0,
+        "post_turn_right": 0.1454,
+        "post_turn_left": 0,
+        "post_forward": 0.0028,
+        "post_backward": 0,
+        "post_halt": 0.0811,
+        "post_reset_dna02": 0,
+        "recruited": true,
+        "crossed_turn_right": true,
+        "reset_abolished": true,
+        "active_weights_hash": "eb9f12670b7314fffe3a1640801b44a20a05206d5edc43189e1b9c594afc303f"
+      },
+      "matched_controls": {
+        "q0_baseline": {
+          "control_id": "Q0_BASELINE_NONE",
+          "seed": 18102,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "recruited": false
+        },
+        "q1_old_rule": {
+          "control_id": "Q1_OLD_RULE_TARGET_C",
+          "seed": 18102,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "stored_efficacy_budget": 1.899506598056945,
+          "recruited": false
+        },
+        "q6_no_modulation": {
+          "control_id": "Q6_NO_MODULATION_TARGET_A",
+          "seed": 18102,
+          "right_dna02_rate": 0,
+          "turn_right_strength": 0,
+          "stored_efficacy_budget": 0,
+          "recruited": false
+        }
+      }
+    }
+  ]
+}

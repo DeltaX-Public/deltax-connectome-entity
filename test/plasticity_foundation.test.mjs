@@ -407,6 +407,11 @@ test("11. Real Connectome RateNetwork Non-Zero Plasticity Propagation & Exact Re
     plasticity: {
       enabled: true,
       rule: PLASTICITY_RULES.ELIGIBILITY_MODULATED_HEBBIAN,
+      config: {
+        maxAbsoluteDeltaW: 100.0,
+        totalGlobalBudget: 200.0,
+      },
+      eligibleEdgeMask: [edgeIdx],
     },
   });
   potentiatedRuntime.plasticity.setEfficacyMultiplier(edgeIdx, 1.5);

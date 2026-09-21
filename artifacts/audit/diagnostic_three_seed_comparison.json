@@ -1,5 +1,12 @@
 {
-  "timestamp": "2026-09-21T05:16:59.615Z",
+  "status": "SUPERSEDED",
+  "superseded_by": "artifacts/audit/diagnostic_three_seed_acceptance.json",
+  "superseded_reasons": [
+    "Telemetry schema mismatch: probe helper queried non-existent candidate fields 'action' and 'confidence' rather than canonical 'action_class' and 'activation_strength', artificially reporting turn_right_strength as 0 across all conditions.",
+    "Harness misattribution: legacy columns labeled 'ARCHIVED_LEGACY_D2' and 'ARCHIVED_LEGACY_D3' executed reconstructed schedules against the repaired runtime rather than citing pinned historical executions or noting that Phase IV-D.3 used seeds 18200..18299.",
+    "Probe fidelity defects: probe clone used default 100 Hz intensity instead of standard 180 Hz, did not preserve resolved runtime parameters, and lacked separate budget accounting for Model A retained connections."
+  ],
+  "original_timestamp": "2026-09-21T05:16:59.615Z",
   "target": "TARGET_A_AFFERENT_ONLY",
   "induction_cycles": 30,
   "seeds": [

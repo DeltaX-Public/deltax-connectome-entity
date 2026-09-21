@@ -16,7 +16,7 @@ const UPSTREAM = path.resolve(ROOT, "upstream", "fly-brain");
 const { loadAll } = await import(path.join(UPSTREAM, "scripts", "lib_node.mjs"));
 const { RateNetwork, RATE_DEFAULTS } = await import(path.join(UPSTREAM, "src", "ratenet.js"));
 const { DN_ROLES } = await import(path.join(UPSTREAM, "src", "sim", "motor.js"));
-import { PlasticityOverlay } from "./plasticity_overlay.mjs";
+import { PlasticityOverlay, PLASTICITY_RULES } from "./plasticity_overlay.mjs";
 
 export class ConnectomeRuntime {
   constructor(opts = {}) {
@@ -70,7 +70,7 @@ export class ConnectomeRuntime {
           netInp: this.net.inp,
           netTheta: this.net.theta,
           net: this.net,
-          config: opts.plasticity.config || opts.plasticity,
+          config: opts.plasticity.config ? { ...opts.plasticity, ...opts.plasticity.config } : opts.plasticity,
           eligibleEdgeMask: opts.plasticity.eligibleEdgeMask,
         })
       : null;
@@ -274,15 +274,19 @@ export class ConnectomeRuntime {
       schema: "connectome.runtime.snapshot.v1",
       seed: this.seed,
       t: this.net.t,
+      steps: this.net._steps,
       r: Array.from(this.net.r),
       inp: Array.from(this.net.inp),
       ext: Array.from(this.net.ext),
       trace: Array.from(this.net.trace),
+      spikeCount: Array.from(this.net.spikeCount),
       A: Array.from(this.net.A),
       u: Array.from(this.net.u),
       out: Array.from(this.net.out),
       silenced: Array.from(this.silencedNeurons),
       excited: Array.from(this.excitedNeurons.entries()),
+      sensoryDrives: Array.from(this.sensoryDrives.entries()),
+      rateParams: { ...this.net.p },
       plasticity: this.plasticity ? this.plasticity.snapshot() : null,
     };
   }
@@ -298,10 +302,16 @@ export class ConnectomeRuntime {
       throw new Error(`Snapshot dimension mismatch: expected N=${this.N}, got ${snap.r?.length}`);
     }
     this.net.t = snap.t;
+    if (snap.steps !== undefined) {
+      this.net._steps = snap.steps;
+    }
     this.net.r.set(snap.r);
     this.net.inp.set(snap.inp);
     this.net.ext.set(snap.ext);
     this.net.trace.set(snap.trace);
+    if (snap.spikeCount && this.net.spikeCount) {
+      this.net.spikeCount.set(snap.spikeCount);
+    }
     this.net.A.set(snap.A);
     this.net.u.set(snap.u);
     this.net.out.set(snap.out);
@@ -320,12 +330,127 @@ export class ConnectomeRuntime {
       }
     }
 
+    this.sensoryDrives.clear();
+    if (snap.sensoryDrives) {
+      for (const [i, hz] of snap.sensoryDrives) {
+        this.sensoryDrives.set(i, hz);
+      }
+    }
+
     if (snap.plasticity && this.plasticity) {
       this.plasticity.restore(snap.plasticity);
     }
     this.net.recomputeInput();
 
     return true;
+  }
+
+  /**
+   * Create an exact, faithful clone of this runtime for probing.
+   * Preserves:
+   * - Exact active weights as Float32Array (no fractional weight truncation).
+   * - Effective edge policy and eligible edge mask.
+   * - Resolved neuron parameters (a, theta, tau, rmax, preFactor, sizeScale, silenced, sensory, p).
+   * - Optogenetic silencing and active neural perturbations.
+   *
+   * Distinguishes:
+   * A. "FRESH_EVOKED": Deliberately resets neural rates, inputs, drives, and steps for evoked-response stimulus.
+   * B. "CONTINUATION": Preserves complete dynamical state (r, inp, u, A, out, t, _steps, sensoryDrives).
+   *
+   * @param {Object} [options]
+   * @param {"FRESH_EVOKED"|"CONTINUATION"} [options.probeType="FRESH_EVOKED"]
+   * @param {boolean} [options.disablePlasticity=true] Whether to disable learning during probe
+   * @returns {ConnectomeRuntime} Faithful isolated clone
+   */
+  cloneForProbe({ probeType = "FRESH_EVOKED", disablePlasticity = true } = {}) {
+    if (probeType !== "FRESH_EVOKED" && probeType !== "CONTINUATION") {
+      throw new Error(`Invalid probeType: '${probeType}'. Must be 'FRESH_EVOKED' or 'CONTINUATION'.`);
+    }
+
+    // 1. Initialize clone with exact rateParams
+    const clone = new ConnectomeRuntime({
+      seed: this.seed,
+      substepsPerTick: this.substepsPerTick,
+      rateParams: { ...this.net.p },
+      plasticity: this.plasticity
+        ? {
+            config: {
+              ...this.plasticity.config,
+              enabled: !disablePlasticity,
+              rule: disablePlasticity ? PLASTICITY_RULES.PLASTICITY_NONE : this.plasticity.config.rule,
+            },
+            eligibleEdgeMask: this.plasticity.eligibleEdgeMask
+              ? new Set(this.plasticity.eligibleEdgeMask)
+              : null,
+          }
+        : false,
+    });
+
+    // 2. Ensure clone active weights are Float32Array and exact copy of active weights
+    if (!(clone.net.weights instanceof Float32Array)) {
+      clone.net.weights = new Float32Array(this.net.weights.length);
+    }
+    clone.net.weights.set(this.net.weights);
+
+    // 3. Copy resolved neuron parameters
+    clone.net.a.set(this.net.a);
+    clone.net.theta.set(this.net.theta);
+    clone.net.tau.set(this.net.tau);
+    clone.net.rmax.set(this.net.rmax);
+    clone.net.preFactor.set(this.net.preFactor);
+    clone.net.sizeScale.set(this.net.sizeScale);
+    clone.net.silenced.set(this.net.silenced);
+    clone.net.sensory.set(this.net.sensory);
+
+    // 4. Synchronize plasticity overlay on clone if present
+    if (this.plasticity && clone.plasticity) {
+      clone.plasticity.effectiveEdgePolicy = this.plasticity.effectiveEdgePolicy;
+      for (const [k, v] of this.plasticity.deltaW.entries()) {
+        clone.plasticity.deltaW.set(k, v);
+      }
+      for (const [k, v] of this.plasticity.alpha.entries()) {
+        clone.plasticity.alpha.set(k, v);
+      }
+      if (probeType === "CONTINUATION") {
+        for (const [k, v] of this.plasticity.eligibilityTraces.entries()) {
+          clone.plasticity.eligibilityTraces.set(k, v);
+        }
+      } else {
+        clone.plasticity.eligibilityTraces.clear();
+      }
+      clone.plasticity.verifyBaseImmutability();
+    }
+
+    // 5. Apply state according to declared probe type
+    clone.clearSilencing();
+    for (const i of this.silencedNeurons) {
+      clone.silence([i]);
+    }
+
+    if (probeType === "FRESH_EVOKED") {
+      clone.net.reset();
+      clone.net.ext.fill(0);
+      clone.sensoryDrives.clear();
+      clone.excitedNeurons.clear();
+      clone.net._steps = 0;
+      clone.net.recomputeInput();
+    } else {
+      // CONTINUATION: complete state preservation
+      clone.net.t = this.net.t;
+      clone.net._steps = this.net._steps;
+      clone.net.r.set(this.net.r);
+      clone.net.inp.set(this.net.inp);
+      clone.net.ext.set(this.net.ext);
+      clone.net.trace.set(this.net.trace);
+      clone.net.spikeCount.set(this.net.spikeCount);
+      clone.net.A.set(this.net.A);
+      clone.net.u.set(this.net.u);
+      clone.net.out.set(this.net.out);
+      clone.sensoryDrives = new Map(this.sensoryDrives);
+      clone.excitedNeurons = new Map(this.excitedNeurons);
+    }
+
+    return clone;
   }
 
   /**
@@ -340,8 +465,10 @@ export class ConnectomeRuntime {
    * @param {string} branchType
    * @param {Object} snap Snapshot object
    */
-  createCounterfactualBranch(branchType, snap) {
-    this.restore(snap);
+  createCounterfactualBranch(branchType, snap = null) {
+    if (snap) {
+      this.restore(snap);
+    }
     if (!this.plasticity) {
       return { branch: branchType, deltaW_active: false };
     }
