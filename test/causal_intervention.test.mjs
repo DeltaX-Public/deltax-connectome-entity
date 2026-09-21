@@ -1,14 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const root = path.resolve(new URL('..', import.meta.url).pathname);
-const file = path.join(root, 'artifacts/interventions/causal-intervention-8.differential.json');
+const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'deltax-causal-test-'));
+const file = path.join(tmpDir, 'causal-intervention-8.differential.json');
 let report;
-test('demo emits checkpoint/control/intervention/restore differential', () => {
-  const run = spawnSync(process.execPath, ['scripts/causal_intervention_demo.mjs'], { cwd: root, encoding: 'utf8' });
+
+test('demo emits checkpoint/control/intervention/restore differential', (t) => {
+  t.after(() => {
+    try { fs.rmSync(tmpDir, { recursive: true, force: true }); } catch {}
+  });
+  const run = spawnSync(process.execPath, ['scripts/causal_intervention_demo.mjs'], {
+    cwd: root,
+    encoding: 'utf8',
+    env: {
+      ...process.env,
+      INTERVENTION_OUT_DIR: tmpDir,
+      CHECKPOINT_OUT_DIR: tmpDir,
+    }
+  });
   assert.equal(run.status, 0, run.stderr);
   report = JSON.parse(fs.readFileSync(file, 'utf8'));
   assert.equal(report.differential.altered, true);

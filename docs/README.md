@@ -6,14 +6,19 @@ This directory contains the canonical research reports, experimental pre-registr
 
 | Milestone / Focus | Canonical Document | Status |
 | :--- | :--- | :--- |
-| **Phase IV-C Held-Out Benchmark** | [`PHASE_4C_HELD_OUT_AUDIT.md`](PHASE_4C_HELD_OUT_AUDIT.md) | Formal held-out evaluation evidence |
-| **Phase IV-D Foundation** | [`PHASE_4D_PLASTICITY_FOUNDATION.md`](PHASE_4D_PLASTICITY_FOUNDATION.md) | Substrate plasticity specification |
+| **Research Pause Snapshot** | [`RESEARCH_PAUSE_SNAPSHOT.md`](RESEARCH_PAUSE_SNAPSHOT.md) | **Authoritative State Record & Freeze Boundaries** |
+| **Release Evidence Manifest** | [`RELEASE_EVIDENCE_MANIFEST.md`](RELEASE_EVIDENCE_MANIFEST.md) | **Artifact SHA-256 Hashes, Sizes & Seed Partitions** |
+| **Phase IV-C Held-Out Benchmark** | [`PHASE_4C_HELD_OUT_AUDIT.md`](PHASE_4C_HELD_OUT_AUDIT.md) | Formal held-out evaluation evidence (9,000 episodes) |
+| **Lane B: Steering Asymmetry** | [`STEERING_ASYMMETRY_REPORT.md`](STEERING_ASYMMETRY_REPORT.md) | 10-phase causal mapping of mechanosensory bottleneck |
+| **Lane B: Latent Motor Atlas** | [`LATENT_MOTOR_REPERTOIRE_REPORT.md`](LATENT_MOTOR_REPERTOIRE_REPORT.md) | 180-pathway whole-CNS latent motor atlas |
+| **Lane B: Causal Validation** | [`LATENT_MOTOR_REPERTOIRE_CAUSAL_VALIDATION.md`](LATENT_MOTOR_REPERTOIRE_CAUSAL_VALIDATION.md) | Bilateral validation ($N=100$) & claim boundaries |
 | **Lane B Plasticity Handshake** | [`LANE_B_PLASTICITY_HANDSHAKE.md`](LANE_B_PLASTICITY_HANDSHAKE.md) | Cross-lane causal evidence receipt |
-| **Phase IV-D.1 First Learning** | [`PHASE_4D1_FIRST_LEARNING_RESULTS.md`](PHASE_4D1_FIRST_LEARNING_RESULTS.md) | Frozen negative result & deadlock finding |
+| **Phase IV-D Foundation** | [`PHASE_4D_PLASTICITY_FOUNDATION.md`](PHASE_4D_PLASTICITY_FOUNDATION.md) | Substrate plasticity specification |
+| **Phase IV-D.1 First Learning** | [`PHASE_4D1_FIRST_LEARNING_RESULTS.md`](PHASE_4D1_FIRST_LEARNING_RESULTS.md) | Somatic rate Hebbian deadlock finding |
 | **Phase IV-D.1B Mechanism Audit** | [`PHASE_4D1B_NULL_MECHANISM_AUDIT.md`](PHASE_4D1B_NULL_MECHANISM_AUDIT.md) | Analytical and subthreshold audit |
-| **Phase IV-D.2 Bootstrap Plan** | [`PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md) | Subthreshold plasticity protocol freeze |
-| **Phase IV-D.2 Bootstrap Results** | [`PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md) | Development cohort empirical results |
-| **Phase IV-D.3 Dose Response** | [`PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](PHASE_4D3_DOSE_RESPONSE_RESULTS.md) | Kinetics, dose response & heterogeneity results |
+| **Phase IV-D.2 Bootstrap Plan** | [`PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md) | Subthreshold plasticity protocol specification |
+| **Phase IV-D.2 Bootstrap Results** | [`PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md) | Development cohort empirical results ($N=50$) |
+| **Phase IV-D.3 Dose Response** | [`PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](PHASE_4D3_DOSE_RESPONSE_RESULTS.md) | Dose response & heterogeneity results ($N=100$) |
 
 ## Scientific Publication Deliverables
 

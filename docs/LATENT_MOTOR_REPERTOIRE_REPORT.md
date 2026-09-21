@@ -1,13 +1,20 @@
 # Latent Motor Repertoire Atlas: Scientific Report
 
-**Lane**: Parallel Research Lane B (Diagnostic and Comparative)  
-**Repository**: `DeltaX-Public/deltax-connectome-entity`  
-**Branch**: `research/latent-motor-repertoire`  
-**Base Commit**: `3897690` (`origin/main`)  
-**Status**: COMPLETE (Stopped strictly prior to plasticity implementation)  
-**Allocated Diagnostic Namespace**: `20000..20049` ($N=50$ reserved)  
-**Empirical Sample Sizes**: Matrix $N=10$ (`20000..20009`), Rescue $N=5$ (`20000..20004`), Bottlenecks $N=3$ (`20000..20002`), Direct $N=1$ (`20000`) (Audited in `seed_usage_audit.json`)  
-**Date**: September 2026  
+> [!NOTE] Historical Document — Completed Research Lane B
+> This report documents Parallel Research Lane B's whole-CNS connectome latent motor repertoire atlas, completed and merged into `main` via PR #21 (commit `c1341b0`). Evaluated on diagnostic seeds `20000..20049` and validated across $N=100$ bilateral seeds `20200..20299`. Escape replication namespace `20400..20499` remains reserved.
+
+> [!IMPORTANT] Later Interpretive Supersession
+> `docs/LATENT_MOTOR_REPERTOIRE_CAUSAL_VALIDATION.md` supersedes this report's original visual-pathway interpretation. The currently supported rescues are tactile right steering through `AN03A008` and tactile T1 left escape through `DNp70`. Visual pathways are `TRANSDUCTION_LIMITED` under the flat, uncalibrated photoreceptor drive; direct stimulation of a downstream intermediate demonstrates downstream sufficiency, not rescue of visual sensory transduction.
+
+**Lane**: Parallel Research Lane B (Diagnostic and Comparative)
+**Repository**: `DeltaX-Public/deltax-connectome-entity`
+**Branch**: `research/latent-motor-repertoire` (Merged: PR #21, commit `c1341b0`)
+**Base Commit**: `3897690` (`origin/main`)
+**Status**: COMPLETE (Merged into main via PR #21)
+**Allocated Diagnostic Namespace**: `20000..20049` ($N=50$ reserved)
+**Validation Namespace**: `20200..20299` ($N=100$ bilateral validation)
+**Empirical Sample Sizes**: Matrix $N=10$ (`20000..20009`), Rescue $N=5$ (`20000..20004`), Bottlenecks $N=3$ (`20000..20002`), Direct $N=1$ (`20000`) (Audited in `seed_usage_audit.json`)
+**Date**: September 2026
 
 ---
 
@@ -16,16 +23,16 @@
 This report delivers the findings of Parallel Research Lane B's whole-CNS connectome latent motor repertoire atlas. Operating under strict isolation from Lane 1 (Phase IV-D plasticity), this investigation evaluated whether the severe steering asymmetry discovered in Phase IV-C (where left tactile input robustly drives left steering while right tactile input produces zero right steering despite intact physical mappings) is an isolated quirk or a general systemic property of the connectome-derived rate network substrate.
 
 The investigation conclusively establishes that:
-1. **Right tactile steering failure is NOT an isolated anomaly.** It is a representative instance of a ubiquitous architectural principle across the biological connectome: **a vast structural wiring diagram where the vast majority of anatomically reachable motor pathways are dynamically silent or sub-threshold under isolated sensory drives.**
+1. **Right tactile steering failure is NOT an isolated anomaly in this model.** It is a representative instance of a broader pattern in the instantiated connectome-derived rate network: **a vast structural wiring diagram where many anatomically reachable motor pathways are dynamically silent or sub-threshold under isolated sensory drives.**
 2. Across all 180 audited sensory-to-motor pathways ($20\text{ sensory channels} \times 9\text{ motor populations}$):
    - **$100\%$ are structurally reachable** within 1 to 3 synaptic hops.
    - Only **$12.2\%$** (22/180) are **ROBUSTLY EXPRESSIBLE** under naive rate dynamics.
    - **$19.4\%$** (35/180) are **STRUCTURALLY PRESENT BUT WEAKLY RECRUITED**.
    - **$46.1\%$** (83/180) are **STRUCTURALLY PRESENT BUT DYNAMICALLY SILENT** (true latent motor pathways).
    - **$22.2\%$** (40/180) are **READOUT-LIMITED** (unembodied in CandidateBridge).
-3. Downstream motor viability testing confirmed that **$100\%$ of CandidateBridge-mapped motor programs execute robustly when their descending neurons fire directly**, demonstrating that silence is an **upstream network recruitment failure**, not a downstream actuator or readout deficiency.
-4. Dynamical bottleneck auditing revealed that silence in the dense connectome is primarily caused by **NET INHIBITORY OPPOSITION** (feedforward and polysynaptic GABA/glutamate-mediated inhibition overwhelming excitation) and **SUB-THRESHOLD ATTENUATION** ($I_{\text{inp}} < \theta$).
-5. Targeted physiological stimulation of intermediate bridging interneurons (such as ascending interneuron `AN03A008` and visual intermediate `DNp70`) **completely rescues downstream motor recruitment**, establishing clear anatomical targets for future plasticity.
+3. Downstream motor viability testing confirmed that **$100\%$ of CandidateBridge-mapped motor programs execute robustly when their descending neurons fire directly**, demonstrating that observed silence occurs upstream of actuator/readout execution. Later validation distinguishes visual transduction limitations from recurrent-network recruitment failures.
+4. For the audited nonvisual network pathways, dynamical bottleneck analysis identified **NET INHIBITORY OPPOSITION** (feedforward and polysynaptic GABA/glutamate-mediated inhibition overwhelming excitation) and **SUB-THRESHOLD ATTENUATION** ($I_{\text{inp}} < \theta$). Visual pathways require calibrated transduction before the recurrent-network mechanism can be assessed.
+5. Targeted physiological stimulation rescued selected nonvisual pathways: tactile right steering through `AN03A008` and tactile T1 left escape through `DNp70`. The later causal validation classifies visual pathways as `TRANSDUCTION_LIMITED`, not as validated sensory-pathway rescues.
 
 ---
 
@@ -115,8 +122,8 @@ Program: courtDN         | Neurons:  2 | Viable: FALSE | Class: UNEMBODIED_NO_RE
 ```
 
 ### Key Finding
-Every single motor population for which CandidateBridge specifies a candidate action (7 out of 7 programs) responds with correct candidate proposals and proportional activation strengths ($s > 0.35$ at 15 Hz, $s > 0.85$ at 30 Hz).  
-**Downstream readout is completely healthy across all embodied and unembodied candidates.** Silence in the latent repertoire is 100% attributable to **upstream recruitment failure within the recurrent connectome graph**.
+Every single motor population for which CandidateBridge specifies a candidate action (7 out of 7 programs) responds with correct candidate proposals and proportional activation strengths ($s > 0.35$ at 15 Hz, $s > 0.85$ at 30 Hz).
+**Downstream readout is healthy across all tested embodied and unembodied candidates.** The observed silence is upstream of actuator/readout execution; later causal validation separates visual transduction limitations from recurrent-network recruitment failures.
 
 *Artifact Reference*: `artifacts/latent_repertoire/direct_output_viability.json`
 
@@ -129,18 +136,18 @@ For the top latent mismatches, intermediate bridging interneurons between sensor
 1. **Tactile T1 Right $\to$ Turn Right Steering (`DNa02`)**:
    - Intermediate: Ascending interneuron `AN03A008` (index `2937`, synaptic weight to `DNa02` = 717).
    - Outcome: **RESCUED** (Viable = true). Stimulating `AN03A008` at 20 Hz drives right `DNa02` to $1.71\text{ Hz}$ and produces candidate strength $0.312$.
-2. **Visual $\to$ Giant Fiber Escape (`DNp01`)**:
+2. **Visual-Labeled Probe $\to$ Giant Fiber Escape (`DNp01`)**:
    - Intermediate: `DNp70` (indices `541`, `1048`, synaptic weights to `DNp01` = 799 and 617).
-   - Outcome: **RESCUED** (Viable = true). Intermediate drive recruits `DNp01` to $>2.5\text{ Hz}$ and produces escape candidate strength $>0.15$.
+   - Outcome: **DOWNSTREAM SUFFICIENCY ONLY**. Direct intermediate drive recruits `DNp01` to $>2.5\text{ Hz}$ and produces escape candidate strength $>0.15$; it does not establish that the flat visual input recruits `DNp70`. The visual sensory pathway is `TRANSDUCTION_LIMITED`.
 3. **Tactile T1 Left $\to$ Giant Fiber Escape (`DNp01`)**:
    - Intermediate: `DNp70` (indices `541`, `1048`).
    - Outcome: **RESCUED** (Viable = true).
-4. **Visual $\to$ Forward Locomotion (`DNg100`, `DNg97`)**:
+4. **Visual-Labeled Probe $\to$ Forward Locomotion (`DNg100`, `DNg97`)**:
    - Intermediate: `VES089` (index `142239`, synaptic weight to forward DNs = 989).
-   - Outcome: **RESCUED** (Viable = true). Intermediate drive recruits forward locomotion.
+   - Outcome: **DOWNSTREAM SUFFICIENCY ONLY**. Direct `VES089` drive recruits forward locomotion, but does not validate sensory-to-intermediate visual transduction. The visual sensory pathway is `TRANSDUCTION_LIMITED`.
 5. **Visual $\to$ Looming Takeoff (`DNp02`, `DNp04`)**:
    - Intermediates tested: `SAD103` (114), `MeVP53` (444, 230).
-   - Outcome: **INSUFFICIENT ALONE**. Individual visual intermediates possess weights of $\sim350$, requiring co-activation across multi-pathway ensembles to cross the $\theta \approx 120$ firing threshold.
+   - Outcome: **DOWNSTREAM PROBE INSUFFICIENT ALONE**. Individual intermediate stimulation did not cross the $\theta \approx 120$ firing threshold. This probe does not validate the upstream visual transduction pathway, which remains `TRANSDUCTION_LIMITED`.
 
 *Artifact Reference*: `artifacts/latent_repertoire/intermediate_rescue.json`
 
@@ -211,12 +218,12 @@ Auditing of all 10 bilateral sensor pairs across all 9 motor programs revealed *
 
 | Motor Program | Overall Classification | Expressed Modalities | Latent / Silent Modalities | Plasticity Amenability |
 |---|---|---|---|---|
-| `locomotion_forward` | **EXPRESSED** | `JO auditory left` | `visual left/right`, `haltere`, `bristles` | None required (expressed) |
+| `locomotion_forward` | **EXPRESSED; VISUAL TRANSDUCTION-LIMITED** | `JO auditory left` | `haltere`, `bristles`; visual input uncalibrated | Calibrated visual transduction required for visual assessment |
 | `locomotion_backward` | **EXPRESSED** | `JO auditory left` | `thermo`, `haltere` | None required (expressed) |
-| `turn_left` | **EXPRESSED** | `tactile T1 left` | `visual`, `thermo`, `taste` | None required (expressed) |
-| `turn_right` | **LATENT (to Tactile)** | `JO auditory left` | `tactile T1 right`, `tactile T2 right`, `visual` | Intermediate efficacy (`AN03A008`) |
-| `giant_fiber_escape` | **LATENT (to Visual/Tactile)** | `JO auditory left` | `visual left/right`, `tactile T1`, `thermo` | Projection efficacy (`DNp70`) |
-| `looming_takeoff` | **LATENT (to Visual)** | `JO auditory left` | `visual left/right`, `JO wind` | Multi-intermediate convergence |
+| `turn_left` | **EXPRESSED; VISUAL TRANSDUCTION-LIMITED** | `tactile T1 left` | `thermo`, `taste`; visual input uncalibrated | None required for tactile expression; calibrated visual transduction required for visual assessment |
+| `turn_right` | **LATENT (to Tactile); VISUAL TRANSDUCTION-LIMITED** | `JO auditory left` | `tactile T1 right`, `tactile T2 right`; visual input uncalibrated | Intermediate efficacy (`AN03A008`) for tactile pathway |
+| `giant_fiber_escape` | **LATENT (to Tactile); VISUAL TRANSDUCTION-LIMITED** | `JO auditory left` | `tactile T1`, `thermo`; visual input uncalibrated | Projection efficacy (`DNp70`) for tactile pathway; visual transduction unresolved |
+| `looming_takeoff` | **VISUAL TRANSDUCTION-LIMITED** | `JO auditory left` | `JO wind`; visual input uncalibrated | Calibrated visual transduction required before pathway assessment |
 | `front_leg_groom` | **LATENT** | None ($0/20$) | `tactile T1`, `JO wind`, `taste` | Afferent / intermediate efficacy |
 | `courtship_pIP10` | **READOUT_LIMITED** | None ($0/20$) | `taste T1`, `tactile T1` | Readout spec + intermediate |
 | `courtship_pursuit_DNp13` | **READOUT_LIMITED** | None ($0/20$) | `thermo left/right` | Readout spec + intermediate |
@@ -233,15 +240,15 @@ Addressing the 13 required final questions:
 1. **Motor populations audited**: 10 canonical motor programs comprising 74 descending neurons across 13 cell types.
 2. **Number of robustly expressed motor programs**: At the whole-connectome level, 7 programs can be recruited by at least one specific sensory channel; at the pathway level, only **22 of 180 pathways ($12.2\%$)** are robustly expressible.
 3. **Number of structurally present but silent/weak programs**: **118 of 180 pathways ($65.6\%$)** are structurally present within 1–3 hops but either dynamically silent (83 pathways, $46.1\%$) or weakly recruited (35 pathways, $19.4\%$).
-4. **Strongest structure/function mismatches**: `visual left` $\to$ forward locomotion ($14,506$ weight, 0 Hz), `tactile T1` $\to$ Giant Fiber escape ($12,848$ weight, 0 Hz), `visual` $\to$ looming takeoff ($10,420$ weight, 0 Hz), and `taste T1` $\to$ courtship song ($10,007$ weight, 0 Hz).
+4. **Strongest structure/function mismatches in the original atlas**: `visual left` $\to$ forward locomotion ($14,506$ weight, 0 Hz), `tactile T1` $\to$ Giant Fiber escape ($12,848$ weight, 0 Hz), `visual` $\to$ looming takeoff ($10,420$ weight, 0 Hz), and `taste T1` $\to$ courtship song ($10,007$ weight, 0 Hz). The visual cases were later reclassified as `TRANSDUCTION_LIMITED`.
 5. **Whether right steering is unique or part of a broader pattern**: **Part of a broader pattern.** The connectome is replete with structurally dense but dynamically quiescent pathways. Right tactile steering is simply the first instance where a behaviorally critical pathway was tested in a symmetric task.
-6. **Downstream viability results**: 100% viable for all CandidateBridge-mapped populations (forward, backward, turn_left, turn_right, escape, takeoff, groom). Silence is upstream.
+6. **Downstream viability results**: 100% viable for all CandidateBridge-mapped populations (forward, backward, turn_left, turn_right, escape, takeoff, groom). Observed silence occurs upstream of actuator/readout execution.
 7. **Most common dynamical bottleneck class**: **NET_INHIBITORY_OPPOSITION ($93.3\%$)**, where polysynaptic feedforward inhibition suppresses descending excitation, followed by **SUB_THRESHOLD_SEVERE ($6.7\%$)**.
 8. **Bilateral asymmetry findings**: 54 marked bilateral asymmetries exist. Auditory (Johnston's organ) and tactile (T1) pathways show near-total functional lateralization.
-9. **Modality-specific recruitment findings**: Escape and takeoff are silent to visual and tactile stimuli, but hyper-responsive to auditory stimuli. Steering is silent to tactile right, but responsive to auditory left.
+9. **Modality-specific recruitment findings**: Escape is latent to the tested tactile drive, while takeoff and escape are not assessable from the flat visual drive without calibrated transduction; both are responsive to the implemented auditory drive. Steering is silent to tactile right, but responsive to auditory left.
 10. **Top 3 latent pathways worth future study**:
     - *Pathway A*: `tactile T1 right` $\to$ `AN03A008` $\to$ `DNa02` (tactile steering symmetry).
-    - *Pathway B*: `visual` $\to$ `DNp70` $\to$ `DNp01` (visual looming escape).
+    - *Pathway B*: `tactile T1 left` $\to$ `DNp70` $\to$ `DNp01` (Giant Fiber escape).
     - *Pathway C*: `tactile T1` $\to$ `DNg07`/`DNg08` (anterior mechanosensory grooming).
 11. **Whether any candidate appears appropriate for a later independent plasticity replication**:
     **Yes.** Pathway A (`AN03A008` $\to$ `DNa02`) is the prime candidate for intermediate efficacy plasticity replication. Task 6 demonstrated that physiological drive to `AN03A008` restores right steering without off-target disruption.

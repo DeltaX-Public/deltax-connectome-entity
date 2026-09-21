@@ -1,12 +1,15 @@
 # Phase IV-D.2: Subthreshold Bootstrap Plasticity Experiment Plan
 ## Preregistration of Subthreshold-Sensitive Three-Factor Learning Protocol
 
-**Document:** `docs/PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md`  
-**Phase:** IV-D.2 Subthreshold Bootstrap Plasticity Design  
-**Branch:** `phase4d-plasticity-foundation`  
-**PR:** DeltaX-Public/deltax-connectome-entity#20  
-**Status:** **PROTOCOL PREREGISTERED — DESIGN FROZEN — EXECUTION STRICTLY PAUSED**  
-**Classification:** **GOVERNED SCIENTIFIC RESEARCH SPECIFICATION**  
+> [!NOTE] Historical Document — Executed Development Plan
+> This plan was preregistered for Phase IV-D.2 development and executed on development seeds `18100..18149`. Full empirical findings are documented in [`docs/PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md`](./PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md) and extended by the Phase IV-D.3 dose-response study in [`docs/PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](./PHASE_4D3_DOSE_RESPONSE_RESULTS.md). Merged via PR #20 (`5fa548e`). Reserved Phase IV-D held-out evaluation on seeds `19000..19099` remains paused and unconsumed.
+
+**Document:** `docs/PHASE_4D2_BOOTSTRAP_PLASTICITY_PLAN.md`
+**Phase:** IV-D.2 Subthreshold Bootstrap Plasticity Design
+**Branch:** `phase4d-plasticity-foundation`
+**PR:** DeltaX-Public/deltax-connectome-entity#20 (Merged: `5fa548e`)
+**Status:** **HISTORICAL PREREGISTRATION — EXECUTED ON DEVELOPMENT SEEDS (18100..18149) — HELD-OUT CONFIRMATION PAUSED**
+**Classification:** **GOVERNED SCIENTIFIC RESEARCH SPECIFICATION**
 
 ---
 
@@ -142,9 +145,4 @@ Phase IV-D.2 will be evaluated against the following preregistered quantitative 
 
 ## 8. Current Status & Execution Boundary
 
-**THIS PLAN IS SPECIFICATION-ONLY. DO NOT EXECUTE PHASE IV-D.2 AT THIS TIME.**
-
-Execution of Phase IV-D.2 requires:
-1. Completion and approval of the Phase IV-D.1B null-result mechanism audit.
-2. Review and approval of the `SUBTHRESHOLD_ELIGIBILITY_HEBBIAN` formulation.
-3. Clean CI and push on PR #20.
+**HISTORICAL RECORD:** This plan was executed for development cohort evaluation (seeds `18100..18149`) and merged into `main` via PR #20 (commit `5fa548e`). The held-out confirmation cohort (seeds `19000..19099`) remains unconsumed and frozen under the research pause.

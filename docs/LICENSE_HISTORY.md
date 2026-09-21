@@ -3,7 +3,9 @@
 **Repository:** `DeltaX-Public/deltax-connectome-entity`<br>
 **Effective Date:** September 20, 2026<br>
 **Copyright Holder (DeltaX-Owned Material):** Dominick Francisco Noval<br>
-**Cutover Commit:** `chore/license-cutover-polyform` (recorded on branch commit)
+**License Cutover Commit:** `a8512b42d18be2200777c62968c799d918c0ea8e`<br>
+**Documentation Synchronization Commit:** `bdb148ff544e207ed2034b8d4556b5eea181ed9d`<br>
+**Main Merge Commit:** `47255c7fabf943e946a832d492d90b721dea3453` (PR #22)
 
 ---
 

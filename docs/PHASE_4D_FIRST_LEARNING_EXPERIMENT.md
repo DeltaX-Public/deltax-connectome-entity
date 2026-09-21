@@ -1,15 +1,22 @@
 # Phase IV-D: First Synaptic Learning Experiment (Preregistration Protocol)
 
-**Document:** `docs/PHASE_4D_FIRST_LEARNING_EXPERIMENT.md`  
-**Phase:** IV-D Connectome Synaptic Plasticity  
-**Branch:** `phase4d-plasticity-foundation`  
-**Status:** **PREREGISTERED — DO NOT EXECUTE YET**  
-**Classification:** **PREREGISTERED EXPERIMENTAL DESIGN PROTOCOL**  
+> [!NOTE]
+> **HISTORICAL PROTOCOL RECORD — EXECUTED & SUPERSEDED**
+> This preregistration protocol was executed on development seeds `18000..18049` ($N=50$) during Phase IV-D.1.
+> - **Execution Results:** Documented in [`docs/PHASE_4D1_FIRST_LEARNING_RESULTS.md`](PHASE_4D1_FIRST_LEARNING_RESULTS.md), which demonstrated the `ASSOCIATIVE_BOOTSTRAP_DEADLOCK` negative result under somatic rate-coincidence Hebbian learning.
+> - **Subsequent Work:** Superseded by the subthreshold mechanism audit ([`docs/PHASE_4D1B_NULL_MECHANISM_AUDIT.md`](PHASE_4D1B_NULL_MECHANISM_AUDIT.md)), subthreshold bootstrap results ([`docs/PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md`](PHASE_4D2_BOOTSTRAP_PLASTICITY_RESULTS.md)), and dose-response results ([`docs/PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](PHASE_4D3_DOSE_RESPONSE_RESULTS.md)). Merged into `main` via PR #20 (`5fa548e`).
+> - **Original Preregistration Text:** Retained below unmodified as an archival audit record.
+
+**Document:** `docs/PHASE_4D_FIRST_LEARNING_EXPERIMENT.md`
+**Phase:** IV-D Connectome Synaptic Plasticity
+**Branch:** `phase4d-plasticity-foundation` (Merged into `main` in PR #20, commit `5fa548e`)
+**Status:** **HISTORICAL PREREGISTRATION (EXECUTED IN PHASE IV-D.1)**
+**Classification:** **PREREGISTERED EXPERIMENTAL DESIGN PROTOCOL**
 
 ---
 
 > [!CAUTION]
-> **DO NOT EXECUTE THIS EXPERIMENT YET.**  
+> **DO NOT EXECUTE THIS EXPERIMENT YET.**
 > This document constitutes a formal scientific preregistration protocol. No learning sweeps, ChangedWorld navigation trials, or weight updates under this protocol may be initiated until this preregistration has been reviewed, Lane B evidence is fully integrated, and explicit authorization is granted.
 
 ---
@@ -48,7 +55,7 @@ In strict accordance with empirical research hygiene:
   $$\text{Seeds } 18000 \dots 18049 \quad (N = 50)$$
 - **Held-Out Cohort Preservation:**
   - Seeds `19000..19099` ($N = 100$) are **strictly reserved and frozen** for future held-out confirmation.
-  - No code, runbook, or test may access or evaluate seeds $\ge 19000$.
+  - No code, runbook, or test may access or evaluate reserved Phase IV-D held-out seeds `19000..19099`.
 
 ### Test Environments:
 1. `ENV_1B_TRUE_RIGHT_REQUIRED` (primary benchmark: right turn required to avoid barrier and reach goal)
