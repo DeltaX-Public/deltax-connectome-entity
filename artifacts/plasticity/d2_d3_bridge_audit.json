@@ -1,0 +1,202 @@
+[
+  {
+    "seed": 18100,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18100,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000004844256904450821,
+      "budgetUsed": 4.763379965938425,
+      "postDNa02": 0.00098981112241745,
+      "postTurnRight": 0.009920000000000003,
+      "recruited": false,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18100,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 55.991060587652406,
+      "postDNa02": 1.2034013178944587,
+      "postTurnRight": 0.23127999999999996,
+      "recruited": true,
+      "crossedTurnRight": true
+    }
+  },
+  {
+    "seed": 18101,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18101,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000004600701563417052,
+      "budgetUsed": 6.516862449833207,
+      "postDNa02": 0.07797624826431275,
+      "postTurnRight": 0.03024,
+      "recruited": true,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18101,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 7.625706344201421,
+      "postDNa02": 0.04614152021706104,
+      "postTurnRight": 0.021560000000000003,
+      "recruited": false,
+      "crossedTurnRight": false
+    }
+  },
+  {
+    "seed": 18102,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18102,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000004873841491999187,
+      "budgetUsed": 0.47232640523026626,
+      "postDNa02": 0,
+      "postTurnRight": 0.010000000000000002,
+      "recruited": false,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18102,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 15.890097809927086,
+      "postDNa02": 0.19311623960733415,
+      "postTurnRight": 0.05956,
+      "recruited": true,
+      "crossedTurnRight": true
+    }
+  },
+  {
+    "seed": 18103,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18103,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000004198678453205309,
+      "budgetUsed": 0.000008169517065898005,
+      "postDNa02": 0.00522118091583252,
+      "postTurnRight": 0.010840000000000002,
+      "recruited": false,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18103,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 60,
+      "postDNa02": 1.5689100112020968,
+      "postTurnRight": 0.27568000000000004,
+      "recruited": true,
+      "crossedTurnRight": true
+    }
+  },
+  {
+    "seed": 18200,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18200,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.0000042935219406571765,
+      "budgetUsed": 1.563968881078399,
+      "postDNa02": 0,
+      "postTurnRight": 0.010000000000000002,
+      "recruited": false,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18200,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 4.578980878251712,
+      "postDNa02": 0.000006925277411937714,
+      "postTurnRight": 0.010000000000000002,
+      "recruited": false,
+      "crossedTurnRight": false
+    }
+  },
+  {
+    "seed": 18201,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18201,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000005070991110039764,
+      "budgetUsed": 7.956975271262822,
+      "postDNa02": 0.09078759767115116,
+      "postTurnRight": 0.0336,
+      "recruited": true,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18201,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 60,
+      "postDNa02": 1.3374572488665581,
+      "postTurnRight": 0.25332,
+      "recruited": true,
+      "crossedTurnRight": true
+    }
+  },
+  {
+    "seed": 18202,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18202,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000004092061369835816,
+      "budgetUsed": 0.00000843024536886672,
+      "postDNa02": 0,
+      "postTurnRight": 0.010000000000000002,
+      "recruited": false,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18202,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 6.853457430397731,
+      "postDNa02": 0.001074405461549759,
+      "postTurnRight": 0.009960000000000004,
+      "recruited": false,
+      "crossedTurnRight": false
+    }
+  },
+  {
+    "seed": 18203,
+    "d2": {
+      "harness": "D.2_ORIGINAL",
+      "seed": 18203,
+      "dirtyTracesCount": 8,
+      "maxDirtyTrace": 0.000003382378750200814,
+      "budgetUsed": 1.395232479642159,
+      "postDNa02": 0.00047662995755672457,
+      "postTurnRight": 0.009760000000000003,
+      "recruited": false,
+      "crossedTurnRight": false
+    },
+    "d3": {
+      "harness": "D.3_ORIGINAL",
+      "seed": 18203,
+      "dirtyTracesCount": 0,
+      "maxDirtyTrace": 0,
+      "budgetUsed": 14.232766854387544,
+      "postDNa02": 0.1267729429900646,
+      "postTurnRight": 0.04324,
+      "recruited": true,
+      "crossedTurnRight": false
+    }
+  }
+]
