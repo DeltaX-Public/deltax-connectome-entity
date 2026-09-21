@@ -18,7 +18,7 @@ Publication and new experimental cohorts are strictly paused. All mechanistic co
 ### Core Guarantees of the Freeze:
 1. **Zero New Experiments:** No new learning cohorts or benchmark evaluations were executed during this pause pass.
 2. **Strict Held-Out Preservation:** Phase IV-D reserved held-out seeds `19000..19099` ($N=100$) remain **strictly unconsumed in committed empirical records**.
-3. **Artifact Immutability:** Historical empirical JSON artifacts across all prior phases remain bit-for-bit identical with audited SHA-256 digests.
+3. **Primary Artifact Immutability:** The 19 primary evidence artifacts listed in `docs/RELEASE_EVIDENCE_MANIFEST.md` remain bit-for-bit identical to their recorded SHA-256 digests and byte sizes. Other JSON files are syntax-validated, not individually hash-attested.
 4. **Honest Boundary Reporting:** Strict separation is maintained between held-out confirmation (Phase IV-C) and development-only evidence (Phase IV-D).
 5. **No Synthetic Runtime Attestation:** Public repository artifacts record `runtime_version: "v1.0.0-local"` as assigned locally by the simulation runner (`scripts/run_phase4c_generalization.mjs`); this is explicitly documented as unauthenticated by external cryptographic attestation. Public tests and committed traces verify the governance integration boundary; they do not make the private DeltaX runtime publicly reproducible.
 

@@ -1,16 +1,21 @@
 # Claims register
 
-This Milestone 1 adapter makes no consciousness, AGI, or proprietary DeltaX capability claim.
+> [!NOTE]
+> This is a chronological claims register. Early milestone sections preserve the claim boundary at that time and are not the current project status. Later audited sections and `docs/RESEARCH_PAUSE_SNAPSHOT.md` control where they supersede an earlier entry.
 
-## Known / supported
+## Historical Milestone 1 adapter baseline
+
+At Milestone 1, the adapter made no consciousness, AGI, or proprietary DeltaX capability claim.
+
+### Known / supported at Milestone 1
 - The adapter records environment/sensors, connectome output, behavioral proposals, intervention, and motor layers separately.
 - Decision packets carry mode, proposal distribution, intervention, final action, seed, config, checkpoint, and an isolation metric.
 - `DeltaXStub` is an interface fixture only; telemetry marks `implementation: stub` and `alwaysDecides: true`.
 
-## Empty / not established
+### Empty / not established at Milestone 1
 - No public DeltaX runtime was available in this repository; no real DeltaX math is implemented.
-- No claim is made about consciousness, executive intelligence, biological fidelity, or performance.
-- Neurocontrol perturbation suites, checkpoint restoration, and upstream motor integration remain future work.
+- Milestone 1 made no claim about consciousness, executive intelligence, biological fidelity, or performance.
+- At that milestone, neurocontrol perturbation suites, checkpoint restoration, and upstream motor integration remained future work; later sections record their subsequent implementation and audited boundaries.
 
 ## Phase 2 and deployment boundary
 
@@ -23,7 +28,7 @@ This Milestone 1 adapter makes no consciousness, AGI, or proprietary DeltaX capa
 
 This branch adds a declarative sensory/action map, a minimal rover body, and a logged-state Broken World arena. The arena has corridors, obstacles, a goal region, a controllable door, energy, hazard, and an externally timestamped mutation hook. It emits expectation, observation, contradiction, executive-response, substrate-response, and new-action records without first-person claims.
 
-**Honest status:** SUBSTRATE_ONLY and explicit DELTAX stub paths are runnable headlessly. UPSTREAM remains the fly validation mode. DELTAX without `DELTAX_API_URL` fails loudly; a configured DELTAX run currently reports transport configuration rather than pretending a remote executive call occurred. MuJoCo, learning, and statistical adaptation are not implemented.
+**Historical Phase 5 status:** SUBSTRATE_ONLY and explicit DELTAX stub paths were runnable headlessly. UPSTREAM remained the fly validation mode. DELTAX without `DELTAX_API_URL` failed loudly; a configured DELTAX run reported transport configuration rather than pretending a remote executive call occurred. MuJoCo, learning, and statistical adaptation were not implemented at that phase.
 
 ## Phase 8 claim boundary
 
@@ -44,8 +49,8 @@ The Entity Observatory is a polished, secondary view over available harness arti
 3. **Candidate Provenance Typing:**
    Every candidate is explicitly typed as `MEASURED_NEURAL` (direct descending neuron readouts), `DERIVED_NEURAL` (antagonistic balance/posture derivation), or `FALLBACK` (`cand_safe_noop`). No candidate may be injected or selected outside this set.
 
-4. **Biological Multi-Synaptic Latency:**
-   In the intact 165,122-neuron connectome graph, sensory signals require 4–5 simulation steps (~40–50 ms) to traverse sensory afferents and intermediate interneurons before descending locomotor command neurons (`DNg100/97/p09`) overcome postural balance suppression (`halt`). Within a 12-step budget, the intact biological entity naturally pauses before walking forward, reaching $x=7$ or $x=8$ (near goal) before time expires.
+4. **Observed Multi-Synaptic Latency:**
+   In the implemented 165,122-neuron connectome-derived `RateNetwork`, sensory signals required 4–5 harness ticks, corresponding to approximately 40–50 one-millisecond integration substeps, to traverse sensory afferents and intermediate interneurons before descending locomotor command neurons (`DNg100/97/p09`) overcame postural balance suppression (`halt`). Within a 12-tick budget, the simulated entity paused before walking forward, reaching $x=7$ or $x=8$ (near goal) before time expired.
 
 5. **Degree-Preserving Circuit Scrambling Control:**
    The `SHUFFLED_CONNECTOME` control preserves exact in-degrees, out-degrees, and weight distributions while swapping 100% of synaptic edges. Because randomized connections bypass multi-layer interneuron delay lines, sensory inputs immediately trigger descending motor neurons from step 1, sprinting forward blindly without biological latency.

@@ -115,9 +115,11 @@ npm run verify:pause
   - High-threshold operational aversive, thermal, and gustatory channels.
   - Visual input is represented as flat, uncalibrated photoreceptor drive—not calibrated retinotopy or optical flow.
 
-### Inter-Process Protocol Boundary:
-- The connectome entity communicates with embodiment controllers and governors through standard JSON-Lines (JSONL) input/output over `stdin`/`stdout` (`src/runtime/ipc_protocol.mjs`).
-- At each simulation tick, the embodiment transmits sensory observations to the connectome entity.
+### Runtime and Interface Boundaries:
+- The embodiment, connectome runtime, `CandidateBridge`, and executive adapter interact in-process through JavaScript.
+- `src/deltax/canonical.mjs` connects to the canonical external governor over HTTP when `DELTAX_API_URL` is configured.
+- `src/deltax/local_runtime.mjs` provides the optional private local JSON-Lines (JSONL) subprocess transport over `stdin`/`stdout` when `DELTAX_LOCAL_RUNTIME_CMD` is configured.
+- At each simulation tick, the embodiment supplies sensory observations to the connectome runtime.
 - The RateNetwork executes numerical integration ($\Delta t = 1.0\text{ ms}$, default 10–100 steps per tick) and outputs candidate proposals via `CandidateBridge` (`turn_left`, `turn_right`, `forward`, `reverse`, etc.).
 - The external DeltaX governor evaluates active candidates and returns the selected action.
 - **Reproducibility Boundary:** Public tests and committed traces verify the governance integration boundary; they do not make the private DeltaX runtime publicly reproducible.

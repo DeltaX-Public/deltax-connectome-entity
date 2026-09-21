@@ -15,7 +15,8 @@
                                          |
                                          v
 +-----------------------------------------------------------------------------------+
-| RECURRENT CONNECTOME SUBSTRATE (165,122 neurons, 10,511,038 synapses)             |
+| RECURRENT CONNECTOME SUBSTRATE (165,122 neurons)                                  |
+|  10,511,038 directed connections / 104,213,652 synaptic contacts                  |
 |                                                                                   |
 |  [RateNetwork] (CSR adjacency, non-linear activation, dt = 1.0 ms)                |
 |     Multi-hop delay propagation: Sensory Afferents -> Interneurons -> DNs        |
@@ -40,9 +41,9 @@
 +-----------------------------------------------------------------------------------+
 | DELTAX EXECUTIVE GOVERNOR (External Sovereignty Boundary)                         |
 |                                                                                   |
-|  [Executive Adapter] (src/deltax/adapter.mjs / JSONL IPC protocol)                |
+|  [Executive Adapter] (HTTP API, optional local JSONL, or explicit stub provider)  |
 |     Candidate-constrained selection: evaluates active proposals                   |
-|     Strict invariant: Permitted candidate selection only (zero fallbacks, 100% ID)|
+|     Enforced invariant: selected action references an active candidate            |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -61,7 +62,7 @@ Maps continuous physical observables from the rover body and environment into di
 Implements numerical integration of whole-CNS recurrent dynamics:
 - **Topology:** Instantiated from the MaleCNS v1.0 whole-CNS dataset ($N=165,122$ neurons, $10,511,038$ directed connections representing $104,213,652$ synaptic contacts stored in Compressed Sparse Row format).
 - **Integration:** Forward Euler stepping with $\Delta t = 1.0\text{ ms}$, saturating non-linear activation functions, cell-type-specific resting potentials, and neurotransmitter sign assignments (cholinergic $+1$, GABAergic/glutamatergic $-1$).
-- **Multi-Synaptic Latency:** Preserves biologically realistic 4–5 step (~40–50 ms) propagation delays through intermediate interneurons before command descending neurons overcome postural suppression.
+- **Observed Multi-Synaptic Latency:** In the tested Phase II harness, command recruitment appeared after 4–5 harness ticks, corresponding to approximately 40–50 one-millisecond `RateNetwork` substeps, as activity propagated through intermediate interneurons and overcame postural suppression.
 
 ### 2.3 Synaptic Plasticity Overlay (`src/connectome/plasticity_overlay.mjs`)
 A three-factor local plasticity overlay operating under strict information-theoretic boundaries:

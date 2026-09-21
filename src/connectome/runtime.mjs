@@ -1,6 +1,7 @@
 /**
  * Connectome Neural Runtime.
- * Direct interface to the Janelia fruit fly connectome (165,122 neurons, 10.5M synapses).
+ * Direct interface to the Janelia fruit fly connectome (165,122 neurons,
+ * 10,511,038 directed connections representing 104,213,652 synaptic contacts).
  * Executes biological recurrent firing-rate dynamics, sensory injection, population readouts,
  * snapshot/restore for causal branching, and targeted neural population silencing.
  */

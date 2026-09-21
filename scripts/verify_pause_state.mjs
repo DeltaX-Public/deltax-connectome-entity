@@ -13,8 +13,8 @@
  *   4. Key empirical invariants:
  *      - Phase IV-C: exactly 9,000 episodes, 199,500 DeltaX decisions, 0 fallbacks.
  *      - Parsed JSON seed audit: confirms no committed empirical records consume seeds 19000..19099.
- *   5. Full git status parity:
- *      - Compares `git status --porcelain` before and after execution to detect any side effects.
+ *   5. Clean-tree and git status parity:
+ *      - Requires a clean tree before execution and compares status afterward to detect side effects.
  */
 
 import fs from 'node:fs';
@@ -29,8 +29,61 @@ console.log('================================================================');
 console.log('   DELTAX CONNECTOME ENTITY — RESEARCH PAUSE VERIFICATION');
 console.log('================================================================\n');
 
-// 0. Capture initial working tree state
-const beforeGitStatus = spawnSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).stdout;
+function readGitStatus() {
+  const result = spawnSync('git', ['status', '--porcelain=v1', '--untracked-files=all'], { cwd: ROOT, encoding: 'utf8' });
+  if (result.error || result.status !== 0) {
+    console.error('FAILED: Unable to read repository working-tree status.');
+    console.error(result.error?.message || result.stderr || result.stdout);
+    process.exit(1);
+  }
+  return result.stdout;
+}
+
+function readGitHead() {
+  const result = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' });
+  if (result.error || result.status !== 0) {
+    console.error('FAILED: Unable to read repository HEAD.');
+    console.error(result.error?.message || result.stderr || result.stdout);
+    process.exit(1);
+  }
+  return result.stdout.trim();
+}
+
+// 0. Require and capture a clean initial working tree state
+const beforeGitStatus = readGitStatus();
+if (beforeGitStatus.trim() !== '') {
+  console.error('FAILED: Research-pause verification must start from a clean working tree.');
+  console.error(beforeGitStatus);
+  process.exit(1);
+}
+const beforeGitHead = readGitHead();
+
+let finalParityCheckCompleted = false;
+process.on('exit', exitCode => {
+  if (finalParityCheckCompleted) return;
+  const statusResult = spawnSync('git', ['status', '--porcelain=v1', '--untracked-files=all'], { cwd: ROOT, encoding: 'utf8' });
+  const headResult = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' });
+  const statusUnavailable = statusResult.error || statusResult.status !== 0;
+  const headUnavailable = headResult.error || headResult.status !== 0;
+  const statusChanged = !statusUnavailable && statusResult.stdout !== beforeGitStatus;
+  const headChanged = !headUnavailable && headResult.stdout.trim() !== beforeGitHead;
+  if (statusUnavailable || headUnavailable || statusChanged || headChanged) {
+    console.error('FAILED: Repository state could not be proven unchanged on verifier exit.');
+    if (statusUnavailable) {
+      console.error(statusResult.error?.message || statusResult.stderr || statusResult.stdout);
+    } else if (statusChanged) {
+      console.error('Before:\n' + beforeGitStatus);
+      console.error('After:\n' + statusResult.stdout);
+    }
+    if (headUnavailable) {
+      console.error(headResult.error?.message || headResult.stderr || headResult.stdout);
+    } else if (headChanged) {
+      console.error(`HEAD before: ${beforeGitHead}`);
+      console.error(`HEAD after:  ${headResult.stdout.trim()}`);
+    }
+    if (exitCode === 0) process.exitCode = 1;
+  }
+});
 
 // 1. Run all test/*.test.mjs files via deterministic discovery
 const testDir = path.join(ROOT, 'test');
@@ -40,26 +93,45 @@ const testFiles = fs.readdirSync(testDir)
   .map(f => path.join('test', f));
 
 console.log(`1. Running public-safe test suite (${testFiles.length} test files discovered)...`);
-const testRun = spawnSync(process.execPath, ['--test', ...testFiles], {
+const testRun = spawnSync(process.execPath, ['--test', '--test-reporter=tap', ...testFiles], {
   cwd: ROOT,
   encoding: 'utf8',
   env: process.env,
 });
 
-if (testRun.status !== 0) {
+if (testRun.error || testRun.signal || testRun.status !== 0) {
   console.error('FAILED: Public tests failed!\n', testRun.stderr || testRun.stdout);
+  if (testRun.error) console.error(testRun.error.message);
   process.exit(1);
 }
 
-// Parse skip / pass info from stdout
-const matchPass = testRun.stdout.match(/ℹ pass (\d+)/);
-const matchFail = testRun.stdout.match(/ℹ fail (\d+)/);
-const matchSkip = testRun.stdout.match(/ℹ skipped (\d+)/);
-const passCount = matchPass ? matchPass[1] : '80';
-const failCount = matchFail ? matchFail[1] : '0';
-const skipCount = matchSkip ? matchSkip[1] : '12';
+// Parse uniquely anchored top-level TAP summary fields. Missing or duplicate
+// fields are a verification failure; never substitute expected values.
+function parseTapSummaryField(field) {
+  const matches = [...testRun.stdout.matchAll(new RegExp(`^# ${field} (\\d+)\\s*$`, 'gm'))];
+  if (matches.length !== 1) {
+    console.error(`FAILED: Expected exactly one top-level TAP "${field}" summary field; found ${matches.length}.`);
+    console.error(testRun.stdout);
+    process.exit(1);
+  }
+  return Number(matches[0][1]);
+}
 
-console.log(`   ✔ Test suite passed cleanly (${passCount} passed, ${failCount} failed, ${skipCount} skipped).`);
+const totalTests = parseTapSummaryField('tests');
+const passCount = parseTapSummaryField('pass');
+const failCount = parseTapSummaryField('fail');
+const skipCount = parseTapSummaryField('skipped');
+if (failCount !== 0) {
+  console.error(`FAILED: Test output reported ${failCount} failed tests despite a zero exit status.`);
+  process.exit(1);
+}
+
+if (passCount + failCount + skipCount !== totalTests) {
+  console.error(`FAILED: TAP totals are inconsistent: tests=${totalTests}, pass=${passCount}, fail=${failCount}, skipped=${skipCount}.`);
+  process.exit(1);
+}
+
+console.log(`   ✔ Test suite passed cleanly (${totalTests} tests: ${passCount} passed, ${failCount} failed, ${skipCount} skipped).`);
 if (!process.env.DELTAX_LOCAL_RUNTIME_CMD) {
   console.log(`   ℹ Notice: DELTAX_LOCAL_RUNTIME_CMD is unset; ${skipCount} private-runtime-dependent integration tests were skipped (expected in public environment).\n`);
 } else {
@@ -170,40 +242,93 @@ if (deltaxDecisions !== 199500 || deltaxFallbacks !== 0) {
 console.log('   ✔ Phase IV-C: exactly 9,000 episodes verified; exactly 199,500 DeltaX decisions with 0 fallbacks.');
 
 // Parsed JSON Seed Audit for Reserved Range 19000..19099
+const RESERVED_SEED_MIN = 19000;
+const RESERVED_SEED_MAX = 19099;
+const RESERVATION_METADATA_LEAVES = new Map([
+  ['artifacts/plasticity/phase4d2/protocol_frozen.json#/seed_cohort/held_out_preserved_seed_range', '19000..19099'],
+  ['artifacts/plasticity/phase4d3/protocol_frozen.json#/seed_cohort/held_out_preserved_seed_range', '19000..19099'],
+]);
+
+function isReservedSeedValue(value) {
+  if (typeof value === 'number') {
+    return Number.isInteger(value) && value >= RESERVED_SEED_MIN && value <= RESERVED_SEED_MAX;
+  }
+  if (typeof value === 'string' && /^\d+$/.test(value)) {
+    const numericValue = Number(value);
+    return numericValue >= RESERVED_SEED_MIN && numericValue <= RESERVED_SEED_MAX;
+  }
+  if (typeof value === 'string') {
+    const rangeMatch = value.match(/^(\d+)\.\.(\d+)$/);
+    if (rangeMatch) {
+      const rangeStart = Number(rangeMatch[1]);
+      const rangeEnd = Number(rangeMatch[2]);
+      return rangeStart <= RESERVED_SEED_MAX && rangeEnd >= RESERVED_SEED_MIN;
+    }
+  }
+  return false;
+}
+
+function toJsonPointer(keyPath) {
+  if (!keyPath) return '#';
+  const segments = keyPath
+    .replace(/\[(\d+)\]/g, '.$1')
+    .split('.')
+    .filter(Boolean)
+    .map(segment => segment.replace(/~/g, '~0').replace(/\//g, '~1'));
+  return `#/${segments.join('/')}`;
+}
+
+function isAuthorizedReservationMetadata(filePath, keyPath, value) {
+  const expectedValue = RESERVATION_METADATA_LEAVES.get(`${filePath}${toJsonPointer(keyPath)}`);
+  return expectedValue !== undefined && value === expectedValue;
+}
+
 function findConsumedSeeds(obj, filePath, keyPath = '') {
   let violations = [];
   if (obj === null || typeof obj !== 'object') return violations;
 
-  const lastKey = keyPath.split('.').pop();
-  // Allow explicit reservation and provenance documentation metadata
-  if (/reserved|held_out|forbidden|unconsumed|preserve/i.test(lastKey)) {
-    return violations;
-  }
-
   if (Array.isArray(obj)) {
     obj.forEach((item, idx) => {
-      if (typeof item === 'number' && item >= 19000 && item <= 19099) {
+      if (isReservedSeedValue(item)) {
         violations.push({ file: filePath, key: `${keyPath}[${idx}]`, val: item });
-      } else if (typeof item === 'object') {
+      } else if (item !== null && typeof item === 'object') {
         violations.push(...findConsumedSeeds(item, filePath, `${keyPath}[${idx}]`));
       }
     });
   } else {
     for (const [k, v] of Object.entries(obj)) {
       const currentPath = keyPath ? `${keyPath}.${k}` : k;
-      if (/reserved|held_out|forbidden|unconsumed|preserve/i.test(k)) {
+      // Ignore only exact file + JSON-path reservation declarations with their
+      // expected value. Never skip a subtree because its name contains "held_out".
+      if (isAuthorizedReservationMetadata(filePath, currentPath, v)) {
         continue;
       }
-      if (typeof v === 'number' && v >= 19000 && v <= 19099) {
-        if (/seed|evaluated|executed|trial|episode/i.test(k)) {
-          violations.push({ file: filePath, key: currentPath, val: v });
-        }
-      } else if (typeof v === 'object') {
+      if (isReservedSeedValue(v)) {
+        violations.push({ file: filePath, key: currentPath, val: v });
+      } else if (v !== null && typeof v === 'object') {
         violations.push(...findConsumedSeeds(v, filePath, currentPath));
       }
     }
   }
   return violations;
+}
+
+// Deterministic guard against the historical false-negative mode: result
+// containers named "held_out" must still be inspected for consumed seeds.
+const seedAuditSelfChecks = [
+  [findConsumedSeeds({ held_out_results: [{ seed: 19000 }] }, '<self-check>'), 1],
+  [findConsumedSeeds({ held_out_results: [{ seed: 19099 }] }, '<self-check>'), 1],
+  [findConsumedSeeds({ held_out_results: [{ seed: 18999 }, { seed: 19100 }] }, '<self-check>'), 0],
+  [findConsumedSeeds({ held_out_results: [{ id: 19000 }] }, '<self-check>'), 1],
+  [findConsumedSeeds({ reserved_results: { nested: { value: '19000' } } }, '<self-check>'), 1],
+  [findConsumedSeeds(
+    { seed_cohort: { held_out_preserved_seed_range: '19000..19099' } },
+    'artifacts/plasticity/phase4d2/protocol_frozen.json',
+  ), 0],
+];
+if (seedAuditSelfChecks.some(([violations, expectedCount]) => violations.length !== expectedCount)) {
+  console.error('FAILED: Reserved-seed audit regression self-check failed.');
+  process.exit(1);
 }
 
 let seedViolations = [];
@@ -218,7 +343,10 @@ function scanDirForConsumedSeeds(dir) {
       try {
         const data = JSON.parse(fs.readFileSync(path.join(ROOT, rel), 'utf8'));
         seedViolations.push(...findConsumedSeeds(data, rel));
-      } catch (e) {}
+      } catch (err) {
+        console.error(`FAILED: Seed audit could not parse ${rel}: ${err.message}`);
+        process.exit(1);
+      }
     }
   }
 }
@@ -233,15 +361,26 @@ if (seedViolations.length > 0) {
 console.log('   ✔ No committed empirical records were found consuming the reserved seed range (19000..19099).\n');
 
 // 5. Clean working tree and status parity check
-console.log('5. Verifying working tree parity (zero test/verification mutations)...');
-const afterGitStatus = spawnSync('git', ['status', '--porcelain'], { cwd: ROOT, encoding: 'utf8' }).stdout;
-if (afterGitStatus !== beforeGitStatus) {
-  console.error('FAILED: Verification execution modified the repository working tree!');
+console.log('5. Verifying clean working tree parity (zero test/verification mutations)...');
+const afterGitStatus = readGitStatus();
+const afterGitHead = readGitHead();
+if (afterGitStatus !== beforeGitStatus || afterGitHead !== beforeGitHead) {
+  finalParityCheckCompleted = true;
+  console.error('FAILED: Verification execution modified the repository state!');
   console.error('Before:\n' + beforeGitStatus);
   console.error('After:\n' + afterGitStatus);
+  console.error(`HEAD before: ${beforeGitHead}`);
+  console.error(`HEAD after:  ${afterGitHead}`);
   process.exit(1);
 }
-console.log('   ✔ Working tree state is 100% clean and identical before and after verification.\n');
+if (afterGitStatus.trim() !== '') {
+  finalParityCheckCompleted = true;
+  console.error('FAILED: Working tree is not clean after verification.');
+  console.error(afterGitStatus);
+  process.exit(1);
+}
+finalParityCheckCompleted = true;
+console.log('   ✔ Working tree was clean before verification and remains clean afterward.\n');
 
 console.log('================================================================');
 console.log('   RESEARCH PAUSE VERIFICATION: ALL INVARIANTS PASSED (PASS)');
