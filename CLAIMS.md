@@ -110,8 +110,8 @@ The Entity Observatory is a polished, secondary view over available harness arti
    Across 180 audited sensory-to-motor pathways, 100% are structurally connected (1–3 hops), but 46.1% (83/180) are dynamically silent under naive rate dynamics, while only 12.2% (22/180) are robustly expressible.
 2. **Downstream Viability Confirmed:**
    100% of CandidateBridge-mapped motor programs execute robustly under direct descending neuron activation, establishing that silence is an upstream network recruitment failure rather than an actuator deficiency.
-3. **Intermediate Rescue:**
-   Physiological stimulation of intermediate interneurons (e.g. `AN03A008`, `DNp70`) completely rescues downstream motor recruitment.
+3. **Selective Intermediate Rescue:**
+   Targeted physiological stimulation of intermediate interneurons (such as ascending interneuron `AN03A008` for right steering and `DNp70` for escape) causally rescued selected motor recruitment. Uncalibrated visual pathways remain transduction-limited by the absence of motion-detection circuits.
 4. **Validation:** Confirmed across $N=100$ bilateral seeds `20200..20299`. Escape replication namespace `20400..20499` remains unconsumed and reserved.
 
 ---
@@ -123,7 +123,7 @@ The Entity Observatory is a polished, secondary view over available harness arti
 2. **Subthreshold Bootstrap Plasticity (Phase IV-D.2):**
    Replacing somatic rate coincidence with model-local normalized subthreshold dendritic drive $\psi_{\text{post}}$ successfully broke deadlock on development seeds `18100..18149`, recruiting `DNa02` in 8% of seeds with 100% sham pathway specificity and 100% consequence gating ($g_t=0$ produced zero budget).
 3. **Bistable Learnability Phenotype (Phase IV-D.3):**
-   Across $N=100$ development seeds `18200..18299` evaluated under 10 dose conditions (10–120 cycles), learnability is seed-limited: 96.2% of responders recruit by Cycle 10. Extending dose $12\times$ only recruits 3 additional seeds ($75 \to 78$), while 22% of seeds remain nonresponders. Baseline depolarization relative to threshold (`DNa02_inp_over_theta`) is the primary predictor ($\text{Cohen's } d = 0.8017$, $p < 0.0001$).
+   Across $N=100$ development seeds `18200..18299` evaluated under the 8 frozen conditions `R0..R7` (doses of 10, 30, 60, and 120 cycles), learnability is seed-limited: 96.2% of responders recruit by Cycle 10. Extending dose $12\times$ only recruits 3 additional seeds ($75 \to 78$), while 22% of seeds remain nonresponders. Baseline depolarization relative to threshold (`DNa02_inp_over_theta`) is the primary predictor ($\text{Cohen's } d = 0.8017$).
 4. **Frozen 30-Cycle Protocol:**
    Established the recommended protocol (30 cycles, $\eta=0.15$, $\lambda_e=0.05$, $\gamma=0.0005$, Target A, immutable $S_{ij}$) for future held-out confirmation.
 
@@ -132,7 +132,7 @@ The Entity Observatory is a polished, secondary view over available harness arti
 ## Research-Pause Evidence Boundaries & Strict Non-Claims
 
 1. **NO HELD-OUT CONFIRMATION OF PLASTICITY:**
-   Phase IV-D held-out seeds `19000..19099` ($N=100$) **have never been evaluated, accessed, or consumed**. All plasticity findings are strictly provisional development observations.
+   Phase IV-D held-out seeds `19000..19099` ($N=100$) **remain strictly unconsumed in committed empirical records**. All plasticity findings are provisional development observations.
 2. **NO HIGH-LEVEL REASONING OR WORLD MODEL:**
    The system does NOT possess symbolic reasoning, cognitive maps, forward tree search, counterfactual planning, or internal mental simulations.
 3. **NO LIVING ORGANISM EQUIVALENCE:**
@@ -140,4 +140,4 @@ The Entity Observatory is a polished, secondary view over available harness arti
 4. **TELEMETRY SCOPE & REPLAY BOUNDARY:**
    Committed artifacts in `artifacts/generalization/` contain complete episode summaries for all 9,000 episodes and 19,305 critical candidate-fork decisions. They do **not** store a 475,000-step per-tick trajectory replay.
 5. **RUNTIME AUTHENTICATION DISCLAIMER:**
-   The string `runtime_version: "v1.0.0-local"` present in JSON artifact headers was assigned by the local test harness configuration and is **not** an externally verified cryptographic runtime attestation.
+   The string `runtime_version: "v1.0.0-local"` present in JSON artifact headers was assigned locally by `scripts/run_phase4c_generalization.mjs` and is **not** an externally verified cryptographic runtime attestation. Public tests verify the integration contract, not private runtime reproducibility.

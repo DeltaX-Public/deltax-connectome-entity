@@ -1,7 +1,7 @@
 # Phase IV-D.2: Subthreshold Bootstrap Plasticity Results Report
 
 > [!NOTE] Historical Document — Development Cohort Results
-> This report documents Phase IV-D.2 development results on seeds `18100..18149`. These initial findings were systematically extended by the Phase IV-D.3 dose-response study in [`docs/PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](./PHASE_4D3_DOSE_RESPONSE_RESULTS.md), which evaluated 10 dose conditions across $N=100$ seeds (`18200..18299`). Merged via PR #20 (`5fa548e`). Reserved Phase IV-D held-out seeds `19000..19099` remain unconsumed and frozen under the research pause.
+> This report documents Phase IV-D.2 development results on seeds `18100..18149`. These initial findings were systematically extended by the Phase IV-D.3 dose-response study in [`docs/PHASE_4D3_DOSE_RESPONSE_RESULTS.md`](./PHASE_4D3_DOSE_RESPONSE_RESULTS.md), which evaluated the 8 frozen experimental conditions `R0..R7` across $N=100$ seeds (`18200..18299`). Merged via PR #20 (`5fa548e`). Reserved Phase IV-D held-out seeds `19000..19099` remain unconsumed and frozen under the research pause.
 
 **Date:** September 19, 2026
 **Repository:** DeltaX-Public/deltax-connectome-entity

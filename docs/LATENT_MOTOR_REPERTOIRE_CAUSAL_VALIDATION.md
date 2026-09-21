@@ -166,7 +166,7 @@ The top bilateral asymmetry cases were re-evaluated across $N=100$ held-out seed
 | **Thermosensory Steering**| 0.0185 | 0.0299 | **-0.0114** [-0.0161, -0.0067] | 0.2360 | 0.9990 | 68.0% (68/100) | SYMMETRIC / SUB-THRESHOLD |
 
 ### Core Insights
-- **Tactile Steering Asymmetry is Invariant**: Left steering is strictly greater than right steering across **$100\%$ of all 100 seeds** ($p < 10^{-15}$). Because structural asymmetry is tiny ($0.0476$), this is a **pure dynamical asymmetry** emergent from recurrent connectome propagation.
+- **Tactile Steering Asymmetry is Invariant**: Left steering is strictly greater than right steering across **$100\%$ of all 100 seeds**. Because structural asymmetry is small ($0.0476$), this is a **pure dynamical asymmetry** emergent from recurrent connectome propagation.
 - **Acoustic Escape Asymmetry is Structurally Driven**: `JO auditory left` connects directly to `DNp01` (674 weight), whereas `JO auditory right` lacks equivalent 1-hop projections ($0.9340$ structural asymmetry), driving $100\%$ left-lateralized jump response.
 
 *Artifact Reference*: `artifacts/latent_repertoire/validation/bilateral_validation_20200_20299.json`

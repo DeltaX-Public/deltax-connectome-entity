@@ -3,30 +3,32 @@
 **Date:** September 21, 2026
 **Status:** **ACTIVE RESEARCH PAUSE — EVIDENCE & IMMUTABILITY AUDIT**
 **Repository:** `DeltaX-Public/deltax-connectome-entity`
-**Base Commit:** `47255c7fabf943e946a832d492d90b721dea3453`
+**Base Commit:** `47255c7fabf943e946a832d492d90b721dea3453` (PR #22 on `main`)
+**Freeze Candidate Branch:** `chore/research-pause-freeze`
 **Licensing:** PolyForm Noncommercial License 1.0.0 (DeltaX-owned source/data) / MIT (upstream/fly-brain)
 
 ---
 
 ## 1. Provenance & Milestone Commits
 
-This manifest records the immutable commit SHAs representing key scientific milestones in this repository:
+This manifest records the verified commit SHAs representing key scientific milestones in this repository, derived directly from git history:
 
 | Scientific Phase | Milestone Commit SHA | Merge Date | Primary Contributions |
 | :--- | :--- | :--- | :--- |
-| **Phase II Baseline** | `8db058c` | Aug 2026 | First embodied connectome rate-network; baseline 25-seed battery. |
-| **Phase III Unassisted** | `013063f` | Sep 2026 | Unassisted connectome benchmark ($N=100$, seeds `4000..4099`). |
-| **Phase IV-C Generalization** | `3897690` | Sep 17, 2026 | 15-environment generalization benchmark ($N=100$ held-out seeds `12000..12099`, 9,000 episodes; 199,500 candidate choices; zero fallbacks). |
-| **Lane B: Steering Asymmetry** | `04e5340` | Sep 18, 2026 | 10-phase causal audit of mechanosensory asymmetry; target plasticity manifests. |
-| **Lane B: Latent Motor Repertoire** | `c1341b0` | Sep 18, 2026 | 180-pathway whole-CNS motor atlas; bilateral validation ($N=100$ on `20200..20299`). |
-| **Phase IV-D.1–D.3 Plasticity** | `5fa548e` | Sep 19, 2026 | Subthreshold bootstrap plasticity and dose-response development cohorts ($N=50$, $N=100$). |
-| **License Cutover (PolyForm)** | `47255c7` | Sep 20, 2026 | Repository cutover to PolyForm Noncommercial License 1.0.0. |
+| **Phase II Initial Integration** (PR #12) | `0c7d56f` | Sep 17, 2026 | First embodied connectome rate-network; baseline evaluation. |
+| **Phase II Canonical Post-Integrity** (PR #13) | `3693cc5` | Sep 18, 2026 | Canonical post-integrity state; excision of post-DeltaX shortcuts. |
+| **Phase III Unassisted** (PR #14) | `5e4128d` | Sep 18, 2026 | Unassisted connectome benchmark ($N=100$ held-out seeds `4000..4099`); collision safety via halting confirmed. |
+| **Phase IV-C Generalization** (PR #18) | `3897690` | Sep 19, 2026 | 15-environment generalization benchmark ($N=100$ held-out seeds `12000..12099`, 9,000 episodes; 199,500 candidate choices; zero fallbacks). |
+| **Lane B: Steering Asymmetry** (PR #19) | `04e5340` | Sep 20, 2026 | 10-phase causal audit of mechanosensory asymmetry; target plasticity manifests. |
+| **Lane B: Latent Motor Repertoire** (PR #21) | `c1341b0` | Sep 20, 2026 | 180-pathway whole-CNS motor atlas; bilateral validation ($N=100$ on `20200..20299`). |
+| **Phase IV-D.1–D.3 Plasticity** (PR #20) | `5fa548e` | Sep 20, 2026 | Subthreshold bootstrap plasticity and dose-response development cohorts ($N=50$, $N=100$). |
+| **License Cutover (PolyForm)** (PR #22) | `47255c7` | Sep 21, 2026 | Repository cutover to PolyForm Noncommercial License 1.0.0 on `main`. Base commit for pause freeze. |
 
 ---
 
 ## 2. Primary Artifact Manifest (SHA-256 Hashes & Sizes)
 
-The table below catalogs the primary empirical evidence artifacts committed in the repository. All SHA-256 hashes and file sizes have been verified bit-for-bit:
+The table below catalogs the 19 primary empirical evidence artifacts committed in the repository. All SHA-256 hashes and file sizes have been verified bit-for-bit (additional descriptive and protocol files in `artifacts/` are verified for valid JSON syntax by `npm run verify:pause`):
 
 | Relative File Path | Size (Bytes) | SHA-256 Digest | Description / Phase |
 | :--- | :--- | :--- | :--- |
@@ -54,6 +56,8 @@ The table below catalogs the primary empirical evidence artifacts committed in t
 
 ## 3. Seed Namespace Partitioning
 
+The repository uses protocol-level seed namespace separation:
+
 | Seed Range | Size ($N$) | Phase / Research Lane | Allocation Category | Consumption / Audit Status |
 | :--- | :--- | :--- | :--- | :--- |
 | `1000..1024` | 25 | Phase II Baseline | Historical Benchmark | Consumed (Committed artifacts) |
@@ -69,7 +73,7 @@ The table below catalogs the primary empirical evidence artifacts committed in t
 | `20000..20049` | 50 | Lane B Latent Atlas | Diagnostic Exploration | Consumed ($N=10, 5, 3, 1$ in scripts) |
 | `20200..20299` | 100 | Lane B Latent Atlas | Validation | Consumed (Bilateral validation) |
 | `20400..20499` | 100 | Lane B Escape | Reserved | **Unconsumed (Reserved)** |
-| `19000..19099` | **100** | **Phase IV-D Held-Out** | **Held-Out Benchmark** | **SEALED & UNCONSUMED (0 OCCURRENCES)** |
+| `19000..19099` | **100** | **Phase IV-D Held-Out** | **Held-Out Benchmark** | **SEALED & UNCONSUMED IN COMMITTED RECORDS** |
 
 ---
 
@@ -87,7 +91,7 @@ Reproducing or auditing the results in this repository requires:
 # Run unit and regression test suite (non-modifying):
 node --test test/*.test.mjs
 
-# Verify research pause state, artifact integrity, and held-out preservation:
+# Verify research pause state, 19 primary artifact hashes, and held-out preservation:
 npm run verify:pause
 ```
 
@@ -95,15 +99,32 @@ npm run verify:pause
 
 ## 5. Runtime Architecture & Protocol Boundaries
 
+### Subsystem File References:
+- **Rate Network Integration:** `src/connectome/runtime.mjs`, wrapping `upstream/fly-brain/src/ratenet.js`.
+- **Synaptic Plasticity Overlay:** `src/connectome/plasticity_overlay.mjs`.
+- **Canonical HTTP API Adapter:** `src/deltax/canonical.mjs`.
+- **Local Subprocess Provider:** `src/deltax/local_runtime.mjs`.
+- **Candidate Readouts & Bridge:** `src/connectome/candidate_readouts.mjs` and `src/connectome/candidate_bridge.mjs`.
+- **Executive Adapter:** `src/deltax/adapter.mjs`.
+
+### Underlying Dataset & Graph:
+- **Connectome Dataset:** MaleCNS v1.0 whole-CNS dataset ($N=165,122$ neurons).
+- **Graph Topology:** 10,511,038 directed connections representing 104,213,652 synaptic contacts, stored in Compressed Sparse Row (CSR) format.
+- **Sensory Representations:**
+  - Tactile mechanoreceptors (T1 bristles) and wind/gravity receptors (Johnston's organ).
+  - High-threshold operational aversive, thermal, and gustatory channels.
+  - Visual input is represented as flat, uncalibrated photoreceptor drive—not calibrated retinotopy or optical flow.
+
 ### Inter-Process Protocol Boundary:
 - The connectome entity communicates with embodiment controllers and governors through standard JSON-Lines (JSONL) input/output over `stdin`/`stdout` (`src/runtime/ipc_protocol.mjs`).
-- At each simulation tick, the embodiment transmits sensory observations (contacts, velocities, joint angles) to the connectome entity.
-- The connectome RateNetwork executes numerical integration ($\Delta t = 1.0\text{ ms}$, default 10–100 steps per tick) and outputs candidate proposals via `CandidateBridge` (e.g. `turn_left`, `turn_right`, `forward`, `reverse`).
-- The external DeltaX governor selects one of the active candidates based on coherence constraints and returns the chosen command to the physical rover simulator.
+- At each simulation tick, the embodiment transmits sensory observations to the connectome entity.
+- The RateNetwork executes numerical integration ($\Delta t = 1.0\text{ ms}$, default 10–100 steps per tick) and outputs candidate proposals via `CandidateBridge` (`turn_left`, `turn_right`, `forward`, `reverse`, etc.).
+- The external DeltaX governor evaluates active candidates and returns the selected action.
+- **Reproducibility Boundary:** Public tests and committed traces verify the governance integration boundary; they do not make the private DeltaX runtime publicly reproducible.
 
 ### Runtime Version & Authentication Disclaimers:
 - Several committed artifact JSON headers record:
   ```json
   "runtime_version": "v1.0.0-local"
   ```
-- **Attestation Boundary**: This string is set locally by the test harness harness/configuration file (`src/config.mjs`). It does **NOT** represent an immutable cryptographic build attestation, hardware-enclave signature, or signed production release. Build authentication remains deferred to future release hardening.
+- **Attestation Boundary**: This string was set locally by the simulation runner (`scripts/run_phase4c_generalization.mjs`). It does **NOT** represent an immutable cryptographic build attestation, hardware-enclave signature, or signed production release. Build authentication remains deferred to future release hardening.

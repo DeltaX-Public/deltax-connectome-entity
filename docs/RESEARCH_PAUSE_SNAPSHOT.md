@@ -4,7 +4,8 @@
 **Status:** **ACTIVE RESEARCH PAUSE — REPRODUCIBILITY & EVIDENCE BOUNDARY FREEZE**
 **Repository:** `DeltaX-Public/deltax-connectome-entity`
 **License Model:** PolyForm Noncommercial License 1.0.0 (DeltaX-owned code/assets) / MIT (upstream/fly-brain)
-**Base Commit:** `47255c7fabf943e946a832d492d90b721dea3453` (Merged PR #22)
+**Base Commit:** `47255c7fabf943e946a832d492d90b721dea3453` (Merged PR #22 on `main`)
+**Freeze Candidate Branch:** `chore/research-pause-freeze`
 
 ---
 
@@ -16,52 +17,56 @@ Publication and new experimental cohorts are strictly paused. All mechanistic co
 
 ### Core Guarantees of the Freeze:
 1. **Zero New Experiments:** No new learning cohorts or benchmark evaluations were executed during this pause pass.
-2. **Strict Held-Out Preservation:** Phase IV-D reserved held-out seeds `19000..19099` ($N=100$) remain **100% unconsumed and unaccessed**.
+2. **Strict Held-Out Preservation:** Phase IV-D reserved held-out seeds `19000..19099` ($N=100$) remain **strictly unconsumed in committed empirical records**.
 3. **Artifact Immutability:** Historical empirical JSON artifacts across all prior phases remain bit-for-bit identical with audited SHA-256 digests.
 4. **Honest Boundary Reporting:** Strict separation is maintained between held-out confirmation (Phase IV-C) and development-only evidence (Phase IV-D).
-5. **No Synthetic Runtime Attestation:** Public repository artifacts record `runtime_version: "v1.0.0-local"` as assigned by the test harness; this is explicitly documented as unauthenticated by external cryptographic attestation.
+5. **No Synthetic Runtime Attestation:** Public repository artifacts record `runtime_version: "v1.0.0-local"` as assigned locally by the simulation runner (`scripts/run_phase4c_generalization.mjs`); this is explicitly documented as unauthenticated by external cryptographic attestation. Public tests and committed traces verify the governance integration boundary; they do not make the private DeltaX runtime publicly reproducible.
 
 ---
 
 ## 2. Commit Provenance & Research Lineage
 
-The research lineage leading to this snapshot comprises the following milestone commits:
+The research lineage leading to this snapshot comprises the following milestone commits derived directly from repository history:
 
 | Milestone / PR | Commit SHA | Date | Description |
 | :--- | :--- | :--- | :--- |
-| **Phase II Baseline** | `8db058c` | Aug 2026 | Initial biologically-derived connectome embodiment & baseline evaluation ($N=25$ seeds `1000..1024`). |
-| **Phase III Unassisted** | `013063f` | Sep 2026 | Unassisted connectome benchmark ($N=100$ seeds `4000..4099`). |
-| **Phase IV-C Generalization** (PR #18) | `3897690` | Sep 17, 2026 | Multi-environment generalization benchmark ($N=100$ held-out seeds `12000..12099`, 9,000 episodes). |
-| **Lane B: Steering Asymmetry** (PR #19) | `04e5340` | Sep 18, 2026 | 10-phase causal mapping of mechanosensory asymmetry; Target A/B/C/D plasticity manifests. |
-| **Lane B: Latent Motor Repertoire** (PR #21) | `c1341b0` | Sep 18, 2026 | Whole-CNS latent motor atlas (180 pathways audited; bilateral validation $N=100$ on `20200..20299`). |
-| **Phase IV-D.1–D.3 Plasticity** (PR #20) | `5fa548e` | Sep 19, 2026 | Subthreshold bootstrap plasticity and dose-response development cohorts ($N=50$ and $N=100$). |
-| **PolyForm License Cutover** (PR #22) | `47255c7` | Sep 20, 2026 | Transition to PolyForm Noncommercial License 1.0.0 with documentation synchronization. |
-| **Research Pause Freeze** (Current PR) | HEAD | Sep 21, 2026 | Authoritative pause snapshot, release evidence manifest, and reproducibility freeze. |
+| **Phase II Initial Integration** (PR #12) | `0c7d56f` | Sep 17, 2026 | Initial embodied connectome rate-network and empirical governance harness. |
+| **Phase II Canonical Post-Integrity** (PR #13) | `3693cc5` | Sep 18, 2026 | Post-integrity causal corrections, excision of actuator shortcuts, and evidence synchronization. |
+| **Phase III Unassisted Held-Out** (PR #14) | `5e4128d` | Sep 18, 2026 | Unassisted connectome benchmark ($N=100$ held-out seeds `4000..4099`); collision safety via halting confirmed. |
+| **Phase IV-C Generalization** (PR #18) | `3897690` | Sep 19, 2026 | 15-environment generalization benchmark ($N=100$ held-out seeds `12000..12099`, 9,000 episodes). |
+| **Lane B: Steering Asymmetry** (PR #19) | `04e5340` | Sep 20, 2026 | 10-phase causal mapping of mechanosensory bottleneck; Target A/B/C/D plasticity manifests. |
+| **Lane B: Latent Motor Repertoire** (PR #21) | `c1341b0` | Sep 20, 2026 | Whole-CNS latent motor atlas (180 pathways audited; bilateral validation $N=100$ on `20200..20299`). |
+| **Phase IV-D.1–D.3 Plasticity** (PR #20) | `5fa548e` | Sep 20, 2026 | Subthreshold bootstrap plasticity and dose-response development cohorts ($N=50$ and $N=100$). |
+| **PolyForm License Cutover** (PR #22) | `47255c7` | Sep 21, 2026 | Transition to PolyForm Noncommercial License 1.0.0 on `main`. Base commit for the research pause. |
+| **Research Pause Freeze** (PR #23) | Candidate Head | Sep 21, 2026 | Authoritative pause snapshot, release evidence manifest, and reproducibility freeze on `chore/research-pause-freeze`. |
 
 ---
 
 ## 3. Completed Scientific Work & Evidence Boundaries
 
 ### 3.1 Phase IV-C: Generalization & Failure Attribution (Held-Out Confirmed)
-- **Cohort:** Evaluated on held-out seeds `12000..12099` ($N=100$) across 15 distinct environments (1,000 episodes per controller condition; 9,000 episodes total across 6 controllers).
+- **Cohort:** Evaluated on held-out seeds `12000..12099` ($N=100$) across 15 distinct environments: exactly 1,500 episodes per controller condition across 6 controller architectures = **9,000 total closed-loop episodes**.
+  - 4,500 DeltaX episodes (1,500 `DELTAX_EXECUTIVE`, 1,500 `DELTAX_TRIAL_RESET`, 1,500 `DELTAX_STEP_RESET`).
+  - 4,500 baseline episodes (1,500 `SIMPLE_REFLEX`, 1,500 `SUBSTRATE_TOP`, 1,500 `STOCHASTIC_WEIGHTED`).
 - **Executive Governor Invariants:**
-  - 199,500 total summarized candidate selections made by the external DeltaX governor.
+  - 199,500 total summarized candidate selections made by the external DeltaX governor (66,500 decisions per DeltaX condition).
   - **100.00% valid candidate matching rate:** Every action executed was one of the proposals actively generated by CandidateBridge.
   - **0 fallback / heuristic triggers:** The fallback mechanism was never invoked.
 - **Solve Rate Performance:**
   - DeltaX controllers achieved an overall **73.3% solve rate** (11 out of 15 environments fully solved).
-  - In geometrically and physically compatible environments, DeltaX controllers demonstrated **100% solve rate and perfect seed parity** (100/100 seeds).
+  - In the 11 geometrically and physically compatible environments, DeltaX controllers demonstrated **100% solve rate and perfect seed parity** (1,100 / 1,100 episodes per DeltaX condition).
 - **Causal Failure Attribution:**
-  - 100% of failures in incompatible environments (`ENV_1B_TRUE_RIGHT_REQUIRED`, `ENV_MAZE_SPARSE`, `ENV_OPEN_ARENA_DYNAMIC`) were causally attributed to `SUBSTRATE_CANDIDATE_ABSENCE` ($p < 10^{-15}$).
-  - The biological substrate failed to generate the required motor candidate proposals (`turn_right` or timely obstacle avoidance); the external governor committed **0 selection errors** (`SELECTION_ERROR_RATE = 0.0000`).
+  - All 1,200 DeltaX navigation failures across the four incompatible environments (`ENV_1B_TRUE_RIGHT_REQUIRED`, `ENV_POLARITY_RIGHT`, `ENV_CHOICE_WITH_REVERSAL`, `ENV_TEMPORAL_NON_MARKOVIAN`)—exactly 400 failed episodes per DeltaX condition—were causally classified as **`SUBSTRATE_CANDIDATE_ABSENCE`**.
+  - In every failure case, rightward steering was physically required to reach the goal, but descending steering neuron `DNa02` generated $0.0\text{ Hz}$ firing and $0.000$ candidate activation strength in the connectome-derived RateNetwork.
+  - The external governor committed **zero selection errors** (`SELECTION_ERROR_RATE = 0.0000`).
 - **Telemetry Replay Boundary:**
   - Summarized metrics exist for all 9,000 episodes in `artifacts/generalization/phase4c-held-out.json` and `phase4c-generalization-held_out.json`.
   - Detailed per-tick candidate fork records exist for 19,305 critical decision steps (2,800 per DeltaX controller condition).
-  - The public repository does **not** store a complete 475,000-step per-tick trajectory trace.
+  - These 19,305 fork records are not a complete per-tick trajectory; the public repository does **not** store a complete 475,000-step per-tick trajectory trace.
 
 ### 3.2 Research Lane B: Steering Asymmetry & Anatomical Bottlenecks
 - **Investigation:** 10-phase causal audit across sensory transduction, RateNetwork biophysics, and CandidateBridge readouts.
-- **Core Finding:** Mechanosensory left-steering dominance is a biological circuit property, not a software bug:
+- **Core Finding:** In this instantiated, idealized whole-CNS connectome-derived rate model, mechanosensory left-steering dominance is an intrinsic circuit property of the wiring topology, not a software bug:
   - Left tactile afferents engage 623 downstream interneurons vs. 404 on the right (+54.2% fanout asymmetry).
   - Tactile drive to right descending steering neuron `DNa02` (idx `332`) is routed through a 2-hop bottleneck via intermediate ascending interneuron `AN03A008` (idx `2937`).
   - Readout C was mathematically proven to be 100% mirror-symmetric (error $= 0.000000$). Non-tactile modalities (thermosensory, wind/gravity) drive bilateral steering symmetrically.
@@ -74,8 +79,9 @@ The research lineage leading to this snapshot comprises the following milestone 
   - 100% of pathways are structurally connected (1–3 hops).
   - 12.2% (22/180) are robustly expressible under naive rate dynamics.
   - 46.1% (83/180) are structurally present but dynamically silent (true latent pathways).
-  - Direct stimulation confirmed 100% downstream motor viability for all mapped actions.
-  - Silence is mediated by feedforward inhibition and subthreshold attenuation, fully rescuable by physiological intermediate stimulation.
+  - Direct descending neuron stimulation confirmed 100% downstream motor viability for all CandidateBridge-mapped actions.
+  - Dynamical silence is mediated by feedforward inhibition and subthreshold attenuation.
+  - Selected latent pathways were causally rescued via targeted physiological intermediate stimulation (e.g. tactile right steering via `AN03A008` and escape via `DNp70`). Visual pathways remain transduction-limited by flat, uncalibrated photoreceptor arrays lacking motion-detecting circuits.
 - **Validation:** Validated across $N=100$ bilateral seeds `20200..20299`. Escape replication namespace `20400..20499` remains reserved.
 
 ### 3.4 Phase IV-D.1–D.3: Plasticity Development (DEVELOPMENT ONLY)
@@ -90,16 +96,16 @@ The research lineage leading to this snapshot comprises the following milestone 
   - Confirmed circuit specificity: Target D matched sham consumed $71.18$ budget units with exactly $0.0000\text{ Hz}$ effect on `DNa02`.
   - Confirmed consequence gating: Unreinforced condition ($g_t = 0.0$) produced exactly $0.0000$ budget utilization.
 - **Phase IV-D.3 Dose Response ($N=100$, seeds `18200..18299`):**
-  - Evaluated 10 paired conditions across doses of 10, 30, 60, and 120 induction cycles.
+  - Evaluated the 8 frozen experimental conditions (`R0..R7`) across doses of 10, 30, 60, and 120 induction cycles (ten generated output files).
   - **Bistable Learnability Phenotype:** Heterogeneity is seed-limited, not dosage-limited. 96.2% of all eventual responders recruited by Cycle 10. Extending dose from 10 to 120 cycles ($12\times$) only recruited 3 additional seeds ($75 \to 78$), while 22% of seeds remained complete nonresponders ($0.0000\text{ Hz}$).
-  - **Predictor Discovered:** Baseline somatic depolarization relative to threshold (`DNa02_inp_over_theta`) is the primary determinant of learnability ($\text{Cohen's } d = 0.8017$, $p < 0.0001$).
+  - **Predictor Discovered:** Baseline somatic depolarization relative to threshold (`DNa02_inp_over_theta`) is the primary determinant of learnability ($\text{Cohen's } d = 0.8017$).
   - **Off-Target Safety:** 100.00% retention of left tactile steering ($1.4435\text{ Hz} \to 1.4435\text{ Hz}$); whole-network divergence $< 0.5\%$.
 
 ---
 
-## 4. Strict Seed Namespace Governance & Held-Out Preservation
+## 4. Seed Namespace Governance & Held-Out Preservation
 
-The repository enforces strict cryptographic partitioning of random seeds to ensure empirical integrity:
+The repository enforces protocol-level seed namespace separation to ensure empirical integrity:
 
 | Namespace | Size ($N$) | Phase / Lane | Status | Purpose & Evidence Rule |
 | :--- | :--- | :--- | :--- | :--- |
@@ -116,12 +122,12 @@ The repository enforces strict cryptographic partitioning of random seeds to ens
 | `20000..20049` | 50 | Lane B | Consumed | Latent motor repertoire diagnostic namespace ($N=10, 5, 3, 1$). |
 | `20200..20299` | 100 | Lane B | Consumed | Latent motor repertoire bilateral validation cohort ($N=100$). |
 | `20400..20499` | 100 | Lane B | Reserved | Reserved for future escape replication. |
-| `19000..19099` | **100** | **Phase IV-D** | **SEALED** | **Phase IV-D Held-Out Benchmark. ZERO CONSUMPTION. 100% UNTOUCHED.** |
+| `19000..19099` | **100** | **Phase IV-D** | **SEALED** | **Phase IV-D Held-Out Benchmark. ZERO COMMITTED EMPIRICAL CONSUMPTION.** |
 
-### Held-Out Verification Guarantee:
-An automated audit (`scripts/verify_pause_state.mjs`) verified that across all 145 JSON artifact files in `artifacts/`:
-- **0 occurrences** of seeds in the range `19000..19099` exist in any empirical result, summary, or trace.
-- The held-out cohort remains entirely unobserved and pristine.
+### Held-Out Audit Guarantee:
+An automated parsed JSON audit (`scripts/verify_pause_state.mjs`) verified across all artifact files in `artifacts/`:
+- **No committed empirical records were found consuming the reserved seed range (`19000..19099`).**
+- Repository inspection verifies that no committed trial, episode, or result artifact records execution on these seeds.
 
 ---
 
@@ -162,35 +168,36 @@ preregistered_success_criteria:
 To ensure absolute rigor and prevent over-interpretation, the repository enforces the following claim boundaries:
 
 ### Supported Claims (Empirically Verified):
-1. **Biophysically Constrained Candidate Generation:** The whole-brain connectome rate network dynamically translates multisensory inputs into structured motor candidate proposals via `CandidateBridge`.
-2. **Governor Non-Interference:** The external DeltaX governor operates strictly on candidate proposals produced by the connectome, maintaining a 100% candidate match rate and zero fallbacks across 199,500 decisions.
-3. **Connectome-Limited Asymmetry:** Tactile steering asymmetry is an intrinsic biological circuit phenomenon characterized by a 2-hop bottleneck through `AN03A008` into `DNa02`.
-4. **Widespread Latent Pathways:** Over 46% of audited sensory-to-motor pathways are structurally wired but dynamically silent, rescuable through intermediate physiological stimulation.
-5. **Subthreshold Bootstrap Plasticity (Development Only):** A local, subthreshold-sensitive three-factor plasticity rule successfully breaks associative deadlock on development seeds (`18100..18299`), recruiting functional steering proposals without privileged policy leakage.
+1. **Candidate-Constrained Proposal Generation:** The connectome-derived rate network model dynamically translates multisensory inputs into structured motor candidate proposals via `CandidateBridge`.
+2. **Governor Non-Interference:** The external DeltaX governor operates strictly on candidate proposals produced by the connectome substrate, maintaining a 100% candidate match rate and zero fallbacks across 199,500 evaluated decisions in the Phase IV-C benchmark.
+3. **Substrate-Limited Asymmetry:** In this instantiated, idealized connectome-derived rate network model, tactile steering asymmetry is an intrinsic circuit property characterized by a 2-hop bottleneck through `AN03A008` into `DNa02`.
+4. **Latent Motor Pathways & Selective Rescue:** Over 46% of audited sensory-to-motor pathways in the model are structurally wired but dynamically silent; selected pathways were causally rescued through intermediate physiological stimulation.
+5. **Subthreshold Bootstrap Plasticity (Development Only):** A local, subthreshold-sensitive three-factor plasticity overlay (`src/connectome/plasticity_overlay.mjs`) breaks associative deadlock on development seeds (`18100..18299`), recruiting steering proposals without privileged policy leakage.
 6. **Learnability Heterogeneity:** Connectome learnability under local plasticity is bistable and primarily predicted by baseline somatic depolarization relative to firing threshold (`DNa02_inp_over_theta`).
 
 ### Explicit Non-Claims (Strictly Disclaimed):
-1. **No Held-Out Plasticity Confirmation:** Subthreshold bootstrap plasticity has **NOT** been confirmed on held-out seeds (`19000..19099`). All plasticity results are provisional development findings.
+1. **No Held-Out Plasticity Confirmation:** Subthreshold bootstrap plasticity has **NOT** been evaluated or confirmed on held-out seeds (`19000..19099`). All plasticity results are provisional development findings.
 2. **No High-Level Cognition:** The system does NOT exhibit symbolic reasoning, cognitive mapping, world modeling, forward tree-search planning, or episodic memory.
-3. **No Biological Equivalence:** The rate network model is an abstracted computational proxy; it does NOT claim biophysical equivalence to in vivo biological Drosophila behavior or detailed biophysical compartmental dynamics.
+3. **No Biological Equivalence:** The rate network model is an abstracted continuous computational proxy; it does NOT claim biological equivalence to living *Drosophila melanogaster* or detailed biophysical compartmental dynamics.
 4. **No Universal Learnability:** The local plasticity rule does NOT enable all seeds to learn. A significant fraction of networks (~22%) remain non-responders due to intrinsic architectural attenuation.
-5. **No Cryptographic Runtime Attestation:** The label `runtime_version: "v1.0.0-local"` in test artifacts indicates local test harness execution and carries no external cryptographic signature.
+5. **No Cryptographic Runtime Attestation:** The label `runtime_version: "v1.0.0-local"` in test artifacts was assigned locally by `scripts/run_phase4c_generalization.mjs` and carries no external cryptographic signature. Public tests verify the integration contract, not private runtime reproducibility.
 
 ---
 
-## 7. Open Research Questions & Restart Instructions
+## 7. Open Research Questions & Restart Boundaries
 
 ### Open Scientific Questions:
 1. Does the 30-cycle subthreshold bootstrap protocol replicate on the pristine held-out cohort (`19000..19099`) with $\ge 50\%$ candidate recruitment?
 2. Can a two-stage co-adaptation rule (Target C) be stabilized by introducing threshold adaptation or homeostatic synaptic scaling in `AN03A008` and `DNa02`?
-3. What minimal sensory transduction enhancements enable the 83 latent motor pathways (e.g., visual looming escape) to become functionally recruitable?
+3. What minimal sensory transduction enhancements enable the remaining latent motor pathways (e.g., visual looming escape) to become functionally recruitable?
 
-### Exact Restart Instructions (Post-Pause):
-1. Confirm repository integrity and HEAD alignment with `chore/research-pause-freeze`.
-2. Verify all 145 JSON artifacts match the SHA-256 digests in [`docs/RELEASE_EVIDENCE_MANIFEST.md`](./RELEASE_EVIDENCE_MANIFEST.md).
-3. Run `npm run verify:pause` to ensure zero dirtied files and 0 held-out seed consumption.
-4. Obtain explicit written authorization from Dominick Francisco Noval before unsealing seeds `19000..19099`.
-5. Execute the held-out confirmation cohort using the frozen 30-cycle protocol into a new, dedicated output namespace:
-   ```bash
-   node scripts/run_phase4d3_experiment.mjs --seeds 19000-19099 --dose 30 --out artifacts/plasticity/phase4d_held_out/
-   ```
+### Restart Boundaries (Post-Pause Execution):
+1. **No Authorized Held-Out Command Currently Exists:**
+   The development runner `scripts/run_phase4d3_experiment.mjs` hardcodes development seeds (`18200..18299`) and writes strictly to `artifacts/plasticity/phase4d3/`. It does **not** accept CLI flags for `--seeds`, `--dose`, or `--out`.
+2. **Guarded Runner Required:**
+   No code, script, or workflow in the repository is currently authorized to evaluate seeds `19000..19099`. When the research pause is explicitly lifted by Dominick Francisco Noval, a dedicated, guarded held-out execution runner must be implemented, reviewed, and authorized.
+3. **Pre-Execution Requirements:**
+   - Confirm repository integrity and HEAD alignment with `chore/research-pause-freeze`.
+   - Verify all 19 primary artifacts match the SHA-256 digests in [`docs/RELEASE_EVIDENCE_MANIFEST.md`](./RELEASE_EVIDENCE_MANIFEST.md).
+   - Run `npm run verify:pause` to ensure 0 tracked modifications and zero held-out consumption.
+   - Obtain explicit written authorization from Dominick Francisco Noval before unsealing seeds `19000..19099`.
