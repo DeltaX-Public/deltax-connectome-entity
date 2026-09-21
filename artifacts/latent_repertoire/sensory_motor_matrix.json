@@ -1,0 +1,1139 @@
+{
+  "schema": "latent_repertoire.sensory_motor_matrix.v1",
+  "timestamp": "2026-09-20T00:48:35.458Z",
+  "intensity_hz": 180,
+  "seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009
+  ],
+  "matrix": {
+    "tactile T1 left": {
+      "forward": {
+        "mean_evoked_hz": 0.1236,
+        "peak_hz": 1.0248,
+        "onset_latency_ms": 18.2,
+        "candidate_strength": 0.0377
+      },
+      "backward": {
+        "mean_evoked_hz": 0.0993,
+        "peak_hz": 1.4699,
+        "onset_latency_ms": 21.5,
+        "candidate_strength": 0.0282
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.9587,
+        "peak_hz": 5.9157,
+        "onset_latency_ms": 14,
+        "candidate_strength": 0.2789
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.0204,
+        "peak_hz": 0.4935,
+        "onset_latency_ms": 23.4,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0.016,
+        "peak_hz": 0.7257,
+        "onset_latency_ms": 23.7,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0.1129,
+        "peak_hz": 1.8313,
+        "onset_latency_ms": 21,
+        "candidate_strength": 0
+      }
+    },
+    "tactile T1 right": {
+      "forward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0.002,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.0005,
+        "peak_hz": 0.0726,
+        "onset_latency_ms": 25,
+        "candidate_strength": 0.0003
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "tactile T2 left": {
+      "forward": {
+        "mean_evoked_hz": 0.9988,
+        "peak_hz": 3.3792,
+        "onset_latency_ms": 11.1,
+        "candidate_strength": 0.2381
+      },
+      "backward": {
+        "mean_evoked_hz": 0.3433,
+        "peak_hz": 2.2632,
+        "onset_latency_ms": 12.9,
+        "candidate_strength": 0.0931
+      },
+      "turn_left": {
+        "mean_evoked_hz": 1.3451,
+        "peak_hz": 4.2373,
+        "onset_latency_ms": 10.7,
+        "candidate_strength": 0.3427
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.4873,
+        "peak_hz": 2.9989,
+        "onset_latency_ms": 13.3,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "tactile T2 right": {
+      "forward": {
+        "mean_evoked_hz": 0.825,
+        "peak_hz": 3.1661,
+        "onset_latency_ms": 11.6,
+        "candidate_strength": 0.2043
+      },
+      "backward": {
+        "mean_evoked_hz": 0.6858,
+        "peak_hz": 3.4661,
+        "onset_latency_ms": 11,
+        "candidate_strength": 0.1732
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.4608,
+        "peak_hz": 2.3858,
+        "onset_latency_ms": 13.7,
+        "candidate_strength": 0.0037
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.939,
+        "peak_hz": 3.3529,
+        "onset_latency_ms": 11.1,
+        "candidate_strength": 0.2254
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "tactile T3 left": {
+      "forward": {
+        "mean_evoked_hz": 1.6197,
+        "peak_hz": 6.2817,
+        "onset_latency_ms": 10.7,
+        "candidate_strength": 0.3157
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 2.0455,
+        "peak_hz": 6.9829,
+        "onset_latency_ms": 10,
+        "candidate_strength": 0.456
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.3801,
+        "peak_hz": 2.2127,
+        "onset_latency_ms": 13.6,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0.0001
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0.0015,
+        "peak_hz": 0.2546,
+        "onset_latency_ms": 24,
+        "candidate_strength": 0.0001
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "tactile T3 right": {
+      "forward": {
+        "mean_evoked_hz": 1.4255,
+        "peak_hz": 5.9446,
+        "onset_latency_ms": 10.6,
+        "candidate_strength": 0.2939
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.2178,
+        "peak_hz": 1.2386,
+        "onset_latency_ms": 14.3,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 2.0265,
+        "peak_hz": 8.5572,
+        "onset_latency_ms": 10,
+        "candidate_strength": 0.4558
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "JO wind/gravity left": {
+      "forward": {
+        "mean_evoked_hz": 0.2356,
+        "peak_hz": 1.6836,
+        "onset_latency_ms": 15.6,
+        "candidate_strength": 0.0685
+      },
+      "backward": {
+        "mean_evoked_hz": 0.0002,
+        "peak_hz": 0.0258,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.0118,
+        "peak_hz": 0.1841,
+        "onset_latency_ms": 14.7,
+        "candidate_strength": 0.0076
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0.0234
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0.7005,
+        "peak_hz": 3.3352,
+        "onset_latency_ms": 8.2,
+        "candidate_strength": 0.0234
+      },
+      "groom": {
+        "mean_evoked_hz": 4.9301,
+        "peak_hz": 7.1936,
+        "onset_latency_ms": 2,
+        "candidate_strength": 0.2457
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "JO wind/gravity right": {
+      "forward": {
+        "mean_evoked_hz": 0.0238,
+        "peak_hz": 0.2371,
+        "onset_latency_ms": 21.9,
+        "candidate_strength": 0.0078
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.3271,
+        "peak_hz": 2.8719,
+        "onset_latency_ms": 15.6,
+        "candidate_strength": 0.151
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 1.951,
+        "peak_hz": 3.7325,
+        "onset_latency_ms": 2,
+        "candidate_strength": 0.0936
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0.0001,
+        "peak_hz": 0.0176,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "JO auditory left": {
+      "forward": {
+        "mean_evoked_hz": 0.6287,
+        "peak_hz": 4.379,
+        "onset_latency_ms": 16.3,
+        "candidate_strength": 0.1432
+      },
+      "backward": {
+        "mean_evoked_hz": 0.0852,
+        "peak_hz": 1.4008,
+        "onset_latency_ms": 20.9,
+        "candidate_strength": 0.0242
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.7614,
+        "peak_hz": 5.8053,
+        "onset_latency_ms": 14.8,
+        "candidate_strength": 0.2478
+      },
+      "escape": {
+        "mean_evoked_hz": 15.3268,
+        "peak_hz": 45.8141,
+        "onset_latency_ms": 2.6,
+        "candidate_strength": 0.4808
+      },
+      "takeoff": {
+        "mean_evoked_hz": 6.5155,
+        "peak_hz": 31.4369,
+        "onset_latency_ms": 6.1,
+        "candidate_strength": 0.4808
+      },
+      "groom": {
+        "mean_evoked_hz": 0.0047,
+        "peak_hz": 0.0661,
+        "onset_latency_ms": 24,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 1.3167,
+        "peak_hz": 14.7222,
+        "onset_latency_ms": 18.1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0.6384,
+        "peak_hz": 9.2023,
+        "onset_latency_ms": 17.3,
+        "candidate_strength": 0
+      }
+    },
+    "JO auditory right": {
+      "forward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "thermosensory left": {
+      "forward": {
+        "mean_evoked_hz": 0.4042,
+        "peak_hz": 1.8714,
+        "onset_latency_ms": 11.9,
+        "candidate_strength": 0.1135
+      },
+      "backward": {
+        "mean_evoked_hz": 0.2475,
+        "peak_hz": 2.3227,
+        "onset_latency_ms": 16.3,
+        "candidate_strength": 0.0675
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.5633,
+        "peak_hz": 7.7682,
+        "onset_latency_ms": 15.5,
+        "candidate_strength": 0.0404
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.8143,
+        "peak_hz": 6.2999,
+        "onset_latency_ms": 16,
+        "candidate_strength": 0.1337
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0.0087
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0.2596,
+        "peak_hz": 1.755,
+        "onset_latency_ms": 16.5,
+        "candidate_strength": 0.0087
+      },
+      "groom": {
+        "mean_evoked_hz": 0.0086,
+        "peak_hz": 0.1069,
+        "onset_latency_ms": 24.4,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 3.9372,
+        "peak_hz": 30.3794,
+        "onset_latency_ms": 14.7,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 1.4091,
+        "peak_hz": 10.4079,
+        "onset_latency_ms": 15.3,
+        "candidate_strength": 0
+      }
+    },
+    "thermosensory right": {
+      "forward": {
+        "mean_evoked_hz": 0.4511,
+        "peak_hz": 2.2601,
+        "onset_latency_ms": 11.8,
+        "candidate_strength": 0.1246
+      },
+      "backward": {
+        "mean_evoked_hz": 0.1738,
+        "peak_hz": 2.2937,
+        "onset_latency_ms": 17.9,
+        "candidate_strength": 0.0466
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.7937,
+        "peak_hz": 8.2883,
+        "onset_latency_ms": 15.8,
+        "candidate_strength": 0.0526
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.989,
+        "peak_hz": 8.5429,
+        "onset_latency_ms": 15.2,
+        "candidate_strength": 0.1158
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0.0147
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0.4408,
+        "peak_hz": 2.3023,
+        "onset_latency_ms": 13.3,
+        "candidate_strength": 0.0147
+      },
+      "groom": {
+        "mean_evoked_hz": 0.0193,
+        "peak_hz": 0.1668,
+        "onset_latency_ms": 22.3,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 1.9349,
+        "peak_hz": 16.253,
+        "onset_latency_ms": 17.1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0.6767,
+        "peak_hz": 6.7642,
+        "onset_latency_ms": 18,
+        "candidate_strength": 0
+      }
+    },
+    "taste T1 left": {
+      "forward": {
+        "mean_evoked_hz": 0.034,
+        "peak_hz": 0.4434,
+        "onset_latency_ms": 21,
+        "candidate_strength": 0.011
+      },
+      "backward": {
+        "mean_evoked_hz": 0.3996,
+        "peak_hz": 2.5938,
+        "onset_latency_ms": 12.9,
+        "candidate_strength": 0.1087
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.2349,
+        "peak_hz": 2.0435,
+        "onset_latency_ms": 17.5,
+        "candidate_strength": 0.1101
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.011,
+        "peak_hz": 0.3182,
+        "onset_latency_ms": 18.5,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0.0022,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0.0039,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "taste T1 right": {
+      "forward": {
+        "mean_evoked_hz": 0.0873,
+        "peak_hz": 0.7427,
+        "onset_latency_ms": 17.6,
+        "candidate_strength": 0.0274
+      },
+      "backward": {
+        "mean_evoked_hz": 0.5516,
+        "peak_hz": 2.852,
+        "onset_latency_ms": 13.5,
+        "candidate_strength": 0.1396
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.0886,
+        "peak_hz": 1.1901,
+        "onset_latency_ms": 19.9,
+        "candidate_strength": 0.0082
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.129,
+        "peak_hz": 1.0983,
+        "onset_latency_ms": 16.8,
+        "candidate_strength": 0.0335
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0.0009,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "visual left": {
+      "forward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "visual right": {
+      "forward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "wing/notum bristles left": {
+      "forward": {
+        "mean_evoked_hz": 3.2703,
+        "peak_hz": 9.4101,
+        "onset_latency_ms": 8,
+        "candidate_strength": 0.4789
+      },
+      "backward": {
+        "mean_evoked_hz": 0.2822,
+        "peak_hz": 2.8063,
+        "onset_latency_ms": 14.3,
+        "candidate_strength": 0.0735
+      },
+      "turn_left": {
+        "mean_evoked_hz": 4.822,
+        "peak_hz": 14.6826,
+        "onset_latency_ms": 7.7,
+        "candidate_strength": 0.4803
+      },
+      "turn_right": {
+        "mean_evoked_hz": 3.0617,
+        "peak_hz": 14.4064,
+        "onset_latency_ms": 8.9,
+        "candidate_strength": 0.0262
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0.1587,
+        "peak_hz": 1.1673,
+        "onset_latency_ms": 15.5,
+        "candidate_strength": 0.0005
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "wing/notum bristles right": {
+      "forward": {
+        "mean_evoked_hz": 3.49,
+        "peak_hz": 11.7427,
+        "onset_latency_ms": 7.9,
+        "candidate_strength": 0.4773
+      },
+      "backward": {
+        "mean_evoked_hz": 0.054,
+        "peak_hz": 0.4289,
+        "onset_latency_ms": 14.3,
+        "candidate_strength": 0.0157
+      },
+      "turn_left": {
+        "mean_evoked_hz": 2.9398,
+        "peak_hz": 12.6133,
+        "onset_latency_ms": 9,
+        "candidate_strength": 0.0886
+      },
+      "turn_right": {
+        "mean_evoked_hz": 3.153,
+        "peak_hz": 11.4193,
+        "onset_latency_ms": 8,
+        "candidate_strength": 0.2051
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0.0003,
+        "peak_hz": 0.0306,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0.0155,
+        "peak_hz": 0.2912,
+        "onset_latency_ms": 23.3,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "haltere left": {
+      "forward": {
+        "mean_evoked_hz": 0.0761,
+        "peak_hz": 0.6029,
+        "onset_latency_ms": 18.5,
+        "candidate_strength": 0.024
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.0589,
+        "peak_hz": 1.8292,
+        "onset_latency_ms": 23.1,
+        "candidate_strength": 0.0034
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0.2244,
+        "peak_hz": 1.8597,
+        "onset_latency_ms": 17.1,
+        "candidate_strength": 0.0912
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0.0692,
+        "peak_hz": 0.5162,
+        "onset_latency_ms": 18.2,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0.0113,
+        "peak_hz": 0.3599,
+        "onset_latency_ms": 24.3,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      }
+    },
+    "haltere right": {
+      "forward": {
+        "mean_evoked_hz": 0.0437,
+        "peak_hz": 0.3365,
+        "onset_latency_ms": 19.7,
+        "candidate_strength": 0.0141
+      },
+      "backward": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "turn_left": {
+        "mean_evoked_hz": 0.2561,
+        "peak_hz": 2.3592,
+        "onset_latency_ms": 16.9,
+        "candidate_strength": 0.1223
+      },
+      "turn_right": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "escape": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "takeoff": {
+        "mean_evoked_hz": 0,
+        "peak_hz": 0,
+        "onset_latency_ms": -1,
+        "candidate_strength": 0
+      },
+      "groom": {
+        "mean_evoked_hz": 0.0047,
+        "peak_hz": 0.1143,
+        "onset_latency_ms": 24,
+        "candidate_strength": 0
+      },
+      "courtP": {
+        "mean_evoked_hz": 0.053,
+        "peak_hz": 1.3847,
+        "onset_latency_ms": 23.1,
+        "candidate_strength": 0
+      },
+      "courtDN": {
+        "mean_evoked_hz": 0.0309,
+        "peak_hz": 0.969,
+        "onset_latency_ms": 23,
+        "candidate_strength": 0
+      }
+    }
+  }
+}

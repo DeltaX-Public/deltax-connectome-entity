@@ -1,0 +1,89 @@
+{
+  "schema": "latent_repertoire.escape_embodiment_audit.v1",
+  "timestamp": "2026-09-20T01:44:09.942Z",
+  "dn_population": {
+    "type": "DNp01",
+    "common_name": "Giant Fiber Descending Neuron (GF)",
+    "functional_role": "Rapid bilateral ballistic jump/escape reflex",
+    "count": 2,
+    "neurons": [
+      {
+        "index": 0,
+        "side": "Right",
+        "side_code": 2,
+        "body_id": "10001",
+        "type": "DNp01"
+      },
+      {
+        "index": 6,
+        "side": "Left",
+        "side_code": 1,
+        "body_id": "10010",
+        "type": "DNp01"
+      }
+    ]
+  },
+  "candidate_bridge_trace": {
+    "produces_candidate": true,
+    "action_class": "giant_fiber_escape",
+    "id": "cand_escape_10",
+    "activation_strength_at_20hz": 0.667,
+    "normalization_formula": "min(1.0, escape_hz / escapeScale) with escapeScale = 30.0",
+    "originating_population": [
+      "DNp01"
+    ],
+    "originating_neuron_indices": [
+      0,
+      6
+    ],
+    "provenance_type": "MEASURED_NEURAL"
+  },
+  "embodiment_status": {
+    "is_executable": false,
+    "forbidden": true,
+    "forbidden_reason": "UNEMBODIED_ACTUATOR",
+    "embodiment_classification": "UNEMBODIED",
+    "actuator_action": null,
+    "rover_chassis_hardware_status": "UNSUPPORTED_ACTUATOR",
+    "hardware_notes": "The physical differential-drive rover chassis has wheel actuators for forward, backward, left, and right torque. It does not possess a vertical hop, ballistic jump, or thruster actuator.",
+    "closed_loop_fallback": {
+      "maps_to": "stop",
+      "source_reference": "src/connectome/closed_loop.mjs:322 and src/experiments/changed_world/harness.mjs:636 (_mapActionClassToRover)",
+      "behavioral_consequence": "In closed-loop embodied control, if giant_fiber_escape is selected by executive choice, the vehicle executes 'stop' (safe quiescent fallback) rather than a physical jump."
+    }
+  },
+  "four_tier_viability_framework": {
+    "tier_1_dn_activity_viability": {
+      "status": "VIABLE",
+      "details": "DNp01 neurons are fully functional dynamic elements in the RateNetwork, capable of physiological firing (e.g. 10–30 Hz under auditory drive or direct stimulation) with standard activation parameters."
+    },
+    "tier_2_candidate_bridge_proposal_viability": {
+      "status": "VIABLE",
+      "details": "CandidateBridge (generateCandidates_C_IndependentAxes) successfully constructs a schema-compliant candidate proposal with action_class 'giant_fiber_escape' and strength s in [0.05, 1.0] proportional to mean DNp01 firing."
+    },
+    "tier_3_rover_body_actuator_embodiment": {
+      "status": "UNEMBODIED",
+      "details": "RoverBody lacks any mechanical effector for ballistic jump. Actuator action is null."
+    },
+    "tier_4_executive_execution_viability": {
+      "status": "NON_EXECUTABLE_FALLBACK",
+      "details": "is_executable is strictly false; candidate is marked forbidden. The executive or harness maps it to 'stop'. Plasticity transfer experiments targeting this pathway must evaluate success at Tier 1 and Tier 2 (neural firing & candidate strength), not rover chassis motion."
+    }
+  },
+  "claim_language_corrections": {
+    "classification_denominators": {
+      "strictly_simulated_pathways": 180,
+      "derived_quiescent_halt_entries": 20,
+      "total_repertoire_entries": 200,
+      "governing_rule": "The 180 entries represent the 20 sensory channels crossed against 9 direct biological motor populations. The 20 halt entries represent the derived quiescent balance program (1 - max(active drives)). Denominators must never be conflated: robustly expressible pathways are 22/180 (12.2%), whereas total expressible entries including derived halt are 42/200 (21.0%)."
+    },
+    "bilateral_steering_wording": {
+      "deprecated_phrase": "PURE_DYNAMICAL_ASYMMETRY_EMERGENT_FROM_SYMMETRIC_WIRING",
+      "calibrated_phrase": "PREDOMINANTLY_DYNAMICAL_ASYMMETRY_UNDER_NEAR_SYMMETRIC_WIRING",
+      "rationale": "Structural asymmetry index is 0.0476 (tactile T1 has 151 L vs 115 R afferents, and steering DN fanin has minor asymmetric synaptic weights). While the resulting 500:1 dynamical bias is vastly larger than the structural asymmetry, the anatomical substrate is near-symmetric rather than mathematically perfectly symmetric."
+    },
+    "downstream_viability_wording": {
+      "calibrated_standard": "Never state that a motor program 'drives rover actuators' unless the canonical RoverBody implements that specific actuator. Giant fiber escape must be referred to as an 'UNEMBODIED neural motor program with viable CandidateBridge proposal generation falling back to stop in embodied execution'."
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema": "latent_repertoire.dnp70_population_audit.v1",
+  "timestamp": "2026-09-20T01:44:50.541Z",
+  "neuron_pair": {
+    "left_homologue": {
+      "index": 541,
+      "type": "DNp70",
+      "body_id": "10580",
+      "side": "Left",
+      "side_code": 1,
+      "neurotransmitter": "ACh (cholinergic)",
+      "nt_sign": 1,
+      "total_in_degree": 284,
+      "total_presynaptic_partners": 788,
+      "projections_to_dnp01": [
+        {
+          "target_index": 6,
+          "target_side": "Left",
+          "weight": 739,
+          "laterality": "ipsilateral"
+        },
+        {
+          "target_index": 0,
+          "target_side": "Right",
+          "weight": 60,
+          "laterality": "contralateral"
+        }
+      ],
+      "total_weight_to_dnp01": 799,
+      "ipsilateral_bias": 0.9249,
+      "tactile_t1_left_afferent_convergence": {
+        "direct_1hop_edges": 0,
+        "two_hop_paths": 3,
+        "two_hop_intermediaries": [
+          "AN08B053 (31207)"
+        ],
+        "total_two_hop_weight": 3
+      },
+      "tactile_t1_right_afferent_convergence": {
+        "direct_1hop_edges": 0,
+        "two_hop_paths": 1,
+        "two_hop_intermediaries": [
+          "AN08B023 (18826)"
+        ],
+        "total_two_hop_weight": 8
+      },
+      "measured_dynamics_under_tactile_t1_left": {
+        "index": 541,
+        "type": "DNp70",
+        "side": "Left",
+        "body_id": "10580",
+        "rate_hz": {
+          "mean": 0.2595,
+          "std": 0.5252,
+          "min": 0,
+          "max": 3.8527
+        },
+        "inp": {
+          "mean": 63.0887,
+          "std": 46.8688,
+          "min": 1.297,
+          "max": 219.0294
+        },
+        "theta": {
+          "mean": 55.3802,
+          "std": 4.845,
+          "min": 46.8589,
+          "max": 68.0202
+        },
+        "inp_over_theta": {
+          "mean": 1.1527,
+          "std": 0.8719,
+          "min": 0.023,
+          "max": 4.2457
+        }
+      }
+    },
+    "right_homologue": {
+      "index": 1048,
+      "type": "DNp70",
+      "body_id": "11133",
+      "side": "Right",
+      "side_code": 2,
+      "neurotransmitter": "ACh (cholinergic)",
+      "nt_sign": 1,
+      "total_in_degree": 295,
+      "total_presynaptic_partners": 856,
+      "projections_to_dnp01": [
+        {
+          "target_index": 0,
+          "target_side": "Right",
+          "weight": 537,
+          "laterality": "ipsilateral"
+        },
+        {
+          "target_index": 6,
+          "target_side": "Left",
+          "weight": 80,
+          "laterality": "contralateral"
+        }
+      ],
+      "total_weight_to_dnp01": 617,
+      "ipsilateral_bias": 0.8703,
+      "tactile_t1_left_afferent_convergence": {
+        "direct_1hop_edges": 0,
+        "two_hop_paths": 1,
+        "two_hop_intermediaries": [
+          "DNge021 (7509)"
+        ],
+        "total_two_hop_weight": 3
+      },
+      "tactile_t1_right_afferent_convergence": {
+        "direct_1hop_edges": 0,
+        "two_hop_paths": 36,
+        "two_hop_intermediaries": [
+          "AN09B009 (7353)",
+          "AN17A013 (62668)"
+        ],
+        "total_two_hop_weight": 9
+      },
+      "measured_dynamics_under_tactile_t1_left": {
+        "index": 1048,
+        "type": "DNp70",
+        "side": "Right",
+        "body_id": "11133",
+        "rate_hz": {
+          "mean": 0.0795,
+          "std": 0.2111,
+          "min": 0,
+          "max": 1.843
+        },
+        "inp": {
+          "mean": 42.3847,
+          "std": 29.3967,
+          "min": 3.1379,
+          "max": 126.4536
+        },
+        "theta": {
+          "mean": 53.2307,
+          "std": 3.9543,
+          "min": 42.9904,
+          "max": 61.0665
+        },
+        "inp_over_theta": {
+          "mean": 0.8045,
+          "std": 0.5691,
+          "min": 0.0556,
+          "max": 2.5218
+        }
+      }
+    }
+  },
+  "homologue_relationship": {
+    "status": "CONFIRMED_BILATERAL_HOMOLOGUE_PAIR",
+    "anatomical_symmetry_score": 0.7722,
+    "structural_convergence_on_dnp01": "Both homologues project bilaterally to both left (6) and right (0) DNp01 neurons, with predominant ipsilateral strength (~92.5% left, ~87.0% right). Together they provide 1416 total excitatory synaptic weight to the Giant Fiber escape circuit.",
+    "tactile_afferent_overlap": "Neither homologue receives direct sensory afferents from tactile T1. At 2 hops, left tactile T1 reaches DNp70-Left via AN08B053 (weight 3) and reaches DNp70-Right via DNge021 (weight 3). Right tactile T1 reaches DNp70-Right much more densely (36 paths via AN09B009 and AN17A013). The two homologues do not share 2-hop intermediary neurons under unilateral drive.",
+    "role_in_tactile_escape": "Under left tactile T1 drive, DNp70-Left (541) provides the primary ipsilateral driver to DNp01-Left (739 synapses). However, neither homologue is recruited to firing threshold by natural tactile input alone."
+  }
+}

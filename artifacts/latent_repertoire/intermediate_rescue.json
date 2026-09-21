@@ -1,0 +1,756 @@
+{
+  "schema": "latent_repertoire.intermediate_rescue.v1",
+  "timestamp": "2026-09-20T00:51:02.433Z",
+  "seeds_used": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004
+  ],
+  "stim_rates_hz": [
+    5,
+    10,
+    20,
+    30,
+    40
+  ],
+  "total_tests": 5,
+  "tests": [
+    {
+      "test_id": "tactile_right_to_turn_right",
+      "label": "Tactile T1 Right -> Turn Right Steering (DNa02)",
+      "sensor": "tactile T1 right",
+      "motor_program": "turn_right",
+      "target_dn_types": [
+        "DNa02"
+      ],
+      "target_dn_indices": [
+        332
+      ],
+      "intermediates_tested": [
+        {
+          "intermediate_index": 2937,
+          "intermediate_type": "AN03A008",
+          "weight_to_target": 717,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 4.77,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0.0001,
+              "candidate_activation_strength": 0.0001,
+              "off_target_mean_network_hz": 28.16,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0.4048,
+              "candidate_activation_strength": 0.211,
+              "off_target_mean_network_hz": 135.58,
+              "rescued": true
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 1.1907,
+              "candidate_activation_strength": 0.4642,
+              "off_target_mean_network_hz": 334.39,
+              "rescued": true
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 2.0704,
+              "candidate_activation_strength": 0.6272,
+              "off_target_mean_network_hz": 617.77,
+              "rescued": true
+            }
+          ],
+          "rescue_viable": true
+        },
+        {
+          "intermediate_index": 17903,
+          "intermediate_type": "PS049",
+          "weight_to_target": 528,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.66,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.33,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 10.65,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 15.98,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 21.31,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        },
+        {
+          "intermediate_index": 132620,
+          "intermediate_type": "LAL018",
+          "weight_to_target": 319,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.7,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 6.01,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 21.67,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0.0267,
+              "candidate_activation_strength": 0.0172,
+              "off_target_mean_network_hz": 60,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0.1582,
+              "candidate_activation_strength": 0.0955,
+              "off_target_mean_network_hz": 119.16,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        }
+      ],
+      "pathway_rescue_viable": true,
+      "rescue_classification": "INTERMEDIATE_DRIVE_RESCUES_OUTPUT"
+    },
+    {
+      "test_id": "visual_to_looming_takeoff",
+      "label": "Visual -> Looming Takeoff (DNp02, DNp04)",
+      "sensor": "visual right",
+      "motor_program": "takeoff",
+      "target_dn_types": [
+        "DNp02",
+        "DNp04"
+      ],
+      "target_dn_indices": [
+        103,
+        178,
+        1052,
+        133740
+      ],
+      "intermediates_tested": [
+        {
+          "intermediate_index": 114,
+          "intermediate_type": "SAD103",
+          "weight_to_target": 372,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.9,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.79,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 11.59,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 17.38,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 23.18,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        },
+        {
+          "intermediate_index": 444,
+          "intermediate_type": "MeVP53",
+          "weight_to_target": 364,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.7,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.4,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 10.81,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 16.21,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 21.62,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        },
+        {
+          "intermediate_index": 230,
+          "intermediate_type": "MeVP53",
+          "weight_to_target": 346,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.81,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.62,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 11.24,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 16.86,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 22.47,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        }
+      ],
+      "pathway_rescue_viable": false,
+      "rescue_classification": "INTERMEDIATE_DRIVE_INSUFFICIENT"
+    },
+    {
+      "test_id": "visual_to_escape_gf",
+      "label": "Visual -> Giant Fiber Escape (DNp01)",
+      "sensor": "visual left",
+      "motor_program": "escape",
+      "target_dn_types": [
+        "DNp01"
+      ],
+      "target_dn_indices": [
+        0,
+        6
+      ],
+      "intermediates_tested": [
+        {
+          "intermediate_index": 541,
+          "intermediate_type": "DNp70",
+          "weight_to_target": 799,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 8.57,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0.0704,
+              "candidate_activation_strength": 0.0023,
+              "off_target_mean_network_hz": 31.37,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0.9018,
+              "candidate_activation_strength": 0.03,
+              "off_target_mean_network_hz": 107.93,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 2.0436,
+              "candidate_activation_strength": 0.0681,
+              "off_target_mean_network_hz": 220.83,
+              "rescued": true
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 3.275,
+              "candidate_activation_strength": 0.1092,
+              "off_target_mean_network_hz": 365.75,
+              "rescued": true
+            }
+          ],
+          "rescue_viable": true
+        },
+        {
+          "intermediate_index": 1048,
+          "intermediate_type": "DNp70",
+          "weight_to_target": 617,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 10.78,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 37.93,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0.3293,
+              "candidate_activation_strength": 0.011,
+              "off_target_mean_network_hz": 126.27,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 1.2084,
+              "candidate_activation_strength": 0.0403,
+              "off_target_mean_network_hz": 308.66,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 2.2826,
+              "candidate_activation_strength": 0.0761,
+              "off_target_mean_network_hz": 671.55,
+              "rescued": true
+            }
+          ],
+          "rescue_viable": true
+        },
+        {
+          "intermediate_index": 61,
+          "intermediate_type": "PVLP010",
+          "weight_to_target": 414,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.79,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.58,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 11.17,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 16.75,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 22.34,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        }
+      ],
+      "pathway_rescue_viable": true,
+      "rescue_classification": "INTERMEDIATE_DRIVE_RESCUES_OUTPUT"
+    },
+    {
+      "test_id": "tactile_left_to_escape_gf",
+      "label": "Tactile T1 Left -> Giant Fiber Escape (DNp01)",
+      "sensor": "tactile T1 left",
+      "motor_program": "escape",
+      "target_dn_types": [
+        "DNp01"
+      ],
+      "target_dn_indices": [
+        0,
+        6
+      ],
+      "intermediates_tested": [
+        {
+          "intermediate_index": 541,
+          "intermediate_type": "DNp70",
+          "weight_to_target": 799,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 8.57,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0.0704,
+              "candidate_activation_strength": 0.0023,
+              "off_target_mean_network_hz": 31.37,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0.9018,
+              "candidate_activation_strength": 0.03,
+              "off_target_mean_network_hz": 107.93,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 2.0436,
+              "candidate_activation_strength": 0.0681,
+              "off_target_mean_network_hz": 220.83,
+              "rescued": true
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 3.275,
+              "candidate_activation_strength": 0.1092,
+              "off_target_mean_network_hz": 365.75,
+              "rescued": true
+            }
+          ],
+          "rescue_viable": true
+        },
+        {
+          "intermediate_index": 1048,
+          "intermediate_type": "DNp70",
+          "weight_to_target": 617,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 10.78,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 37.93,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0.3293,
+              "candidate_activation_strength": 0.011,
+              "off_target_mean_network_hz": 126.27,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 1.2084,
+              "candidate_activation_strength": 0.0403,
+              "off_target_mean_network_hz": 308.66,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 2.2826,
+              "candidate_activation_strength": 0.0761,
+              "off_target_mean_network_hz": 671.55,
+              "rescued": true
+            }
+          ],
+          "rescue_viable": true
+        },
+        {
+          "intermediate_index": 61,
+          "intermediate_type": "PVLP010",
+          "weight_to_target": 414,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.79,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.58,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 11.17,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 16.75,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 22.34,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        }
+      ],
+      "pathway_rescue_viable": true,
+      "rescue_classification": "INTERMEDIATE_DRIVE_RESCUES_OUTPUT"
+    },
+    {
+      "test_id": "visual_to_forward",
+      "label": "Visual -> Forward Locomotion (DNg100, DNg97)",
+      "sensor": "visual left",
+      "motor_program": "forward",
+      "target_dn_types": [
+        "DNg100",
+        "DNg97"
+      ],
+      "target_dn_indices": [
+        36,
+        46,
+        3548,
+        121193
+      ],
+      "intermediates_tested": [
+        {
+          "intermediate_index": 129512,
+          "intermediate_type": "GNG458",
+          "weight_to_target": 1119,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.74,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.48,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 10.96,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 16.43,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 21.91,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        },
+        {
+          "intermediate_index": 14763,
+          "intermediate_type": "GNG458",
+          "weight_to_target": 1052,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.7,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.4,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 10.8,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 16.2,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 21.6,
+              "rescued": false
+            }
+          ],
+          "rescue_viable": false
+        },
+        {
+          "intermediate_index": 142239,
+          "intermediate_type": "VES089",
+          "weight_to_target": 989,
+          "rate_sweeps": [
+            {
+              "stim_rate_hz": 5,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 2.74,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 10,
+              "evoked_dn_rate_hz": 0,
+              "candidate_activation_strength": 0,
+              "off_target_mean_network_hz": 5.48,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 20,
+              "evoked_dn_rate_hz": 0.0003,
+              "candidate_activation_strength": 0.0001,
+              "off_target_mean_network_hz": 17.57,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 30,
+              "evoked_dn_rate_hz": 0.0964,
+              "candidate_activation_strength": 0.0306,
+              "off_target_mean_network_hz": 53.15,
+              "rescued": false
+            },
+            {
+              "stim_rate_hz": 40,
+              "evoked_dn_rate_hz": 0.3815,
+              "candidate_activation_strength": 0.1106,
+              "off_target_mean_network_hz": 125.42,
+              "rescued": true
+            }
+          ],
+          "rescue_viable": true
+        }
+      ],
+      "pathway_rescue_viable": true,
+      "rescue_classification": "INTERMEDIATE_DRIVE_RESCUES_OUTPUT"
+    }
+  ]
+}

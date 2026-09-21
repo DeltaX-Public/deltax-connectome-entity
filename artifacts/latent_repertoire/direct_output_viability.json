@@ -1,0 +1,373 @@
+{
+  "schema": "latent_repertoire.direct_output_viability.v1",
+  "timestamp": "2026-09-20T00:48:42.614Z",
+  "total_programs_tested": 9,
+  "programs": [
+    {
+      "motor_program": "forward",
+      "label": "Forward Locomotion",
+      "total_neurons": 16,
+      "expected_candidate_action": "locomotion_forward",
+      "expected_actuator": "forward",
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "locomotion_forward",
+            "activation_strength": 0.811,
+            "actuator_action": "forward",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "locomotion_forward",
+            "activation_strength": 0.993,
+            "actuator_action": "forward",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "locomotion_forward",
+            "activation_strength": 1,
+            "actuator_action": "forward",
+            "is_executable": true
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "backward",
+      "label": "Backward Locomotion (MDN)",
+      "total_neurons": 4,
+      "expected_candidate_action": "locomotion_backward",
+      "expected_actuator": "backward",
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "locomotion_backward",
+            "activation_strength": 0.811,
+            "actuator_action": "backward",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "locomotion_backward",
+            "activation_strength": 0.993,
+            "actuator_action": "backward",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "locomotion_backward",
+            "activation_strength": 1,
+            "actuator_action": "backward",
+            "is_executable": true
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "turn_left",
+      "label": "Turn Left Steering",
+      "total_neurons": 3,
+      "expected_candidate_action": "turn_left",
+      "expected_actuator": "left",
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "turn_left",
+            "activation_strength": 0.964,
+            "actuator_action": "left",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "turn_left",
+            "activation_strength": 1,
+            "actuator_action": "left",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "turn_left",
+            "activation_strength": 1,
+            "actuator_action": "left",
+            "is_executable": true
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "turn_right",
+      "label": "Turn Right Steering",
+      "total_neurons": 3,
+      "expected_candidate_action": "turn_right",
+      "expected_actuator": "right",
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "turn_right",
+            "activation_strength": 0.964,
+            "actuator_action": "right",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "turn_right",
+            "activation_strength": 1,
+            "actuator_action": "right",
+            "is_executable": true
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "turn_right",
+            "activation_strength": 1,
+            "actuator_action": "right",
+            "is_executable": true
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "escape",
+      "label": "Giant Fiber Escape (DNp01)",
+      "total_neurons": 2,
+      "expected_candidate_action": "giant_fiber_escape",
+      "expected_actuator": null,
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "giant_fiber_escape",
+            "activation_strength": 0.167,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "giant_fiber_escape",
+            "activation_strength": 0.5,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "giant_fiber_escape",
+            "activation_strength": 1,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "takeoff",
+      "label": "Looming Takeoff (DNp02, DNp04)",
+      "total_neurons": 4,
+      "expected_candidate_action": "giant_fiber_escape",
+      "expected_actuator": null,
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "giant_fiber_escape",
+            "activation_strength": 0.167,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "giant_fiber_escape",
+            "activation_strength": 0.5,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "giant_fiber_escape",
+            "activation_strength": 1,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "groom",
+      "label": "Anterior Grooming (DNg07, DNg08)",
+      "total_neurons": 39,
+      "expected_candidate_action": "groom",
+      "expected_actuator": null,
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": {
+            "action_class": "groom",
+            "activation_strength": 0.25,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": {
+            "action_class": "groom",
+            "activation_strength": 0.75,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": {
+            "action_class": "groom",
+            "activation_strength": 1,
+            "actuator_action": null,
+            "is_executable": false
+          },
+          "viable": true
+        }
+      ],
+      "downstream_viability": true,
+      "classification": "DOWNSTREAM_READOUT_VIABLE"
+    },
+    {
+      "motor_program": "courtP",
+      "label": "Courtship Song (pIP10)",
+      "total_neurons": 2,
+      "expected_candidate_action": null,
+      "expected_actuator": null,
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": null,
+          "viable": false
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": null,
+          "viable": false
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": null,
+          "viable": false
+        }
+      ],
+      "downstream_viability": false,
+      "classification": "UNEMBODIED_NO_READOUT_SPEC"
+    },
+    {
+      "motor_program": "courtDN",
+      "label": "Courtship Pursuit (DNp13)",
+      "total_neurons": 2,
+      "expected_candidate_action": null,
+      "expected_actuator": null,
+      "evaluations": [
+        {
+          "injected_rate_hz": 5,
+          "readout_dn_rate_hz": 5,
+          "candidate_generated": null,
+          "viable": false
+        },
+        {
+          "injected_rate_hz": 15,
+          "readout_dn_rate_hz": 15,
+          "candidate_generated": null,
+          "viable": false
+        },
+        {
+          "injected_rate_hz": 30,
+          "readout_dn_rate_hz": 30,
+          "candidate_generated": null,
+          "viable": false
+        }
+      ],
+      "downstream_viability": false,
+      "classification": "UNEMBODIED_NO_READOUT_SPEC"
+    }
+  ]
+}

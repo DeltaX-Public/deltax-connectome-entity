@@ -1,0 +1,149 @@
+{
+  "schema": "latent_repertoire.escape_sufficiency_curve.v1",
+  "timestamp": "2026-09-20T01:50:17.824Z",
+  "pathway_name": "tactile T1 left + DNp70 stimulation -> DNp01",
+  "diagnostic_seed_count": 50,
+  "diagnostic_seed_range": "20300..20349",
+  "threshold_findings": {
+    "lowest_dnp70_rate_for_measurable_dnp01_recruitment_hz": 15,
+    "threshold_recruitment_criterion": "DNp01 mean firing rate >= 0.10 Hz",
+    "lowest_dnp70_rate_for_candidate_bridge_crossing_hz": 25,
+    "candidate_bridge_threshold_criterion": "giant_fiber_escape activation strength >= 0.050",
+    "biological_feasibility": "DNp70 firing at 15–20 Hz is well within the standard dynamic range of descending interneurons and successfully crosses the downstream threshold into DNp01."
+  },
+  "dose_response_curve": [
+    {
+      "dnp70_stimulation_rate_hz": 0,
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_synaptic_input": {
+        "mean": -66.6642,
+        "std": 8.468
+      },
+      "candidate_bridge_strength": {
+        "mean": 0,
+        "std": 0
+      },
+      "whole_network_active_neurons": {
+        "mean": 2422.9255,
+        "std": 103.3146
+      }
+    },
+    {
+      "dnp70_stimulation_rate_hz": 5,
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_synaptic_input": {
+        "mean": 17.2601,
+        "std": 10.9297
+      },
+      "candidate_bridge_strength": {
+        "mean": 0,
+        "std": 0
+      },
+      "whole_network_active_neurons": {
+        "mean": 2441.3964,
+        "std": 104.009
+      }
+    },
+    {
+      "dnp70_stimulation_rate_hz": 10,
+      "dnp01_firing_rate": {
+        "mean": 0,
+        "std": 0
+      },
+      "dnp01_synaptic_input": {
+        "mean": 84.1938,
+        "std": 12.4487
+      },
+      "candidate_bridge_strength": {
+        "mean": 0,
+        "std": 0
+      },
+      "whole_network_active_neurons": {
+        "mean": 2461.6927,
+        "std": 104.7524
+      }
+    },
+    {
+      "dnp70_stimulation_rate_hz": 15,
+      "dnp01_firing_rate": {
+        "mean": 0.2229,
+        "std": 0.1208
+      },
+      "dnp01_synaptic_input": {
+        "mean": 150.8546,
+        "std": 15.2996
+      },
+      "candidate_bridge_strength": {
+        "mean": 0.0074,
+        "std": 0.004
+      },
+      "whole_network_active_neurons": {
+        "mean": 2488.4727,
+        "std": 104.6739
+      }
+    },
+    {
+      "dnp70_stimulation_rate_hz": 20,
+      "dnp01_firing_rate": {
+        "mean": 1.1126,
+        "std": 0.2484
+      },
+      "dnp01_synaptic_input": {
+        "mean": 222.6834,
+        "std": 19.5116
+      },
+      "candidate_bridge_strength": {
+        "mean": 0.0371,
+        "std": 0.0083
+      },
+      "whole_network_active_neurons": {
+        "mean": 2514.1091,
+        "std": 104.5156
+      }
+    },
+    {
+      "dnp70_stimulation_rate_hz": 25,
+      "dnp01_firing_rate": {
+        "mean": 2.2445,
+        "std": 0.3531
+      },
+      "dnp01_synaptic_input": {
+        "mean": 299.3609,
+        "std": 24.2437
+      },
+      "candidate_bridge_strength": {
+        "mean": 0.0748,
+        "std": 0.0118
+      },
+      "whole_network_active_neurons": {
+        "mean": 2547.2273,
+        "std": 105.3302
+      }
+    },
+    {
+      "dnp70_stimulation_rate_hz": 30,
+      "dnp01_firing_rate": {
+        "mean": 3.4721,
+        "std": 0.4586
+      },
+      "dnp01_synaptic_input": {
+        "mean": 379.2978,
+        "std": 29.1015
+      },
+      "candidate_bridge_strength": {
+        "mean": 0.1157,
+        "std": 0.0153
+      },
+      "whole_network_active_neurons": {
+        "mean": 2582.0655,
+        "std": 106.2021
+      }
+    }
+  ]
+}

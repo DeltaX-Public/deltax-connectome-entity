@@ -1,0 +1,625 @@
+{
+  "schema": "latent_repertoire.escape_propagation_trace.v1",
+  "timestamp": "2026-09-20T01:50:57.720Z",
+  "diagnostic_seeds": 50,
+  "stimulus_onset_tick": 5,
+  "stimulus_onset_time_ms": 50,
+  "first_causal_divergence": {
+    "divergence_tick": 8,
+    "divergence_time_ms": 80,
+    "earliest_diverging_layer": "Stage 0 -> Stage 3 (Direct monosynaptic recruitment in auditory vs polysynaptic failure in tactile)",
+    "mechanistic_origin": "At tick 6 (10 ms post-stimulus onset), JO auditory left drives DNp01 directly via 21 monosynaptic edges, producing rapid escape activation. In contrast, tactile T1 left afferents have 0 direct edges to DNp01 and 0 direct edges to DNp70. Signals entering the 2-hop interneurons AN08B053 and DNge021 fail to overcome DNp70's firing threshold (DNp70 reaches only ~0.26 Hz), while collateral sensory fanout recruits strong polysynaptic inhibition onto DNp01, driving DNp01 input net negative (inp = -100)."
+  },
+  "traces": {
+    "tactile_t1_left": {
+      "label": "tactile_t1_left",
+      "time_course": [
+        {
+          "tick": 1,
+          "time_ms": 10,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 2,
+          "time_ms": 20,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 3,
+          "time_ms": 30,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 4,
+          "time_ms": 40,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 5,
+          "time_ms": 50,
+          "sensory_hz": 9.095,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 6,
+          "time_ms": 60,
+          "sensory_hz": 17.74,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 7,
+          "time_ms": 70,
+          "sensory_hz": 25.946,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 8,
+          "time_ms": 80,
+          "sensory_hz": 33.723,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 9,
+          "time_ms": 90,
+          "sensory_hz": 41.076,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 10,
+          "time_ms": 100,
+          "sensory_hz": 48.012,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 11,
+          "time_ms": 110,
+          "sensory_hz": 54.534,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -0.14,
+          "cand_strength": 0
+        },
+        {
+          "tick": 12,
+          "time_ms": 120,
+          "sensory_hz": 60.64,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -0.97,
+          "cand_strength": 0
+        },
+        {
+          "tick": 13,
+          "time_ms": 130,
+          "sensory_hz": 66.326,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -2.6,
+          "cand_strength": 0
+        },
+        {
+          "tick": 14,
+          "time_ms": 140,
+          "sensory_hz": 71.583,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -5.12,
+          "cand_strength": 0
+        },
+        {
+          "tick": 15,
+          "time_ms": 150,
+          "sensory_hz": 76.409,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -8.71,
+          "cand_strength": 0
+        },
+        {
+          "tick": 16,
+          "time_ms": 160,
+          "sensory_hz": 80.811,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -13.5,
+          "cand_strength": 0
+        },
+        {
+          "tick": 17,
+          "time_ms": 170,
+          "sensory_hz": 84.812,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -19.79,
+          "cand_strength": 0
+        },
+        {
+          "tick": 18,
+          "time_ms": 180,
+          "sensory_hz": 88.442,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": -27.99,
+          "cand_strength": 0
+        },
+        {
+          "tick": 19,
+          "time_ms": 190,
+          "sensory_hz": 91.734,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.002,
+          "dnp01_hz": 0,
+          "dnp01_inp": -38.82,
+          "cand_strength": 0
+        },
+        {
+          "tick": 20,
+          "time_ms": 200,
+          "sensory_hz": 94.71,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.01,
+          "dnp01_hz": 0,
+          "dnp01_inp": -52.66,
+          "cand_strength": 0
+        },
+        {
+          "tick": 21,
+          "time_ms": 210,
+          "sensory_hz": 97.388,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.048,
+          "dnp01_hz": 0,
+          "dnp01_inp": -69.34,
+          "cand_strength": 0
+        },
+        {
+          "tick": 22,
+          "time_ms": 220,
+          "sensory_hz": 99.787,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.143,
+          "dnp01_hz": 0,
+          "dnp01_inp": -88.77,
+          "cand_strength": 0
+        },
+        {
+          "tick": 23,
+          "time_ms": 230,
+          "sensory_hz": 101.929,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.309,
+          "dnp01_hz": 0,
+          "dnp01_inp": -111.17,
+          "cand_strength": 0
+        },
+        {
+          "tick": 24,
+          "time_ms": 240,
+          "sensory_hz": 103.835,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.538,
+          "dnp01_hz": 0,
+          "dnp01_inp": -136.78,
+          "cand_strength": 0
+        },
+        {
+          "tick": 25,
+          "time_ms": 250,
+          "sensory_hz": 105.527,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.814,
+          "dnp01_hz": 0,
+          "dnp01_inp": -165.78,
+          "cand_strength": 0
+        },
+        {
+          "tick": 26,
+          "time_ms": 260,
+          "sensory_hz": 100.233,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 1.11,
+          "dnp01_hz": 0,
+          "dnp01_inp": -198.6,
+          "cand_strength": 0
+        },
+        {
+          "tick": 27,
+          "time_ms": 270,
+          "sensory_hz": 95.192,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 1.397,
+          "dnp01_hz": 0,
+          "dnp01_inp": -235.94,
+          "cand_strength": 0
+        },
+        {
+          "tick": 28,
+          "time_ms": 280,
+          "sensory_hz": 90.398,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 1.65,
+          "dnp01_hz": 0,
+          "dnp01_inp": -278.42,
+          "cand_strength": 0
+        },
+        {
+          "tick": 29,
+          "time_ms": 290,
+          "sensory_hz": 85.839,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 1.853,
+          "dnp01_hz": 0,
+          "dnp01_inp": -326.35,
+          "cand_strength": 0
+        },
+        {
+          "tick": 30,
+          "time_ms": 300,
+          "sensory_hz": 81.508,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 2,
+          "dnp01_hz": 0,
+          "dnp01_inp": -379.54,
+          "cand_strength": 0
+        }
+      ]
+    },
+    "jo_auditory_left": {
+      "label": "jo_auditory_left",
+      "time_course": [
+        {
+          "tick": 1,
+          "time_ms": 10,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 2,
+          "time_ms": 20,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 3,
+          "time_ms": 30,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 4,
+          "time_ms": 40,
+          "sensory_hz": 0,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 0,
+          "cand_strength": 0
+        },
+        {
+          "tick": 5,
+          "time_ms": 50,
+          "sensory_hz": 9.121,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0,
+          "dnp01_inp": 91.33,
+          "cand_strength": 0
+        },
+        {
+          "tick": 6,
+          "time_ms": 60,
+          "sensory_hz": 17.823,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0.04,
+          "dnp01_inp": 188.27,
+          "cand_strength": 0.001
+        },
+        {
+          "tick": 7,
+          "time_ms": 70,
+          "sensory_hz": 26.111,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0.333,
+          "dnp01_inp": 287.47,
+          "cand_strength": 0.011
+        },
+        {
+          "tick": 8,
+          "time_ms": 80,
+          "sensory_hz": 33.971,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 0.883,
+          "dnp01_inp": 381.19,
+          "cand_strength": 0.029
+        },
+        {
+          "tick": 9,
+          "time_ms": 90,
+          "sensory_hz": 41.376,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 1.672,
+          "dnp01_inp": 464.85,
+          "cand_strength": 0.056
+        },
+        {
+          "tick": 10,
+          "time_ms": 100,
+          "sensory_hz": 48.282,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 2.672,
+          "dnp01_inp": 539.33,
+          "cand_strength": 0.089
+        },
+        {
+          "tick": 11,
+          "time_ms": 110,
+          "sensory_hz": 54.613,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 3.857,
+          "dnp01_inp": 608.47,
+          "cand_strength": 0.129
+        },
+        {
+          "tick": 12,
+          "time_ms": 120,
+          "sensory_hz": 60.261,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 5.204,
+          "dnp01_inp": 676.39,
+          "cand_strength": 0.173
+        },
+        {
+          "tick": 13,
+          "time_ms": 130,
+          "sensory_hz": 65.137,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 6.699,
+          "dnp01_inp": 743.59,
+          "cand_strength": 0.223
+        },
+        {
+          "tick": 14,
+          "time_ms": 140,
+          "sensory_hz": 69.223,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 8.328,
+          "dnp01_inp": 808.68,
+          "cand_strength": 0.278
+        },
+        {
+          "tick": 15,
+          "time_ms": 150,
+          "sensory_hz": 72.619,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 10.075,
+          "dnp01_inp": 870.28,
+          "cand_strength": 0.336
+        },
+        {
+          "tick": 16,
+          "time_ms": 160,
+          "sensory_hz": 75.476,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 11.924,
+          "dnp01_inp": 927.53,
+          "cand_strength": 0.398
+        },
+        {
+          "tick": 17,
+          "time_ms": 170,
+          "sensory_hz": 77.91,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 13.859,
+          "dnp01_inp": 979.81,
+          "cand_strength": 0.462
+        },
+        {
+          "tick": 18,
+          "time_ms": 180,
+          "sensory_hz": 79.996,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 15.862,
+          "dnp01_inp": 1026.81,
+          "cand_strength": 0.529
+        },
+        {
+          "tick": 19,
+          "time_ms": 190,
+          "sensory_hz": 81.778,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 17.92,
+          "dnp01_inp": 1068.54,
+          "cand_strength": 0.597
+        },
+        {
+          "tick": 20,
+          "time_ms": 200,
+          "sensory_hz": 83.292,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0,
+          "dnp01_hz": 20.02,
+          "dnp01_inp": 1105.62,
+          "cand_strength": 0.667
+        },
+        {
+          "tick": 21,
+          "time_ms": 210,
+          "sensory_hz": 84.569,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.001,
+          "dnp01_hz": 22.151,
+          "dnp01_inp": 1138.9,
+          "cand_strength": 0.738
+        },
+        {
+          "tick": 22,
+          "time_ms": 220,
+          "sensory_hz": 85.637,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.003,
+          "dnp01_hz": 24.303,
+          "dnp01_inp": 1169.2,
+          "cand_strength": 0.81
+        },
+        {
+          "tick": 23,
+          "time_ms": 230,
+          "sensory_hz": 86.528,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.007,
+          "dnp01_hz": 26.47,
+          "dnp01_inp": 1196.88,
+          "cand_strength": 0.878
+        },
+        {
+          "tick": 24,
+          "time_ms": 240,
+          "sensory_hz": 87.265,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.01,
+          "dnp01_hz": 28.643,
+          "dnp01_inp": 1222.49,
+          "cand_strength": 0.932
+        },
+        {
+          "tick": 25,
+          "time_ms": 250,
+          "sensory_hz": 87.872,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.012,
+          "dnp01_hz": 30.814,
+          "dnp01_inp": 1247.02,
+          "cand_strength": 0.973
+        },
+        {
+          "tick": 26,
+          "time_ms": 260,
+          "sensory_hz": 83.764,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.012,
+          "dnp01_hz": 32.977,
+          "dnp01_inp": 1232.04,
+          "cand_strength": 0.993
+        },
+        {
+          "tick": 27,
+          "time_ms": 270,
+          "sensory_hz": 79.84,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.011,
+          "dnp01_hz": 35.079,
+          "dnp01_inp": 1230.33,
+          "cand_strength": 0.999
+        },
+        {
+          "tick": 28,
+          "time_ms": 280,
+          "sensory_hz": 76.093,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.011,
+          "dnp01_hz": 37.13,
+          "dnp01_inp": 1242.22,
+          "cand_strength": 1
+        },
+        {
+          "tick": 29,
+          "time_ms": 290,
+          "sensory_hz": 72.516,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.01,
+          "dnp01_hz": 39.137,
+          "dnp01_inp": 1266.39,
+          "cand_strength": 1
+        },
+        {
+          "tick": 30,
+          "time_ms": 300,
+          "sensory_hz": 69.102,
+          "layer1_inter_hz": 0,
+          "dnp70_hz": 0.01,
+          "dnp01_hz": 41.106,
+          "dnp01_inp": 1302.65,
+          "cand_strength": 1
+        }
+      ]
+    }
+  }
+}

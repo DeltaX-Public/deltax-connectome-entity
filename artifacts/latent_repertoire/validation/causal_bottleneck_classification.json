@@ -1,0 +1,182 @@
+{
+  "schema": "latent_repertoire.causal_bottleneck_classification.v1",
+  "timestamp": "2026-09-20T01:02:16.511Z",
+  "classifications": [
+    {
+      "pathway_id": "tactile_t1_l_to_turn_l",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "turn_left",
+      "panel_role": "ROBUST_POSITIVE_CONTROL",
+      "causal_bottleneck_classes": [
+        "ROBUSTLY_EXPRESSED"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0.477,
+        "intact_inp": 126.5996,
+        "intact_theta": 102.7622,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 1.0399,
+        "excitatory_boost_candidate_strength": 0.5924
+      }
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_turn_r",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "turn_right",
+      "panel_role": "FUNCTIONALLY_LATENT_REFERENCE",
+      "causal_bottleneck_classes": [
+        "INSUFFICIENT_EXCITATORY_CONVERGENCE",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0,
+        "intact_inp": 14.5813,
+        "intact_theta": 98.4608,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.5043,
+        "excitatory_boost_candidate_strength": 0.3308
+      }
+    },
+    {
+      "pathway_id": "jo_aud_l_to_escape",
+      "sensory_channel": "JO auditory left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "ROBUST_POSITIVE_CONTROL",
+      "causal_bottleneck_classes": [
+        "ROBUSTLY_EXPRESSED"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 31.0911,
+        "intact_inp": 2573.5133,
+        "intact_theta": 144.7662,
+        "group_inhibition_removal_gain_hz": 0.2949,
+        "excitatory_boost_gain_hz": 3.3027,
+        "excitatory_boost_candidate_strength": 0.5714
+      }
+    },
+    {
+      "pathway_id": "jo_aud_r_to_escape",
+      "sensory_channel": "JO auditory right",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "BILATERAL_ASYMMETRY_PAIR",
+      "causal_bottleneck_classes": [
+        "HIGH_INTRINSIC_THRESHOLD"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0,
+        "intact_inp": 27.2523,
+        "intact_theta": 156.9748,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.9288,
+        "excitatory_boost_candidate_strength": 0.0154
+      }
+    },
+    {
+      "pathway_id": "tactile_t1_l_to_escape",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "causal_bottleneck_classes": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0,
+        "intact_inp": -73.935,
+        "intact_theta": 144.7662,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.8882,
+        "excitatory_boost_candidate_strength": 0.0148
+      }
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_escape",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "giant_fiber_escape",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "causal_bottleneck_classes": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0,
+        "intact_inp": -14.5762,
+        "intact_theta": 156.9748,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.4505,
+        "excitatory_boost_candidate_strength": 0.0075
+      }
+    },
+    {
+      "pathway_id": "tactile_t1_l_to_groom",
+      "sensory_channel": "tactile T1 left",
+      "motor_program": "front_leg_groom",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "causal_bottleneck_classes": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0,
+        "intact_inp": -0.1201,
+        "intact_theta": 6.9722,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.0128,
+        "excitatory_boost_candidate_strength": 0
+      }
+    },
+    {
+      "pathway_id": "tactile_t1_r_to_groom",
+      "sensory_channel": "tactile T1 right",
+      "motor_program": "front_leg_groom",
+      "panel_role": "FUNCTIONALLY_LATENT_CANDIDATE",
+      "causal_bottleneck_classes": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0,
+        "intact_inp": -0.0003,
+        "intact_theta": 7.1304,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.0321,
+        "excitatory_boost_candidate_strength": 0
+      }
+    },
+    {
+      "pathway_id": "jo_wind_l_to_turn_l",
+      "sensory_channel": "JO wind/gravity left",
+      "motor_program": "turn_left",
+      "panel_role": "WEAKLY_EXPRESSED_PATHWAY",
+      "causal_bottleneck_classes": [
+        "POLYSYNAPTIC_INHIBITORY_OPPOSITION",
+        "INSUFFICIENT_EXCITATORY_CONVERGENCE",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0.0003,
+        "intact_inp": -39.1578,
+        "intact_theta": 102.7622,
+        "group_inhibition_removal_gain_hz": 0.0001,
+        "excitatory_boost_gain_hz": 0.6955,
+        "excitatory_boost_candidate_strength": 0.4435
+      }
+    },
+    {
+      "pathway_id": "jo_wind_r_to_turn_r",
+      "sensory_channel": "JO wind/gravity right",
+      "motor_program": "turn_right",
+      "panel_role": "WEAKLY_EXPRESSED_PATHWAY",
+      "causal_bottleneck_classes": [
+        "INSUFFICIENT_EXCITATORY_CONVERGENCE",
+        "HIGH_INTRINSIC_THRESHOLD"
+      ],
+      "evidence_summary": {
+        "intact_rate_hz": 0.1454,
+        "intact_inp": 74.9525,
+        "intact_theta": 98.4608,
+        "group_inhibition_removal_gain_hz": 0,
+        "excitatory_boost_gain_hz": 0.6691,
+        "excitatory_boost_candidate_strength": 0.4405
+      }
+    }
+  ]
+}

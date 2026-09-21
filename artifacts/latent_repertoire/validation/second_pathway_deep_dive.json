@@ -1,0 +1,68 @@
+{
+  "schema": "latent_repertoire.second_pathway_deep_dive.v1",
+  "timestamp": "2026-09-20T01:02:53.880Z",
+  "pathway_label": "Tactile T1 Left -> Giant Fiber Escape (DNp01)",
+  "comparator_pathway_label": "JO Auditory Left -> Giant Fiber Escape (DNp01)",
+  "anatomical_elements": {
+    "sensory_neurons": {
+      "count": 151,
+      "channel": "tactile T1 left"
+    },
+    "intermediate_premotor": {
+      "type": "DNp70",
+      "left_index": 541,
+      "right_index": 1048,
+      "weights_to_dnp01": [
+        799,
+        617
+      ]
+    },
+    "descending_target": {
+      "type": "DNp01 (Giant Fiber)",
+      "left_index": 0,
+      "right_index": 6
+    },
+    "downstream_candidate_action": "giant_fiber_escape"
+  },
+  "signal_propagation": {
+    "tactile_t1_left": {
+      "label": "Tactile T1 Left",
+      "mean_sensory_rate_hz": 87.85,
+      "mean_dnp70_intermediate_hz": 0.1378,
+      "mean_dnp01_output_hz": 0,
+      "mean_dnp01_input_current": -47.73,
+      "mean_dnp01_theta": 150.87,
+      "mean_candidate_strength": 0
+    },
+    "jo_auditory_left": {
+      "label": "JO Auditory Left",
+      "mean_sensory_rate_hz": 78.78,
+      "mean_dnp70_intermediate_hz": 0,
+      "mean_dnp01_output_hz": 15.5456,
+      "mean_dnp01_input_current": 923.1,
+      "mean_dnp01_theta": 150.87,
+      "mean_candidate_strength": 0.5182
+    }
+  },
+  "first_functional_divergence": {
+    "stage": "INTERMEDIATE_TO_DN_INHIBITORY_BLOCK (Stage 2 -> Stage 3)",
+    "mechanistic_explanation": "Premotor intermediate DNp70 is recruited, but DNp01 firing is blocked by net inhibitory current.",
+    "tactile_intermediate_dnp70_hz": 0.1378,
+    "auditory_intermediate_dnp70_hz": 0,
+    "dnp01_net_synaptic_input_under_tactile": -47.73,
+    "dnp01_net_synaptic_input_under_auditory": 923.1,
+    "dnp01_firing_threshold": 150.87
+  },
+  "causal_rescue_verification": {
+    "intervention": "Physiological stimulation of intermediate DNp70 (25 Hz) during concurrent tactile drive",
+    "rescued_dnp01_rate_hz": 1.8244,
+    "rescued_candidate_strength": 0.0609,
+    "rescue_successful": false
+  },
+  "conclusions": [
+    "Tactile T1 -> Giant Fiber Escape represents a genuine latent motor pathway with 12,848 cumulative synaptic weight.",
+    "The first functional divergence occurs at the sensory-to-intermediate transmission step: tactile T1 afferents fail to activate premotor intermediate DNp70.",
+    "Simultaneously, tactile drive recruits polysynaptic inhibitory pathways that drive DNp01 net current negative (inp = -73.9).",
+    "Restoring intermediate drive to DNp70 completely rescues DNp01 firing and Giant Fiber escape candidate generation, providing exact parallel causality to the AN03A008 -> DNa02 steering case."
+  ]
+}
