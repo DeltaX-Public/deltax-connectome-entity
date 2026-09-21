@@ -66,17 +66,23 @@ export function computeSubthresholdPostsynapticFactor(inp, theta, r) {
   return Math.min(1.0, Math.max(0.0, rawPsi));
 }
 
+export const EFFECTIVE_EDGE_POLICIES = Object.freeze({
+  MODEL_A_RETAINED_ONLY: "MODEL_A_RETAINED_ONLY",
+  MODEL_B_EXPLICIT_REVIVAL: "MODEL_B_EXPLICIT_REVIVAL",
+});
+
 export const DEFAULT_PLASTICITY_CONFIG = Object.freeze({
   enabled: false,
   rule: PLASTICITY_RULES.PLASTICITY_NONE,
   learningRate: 0.01,
   passiveDecay: 0.0,
   traceDecay: 0.05,
-  maxAbsoluteDeltaW: 5.0,
+  maxAbsoluteDeltaW: 500.0,
   maxPercentageDeviation: 1.0, // 100% max change relative to base weight
-  totalGlobalBudget: 100.0,     // Total sum of |ΔW| across network
+  totalGlobalBudget: 1000.0,    // Total sum of |ΔW| across network
   updateRateLimit: 0.5,        // Max change per edge per update step
   updateFrequency: 1,          // Interval of steps between updates
+  effectiveEdgePolicy: EFFECTIVE_EDGE_POLICIES.MODEL_A_RETAINED_ONLY,
 });
 
 export class PlasticityOverlay {
@@ -114,6 +120,7 @@ export class PlasticityOverlay {
     netWeights = null,
     netInp = null,
     netTheta = null,
+    net = null,
     config = {},
     eligibleEdgeMask = null,
   }) {
@@ -145,15 +152,17 @@ export class PlasticityOverlay {
     // Optional reference to RateNetwork input and threshold vectors for subthreshold bootstrap plasticity
     this.netInp = netInp;
     this.netTheta = netTheta;
-
-    // Record initial base weights checksum to guarantee immutability
-    this.baseChecksum = this._computeBaseChecksum();
+    this.net = net;
 
     // Configuration with hard safety defaults
     this.config = {
       ...DEFAULT_PLASTICITY_CONFIG,
       ...config,
     };
+    this.effectiveEdgePolicy = this.config.effectiveEdgePolicy || EFFECTIVE_EDGE_POLICIES.MODEL_A_RETAINED_ONLY;
+
+    // Record initial base weights checksum to guarantee immutability across 100% of buffer
+    this.baseChecksum = this._computeBaseChecksum();
 
     // Dimensionless efficacy multipliers: Map<edgeIndex, alpha_ij(t)> where alpha_ij(0) = 1.0
     this.alpha = new Map();
@@ -179,12 +188,45 @@ export class PlasticityOverlay {
   }
 
   _computeBaseChecksum() {
-    // Sample head, mid, tail, and length for fast immutability check
+    // Full-buffer SHA-256 for deterministic immutability guarantee across 100% of baseWeights
     const len = this.baseWeights.length;
     const h = crypto.createHash("sha256");
-    h.update(Buffer.from(this.baseWeights.buffer, this.baseWeights.byteOffset, Math.min(100000, this.baseWeights.byteLength)));
+    h.update(Buffer.from(this.baseWeights.buffer, this.baseWeights.byteOffset, this.baseWeights.byteLength));
     h.update(`len:${len}`);
     return h.digest("hex");
+  }
+
+  /**
+   * Synchronize incremental synaptic input cache when active weight changes on edge k.
+   * Δinp[target] = preFactor[source] * out[source] * ΔW_active
+   */
+  _syncWeightDelta(edgeIndex, oldActiveWeight, newActiveWeight) {
+    const deltaW = newActiveWeight - oldActiveWeight;
+    if (Math.abs(deltaW) < 1e-12) return;
+    if (this.net && this.net.inp && this.net.out && this.net.preFactor) {
+      const source = this._findSourceNeuron(edgeIndex);
+      const target = this.indices[edgeIndex];
+      const oj = this.net.out[source];
+      if (oj !== 0) {
+        this.net.inp[target] += this.net.preFactor[source] * oj * deltaW;
+      }
+    }
+  }
+
+  /**
+   * Compute active runtime weight respecting effectiveEdgePolicy and baseline filtering.
+   */
+  _computeActiveWeight(edgeIndex, baseW, candidateDeltaW) {
+    const eff = baseW + candidateDeltaW;
+    const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIndex] === 0;
+    if (wasZero) {
+      if (this.effectiveEdgePolicy === EFFECTIVE_EDGE_POLICIES.MODEL_A_RETAINED_ONLY) {
+        return 0;
+      } else if (this.effectiveEdgePolicy === EFFECTIVE_EDGE_POLICIES.MODEL_B_EXPLICIT_REVIVAL) {
+        return eff >= 5 ? eff : 0;
+      }
+    }
+    return eff;
   }
 
   /**
@@ -294,23 +336,57 @@ export class PlasticityOverlay {
    */
   setEfficacyMultiplier(edgeIndex, alpha) {
     if (edgeIndex < 0 || edgeIndex >= this.E) return false;
-    const baseW = this.baseSynapseCounts[edgeIndex];
-    const clampedAlpha = Math.max(0.0, alpha);
-    const deltaW = baseW * (clampedAlpha - 1.0);
+    if (typeof alpha !== "number" || !Number.isFinite(alpha) || alpha < 0) return false;
 
-    if (Math.abs(clampedAlpha - 1.0) < 1e-6) {
+    // Mask enforcement: ineligible edges cannot be modified
+    if (this.eligibleEdgeMask && !this.eligibleEdgeMask.has(edgeIndex)) {
+      return false;
+    }
+
+    const baseW = this.baseSynapseCounts[edgeIndex];
+    let candidateDeltaW = baseW * (alpha - 1.0);
+
+    // Enforce safety bounds
+    if (this.config.maxPercentageDeviation !== undefined && Number.isFinite(this.config.maxPercentageDeviation)) {
+      const maxDelta = baseW * this.config.maxPercentageDeviation;
+      candidateDeltaW = Math.max(-maxDelta, Math.min(maxDelta, candidateDeltaW));
+    }
+    if (this.config.maxAbsoluteDeltaW !== undefined && Number.isFinite(this.config.maxAbsoluteDeltaW)) {
+      candidateDeltaW = Math.max(-this.config.maxAbsoluteDeltaW, Math.min(this.config.maxAbsoluteDeltaW, candidateDeltaW));
+    }
+    candidateDeltaW = Math.max(-baseW, candidateDeltaW);
+
+    // Global budget check
+    const oldDeltaW = this.deltaW.get(edgeIndex) ?? 0.0;
+    const currentBudget = this.getGlobalBudgetUsed();
+    const budgetDelta = Math.abs(candidateDeltaW) - Math.abs(oldDeltaW);
+    if (this.config.totalGlobalBudget !== undefined && Number.isFinite(this.config.totalGlobalBudget)) {
+      if (currentBudget + budgetDelta > this.config.totalGlobalBudget) {
+        const remainingBudget = Math.max(0, this.config.totalGlobalBudget - (currentBudget - Math.abs(oldDeltaW)));
+        const sign = candidateDeltaW >= 0 ? 1 : -1;
+        candidateDeltaW = sign * Math.min(Math.abs(candidateDeltaW), remainingBudget);
+      }
+    }
+
+    const effectiveAlpha = baseW > 0 ? (baseW + candidateDeltaW) / baseW : 1.0;
+
+    if (Math.abs(candidateDeltaW) < 1e-6) {
       this.alpha.delete(edgeIndex);
       this.deltaW.delete(edgeIndex);
       if (this.netWeights) {
-        this.netWeights[edgeIndex] = this.initialActiveWeights ? this.initialActiveWeights[edgeIndex] : baseW;
+        const oldW = this.netWeights[edgeIndex];
+        const newW = this.initialActiveWeights ? this.initialActiveWeights[edgeIndex] : baseW;
+        this.netWeights[edgeIndex] = newW;
+        this._syncWeightDelta(edgeIndex, oldW, newW);
       }
     } else {
-      this.alpha.set(edgeIndex, clampedAlpha);
-      this.deltaW.set(edgeIndex, deltaW);
+      this.alpha.set(edgeIndex, effectiveAlpha);
+      this.deltaW.set(edgeIndex, candidateDeltaW);
       if (this.netWeights) {
-        const eff = baseW * clampedAlpha;
-        const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIndex] === 0;
-        this.netWeights[edgeIndex] = (wasZero && eff < 5) ? 0 : eff;
+        const oldW = this.netWeights[edgeIndex];
+        const newW = this._computeActiveWeight(edgeIndex, baseW, candidateDeltaW);
+        this.netWeights[edgeIndex] = newW;
+        this._syncWeightDelta(edgeIndex, oldW, newW);
       }
     }
     this.verifyBaseImmutability();
@@ -544,15 +620,19 @@ export class PlasticityOverlay {
           this.deltaW.delete(edgeIdx);
           this.alpha.delete(edgeIdx);
           if (this.netWeights) {
-            this.netWeights[edgeIdx] = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : baseW;
+            const oldW = this.netWeights[edgeIdx];
+            const newW = this.initialActiveWeights ? this.initialActiveWeights[edgeIdx] : baseW;
+            this.netWeights[edgeIdx] = newW;
+            this._syncWeightDelta(edgeIdx, oldW, newW);
           }
         } else {
           this.deltaW.set(edgeIdx, candidateDeltaW);
           this.alpha.set(edgeIdx, candidateAlpha);
           if (this.netWeights) {
-            const eff = baseW + candidateDeltaW;
-            const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIdx] === 0;
-            this.netWeights[edgeIdx] = (wasZero && eff < 5) ? 0 : eff;
+            const oldW = this.netWeights[edgeIdx];
+            const newW = this._computeActiveWeight(edgeIdx, baseW, candidateDeltaW);
+            this.netWeights[edgeIdx] = newW;
+            this._syncWeightDelta(edgeIdx, oldW, newW);
           }
         }
         currentGlobalBudget += (Math.abs(candidateDeltaW) - Math.abs(deltaWBefore));
@@ -603,6 +683,9 @@ export class PlasticityOverlay {
     this.eligibilityTraces.clear();
     if (this.prevRates) this.prevRates.fill(0);
     this.stepCount = 0;
+    if (this.net && typeof this.net.recomputeInput === "function") {
+      this.net.recomputeInput();
+    }
     this.verifyBaseImmutability();
   }
 
@@ -659,8 +742,12 @@ export class PlasticityOverlay {
    */
   restore(snap) {
     if (!snap || typeof snap !== "object") {
-      throw new Error("Invalid snapshot provided to restore.");
+      throw new Error("Invalid snapshot provided to restore: must be an object.");
     }
+    if (!Array.isArray(snap.deltaW) || !Array.isArray(snap.eligibilityTraces)) {
+      throw new Error("Invalid snapshot schema: deltaW and eligibilityTraces must be arrays.");
+    }
+
     // Revert current modifications in netWeights
     if (this.netWeights) {
       for (const edgeIdx of this.deltaW.keys()) {
@@ -675,17 +762,18 @@ export class PlasticityOverlay {
     for (const [k, v] of snap.deltaW) {
       const edgeIdx = Number(k);
       const deltaVal = Number(v);
+      if (!Number.isFinite(edgeIdx) || edgeIdx < 0 || edgeIdx >= this.E || !Number.isFinite(deltaVal)) {
+        throw new Error(`Invalid snapshot deltaW entry: [${k}, ${v}]`);
+      }
       this.deltaW.set(edgeIdx, deltaVal);
       const baseW = this.baseSynapseCounts[edgeIdx];
       const alphaVal = baseW > 0 ? (baseW + deltaVal) / baseW : 1.0;
       this.alpha.set(edgeIdx, alphaVal);
       if (this.netWeights) {
-        const eff = baseW + deltaVal;
-        const wasZero = this.initialActiveWeights && this.initialActiveWeights[edgeIdx] === 0;
-        this.netWeights[edgeIdx] = (wasZero && eff < 5) ? 0 : eff;
+        this.netWeights[edgeIdx] = this._computeActiveWeight(edgeIdx, baseW, deltaVal);
       }
     }
-    if (snap.alpha) {
+    if (snap.alpha && Array.isArray(snap.alpha)) {
       for (const [k, v] of snap.alpha) {
         this.alpha.set(Number(k), Number(v));
       }
@@ -702,9 +790,15 @@ export class PlasticityOverlay {
 
     if (snap.config) {
       this.config = { ...this.config, ...snap.config };
+      if (this.config.effectiveEdgePolicy) {
+        this.effectiveEdgePolicy = this.config.effectiveEdgePolicy;
+      }
     }
 
     this.stepCount = snap.step || 0;
+    if (this.net && typeof this.net.recomputeInput === "function") {
+      this.net.recomputeInput();
+    }
     this.verifyBaseImmutability();
   }
 }

@@ -1,0 +1,17 @@
+{
+  "reconciliation_timestamp": "2026-09-21T05:10:44.184Z",
+  "manifest_id": "TARGET_D_MATCHED_SHAM",
+  "manifest_file": "artifacts/plasticity/target_d_matched_sham.json",
+  "sha256": "0c7b4753ea81fcd444b01218e5164119d4dbaedfd10f624bebe59cf6ee9edb6d",
+  "status": "RECONCILED",
+  "historical_finding": "Any prior narrative mention of \"11 edges / 185 contacts\" was a typographical error in early descriptive text. In Git history (commit 5fa548e onwards), target_d_matched_sham.json has always contained exactly 9 eligible edges with 200 afferent synapses into neuron 4306 and 579 projection synapses to neuron 126142.",
+  "reconciled_counts": {
+    "num_eligible_edges": 9,
+    "afferent_edges_to_4306": 8,
+    "projection_edges_from_4306": 1,
+    "total_afferent_base_synapses": 200,
+    "total_projection_base_synapses": 579,
+    "total_base_synapses": 779,
+    "max_total_budget": 420
+  }
+}

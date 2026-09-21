@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-09-21T05:10:44.169Z",
+  "repo": "DeltaX-Public/deltax-connectome-entity",
+  "branch": "fix/runtime-integrity-repairs",
+  "pinned_files": {
+    "src/connectome/runtime.mjs": {
+      "path": "src/connectome/runtime.mjs",
+      "status": "EXISTS",
+      "sha256": "019c3777644d1910df9e2704800c0e26acbee9c49e7ca017a6a7cebab334d1a5",
+      "sizeBytes": 11558
+    },
+    "src/connectome/plasticity_overlay.mjs": {
+      "path": "src/connectome/plasticity_overlay.mjs",
+      "status": "EXISTS",
+      "sha256": "a2473513a50ff613cb985fd3457f72c20c1a67407e9a9be607ffe7a82090bfe5",
+      "sizeBytes": 25323
+    },
+    "src/connectome/sensory_transduction.mjs": {
+      "path": "src/connectome/sensory_transduction.mjs",
+      "status": "EXISTS",
+      "sha256": "711bd294fb65af5e4f8f69fa7a21361e62b7c296ecbf00bfb3df7d63a6b48f06",
+      "sizeBytes": 7219
+    },
+    "src/connectome/candidate_bridge.mjs": {
+      "path": "src/connectome/candidate_bridge.mjs",
+      "status": "EXISTS",
+      "sha256": "b3db8c2aab64f3d47cb495a33753b7b41f2408955037c14fc08f7139b4b16fc4",
+      "sizeBytes": 2419
+    },
+    "src/connectome/candidate_readouts.mjs": {
+      "path": "src/connectome/candidate_readouts.mjs",
+      "status": "EXISTS",
+      "sha256": "ddabd516b3e2fdaac4fa4afa4c8c20ded461e798f4491424f2534eea5b686379",
+      "sizeBytes": 24024
+    },
+    "src/connectome/closed_loop.mjs": {
+      "path": "src/connectome/closed_loop.mjs",
+      "status": "EXISTS",
+      "sha256": "5acdf22cff63932f5bf8d57190628e2f764319cf0fcc7a8f31a9c5df87fd964c",
+      "sizeBytes": 13817
+    },
+    "src/connectome/learning_signal.mjs": {
+      "path": "src/connectome/learning_signal.mjs",
+      "status": "EXISTS",
+      "sha256": "c6d24d41f46c564f571be2896544c00b46a88da96b73913b6b6b17d7134e7148",
+      "sizeBytes": 4920
+    },
+    "src/connectome/manifest_validator.mjs": {
+      "path": "src/connectome/manifest_validator.mjs",
+      "status": "EXISTS",
+      "sha256": "59f839dd0a64ec0d7cdcadefbe67ddad1f4983cf07c550b1597c03b1ce974d3b",
+      "sizeBytes": 2804
+    },
+    "src/connectome/shuffled_control.mjs": {
+      "path": "src/connectome/shuffled_control.mjs",
+      "status": "EXISTS",
+      "sha256": "f7898d690af7d5eac3ceb72edae75be850aca4c0411ede508994ab52dfa83e04",
+      "sizeBytes": 1901
+    },
+    "upstream/fly-brain/src/ratenet.js": {
+      "path": "upstream/fly-brain/src/ratenet.js",
+      "status": "EXISTS",
+      "sha256": "641ca1950a35b30dab3ed48b51e5e076931c56519006a10e58112647a45636b6",
+      "sizeBytes": 8289
+    },
+    "upstream/fly-brain/src/brainmodel.js": {
+      "path": "upstream/fly-brain/src/brainmodel.js",
+      "status": "EXISTS",
+      "sha256": "ceff6b9a7627029c79b5d9eb49b55808034eec342cb9f6d78481f389ef41dc11",
+      "sizeBytes": 3127
+    },
+    "upstream/fly-brain/public/data/bodymap.json": {
+      "path": "upstream/fly-brain/public/data/bodymap.json",
+      "status": "EXISTS",
+      "sha256": "10630cd4c7a6cc2c1dcfcbee4a602d307f06766f316b185f631406813a58da9d",
+      "sizeBytes": 235718
+    },
+    "upstream/fly-brain/public/data/meta.json": {
+      "path": "upstream/fly-brain/public/data/meta.json",
+      "status": "EXISTS",
+      "sha256": "580c2d5a210469a6ab1184ae2187dcc4ce8217c6f74043bd2e585c7b110ec36a",
+      "sizeBytes": 3178974
+    },
+    "upstream/fly-brain/public/data/graph.flyg": {
+      "path": "upstream/fly-brain/public/data/graph.flyg",
+      "status": "EXISTS",
+      "sha256": "ed3df5a7ec8610bdaa7f42b49d0970bca3afa7c9e041ff1c025c6d2f9173fff5",
+      "sizeBytes": 14623114
+    },
+    "upstream/fly-brain/public/data/neuron_size.bin": {
+      "path": "upstream/fly-brain/public/data/neuron_size.bin",
+      "status": "EXISTS",
+      "sha256": "06bc9b1e88e8f55c2e630f8f9c9746208377e6d186f0c6a34612faaafe9ae7fa",
+      "sizeBytes": 660488
+    },
+    "artifacts/plasticity/target_a_afferent_only.json": {
+      "path": "artifacts/plasticity/target_a_afferent_only.json",
+      "status": "EXISTS",
+      "sha256": "6a9223a2e0cab2e233b90abaf1bfa924a22cfd0e4b9ada7d04aeb137967f176b",
+      "sizeBytes": 2736
+    },
+    "artifacts/plasticity/target_b_projection_only.json": {
+      "path": "artifacts/plasticity/target_b_projection_only.json",
+      "status": "EXISTS",
+      "sha256": "d3e8e1400e589b25cd7c89d5a453036960714d34e148627a53cc42ed3c0c7bdf",
+      "sizeBytes": 1263
+    },
+    "artifacts/plasticity/target_c_balanced_two_stage.json": {
+      "path": "artifacts/plasticity/target_c_balanced_two_stage.json",
+      "status": "EXISTS",
+      "sha256": "4a61ae85d8ef8efe725010ba3515d190e4ec6a5c64c2fb82fb7e0037e1116574",
+      "sizeBytes": 3148
+    },
+    "artifacts/plasticity/target_d_matched_sham.json": {
+      "path": "artifacts/plasticity/target_d_matched_sham.json",
+      "status": "EXISTS",
+      "sha256": "0c7b4753ea81fcd444b01218e5164119d4dbaedfd10f624bebe59cf6ee9edb6d",
+      "sizeBytes": 3027
+    },
+    "artifacts/plasticity/target_manifest.schema.json": {
+      "path": "artifacts/plasticity/target_manifest.schema.json",
+      "status": "EXISTS",
+      "sha256": "ff2380cac100b91c54ec2c774b51ea5f94aaf04bbcfd7c731124cba91a10ef7f",
+      "sizeBytes": 3390
+    },
+    "artifacts/latent_repertoire/escape_replication/proposed_target_manifest.json": {
+      "path": "artifacts/latent_repertoire/escape_replication/proposed_target_manifest.json",
+      "status": "EXISTS",
+      "sha256": "65a6387dab4ac35af49e902bf56a7a7f1042970d82bfb212794e3bdb57c6cd57",
+      "sizeBytes": 14878
+    }
+  }
+}

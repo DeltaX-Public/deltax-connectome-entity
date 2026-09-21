@@ -69,6 +69,7 @@ export class ConnectomeRuntime {
           netWeights: this.net.weights,
           netInp: this.net.inp,
           netTheta: this.net.theta,
+          net: this.net,
           config: opts.plasticity.config || opts.plasticity,
           eligibleEdgeMask: opts.plasticity.eligibleEdgeMask,
         })
@@ -290,8 +291,11 @@ export class ConnectomeRuntime {
    * Restore bit-exact state from snapshot.
    */
   restore(snap) {
-    if (snap.schema !== "connectome.runtime.snapshot.v1") {
-      throw new Error(`Invalid snapshot schema: ${snap.schema}`);
+    if (!snap || typeof snap !== "object" || snap.schema !== "connectome.runtime.snapshot.v1") {
+      throw new Error(`Invalid snapshot schema: ${snap?.schema}`);
+    }
+    if (!snap.r || snap.r.length !== this.N) {
+      throw new Error(`Snapshot dimension mismatch: expected N=${this.N}, got ${snap.r?.length}`);
     }
     this.net.t = snap.t;
     this.net.r.set(snap.r);
@@ -319,6 +323,7 @@ export class ConnectomeRuntime {
     if (snap.plasticity && this.plasticity) {
       this.plasticity.restore(snap.plasticity);
     }
+    this.net.recomputeInput();
 
     return true;
   }
@@ -360,6 +365,7 @@ export class ConnectomeRuntime {
       default:
         throw new Error(`Unknown counterfactual branch type: ${branchType}`);
     }
+    this.net.recomputeInput();
 
     return {
       branch: branchType,

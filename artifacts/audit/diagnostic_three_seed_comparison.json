@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-09-21T05:16:59.615Z",
+  "target": "TARGET_A_AFFERENT_ONLY",
+  "induction_cycles": 30,
+  "seeds": [
+    18100,
+    18101,
+    18102
+  ],
+  "comparisons": [
+    {
+      "seed": 18100,
+      "legacy_d2": {
+        "harness": "ARCHIVED_LEGACY_D2",
+        "seed": 18100,
+        "budget_used": 4.7634,
+        "right_dna02_rate": 0.001,
+        "turn_right_strength": 0,
+        "recruited": false,
+        "crossed_turn_right": false
+      },
+      "legacy_d3": {
+        "harness": "ARCHIVED_LEGACY_D3",
+        "seed": 18100,
+        "budget_used": 41.9233,
+        "right_dna02_rate": 0.0474,
+        "turn_right_strength": 0,
+        "recruited": false,
+        "crossed_turn_right": false
+      },
+      "repaired_model_a_retained_only": {
+        "harness": "REPAIRED_UNIFIED",
+        "policy": "MODEL_A_RETAINED_ONLY",
+        "seed": 18100,
+        "budget_used": 57.8594,
+        "pre_dna02": 0,
+        "post_dna02": 0.1891,
+        "dna02_delta": 0.1891,
+        "post_turn_right": 0,
+        "recruited": true,
+        "crossed_turn_right": false,
+        "hash": "e6292a403a33bea4884b77af68352ad1f8d9a7d9c75e8820d04719fce8f6876c"
+      },
+      "repaired_model_b_explicit_revival": {
+        "harness": "REPAIRED_UNIFIED",
+        "policy": "MODEL_B_EXPLICIT_REVIVAL",
+        "seed": 18100,
+        "budget_used": 58.7897,
+        "pre_dna02": 0,
+        "post_dna02": 0.1959,
+        "dna02_delta": 0.1959,
+        "post_turn_right": 0,
+        "recruited": true,
+        "crossed_turn_right": false,
+        "hash": "60a9e8fd388acba1d0c29b07656585e39639c4dc492dd744be8129f3609ad963"
+      }
+    },
+    {
+      "seed": 18101,
+      "legacy_d2": {
+        "harness": "ARCHIVED_LEGACY_D2",
+        "seed": 18101,
+        "budget_used": 6.5169,
+        "right_dna02_rate": 0.0191,
+        "turn_right_strength": 0,
+        "recruited": false,
+        "crossed_turn_right": false
+      },
+      "legacy_d3": {
+        "harness": "ARCHIVED_LEGACY_D3",
+        "seed": 18101,
+        "budget_used": 7.6257,
+        "right_dna02_rate": 0.0192,
+        "turn_right_strength": 0,
+        "recruited": false,
+        "crossed_turn_right": false
+      },
+      "repaired_model_a_retained_only": {
+        "harness": "REPAIRED_UNIFIED",
+        "policy": "MODEL_A_RETAINED_ONLY",
+        "seed": 18101,
+        "budget_used": 34.5667,
+        "pre_dna02": 0,
+        "post_dna02": 0.1056,
+        "dna02_delta": 0.1056,
+        "post_turn_right": 0,
+        "recruited": true,
+        "crossed_turn_right": false,
+        "hash": "8a24d46e1729b282200a6657afd9385534eb793dc0e5b439f887d8a487e21a30"
+      },
+      "repaired_model_b_explicit_revival": {
+        "harness": "REPAIRED_UNIFIED",
+        "policy": "MODEL_B_EXPLICIT_REVIVAL",
+        "seed": 18101,
+        "budget_used": 60,
+        "pre_dna02": 0,
+        "post_dna02": 0.2509,
+        "dna02_delta": 0.2509,
+        "post_turn_right": 0,
+        "recruited": true,
+        "crossed_turn_right": false,
+        "hash": "6683781a1322eda534ef37aef5c82bf68f67879bd8c8a57b66a2240370fdb49b"
+      }
+    },
+    {
+      "seed": 18102,
+      "legacy_d2": {
+        "harness": "ARCHIVED_LEGACY_D2",
+        "seed": 18102,
+        "budget_used": 0.4723,
+        "right_dna02_rate": 0,
+        "turn_right_strength": 0,
+        "recruited": false,
+        "crossed_turn_right": false
+      },
+      "legacy_d3": {
+        "harness": "ARCHIVED_LEGACY_D3",
+        "seed": 18102,
+        "budget_used": 16.1189,
+        "right_dna02_rate": 0.0005,
+        "turn_right_strength": 0,
+        "recruited": false,
+        "crossed_turn_right": false
+      },
+      "repaired_model_a_retained_only": {
+        "harness": "REPAIRED_UNIFIED",
+        "policy": "MODEL_A_RETAINED_ONLY",
+        "seed": 18102,
+        "budget_used": 37.6685,
+        "pre_dna02": 0,
+        "post_dna02": 0.042,
+        "dna02_delta": 0.042,
+        "post_turn_right": 0,
+        "recruited": false,
+        "crossed_turn_right": false,
+        "hash": "b8b17cc8a08b0568adf6b8fde5ef254d315f58bcd2f41eb908db260c9f191a48"
+      },
+      "repaired_model_b_explicit_revival": {
+        "harness": "REPAIRED_UNIFIED",
+        "policy": "MODEL_B_EXPLICIT_REVIVAL",
+        "seed": 18102,
+        "budget_used": 60,
+        "pre_dna02": 0,
+        "post_dna02": 0.139,
+        "dna02_delta": 0.139,
+        "post_turn_right": 0,
+        "recruited": true,
+        "crossed_turn_right": false,
+        "hash": "36b8ea7bf59ae86d04d0b66b120e04c562f8e17426a1fcfaa174f93c3023117e"
+      }
+    }
+  ]
+}
