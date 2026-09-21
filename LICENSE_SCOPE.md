@@ -2,11 +2,11 @@
 
 ## DeltaX-Owned Material
 
-Copyright (c) 2026 Dominick Francisco Noval
+Copyright (c) 2026 Dominick Noval
 
 Unless otherwise noted, DeltaX-authored code, experiments, documentation, research tooling, and artifacts outside third-party/upstream trees are licensed under the root [PolyForm Noncommercial License 1.0.0](LICENSE) from the license-cutover commit forward.
 
-The copyright holder for DeltaX-owned material in this repository is **Dominick Francisco Noval**.
+The copyright holder for DeltaX-owned material in this repository is **Dominick Noval**.
 
 Academic inspection, noncommercial reproduction, modification, and academic publication are permitted subject to the terms of PolyForm Noncommercial 1.0.0. Commercial use, commercial deployment, closed-source proprietary incorporation, or commercial exploitation requires a separate written license agreement from the copyright holder.
 
@@ -15,7 +15,7 @@ Academic inspection, noncommercial reproduction, modification, and academic publ
 
 **Required Notice (PolyForm Noncommercial 1.0.0):**
 ```text
-Required Notice: Copyright (c) 2026 Dominick Francisco Noval
+Required Notice: Copyright (c) 2026 Dominick Noval
 ```
 
 ---

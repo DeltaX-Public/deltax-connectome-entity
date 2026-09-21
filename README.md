@@ -1,8 +1,23 @@
 # DeltaX Connectome Entity
 
-A public, sovereign harness integrating a 165,122-neuron connectome graph recurrent substrate (*Drosophila* whole-CNS dataset), causal neural intervention, and the DeltaX executive control plane.
+> **ACTIVE RESEARCH PAUSE**
+>
+> “The governor never invented an action the substrate did not propose. When the fly-derived network had no right-turn candidate, every controller failed the same way.”
 
-This repository demonstrates and tests DeltaX as an external, candidate-constrained governance layer over the implemented connectome model. Public tests and committed traces validate the integration and governance boundary; they do not make the private DeltaX runtime publicly reproducible.
+This repository is a frozen public evaluation of DeltaX as an external, candidate-constrained governance layer over an idealized MaleCNS v1.0 whole-CNS connectome-derived rate model. It is not a living organism, a biological brain recreation, or a public copy of the private DeltaX runtime.
+
+The Phase IV-C snapshot records 199,500 / 199,500 candidate-ID matches, 0 fallbacks, and 0 selection errors. Across 100 held-out seeds and 15 environments, 11 environments were solved at 100% seed parity. Four right-turn-required environments failed because, in this rate model, the substrate produced no `turn_right` candidate (`DNa02` / `turn_right` at 0.0 Hz).
+
+### Verify the frozen public boundary
+
+```bash
+node --test test/*.test.mjs
+npm run verify:pause
+```
+
+These commands verify the public adapter, candidate constraint, committed traces, pause state, and the SHA-256 digests of the 19 primary evidence artifacts. They do **not** reproduce or attest the private DeltaX executive. Product information is at [deltaxevaluate.com](https://deltaxevaluate.com); that site is not a hosted demo of this repository.
+
+**License notice:** DeltaX-owned material is source-available under PolyForm Noncommercial 1.0.0—not an unqualified MIT or open-source release. Upstream code and third-party data retain their own terms. Commercial inquiries: `hello@deltaxevaluate.com`.
 
 ## Status
 
@@ -75,6 +90,6 @@ python3 -m http.server 4173
 
 - **DeltaX-Owned Material:** Source-available for noncommercial research under the [PolyForm Noncommercial License 1.0.0](LICENSE).
 - **Noncommercial Research & Reproduction:** Academic inspection, educational experimentation, reproduction, modification, and academic publication use are permitted subject to the license conditions.
-- **Commercial Use:** Commercial use, commercial deployment, or proprietary commercial incorporation requires a separate written license agreement from the copyright holder (Dominick Francisco Noval). Inquiries: `hello@deltaxevaluate.com`.
+- **Commercial Use:** Commercial use, commercial deployment, or proprietary commercial incorporation requires a separate written license agreement from the copyright holder (Dominick Noval). Inquiries: `hello@deltaxevaluate.com`.
 - **Upstream & Third-Party Code:** The upstream connectome simulation tree under `upstream/fly-brain/` retains its original [MIT License](upstream/fly-brain/LICENSE) (Copyright (c) 2026 lulzx). Third-party datasets and dependencies retain their respective licenses (e.g., CC-BY 4.0 for Janelia connectome graph data, Apache-2.0 for `flybody`).
 - **Granular Scope:** See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for precise repository boundaries and [docs/LICENSE_HISTORY.md](docs/LICENSE_HISTORY.md) for historical version treatment.
