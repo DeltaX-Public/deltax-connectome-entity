@@ -195,9 +195,9 @@ To ensure absolute rigor and prevent over-interpretation, the repository enforce
 1. **No Authorized Held-Out Command Currently Exists:**
    The development runner `scripts/run_phase4d3_experiment.mjs` hardcodes development seeds (`18200..18299`) and writes strictly to `artifacts/plasticity/phase4d3/`. It does **not** accept CLI flags for `--seeds`, `--dose`, or `--out`.
 2. **Guarded Runner Required:**
-   No code, script, or workflow in the repository is currently authorized to evaluate seeds `19000..19099`. When the research pause is explicitly lifted by Dominick Francisco Noval, a dedicated, guarded held-out execution runner must be implemented, reviewed, and authorized.
+   No code, script, or workflow in the repository is currently authorized to evaluate seeds `19000..19099`. When the research pause is explicitly lifted by Dominick Noval, a dedicated, guarded held-out execution runner must be implemented, reviewed, and authorized.
 3. **Pre-Execution Requirements:**
    - Confirm repository integrity and HEAD alignment with `chore/research-pause-freeze`.
    - Verify all 19 primary artifacts match the SHA-256 digests in [`docs/RELEASE_EVIDENCE_MANIFEST.md`](./RELEASE_EVIDENCE_MANIFEST.md).
    - Run `npm run verify:pause` to ensure 0 tracked modifications and zero held-out consumption.
-   - Obtain explicit written authorization from Dominick Francisco Noval before unsealing seeds `19000..19099`.
+   - Obtain explicit written authorization from Dominick Noval before unsealing seeds `19000..19099`.
